@@ -1,26 +1,137 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* tokens (from the provided screenshots) */
+  --primary: #0f49bd;
+  --gold: #d4af37;
+  --background-dark: #101622;
+  --background-deeper: #0a0e17;
+  --card-dark: #192233;
+  --border-dark: #232f48;
+
+  --foreground: #ffffff;
+  --muted: #92a4c9;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-primary: var(--primary);
+  --color-gold: var(--gold);
+  --color-background-dark: var(--background-dark);
+  --color-background-deeper: var(--background-deeper);
+  --color-card-dark: var(--card-dark);
+  --color-border-dark: var(--border-dark);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+
+  /* Back-compat aliases used by current components */
+  --color-background: var(--background-dark);
+  --color-panel: var(--card-dark);
+  --color-panel-border: var(--border-dark);
+  --color-accent: var(--primary);
+  --color-accent-2: var(--gold);
+
+  --font-sans: var(--font-inter);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background-dark);
+  background-image: url("/bg-texture.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.app-background {
+  background-color: var(--background-dark);
+  background-image: url("/bg-texture.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.app-background-flat {
+  background-color: var(--background-dark);
+  background-image: url("/bg-texture.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
+}
+
+.container-texture {
+  background-color: var(--background-deeper);
+  background-image: url("/bg-texture.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.glow-line {
+  box-shadow: 0 0 15px var(--primary);
+}
+
+.glass-panel {
+  background: rgba(35, 47, 72, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-nav {
+  background: rgba(16, 22, 34, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.premium-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(to right, #d4af37, #fbf5b7, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wow-total {
+  animation: wowTotalPulse 1.6s ease-in-out 0s 2;
+}
+
+@keyframes wowTotalPulse {
+  0% {
+    box-shadow: 0 0 0 rgba(212, 175, 55, 0.0);
+    transform: translateZ(0) scale(1);
+  }
+  45% {
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.22);
+    transform: translateZ(0) scale(1.01);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(212, 175, 55, 0.0);
+    transform: translateZ(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wow-total {
+    animation: none !important;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.no-scrollbar {
+  scrollbar-width: none;
 }

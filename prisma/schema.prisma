@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client"
+  // Keep generated client inside src/ for easy imports in Next.js
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Quote {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  anonId    String
+  mode      String
+  userText  String
+  sourceUrl String?
+
+  productJson Json?
+  quoteJson   Json
+
+  // Optional numeric helpers for filtering/sorting later.
+  totalMinUsd Float?
+  totalMaxUsd Float?
+
+  stage   String @default("quoted") // quoted | decision_requested | lead_captured | refined
+  leadId  String?
+  lead    Lead?  @relation(fields: [leadId], references: [id])
+
+  userId String?
+  user   User? @relation(fields: [userId], references: [id])
+
+  @@index([anonId, createdAt])
+  @@index([leadId])
+  @@index([userId, createdAt])
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  anonId  String
+  contact String
+  channel String // email | whatsapp | unknown
+
+  userId String?
+  user   User? @relation(fields: [userId], references: [id])
+
+  quotes Quote[]
+
+  @@index([anonId, createdAt])
+  @@unique([contact])
+  @@index([userId, createdAt])
+}
+
+model User {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  email        String   @unique
+  passwordHash String
+
+  quotes Quote[]
+  leads  Lead[]
+}
+

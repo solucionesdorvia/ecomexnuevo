@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0e17"/>
+      <stop offset="1" stop-color="#05070c"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#101622"/>
+      <stop offset="0.45" stop-color="#141c2b"/>
+      <stop offset="1" stop-color="#0a0e17"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a3f6f" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0f49bd" stop-opacity="0.25"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Backing -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Subtle warehouse vignette -->
+  <ellipse cx="960" cy="980" rx="820" ry="220" fill="#000" opacity="0.35" filter="url(#soft)"/>
+
+  <!-- Container block -->
+  <g transform="translate(260 170)">
+    <rect x="0" y="0" width="1400" height="740" rx="22" fill="url(#metal)" stroke="url(#rim)" stroke-width="3"/>
+
+    <!-- Vertical ribs -->
+    <g opacity="0.25" stroke="#92a4c9" stroke-width="2">
+      <path d="M80 14 V726"/>
+      <path d="M160 14 V726"/>
+      <path d="M240 14 V726"/>
+      <path d="M320 14 V726"/>
+      <path d="M400 14 V726"/>
+      <path d="M480 14 V726"/>
+      <path d="M560 14 V726"/>
+      <path d="M640 14 V726"/>
+      <path d="M720 14 V726"/>
+      <path d="M800 14 V726"/>
+      <path d="M880 14 V726"/>
+      <path d="M960 14 V726"/>
+      <path d="M1040 14 V726"/>
+      <path d="M1120 14 V726"/>
+      <path d="M1200 14 V726"/>
+      <path d="M1280 14 V726"/>
+      <path d="M1360 14 V726"/>
+    </g>
+
+    <!-- Doors split -->
+    <path d="M700 10 V730" stroke="#ffffff" stroke-opacity="0.12" stroke-width="3"/>
+
+    <!-- Door frames -->
+    <rect x="38" y="38" width="624" height="664" rx="14" fill="none" stroke="#ffffff" stroke-opacity="0.10" stroke-width="2"/>
+    <rect x="738" y="38" width="624" height="664" rx="14" fill="none" stroke="#ffffff" stroke-opacity="0.10" stroke-width="2"/>
+
+    <!-- Lock bars -->
+    <g stroke="#d4af37" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round">
+      <path d="M120 90 V650"/>
+      <path d="M612 90 V650"/>
+      <path d="M788 90 V650"/>
+      <path d="M1280 90 V650"/>
+    </g>
+
+    <!-- Handles -->
+    <g fill="#d4af37" opacity="0.35">
+      <rect x="600" y="350" width="36" height="120" rx="12"/>
+      <rect x="764" y="350" width="36" height="120" rx="12"/>
+    </g>
+
+    <!-- Small stencil text -->
+    <g fill="#ffffff" opacity="0.18" font-family="ui-sans-serif, system-ui" font-size="18" font-weight="700" letter-spacing="3">
+      <text x="70" y="705">E-COMEX</text>
+      <text x="1120" y="705">CONTAINER GATE</text>
+    </g>
+  </g>
+</svg>
+
