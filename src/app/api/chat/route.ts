@@ -1,5 +1,6 @@
 import "dotenv/config";
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { calcImportQuote } from "@/lib/quote/calcImportQuote";
 import { scrapeProductFromUrl } from "@/lib/scraper/scrapeProductFromUrl";
 import { prisma } from "@/lib/db";
@@ -571,10 +572,9 @@ function parseCookies(header: string | null) {
 
 export async function POST(req: Request) {
   try {
-    const cookieHeader = req.headers.get("cookie");
-    const cookieMap = parseCookies(cookieHeader);
-    const anonId = cookieMap["ecomex_anon"] ?? crypto.randomUUID();
-    const authToken = cookieMap["ecomex_auth"];
+    const cookieStore = await cookies();
+    const anonId = cookieStore.get("ecomex_anon")?.value ?? crypto.randomUUID();
+    const authToken = cookieStore.get("ecomex_auth")?.value;
     const auth = authToken ? await verifyAuthToken(authToken) : null;
     const userId = auth?.sub ?? null;
 

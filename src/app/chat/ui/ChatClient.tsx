@@ -503,6 +503,8 @@ export default function ChatClient({
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "content-type": "application/json" },
+        // Ensure session cookies (anonId/auth) are sent and Set-Cookie is honored.
+        credentials: "include",
         body: JSON.stringify({
           mode,
           messages: nextMessages.map((m) => ({ role: m.role, content: m.content })),

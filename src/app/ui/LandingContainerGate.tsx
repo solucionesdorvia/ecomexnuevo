@@ -28,12 +28,29 @@ export default function LandingContainerGate() {
     // Ensure first impression is “not looping”.
     const v = videoRef.current;
     if (!v) return;
+    const syncFirstFrame = () => {
+      try {
+        v.pause();
+        // Showing the real video (not a poster): seek to 0 so the first frame is visible.
+        v.currentTime = 0;
+      } catch {
+        // ignore
+      }
+    };
+    // Trigger a load so the first frame becomes available ASAP.
     try {
-      v.pause();
-      v.currentTime = 0;
+      v.load();
     } catch {
       // ignore
     }
+    v.addEventListener("loadeddata", syncFirstFrame);
+    v.addEventListener("loadedmetadata", syncFirstFrame);
+    // Best effort immediately too.
+    syncFirstFrame();
+    return () => {
+      v.removeEventListener("loadeddata", syncFirstFrame);
+      v.removeEventListener("loadedmetadata", syncFirstFrame);
+    };
   }, []);
 
   async function openContainer() {
@@ -68,19 +85,19 @@ export default function LandingContainerGate() {
           muted
           preload="auto"
           className={classNames("opacity-100", isOpen && "hidden")}
-          overlayClassName={classNames(
-            // Keep the container clearly visible on first load.
-            // We only need a very subtle overlay while it's closed/opening.
-            isOpen ? "opacity-0" : "bg-black/10"
-          )}
+          overlayClassName="opacity-0"
           showMissingNotice
           onEnded={() => {
             // Freeze on last frame and reveal content.
             setPhase("open");
           }}
         />
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-primary/40 glow-line" />
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-1 bg-primary/40 glow-line" />
+        {isOpen ? (
+          <>
+            <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-primary/40 glow-line" />
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-1 bg-primary/40 glow-line" />
+          </>
+        ) : null}
       </div>
 
       {/* Closed state: only welcome + open action */}

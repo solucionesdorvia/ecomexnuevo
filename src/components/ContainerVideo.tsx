@@ -34,7 +34,9 @@ export default function ContainerVideo({
 
   const poster = useMemo(() => {
     const v = process.env.NEXT_PUBLIC_CONTAINER_POSTER;
-    return v && v.startsWith("/") ? v : "/container-poster.svg";
+    // No default poster: we want the actual video to be the first thing the user sees.
+    // If you want a custom poster, set NEXT_PUBLIC_CONTAINER_POSTER="/path.jpg".
+    return v && v.startsWith("/") ? v : undefined;
   }, []);
 
   const [missing, setMissing] = useState(false);
@@ -75,8 +77,7 @@ export default function ContainerVideo({
             </div>
             <div className="mt-2 text-xs text-white/65">
               Tip: si querés mejorar el “primer frame”, podés setear{" "}
-              <span className="font-mono">NEXT_PUBLIC_CONTAINER_POSTER</span> (por defecto usamos{" "}
-              <span className="font-mono">/container-poster.svg</span>).
+              <span className="font-mono">NEXT_PUBLIC_CONTAINER_POSTER</span>.
             </div>
           </div>
         </div>
