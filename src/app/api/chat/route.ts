@@ -190,9 +190,20 @@ function lastUserMessage(messages: IncomingMessage[]) {
 }
 
 function extractUrl(text: string): string | null {
-  // Very permissive; we just need to catch pasted supplier links.
-  const m = text.match(/https?:\/\/[^\s)]+/i);
-  return m?.[0] ?? null;
+  const t = String(text || "").trim();
+  if (!t) return null;
+
+  // 1) Full URL with scheme
+  const m1 = t.match(/https?:\/\/[^\s)]+/i);
+  if (m1?.[0]) return m1[0];
+
+  // 2) URL-like without scheme (common paste): "spanish.alibaba.com/product-detail/..."
+  // We only accept if there is a path segment (contains "/") to avoid false positives on plain domains.
+  const m2 = t.match(/\b((?:www\.)?[a-z0-9.-]+\.[a-z]{2,}(?:\/[^\s)]+)?)\b/i);
+  const cand = m2?.[1] ? String(m2[1]).trim() : "";
+  if (cand && cand.includes("/")) return `https://${cand.replace(/^https?:\/\//i, "")}`;
+
+  return null;
 }
 
 function normalizeUrl(u: string) {
@@ -204,10 +215,12 @@ function normalizeUrl(u: string) {
 }
 
 function stripUrlFromText(text: string, url: string | null) {
-  if (!url) return String(text || "");
-  return String(text || "")
-    .split(url)
-    .join(" ")
+  const raw = String(text || "");
+  const withoutExact = url ? raw.split(url).join(" ") : raw;
+  // Remove any other URLs (scheme + bare).
+  return withoutExact
+    .replace(/https?:\/\/[^\s)]+/gi, " ")
+    .replace(/\b(?:www\.)?[a-z0-9.-]+\.[a-z]{2,}\/[^\s)]+/gi, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -894,7 +907,11 @@ export async function POST(req: Request) {
 
     const buildProductFromInput = async (inputText: string) => {
       const url = extractUrl(inputText);
-      if (url) return await scrapeProductFromUrl(url, { hintText: inputText, timeoutMs: 18_000 });
+      if (url) {
+        // IMPORTANT: strip URL so numbers in the link (IDs) are never parsed as price/qty hints.
+        const hintText = stripUrlFromText(inputText, url);
+        return await scrapeProductFromUrl(url, { hintText, timeoutMs: 18_000 });
+      }
       const base: any = { title: cleanProductTitleFromMixedInput(inputText) };
       // AI vehicle inference to reduce (or eliminate) follow-up questions.
       const vehicleInf = await extractVehicleInferenceFromText(inputText).catch(() => null);

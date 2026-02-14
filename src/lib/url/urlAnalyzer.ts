@@ -57,7 +57,8 @@ export function extractImageUrls(html: string, baseUrl: string) {
   // Preserve priority order:
   // 1) og:image
   // 2) img src
-  // 3) srcset candidates
+  // 3) data-src/data-original/etc (lazy loaders)
+  // 4) srcset candidates
   const ordered: string[] = [];
   const seen = new Set<string>();
   const push = (v: string | undefined) => {
@@ -73,7 +74,23 @@ export function extractImageUrls(html: string, baseUrl: string) {
   )) {
     push(m[1]);
   }
+  for (const m of html.matchAll(
+    /<meta[^>]+property=["']og:image:secure_url["'][^>]+content=["']([^"']+)["'][^>]*>/gi
+  )) {
+    push(m[1]);
+  }
+  for (const m of html.matchAll(
+    /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["'][^>]*>/gi
+  )) {
+    push(m[1]);
+  }
   for (const m of html.matchAll(/<img[^>]+src=["']([^"']+)["'][^>]*>/gi)) {
+    push(m[1]);
+  }
+  // Lazy-loading attributes (Alibaba/Amazon commonly use these)
+  for (const m of html.matchAll(
+    /<(?:img|source)[^>]+(?:data-src|data-original|data-lazy-src|data-lazyload|data-ks-lazyload|data-img|data-image|data-zoom-image)=["']([^"']+)["'][^>]*>/gi
+  )) {
     push(m[1]);
   }
   for (const m of html.matchAll(/srcset=["']([^"']+)["']/gi)) {
@@ -81,6 +98,27 @@ export function extractImageUrls(html: string, baseUrl: string) {
     for (const part of srcset.split(",")) {
       push(part.trim().split(/\s+/)[0]);
     }
+  }
+  for (const m of html.matchAll(/data-srcset=["']([^"']+)["']/gi)) {
+    const srcset = m[1] ?? "";
+    for (const part of srcset.split(",")) {
+      push(part.trim().split(/\s+/)[0]);
+    }
+  }
+
+  // Fallback: scan for image URLs embedded in JSON/CSS (common in modern ecommerce pages)
+  for (const m of html.matchAll(
+    /((?:https?:)?\/\/[^\s"'()\\]+?\.(?:jpe?g|png|webp|gif)(?:\?[^\s"'()\\]+)?)\b/gi
+  )) {
+    push(m[1]);
+    if (ordered.length >= 40) break;
+  }
+  for (const m of html.matchAll(/url\((['"]?)([^'")]+)\1\)/gi)) {
+    const u = String(m[2] ?? "").trim();
+    if (!u) continue;
+    if (!/\.(jpe?g|png|webp|gif)(\?|#|$)/i.test(u)) continue;
+    push(u);
+    if (ordered.length >= 50) break;
   }
 
   const abs: string[] = [];
@@ -165,9 +203,15 @@ async function fetchHtmlWithPlaywright(url: string) {
       },
     });
     const page = await context.newPage();
+    // Speed: we only need HTML + image URLs from attributes, not the actual image bytes.
+    await page.route("**/*", (route) => {
+      const type = route.request().resourceType();
+      if (type === "image" || type === "font" || type === "media") return route.abort();
+      return route.continue();
+    });
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30_000 });
     // allow dynamic hydration
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(1200);
     const html = await page.content();
     await page.close();
     await context.close();
