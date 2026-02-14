@@ -17,7 +17,8 @@ export async function GET(req: Request) {
   const id = url.searchParams.get("id");
 
   const cookieStore = await cookies();
-  const anonId = cookieStore.get("ecomex_anon")?.value;
+  const anonFromQuery = (url.searchParams.get("anon") ?? "").trim();
+  const anonId = cookieStore.get("ecomex_anon")?.value || anonFromQuery;
   if (!anonId) {
     return NextResponse.json(
       { error: "Sesión no encontrada. Abrí el chat y generá una cotización primero." },

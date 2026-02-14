@@ -418,14 +418,22 @@ export default function ChatClient({
   const [requestContact, setRequestContact] = useState(false);
   const [contact, setContact] = useState("");
   const [cardsDrawerOpen, setCardsDrawerOpen] = useState(false);
+  const [anonId, setAnonId] = useState<string | null>(null);
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
   const anonIdRef = useRef<string | null>(null);
 
   useEffect(() => {
-    anonIdRef.current = getOrCreateAnonId();
+    const v = getOrCreateAnonId();
+    anonIdRef.current = v;
+    setAnonId(v);
   }, []);
+
+  const pdfHref = useMemo(() => {
+    const base = `/api/quote/pdf?mode=${encodeURIComponent(mode)}`;
+    return anonId ? `${base}&anon=${encodeURIComponent(anonId)}` : base;
+  }, [anonId, mode]);
 
   const header = useMemo(() => {
     const t =
@@ -883,7 +891,7 @@ export default function ChatClient({
                             Expandir
                           </button>
                           <ButtonLink
-                            href={`/api/quote/pdf?mode=${mode}`}
+                            href={pdfHref}
                             variant="secondary"
                             className="hidden px-3 py-2 text-xs font-bold uppercase tracking-widest sm:inline-flex"
                           >
@@ -1129,7 +1137,7 @@ export default function ChatClient({
               </h3>
               {(cards ?? []).length ? (
                 <ButtonLink
-                  href={`/api/quote/pdf?mode=${mode}`}
+                  href={pdfHref}
                   variant="secondary"
                   className="px-3 py-2 text-xs font-bold uppercase tracking-widest"
                 >
