@@ -195,6 +195,43 @@ function extractUrl(text: string): string | null {
   return m?.[0] ?? null;
 }
 
+type StageHint = "awaiting_product" | "awaiting_price" | "awaiting_quantity" | null;
+
+function inferStageHintFromMessages(messages: IncomingMessage[]): StageHint {
+  for (let i = messages.length - 1; i >= 0; i--) {
+    const m = messages[i];
+    if (!m || m.role !== "assistant") continue;
+    const t = String(m.content || "").toLowerCase();
+    if (/precio unitario|precio por unidad|usd 120|solo el número/i.test(t)) return "awaiting_price";
+    if (/cantidad|unidades|pcs|piezas/i.test(t)) return "awaiting_quantity";
+    if (/qué producto|que producto|peg[aá]\s+el\s+link/i.test(t)) return "awaiting_product";
+    // If assistant already showed cards/quote signals, there is no active stage hint.
+    if (/total puesto en argentina|impuestos argentinos|flete internacional/i.test(t)) return null;
+  }
+  return null;
+}
+
+function inferSeedForProductFromMessages(messages: IncomingMessage[]): string | null {
+  // Prefer the most recent URL user pasted.
+  for (let i = messages.length - 1; i >= 0; i--) {
+    const m = messages[i];
+    if (!m || m.role !== "user") continue;
+    const url = extractUrl(m.content);
+    if (url) return url;
+  }
+  // Fallback: most recent user text that looks like a product description.
+  for (let i = messages.length - 1; i >= 0; i--) {
+    const m = messages[i];
+    if (!m || m.role !== "user") continue;
+    const txt = String(m.content || "").trim();
+    if (!txt) continue;
+    if (extractUrl(txt)) continue;
+    if (looksLikeJustNumber(txt)) continue;
+    if (looksLikeProductText(txt)) return txt;
+  }
+  return null;
+}
+
 function extractNcmFromText(text: string): string | null {
   const s = String(text || "");
   const dot = s.match(/\b(\d{4}\.\d{2}\.\d{2})\b/);
@@ -741,10 +778,25 @@ export async function POST(req: Request) {
       })
       .catch(() => null);
 
+    const stageHint = inferStageHintFromMessages(messages);
+    const seedForProduct = inferSeedForProductFromMessages(messages);
+
     const priceUsdStrict = parseUnitPriceUsdWithMode(userText, { allowBareNumber: false });
     const quantityStrict = parseQuantityWithMode(userText, { allowBareNumber: false });
-    const priceUsd = priceUsdStrict ?? parseUnitPriceUsdSmart(userText);
-    const quantity = quantityStrict ?? parseQuantitySmart(userText);
+    let priceUsd: number | null = priceUsdStrict ?? parseUnitPriceUsdSmart(userText);
+    let quantity: number | null = quantityStrict ?? parseQuantitySmart(userText);
+
+    // Reasoning fallback: if the assistant explicitly asked for price/quantity,
+    // accept a bare number as the answer (even without "USD"/"unidades").
+    if (priceUsd == null && stageHint === "awaiting_price" && looksLikeJustNumber(userText)) {
+      const loose = parseUnitPriceUsdWithMode(userText, { allowBareNumber: true });
+      if (typeof loose === "number") priceUsd = loose;
+    }
+    if (quantity == null && stageHint === "awaiting_quantity" && looksLikeJustNumber(userText)) {
+      const qLoose = parseQuantityWithMode(userText, { allowBareNumber: true });
+      if (typeof qLoose === "number") quantity = qLoose;
+    }
+
     const urlInText = extractUrl(userText);
     const disagreesWithNcm = looksLikeNcmDisagreement(userText);
     const explicitNcm = disagreesWithNcm ? null : extractNcmFromText(userText);
@@ -1277,6 +1329,36 @@ export async function POST(req: Request) {
           return await quoteAndRespond(active.id, merged);
           }
         }
+
+        // If we already have a product context (URL/title) and the user is clearly answering
+        // price/quantity, don't loop back to "qué producto".
+        const hasContext =
+          typeof product?.title === "string" ||
+          typeof product?.url === "string" ||
+          typeof product?.sourceUrl === "string";
+        if (hasContext) {
+          await prisma.quote
+            .update({ where: { id: active.id }, data: { productJson: product as any } })
+            .catch(() => null);
+
+          if (typeof product.fobUsd !== "number") {
+            await prisma.quote
+              .update({ where: { id: active.id }, data: { stage: "awaiting_price" } })
+              .catch(() => null);
+            return ask(
+              "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
+              product
+            );
+          }
+          if (typeof product.quantity !== "number") {
+            await prisma.quote
+              .update({ where: { id: active.id }, data: { stage: "awaiting_quantity" } })
+              .catch(() => null);
+            return ask("Gracias. ¿Cuál es la **cantidad** a importar? (ej: `500 unidades`)", product);
+          }
+          return await quoteAndRespond(active.id, product);
+        }
+
         return ask(
           "Decime **qué producto** querés importar (o pegá el link del proveedor). Ej: `autoelevador eléctrico 3T`."
         );
@@ -1492,8 +1574,12 @@ export async function POST(req: Request) {
       }
     }
 
-    const url = extractUrl(userText);
-    const initialProductProvided = url != null || looksLikeProductText(userText);
+    // If there's no active DB row (cookies blocked, refresh, etc.), reconstruct context from message history.
+    const seedText =
+      extractUrl(userText) || looksLikeProductText(userText) ? userText : seedForProduct ?? userText;
+
+    const url = extractUrl(seedText);
+    const initialProductProvided = url != null || looksLikeProductText(seedText);
     const initial: any = {};
     if (typeof priceUsd === "number") {
       initial.fobUsd = priceUsd;
@@ -1522,7 +1608,7 @@ export async function POST(req: Request) {
     }
 
     const built = await (async () => {
-      const b = await buildProductFromInput(userText);
+      const b = await buildProductFromInput(seedText);
       const merged: any = { ...(b as any), ...initial };
       // If the URL scraper already found a price (single or range), don't let loose parsing
       // from the user's mixed message overwrite it (e.g. "9,800" → "9.8").
