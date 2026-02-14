@@ -145,10 +145,28 @@ function fallbackTitleFromUrlAnalysis(analysis: { url: string; urlHints?: any })
     const tokens: string[] = Array.isArray(analysis.urlHints?.tokens)
       ? analysis.urlHints.tokens
       : [];
+    const STOP = new Set([
+      "product",
+      "products",
+      "detail",
+      "details",
+      "productdetail",
+      "productdetails",
+      "product-detail",
+      "spanish",
+      "alibaba",
+      "amazon",
+      "item",
+      "dp",
+      "html",
+      "php",
+    ]);
     const cleaned = tokens
       .map((t) => String(t || "").trim())
       .filter(Boolean)
       .filter((t) => !/^\d{4,}$/.test(t))
+      .map((t) => t.replace(/\.(html?|php)$/i, ""))
+      .filter((t) => !STOP.has(t.toLowerCase()))
       .slice(0, 12)
       .join(" ")
       .replace(/\s+/g, " ")

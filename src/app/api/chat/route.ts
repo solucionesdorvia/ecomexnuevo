@@ -195,6 +195,23 @@ function extractUrl(text: string): string | null {
   return m?.[0] ?? null;
 }
 
+function normalizeUrl(u: string) {
+  try {
+    return new URL(u).toString();
+  } catch {
+    return String(u || "").trim();
+  }
+}
+
+function stripUrlFromText(text: string, url: string | null) {
+  if (!url) return String(text || "");
+  return String(text || "")
+    .split(url)
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 type StageHint = "awaiting_product" | "awaiting_price" | "awaiting_quantity" | null;
 
 function inferStageHintFromMessages(messages: IncomingMessage[]): StageHint {
@@ -785,25 +802,26 @@ export async function POST(req: Request) {
     const stageHint = inferStageHintFromMessages(messages);
     const seedForProduct = inferSeedForProductFromMessages(messages);
 
-    const priceUsdStrict = parseUnitPriceUsdWithMode(userText, { allowBareNumber: false });
-    const quantityStrict = parseQuantityWithMode(userText, { allowBareNumber: false });
-    let priceUsd: number | null = priceUsdStrict ?? parseUnitPriceUsdSmart(userText);
-    let quantity: number | null = quantityStrict ?? parseQuantitySmart(userText);
+    const urlInText = extractUrl(userText);
+    const userTextSansUrl = stripUrlFromText(userText, urlInText);
+
+    const priceUsdStrict = parseUnitPriceUsdWithMode(userTextSansUrl, { allowBareNumber: false });
+    const quantityStrict = parseQuantityWithMode(userTextSansUrl, { allowBareNumber: false });
+    let priceUsd: number | null = priceUsdStrict ?? parseUnitPriceUsdSmart(userTextSansUrl);
+    let quantity: number | null = quantityStrict ?? parseQuantitySmart(userTextSansUrl);
 
     // Reasoning fallback: if the assistant explicitly asked for price/quantity,
     // accept a bare number as the answer (even without "USD"/"unidades").
-    if (priceUsd == null && stageHint === "awaiting_price" && looksLikeJustNumber(userText)) {
-      const loose = parseUnitPriceUsdWithMode(userText, { allowBareNumber: true });
+    if (priceUsd == null && stageHint === "awaiting_price" && looksLikeJustNumber(userTextSansUrl)) {
+      const loose = parseUnitPriceUsdWithMode(userTextSansUrl, { allowBareNumber: true });
       if (typeof loose === "number") priceUsd = loose;
     }
-    if (quantity == null && stageHint === "awaiting_quantity" && looksLikeJustNumber(userText)) {
-      const qLoose = parseQuantityWithMode(userText, { allowBareNumber: true });
+    if (quantity == null && stageHint === "awaiting_quantity" && looksLikeJustNumber(userTextSansUrl)) {
+      const qLoose = parseQuantityWithMode(userTextSansUrl, { allowBareNumber: true });
       if (typeof qLoose === "number") quantity = qLoose;
     }
-
-    const urlInText = extractUrl(userText);
-    const disagreesWithNcm = looksLikeNcmDisagreement(userText);
-    const explicitNcm = disagreesWithNcm ? null : extractNcmFromText(userText);
+    const disagreesWithNcm = looksLikeNcmDisagreement(userTextSansUrl);
+    const explicitNcm = disagreesWithNcm ? null : extractNcmFromText(userTextSansUrl);
 
     // If user says the previously shown NCM is wrong (after a quote),
     // reopen the latest quote to let them pick from PCRAM candidates.
@@ -1115,6 +1133,16 @@ export async function POST(req: Request) {
 
     if (active) {
       const product: any = (active.productJson as any) ?? {};
+      const existingUrl =
+        typeof product?.url === "string"
+          ? product.url
+          : typeof product?.sourceUrl === "string"
+            ? product.sourceUrl
+            : "";
+      const sameUrl =
+        urlInText && existingUrl
+          ? normalizeUrl(urlInText) === normalizeUrl(existingUrl)
+          : false;
 
       // Update known fields from this message
       if (typeof priceUsd === "number") {
@@ -1429,6 +1457,7 @@ export async function POST(req: Request) {
         const hardQty = parseQuantityWithMode(userText, { allowBareNumber: false });
         const looksLikeNewProduct =
           (urlInText || looksLikeProductText(userText)) &&
+          !sameUrl &&
           hardPrice == null &&
           hardQty == null &&
           !looksLikeJustNumber(userText);
@@ -1517,12 +1546,13 @@ export async function POST(req: Request) {
       if (active.stage === "awaiting_quantity") {
         // Allow user to provide product again (corrections) while awaiting quantity.
         const qNow =
-          userProvidedUnitPrice(userText)
+          userProvidedUnitPrice(userTextSansUrl)
             ? null
-            : parseQuantityWithMode(userText, { allowBareNumber: true });
+            : parseQuantityWithMode(userTextSansUrl, { allowBareNumber: true });
         if (
           qNow == null &&
           (urlInText || looksLikeProductText(userText)) &&
+          !sameUrl &&
           !looksLikeJustNumber(userText)
         ) {
           // Treat as a product switch/correction. Reset captured fields to avoid mixing.
