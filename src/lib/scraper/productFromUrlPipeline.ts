@@ -802,6 +802,7 @@ export async function productFromUrlPipeline(
     raw: {
       urlAnalysis: {
         fetchFailed: analysis.fetchFailed,
+        blockedHint: (analysis as any).blockedHint,
         imageUrls: analysis.imageUrls,
         urlHints: analysis.urlHints,
       },
