@@ -8,6 +8,8 @@ export type ExtractedPrice = {
 
 export type UrlAnalysis = {
   fetchFailed: boolean;
+  blocked?: boolean;
+  blockedHint?: string;
   html?: string;
   text?: string;
   imageUrls: string[];
@@ -33,6 +35,28 @@ function htmlToText(html: string) {
     .replace(/\s+/g, " ")
     .trim();
   return cleaned;
+}
+
+function detectBlock(text?: string) {
+  const t = String(text ?? "").toLowerCase();
+  if (!t) return { blocked: false as const, blockedHint: "" };
+  const patterns: Array<[RegExp, string]> = [
+    [/unusual\s+traffic/i, "unusual_traffic"],
+    [/traffic\s+unusual/i, "unusual_traffic"],
+    [/access\s+denied/i, "access_denied"],
+    [/temporarily\s+unavailable/i, "temporarily_unavailable"],
+    [/captcha/i, "captcha"],
+    [/robot|are\s+you\s+a\s+robot/i, "robot_check"],
+    [/verify\s+you\s+are\s+human|verification/i, "human_verification"],
+    [/por\s+tr[aá]fico\s+inusual/i, "trafico_inusual"],
+    [/verificaci[oó]n|verificar\s+que\s+no\s+eres\s+un\s+robot/i, "verificacion"],
+    [/validaci[oó]n\s+de\s+seguridad/i, "seguridad"],
+    [/人机验证|验证|安全验证|访问受限|拒绝访问/i, "cn_verification"],
+  ];
+  for (const [re, hint] of patterns) {
+    if (re.test(t)) return { blocked: true as const, blockedHint: hint };
+  }
+  return { blocked: false as const, blockedHint: "" };
 }
 
 function normalizeUrl(u: string) {
@@ -240,9 +264,12 @@ export async function analyzeUrl(urlInput: string): Promise<UrlAnalysis> {
 
   const imageUrls = html ? extractImageUrls(html, url) : [];
   const text = html ? htmlToText(html).slice(0, 15_000) : undefined;
+  const block = detectBlock(text);
 
   return {
     fetchFailed,
+    blocked: fetchFailed ? true : block.blocked,
+    blockedHint: fetchFailed ? "fetch_failed" : block.blockedHint || undefined,
     html,
     text,
     imageUrls,

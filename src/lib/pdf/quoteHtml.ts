@@ -2,6 +2,8 @@ import "dotenv/config";
 
 import type { QuoteCard } from "@/lib/quote/calcImportQuote";
 import { openaiJson } from "@/lib/ai/openaiClient";
+import fs from "node:fs";
+import path from "node:path";
 
 type QuoteLike = {
   id: string;
@@ -35,6 +37,19 @@ function fmtUsdEs(n: number) {
 
 function safeStr(x: unknown) {
   return String(x ?? "").trim();
+}
+
+let cachedUnusualTrafficDataUrl: string | null = null;
+function unusualTrafficDataUrl() {
+  if (cachedUnusualTrafficDataUrl != null) return cachedUnusualTrafficDataUrl;
+  try {
+    const p = path.join(process.cwd(), "public", "unusual-traffic.png");
+    const bytes = fs.readFileSync(p);
+    cachedUnusualTrafficDataUrl = `data:image/png;base64,${bytes.toString("base64")}`;
+  } catch {
+    cachedUnusualTrafficDataUrl = "";
+  }
+  return cachedUnusualTrafficDataUrl;
 }
 
 function cleanLabel(s: unknown, maxLen: number) {
@@ -199,9 +214,15 @@ function deriveCostsFromQuote(quote: QuoteLike) {
 function renderProductImages(product: any) {
   const imgs: string[] = Array.isArray(product?.images) ? product.images : [];
   const title = safeStr(product?.title) || "Producto";
+  const blocked =
+    Boolean(product?.raw?.urlAnalysis?.blocked) ||
+    Boolean(product?.raw?.urlAnalysis?.fetchFailed) ||
+    Boolean(product?.raw?.scrapeFailed);
+  const placeholder = blocked ? unusualTrafficDataUrl() : "";
   const blocks = [imgs[0], imgs[1]].map((src, idx) => {
-    if (src) {
-      return `<img class="product-image" src="${htmlEscape(src)}" alt="Imagen producto ${idx + 1}"/>`;
+    const finalSrc = src || (idx === 0 ? placeholder : "");
+    if (finalSrc) {
+      return `<img class="product-image" src="${htmlEscape(finalSrc)}" alt="Imagen producto ${idx + 1}"/>`;
     }
     return `<div class="product-image-placeholder">[Imagen Producto ${idx + 1}]<br>${htmlEscape(
       title

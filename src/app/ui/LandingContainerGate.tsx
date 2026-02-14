@@ -208,13 +208,13 @@ export default function LandingContainerGate() {
                 <div className="mt-6 grid gap-4 md:grid-cols-3">
                   {[
                     {
-                      title: "Cotización dentro del chat",
-                      desc: "Tarjetas estructuradas: producto, flete, impuestos AR, gestión, total y tiempos.",
+                      title: "Cotización en flujo",
+                      desc: "Módulos estructurados: producto, clasificación, flete, impuestos AR, gestión, total y tiempos.",
                       icon: "calculate",
                     },
                     {
-                      title: "Explicación inteligente",
-                      desc: "Entendés por qué pagás cada costo y qué variables pesan más en el total.",
+                      title: "Explicación de costos",
+                      desc: "Entendés por qué pagás cada costo y qué variables mueven el total.",
                       icon: "psychology",
                     },
                     {
@@ -230,7 +230,7 @@ export default function LandingContainerGate() {
                       <div className="flex items-center gap-2 text-primary">
                         <span className="material-symbols-outlined">{x.icon}</span>
                         <div className="text-[10px] font-black uppercase tracking-widest text-muted">
-                          E‑COMEX IA
+                          E‑COMEX
                         </div>
                       </div>
                       <div className="mt-3 text-lg font-bold tracking-tight text-white">

@@ -227,6 +227,23 @@ function stripUrlFromText(text: string, url: string | null) {
 
 type StageHint = "awaiting_product" | "awaiting_price" | "awaiting_quantity" | null;
 
+function isScrapeBlocked(product: any) {
+  return (
+    Boolean(product?.raw?.urlAnalysis?.blocked) ||
+    Boolean(product?.raw?.urlAnalysis?.fetchFailed) ||
+    Boolean(product?.raw?.scrapeFailed)
+  );
+}
+
+function withBlockedNotice(message: string, product: any) {
+  if (!isScrapeBlocked(product)) return message;
+  return [
+    message,
+    "",
+    "_Nota: el proveedor parece estar pidiendo verificación por **tráfico inusual** (captcha/bloqueo). Por eso puede que no vea precio/fotos automáticamente._",
+  ].join("\n");
+}
+
 function inferStageHintFromMessages(messages: IncomingMessage[]): StageHint {
   for (let i = messages.length - 1; i >= 0; i--) {
     const m = messages[i];
@@ -966,6 +983,8 @@ export async function POST(req: Request) {
         .map((x) => String(x || "").trim())
         .filter(Boolean)
         .slice(0, 6);
+      const blocked = isScrapeBlocked(product);
+      const placeholder = blocked ? "/unusual-traffic.png" : undefined;
       const sourceUrl =
         typeof product?.url === "string"
           ? product.url
@@ -980,8 +999,8 @@ export async function POST(req: Request) {
             : typeof product?.title === "string"
               ? product.title
               : undefined,
-        imageUrl: imageUrls[0],
-        imageUrls: imageUrls.length ? imageUrls : undefined,
+        imageUrl: imageUrls[0] ?? placeholder,
+        imageUrls: imageUrls.length ? imageUrls : placeholder ? [placeholder] : undefined,
         sourceUrl,
         fobUsd: typeof product?.fobUsd === "number" ? product.fobUsd : undefined,
         currency: typeof product?.currency === "string" ? product.currency : undefined,
@@ -1235,7 +1254,10 @@ export async function POST(req: Request) {
               .update({ where: { id: active.id }, data: { stage: "awaiting_price" } })
               .catch(() => null);
             return ask(
-              "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
+              withBlockedNotice(
+                "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
+                product
+              ),
               product
             );
           }
@@ -1262,7 +1284,10 @@ export async function POST(req: Request) {
                 .update({ where: { id: active.id }, data: { stage: "awaiting_price" } })
                 .catch(() => null);
               return ask(
-                "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
+                withBlockedNotice(
+                  "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
+                  product
+                ),
                 product
               );
             }
@@ -1348,14 +1373,18 @@ export async function POST(req: Request) {
                 .update({ where: { id: active.id }, data: { stage: "awaiting_price" } })
                 .catch(() => null);
               return ask(
-                "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)"
+                withBlockedNotice(
+                  "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
+                  product
+                ),
+                product
               );
             }
             if (typeof product.quantity !== "number") {
               await prisma.quote
                 .update({ where: { id: active.id }, data: { stage: "awaiting_quantity" } })
                 .catch(() => null);
-              return ask("Gracias. ¿Cuál es la **cantidad** a importar? (ej: `500 unidades`)");
+              return ask("Gracias. ¿Cuál es la **cantidad** a importar? (ej: `500 unidades`)", product);
             }
             return await quoteAndRespond(active.id, product);
           }
@@ -1427,7 +1456,11 @@ export async function POST(req: Request) {
               .update({ where: { id: active.id }, data: { stage: "awaiting_price" } })
               .catch(() => null);
             return ask(
-              "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)"
+              withBlockedNotice(
+                "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
+                merged
+              ),
+              merged
             );
           }
           if (typeof merged.quantity !== "number") {
@@ -1437,9 +1470,7 @@ export async function POST(req: Request) {
                 data: { stage: "awaiting_quantity" },
               })
               .catch(() => null);
-            return ask(
-              "Gracias. ¿Cuál es la **cantidad** a importar? (ej: `500 unidades`)"
-            );
+            return ask("Gracias. ¿Cuál es la **cantidad** a importar? (ej: `500 unidades`)", merged);
           }
           return await quoteAndRespond(active.id, merged);
           }
@@ -1530,7 +1561,10 @@ export async function POST(req: Request) {
             return await quoteAndRespond(active.id, built);
           }
           return ask(
-            "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
+            withBlockedNotice(
+              "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
+              built
+            ),
             built
           );
         }
@@ -1789,7 +1823,10 @@ export async function POST(req: Request) {
         })
         .catch(() => null);
       return ask(
-        "Para estimar el **total puesto en Argentina** necesito el **precio unitario** en **USD**.\n\n¿Cuál es el precio por unidad? (ej: `USD 120`)",
+        withBlockedNotice(
+          "Para estimar el **total puesto en Argentina** necesito el **precio unitario** en **USD**.\n\n¿Cuál es el precio por unidad? (ej: `USD 120`)",
+          built
+        ),
         built
       );
     }

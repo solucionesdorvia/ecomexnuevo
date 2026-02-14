@@ -11,7 +11,7 @@ const NAV: Array<{
   icon: string;
 }> = [
   { key: "account", href: "/account", label: "Tablero", icon: "dashboard" },
-  { key: "chat", href: "/chat", label: "Asistente IA", icon: "smart_toy" },
+  { key: "chat", href: "/chat", label: "Análisis", icon: "bolt" },
   { key: "cotizaciones", href: "/cotizaciones", label: "Cotizaciones", icon: "calculate" },
   { key: "tendencias", href: "/tendencias", label: "Señales", icon: "trending_up" },
 ];
@@ -39,13 +39,13 @@ export function AppShell({
             <div className="flex items-center gap-3">
               <div className="rounded-lg bg-primary/20 p-2">
                 <span className="material-symbols-outlined text-primary text-2xl">
-                  terminal
+                  local_shipping
                 </span>
               </div>
               <div className="flex flex-col">
-                <div className="text-base font-bold tracking-tight">Terminal</div>
+                <div className="text-base font-bold tracking-tight">E‑COMEX</div>
                 <div className="text-xs font-medium uppercase tracking-widest text-muted">
-                  Control room
+                  Operaciones
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@ export function AppShell({
                 </Badge>
               </div>
               <div className="mt-3 text-xs leading-relaxed text-muted">
-                Vista premium. Todo se valida y se cierra en consultoría.
+                Cotizaciones automáticas orientativas. Validación final en consultoría.
               </div>
             </div>
           </div>

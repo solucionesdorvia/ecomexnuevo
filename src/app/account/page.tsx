@@ -40,7 +40,7 @@ export default async function AccountPage() {
           <div className="flex items-center gap-2">
             <SealVerified />
             <ButtonLink href="/chat" variant="primary">
-              Ir al chat
+              Ir al análisis
               <span className="material-symbols-outlined text-[18px]">bolt</span>
             </ButtonLink>
           </div>
@@ -49,7 +49,7 @@ export default async function AccountPage() {
       >
         <Card className="border-white/10 bg-white/5">
           <CardHeader
-            eyebrow="CONTROL ROOM"
+            eyebrow="OPERACIÓN"
             title="Cuenta (opcional)"
             icon="person"
             right={<Badge tone="muted" icon="lock">Sin sesión</Badge>}
@@ -109,7 +109,7 @@ export default async function AccountPage() {
     <AppShell
       active="account"
       title="Tablero"
-      subtitle="Control room operativo"
+      subtitle="Estado operativo"
       right={
         <div className="flex items-center gap-2">
           <Badge tone="success" icon="wifi">
@@ -132,7 +132,7 @@ export default async function AccountPage() {
       maxWidth="1200px"
     >
       <SectionHeader
-        eyebrow="CONTROL ROOM"
+        eyebrow="OPERACIÓN"
         title="Tablero"
         subtitle="Estado operativo, historial y recordatorios. Todo en un solo panel."
         icon="dashboard"
@@ -325,12 +325,12 @@ export default async function AccountPage() {
           <div className="glass-panel premium-glow rounded-2xl p-6">
             <div className="mb-4 flex items-center gap-2">
               <span className="material-symbols-outlined text-gold">auto_awesome</span>
-              <h3 className="text-lg font-bold">Asistente IA</h3>
+              <h3 className="text-lg font-bold">Señales automáticas</h3>
             </div>
             <div className="space-y-4">
               <div className="rounded-xl border border-primary/20 bg-primary/10 p-4">
                 <p className="mb-1 text-[10px] font-black uppercase tracking-[0.2em] text-primary">
-                  Ahorro detectado
+                  Oportunidad
                 </p>
                 <p className="text-sm leading-relaxed text-white/90">
                   Optimizando la consolidación, podrías reducir un{" "}
@@ -340,7 +340,7 @@ export default async function AccountPage() {
               </div>
               <div className="rounded-xl border border-gold/20 bg-gold/10 p-4">
                 <p className="mb-1 text-[10px] font-black uppercase tracking-[0.2em] text-gold">
-                  Alerta aduanera
+                  Alerta
                 </p>
                 <p className="text-sm leading-relaxed text-white/90">
                   Nuevas regulaciones para importación de electrónicos.{" "}
