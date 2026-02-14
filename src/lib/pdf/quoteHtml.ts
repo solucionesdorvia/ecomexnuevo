@@ -1,6 +1,7 @@
 import "dotenv/config";
 
 import type { QuoteCard } from "@/lib/quote/calcImportQuote";
+import { openaiJson } from "@/lib/ai/openaiClient";
 
 type QuoteLike = {
   id: string;
@@ -34,6 +35,75 @@ function fmtUsdEs(n: number) {
 
 function safeStr(x: unknown) {
   return String(x ?? "").trim();
+}
+
+function cleanLabel(s: unknown, maxLen: number) {
+  const t = String(s ?? "")
+    .replace(/\s+/g, " ")
+    .replace(/https?:\/\/\S+/gi, "")
+    .trim();
+  if (!t) return "";
+  const out = t.length <= maxLen ? t : `${t.slice(0, maxLen - 1).trim()}…`;
+  return out;
+}
+
+async function ensurePdfDisplayFields(quote: QuoteLike): Promise<QuoteLike> {
+  const p: any = quote.productJson ?? {};
+  const hasTitle = typeof p?.displayTitle === "string" && p.displayTitle.trim();
+  const hasCat = typeof p?.displayCategory === "string" && p.displayCategory.trim();
+  if (hasTitle && hasCat) return quote;
+  if (!process.env.OPENAI_API_KEY) return quote;
+
+  // Only analyze for PDF display; never change numeric fields/calc.
+  const url = typeof p?.url === "string" ? p.url : "";
+  const title = safeStr(p?.title);
+  const description = safeStr(p?.description);
+  const categoryRaw = safeStr(p?.category);
+  const userText = safeStr(quote.userText);
+
+  const system = [
+    "Sos un analista de productos para importación.",
+    "Devuelve SOLO JSON válido.",
+    "",
+    "Objetivo:",
+    "- Elegir un nombre corto y limpio para el PDF (displayTitle) y un rubro (displayCategory).",
+    "",
+    "Reglas críticas:",
+    "- NO inventes: si no se infiere con evidencia del título/descripción/categoría/texto, devolvé null.",
+    "- No uses IDs, 'product detail', '.html', ni texto de tracking.",
+    "- displayTitle: máx 64 caracteres.",
+    "- displayCategory: máx 40 caracteres, en español, rubro general (ej: 'Elevadores', 'Maquinaria', 'Electrónica').",
+  ].join("\n");
+
+  const user = [
+    url ? `URL: ${url}` : "",
+    title ? `TITLE: ${title}` : "",
+    description ? `DESCRIPTION: ${description}` : "",
+    categoryRaw ? `CATEGORY_RAW: ${categoryRaw}` : "",
+    userText ? `USER_TEXT: ${userText}` : "",
+    "",
+    "Respondé JSON con keys: displayTitle, displayCategory.",
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  const out = await openaiJson<{ displayTitle?: string | null; displayCategory?: string | null }>({
+    system,
+    user,
+    timeoutMs: 8000,
+  }).catch(() => null);
+
+  if (!out) return quote;
+
+  const displayTitle = cleanLabel(out.displayTitle, 64);
+  const displayCategory = cleanLabel(out.displayCategory, 40);
+  if (!displayTitle && !displayCategory) return quote;
+
+  const nextProduct: any = { ...p };
+  if (displayTitle && !hasTitle) nextProduct.displayTitle = displayTitle;
+  if (displayCategory && !hasCat) nextProduct.displayCategory = displayCategory;
+
+  return { ...quote, productJson: nextProduct };
 }
 
 function htmlEscape(s: string) {
@@ -513,7 +583,8 @@ export async function generateQuotePdfViaHtml(quote: QuoteLike) {
     const page = await browser.newPage({
       viewport: { width: 1280, height: 720 },
     });
-    const html = renderQuotePdfHtml(quote);
+    const enriched = await ensurePdfDisplayFields(quote).catch(() => quote);
+    const html = renderQuotePdfHtml(enriched);
     // Be resilient in production: external images/fonts can prevent "networkidle".
     await page.setContent(html, { waitUntil: "domcontentloaded" });
     await page.waitForTimeout(600);
