@@ -172,8 +172,16 @@ function deriveProductoAndRubro(quote: QuoteLike) {
   const scrapeOk = urlAnalysis && urlAnalysis.fetchFailed === false;
 
   const producto =
-    shortLine(safeStr(product?.title) || safeStr(quote.userText) || "Producto", 92) ||
+    shortLine(
+      safeStr(product?.displayTitle) || safeStr(product?.title) || safeStr(quote.userText) || "Producto",
+      64
+    ) ||
     "Producto";
+
+  const displayCategory = safeStr(product?.displayCategory);
+  if (looksSpecificRubro(displayCategory)) {
+    return { producto, rubro: shortLine(displayCategory, 42) };
+  }
 
   // Rubro must be truthful: only show if it comes from reliable scraped/official signals.
   // Priority:
@@ -199,7 +207,7 @@ function deriveProductoAndRubro(quote: QuoteLike) {
     if (looksSpecificRubro(crumb0)) return { producto, rubro: shortLine(crumb0, 42) };
   }
 
-  return { producto, rubro: quote.mode === "budget" ? "Presupuesto" : "A confirmar" };
+  return { producto, rubro: quote.mode === "budget" ? "Presupuesto" : "General" };
 }
 
 export function renderQuotePdfHtml(quote: QuoteLike) {

@@ -957,7 +957,12 @@ export async function POST(req: Request) {
             : undefined;
 
       return {
-        title: typeof product?.title === "string" ? product.title : undefined,
+        title:
+          typeof product?.displayTitle === "string"
+            ? product.displayTitle
+            : typeof product?.title === "string"
+              ? product.title
+              : undefined,
         imageUrl: imageUrls[0],
         imageUrls: imageUrls.length ? imageUrls : undefined,
         sourceUrl,
@@ -982,6 +987,13 @@ export async function POST(req: Request) {
         quantity: typeof product?.quantity === "number" ? product.quantity : undefined,
         origin: typeof product?.origin === "string" ? product.origin : undefined,
         supplier: typeof product?.supplier === "string" ? product.supplier : undefined,
+        // rubro/category for downstream PDF/report
+        category:
+          typeof product?.displayCategory === "string"
+            ? product.displayCategory
+            : typeof product?.category === "string"
+              ? product.category
+              : undefined,
       };
     };
 

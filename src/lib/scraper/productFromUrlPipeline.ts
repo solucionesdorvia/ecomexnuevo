@@ -6,9 +6,11 @@ import { LocalNomenclator } from "@/lib/nomenclator/localNomenclator";
 
 export type ScrapedProduct = {
   title?: string;
+  displayTitle?: string;
   description?: string;
   origin?: string;
   category?: string;
+  displayCategory?: string;
   ncm?: string;
   fobUsd?: number;
   currency?: string;
@@ -177,6 +179,73 @@ function fallbackTitleFromUrlAnalysis(analysis: { url: string; urlHints?: any })
   } catch {
     return "Producto";
   }
+}
+
+function cleanLabel(s: unknown, maxLen: number) {
+  const t = String(s ?? "")
+    .replace(/\s+/g, " ")
+    .replace(/https?:\/\/\S+/gi, "")
+    .trim();
+  if (!t) return "";
+  const out = t.length <= maxLen ? t : `${t.slice(0, maxLen - 1).trim()}…`;
+  return out;
+}
+
+async function aiDeriveDisplayFields(input: {
+  url: string;
+  title?: string;
+  description?: string;
+  category?: string;
+  contentText?: string;
+  urlHints?: any;
+}): Promise<{ displayTitle?: string; displayCategory?: string } | null> {
+  if (!hasOpenAiKey()) return null;
+  const content = String(input.contentText ?? "").slice(0, 2500);
+  const hints = input.urlHints
+    ? `DOMAIN: ${input.urlHints.domain}\nPATH: ${input.urlHints.path}\nTOKENS: ${(input.urlHints.tokens ?? []).slice(0, 20).join(" ")}`
+    : "";
+
+  const system = [
+    "Sos un analista de catálogos de productos para importación.",
+    "Devuelve SOLO JSON válido.",
+    "",
+    "Objetivo:",
+    "- Generar un nombre corto y limpio del producto (displayTitle) y un rubro/categoría (displayCategory).",
+    "",
+    "Reglas:",
+    "- NO inventes: si no se puede inferir con evidencia del texto/título/descripción, usá null.",
+    "- No traduzcas términos técnicos si no aparecen en el texto; podés mantener el idioma original del título.",
+    "- displayTitle: máximo 64 caracteres, sin '.html', sin 'product detail', sin IDs largos.",
+    "- displayCategory: máximo 40 caracteres, en español, rubro general (ej: 'Elevadores', 'Maquinaria', 'Electrónica').",
+  ].join("\n");
+
+  const user = [
+    `URL: ${input.url}`,
+    hints ? `URL_HINTS:\n${hints}` : "",
+    input.title ? `TITLE:\n${input.title}` : "",
+    input.description ? `DESCRIPTION:\n${input.description}` : "",
+    input.category ? `CATEGORY_RAW:\n${input.category}` : "",
+    content ? `CONTENT_SNIPPET:\n${content}` : "",
+    "",
+    "Responde JSON con keys: displayTitle, displayCategory.",
+  ]
+    .filter(Boolean)
+    .join("\n\n");
+
+  const out = await openaiJson<{ displayTitle?: string | null; displayCategory?: string | null }>({
+    system,
+    user,
+    model: process.env.OPENAI_MODEL || "gpt-4o-mini",
+    timeoutMs: 18_000,
+  }).catch(() => null);
+  if (!out) return null;
+
+  const displayTitle = cleanLabel(out.displayTitle, 64);
+  const displayCategory = cleanLabel(out.displayCategory, 40);
+  return {
+    displayTitle: displayTitle || undefined,
+    displayCategory: displayCategory || undefined,
+  };
 }
 
 function extractJsonLdCandidates(html?: string): PriceCandidate[] {
@@ -526,6 +595,18 @@ export async function productFromUrlPipeline(
   const model = extracted?.model as string | undefined;
   const vin = extracted?.vin as string | undefined;
 
+  // Derive short, user-facing labels (used by PDF/report) from verifiable page content.
+  const derived = await aiDeriveDisplayFields({
+    url: analysis.url,
+    title,
+    description,
+    category,
+    contentText: analysis.text,
+    urlHints: analysis.urlHints,
+  }).catch(() => null);
+  const displayTitle = derived?.displayTitle;
+  const displayCategory = derived?.displayCategory;
+
   const openAiAmount = num(extracted?.price?.amount);
   const openAiCurrency = normalizeCurrency((extracted?.price?.currency as string | undefined) ?? undefined);
   const openAiFormatted = extracted?.price?.formatted as string | undefined;
@@ -788,8 +869,10 @@ export async function productFromUrlPipeline(
 
   return {
     title: title || fallbackTitleFromUrlAnalysis(analysis),
+    displayTitle,
     description,
     category,
+    displayCategory,
     origin,
     ncm: ncmAdjusted,
     fobUsd,

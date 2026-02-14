@@ -1,8 +1,10 @@
 type ScrapedProduct = {
   title?: string;
+  displayTitle?: string;
   description?: string;
   origin?: string;
   category?: string;
+  displayCategory?: string;
   ncm?: string;
   fobUsd?: number;
   currency?: string;
@@ -102,6 +104,7 @@ export async function scrapeProductFromUrl(
   if (!scraped) {
     return {
       title: titleFromUrl(url),
+      displayTitle: titleFromUrl(url),
       category: "A clasificar",
       supplier: host,
       url,
