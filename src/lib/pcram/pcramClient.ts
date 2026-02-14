@@ -5,7 +5,7 @@ import { LocalNomenclator } from "@/lib/nomenclator/localNomenclator";
 
 // Ensure Playwright can find installed browsers in local dev/runtime.
 // Some environments set a sandbox cache path that may not exist for the dev server.
-process.env.PLAYWRIGHT_BROWSERS_PATH = "0";
+process.env.PLAYWRIGHT_BROWSERS_PATH = process.env.PLAYWRIGHT_BROWSERS_PATH ?? "0";
 
 export type PcramTaxRates = Partial<{
   AEC: number;

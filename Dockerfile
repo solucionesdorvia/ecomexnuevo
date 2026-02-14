@@ -2,6 +2,10 @@ FROM mcr.microsoft.com/playwright:v1.58.2-jammy
 
 WORKDIR /app
 
+# Use the preinstalled browsers in the Playwright base image.
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+
 # Install deps first (better caching)
 COPY package.json package-lock.json ./
 RUN npm ci

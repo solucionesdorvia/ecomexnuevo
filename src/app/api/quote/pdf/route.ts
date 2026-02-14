@@ -47,15 +47,16 @@ export async function GET(req: Request) {
     );
   }
 
-  const pdfBytes = await generateQuotePdf({ quote: quote as any });
+  const out = await generateQuotePdf({ quote: quote as any });
   const filename =
     mode === "budget" ? "E-COMEX - Presupuesto.pdf" : "E-COMEX - Cotizacion.pdf";
 
-  return new NextResponse(Buffer.from(pdfBytes), {
+  return new NextResponse(Buffer.from(out.bytes), {
     headers: {
       "content-type": "application/pdf",
       "content-disposition": `attachment; filename="${filename}"`,
       "cache-control": "no-store",
+      "x-ecomex-pdf-renderer": out.renderer,
     },
   });
 }

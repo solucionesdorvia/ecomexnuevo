@@ -2,7 +2,7 @@ import type { Browser, BrowserContext, Page } from "playwright";
 import { chromium } from "playwright";
 
 // Ensure Playwright can find installed browsers in local dev/runtime.
-process.env.PLAYWRIGHT_BROWSERS_PATH = "0";
+process.env.PLAYWRIGHT_BROWSERS_PATH = process.env.PLAYWRIGHT_BROWSERS_PATH ?? "0";
 
 type ScrapedProduct = {
   title?: string;

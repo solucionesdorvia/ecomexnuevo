@@ -111,7 +111,7 @@ async function tryFillTemplate(params: {
 export async function generateQuotePdf(params: {
   quote: QuoteLike;
   templatePath?: string;
-}) {
+}): Promise<{ bytes: Uint8Array; renderer: "html" | "template" | "pdflib" }> {
   const q: any = params.quote;
 
   // Prefer HTML→PDF (pixel-perfect template) and fallback to pdf-lib if it fails.
@@ -122,7 +122,7 @@ export async function generateQuotePdf(params: {
     console.error("[pdf] HTML→PDF failed; falling back to pdf-lib.", e);
     return null;
   });
-  if (htmlPdf && htmlPdf.byteLength) return htmlPdf;
+  if (htmlPdf && htmlPdf.byteLength) return { bytes: htmlPdf, renderer: "html" };
 
   const quoteJson: any = q.quoteJson ?? {};
   const productTitle =
@@ -156,7 +156,7 @@ export async function generateQuotePdf(params: {
     cards,
   }).catch(() => null);
 
-  if (fromTemplate) return fromTemplate;
+  if (fromTemplate) return { bytes: fromTemplate, renderer: "template" };
 
   // Fallback: generate a clean PDF programmatically (no external assets).
   const pdf = await PDFDocument.create();
@@ -292,6 +292,6 @@ export async function generateQuotePdf(params: {
     lineHeight: 11,
   });
 
-  return await pdf.save();
+  return { bytes: await pdf.save(), renderer: "pdflib" };
 }
 
