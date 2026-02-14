@@ -912,6 +912,12 @@ export async function POST(req: Request) {
       const client = new PcramClient();
       const pcram = await client.getDetail(String(product.ncm)).catch(() => undefined);
       if (pcram) product.raw = { ...(product.raw ?? {}), pcram };
+      else {
+        // If we can't validate on PCRAM, don't keep an unverified NCM.
+        delete product.ncm;
+        product.raw = { ...(product.raw ?? {}), pcramError: true };
+        if (product?.raw?.ncmMeta) product.raw.ncmMeta.ambiguous = true;
+      }
       return product;
     };
 
@@ -979,6 +985,54 @@ export async function POST(req: Request) {
 
     const quoteAndRespond = async (quoteRowId: string | null, product: any) => {
       const product2 = await ensurePcram(product);
+
+      // If we still don't have a PCRAM-validated NCM, but we do have candidates/questions,
+      // ask for minimal technical info BEFORE quoting (so we can fetch the real code in PCRAM).
+      const meta: any = product2?.raw?.ncmMeta;
+      const candidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(meta?.pcramCandidates)
+        ? meta.pcramCandidates
+        : [];
+      const qs: string[] = Array.isArray(meta?.missingInfoQuestions)
+        ? meta.missingInfoQuestions.map((q: any) => String(q).trim()).filter(Boolean).slice(0, 4)
+        : [];
+      const needsNcm = (process.env.PCRAM_USER && process.env.PCRAM_PASS) && !product2?.ncm && candidates.length >= 2;
+      if (needsNcm && qs.length) {
+        const { hidden } = buildHiddenChoiceSet(candidates, product2?.ncm, 5);
+        product2.raw = { ...(product2.raw ?? {}), ncmChoiceOptions: hidden };
+        if (quoteRowId) {
+          await prisma.quote
+            .update({
+              where: { id: quoteRowId },
+              data: { productJson: product2 as any, stage: "awaiting_product" },
+            })
+            .catch(() => null);
+        } else {
+          await prisma.quote
+            .create({
+              data: {
+                anonId,
+                mode: "quote",
+                userText,
+                sourceUrl: urlInText ?? undefined,
+                productJson: product2 as any,
+                quoteJson: { awaiting: "ncm_disambiguation" } as any,
+                stage: "awaiting_product",
+                userId: userId ?? undefined,
+              },
+            })
+            .catch(() => null);
+        }
+        return ask(
+          [
+            "Para encontrar el **NCM real en PCRAM** necesito afinar 1–3 datos técnicos.",
+            "",
+            "Respondeme esto (una sola línea está perfecto):",
+            ...qs.map((q) => `- ${q}`),
+          ].join("\n"),
+          product2
+        );
+      }
+
       const quote = await calcImportQuote({
         mode: "quote",
         product: product2,

@@ -356,7 +356,13 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
 
     if (ncm) {
       const pcram = await client.getDetail(ncm).catch(() => undefined);
-      return { ncm, pcram, ncmMeta };
+      // IMPORTANT: Only return an NCM as "real" when PCRAM could fetch its official detail.
+      // If PCRAM lookup fails, avoid claiming a code (prevents hallucinated/unverified NCMs).
+      if (pcram) return { ncm, pcram, ncmMeta };
+      if (ncmMeta) {
+        ncmMeta.ambiguous = true;
+      }
+      return ncmMeta ? { ncmMeta } : {};
     }
   }
 

@@ -760,6 +760,11 @@ export async function productFromUrlPipeline(
     }
     if (ncmAdjusted) {
       pcram = await client.getDetail(ncmAdjusted).catch(() => undefined);
+      // IMPORTANT: If we can't fetch PCRAM detail, don't claim a "real" NCM.
+      if (!pcram) {
+        ncmAdjusted = undefined;
+        if (ncmMeta) ncmMeta.ambiguous = true;
+      }
     }
   }
 
