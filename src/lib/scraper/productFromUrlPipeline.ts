@@ -136,6 +136,31 @@ function extractDescriptionFromHtml(html?: string) {
   return undefined;
 }
 
+function fallbackTitleFromUrlAnalysis(analysis: { url: string; urlHints?: any }) {
+  try {
+    const u = new URL(analysis.url);
+    const domain = String(analysis.urlHints?.domain ?? u.hostname ?? "")
+      .replace(/^www\./, "")
+      .trim();
+    const tokens: string[] = Array.isArray(analysis.urlHints?.tokens)
+      ? analysis.urlHints.tokens
+      : [];
+    const cleaned = tokens
+      .map((t) => String(t || "").trim())
+      .filter(Boolean)
+      .filter((t) => !/^\d{4,}$/.test(t))
+      .slice(0, 12)
+      .join(" ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (cleaned && cleaned.length >= 8) return cleaned.slice(0, 120);
+    if (domain) return `Producto desde ${domain}`;
+    return "Producto";
+  } catch {
+    return "Producto";
+  }
+}
+
 function extractJsonLdCandidates(html?: string): PriceCandidate[] {
   if (!html) return [];
   const out: PriceCandidate[] = [];
@@ -739,7 +764,7 @@ export async function productFromUrlPipeline(
   }
 
   return {
-    title: title || `Producto desde URL`,
+    title: title || fallbackTitleFromUrlAnalysis(analysis),
     description,
     category,
     origin,
