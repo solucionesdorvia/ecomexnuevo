@@ -443,7 +443,9 @@ export async function generateQuotePdfViaHtml(quote: QuoteLike) {
       viewport: { width: 1280, height: 720 },
     });
     const html = renderQuotePdfHtml(quote);
-    await page.setContent(html, { waitUntil: "networkidle" });
+    // Be resilient in production: external images/fonts can prevent "networkidle".
+    await page.setContent(html, { waitUntil: "domcontentloaded" });
+    await page.waitForTimeout(600);
     await page.emulateMedia({ media: "print" });
     // Wait for web fonts (best-effort).
     await page
@@ -453,6 +455,24 @@ export async function generateQuotePdfViaHtml(quote: QuoteLike) {
           // @ts-ignore
           await document.fonts.ready;
         }
+      })
+      .catch(() => null);
+    // Best-effort: give images a short chance to render.
+    await page
+      .evaluate(async () => {
+        const imgs = Array.from(document.images || []);
+        const waitImg = (img: HTMLImageElement) =>
+          img.complete
+            ? Promise.resolve()
+            : new Promise<void>((resolve) => {
+                const done = () => resolve();
+                img.addEventListener("load", done, { once: true });
+                img.addEventListener("error", done, { once: true });
+              });
+        await Promise.race([
+          Promise.all(imgs.slice(0, 6).map(waitImg)),
+          new Promise<void>((r) => setTimeout(r, 2000)),
+        ]);
       })
       .catch(() => null);
     const pdf = await page.pdf({

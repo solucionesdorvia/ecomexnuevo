@@ -115,7 +115,13 @@ export async function generateQuotePdf(params: {
   const q: any = params.quote;
 
   // Prefer HTML→PDF (pixel-perfect template) and fallback to pdf-lib if it fails.
-  const htmlPdf = await generateQuotePdfViaHtml(q as any).catch(() => null);
+  const htmlPdf = await generateQuotePdfViaHtml(q as any).catch((e) => {
+    // Railway/default Node images often can't run Chromium without the right deps.
+    // We log so it's diagnosable, but we still fallback to keep the endpoint working.
+    // eslint-disable-next-line no-console
+    console.error("[pdf] HTML→PDF failed; falling back to pdf-lib.", e);
+    return null;
+  });
   if (htmlPdf && htmlPdf.byteLength) return htmlPdf;
 
   const quoteJson: any = q.quoteJson ?? {};
