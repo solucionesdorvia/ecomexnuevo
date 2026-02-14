@@ -140,10 +140,73 @@ function renderProductImages(product: any) {
   return blocks.join("\n");
 }
 
+function looksSpecificRubro(s: string) {
+  const t = safeStr(s);
+  if (!t) return false;
+  const low = t.toLowerCase();
+  if (
+    low === "general" ||
+    low === "presupuesto" ||
+    low.includes("a clasificar") ||
+    low.includes("a confirmar") ||
+    low.startsWith("producto desde")
+  ) {
+    return false;
+  }
+  // Avoid tiny/meaningless categories.
+  if (t.length < 4) return false;
+  // Must contain at least one letter.
+  if (!/[a-záéíóúñ]/i.test(t)) return false;
+  return true;
+}
+
+function shortLine(s: string, max = 80) {
+  const t = safeStr(s).replace(/\s+/g, " ").trim();
+  if (!t) return "";
+  return t.length <= max ? t : `${t.slice(0, max - 1).trim()}…`;
+}
+
+function deriveProductoAndRubro(quote: QuoteLike) {
+  const product = quote.productJson ?? {};
+  const urlAnalysis = product?.raw?.urlAnalysis;
+  const scrapeOk = urlAnalysis && urlAnalysis.fetchFailed === false;
+
+  const producto =
+    shortLine(safeStr(product?.title) || safeStr(quote.userText) || "Producto", 92) ||
+    "Producto";
+
+  // Rubro must be truthful: only show if it comes from reliable scraped/official signals.
+  // Priority:
+  // 1) Scraped category (only if the URL fetch didn't fail)
+  // 2) PCRAM ramo/breadcrumbs when classification is not ambiguous and confidence is decent
+  // 3) A confirmar
+  const category = safeStr(product?.category);
+  if (scrapeOk && looksSpecificRubro(category)) {
+    return { producto, rubro: shortLine(category, 42) };
+  }
+
+  const pcram = product?.raw?.pcram;
+  const ncmMeta = product?.raw?.ncmMeta;
+  const conf = typeof ncmMeta?.confidence === "number" ? ncmMeta.confidence : null;
+  const ambiguous = Boolean(ncmMeta?.ambiguous);
+  const confident = conf != null ? conf >= 0.75 : false;
+
+  if (!ambiguous && confident) {
+    const ramo = safeStr(pcram?.ramo);
+    if (looksSpecificRubro(ramo)) return { producto, rubro: shortLine(ramo, 42) };
+    const crumbs: string[] = Array.isArray(pcram?.breadcrumbs) ? pcram.breadcrumbs : [];
+    const crumb0 = safeStr(crumbs[0]);
+    if (looksSpecificRubro(crumb0)) return { producto, rubro: shortLine(crumb0, 42) };
+  }
+
+  return { producto, rubro: quote.mode === "budget" ? "Presupuesto" : "A confirmar" };
+}
+
 export function renderQuotePdfHtml(quote: QuoteLike) {
   const product = quote.productJson ?? {};
-  const title = safeStr(product?.title) || safeStr(quote.userText) || "Producto";
-  const rubro = safeStr(product?.category) || (quote.mode === "budget" ? "Presupuesto" : "General");
+  const derived = deriveProductoAndRubro(quote);
+  const title = derived.producto;
+  const rubro = derived.rubro;
   const productos = title;
 
   const costs = deriveCostsFromQuote(quote);
