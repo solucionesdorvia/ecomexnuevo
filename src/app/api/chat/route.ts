@@ -876,7 +876,7 @@ export async function POST(req: Request) {
 
     const buildProductFromInput = async (inputText: string) => {
       const url = extractUrl(inputText);
-      if (url) return await scrapeProductFromUrl(url, { hintText: inputText });
+      if (url) return await scrapeProductFromUrl(url, { hintText: inputText, timeoutMs: 18_000 });
       const base: any = { title: cleanProductTitleFromMixedInput(inputText) };
       // AI vehicle inference to reduce (or eliminate) follow-up questions.
       const vehicleInf = await extractVehicleInferenceFromText(inputText).catch(() => null);
@@ -1391,44 +1391,15 @@ export async function POST(req: Request) {
           const builtMeta: any = (built as any)?.raw?.ncmMeta;
           const builtCandidates: Array<{ ncmCode: string; title?: string }> =
             Array.isArray(builtMeta?.pcramCandidates) ? builtMeta.pcramCandidates : [];
+          // If the input is a supplier link, don't block the flow with technical questions yet.
+          // We'll continue with price/quantity first and refine classification later if needed.
           if (
+            urlInText &&
             builtCandidates.length >= 2 &&
             (builtMeta?.ambiguous === true || !(built as any)?.ncm)
           ) {
             const { hidden } = buildHiddenChoiceSet(builtCandidates, (built as any)?.ncm, 5);
             (built as any).raw = { ...((built as any).raw ?? {}), ncmChoiceOptions: hidden };
-            await prisma.quote
-              .update({
-                where: { id: active.id },
-                data: { productJson: built as any, stage: "awaiting_product" },
-              })
-              .catch(() => null);
-
-            const qs: string[] = Array.isArray(builtMeta?.missingInfoQuestions)
-              ? builtMeta.missingInfoQuestions
-                  .map((q: any) => String(q).trim())
-                  .filter(Boolean)
-                  .slice(0, 4)
-              : [];
-            return ask(
-              [
-                "Ok. Cambiemos de producto.",
-                "",
-                "Para estimar **impuestos** con precisión, necesito afinar 1–3 datos técnicos.",
-                "",
-                qs.length
-                  ? [
-                      "Respondeme esto (podés contestar en una sola línea):",
-                      ...qs.map((q) => `- ${q}`),
-                      "",
-                    ].join("\n")
-                  : "",
-                "Con eso ajusto la clasificación internamente y seguimos con el precio/cantidad.",
-              ]
-                .filter(Boolean)
-                .join("\n"),
-              built
-            );
           }
 
           await prisma.quote
@@ -1513,7 +1484,15 @@ export async function POST(req: Request) {
           const builtMeta: any = (built as any)?.raw?.ncmMeta;
           const builtCandidates: Array<{ ncmCode: string; title?: string }> =
             Array.isArray(builtMeta?.pcramCandidates) ? builtMeta.pcramCandidates : [];
+          // If the input is a supplier link, don't block the flow with technical questions yet.
           if (
+            urlInText &&
+            builtCandidates.length >= 2 &&
+            (builtMeta?.ambiguous === true || !(product as any)?.ncm)
+          ) {
+            const { hidden } = buildHiddenChoiceSet(builtCandidates, (product as any)?.ncm, 5);
+            product.raw = { ...(product.raw ?? {}), ncmChoiceOptions: hidden };
+          } else if (
             builtCandidates.length >= 2 &&
             (builtMeta?.ambiguous === true || !(product as any)?.ncm)
           ) {
@@ -1631,7 +1610,10 @@ export async function POST(req: Request) {
     if (
       builtCandidates.length >= 2 &&
       (builtMeta?.ambiguous === true || !built?.ncm) &&
-      !shouldSkipTechnicalQuestions(built)
+      !shouldSkipTechnicalQuestions(built) &&
+      // If user provided a supplier link, don't block the flow here.
+      // Continue with price/quantity first; refine later if needed.
+      !url
     ) {
       const qs: string[] = Array.isArray(builtMeta?.missingInfoQuestions)
         ? builtMeta.missingInfoQuestions
