@@ -198,6 +198,24 @@ function classNames(...xs: Array<string | false | undefined | null>) {
   return xs.filter(Boolean).join(" ");
 }
 
+function getOrCreateAnonId() {
+  try {
+    const key = "ecomex_anon_id";
+    const existing = window.localStorage.getItem(key);
+    if (existing && existing.length >= 12) return existing;
+    const id =
+      typeof crypto !== "undefined" && "randomUUID" in crypto
+        ? (crypto as any).randomUUID()
+        : `${Date.now()}-${Math.random().toString(16).slice(2)}-${Math.random()
+            .toString(16)
+            .slice(2)}`;
+    window.localStorage.setItem(key, id);
+    return id;
+  } catch {
+    return null;
+  }
+}
+
 function parseProductSnapshot(text: string) {
   const t = String(text || "");
   const title =
@@ -403,6 +421,11 @@ export default function ChatClient({
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
+  const anonIdRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    anonIdRef.current = getOrCreateAnonId();
+  }, []);
 
   const header = useMemo(() => {
     const t =
@@ -502,7 +525,10 @@ export default function ChatClient({
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
-        headers: { "content-type": "application/json" },
+        headers: {
+          "content-type": "application/json",
+          ...(anonIdRef.current ? { "x-ecomex-anon": anonIdRef.current } : {}),
+        },
         // Ensure session cookies (anonId/auth) are sent and Set-Cookie is honored.
         credentials: "include",
         body: JSON.stringify({

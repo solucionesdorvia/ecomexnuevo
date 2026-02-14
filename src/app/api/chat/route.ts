@@ -610,10 +610,14 @@ function parseCookies(header: string | null) {
 export async function POST(req: Request) {
   try {
     const cookieStore = await cookies();
-    const anonId = cookieStore.get("ecomex_anon")?.value ?? crypto.randomUUID();
+    const headerAnon = (req.headers.get("x-ecomex-anon") ?? "").trim();
+    const anonId = cookieStore.get("ecomex_anon")?.value || headerAnon || crypto.randomUUID();
     const authToken = cookieStore.get("ecomex_auth")?.value;
     const auth = authToken ? await verifyAuthToken(authToken) : null;
     const userId = auth?.sub ?? null;
+    const cookieSecure = (req.headers.get("x-forwarded-proto") ?? "")
+      .toLowerCase()
+      .startsWith("https");
 
     const body = (await req.json()) as {
       mode?: "quote" | "budget";
@@ -668,7 +672,7 @@ export async function POST(req: Request) {
       res.cookies.set("ecomex_anon", anonId, {
         httpOnly: true,
         sameSite: "lax",
-        secure: process.env.NODE_ENV === "production",
+        secure: cookieSecure,
         path: "/",
         maxAge: 60 * 60 * 24 * 365,
       });
@@ -727,7 +731,7 @@ export async function POST(req: Request) {
       res.cookies.set("ecomex_anon", anonId, {
         httpOnly: true,
         sameSite: "lax",
-        secure: process.env.NODE_ENV === "production",
+        secure: cookieSecure,
         path: "/",
         maxAge: 60 * 60 * 24 * 365,
       });
@@ -760,7 +764,7 @@ export async function POST(req: Request) {
       res.cookies.set("ecomex_anon", anonId, {
         httpOnly: true,
         sameSite: "lax",
-        secure: process.env.NODE_ENV === "production",
+        secure: cookieSecure,
         path: "/",
         maxAge: 60 * 60 * 24 * 365,
       });
@@ -861,7 +865,7 @@ export async function POST(req: Request) {
           res.cookies.set("ecomex_anon", anonId, {
             httpOnly: true,
             sameSite: "lax",
-            secure: process.env.NODE_ENV === "production",
+            secure: cookieSecure,
             path: "/",
             maxAge: 60 * 60 * 24 * 365,
           });
@@ -966,7 +970,7 @@ export async function POST(req: Request) {
       res.cookies.set("ecomex_anon", anonId, {
         httpOnly: true,
         sameSite: "lax",
-        secure: process.env.NODE_ENV === "production",
+        secure: cookieSecure,
         path: "/",
         maxAge: 60 * 60 * 24 * 365,
       });
@@ -1032,7 +1036,7 @@ export async function POST(req: Request) {
       res.cookies.set("ecomex_anon", anonId, {
         httpOnly: true,
         sameSite: "lax",
-        secure: process.env.NODE_ENV === "production",
+        secure: cookieSecure,
         path: "/",
         maxAge: 60 * 60 * 24 * 365,
       });
