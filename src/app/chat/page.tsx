@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import ImportFlowClient from "./ui/ImportFlowClient";
+import ChatClient from "./ui/ChatClient";
 
 export const metadata: Metadata = {
-  title: "E‑Comex — Análisis de importación",
+  title: "E‑Comex — Chat de importación",
   description:
-    "Ingresá un link o una descripción. El sistema materializa el proceso de importación en módulos: producto, clasificación, requisitos, costos, timeline y reporte.",
+    "Pegá un link o describí tu producto. Recibí una cotización completa dentro del chat, con explicación y tiempos estimados.",
 };
 
 export default async function ChatPage({
@@ -15,6 +15,6 @@ export default async function ChatPage({
   const { mode } = await searchParams;
   const initialMode = mode === "budget" ? "budget" : "quote";
 
-  return <ImportFlowClient initialMode={initialMode} />;
+  return <ChatClient initialMode={initialMode} />;
 }
 
