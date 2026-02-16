@@ -758,7 +758,16 @@ export default function ChatClient({
                 Clasificación aduanera
               </div>
               <div className="mt-2 text-sm font-extrabold text-white">
-                {ncm && ncm !== "9999.99.99" ? `NCM ${ncm}` : "Estimando…"}
+                {(() => {
+                  const fromState =
+                    ncm && ncm !== "9999.99.99" ? ncm : null;
+                  const fromAssumptions =
+                    assumptions
+                      ?.find((a) => a.id === "ncm")
+                      ?.value?.match(/\b(\d{4}\.\d{2}\.\d{2})\b/)?.[1] ?? null;
+                  const used = fromState ?? fromAssumptions;
+                  return used ? `NCM ${used}` : "Estimando…";
+                })()}
               </div>
               <div className="mt-2 text-xs leading-relaxed text-muted">
                 Se afina con datos técnicos y origen. Recomendamos validación profesional antes

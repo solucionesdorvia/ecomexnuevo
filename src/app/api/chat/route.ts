@@ -302,6 +302,12 @@ function extractNcmFromText(text: string): string | null {
   return null;
 }
 
+function isValidNcmCode(ncm: unknown): ncm is string {
+  const s = String(ncm ?? "").trim();
+  if (!/^\d{4}\.\d{2}\.\d{2}$/.test(s)) return false;
+  return s !== "9999.99.99";
+}
+
 function parseChoiceIndex(text: string): number | null {
   const t = String(text || "").trim();
   if (!/^\d+$/.test(t)) return null;
@@ -996,7 +1002,21 @@ export async function POST(req: Request) {
       if (url) {
         // IMPORTANT: strip URL so numbers in the link (IDs) are never parsed as price/qty hints.
         const hintText = stripUrlFromText(inputText, url);
-        return await scrapeProductFromUrl(url, { hintText, timeoutMs: 45_000 });
+        const p = await scrapeProductFromUrl(url, { hintText, timeoutMs: 45_000 });
+        // If the URL pipeline found PCRAM candidates but didn't set a final NCM, pick the top one
+        // (we'll still ask 1–3 basics to validate/refine before quoting when needed).
+        const meta: any = (p as any)?.raw?.ncmMeta;
+        const cands: Array<{ ncmCode: string; title?: string }> = Array.isArray(meta?.pcramCandidates)
+          ? meta.pcramCandidates
+          : [];
+        if (!(p as any)?.ncm && cands.length) {
+          const pick = cands.find((c) => isValidNcmCode(c?.ncmCode));
+          if (pick) {
+            (p as any).ncm = pick.ncmCode;
+            if ((p as any)?.raw?.ncmMeta) (p as any).raw.ncmMeta.ambiguous = true;
+          }
+        }
+        return p as any;
       }
       const base: any = { title: cleanProductTitleFromMixedInput(inputText) };
       // AI vehicle inference to reduce (or eliminate) follow-up questions.
@@ -1020,6 +1040,19 @@ export async function POST(req: Request) {
       if (extra.ncm) base.ncm = extra.ncm;
       if (extra.pcram) base.raw = { ...(base.raw ?? {}), pcram: extra.pcram };
       if (extra.ncmMeta) base.raw = { ...(base.raw ?? {}), ncmMeta: extra.ncmMeta };
+      // If we have PCRAM candidates but no resolved NCM, pick the top one as default.
+      // We'll still ask 1–3 questions to validate/refine before quoting when needed.
+      if (!base.ncm) {
+        const meta: any = base?.raw?.ncmMeta;
+        const cands: Array<{ ncmCode: string; title?: string }> = Array.isArray(meta?.pcramCandidates)
+          ? meta.pcramCandidates
+          : [];
+        const pick = cands.find((c) => isValidNcmCode(c?.ncmCode));
+        if (pick) {
+          base.ncm = pick.ncmCode;
+          if (base?.raw?.ncmMeta) base.raw.ncmMeta.ambiguous = true;
+        }
+      }
       // If we can safely resolve common vehicle cases, do it here to avoid asking basics.
       maybeAutoResolveKnownVehicle(base);
       return base;
