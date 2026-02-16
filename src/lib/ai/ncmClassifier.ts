@@ -98,7 +98,7 @@ export async function classifyWithAI(
       kind?: string;
       search_terms?: string[];
       missing_info_questions?: string[];
-    }>({ system, user, model: process.env.OPENAI_MODEL || "gpt-4o" });
+    }>({ system, user, model: process.env.OPENAI_MODEL || "gpt-4o-mini" });
 
     const ncm_code = formatNcm(String(r.ncm_code ?? ""));
     const confidence = clamp01(Number(r.confidence ?? 0));
