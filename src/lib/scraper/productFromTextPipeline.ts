@@ -250,7 +250,7 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
   if (process.env.PCRAM_USER && process.env.PCRAM_PASS) {
     const client = new PcramClient();
     const pcramTimeoutMs = Number(process.env.PCRAM_CALL_TIMEOUT_MS ?? "45000");
-    // If NCM came from AI (or is missing), use PCRAM's own search to avoid hallucinated codes.
+    // Use PCRAM's own search as *evidence* to support the AI classification.
     if (!explicitNcm) {
       const aiTerms = ncmMeta?.source === "ai" ? ncmMeta.searchTerms : undefined;
       const baseQueries =
@@ -318,89 +318,59 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
             .slice(0, 8)
             .map((c) => ({ ncmCode: c.ncmCode, title: c.title }));
 
-        const scoreQuery = [text, ...queries.slice(1)].join(" ");
-        const scored = filteredByHs
-          .map((c) => {
-            const { score } = scoreCandidate(scoreQuery, c.title);
-            return { ...c, score };
-          })
-          .sort((a, b) => b.score - a.score);
-
-        const best = scored[0];
-        const second = scored[1];
-        const qTokens = tokensFrom(scoreQuery);
-        const isGeneric =
-          qTokens.length === 1 && GENERIC_TOKENS.has(String(qTokens[0] ?? "").toLowerCase());
-        const minScore = isGeneric ? 2 : qTokens.length <= 1 ? 1 : qTokens.length === 2 ? 0.5 : 0.34;
-        const bestOk =
-          Boolean(best) &&
-          best.score >= minScore &&
-          (!second || second.score < minScore || best.score - second.score >= 0.2);
-
-        if (ncmMeta) {
-          ncmMeta.confidence = best?.score ?? undefined;
-          ncmMeta.ambiguous = Boolean(best && !bestOk);
-        }
-
-        // If we still can't disambiguate (common for vehicles), generate minimal questions
-        // based on what PCRAM candidates differ on, instead of guessing.
-        if (filteredByHs.length >= 2 && (ncmMeta?.ambiguous === true || !ncm || !bestOk)) {
-          const qs = deriveDisambiguationQuestions({
-            hsHeading: ncmMeta?.hsHeading,
-            kind: ncmMeta?.kind,
-            candidates: filteredByHs.map((c) => ({ ncmCode: c.ncmCode, title: c.title })),
-          });
-          if (qs.length) {
-            if (!ncmMeta) ncmMeta = { source: "pcram_search" };
-            ncmMeta.missingInfoQuestions = qs;
-          }
-        }
-
-        if (!ncm) {
-          // Prefer strong match, but if we have PCRAM candidates we can still pick the best one
-          // and validate it by fetching PCRAM detail (authoritative).
-          if (bestOk) {
-            ncm = best!.ncmCode;
-          } else if (best?.ncmCode) {
-            ncm = best.ncmCode;
-            if (ncmMeta) ncmMeta.ambiguous = true;
-          }
-        } else if (ncmMeta.source === "ai") {
-          const normDigits = String(ncm).replace(/\D/g, "");
-          const inCandidates = candidates.some((c) => c.ncmCode.replace(/\D/g, "") === normDigits);
-          if (!inCandidates) {
-            // Only adjust away from the AI suggestion if we have a strong textual match.
-            if (bestOk) {
-              const adjustedTo = best!.ncmCode;
-              ncmMeta.adjustedFrom = String(ncm);
-              ncmMeta.adjustedTo = adjustedTo;
-              ncm = adjustedTo;
-            } else {
-              // Fall back to the best PCRAM candidate (and validate via PCRAM detail).
-              if (best?.ncmCode) {
-                ncmMeta.adjustedFrom = String(ncm);
-                ncmMeta.adjustedTo = best.ncmCode;
-                ncmMeta.ambiguous = true;
-                ncm = best.ncmCode;
-              } else {
-                // If we can't validate, don't pretend we know the NCM.
-                ncm = undefined;
-              }
+        // AI "research": choose NCM from the evidence candidate list.
+        if (process.env.OPENAI_API_KEY) {
+          const evidenceNote = [
+            "Elegí el NCM correcto usando SOLO los candidatos provistos.",
+            "Priorizá títulos que coincidan con el producto.",
+            "Si hay dudas (vehículos), elegí el mejor match por defecto y marcá missing_info_questions para afinar después.",
+          ].join(" ");
+          const aiPick = await withTimeout(
+            classifyWithAI(text, {
+              candidates: filteredByHs.map((c) => ({ ncm_code: c.ncmCode, title: c.title })),
+              evidenceNote,
+            }),
+            pcramTimeoutMs
+          ).catch(() => null);
+          const picked = aiPick?.ncm_code && aiPick.ncm_code !== "9999.99.99" ? aiPick.ncm_code : null;
+          if (picked) {
+            const prev = ncm;
+            ncm = picked;
+            if (!ncmMeta) ncmMeta = { source: "ai" };
+            if (prev && prev !== picked) {
+              ncmMeta.adjustedFrom = String(prev);
+              ncmMeta.adjustedTo = picked;
             }
+            if (typeof aiPick?.confidence === "number") ncmMeta.confidence = aiPick.confidence;
+            if (Array.isArray(aiPick?.missing_info_questions) && aiPick!.missing_info_questions!.length) {
+              ncmMeta.missingInfoQuestions = aiPick!.missing_info_questions;
+            }
+            ncmMeta.ambiguous = Boolean(aiPick && aiPick.confidence != null && aiPick.confidence < 0.55);
           }
         }
       }
     }
 
     if (ncm) {
-      const pcram = await withTimeout(client.getDetail(ncm), pcramTimeoutMs).catch(() => undefined);
+      // Try top candidates from the AI (best-effort) to guarantee we get a PCRAM detail when possible.
+      const tryCodes = uniqueStrings([ncm]);
+      let pcram: any = undefined;
+      let used: string | undefined = undefined;
+      for (const code of tryCodes.slice(0, 3)) {
+        const d = await withTimeout(client.getDetail(code), pcramTimeoutMs).catch(() => undefined);
+        if (d) {
+          pcram = d;
+          used = code;
+          break;
+        }
+      }
       // IMPORTANT: Only return an NCM as "real" when PCRAM could fetch its official detail.
       // If PCRAM lookup fails, avoid claiming a code (prevents hallucinated/unverified NCMs).
       if (pcram) {
         const ncmOfficial =
           typeof (pcram as any)?.ncmCode === "string" && (pcram as any).ncmCode.trim()
             ? String((pcram as any).ncmCode).trim()
-            : ncm;
+            : used ?? ncm;
         return { ncm: ncmOfficial, pcram, ncmMeta };
       }
       if (ncmMeta) {

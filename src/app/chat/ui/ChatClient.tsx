@@ -826,8 +826,8 @@ export default function ChatClient({
       </aside>
 
       <main className="relative z-10 flex flex-1 flex-col">
-        <header className="glass-nav sticky top-0 z-30 flex items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-4">
+        <header className="glass-nav sticky top-0 z-30 flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
+          <div className="flex min-w-0 items-center gap-3 sm:gap-4">
             <button
               type="button"
               className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-muted hover:bg-white/10 md:hidden"
@@ -836,7 +836,7 @@ export default function ChatClient({
             >
               <span className="material-symbols-outlined">menu</span>
             </button>
-            <div className="flex h-10 items-center gap-3">
+            <div className="flex min-w-0 h-10 items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/95 p-1.5 shadow-lg shadow-black/20">
                 <img
                   src="/brand/ecomex-logo.png"
@@ -844,8 +844,10 @@ export default function ChatClient({
                   className="h-6 w-auto object-contain"
                 />
               </div>
-              <div className="text-xl font-bold tracking-tight">
-                E‑COMEX <span className="font-black text-primary">IA</span>
+              <div className="min-w-0 text-base font-bold tracking-tight sm:text-xl">
+                <span className="block truncate">
+                  E‑COMEX <span className="font-black text-primary">IA</span>
+                </span>
               </div>
             </div>
             <div className="hidden items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 md:flex">
@@ -858,15 +860,16 @@ export default function ChatClient({
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex shrink-0 flex-wrap items-center justify-end gap-2 sm:gap-3">
             {(cards ?? []).length ? (
               <button
                 type="button"
                 onClick={() => setCardsDrawerOpen(true)}
-                className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-white/10 md:hidden"
+                className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-white transition-colors hover:bg-white/10 md:hidden sm:px-4 sm:text-xs"
               >
                 <span className="material-symbols-outlined text-sm">receipt_long</span>
-                Desglose
+                <span className="hidden sm:inline">Desglose</span>
+                <span className="sm:hidden">Costos</span>
               </button>
             ) : null}
 
@@ -875,11 +878,11 @@ export default function ChatClient({
               EN LÍNEA
             </div>
 
-            <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 p-1 text-xs">
+            <div className="flex items-center gap-1 rounded-lg border border-white/10 bg-white/5 p-1 text-[10px] sm:gap-2 sm:text-xs">
               <button
                 type="button"
                 className={classNames(
-                  "rounded-lg px-3 py-2 font-bold uppercase tracking-wider text-muted transition-colors hover:text-white",
+                  "rounded-lg px-2 py-2 font-bold uppercase tracking-wider text-muted transition-colors hover:text-white sm:px-3",
                   mode === "quote" && "bg-white/10 text-white"
                 )}
                 onClick={() => {
@@ -891,12 +894,13 @@ export default function ChatClient({
                   setMessages([]);
                 }}
               >
-                Cotizar
+                <span className="hidden sm:inline">Cotizar</span>
+                <span className="sm:hidden">Quote</span>
               </button>
               <button
                 type="button"
                 className={classNames(
-                  "rounded-lg px-3 py-2 font-bold uppercase tracking-wider text-muted transition-colors hover:text-white",
+                  "rounded-lg px-2 py-2 font-bold uppercase tracking-wider text-muted transition-colors hover:text-white sm:px-3",
                   mode === "budget" && "bg-white/10 text-white"
                 )}
                 onClick={() => {
@@ -908,7 +912,8 @@ export default function ChatClient({
                   setMessages([]);
                 }}
               >
-                Presupuesto
+                <span className="hidden sm:inline">Presupuesto</span>
+                <span className="sm:hidden">Budget</span>
               </button>
             </div>
 
@@ -1121,7 +1126,7 @@ export default function ChatClient({
               </div>
             </div>
 
-            <div className="border-t border-white/5 bg-background-deeper/70 p-6 backdrop-blur-xl">
+            <div className="border-t border-white/5 bg-background-deeper/70 p-4 backdrop-blur-xl sm:p-6">
               <div className="mx-auto max-w-4xl">
                 {requestContact ? (
                   <div className="mb-4 rounded-xl border border-white/10 bg-white/5 p-4">
@@ -1149,7 +1154,7 @@ export default function ChatClient({
                     void send(input);
                   }}
                 >
-                  <div className="glass-panel flex items-center gap-3 rounded-xl p-2 shadow-2xl">
+                  <div className="glass-panel flex min-w-0 items-center gap-2 rounded-xl p-2 shadow-2xl sm:gap-3">
                     <div className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10 sm:flex">
                       <span className="material-symbols-outlined text-white/50">
                         link
@@ -1178,12 +1183,12 @@ export default function ChatClient({
                           : "Pegá un link del producto o hacé una consulta…"
                       }
                       rows={2}
-                      className="min-h-[48px] flex-1 resize-none rounded-lg bg-transparent px-2 text-base font-normal text-white outline-none placeholder:text-muted/60"
+                      className="min-h-[48px] min-w-0 flex-1 resize-none rounded-lg bg-transparent px-2 text-base font-normal text-white outline-none placeholder:text-muted/60"
                     />
                     <button
                       type="submit"
                       disabled={pending}
-                      className="flex h-10 min-w-[120px] items-center justify-center gap-2 rounded-lg bg-primary px-4 text-sm font-bold shadow-lg shadow-primary/20 transition-all active:scale-95 disabled:opacity-60"
+                      className="flex h-10 min-w-[96px] items-center justify-center gap-2 rounded-lg bg-primary px-3 text-sm font-bold shadow-lg shadow-primary/20 transition-all active:scale-95 disabled:opacity-60 sm:min-w-[120px] sm:px-4"
                     >
                       ENVIAR
                       <span className="material-symbols-outlined text-sm">

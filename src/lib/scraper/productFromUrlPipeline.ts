@@ -670,6 +670,7 @@ export async function productFromUrlPipeline(
         hsHeading?: string;
         kind?: string;
         searchTerms?: string[];
+        missingInfoQuestions?: string[];
         adjustedFrom?: string;
         adjustedTo?: string;
         pcramCandidates?: Array<{ ncmCode: string; title?: string }>;
@@ -738,57 +739,30 @@ export async function productFromUrlPipeline(
         .slice(0, 8)
         .map((c) => ({ ncmCode: c.ncmCode, title: c.title }));
 
-      const queryForScore = [title, category, origin].filter(Boolean).join(" ") || queryForSearch;
-      const scoreQuery = [queryForScore, ...queries.slice(1)].filter(Boolean).join(" ");
-      const scored = enriched
-        .map((c) => {
-          const { score } = scoreCandidate(scoreQuery, c.title);
-          return { ...c, score };
-        })
-        .sort((a, b) => b.score - a.score);
-      const best = scored[0];
-      const second = scored[1];
-      const qTokens = tokensFrom(scoreQuery);
-      const isGeneric =
-        qTokens.length === 1 && GENERIC_TOKENS.has(String(qTokens[0] ?? "").toLowerCase());
-      const minScore = isGeneric ? 2 : qTokens.length <= 1 ? 1 : qTokens.length === 2 ? 0.5 : 0.34;
-      const bestOk =
-        Boolean(best) &&
-        best.score >= minScore &&
-        (!second || second.score < minScore || best.score - second.score >= 0.2);
-
-      ncmMeta.confidence = best?.score ?? undefined;
-      ncmMeta.ambiguous = Boolean(best && !bestOk);
-
-      if (!ncmAdjusted) {
-        if (bestOk) {
-          ncmAdjusted = best!.ncmCode;
-        } else if (best?.ncmCode) {
-          // Even if ambiguous, pick the best candidate and validate via PCRAM detail.
-          ncmAdjusted = best.ncmCode;
-          ncmMeta.ambiguous = true;
-        }
-      } else {
-        const normDigits = String(ncmAdjusted).replace(/\D/g, "");
-        const inCandidates = enriched.some((c) => c.ncmCode.replace(/\D/g, "") === normDigits);
-        if (!inCandidates) {
-          if (bestOk) {
-            const adjustedTo = best!.ncmCode;
-            ncmMeta.adjustedFrom = ncmAdjusted;
-            ncmMeta.adjustedTo = adjustedTo;
-            ncmAdjusted = adjustedTo;
-          } else {
-            // Fall back to the best PCRAM candidate (and validate via PCRAM detail).
-            if (best?.ncmCode) {
-              ncmMeta.adjustedFrom = ncmAdjusted;
-              ncmMeta.adjustedTo = best.ncmCode;
-              ncmMeta.ambiguous = true;
-              ncmAdjusted = best.ncmCode;
-            } else {
-              // If we can't validate/choose, avoid returning a wrong NCM.
-              ncmAdjusted = undefined;
-            }
+      // AI "research": choose NCM from the evidence candidate list (PCRAM + local).
+      if (hasOpenAiKey()) {
+        const evidenceNote = [
+          "Elegí el NCM correcto usando SOLO los candidatos provistos.",
+          "Priorizá coincidencia del título/descripción/origen extraídos de la URL.",
+        ].join(" ");
+        const aiPick = await classifyWithAI(textForNcm, {
+          candidates: enriched.slice(0, 10).map((c) => ({ ncm_code: c.ncmCode, title: c.title })),
+          evidenceNote,
+        }).catch(() => null);
+        const picked =
+          aiPick?.ncm_code && aiPick.ncm_code !== "9999.99.99" ? aiPick.ncm_code : undefined;
+        if (picked) {
+          const prev = ncmAdjusted;
+          ncmAdjusted = picked;
+          if (prev && prev !== picked) {
+            ncmMeta.adjustedFrom = prev;
+            ncmMeta.adjustedTo = picked;
           }
+          if (typeof aiPick?.confidence === "number") ncmMeta.confidence = aiPick.confidence;
+          if (Array.isArray(aiPick?.missing_info_questions) && aiPick!.missing_info_questions!.length) {
+            ncmMeta.missingInfoQuestions = aiPick!.missing_info_questions;
+          }
+          ncmMeta.ambiguous = Boolean(aiPick && aiPick.confidence != null && aiPick.confidence < 0.55);
         }
       }
     }

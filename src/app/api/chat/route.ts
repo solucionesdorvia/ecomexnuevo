@@ -986,8 +986,8 @@ export async function POST(req: Request) {
         }
       }
       else {
-        // If we can't validate on PCRAM, don't keep an unverified NCM.
-        delete product.ncm;
+        // Keep the AI-derived NCM even if PCRAM fails, so we don't fall back to "Sin clasificar aún".
+        // Taxes will be estimated until PCRAM can be fetched.
         product.raw = { ...(product.raw ?? {}), pcramError: true };
         if (product?.raw?.ncmMeta) product.raw.ncmMeta.ambiguous = true;
       }

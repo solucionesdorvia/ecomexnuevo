@@ -6,6 +6,11 @@ export type NcmCandidate = {
   rationale?: string;
 };
 
+export type NcmEvidenceCandidate = {
+  ncm_code: string;
+  title?: string;
+};
+
 export type NcmClassification = {
   ncm_code: string;
   confidence: number;
@@ -32,18 +37,33 @@ function clamp01(n: number) {
   return Math.max(0, Math.min(1, n));
 }
 
-export async function classifyWithAI(text: string): Promise<NcmClassification> {
+export async function classifyWithAI(
+  text: string,
+  opts?: {
+    /**
+     * Optional evidence list to "research" from.
+     * If provided, the model must pick an NCM from this list (unless it returns 9999.99.99).
+     */
+    candidates?: NcmEvidenceCandidate[];
+    /** Extra context (e.g. hints from PCRAM search / local nomenclator). */
+    evidenceNote?: string;
+  }
+): Promise<NcmClassification> {
   const knowledge = process.env.NCM_KNOWLEDGE ?? "";
+  const evidence = Array.isArray(opts?.candidates) ? opts!.candidates.slice(0, 12) : [];
 
   const system = [
     "Eres un clasificador experto de NCM (Argentina).",
-    "Tu tarea es proponer el NCM más probable para el producto descrito.",
+    "Tu tarea es proponer el NCM más probable para el producto descrito, investigando con la evidencia disponible.",
     "Devuelve SOLO JSON válido con estas claves: ncm_code, confidence, rationale, candidates, hs_heading, kind, search_terms, missing_info_questions.",
     "confidence debe ser un número entre 0 y 1.",
     "ncm_code debe tener el formato XXXX.XX.XX (si recibes solo dígitos, formatea).",
     "hs_heading debe ser 4 dígitos cuando puedas (por ejemplo 8701, 8703, 8427). Si no aplica, null.",
     "kind debe ser una etiqueta corta en español (por ejemplo: tractor, automóvil, camioneta, camión, partes, maquinaria, alimento, otro).",
     "search_terms deben ser 2–6 términos en español útiles para buscar en PCRAM. Priorizá términos genéricos técnicos; evitá marcas/modelos salvo que sea la única pista.",
+    evidence.length
+      ? "REGLA CRÍTICA: si te doy una lista de candidatos (EVIDENCE_CANDIDATES), tu ncm_code DEBE ser uno de esos códigos. Si no podés decidir, devolvé 9999.99.99 con confidence baja y 1–4 missing_info_questions."
+      : "",
     "Reglas rápidas (orientativas) para vehículos (Cap. 87):",
     "- 8703: vehículos diseñados principalmente para transporte de personas (autos/SUV).",
     "- 8704: vehículos para transporte de mercancías (pick-up/camioneta de carga/vehículo utilitario).",
@@ -56,6 +76,10 @@ export async function classifyWithAI(text: string): Promise<NcmClassification> {
 
   const user = [
     "Clasifica el NCM del siguiente producto.",
+    opts?.evidenceNote ? `EVIDENCE_NOTE:\n${String(opts.evidenceNote).slice(0, 1500)}` : "",
+    evidence.length
+      ? `EVIDENCE_CANDIDATES (elige de esta lista):\n${JSON.stringify(evidence, null, 2)}`
+      : "",
     "Producto:",
     text.slice(0, 8000),
   ].join("\n");
