@@ -483,7 +483,8 @@ function maybeAutoResolveKnownVehicle(product: any) {
     product.ncm = final[0]!.ncmCode;
     if (product?.raw?.ncmMeta) {
       product.raw.ncmMeta.ambiguous = false;
-      delete product.raw.ncmMeta.missingInfoQuestions;
+      // Keep missingInfoQuestions (if any) so we can still ask 1–3 basics
+      // to validate the classification before quoting.
     }
     // Remove any pending hidden options; we won't ask the user.
     if (product?.raw) delete product.raw.ncmChoiceOptions;
@@ -555,6 +556,63 @@ function tryPickNcmCandidateFromHints(
 
   if (filtered.length === 1) return { ncmCode: filtered[0]!.ncmCode };
   return null;
+}
+
+function deriveBasicNcmQuestions(opts: {
+  hsHeading?: string;
+  kind?: string;
+  candidates: Array<{ ncmCode: string; title?: string }>;
+}) {
+  const hs = String(opts.hsHeading ?? "").replace(/\D/g, "");
+  const kind = normLooseText(opts.kind ?? "");
+  const titles = opts.candidates
+    .map((c) => normLooseText(c.title ?? ""))
+    .filter(Boolean)
+    .slice(0, 12);
+
+  const has = (re: RegExp) => titles.some((t) => re.test(t));
+  const questions: string[] = [];
+
+  // Vehicles / tractors (chapter 87) often require a couple of hard attributes.
+  if (hs === "8704") {
+    // Weight with max load (<=5t vs >5t) is a common split.
+    if (has(/\binferior o igual a 5 t\b/) && has(/\bsuperior a 5 t\b/)) {
+      questions.push("¿El **peso total con carga máxima** es **≤ 5 t** o **> 5 t**?");
+    } else if (kind.includes("camioneta") || kind.includes("pickup")) {
+      questions.push("¿El **peso total con carga máxima** es **≤ 5 t**? (sí/no)");
+    }
+    if (has(/\bcaja basculante\b/)) {
+      questions.push("¿Es una camioneta/camión con **caja basculante**? (sí/no)");
+    }
+    if (has(/\bfrigorif|isoterm/)) {
+      questions.push("¿Es **frigorífico/isotérmico**? (sí/no)");
+    }
+    if (has(/\bchasis con motor\b/)) {
+      questions.push("¿Es **chasis con motor y cabina** o vehículo completo?");
+    }
+  } else if (hs === "8703") {
+    if (has(/\bchispa\b/) && has(/\bcompresion\b/)) {
+      questions.push("¿El motor es **nafta (chispa)** o **diésel (compresión)**?");
+    }
+    if (has(/\bcilindrada\b/)) {
+      questions.push("¿Cuál es la **cilindrada (cm³)**? (ej: `2800 cm3`)");
+    }
+    questions.push("¿Es para **transporte de personas** (auto/SUV) o es **utilitario/carga**?");
+  } else if (hs === "8701") {
+    if (has(/\btractor(?:es)? de carretera para semirremolques\b/)) {
+      questions.push(
+        "¿Es **tractor de carretera para semirremolques** (tipo camión) o **tractor agrícola**?"
+      );
+    }
+    if (has(/\borugas\b/)) {
+      questions.push("¿Es **tractor de orugas**? (sí/no)");
+    }
+    if (has(/\bun solo eje\b/)) {
+      questions.push("¿Es un **tractor de un solo eje**? (sí/no)");
+    }
+  }
+
+  return questions.filter(Boolean).slice(0, 4);
 }
 
 function topCandidatesWithCurrent(
@@ -1077,19 +1135,42 @@ export async function POST(req: Request) {
     const quoteAndRespond = async (quoteRowId: string | null, product: any) => {
       const product2 = await ensurePcram(product);
 
-      // If we still don't have a PCRAM-validated NCM, but we do have candidates/questions,
+      // If the NCM is ambiguous (or not PCRAM-validated) and we have follow-up questions,
       // ask for minimal technical info BEFORE quoting (so we can fetch the real code in PCRAM).
       const meta: any = product2?.raw?.ncmMeta;
       const candidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(meta?.pcramCandidates)
         ? meta.pcramCandidates
         : [];
-      const qs: string[] = Array.isArray(meta?.missingInfoQuestions)
+      const qsFromMeta: string[] = Array.isArray(meta?.missingInfoQuestions)
         ? meta.missingInfoQuestions.map((q: any) => String(q).trim()).filter(Boolean).slice(0, 4)
         : [];
-      const needsNcm = (process.env.PCRAM_USER && process.env.PCRAM_PASS) && !product2?.ncm && candidates.length >= 2;
-      if (needsNcm && qs.length) {
+      const qs =
+        qsFromMeta.length
+          ? qsFromMeta
+          : deriveBasicNcmQuestions({
+              hsHeading: meta?.hsHeading,
+              kind: meta?.kind,
+              candidates,
+            });
+
+      const hasPcramDetail = Boolean(product2?.raw?.pcram);
+      const wantsPcram =
+        Boolean(process.env.PCRAM_USER && process.env.PCRAM_PASS);
+      const unresolvedNcm = !product2?.ncm || meta?.ambiguous === true;
+      const shouldAskNcmQuestions =
+        wantsPcram &&
+        candidates.length >= 2 &&
+        qs.length > 0 &&
+        // Avoid looping if we already asked in this stored product context.
+        product2?.raw?.ncmDisambiguationAsked !== true;
+
+      if (shouldAskNcmQuestions) {
         const { hidden } = buildHiddenChoiceSet(candidates, product2?.ncm, 5);
-        product2.raw = { ...(product2.raw ?? {}), ncmChoiceOptions: hidden };
+        product2.raw = {
+          ...(product2.raw ?? {}),
+          ncmChoiceOptions: hidden,
+          ncmDisambiguationAsked: true,
+        };
         if (quoteRowId) {
           await prisma.quote
             .update({
@@ -1115,7 +1196,7 @@ export async function POST(req: Request) {
         }
         return ask(
           [
-            "Para encontrar el **NCM real en PCRAM** necesito afinar 1–3 datos técnicos.",
+            "Para **clasificar el NCM** con precisión necesito afinar 1–3 datos técnicos.",
             "",
             "Respondeme esto (una sola línea está perfecto):",
             ...qs.map((q) => `- ${q}`),
@@ -1270,6 +1351,31 @@ export async function POST(req: Request) {
           }
         }
 
+        // If the user answered classification questions but we couldn't resolve via simple hint rules,
+        // re-run the text pipeline using their answer as extra evidence (IA "inteligencia propia").
+        if (
+          isTechAnswer &&
+          !resolvedViaTechAnswer &&
+          product?.raw?.ncmDisambiguationAsked === true
+        ) {
+          const seed = String(product?.title ?? "").trim();
+          const combined = [seed, userText].filter(Boolean).join("\n");
+          if (combined.trim().length >= 8) {
+            const { productFromTextPipeline } = await import(
+              "@/lib/scraper/productFromTextPipeline"
+            );
+            const extra = (await productFromTextPipeline(combined).catch(() => ({}))) as any;
+            if (extra?.ncm) product.ncm = extra.ncm;
+            if (extra?.pcram) product.raw = { ...(product.raw ?? {}), pcram: extra.pcram };
+            if (extra?.ncmMeta) product.raw = { ...(product.raw ?? {}), ncmMeta: extra.ncmMeta };
+            delete product.raw.ncmChoiceOptions;
+            await prisma.quote
+              .update({ where: { id: active.id }, data: { productJson: product as any } })
+              .catch(() => null);
+            resolvedViaTechAnswer = Boolean(product?.ncm);
+          }
+        }
+
         // If we're answering the technical questions and we already have a resolved classification,
         // continue the guided flow (price → qty) even if the user text "looks like product".
         if (isTechAnswer && (resolvedViaTechAnswer || Boolean(product?.ncm))) {
@@ -1299,7 +1405,45 @@ export async function POST(req: Request) {
         const candidates: Array<{ ncmCode: string; title?: string }> =
           Array.isArray(ncmMeta?.pcramCandidates) ? ncmMeta.pcramCandidates : [];
 
-        if (candidates.length >= 2 && !product?.ncm) {
+        const ncmUnresolved = !product?.ncm || ncmMeta?.ambiguous === true;
+        const qsNowFromMeta: string[] = Array.isArray(ncmMeta?.missingInfoQuestions)
+          ? ncmMeta.missingInfoQuestions
+              .map((q: any) => String(q).trim())
+              .filter(Boolean)
+              .slice(0, 4)
+          : [];
+        const qsNow =
+          qsNowFromMeta.length
+            ? qsNowFromMeta
+            : deriveBasicNcmQuestions({
+                hsHeading: ncmMeta?.hsHeading,
+                kind: ncmMeta?.kind,
+                candidates,
+              });
+        if (candidates.length >= 2 && qsNow.length && product?.raw?.ncmDisambiguationAsked !== true) {
+          const { hidden } = buildHiddenChoiceSet(candidates, product?.ncm, 5);
+          product.raw = {
+            ...(product.raw ?? {}),
+            ncmChoiceOptions: hidden,
+            ncmDisambiguationAsked: true,
+          };
+          await prisma.quote
+            .update({ where: { id: active.id }, data: { productJson: product as any } })
+            .catch(() => null);
+          return ask(
+            [
+              "Para **clasificar el NCM** con precisión, necesito afinar 1–3 datos técnicos.",
+              "",
+              "Respondeme esto (una sola línea está perfecto):",
+              ...qsNow.map((q) => `- ${q}`),
+              "",
+              "Después seguimos con el precio y la cantidad.",
+            ].join("\n"),
+            product
+          );
+        }
+
+        if (candidates.length >= 2 && ncmUnresolved) {
           // If AI already recognized the vehicle/product with decent confidence, don't stop here.
           // We'll continue the flow and quote with conservative ranges if needed.
           if (shouldSkipTechnicalQuestions(product)) {
@@ -1354,6 +1498,7 @@ export async function POST(req: Request) {
             product.raw = {
               ...(product.raw ?? {}),
               ncmChoiceOptions: hidden,
+              ncmDisambiguationAsked: true,
             };
             await prisma.quote
               .update({ where: { id: active.id }, data: { productJson: product as any } })
@@ -1430,40 +1575,41 @@ export async function POST(req: Request) {
           const mergedMeta: any = (merged as any)?.raw?.ncmMeta;
           const mergedCandidates: Array<{ ncmCode: string; title?: string }> =
             Array.isArray(mergedMeta?.pcramCandidates) ? mergedMeta.pcramCandidates : [];
-          if (
-            mergedCandidates.length >= 2 &&
-            !merged?.ncm
-          ) {
-            const { hidden } = buildHiddenChoiceSet(mergedCandidates, merged?.ncm, 5);
+          const qsMergedFromMeta: string[] = Array.isArray(mergedMeta?.missingInfoQuestions)
+            ? mergedMeta.missingInfoQuestions
+                .map((q: any) => String(q).trim())
+                .filter(Boolean)
+                .slice(0, 4)
+            : [];
+          const qsMerged =
+            qsMergedFromMeta.length
+              ? qsMergedFromMeta
+              : deriveBasicNcmQuestions({
+                  hsHeading: mergedMeta?.hsHeading,
+                  kind: mergedMeta?.kind,
+                  candidates: mergedCandidates,
+                });
+          if (mergedCandidates.length >= 2 && qsMerged.length && (merged as any)?.raw?.ncmDisambiguationAsked !== true) {
+            const { hidden } = buildHiddenChoiceSet(mergedCandidates, (merged as any)?.ncm, 5);
             (merged as any).raw = {
               ...((merged as any).raw ?? {}),
               ncmChoiceOptions: hidden,
+              ncmDisambiguationAsked: true,
             };
             await prisma.quote
               .update({ where: { id: active.id }, data: { productJson: merged as any } })
               .catch(() => null);
 
-            const qs: string[] = Array.isArray(mergedMeta?.missingInfoQuestions)
-              ? mergedMeta.missingInfoQuestions
-                  .map((q: any) => String(q).trim())
-                  .filter(Boolean)
-                  .slice(0, 4)
-              : [];
             return ask(
               [
-                "Para estimar **impuestos** con precisión, necesito afinar 1–3 datos técnicos.",
+                "Para **clasificar el NCM** con precisión, necesito afinar 1–3 datos técnicos.",
                 "",
-                qs.length
-                  ? [
-                      "Respondeme esto (podés contestar en una sola línea, por ejemplo: `<=5t, no basculante, no frigorifico`):",
-                      ...qs.map((q) => `- ${q}`),
-                      "",
-                    ].join("\n")
-                  : "",
-                "Con eso ajusto la clasificación internamente y seguimos con el precio/cantidad.",
-              ]
-                .filter(Boolean)
-                .join("\n")
+                "Respondeme esto (una sola línea está perfecto):",
+                ...qsMerged.map((q) => `- ${q}`),
+                "",
+                "Después seguimos con el precio y la cantidad.",
+              ].join("\n"),
+              merged
             );
           }
 
@@ -1766,25 +1912,28 @@ export async function POST(req: Request) {
     const builtMeta: any = (built as any)?.raw?.ncmMeta;
     const builtCandidates: Array<{ ncmCode: string; title?: string }> =
       Array.isArray(builtMeta?.pcramCandidates) ? builtMeta.pcramCandidates : [];
-    if (
-      builtCandidates.length >= 2 &&
-      !built?.ncm &&
-      !shouldSkipTechnicalQuestions(built) &&
-      // If user provided a supplier link, don't block the flow here.
-      // Continue with price/quantity first; refine later if needed.
-      !url
-    ) {
-      const qs: string[] = Array.isArray(builtMeta?.missingInfoQuestions)
-        ? builtMeta.missingInfoQuestions
-            .map((q: any) => String(q).trim())
-            .filter(Boolean)
-            .slice(0, 4)
-        : [];
+    const qsBuiltFromMeta: string[] = Array.isArray(builtMeta?.missingInfoQuestions)
+      ? builtMeta.missingInfoQuestions
+          .map((q: any) => String(q).trim())
+          .filter(Boolean)
+          .slice(0, 4)
+      : [];
+    const qsBuilt =
+      qsBuiltFromMeta.length
+        ? qsBuiltFromMeta
+        : deriveBasicNcmQuestions({
+            hsHeading: builtMeta?.hsHeading,
+            kind: builtMeta?.kind,
+            candidates: builtCandidates,
+          });
+    if (builtCandidates.length >= 2 && qsBuilt.length) {
+      const qs = qsBuilt;
       if (qs.length) {
         const { hidden } = buildHiddenChoiceSet(builtCandidates, built?.ncm, 5);
         (built as any).raw = {
           ...((built as any).raw ?? {}),
           ncmChoiceOptions: hidden,
+          ncmDisambiguationAsked: true,
         };
         await prisma.quote
           .create({
@@ -1803,14 +1952,14 @@ export async function POST(req: Request) {
 
         return ask(
           [
-            "Para estimar **impuestos** con precisión, necesito afinar 1–3 datos técnicos.",
+            "Para **clasificar el NCM** con precisión, necesito afinar 1–3 datos técnicos.",
             "",
             [
-              "Respondeme esto (podés contestar en una sola línea, por ejemplo: `<=5t, no basculante, no frigorifico`):",
+              "Respondeme esto (podés contestar en una sola línea):",
               ...qs.map((q) => `- ${q}`),
               "",
             ].join("\n"),
-            "Con eso ajusto la clasificación internamente y seguimos con el precio/cantidad.",
+            "Después seguimos con el precio y la cantidad.",
           ]
             .filter(Boolean)
             .join("\n")

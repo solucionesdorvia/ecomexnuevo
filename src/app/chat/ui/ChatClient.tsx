@@ -894,8 +894,7 @@ export default function ChatClient({
                   setMessages([]);
                 }}
               >
-                <span className="hidden sm:inline">Cotizar</span>
-                <span className="sm:hidden">Quote</span>
+                Cotizar
               </button>
               <button
                 type="button"
@@ -912,8 +911,7 @@ export default function ChatClient({
                   setMessages([]);
                 }}
               >
-                <span className="hidden sm:inline">Presupuesto</span>
-                <span className="sm:hidden">Budget</span>
+                Presupuesto
               </button>
             </div>
 
