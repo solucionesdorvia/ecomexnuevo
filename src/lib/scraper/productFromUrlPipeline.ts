@@ -761,7 +761,13 @@ export async function productFromUrlPipeline(
       ncmMeta.ambiguous = Boolean(best && !bestOk);
 
       if (!ncmAdjusted) {
-        if (bestOk) ncmAdjusted = best!.ncmCode;
+        if (bestOk) {
+          ncmAdjusted = best!.ncmCode;
+        } else if (best?.ncmCode) {
+          // Even if ambiguous, pick the best candidate and validate via PCRAM detail.
+          ncmAdjusted = best.ncmCode;
+          ncmMeta.ambiguous = true;
+        }
       } else {
         const normDigits = String(ncmAdjusted).replace(/\D/g, "");
         const inCandidates = enriched.some((c) => c.ncmCode.replace(/\D/g, "") === normDigits);
@@ -772,8 +778,16 @@ export async function productFromUrlPipeline(
             ncmMeta.adjustedTo = adjustedTo;
             ncmAdjusted = adjustedTo;
           } else {
-            // If we can't validate/choose confidently, avoid returning a wrong NCM.
-            ncmAdjusted = undefined;
+            // Fall back to the best PCRAM candidate (and validate via PCRAM detail).
+            if (best?.ncmCode) {
+              ncmMeta.adjustedFrom = ncmAdjusted;
+              ncmMeta.adjustedTo = best.ncmCode;
+              ncmMeta.ambiguous = true;
+              ncmAdjusted = best.ncmCode;
+            } else {
+              // If we can't validate/choose, avoid returning a wrong NCM.
+              ncmAdjusted = undefined;
+            }
           }
         }
       }

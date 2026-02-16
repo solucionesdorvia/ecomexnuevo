@@ -106,10 +106,19 @@ function parseQuantityWithMode(
   if (hasPriceSignal && !hasQtyHint) return null;
   if (!hasQtyHint && !opts.allowBareNumber) return null;
 
-  // Extract first integer token
-  const m = raw.match(/\b(\d{1,6})\b/);
-  if (!m) return null;
-  const n = Number(m[1]);
+  // Prefer numbers that are clearly tied to quantity hints (avoid grabbing the USD amount).
+  const mExplicit =
+    raw.match(/\b(?:cant|cantidad)\b\s*[:=]?\s*(\d{1,6})\b/i) ??
+    raw.match(/\b(\d{1,6})\s*(?:unid|unidad|unidades|pcs|piezas)\b/i) ??
+    raw.match(/\bx\s*(\d{1,6})\b/i) ??
+    raw.match(/\b(\d{1,6})\s*u\b/i);
+  const cand = mExplicit?.[1];
+
+  // Fallback: first integer token, but strip currency fragments first.
+  const stripped = raw.replace(/(?:usd|us\$|u\$s|\$)\s*[0-9][0-9.,]*/gi, " ");
+  const m = cand ? null : stripped.match(/\b(\d{1,6})\b/);
+
+  const n = Number(cand ?? m?.[1]);
   if (!Number.isFinite(n) || n <= 0) return null;
   return Math.floor(n);
 }
@@ -929,7 +938,7 @@ export async function POST(req: Request) {
       if (url) {
         // IMPORTANT: strip URL so numbers in the link (IDs) are never parsed as price/qty hints.
         const hintText = stripUrlFromText(inputText, url);
-        return await scrapeProductFromUrl(url, { hintText, timeoutMs: 18_000 });
+        return await scrapeProductFromUrl(url, { hintText, timeoutMs: 45_000 });
       }
       const base: any = { title: cleanProductTitleFromMixedInput(inputText) };
       // AI vehicle inference to reduce (or eliminate) follow-up questions.
@@ -964,7 +973,7 @@ export async function POST(req: Request) {
       if (!(process.env.PCRAM_USER && process.env.PCRAM_PASS)) return product;
       const { PcramClient } = await import("@/lib/pcram/pcramClient");
       const client = new PcramClient();
-      const pcramTimeoutMs = Number(process.env.PCRAM_CALL_TIMEOUT_MS ?? "15000");
+      const pcramTimeoutMs = Number(process.env.PCRAM_CALL_TIMEOUT_MS ?? "45000");
       const pcram = await withTimeout(
         client.getDetail(String(product.ncm)),
         pcramTimeoutMs
@@ -1290,7 +1299,7 @@ export async function POST(req: Request) {
         const candidates: Array<{ ncmCode: string; title?: string }> =
           Array.isArray(ncmMeta?.pcramCandidates) ? ncmMeta.pcramCandidates : [];
 
-        if (candidates.length >= 2 && (ncmMeta?.ambiguous === true || !product?.ncm)) {
+        if (candidates.length >= 2 && !product?.ncm) {
           // If AI already recognized the vehicle/product with decent confidence, don't stop here.
           // We'll continue the flow and quote with conservative ranges if needed.
           if (shouldSkipTechnicalQuestions(product)) {
@@ -1340,7 +1349,7 @@ export async function POST(req: Request) {
             product.raw.ncmMeta.ambiguous = false;
           }
 
-          if (ncmMeta?.ambiguous === true || !product?.ncm) {
+          if (!product?.ncm) {
             const { hidden } = buildHiddenChoiceSet(candidates, product?.ncm, 5);
             product.raw = {
               ...(product.raw ?? {}),
@@ -1423,7 +1432,7 @@ export async function POST(req: Request) {
             Array.isArray(mergedMeta?.pcramCandidates) ? mergedMeta.pcramCandidates : [];
           if (
             mergedCandidates.length >= 2 &&
-            (mergedMeta?.ambiguous === true || !merged?.ncm)
+            !merged?.ncm
           ) {
             const { hidden } = buildHiddenChoiceSet(mergedCandidates, merged?.ncm, 5);
             (merged as any).raw = {
@@ -1759,7 +1768,7 @@ export async function POST(req: Request) {
       Array.isArray(builtMeta?.pcramCandidates) ? builtMeta.pcramCandidates : [];
     if (
       builtCandidates.length >= 2 &&
-      (builtMeta?.ambiguous === true || !built?.ncm) &&
+      !built?.ncm &&
       !shouldSkipTechnicalQuestions(built) &&
       // If user provided a supplier link, don't block the flow here.
       // Continue with price/quantity first; refine later if needed.

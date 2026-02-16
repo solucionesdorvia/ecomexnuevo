@@ -249,7 +249,7 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
 
   if (process.env.PCRAM_USER && process.env.PCRAM_PASS) {
     const client = new PcramClient();
-    const pcramTimeoutMs = Number(process.env.PCRAM_CALL_TIMEOUT_MS ?? "15000");
+    const pcramTimeoutMs = Number(process.env.PCRAM_CALL_TIMEOUT_MS ?? "45000");
     // If NCM came from AI (or is missing), use PCRAM's own search to avoid hallucinated codes.
     if (!explicitNcm) {
       const aiTerms = ncmMeta?.source === "ai" ? ncmMeta.searchTerms : undefined;
@@ -357,8 +357,14 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
         }
 
         if (!ncm) {
-          // Only pick an NCM from PCRAM search if the title actually matches the query.
-          if (bestOk) ncm = best!.ncmCode;
+          // Prefer strong match, but if we have PCRAM candidates we can still pick the best one
+          // and validate it by fetching PCRAM detail (authoritative).
+          if (bestOk) {
+            ncm = best!.ncmCode;
+          } else if (best?.ncmCode) {
+            ncm = best.ncmCode;
+            if (ncmMeta) ncmMeta.ambiguous = true;
+          }
         } else if (ncmMeta.source === "ai") {
           const normDigits = String(ncm).replace(/\D/g, "");
           const inCandidates = candidates.some((c) => c.ncmCode.replace(/\D/g, "") === normDigits);
@@ -370,8 +376,16 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
               ncmMeta.adjustedTo = adjustedTo;
               ncm = adjustedTo;
             } else {
-              // If we can't validate, don't pretend we know the NCM.
-              ncm = undefined;
+              // Fall back to the best PCRAM candidate (and validate via PCRAM detail).
+              if (best?.ncmCode) {
+                ncmMeta.adjustedFrom = String(ncm);
+                ncmMeta.adjustedTo = best.ncmCode;
+                ncmMeta.ambiguous = true;
+                ncm = best.ncmCode;
+              } else {
+                // If we can't validate, don't pretend we know the NCM.
+                ncm = undefined;
+              }
             }
           }
         }
