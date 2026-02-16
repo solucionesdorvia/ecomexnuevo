@@ -217,17 +217,24 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
     : undefined;
 
   if (!ncm && process.env.OPENAI_API_KEY) {
-    const cls = await classifyWithAI(text);
-    ncm = cls.ncm_code !== "9999.99.99" ? cls.ncm_code : undefined;
-    if (!ncmMeta) ncmMeta = { source: "ai" };
-    if (cls.ncm_code !== "9999.99.99") ncmMeta.aiNcm = cls.ncm_code;
-    if (cls.hs_heading) ncmMeta.hsHeading = cls.hs_heading;
-    if (cls.kind) ncmMeta.kind = cls.kind;
-    if (Array.isArray(cls.search_terms) && cls.search_terms.length) {
-      ncmMeta.searchTerms = cls.search_terms.map(String).filter(Boolean).slice(0, 6);
-    }
-    if (Array.isArray(cls.missing_info_questions) && cls.missing_info_questions.length) {
-      ncmMeta.missingInfoQuestions = cls.missing_info_questions;
+    try {
+      const cls = await classifyWithAI(text);
+      ncm = cls.ncm_code !== "9999.99.99" ? cls.ncm_code : undefined;
+      if (!ncmMeta) ncmMeta = { source: "ai" };
+      if (cls.ncm_code !== "9999.99.99") ncmMeta.aiNcm = cls.ncm_code;
+      if (cls.hs_heading) ncmMeta.hsHeading = cls.hs_heading;
+      if (cls.kind) ncmMeta.kind = cls.kind;
+      if (Array.isArray(cls.search_terms) && cls.search_terms.length) {
+        ncmMeta.searchTerms = cls.search_terms.map(String).filter(Boolean).slice(0, 6);
+      }
+      if (Array.isArray(cls.missing_info_questions) && cls.missing_info_questions.length) {
+        ncmMeta.missingInfoQuestions = cls.missing_info_questions;
+      }
+    } catch {
+      // In production (e.g. Railway), OpenAI can intermittently fail (timeouts/quotas).
+      // Don't abort the entire pipeline; we'll fall back to PCRAM/local evidence below.
+      if (!ncmMeta) ncmMeta = { source: "ai" };
+      ncmMeta.ambiguous = true;
     }
   }
 
@@ -346,6 +353,14 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
               ncmMeta.missingInfoQuestions = aiPick!.missing_info_questions;
             }
             ncmMeta.ambiguous = Boolean(aiPick && aiPick.confidence != null && aiPick.confidence < 0.55);
+          } else {
+            // Fallback: if AI cannot pick, default to the top PCRAM candidate.
+            const top = filteredByHs?.[0]?.ncmCode;
+            if (!ncm && top) {
+              ncm = top;
+              if (!ncmMeta) ncmMeta = { source: "pcram_search" };
+              ncmMeta.ambiguous = true;
+            }
           }
         }
       }

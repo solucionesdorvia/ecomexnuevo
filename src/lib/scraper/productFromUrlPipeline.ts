@@ -639,7 +639,9 @@ export async function productFromUrlPipeline(
     .filter(Boolean)
     .join("\n");
 
-  const cls = textForNcm && hasOpenAiKey() ? await classifyWithAI(textForNcm) : null;
+  const cls = textForNcm && hasOpenAiKey()
+    ? await classifyWithAI(textForNcm).catch(() => null)
+    : null;
   const ncm = cls?.ncm_code && cls.ncm_code !== "9999.99.99" ? cls.ncm_code : undefined;
 
   // Free "pro" candidates: local nomenclator index (auto-filled from PCRAM over time).
@@ -763,6 +765,13 @@ export async function productFromUrlPipeline(
             ncmMeta.missingInfoQuestions = aiPick!.missing_info_questions;
           }
           ncmMeta.ambiguous = Boolean(aiPick && aiPick.confidence != null && aiPick.confidence < 0.55);
+        } else {
+          // Fallback: if AI cannot pick, default to the top PCRAM candidate.
+          const top = enriched?.[0]?.ncmCode;
+          if (!ncmAdjusted && top) {
+            ncmAdjusted = top;
+            ncmMeta.ambiguous = true;
+          }
         }
       }
     }
