@@ -37,10 +37,12 @@ export function AppShell({
         <aside className="hidden w-72 flex-col border-r border-white/5 bg-background-deeper/50 backdrop-blur-md lg:flex">
           <div className="flex flex-col justify-between gap-6 p-6">
             <div className="flex items-center gap-3">
-              <div className="rounded-lg bg-primary/20 p-2">
-                <span className="material-symbols-outlined text-primary text-2xl">
-                  local_shipping
-                </span>
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/95 p-1.5 shadow-lg shadow-black/20">
+                <img
+                  src="/brand/ecomex-logo.png"
+                  alt="E‑COMEX"
+                  className="h-6 w-auto object-contain"
+                />
               </div>
               <div className="flex flex-col">
                 <div className="text-base font-bold tracking-tight">E‑COMEX</div>

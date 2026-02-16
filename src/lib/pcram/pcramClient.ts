@@ -104,6 +104,29 @@ function fmtNcm(ncmRaw: string) {
   return `${a}.${b}.${c}`;
 }
 
+function isPlaceholderNcm(ncmCode: string) {
+  const norm = String(ncmCode || "").trim();
+  if (!norm) return true;
+  if (norm === "9999.99.99") return true;
+  const digits = norm.replace(/\D/g, "");
+  return digits === "99999999" || digits.length < 6;
+}
+
+function looksLikeUnauthenticatedHtml(html: string) {
+  const h = String(html || "");
+  // Logged-in pages typically have a logout link; login pages reference login.php and/or have user/pass inputs.
+  const hasLogout = /logout\.php/i.test(h);
+  const hasLoginRef = /login\.php/i.test(h);
+  const hasUserInput = /name=["']user["']/i.test(h) || /id=["']user["']/i.test(h);
+  const hasPassInput =
+    /name=["']pass["']/i.test(h) ||
+    /name=["']password["']/i.test(h) ||
+    /id=["']subject["']/i.test(h) ||
+    /type=["']password["']/i.test(h);
+  const hasLoginForm = hasLoginRef || (hasUserInput && hasPassInput);
+  return hasLoginForm && !hasLogout;
+}
+
 function parsePercent(s: string) {
   // Accept "14.00%" or "14,00 %" etc.
   const m = s.match(/(\d+(?:[.,]\d+)?)/);
@@ -361,6 +384,9 @@ export class PcramClient {
     }
   ): Promise<PcramDetail> {
     const ncmCode = fmtNcm(ncmCodeInput);
+    if (isPlaceholderNcm(ncmCode)) {
+      throw new Error("Invalid NCM code");
+    }
     const key = `detail:${ncmCode}`;
     if (!opts?.bypassCache) {
       const cached = this.cache.get<PcramDetail>(key);
@@ -379,7 +405,27 @@ export class PcramClient {
       await fs.writeFile(file, html, "utf8");
     }
 
+    // Guard against login/error pages being parsed as a "valid" detail.
+    const htmlText = String(html || "");
+    const txt = cheerio.load(htmlText).text();
+    const digits = ncmCode.replace(/\D/g, "");
+    const looksLikeLogin = looksLikeUnauthenticatedHtml(htmlText);
+    const mentionsDigits = digits.length >= 6 && new RegExp(`\\b${digits}\\b`).test(txt);
+    const mentionsFormatted = new RegExp(
+      `\\b${ncmCode.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}\\b`
+    ).test(txt);
+    if (looksLikeLogin) {
+      throw new Error("PCRAM not authenticated");
+    }
+    // If the page doesn't even mention the requested NCM digits, it's very likely an error/redirect.
+    if (!mentionsDigits && !mentionsFormatted) {
+      throw new Error("PCRAM detail not found");
+    }
+
     let parsed = this.parseDetail(html, ncmCode);
+    if (isPlaceholderNcm(parsed.ncmCode)) {
+      throw new Error("PCRAM returned placeholder NCM");
+    }
 
     // Some PCRAM "Impuestos Internos" content is loaded via getDoc() into viewobs.php
     // and is not present in the initial detail HTML. If we detect an INTERNOS link,
@@ -443,7 +489,7 @@ export class PcramClient {
           let docHtml: string | null = null;
           if (cookieHeader) {
             const r = await tryFetch().catch(() => null);
-            if (r?.ok && !/login\.php|Ingresar|Usuario/i.test(r.text)) docHtml = r.text;
+            if (r?.ok && !looksLikeUnauthenticatedHtml(r.text)) docHtml = r.text;
           }
           if (!docHtml) {
             docHtml = await this.fetchWithPlaywright(fullUrl).catch(() => null);
@@ -546,9 +592,11 @@ export class PcramClient {
       return { ok: res.ok, text };
     };
 
+    const looksLikeLoginHtml = (h: string) => looksLikeUnauthenticatedHtml(String(h || ""));
+
     if (cookieHeader) {
       const r = await tryFetch().catch(() => null);
-      if (r?.ok && !/login\.php|Ingresar|Usuario/i.test(r.text)) return r.text;
+      if (r?.ok && !looksLikeLoginHtml(r.text)) return r.text;
     }
 
     // Ensure logged in with Playwright, then fetch with same context.
@@ -615,7 +663,20 @@ export class PcramClient {
           .locator('button[type="submit"], input[type="submit"], button:has-text("Ingresar")')
           .first()
           .click();
+        // Wait for navigation/state change; PCRAM sometimes doesn't reach "networkidle".
         await page.waitForLoadState("domcontentloaded").catch(() => undefined);
+        await page.waitForTimeout(350);
+
+        const stillOnLogin =
+          /login\.php/i.test(page.url()) ||
+          (await page
+            .locator('input[type="password"], input[name="password"]')
+            .first()
+            .isVisible()
+            .catch(() => false));
+        if (stillOnLogin) {
+          throw new Error("PCRAM login failed");
+        }
       }
 
       // Dev helper: dump the NCM search page to understand navigation/link patterns.

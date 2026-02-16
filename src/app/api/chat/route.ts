@@ -282,11 +282,13 @@ function inferSeedForProductFromMessages(messages: IncomingMessage[]): string | 
 function extractNcmFromText(text: string): string | null {
   const s = String(text || "");
   const dot = s.match(/\b(\d{4}\.\d{2}\.\d{2})\b/);
-  if (dot?.[1]) return dot[1];
+  if (dot?.[1] && dot[1] !== "9999.99.99") return dot[1];
   const digits = s.match(/\b(\d{8})\b/);
   if (digits?.[1]) {
     const d = digits[1];
-    return `${d.slice(0, 4)}.${d.slice(4, 6)}.${d.slice(6, 8)}`;
+    const formatted = `${d.slice(0, 4)}.${d.slice(4, 6)}.${d.slice(6, 8)}`;
+    if (formatted === "9999.99.99") return null;
+    return formatted;
   }
   return null;
 }
@@ -1153,7 +1155,9 @@ export async function POST(req: Request) {
 
       const ncmUsed =
         typeof product2?.ncm === "string" && product2.ncm.trim()
-          ? product2.ncm.trim()
+          ? product2.ncm.trim() !== "9999.99.99"
+            ? product2.ncm.trim()
+            : undefined
           : undefined;
 
       const res = NextResponse.json({

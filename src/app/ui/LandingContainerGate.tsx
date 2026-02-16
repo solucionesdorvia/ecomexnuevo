@@ -121,10 +121,12 @@ export default function LandingContainerGate() {
           <header className="glass-nav sticky top-0 z-20 px-6 py-4">
             <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary shadow-lg shadow-primary/20">
-                  <span className="material-symbols-outlined text-white">
-                    rocket_launch
-                  </span>
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/95 p-1.5 shadow-lg shadow-black/20">
+                  <img
+                    src="/brand/ecomex-logo.png"
+                    alt="E‑COMEX"
+                    className="h-6 w-auto object-contain"
+                  />
                 </div>
                 <div className="text-xl font-bold tracking-tight">
                   E‑COMEX <span className="font-black text-primary">IA</span>

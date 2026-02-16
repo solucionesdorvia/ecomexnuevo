@@ -640,7 +640,7 @@ export async function productFromUrlPipeline(
     .join("\n");
 
   const cls = textForNcm && hasOpenAiKey() ? await classifyWithAI(textForNcm) : null;
-  const ncm = cls?.ncm_code;
+  const ncm = cls?.ncm_code && cls.ncm_code !== "9999.99.99" ? cls.ncm_code : undefined;
 
   // Free "pro" candidates: local nomenclator index (auto-filled from PCRAM over time).
   let localCandidates: Array<{ ncmCode: string; title?: string }> | undefined;

@@ -141,12 +141,14 @@ function scoreCandidate(query: string, title?: string) {
 function extractNcmFromText(input: string): string | undefined {
   const s = input || "";
   const dotMatch = s.match(/\b(\d{4}\.\d{2}\.\d{2})\b/);
-  if (dotMatch?.[1]) return dotMatch[1];
+  if (dotMatch?.[1] && dotMatch[1] !== "9999.99.99") return dotMatch[1];
 
   const digitsMatch = s.match(/\b(\d{8})\b/);
   if (digitsMatch?.[1]) {
     const d = digitsMatch[1];
-    return `${d.slice(0, 4)}.${d.slice(4, 6)}.${d.slice(6, 8)}`;
+    const formatted = `${d.slice(0, 4)}.${d.slice(4, 6)}.${d.slice(6, 8)}`;
+    if (formatted === "9999.99.99") return undefined;
+    return formatted;
   }
 
   return undefined;
@@ -216,9 +218,9 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
 
   if (!ncm && process.env.OPENAI_API_KEY) {
     const cls = await classifyWithAI(text);
-    ncm = cls.ncm_code;
+    ncm = cls.ncm_code !== "9999.99.99" ? cls.ncm_code : undefined;
     if (!ncmMeta) ncmMeta = { source: "ai" };
-    ncmMeta.aiNcm = cls.ncm_code;
+    if (cls.ncm_code !== "9999.99.99") ncmMeta.aiNcm = cls.ncm_code;
     if (cls.hs_heading) ncmMeta.hsHeading = cls.hs_heading;
     if (cls.kind) ncmMeta.kind = cls.kind;
     if (Array.isArray(cls.search_terms) && cls.search_terms.length) {
