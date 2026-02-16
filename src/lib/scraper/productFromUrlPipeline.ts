@@ -784,6 +784,9 @@ export async function productFromUrlPipeline(
       if (!pcram) {
         ncmAdjusted = undefined;
         if (ncmMeta) ncmMeta.ambiguous = true;
+      } else if (typeof (pcram as any)?.ncmCode === "string" && (pcram as any).ncmCode.trim()) {
+        // Persist authoritative format/value from PCRAM.
+        ncmAdjusted = String((pcram as any).ncmCode).trim();
       }
     }
   }

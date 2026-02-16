@@ -18,6 +18,19 @@ export type PcramTaxRates = Partial<{
   IIBB: number;
 }>;
 
+export type PcramTaxRow = {
+  /** Human label as shown in PCRAM (cleaned). */
+  label: string;
+  /** Percent value (e.g. 21 for 21%). */
+  ratePct: number;
+  /** Raw key cell text from PCRAM HTML. */
+  rawLabel: string;
+  /** Raw value cell text from PCRAM HTML. */
+  rawValue: string;
+  /** Normalized label for stable matching/debug (upper, no accents/punct). */
+  labelNorm: string;
+};
+
 export type PcramDetail = {
   ncmCode: string;
   title?: string;
@@ -27,6 +40,15 @@ export type PcramDetail = {
   afipCode?: string;
   tramCode?: string;
   taxes: PcramTaxRates;
+  /**
+   * Full list of tax rows parsed from PCRAM (best-effort).
+   * Useful to keep *all* impositive signals even when the label isn't mapped to `taxes`.
+   */
+  taxRows?: PcramTaxRow[];
+  /** Any additional tax labels not mapped into `taxes` (label → pct). */
+  taxesExtra?: Record<string, number>;
+  /** Normalized label → pct for all parsed rows. */
+  taxesByLabel?: Record<string, number>;
   internalTaxes?: {
     label?: string;
     windowFrom?: string; // dd/mm/yyyy
@@ -56,6 +78,23 @@ function requireEnv(name: string) {
   return v;
 }
 
+function withTimeout<T>(p: Promise<T>, timeoutMs: number, label = "timeout"): Promise<T> {
+  const ms = Math.max(1000, Math.floor(timeoutMs));
+  return new Promise<T>((resolve, reject) => {
+    const t = setTimeout(() => reject(new Error(label)), ms);
+    p.then(
+      (v) => {
+        clearTimeout(t);
+        resolve(v);
+      },
+      (e) => {
+        clearTimeout(t);
+        reject(e);
+      }
+    );
+  });
+}
+
 function fmtNcm(ncmRaw: string) {
   const digits = (ncmRaw || "").replace(/\D/g, "");
   if (digits.length < 6) return "9999.99.99";
@@ -74,6 +113,18 @@ function parsePercent(s: string) {
   return n;
 }
 
+function normLabel(s: string) {
+  return String(s || "")
+    .toUpperCase()
+    .normalize("NFD")
+    // eslint-disable-next-line no-control-regex
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[.()]/g, " ")
+    .replace(/[^A-Z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function extractTaxRatesFromText(text: string): PcramTaxRates {
   const taxes: PcramTaxRates = {};
   const patterns: Array<[keyof PcramTaxRates, RegExp]> = [
@@ -82,7 +133,10 @@ function extractTaxRatesFromText(text: string): PcramTaxRates {
     ["DII", /\bDII\b[\s\S]{0,60}?(\d+(?:[.,]\d+)?)\s*%/i],
     ["TE", /(?:\bTE\b|\bTasa Estad[ií]stica\b)[\s\S]{0,60}?(\d+(?:[.,]\d+)?)\s*%/i],
     ["IVA", /\bIVA\b(?!\s*ADIC)[\s\S]{0,60}?(\d+(?:[.,]\d+)?)\s*%/i],
-    ["IVA ADIC", /(?:\bIVA\s*ADIC\b|\bIVA\s*Adicional\b)[\s\S]{0,60}?(\d+(?:[.,]\d+)?)\s*%/i],
+    [
+      "IVA ADIC",
+      /(?:\bIVA\s*ADIC\b|\bIVA\s*Adicional\b|\bPercepci[oó]n\s+IVA\b|\bPerc\.?\s*IVA\b)[\s\S]{0,60}?(\d+(?:[.,]\d+)?)\s*%/i,
+    ],
     ["GANANCIAS", /\bGANANCIAS\b[\s\S]{0,60}?(\d+(?:[.,]\d+)?)\s*%/i],
     ["IIBB", /(?:\bIIBB\b|\bIngresos Brutos\b)[\s\S]{0,60}?(\d+(?:[.,]\d+)?)\s*%/i],
   ];
@@ -474,8 +528,12 @@ export class PcramClient {
     }
 
     const tryFetch = async () => {
+      const controller = new AbortController();
+      const httpTimeoutMs = Number(process.env.PCRAM_HTTP_TIMEOUT_MS ?? "12000");
+      const t = setTimeout(() => controller.abort(), Math.max(1000, httpTimeoutMs));
       const res = await fetch(url, {
         redirect: "follow",
+        signal: controller.signal,
         headers: {
           "user-agent":
             process.env.SCRAPER_USER_AGENT ??
@@ -483,7 +541,7 @@ export class PcramClient {
           cookie: cookieHeader,
           accept: "text/html,*/*;q=0.8",
         },
-      });
+      }).finally(() => clearTimeout(t));
       const text = await res.text();
       return { ok: res.ok, text };
     };
@@ -505,9 +563,18 @@ export class PcramClient {
         storageState: (await readStorageState(this.storageStatePath)) ?? undefined,
       });
       const page = await context.newPage();
+      const navTimeoutMs = Number(process.env.PCRAM_NAV_TIMEOUT_MS ?? "20000");
+      page.setDefaultTimeout(Math.max(1000, navTimeoutMs));
+      page.setDefaultNavigationTimeout(Math.max(1000, navTimeoutMs));
+      // Speed: we only need HTML, so block heavy assets.
+      await page.route("**/*", (route) => {
+        const type = route.request().resourceType();
+        if (type === "image" || type === "font" || type === "media") return route.abort();
+        return route.continue();
+      });
 
       // Ensure login if needed
-      await page.goto(this.loginUrl, { waitUntil: "domcontentloaded" });
+      await page.goto(this.loginUrl, { waitUntil: "domcontentloaded", timeout: navTimeoutMs });
 
       // Dev helper: dump login HTML for selector tuning when dumping is enabled.
       if (
@@ -548,7 +615,7 @@ export class PcramClient {
           .locator('button[type="submit"], input[type="submit"], button:has-text("Ingresar")')
           .first()
           .click();
-        await page.waitForLoadState("networkidle").catch(() => undefined);
+        await page.waitForLoadState("domcontentloaded").catch(() => undefined);
       }
 
       // Dev helper: dump the NCM search page to understand navigation/link patterns.
@@ -564,8 +631,7 @@ export class PcramClient {
         await fs.writeFile(path.join(outDir, "pcram_ncm_search.html"), await page.content(), "utf8");
       }
 
-      await page.goto(url, { waitUntil: "domcontentloaded" });
-      await page.waitForLoadState("networkidle").catch(() => undefined);
+      await page.goto(url, { waitUntil: "domcontentloaded", timeout: navTimeoutMs });
 
       // Expand internal observation cards that may lazy-render content (e.g. Impuestos Internos for vehicles/boats).
       // Some PCRAM details only show the long text after clicking the task header.
@@ -585,8 +651,7 @@ export class PcramClient {
           }
         })
         .catch(() => null);
-      await page.waitForTimeout(600);
-      await page.waitForLoadState("networkidle").catch(() => undefined);
+      await page.waitForTimeout(450);
 
       const html = await page.content();
 
@@ -622,31 +687,82 @@ export class PcramClient {
       .filter(Boolean);
 
     const taxes: PcramTaxRates = {};
-    // Prefer structured extraction from the tax table when available.
-    $("section#tax tr")
-      .toArray()
-      .forEach((tr) => {
-        const tds = $(tr).find("td").toArray();
-        if (tds.length < 2) return;
-        const rawKey = $(tds[0]).text().trim().replace(/\s+/g, " ");
-        const rawVal = $(tds[1]).text().trim().replace(/\s+/g, " ");
-        if (!rawKey || !rawVal) return;
+    const taxRows: PcramTaxRow[] = [];
+    const taxesExtra: Record<string, number> = {};
+    const taxesByLabel: Record<string, number> = {};
 
-        const keyNorm = rawKey.replace(/\./g, "").toUpperCase();
-        const val = parsePercent(rawVal);
-        if (val == null) return;
+    const mapKnownTaxKey = (labelNorm: string): keyof PcramTaxRates | null => {
+      // Keep matching robust across PCRAM layouts/labels.
+      if (!labelNorm) return null;
+      if (labelNorm === "AEC" || labelNorm.includes("A E C")) return "AEC";
+      if (labelNorm === "DIE" || labelNorm.includes("DERECHO") || labelNorm.includes("DERECHOS IMPORTACION"))
+        return "DIE";
+      if (labelNorm === "DII" || labelNorm.includes("DERECHOS IMPORTACION INTRAZONA")) return "DII";
+      if (labelNorm === "TE" || labelNorm.includes("TASA ESTADISTICA")) return "TE";
+      if (labelNorm.startsWith("IVA ADIC") || labelNorm.includes("IVA ADICIONAL") || labelNorm.includes("PERCEPCION IVA") || labelNorm.includes("PERC IVA"))
+        return "IVA ADIC";
+      // IVA plain must come after IVA ADIC checks.
+      if (labelNorm === "IVA" || (labelNorm.includes("IVA") && !labelNorm.includes("ADIC") && !labelNorm.includes("PERCEP")))
+        return "IVA";
+      if (labelNorm.includes("GANANCIAS") || labelNorm.includes("PERC GANANCIAS")) return "GANANCIAS";
+      if (labelNorm === "IIBB" || labelNorm.includes("INGRESOS BRUTOS") || labelNorm.includes("PERC IIBB"))
+        return "IIBB";
+      return null;
+    };
 
-        if (keyNorm === "AEC") taxes.AEC = val;
-        else if (keyNorm === "DIE") taxes.DIE = val;
-        else if (keyNorm === "DII") taxes.DII = val;
-        else if (keyNorm === "TE" || keyNorm.includes("TASA ESTADISTICA")) taxes.TE = val;
-        else if (keyNorm === "IVA") taxes.IVA = val;
-        else if (keyNorm.startsWith("IVA ADIC")) taxes["IVA ADIC"] = val;
-        else if (keyNorm === "GANANCIAS") taxes.GANANCIAS = val;
-        else if (keyNorm === "IIBB" || keyNorm.includes("INGRESOS BRUTOS")) taxes.IIBB = val;
-      });
+    const isTaxLike = (labelNorm: string) => {
+      return (
+        /\b(AEC|DIE|DII|TE|IVA|GANANCIAS|IIBB)\b/.test(labelNorm) ||
+        /TASA|DERECH|IMPUEST|PERCEPC|RETENC|ANTIDUMP|COMPENSATOR|SALVAGUARD/.test(labelNorm)
+      );
+    };
 
-    // Fallback: regex over full page text
+    const parseTaxTables = (scope: cheerio.Cheerio<any>) => {
+      scope
+        .find("tr")
+        .toArray()
+        .forEach((tr) => {
+          const tds = $(tr).find("td").toArray();
+          if (tds.length < 2) return;
+          const rawKey = $(tds[0]).text().trim().replace(/\s+/g, " ");
+          const rawVal = $(tds[1]).text().trim().replace(/\s+/g, " ");
+          if (!rawKey || !rawVal) return;
+          // Most PCRAM tax values are percents; don't pull unrelated rows.
+          if (!/%/.test(rawVal)) return;
+          const val = parsePercent(rawVal);
+          if (val == null) return;
+
+          const labelNorm = normLabel(rawKey);
+          if (!labelNorm) return;
+          // Filter: only keep tax-looking labels to avoid capturing random % from other tables.
+          if (!isTaxLike(labelNorm)) return;
+
+          const labelClean = rawKey.trim().replace(/\s+/g, " ");
+          taxRows.push({
+            label: labelClean,
+            ratePct: val,
+            rawLabel: rawKey,
+            rawValue: rawVal,
+            labelNorm,
+          });
+          taxesByLabel[labelNorm] = val;
+
+          const known = mapKnownTaxKey(labelNorm);
+          if (known) {
+            (taxes as any)[known] = val;
+          } else {
+            // Keep anything else (antidumping, compensatory, etc.) without losing information.
+            taxesExtra[labelClean] = val;
+          }
+        });
+    };
+
+    // Prefer a dedicated tax section when present, otherwise scan all tables.
+    const taxSection = $("section#tax, #tax, .tax, .taxes").first();
+    if (taxSection && taxSection.length) parseTaxTables(taxSection);
+    if (taxRows.length === 0) parseTaxTables($("table"));
+
+    // Final fallback: regex over full page text when tables aren't present / changed.
     if (Object.keys(taxes).length === 0) {
       Object.assign(taxes, extractTaxRatesFromText(text));
     }
@@ -703,6 +819,9 @@ export class PcramClient {
       afipCode: pickByLabel("AFIP"),
       tramCode: pickByLabel("TRAM"),
       taxes,
+      taxRows: taxRows.length ? taxRows.slice(0, 50) : undefined,
+      taxesExtra: Object.keys(taxesExtra).length ? taxesExtra : undefined,
+      taxesByLabel: Object.keys(taxesByLabel).length ? taxesByLabel : undefined,
       internalTaxes,
       interventions: Array.from(interventions),
       reclassifications,

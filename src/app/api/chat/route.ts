@@ -225,6 +225,23 @@ function stripUrlFromText(text: string, url: string | null) {
     .trim();
 }
 
+function withTimeout<T>(p: Promise<T>, timeoutMs: number): Promise<T> {
+  const ms = Math.max(1000, Math.floor(timeoutMs));
+  return new Promise<T>((resolve, reject) => {
+    const t = setTimeout(() => reject(new Error("timeout")), ms);
+    p.then(
+      (v) => {
+        clearTimeout(t);
+        resolve(v);
+      },
+      (e) => {
+        clearTimeout(t);
+        reject(e);
+      }
+    );
+  });
+}
+
 type StageHint = "awaiting_product" | "awaiting_price" | "awaiting_quantity" | null;
 
 function inferStageHintFromMessages(messages: IncomingMessage[]): StageHint {
@@ -945,8 +962,18 @@ export async function POST(req: Request) {
       if (!(process.env.PCRAM_USER && process.env.PCRAM_PASS)) return product;
       const { PcramClient } = await import("@/lib/pcram/pcramClient");
       const client = new PcramClient();
-      const pcram = await client.getDetail(String(product.ncm)).catch(() => undefined);
-      if (pcram) product.raw = { ...(product.raw ?? {}), pcram };
+      const pcramTimeoutMs = Number(process.env.PCRAM_CALL_TIMEOUT_MS ?? "15000");
+      const pcram = await withTimeout(
+        client.getDetail(String(product.ncm)),
+        pcramTimeoutMs
+      ).catch(() => undefined);
+      if (pcram) {
+        product.raw = { ...(product.raw ?? {}), pcram };
+        // Ensure we persist the PCRAM-validated NCM (authoritative format/value).
+        if (typeof (pcram as any)?.ncmCode === "string" && (pcram as any).ncmCode.trim()) {
+          product.ncm = String((pcram as any).ncmCode).trim();
+        }
+      }
       else {
         // If we can't validate on PCRAM, don't keep an unverified NCM.
         delete product.ncm;

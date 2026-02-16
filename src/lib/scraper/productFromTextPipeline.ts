@@ -43,6 +43,23 @@ const STOPWORDS = new Set([
   "a",
 ]);
 
+function withTimeout<T>(p: Promise<T>, timeoutMs: number): Promise<T> {
+  const ms = Math.max(1000, Math.floor(timeoutMs));
+  return new Promise<T>((resolve, reject) => {
+    const t = setTimeout(() => reject(new Error("timeout")), ms);
+    p.then(
+      (v) => {
+        clearTimeout(t);
+        resolve(v);
+      },
+      (e) => {
+        clearTimeout(t);
+        reject(e);
+      }
+    );
+  });
+}
+
 function uniqueStrings(items: string[]) {
   const out: string[] = [];
   const seen = new Set<string>();
@@ -230,6 +247,7 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
 
   if (process.env.PCRAM_USER && process.env.PCRAM_PASS) {
     const client = new PcramClient();
+    const pcramTimeoutMs = Number(process.env.PCRAM_CALL_TIMEOUT_MS ?? "15000");
     // If NCM came from AI (or is missing), use PCRAM's own search to avoid hallucinated codes.
     if (!explicitNcm) {
       const aiTerms = ncmMeta?.source === "ai" ? ncmMeta.searchTerms : undefined;
@@ -258,7 +276,9 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
       }
 
       for (const q of queries) {
-        const found = await client.searchNcm(q, { limit: 10 }).catch(() => []);
+        const found = await withTimeout(client.searchNcm(q, { limit: 10 }), pcramTimeoutMs).catch(
+          () => []
+        );
         for (const c of found) {
           const key = String(c.ncmCode).replace(/\D/g, "");
           if (!key || seen.has(key)) continue;
@@ -276,7 +296,9 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
           candidates.map(async (c, idx) => {
             if (c.title) return c;
             if (idx >= 6) return c;
-            const d = await client.getDetail(c.ncmCode).catch(() => null);
+            const d = await withTimeout(client.getDetail(c.ncmCode), pcramTimeoutMs).catch(
+              () => null
+            );
             return { ...c, title: d?.title || c.title };
           })
         );
@@ -355,10 +377,16 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
     }
 
     if (ncm) {
-      const pcram = await client.getDetail(ncm).catch(() => undefined);
+      const pcram = await withTimeout(client.getDetail(ncm), pcramTimeoutMs).catch(() => undefined);
       // IMPORTANT: Only return an NCM as "real" when PCRAM could fetch its official detail.
       // If PCRAM lookup fails, avoid claiming a code (prevents hallucinated/unverified NCMs).
-      if (pcram) return { ncm, pcram, ncmMeta };
+      if (pcram) {
+        const ncmOfficial =
+          typeof (pcram as any)?.ncmCode === "string" && (pcram as any).ncmCode.trim()
+            ? String((pcram as any).ncmCode).trim()
+            : ncm;
+        return { ncm: ncmOfficial, pcram, ncmMeta };
+      }
       if (ncmMeta) {
         ncmMeta.ambiguous = true;
       }

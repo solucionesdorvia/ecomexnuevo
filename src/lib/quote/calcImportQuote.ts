@@ -114,6 +114,10 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     ivaMaxUsd: number;
     ivaAdicionalMinUsd: number;
     ivaAdicionalMaxUsd: number;
+    gananciasMinUsd: number;
+    gananciasMaxUsd: number;
+    iibbMinUsd: number;
+    iibbMaxUsd: number;
     impuestosInternosMinUsd: number;
     impuestosInternosMaxUsd: number;
     impuestosTotalMinUsd: number;
@@ -300,6 +304,10 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   let ivaMax = 0;
   let ivaAdicMin = 0;
   let ivaAdicMax = 0;
+  let gananciasMin = 0;
+  let gananciasMax = 0;
+  let iibbMin = 0;
+  let iibbMax = 0;
   let internosMin = 0;
   let internosMax = 0;
 
@@ -308,6 +316,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     const dieRate = pct("DIE") ?? pct("AEC") ?? 0.14;
     const ivaRate = pct("IVA") ?? 0.21;
     const ivaAdicRate = pct("IVA ADIC") ?? 0.2;
+    const gananciasRate = pct("GANANCIAS") ?? 0;
+    const iibbRate = pct("IIBB") ?? 0;
 
     teMin = cifMin2 * teRate;
     teMax = cifMax2 * teRate;
@@ -323,6 +333,17 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
 
     ivaAdicMin = baseIvaMin * ivaAdicRate;
     ivaAdicMax = baseIvaMax * ivaAdicRate;
+
+    // Perceptions/withholdings (cash-out impact; applicability depends on taxpayer profile).
+    // Best-effort: apply over the same base as IVA (common in practice for these approximations).
+    if (gananciasRate > 0) {
+      gananciasMin = baseIvaMin * gananciasRate;
+      gananciasMax = baseIvaMax * gananciasRate;
+    }
+    if (iibbRate > 0) {
+      iibbMin = baseIvaMin * iibbRate;
+      iibbMax = baseIvaMax * iibbRate;
+    }
 
     const internal = (pcram as any)?.internalTaxes as
       | {
@@ -356,13 +377,20 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       }
     }
 
-    impuestosMin = teMin + derechosMin + ivaMin + ivaAdicMin + internosMin;
-    impuestosMax = teMax + derechosMax + ivaMax + ivaAdicMax + internosMax;
+    impuestosMin = teMin + derechosMin + ivaMin + ivaAdicMin + gananciasMin + iibbMin + internosMin;
+    impuestosMax = teMax + derechosMax + ivaMax + ivaAdicMax + gananciasMax + iibbMax + internosMax;
 
-    impuestosDetail =
+    const hasPerceptions = gananciasRate > 0 || iibbRate > 0;
+    impuestosDetail = [
       internal?.tiers?.length
         ? "Estimación usando tasas oficiales (PCRAM) cuando disponibles, incluyendo Impuestos Internos cuando aplican por umbrales."
-        : "Estimación usando tasas oficiales (PCRAM) cuando disponibles.";
+        : "Estimación usando tasas oficiales (PCRAM) cuando disponibles.",
+      hasPerceptions
+        ? "Incluye percepciones (Ganancias / IIBB) como **impacto de caja**; su aplicabilidad exacta depende de tu situación fiscal."
+        : "",
+    ]
+      .filter(Boolean)
+      .join(" ");
   } else {
     // Taxes: simplified heuristic when we don't have official rates.
     const dutyRateMin = ncm ? 0.08 : 0.12;
@@ -591,6 +619,10 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       ivaMaxUsd: round2(ivaMax),
       ivaAdicionalMinUsd: round2(ivaAdicMin),
       ivaAdicionalMaxUsd: round2(ivaAdicMax),
+      gananciasMinUsd: round2(gananciasMin),
+      gananciasMaxUsd: round2(gananciasMax),
+      iibbMinUsd: round2(iibbMin),
+      iibbMaxUsd: round2(iibbMax),
       impuestosInternosMinUsd: round2(internosMin),
       impuestosInternosMaxUsd: round2(internosMax),
       impuestosTotalMinUsd: round2(impuestosMin),
