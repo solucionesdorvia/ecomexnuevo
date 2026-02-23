@@ -11,4 +11,5 @@
 export type * from './models/Quote'
 export type * from './models/Lead'
 export type * from './models/User'
+export type * from './models/OperatorBudget'
 export type * from './commonInputTypes'

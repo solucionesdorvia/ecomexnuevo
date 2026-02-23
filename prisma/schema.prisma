@@ -8,6 +8,12 @@ datasource db {
   provider = "postgresql"
 }
 
+enum UserRole {
+  user
+  operator
+  admin
+}
+
 model Quote {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
@@ -61,7 +67,28 @@ model User {
   email        String   @unique
   passwordHash String
 
+  role UserRole @default(user)
+
   quotes Quote[]
   leads  Lead[]
+  operatorBudgets OperatorBudget[]
+}
+
+model OperatorBudget {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  createdByUserId String
+  createdByUser   User @relation(fields: [createdByUserId], references: [id])
+
+  rubro        String?
+  productTitle String?
+
+  filename    String
+  xlsxBytes   Bytes
+  imageBytes  Bytes
+  imageType   String
+
+  parsedJson Json?
 }
 

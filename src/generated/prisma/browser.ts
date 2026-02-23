@@ -32,3 +32,8 @@ export type Lead = Prisma.LeadModel
  * 
  */
 export type User = Prisma.UserModel
+/**
+ * Model OperatorBudget
+ * 
+ */
+export type OperatorBudget = Prisma.OperatorBudgetModel

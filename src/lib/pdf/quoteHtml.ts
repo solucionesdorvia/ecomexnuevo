@@ -164,6 +164,14 @@ function deriveCostsFromQuote(quote: QuoteLike) {
 
   const breakdown: any = (quote.quoteJson as any)?.breakdown ?? null;
 
+  // Operator budgets may inject explicit fields (already in USD).
+  const operatorTributosUsd =
+    breakdown && typeof breakdown.tributosUsd === "number" ? breakdown.tributosUsd : null;
+  const operatorIvaUsd =
+    breakdown && typeof breakdown.ivaUsd === "number" ? breakdown.ivaUsd : null;
+  const operatorTotalToPayUsd =
+    breakdown && typeof breakdown.totalToPayUsd === "number" ? breakdown.totalToPayUsd : null;
+
   // Prefer server-calculated breakdown (keeps PDF aligned with quote logic).
   const seguro =
     typeof breakdown?.seguroMinUsd === "number"
@@ -202,16 +210,25 @@ function deriveCostsFromQuote(quote: QuoteLike) {
     fobTotal,
     flete,
     seguro,
-    impuestos,
+    impuestos: operatorTributosUsd ?? impuestos,
     honorarios,
     deposito,
     transporteNac,
     transferencia,
     total,
+    iva: operatorIvaUsd,
+    totalToPay: operatorTotalToPayUsd ?? total,
+    items: Array.isArray(breakdown?.items) ? breakdown.items : null,
   };
 }
 
 function renderProductImages(product: any) {
+  const operatorImg = safeStr(product?.raw?.operatorImageDataUrl);
+  if (operatorImg) {
+    return `<img class="product-image product-image--large" src="${htmlEscape(
+      operatorImg
+    )}" alt="Imagen producto"/>`;
+  }
   const imgs: string[] = Array.isArray(product?.images) ? product.images : [];
   const title = safeStr(product?.title) || "Producto";
   const blocked =
@@ -313,12 +330,17 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
   const date = fmtMonthYear(quote.createdAt);
 
   const totalToShow = costs.total ?? quote.totalMinUsd ?? null;
-  const totalToPay = totalToShow; // For now keep same; can be refined later.
+  const totalToPay = (costs as any).totalToPay ?? totalToShow;
+  const ivaToShow = (costs as any).iva ?? null;
 
   // NOTE: Product requirement says don't show NCM. We keep the same layout but replace content.
   const classificationDesc =
     "Clasificación aduanera estimada internamente. Se valida con datos técnicos, origen, uso y requisitos antes de operar.";
   const classificationCode = "—";
+
+  const items: any[] = Array.isArray((costs as any).items) ? ((costs as any).items as any[]) : [];
+  const hasItems = items.length > 0;
+  const fmtMaybe = (n: any) => (typeof n === "number" && Number.isFinite(n) ? fmtUsdEs(n) : "—");
 
   return `<!DOCTYPE html>
 <html lang="es">
@@ -388,6 +410,7 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
     .detail-body { display:flex; gap:25px; flex:1; }
     .detail-images { flex:0.9; display:flex; flex-direction:column; gap:15px; }
     .product-image { width:100%; max-width:260px; height:180px; object-fit:contain; border:1px solid var(--ecomex-gray); border-radius:8px; padding:10px; background:#fafafa; }
+    .product-image--large { max-width:260px; height:375px; object-fit:contain; }
     .product-image-placeholder { width:100%; max-width:260px; height:180px; border:2px dashed var(--ecomex-gray); border-radius:8px; display:flex; align-items:center; justify-content:center; color: var(--text-light); font-size:12px; background:#fafafa; text-align:center; padding: 8px; }
     .image-disclaimer { font-size: 10px; color: var(--text-light); font-style: italic; margin-top: 10px; max-width: 260px; }
 
@@ -515,7 +538,7 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
           <div class="cost-item main"><span class="label">Gastos transporte nacional:</span><span class="value">${costs.transporteNac != null ? fmtUsdEs(costs.transporteNac) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Gastos transferencia intl:</span><span class="value">${costs.transferencia != null ? fmtUsdEs(costs.transferencia) : "—"}</span></div>
           <div class="cost-item total"><span class="label">TOTAL:</span><span class="value">${totalToShow != null ? fmtUsdEs(totalToShow) : "—"}</span></div>
-          <div class="cost-item iva-total"><span class="label">IVA:</span><span class="value">—</span></div>
+          <div class="cost-item iva-total"><span class="label">IVA:</span><span class="value">${ivaToShow != null ? fmtUsdEs(ivaToShow) : "—"}</span></div>
           <div class="cost-item grand-total"><span class="label">TOTAL A PAGAR:</span><span class="value">${totalToPay != null ? fmtUsdEs(totalToPay) : "—"}</span></div>
         </div>
       </div>
@@ -545,20 +568,33 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
         </tr>
       </thead>
       <tbody>
-        <tr>
+        ${
+          hasItems
+            ? items
+                .slice(0, 50)
+                .map(
+                  (it) => `<tr>
+          <td>${htmlEscape(safeStr(it?.item))}</td>
+          <td>${it?.quantity != null ? htmlEscape(String(it.quantity)) : "—"}</td>
+          <td>${fmtMaybe(it?.fobItemUsd)}</td>
+          <td>${fmtMaybe(it?.costoFinalItemUsd)}</td>
+          <td>${fmtMaybe(it?.costoUnitarioUsd)}</td>
+        </tr>`
+                )
+                .join("\n")
+            : `<tr>
           <td>ITEM-01</td>
           <td>${costs.qty}</td>
           <td>${costs.fobUnit != null ? fmtUsdEs(costs.fobUnit) : "—"}</td>
           <td>${totalToShow != null ? fmtUsdEs(totalToShow) : "—"}</td>
-          <td>${
-            totalToShow != null ? fmtUsdEs(totalToShow / Math.max(1, costs.qty)) : "—"
-          }</td>
-        </tr>
+          <td>${totalToShow != null ? fmtUsdEs(totalToShow / Math.max(1, costs.qty)) : "—"}</td>
+        </tr>`
+        }
         <tr class="total-row">
           <td>TOTAL</td>
-          <td>${costs.qty}</td>
-          <td>${costs.fobTotal != null ? fmtUsdEs(costs.fobTotal) : "—"}</td>
-          <td>${totalToShow != null ? fmtUsdEs(totalToShow) : "—"}</td>
+          <td>${hasItems ? htmlEscape(String(items.reduce((a, it) => a + (Number(it?.quantity) || 0), 0))) : costs.qty}</td>
+          <td>${hasItems ? fmtMaybe(items.reduce((a, it) => a + (Number(it?.fobItemUsd) || 0), 0)) : costs.fobTotal != null ? fmtUsdEs(costs.fobTotal) : "—"}</td>
+          <td>${hasItems ? fmtMaybe(items.reduce((a, it) => a + (Number(it?.costoFinalItemUsd) || 0), 0)) : totalToShow != null ? fmtUsdEs(totalToShow) : "—"}</td>
           <td></td>
         </tr>
       </tbody>

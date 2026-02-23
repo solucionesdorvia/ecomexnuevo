@@ -386,7 +386,8 @@ type FieldRefInputType<Model, FieldType> = Model extends never ? never : FieldRe
 export const ModelName = {
   Quote: 'Quote',
   Lead: 'Lead',
-  User: 'User'
+  User: 'User',
+  OperatorBudget: 'OperatorBudget'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -402,7 +403,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "quote" | "lead" | "user"
+    modelProps: "quote" | "lead" | "user" | "operatorBudget"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -628,6 +629,80 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    OperatorBudget: {
+      payload: Prisma.$OperatorBudgetPayload<ExtArgs>
+      fields: Prisma.OperatorBudgetFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.OperatorBudgetFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorBudgetPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.OperatorBudgetFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorBudgetPayload>
+        }
+        findFirst: {
+          args: Prisma.OperatorBudgetFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorBudgetPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.OperatorBudgetFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorBudgetPayload>
+        }
+        findMany: {
+          args: Prisma.OperatorBudgetFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorBudgetPayload>[]
+        }
+        create: {
+          args: Prisma.OperatorBudgetCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorBudgetPayload>
+        }
+        createMany: {
+          args: Prisma.OperatorBudgetCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.OperatorBudgetCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorBudgetPayload>[]
+        }
+        delete: {
+          args: Prisma.OperatorBudgetDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorBudgetPayload>
+        }
+        update: {
+          args: Prisma.OperatorBudgetUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorBudgetPayload>
+        }
+        deleteMany: {
+          args: Prisma.OperatorBudgetDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.OperatorBudgetUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.OperatorBudgetUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorBudgetPayload>[]
+        }
+        upsert: {
+          args: Prisma.OperatorBudgetUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorBudgetPayload>
+        }
+        aggregate: {
+          args: Prisma.OperatorBudgetAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateOperatorBudget>
+        }
+        groupBy: {
+          args: Prisma.OperatorBudgetGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.OperatorBudgetGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.OperatorBudgetCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.OperatorBudgetCountAggregateOutputType> | number
+        }
+      }
+    }
   }
 } & {
   other: {
@@ -703,10 +778,27 @@ export const UserScalarFieldEnum = {
   id: 'id',
   createdAt: 'createdAt',
   email: 'email',
-  passwordHash: 'passwordHash'
+  passwordHash: 'passwordHash',
+  role: 'role'
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+
+
+export const OperatorBudgetScalarFieldEnum = {
+  id: 'id',
+  createdAt: 'createdAt',
+  createdByUserId: 'createdByUserId',
+  rubro: 'rubro',
+  productTitle: 'productTitle',
+  filename: 'filename',
+  xlsxBytes: 'xlsxBytes',
+  imageBytes: 'imageBytes',
+  imageType: 'imageType',
+  parsedJson: 'parsedJson'
+} as const
+
+export type OperatorBudgetScalarFieldEnum = (typeof OperatorBudgetScalarFieldEnum)[keyof typeof OperatorBudgetScalarFieldEnum]
 
 
 export const SortOrder = {
@@ -816,6 +908,34 @@ export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, '
  * Reference to a field of type 'Float[]'
  */
 export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
+    
+
+
+/**
+ * Reference to a field of type 'UserRole'
+ */
+export type EnumUserRoleFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'UserRole'>
+    
+
+
+/**
+ * Reference to a field of type 'UserRole[]'
+ */
+export type ListEnumUserRoleFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'UserRole[]'>
+    
+
+
+/**
+ * Reference to a field of type 'Bytes'
+ */
+export type BytesFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Bytes'>
+    
+
+
+/**
+ * Reference to a field of type 'Bytes[]'
+ */
+export type ListBytesFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Bytes[]'>
     
 
 
@@ -930,6 +1050,7 @@ export type GlobalOmitConfig = {
   quote?: Prisma.QuoteOmit
   lead?: Prisma.LeadOmit
   user?: Prisma.UserOmit
+  operatorBudget?: Prisma.OperatorBudgetOmit
 }
 
 /* Types for Logging */
