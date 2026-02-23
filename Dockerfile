@@ -19,5 +19,5 @@ RUN npm run build
 ENV NODE_ENV=production
 
 # Railway sets PORT (often 8080). Next needs -p.
-CMD ["sh", "-c", "npm run start -- -p ${PORT:-3000}"]
+CMD ["sh", "-c", "npm run start -- -H 0.0.0.0 -p ${PORT:-3000}"]
 
