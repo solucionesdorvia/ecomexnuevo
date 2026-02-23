@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { requireRole } from "@/lib/auth/session";
+import { parseBudgetXlsx } from "@/lib/operatorBudget/xlsxParse";
 
 export const runtime = "nodejs";
 
@@ -51,6 +52,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "La imagen es demasiado grande." }, { status: 400 });
     }
 
+    const parsed = parseBudgetXlsx(new Uint8Array(xlsxBytes));
+
     const created = await prisma.operatorBudget.create({
       data: {
         createdByUserId: gate.user.id,
@@ -60,6 +63,7 @@ export async function POST(req: Request) {
         xlsxBytes,
         imageBytes,
         imageType: image.type || "image/jpeg",
+        parsedJson: parsed as any,
       },
       select: { id: true, createdAt: true, filename: true },
     });

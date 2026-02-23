@@ -38,6 +38,7 @@ export async function GET(req: Request) {
         xlsxBytes: true,
         imageBytes: true,
         imageType: true,
+        parsedJson: true,
         createdByUserId: true,
       },
     })
@@ -52,7 +53,10 @@ export async function GET(req: Request) {
     return NextResponse.json({ ok: false, error: "Sin permisos." }, { status: 403 });
   }
 
-  const parsed = parseBudgetXlsx(new Uint8Array(budget.xlsxBytes as any));
+  const parsed =
+    budget.parsedJson && typeof budget.parsedJson === "object"
+      ? (budget.parsedJson as any)
+      : parseBudgetXlsx(new Uint8Array(budget.xlsxBytes as any));
   const operatorImageDataUrl = dataUrlFromImage(
     Buffer.from(budget.imageBytes as any),
     budget.imageType
@@ -83,6 +87,15 @@ export async function GET(req: Request) {
         ivaUsd: parsed.ivaUsd,
         totalToPayUsd: parsed.totalToPayUsd,
         tributosUsd: parsed.totalTributosUsd,
+        fobUsd: parsed.fobUsd,
+        fleteUsd: parsed.fleteUsd,
+        seguroUsd: parsed.seguroUsd,
+        honorariosUsd: parsed.honorariosUsd,
+        depositoUsd: parsed.depositoUsd,
+        transporteNacionalUsd: parsed.transporteNacionalUsd,
+        transferenciaIntlUsd: parsed.transferenciaIntlUsd,
+        arancelSimUsd: parsed.arancelSimUsd,
+        taxLines: parsed.taxLines,
         items: parsed.items,
       },
     },

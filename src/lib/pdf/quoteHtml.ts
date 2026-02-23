@@ -171,6 +171,26 @@ function deriveCostsFromQuote(quote: QuoteLike) {
     breakdown && typeof breakdown.ivaUsd === "number" ? breakdown.ivaUsd : null;
   const operatorTotalToPayUsd =
     breakdown && typeof breakdown.totalToPayUsd === "number" ? breakdown.totalToPayUsd : null;
+  const operatorFobUsd = breakdown && typeof breakdown.fobUsd === "number" ? breakdown.fobUsd : null;
+  const operatorFleteUsd =
+    breakdown && typeof breakdown.fleteUsd === "number" ? breakdown.fleteUsd : null;
+  const operatorSeguroUsd =
+    breakdown && typeof breakdown.seguroUsd === "number" ? breakdown.seguroUsd : null;
+  const operatorHonorariosUsd =
+    breakdown && typeof breakdown.honorariosUsd === "number" ? breakdown.honorariosUsd : null;
+  const operatorDepositoUsd =
+    breakdown && typeof breakdown.depositoUsd === "number" ? breakdown.depositoUsd : null;
+  const operatorTransporteNacUsd =
+    breakdown && typeof breakdown.transporteNacionalUsd === "number"
+      ? breakdown.transporteNacionalUsd
+      : null;
+  const operatorTransferenciaUsd =
+    breakdown && typeof breakdown.transferenciaIntlUsd === "number"
+      ? breakdown.transferenciaIntlUsd
+      : null;
+  const operatorArancelSimUsd =
+    breakdown && typeof breakdown.arancelSimUsd === "number" ? breakdown.arancelSimUsd : null;
+  const operatorTaxLines = Array.isArray(breakdown?.taxLines) ? breakdown.taxLines : null;
 
   // Prefer server-calculated breakdown (keeps PDF aligned with quote logic).
   const seguro =
@@ -207,18 +227,20 @@ function deriveCostsFromQuote(quote: QuoteLike) {
   return {
     qty,
     fobUnit,
-    fobTotal,
-    flete,
-    seguro,
+    fobTotal: operatorFobUsd ?? fobTotal,
+    flete: operatorFleteUsd ?? flete,
+    seguro: operatorSeguroUsd ?? seguro,
     impuestos: operatorTributosUsd ?? impuestos,
-    honorarios,
-    deposito,
-    transporteNac,
-    transferencia,
+    honorarios: operatorHonorariosUsd ?? honorarios,
+    deposito: operatorDepositoUsd ?? deposito,
+    transporteNac: operatorTransporteNacUsd ?? transporteNac,
+    transferencia: operatorTransferenciaUsd ?? transferencia,
     total,
     iva: operatorIvaUsd,
     totalToPay: operatorTotalToPayUsd ?? total,
     items: Array.isArray(breakdown?.items) ? breakdown.items : null,
+    arancelSimUsd: operatorArancelSimUsd,
+    taxLines: operatorTaxLines,
   };
 }
 
@@ -332,6 +354,7 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
   const totalToShow = costs.total ?? quote.totalMinUsd ?? null;
   const totalToPay = (costs as any).totalToPay ?? totalToShow;
   const ivaToShow = (costs as any).iva ?? null;
+  const fobLabel = quote.mode === "budget" ? "EXW" : "FOB";
 
   // NOTE: Product requirement says don't show NCM. We keep the same layout but replace content.
   const classificationDesc =
@@ -341,6 +364,19 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
   const items: any[] = Array.isArray((costs as any).items) ? ((costs as any).items as any[]) : [];
   const hasItems = items.length > 0;
   const fmtMaybe = (n: any) => (typeof n === "number" && Number.isFinite(n) ? fmtUsdEs(n) : "—");
+  const taxLines: Array<{ label: string; amountUsd: number }> = Array.isArray((costs as any).taxLines)
+    ? ((costs as any).taxLines as any[])
+    : [];
+  const taxMap = new Map<string, number>();
+  for (const tl of taxLines) {
+    const label = safeStr((tl as any)?.label);
+    const amt = (tl as any)?.amountUsd;
+    if (label && typeof amt === "number" && Number.isFinite(amt)) taxMap.set(label, amt);
+  }
+  const showTax = (label: string) => {
+    const amt = taxMap.get(label);
+    return amt != null ? fmtUsdEs(amt) : "Incluido";
+  };
 
   return `<!DOCTYPE html>
 <html lang="es">
@@ -525,14 +561,19 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
         <div class="ncm-code">${htmlEscape(classificationCode)}</div>
 
         <div class="cost-breakdown">
-          <div class="cost-item main"><span class="label">FOB:</span><span class="value">${costs.fobTotal != null ? fmtUsdEs(costs.fobTotal) : "—"}</span></div>
+          <div class="cost-item main"><span class="label">${htmlEscape(fobLabel)}:</span><span class="value">${costs.fobTotal != null ? fmtUsdEs(costs.fobTotal) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Flete marítimo internacional:</span><span class="value">${costs.flete != null ? fmtUsdEs(costs.flete) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Seguro internacional:</span><span class="value">${costs.seguro != null ? fmtUsdEs(costs.seguro) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Tributos aduaneros a pagar:</span><span class="value">${costs.impuestos != null ? fmtUsdEs(costs.impuestos) : "—"}</span></div>
-          <div class="cost-item sub"><span class="label">Derechos de importación:</span><span class="value">Incluido</span></div>
-          <div class="cost-item sub"><span class="label">Tasa de Estadística:</span><span class="value">Incluido</span></div>
-          <div class="cost-item sub iva-highlight"><span class="label">I.V.A.:</span><span class="value">Incluido</span></div>
-          <div class="cost-item sub"><span class="label">Arancel SIM:</span><span class="value">Incluido</span></div>
+          <div class="cost-item sub"><span class="label">Derechos de importación:</span><span class="value">${showTax("Derechos")}</span></div>
+          <div class="cost-item sub"><span class="label">Tasa de Estadística:</span><span class="value">${showTax("Tasa de Estadistica")}</span></div>
+          <div class="cost-item sub iva-highlight"><span class="label">I.V.A.:</span><span class="value">${showTax("IVA")}</span></div>
+          <div class="cost-item sub"><span class="label">IVA Adicional:</span><span class="value">${showTax("IVA Adicional")}</span></div>
+          <div class="cost-item sub"><span class="label">Impuesto a las Ganancias:</span><span class="value">${showTax("Impuesto a las Ganancias")}</span></div>
+          <div class="cost-item sub"><span class="label">II.BB.:</span><span class="value">${showTax("IIBB")}</span></div>
+          <div class="cost-item sub"><span class="label">Arancel SIM:</span><span class="value">${
+            (costs as any).arancelSimUsd != null ? fmtUsdEs((costs as any).arancelSimUsd) : showTax("Tasa SIM")
+          }</span></div>
           <div class="cost-item main"><span class="label">Honorarios:</span><span class="value">${costs.honorarios != null ? fmtUsdEs(costs.honorarios) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Gastos de depósito y portuarios:</span><span class="value">${costs.deposito != null ? fmtUsdEs(costs.deposito) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Gastos transporte nacional:</span><span class="value">${costs.transporteNac != null ? fmtUsdEs(costs.transporteNac) : "—"}</span></div>
