@@ -698,6 +698,7 @@ export type QuoteCreateOrConnectWithoutLeadInput = {
 
 export type QuoteCreateManyLeadInputEnvelope = {
   data: Prisma.QuoteCreateManyLeadInput | Prisma.QuoteCreateManyLeadInput[]
+  skipDuplicates?: boolean
 }
 
 export type QuoteUpsertWithWhereUniqueWithoutLeadInput = {
@@ -775,6 +776,7 @@ export type QuoteCreateOrConnectWithoutUserInput = {
 
 export type QuoteCreateManyUserInputEnvelope = {
   data: Prisma.QuoteCreateManyUserInput | Prisma.QuoteCreateManyUserInput[]
+  skipDuplicates?: boolean
 }
 
 export type QuoteUpsertWithWhereUniqueWithoutUserInput = {
@@ -1700,6 +1702,7 @@ export type QuoteCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Interna
    * The data used to create many Quotes.
    */
   data: Prisma.QuoteCreateManyInput | Prisma.QuoteCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1718,6 +1721,7 @@ export type QuoteCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extension
    * The data used to create many Quotes.
    */
   data: Prisma.QuoteCreateManyInput | Prisma.QuoteCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

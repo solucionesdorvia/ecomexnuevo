@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { hashPassword } from "@/lib/auth/password";
 import { signAuthToken } from "@/lib/auth/jwt";
+import { Prisma } from "@/generated/prisma/client";
 
 export const runtime = "nodejs";
 
@@ -32,9 +33,21 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
+    if (email.length > 254) {
+      return NextResponse.json(
+        { ok: false, error: "Email inválido." },
+        { status: 400 }
+      );
+    }
     if (password.length < 8) {
       return NextResponse.json(
         { ok: false, error: "La contraseña debe tener al menos 8 caracteres." },
+        { status: 400 }
+      );
+    }
+    if (password.length > 200) {
+      return NextResponse.json(
+        { ok: false, error: "La contraseña es demasiado larga." },
         { status: 400 }
       );
     }
@@ -69,9 +82,8 @@ export async function POST(req: Request) {
     });
     return res;
   } catch (e) {
-    // Prisma unique constraint -> user already exists
-    const msg = e instanceof Error ? e.message : "";
-    if (msg.includes("Unique constraint")) {
+    // Prisma unique constraint -> user already exists (P2002)
+    if (e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2002") {
       return NextResponse.json(
         { ok: false, error: "Ese email ya tiene una cuenta." },
         { status: 409 }

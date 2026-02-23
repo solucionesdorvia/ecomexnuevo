@@ -7,7 +7,7 @@ Plataforma web lista para evolucionar a producción, con flujo **landing → cha
 - **Landing premium** con hero de video (container) y CTA al chat.
 - **Chat de importación** con estados y **tarjetas** de cotización (FOB, flete, impuestos, gestión, total, tiempos).
 - **Conversión correcta**: **no** se pide contacto al inicio; solo después de que el usuario diga que quiere avanzar.
-- **Persistencia real** (SQLite dev) con Prisma:
+- **Persistencia real** (Postgres recomendado) con Prisma:
   - Guarda **cotizaciones anónimas** (cookie `ecomex_anon`)
   - Guarda **leads** (contacto) y vincula con la cotización
 - **Scraper autenticado** (Playwright) con **sesión persistente**, activable por variables de entorno.
@@ -28,7 +28,7 @@ npm install
 2) Variables de entorno
 
 - Copiá `.env.example` → `.env` y ajustá:
-  - `DATABASE_URL` (dev por defecto: `file:./dev.db`)
+  - `DATABASE_URL` (Postgres / Neon)
   - `AUTH_JWT_SECRET` (cambiar en producción)
   - Scraper (ver abajo)
 
@@ -36,7 +36,7 @@ npm install
 
 ```bash
 npx prisma generate
-npx prisma migrate dev
+npx prisma migrate deploy
 ```
 
 4) Video del container

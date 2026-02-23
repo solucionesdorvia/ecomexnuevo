@@ -26,6 +26,13 @@ export async function POST(req: Request) {
       .toLowerCase();
     const password = String(body.password ?? "").trim();
 
+    if (!email || !email.includes("@") || email.length > 254 || !password) {
+      return NextResponse.json(
+        { ok: false, error: "Email o contraseña incorrectos." },
+        { status: 401 }
+      );
+    }
+
     const user = await prisma.user.findUnique({ where: { email } });
     if (!user) {
       return NextResponse.json(
@@ -66,7 +73,9 @@ export async function POST(req: Request) {
       maxAge: 60 * 60 * 24 * 30,
     });
     return res;
-  } catch {
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.error("[auth/login] error", e);
     return NextResponse.json(
       { ok: false, error: "No se pudo iniciar sesión." },
       { status: 500 }
