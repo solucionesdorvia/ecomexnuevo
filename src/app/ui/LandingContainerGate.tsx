@@ -1,300 +1,94 @@
-"use client";
-
-import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
-import ContainerVideo from "@/components/ContainerVideo";
 import { ButtonLink } from "@/components/ui/Button";
-
-type Phase = "closed" | "opening" | "open";
-
-function classNames(...xs: Array<string | false | undefined | null>) {
-  return xs.filter(Boolean).join(" ");
-}
+import { Icon } from "@/components/ui/Icon";
 
 export default function LandingContainerGate() {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [phase, setPhase] = useState<Phase>("closed");
-
-  const isClosed = phase === "closed";
-  const isOpening = phase === "opening";
-  const isOpen = phase === "open";
-
-  const headline = useMemo(
-    () => "Abrimos el costo real de importar a Argentina.",
-    []
-  );
-
-  useEffect(() => {
-    // Ensure first impression is “not looping”.
-    const v = videoRef.current;
-    if (!v) return;
-    const syncFirstFrame = () => {
-      try {
-        v.pause();
-        // Showing the real video (not a poster): seek to 0 so the first frame is visible.
-        v.currentTime = 0;
-      } catch {
-        // ignore
-      }
-    };
-    // Trigger a load so the first frame becomes available ASAP.
-    try {
-      v.load();
-    } catch {
-      // ignore
-    }
-    v.addEventListener("loadeddata", syncFirstFrame);
-    v.addEventListener("loadedmetadata", syncFirstFrame);
-    // Best effort immediately too.
-    syncFirstFrame();
-    return () => {
-      v.removeEventListener("loadeddata", syncFirstFrame);
-      v.removeEventListener("loadedmetadata", syncFirstFrame);
-    };
-  }, []);
-
-  async function openContainer() {
-    const v = videoRef.current;
-    setPhase("opening");
-    if (!v) {
-      setPhase("open");
-      return;
-    }
-    try {
-      v.currentTime = 0;
-      // muted => should be allowed
-      await v.play();
-    } catch {
-      // Fallback: still reveal content
-      setPhase("open");
-    }
-  }
-
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-background text-white">
-      {/* Full-viewport container video */}
-      <div className="fixed inset-0 z-0">
-        {/* When the container is opened, we switch to the app texture background (not the last video frame). */}
-        {/* While closed/opening, keep a neutral dark backing so the app texture doesn't show "before" the container. */}
-        <div className={classNames("absolute inset-0", isOpen ? "app-background" : "bg-black")} />
-
-        <ContainerVideo
-          videoRef={videoRef}
-          autoPlay={false}
-          loop={false}
+    <div className="bg-app relative min-h-screen overflow-x-hidden text-strong">
+      <div className="absolute inset-0 -z-10">
+        <video
+          className="h-full w-full object-cover"
+          autoPlay
           muted
-          preload="auto"
-          className={classNames("opacity-100", isOpen && "hidden")}
-          overlayClassName="opacity-0"
-          showMissingNotice
-          onEnded={() => {
-            // Freeze on last frame and reveal content.
-            setPhase("open");
-          }}
+          loop
+          playsInline
+          preload="metadata"
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260217_030345_246c0224-10a4-422c-b324-070b7c0eceda.mp4"
         />
-        {isOpen ? (
-          <>
-            <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-primary/40 glow-line" />
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-1 bg-primary/40 glow-line" />
-          </>
-        ) : null}
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="aurora absolute inset-0 opacity-85" />
       </div>
 
-      {/* Closed state: only welcome + open action */}
-      {isClosed || isOpening ? (
-        <button
-          type="button"
-          aria-label="Abrir container"
-          disabled={isOpening}
-          onClick={() => void openContainer()}
-          onKeyDown={(e) => {
-            if (isOpening) return;
-            if (e.key === "Enter" || e.key === " ") void openContainer();
-          }}
-          className="absolute inset-0 z-10 cursor-pointer bg-transparent outline-none"
-        />
-      ) : null}
+      <header className="glass-nav sticky top-0 z-50 border-b border-subtle">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-10">
+          <div className="flex items-center gap-3">
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[color:color-mix(in_oklab,var(--primary)_16%,transparent)] text-[var(--accent)]">
+              <Icon name="dataset" size={18} />
+            </span>
+            <h2 className="text-lg font-extrabold tracking-tight text-strong">E-COMEX</h2>
+          </div>
 
-      {/* Open state: everything “inside the container” */}
-      {isOpen ? (
-        <div className="relative z-10 flex h-full w-full flex-col">
-          <header className="glass-nav sticky top-0 z-20 px-6 py-4">
-            <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between">
-              <div className="flex items-center gap-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/95 p-1.5 shadow-lg shadow-black/20">
-                  <img
-                    src="/brand/ecomex-logo.png"
-                    alt="E‑COMEX"
-                    className="h-6 w-auto object-contain"
-                  />
-                </div>
-                <div className="text-xl font-bold tracking-tight">
-                  E‑COMEX <span className="font-black text-primary">IA</span>
-                </div>
-                <nav className="hidden items-center gap-6 md:flex">
-                  <a
-                    className="text-sm font-medium text-muted transition-colors hover:text-white"
-                    href="#como-funciona"
-                  >
-                    Cómo funciona
-                  </a>
-                  <a
-                    className="text-sm font-medium text-muted transition-colors hover:text-white"
-                    href="#por-que"
-                  >
-                    Por qué E‑Comex
-                  </a>
-                  <Link
-                    className="text-sm font-medium text-muted transition-colors hover:text-white"
-                    href="/account"
-                  >
-                    Tablero
-                  </Link>
-                </nav>
-              </div>
+          <nav className="hidden items-center gap-8 md:flex">
+            {["Plataforma", "Servicios", "Casos", "Recursos"].map((item) => (
+              <a key={item} className="text-sm font-semibold text-muted transition-colors hover:text-strong" href="#producto">
+                {item}
+              </a>
+            ))}
+          </nav>
 
-              <div className="flex items-center gap-3">
-                <ButtonLink href="/chat" variant="primary">
-                  Cotizá ahora
-                </ButtonLink>
-              </div>
-            </div>
-          </header>
-
-          <main className="no-scrollbar flex-1 overflow-y-auto px-6 py-10">
-            <div className="mx-auto w-full max-w-[1200px] space-y-10">
-              <section className="glass-panel rounded-xl p-6 shadow-2xl">
-                <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-                  <div className="max-w-2xl">
-                    <h2 className="mt-4 text-balance text-4xl font-black tracking-tight md:text-5xl">
-                      {headline}
-                    </h2>
-                    <p className="mt-3 text-pretty text-base leading-7 text-muted md:text-lg">
-                      Pegás un link o describís un producto. El chat te devuelve
-                      una estimación completa con explicación y tiempos. Para
-                      decidir con seguridad, el paso final es validarlo con un
-                      especialista (consultoría paga).
-                    </p>
-                  </div>
-
-                  <div className="flex w-full flex-col gap-3 sm:flex-row md:w-auto">
-                    <ButtonLink href="/chat" variant="primary" className="h-12 px-6">
-                      <span className="material-symbols-outlined text-[18px]">
-                        smart_toy
-                      </span>
-                      Cotizá ahora
-                    </ButtonLink>
-                    <ButtonLink
-                      href="/chat?mode=budget"
-                      variant="secondary"
-                      className="h-12 px-6"
-                    >
-                      <span className="material-symbols-outlined text-[18px]">
-                        tune
-                      </span>
-                      Importar con presupuesto
-                    </ButtonLink>
-                    <ButtonLink
-                      href="/tendencias"
-                      variant="secondary"
-                      className="h-12 px-6"
-                    >
-                      <span className="material-symbols-outlined text-[18px]">
-                        trending_up
-                      </span>
-                      Ver señales
-                    </ButtonLink>
-                  </div>
-                </div>
-
-                <div className="mt-6 grid gap-4 md:grid-cols-3">
-                  {[
-                    {
-                      title: "Cotización en flujo",
-                      desc: "Módulos estructurados: producto, clasificación, flete, impuestos AR, gestión, total y tiempos.",
-                      icon: "calculate",
-                    },
-                    {
-                      title: "Explicación de costos",
-                      desc: "Entendés por qué pagás cada costo y qué variables mueven el total.",
-                      icon: "psychology",
-                    },
-                    {
-                      title: "Contacto solo al final",
-                      desc: "La consultoría paga es el paso final: validación profesional antes de decidir.",
-                      icon: "verified_user",
-                    },
-                  ].map((x) => (
-                    <div
-                      key={x.title}
-                      className="rounded-xl border border-white/10 bg-white/5 p-5"
-                    >
-                      <div className="flex items-center gap-2 text-primary">
-                        <span className="material-symbols-outlined">{x.icon}</span>
-                        <div className="text-[10px] font-black uppercase tracking-widest text-muted">
-                          E‑COMEX
-                        </div>
-                      </div>
-                      <div className="mt-3 text-lg font-bold tracking-tight text-white">
-                        {x.title}
-                      </div>
-                      <div className="mt-2 text-sm leading-6 text-muted">
-                        {x.desc}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              <section id="como-funciona" className="grid gap-6 md:grid-cols-3">
-                {[
-                  {
-                    k: "1",
-                    title: "Pegás link o describís el producto",
-                    desc: "Alibaba, 1688 u otro proveedor. También podés venir con un presupuesto objetivo.",
-                  },
-                  {
-                    k: "2",
-                    title: "Scraper autenticado + normalización",
-                    desc: "Leemos la data real del producto (cuando está disponible) y la dejamos lista para cálculo y clasificación.",
-                  },
-                  {
-                    k: "3",
-                    title: "Estimación + explicación + validación profesional",
-                    desc: "Tarjetas con cada costo, total y tiempos. Luego, validación con especialista para evitar errores costosos.",
-                  },
-                ].map((s) => (
-                  <div key={s.k} className="glass-panel rounded-xl p-6">
-                    <div className="text-[10px] font-black uppercase tracking-widest text-muted">
-                      Paso {s.k}
-                    </div>
-                    <div className="mt-2 text-lg font-bold tracking-tight">
-                      {s.title}
-                    </div>
-                    <div className="mt-2 text-sm leading-6 text-muted">{s.desc}</div>
-                  </div>
-                ))}
-              </section>
-
-              <section id="por-que" className="glass-panel rounded-xl p-8">
-                <div className="text-sm font-bold tracking-tight text-white">
-                  No es una landing con formulario. Es un producto.
-                </div>
-                <p className="mt-2 max-w-3xl text-sm leading-7 text-muted">
-                  E‑Comex está pensado como plataforma SaaS: chat con estados, scraper
-                  autenticado con manejo de sesión, componentes reutilizables y backend
-                  listo para integrar APIs/partners. El objetivo es que el usuario
-                  entienda el costo real y decida con validación profesional.
-                </p>
-              </section>
-
-              <footer className="pb-6 text-xs text-muted">
-                © {new Date().getFullYear()} E‑COMEX. Revolucionando el Comercio Global.
-              </footer>
-            </div>
-          </main>
+          <ButtonLink href="/account" variant="primary" className="px-5">
+            Solicitar demo
+          </ButtonLink>
         </div>
-      ) : null}
+      </header>
+
+      <main className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col px-4 pb-16 pt-12 sm:px-6 lg:px-10 lg:pt-24">
+        <section className="relative flex min-h-[66vh] items-center">
+          <div className="grid w-full gap-10 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end">
+            <div className="panel-strong max-w-3xl p-6 sm:p-8 lg:p-10">
+              <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-subtle bg-[var(--surface)] px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-[var(--accent)]">
+                Plataforma + Validación experta
+              </div>
+              <h1 className="text-balance text-[clamp(2rem,6vw,4.25rem)] font-black leading-[1.06] tracking-tight text-strong">
+                Cotización inteligente para Comercio Exterior
+              </h1>
+              <p className="mt-5 max-w-2xl text-[clamp(0.96rem,1.9vw,1.15rem)] leading-relaxed text-muted">
+                Automatizá clasificación, estimación de costos e impuestos y gestión de cotizaciones en un flujo auditable.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <ButtonLink href="/account" variant="primary" className="px-7">
+                  Solicitar demo
+                </ButtonLink>
+                <a
+                  href="#producto"
+                  className="inline-flex h-10 items-center justify-center rounded-xl border border-subtle bg-[var(--surface)] px-5 text-sm font-semibold text-strong transition-colors hover:bg-[var(--surface2)]"
+                >
+                  Ver cómo funciona
+                </a>
+              </div>
+            </div>
+
+            <div className="panel hidden p-5 lg:block">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">Comex OS</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted">
+                Flujos de cotización, validación experta y operación en una sola capa auditada.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="producto" className="grid gap-4 py-10 md:grid-cols-3">
+          {[
+            ["Clasificación asistida", "NCM sugerido con supuestos trazables y señales de riesgo."],
+            ["Costeo operativo", "FOB, flete, impuestos y gestión en un rango explicado."],
+            ["Cierre experto", "Validación final por operador antes de ejecutar operación."],
+          ].map(([title, desc]) => (
+            <article key={title} className="panel p-6">
+              <h3 className="text-base font-extrabold tracking-tight text-strong">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{desc}</p>
+            </article>
+          ))}
+        </section>
+      </main>
     </div>
   );
 }

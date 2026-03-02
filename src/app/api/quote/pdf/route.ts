@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
 import { generateQuotePdf } from "@/lib/pdf/quotePdf";
+import { writeAuditLog } from "@/lib/audit/log";
 
 export const runtime = "nodejs";
 
@@ -21,7 +22,7 @@ export async function GET(req: Request) {
   const anonId = cookieStore.get("ecomex_anon")?.value || anonFromQuery;
   if (!anonId) {
     return NextResponse.json(
-      { error: "Sesión no encontrada. Abrí el chat y generá una cotización primero." },
+      { error: "Sesión no encontrada. Abrí el análisis y generá una cotización primero." },
       { status: 401 }
     );
   }
@@ -42,7 +43,7 @@ export async function GET(req: Request) {
 
   if (!quote) {
     return NextResponse.json(
-      { error: "No encontré un presupuesto para descargar. Generá uno en el chat." },
+      { error: "No encontré un presupuesto para descargar. Generá uno en el análisis." },
       { status: 404 }
     );
   }
@@ -50,6 +51,14 @@ export async function GET(req: Request) {
   const out = await generateQuotePdf({ quote: quote as any });
   const filename =
     mode === "budget" ? "E-COMEX - Presupuesto.pdf" : "E-COMEX - Cotizacion.pdf";
+
+  await writeAuditLog({
+    entityType: "quote",
+    entityId: quote.id,
+    action: "export_pdf",
+    quoteId: quote.id,
+    payload: { mode, renderer: out.renderer },
+  });
 
   return new NextResponse(Buffer.from(out.bytes), {
     headers: {

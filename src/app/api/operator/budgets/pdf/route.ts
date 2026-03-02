@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { requireRole } from "@/lib/auth/session";
 import { parseBudgetXlsx } from "@/lib/operatorBudget/xlsxParse";
+import { effectiveParsedFromStored } from "@/lib/operatorBudget/overrides";
 import { generateQuotePdf } from "@/lib/pdf/quotePdf";
+import { writeAuditLog } from "@/lib/audit/log";
 
 export const runtime = "nodejs";
 
@@ -55,7 +57,7 @@ export async function GET(req: Request) {
 
   const parsed =
     budget.parsedJson && typeof budget.parsedJson === "object"
-      ? (budget.parsedJson as any)
+      ? effectiveParsedFromStored(budget.parsedJson as any).effective
       : parseBudgetXlsx(new Uint8Array(budget.xlsxBytes as any));
   const operatorImageDataUrl = dataUrlFromImage(
     Buffer.from(budget.imageBytes as any),
@@ -103,6 +105,17 @@ export async function GET(req: Request) {
 
   const out = await generateQuotePdf({ quote: quoteLike });
   const filename = "E-COMEX - Presupuesto.pdf";
+
+  await writeAuditLog({
+    entityType: "operator_budget",
+    entityId: budget.id,
+    action: "export_pdf",
+    actorUserId: gate.user.id,
+    actorRole: gate.user.role,
+    operatorBudgetId: budget.id,
+    payload: { renderer: out.renderer },
+  });
+
   return new NextResponse(Buffer.from(out.bytes), {
     headers: {
       "content-type": "application/pdf",

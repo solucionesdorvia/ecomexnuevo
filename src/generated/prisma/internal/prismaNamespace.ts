@@ -387,7 +387,9 @@ export const ModelName = {
   Quote: 'Quote',
   Lead: 'Lead',
   User: 'User',
-  OperatorBudget: 'OperatorBudget'
+  OperatorBudget: 'OperatorBudget',
+  QuoteComment: 'QuoteComment',
+  AuditLog: 'AuditLog'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -403,7 +405,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "quote" | "lead" | "user" | "operatorBudget"
+    modelProps: "quote" | "lead" | "user" | "operatorBudget" | "quoteComment" | "auditLog"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -703,6 +705,154 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    QuoteComment: {
+      payload: Prisma.$QuoteCommentPayload<ExtArgs>
+      fields: Prisma.QuoteCommentFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.QuoteCommentFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$QuoteCommentPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.QuoteCommentFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$QuoteCommentPayload>
+        }
+        findFirst: {
+          args: Prisma.QuoteCommentFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$QuoteCommentPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.QuoteCommentFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$QuoteCommentPayload>
+        }
+        findMany: {
+          args: Prisma.QuoteCommentFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$QuoteCommentPayload>[]
+        }
+        create: {
+          args: Prisma.QuoteCommentCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$QuoteCommentPayload>
+        }
+        createMany: {
+          args: Prisma.QuoteCommentCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.QuoteCommentCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$QuoteCommentPayload>[]
+        }
+        delete: {
+          args: Prisma.QuoteCommentDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$QuoteCommentPayload>
+        }
+        update: {
+          args: Prisma.QuoteCommentUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$QuoteCommentPayload>
+        }
+        deleteMany: {
+          args: Prisma.QuoteCommentDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.QuoteCommentUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.QuoteCommentUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$QuoteCommentPayload>[]
+        }
+        upsert: {
+          args: Prisma.QuoteCommentUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$QuoteCommentPayload>
+        }
+        aggregate: {
+          args: Prisma.QuoteCommentAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateQuoteComment>
+        }
+        groupBy: {
+          args: Prisma.QuoteCommentGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.QuoteCommentGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.QuoteCommentCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.QuoteCommentCountAggregateOutputType> | number
+        }
+      }
+    }
+    AuditLog: {
+      payload: Prisma.$AuditLogPayload<ExtArgs>
+      fields: Prisma.AuditLogFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.AuditLogFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AuditLogPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.AuditLogFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AuditLogPayload>
+        }
+        findFirst: {
+          args: Prisma.AuditLogFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AuditLogPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.AuditLogFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AuditLogPayload>
+        }
+        findMany: {
+          args: Prisma.AuditLogFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AuditLogPayload>[]
+        }
+        create: {
+          args: Prisma.AuditLogCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AuditLogPayload>
+        }
+        createMany: {
+          args: Prisma.AuditLogCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.AuditLogCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AuditLogPayload>[]
+        }
+        delete: {
+          args: Prisma.AuditLogDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AuditLogPayload>
+        }
+        update: {
+          args: Prisma.AuditLogUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AuditLogPayload>
+        }
+        deleteMany: {
+          args: Prisma.AuditLogDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.AuditLogUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.AuditLogUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AuditLogPayload>[]
+        }
+        upsert: {
+          args: Prisma.AuditLogUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$AuditLogPayload>
+        }
+        aggregate: {
+          args: Prisma.AuditLogAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateAuditLog>
+        }
+        groupBy: {
+          args: Prisma.AuditLogGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AuditLogGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.AuditLogCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AuditLogCountAggregateOutputType> | number
+        }
+      }
+    }
   }
 } & {
   other: {
@@ -779,7 +929,8 @@ export const UserScalarFieldEnum = {
   createdAt: 'createdAt',
   email: 'email',
   passwordHash: 'passwordHash',
-  role: 'role'
+  role: 'role',
+  onboardingSeenAt: 'onboardingSeenAt'
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -799,6 +950,35 @@ export const OperatorBudgetScalarFieldEnum = {
 } as const
 
 export type OperatorBudgetScalarFieldEnum = (typeof OperatorBudgetScalarFieldEnum)[keyof typeof OperatorBudgetScalarFieldEnum]
+
+
+export const QuoteCommentScalarFieldEnum = {
+  id: 'id',
+  createdAt: 'createdAt',
+  quoteId: 'quoteId',
+  authorUserId: 'authorUserId',
+  authorRole: 'authorRole',
+  authorLabel: 'authorLabel',
+  message: 'message'
+} as const
+
+export type QuoteCommentScalarFieldEnum = (typeof QuoteCommentScalarFieldEnum)[keyof typeof QuoteCommentScalarFieldEnum]
+
+
+export const AuditLogScalarFieldEnum = {
+  id: 'id',
+  createdAt: 'createdAt',
+  entityType: 'entityType',
+  entityId: 'entityId',
+  action: 'action',
+  payload: 'payload',
+  actorUserId: 'actorUserId',
+  actorRole: 'actorRole',
+  quoteId: 'quoteId',
+  operatorBudgetId: 'operatorBudgetId'
+} as const
+
+export type AuditLogScalarFieldEnum = (typeof AuditLogScalarFieldEnum)[keyof typeof AuditLogScalarFieldEnum]
 
 
 export const SortOrder = {
@@ -1051,6 +1231,8 @@ export type GlobalOmitConfig = {
   lead?: Prisma.LeadOmit
   user?: Prisma.UserOmit
   operatorBudget?: Prisma.OperatorBudgetOmit
+  quoteComment?: Prisma.QuoteCommentOmit
+  auditLog?: Prisma.AuditLogOmit
 }
 
 /* Types for Logging */

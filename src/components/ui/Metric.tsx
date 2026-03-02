@@ -1,4 +1,5 @@
 import { cn } from "./cn";
+import { Icon } from "./Icon";
 
 export function Metric({
   label,
@@ -14,9 +15,9 @@ export function Metric({
   className?: string;
 }) {
   const color =
-    tone === "gold" ? "text-gold" : tone === "primary" ? "text-primary" : "text-muted";
+    tone === "gold" ? "text-white" : tone === "primary" ? "text-white" : "text-white/70";
   return (
-    <div className={cn("rounded-xl border border-white/10 bg-white/5 p-4", className)}>
+    <div className={cn("glass-panel rounded-2xl p-4", className)}>
       <div className="flex items-center justify-between gap-3">
         <div className="min-w-0">
           <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
@@ -27,8 +28,8 @@ export function Metric({
           </div>
         </div>
         {icon ? (
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-black/20">
-            <span className={cn("material-symbols-outlined", color)}>{icon}</span>
+          <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+            <Icon name={icon} size={18} className={cn("text-white/80")} />
           </div>
         ) : null}
       </div>

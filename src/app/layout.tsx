@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   display: "swap",
 });
@@ -11,12 +11,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "E-Comex — Importá a Argentina con costos reales",
   description:
-    "Obtené una estimación orientativa dentro del chat y validala con un especialista: producto, flete, impuestos, gestión, tiempos y total puesto en Argentina.",
+    "Obtené un análisis orientativo y validalo con un especialista: producto, flete, impuestos, gestión, tiempos y total puesto en Argentina.",
   metadataBase: new URL("https://e-comex.app"),
   openGraph: {
     title: "E-Comex",
     description:
-      "Chat inteligente de importación: entendé el costo real y validalo con un especialista antes de decidir.",
+      "Análisis inteligente de importación: entendé el costo real y validalo con un especialista antes de decidir.",
     type: "website",
   },
 };
@@ -29,14 +29,16 @@ export default function RootLayout({
   return (
     <html lang="es-AR" className="dark">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
           rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f%5B%5D=general-sans%40400,500,600,700,800&display=swap"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         />
       </head>
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${jetbrainsMono.variable} antialiased`}>
         {children}
       </body>
     </html>

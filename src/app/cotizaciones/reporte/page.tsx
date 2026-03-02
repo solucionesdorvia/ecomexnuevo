@@ -8,6 +8,10 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader } from "@/components/ui/Card";
 import { ProgressRing } from "@/components/ui/ProgressRing";
 import { SealVerified } from "@/components/ui/SealVerified";
+import { Icon } from "@/components/ui/Icon";
+import { can } from "@/lib/auth/permissions";
+import { ExpertChannel } from "@/app/cotizaciones/reporte/ui/ExpertChannel";
+import { DecisionActions } from "@/app/cotizaciones/reporte/ui/DecisionActions";
 
 export const runtime = "nodejs";
 
@@ -36,6 +40,12 @@ export default async function ReporteCotizacionPage({
   const anonId = cookieStore.get("ecomex_anon")?.value ?? null;
   const token = cookieStore.get("ecomex_auth")?.value ?? null;
   const payload = token ? await verifyAuthToken(token) : null;
+  const sessionUser = payload
+    ? await prisma.user.findUnique({
+        where: { id: payload.sub },
+        select: { id: true, role: true, email: true },
+      })
+    : null;
 
   const where = id
     ? payload
@@ -89,6 +99,50 @@ export default async function ReporteCotizacionPage({
   const pdfHref =
     quote?.id ? `/api/quote/pdf?mode=${encodeURIComponent(mode)}&id=${encodeURIComponent(quote.id)}` : `/api/quote/pdf?mode=${encodeURIComponent(mode)}`;
 
+  const baselineQuotes = quote
+    ? await prisma.quote.findMany({
+        where: payload
+          ? { userId: payload.sub, totalMaxUsd: { not: null } }
+          : anonId
+            ? { anonId, userId: null, totalMaxUsd: { not: null } }
+            : undefined,
+        orderBy: { createdAt: "desc" },
+        take: 12,
+        select: { id: true, totalMaxUsd: true },
+      })
+    : [];
+  const baselineValues = baselineQuotes
+    .filter((q) => q.id !== quote?.id && typeof q.totalMaxUsd === "number")
+    .map((q) => Number(q.totalMaxUsd));
+  const benchmarkAvg =
+    baselineValues.length >= 3
+      ? baselineValues.reduce((acc, x) => acc + x, 0) / baselineValues.length
+      : null;
+  const benchmarkDelta =
+    benchmarkAvg != null && quote?.totalMaxUsd != null ? quote.totalMaxUsd - benchmarkAvg : null;
+  const benchmarkDeltaPct =
+    benchmarkAvg != null && benchmarkAvg > 0 && benchmarkDelta != null
+      ? (benchmarkDelta / benchmarkAvg) * 100
+      : null;
+
+  const auditRows = quote?.id
+    ? await prisma.auditLog.findMany({
+        where: { quoteId: quote.id },
+        orderBy: { createdAt: "desc" },
+        take: 12,
+        select: {
+          id: true,
+          createdAt: true,
+          action: true,
+          actorRole: true,
+          payload: true,
+        },
+      })
+    : [];
+
+  const canValidate = can((sessionUser?.role as any) ?? "user", "quote:validate");
+  const canComment = can((sessionUser?.role as any) ?? "user", "comment:write");
+
   return (
     <AppShell
       active="cotizaciones"
@@ -98,12 +152,12 @@ export default async function ReporteCotizacionPage({
         <div className="flex items-center gap-2">
           <a
             href={pdfHref}
-            className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-xl border border-subtle bg-[var(--surface)] px-4 py-2 text-xs font-bold text-strong transition-colors hover:bg-[var(--surface2)]"
           >
-            <span className="material-symbols-outlined text-[18px]">download</span>
+            <Icon name="download" size={18} className="text-white/85" />
             PDF
           </a>
-          <ButtonLink href="/chat" variant="gold" className="px-4 py-2 text-xs font-black uppercase tracking-[0.2em]">
+          <ButtonLink href="/chat" variant="secondary" className="px-4 py-2 text-xs font-bold">
             Hablar con asesor
           </ButtonLink>
         </div>
@@ -114,10 +168,8 @@ export default async function ReporteCotizacionPage({
         <Link className="hover:text-primary" href="/cotizaciones">
           Cotizaciones
         </Link>
-        <span className="material-symbols-outlined text-[16px] text-muted/60">
-          chevron_right
-        </span>
-        <span className="font-bold text-white">Reporte</span>
+        <Icon name="chevron_right" size={16} className="text-muted/60" />
+        <span className="font-bold text-strong">Reporte</span>
       </nav>
 
       <div className="mt-6 flex flex-col items-start justify-between gap-5 md:flex-row md:items-end">
@@ -127,10 +179,10 @@ export default async function ReporteCotizacionPage({
             <span className="text-sm font-medium text-muted">
               {quote?.id ? (
                 <>
-                  ID de reporte: <span className="font-bold text-white">{quote.id}</span>
+                  ID de reporte: <span className="font-bold text-strong">{quote.id}</span>
                 </>
               ) : (
-                <>Sin sesión: generá una cotización en el chat.</>
+                <>Sin sesión: generá una cotización desde el análisis.</>
               )}
             </span>
           </div>
@@ -146,11 +198,11 @@ export default async function ReporteCotizacionPage({
         <div className="flex w-full gap-3 md:w-auto">
           <ButtonLink href="/chat" variant="primary" className="flex-1 px-6 py-2.5 md:flex-none">
             Agendar consultoría
-            <span className="material-symbols-outlined text-[18px]">event</span>
+            <Icon name="calendar_today" size={18} className="text-white/90" />
           </ButtonLink>
-          <ButtonLink href="/chat" variant="gold" className="flex-1 px-6 py-2.5 md:flex-none">
+          <ButtonLink href="/chat" variant="secondary" className="flex-1 px-6 py-2.5 md:flex-none">
             Hablar con asesor
-            <span className="material-symbols-outlined text-[18px]">chat_bubble</span>
+            <Icon name="chat_bubble" size={18} className="text-white/90" />
           </ButtonLink>
         </div>
       </div>
@@ -159,7 +211,7 @@ export default async function ReporteCotizacionPage({
         <Badge tone="primary" icon="directions_boat">
           Marítimo
         </Badge>
-        <Badge tone="gold" icon="verified_user">
+        <Badge tone="muted" icon="verified_user">
           Validación recomendada
         </Badge>
         {ncm ? (
@@ -179,9 +231,35 @@ export default async function ReporteCotizacionPage({
         ) : null}
       </div>
 
+      <div className="mt-6">
+        <div
+          className="inline-flex items-center gap-1 rounded-xl border border-subtle bg-[var(--surface)] p-1"
+          role="tablist"
+        >
+          {[
+            { id: "overview", label: "Resumen", icon: "summarize", active: true },
+            { id: "breakdown", label: "Desglose", icon: "receipt_long", active: false },
+            { id: "trust", label: "Trust", icon: "verified_user", active: false },
+          ].map((t) => (
+            <span
+              key={t.id}
+              role="tab"
+              aria-selected={t.active}
+              className={[
+                "inline-flex items-center gap-2 rounded-lg px-3 py-2 text-[11px] font-black uppercase tracking-widest",
+                t.active ? "bg-[var(--surface2)] text-strong" : "text-muted",
+              ].join(" ")}
+            >
+              <Icon name={t.icon} size={16} className="text-current" />
+              {t.label}
+            </span>
+          ))}
+        </div>
+      </div>
+
       <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-12">
         <div className="space-y-8 lg:col-span-8">
-          <Card className="border-white/10 bg-white/5">
+          <Card>
             <CardHeader
               eyebrow="Resumen ejecutivo"
               title="Qué sabemos y qué falta"
@@ -190,18 +268,18 @@ export default async function ReporteCotizacionPage({
             />
             <CardContent>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                <div className="rounded-xl border border-white/10 bg-black/20 p-4">
+                <div className="panel rounded-xl p-4">
                   <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
                     Total estimado
                   </div>
-                  <div className="mt-2 gold-gradient-text text-2xl font-black tracking-tight">
+                  <div className="mt-2 text-2xl font-black tracking-tight text-strong">
                     {total}
                   </div>
                   <div className="mt-2 text-xs text-muted">
                     Rango orientativo. Se afina con peso/volumen y documentación final.
                   </div>
                 </div>
-                <div className="rounded-xl border border-white/10 bg-black/20 p-4">
+                <div className="panel rounded-xl p-4">
                   <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
                     Señales / supuestos
                   </div>
@@ -255,8 +333,8 @@ export default async function ReporteCotizacionPage({
                       icon: "policy",
                     },
                   ].map((x) => (
-                    <li key={x.k} className="flex gap-3 rounded-xl border border-white/10 bg-black/20 p-3">
-                      <span className="material-symbols-outlined text-primary">{x.icon}</span>
+                    <li key={x.k} className="flex gap-3 rounded-xl border border-white/10 bg-white/5 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+                      <Icon name={x.icon} size={18} className="mt-0.5 text-white/80" />
                       <div className="min-w-0">
                         <div className="text-xs font-black uppercase tracking-[0.2em] text-muted">{x.k}</div>
                         <div className="mt-1 text-xs text-white/90">{x.v}</div>
@@ -294,7 +372,7 @@ export default async function ReporteCotizacionPage({
                       desc: "Impacta IVA/percepciones y el efectivo a inmovilizar.",
                     },
                   ].map((x) => (
-                    <li key={x.title} className="rounded-xl border border-white/10 bg-black/20 p-3">
+                    <li key={x.title} className="rounded-xl border border-white/10 bg-white/5 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                       <div className="text-xs font-black uppercase tracking-[0.2em] text-muted">
                         {x.title}
                       </div>
@@ -306,13 +384,13 @@ export default async function ReporteCotizacionPage({
             </Card>
           </div>
 
-          <Card className="border-white/10 bg-white/5">
+          <Card>
             <CardHeader eyebrow="Desglose" title="Costos por módulo" icon="receipt_long" />
             <CardContent>
               {breakdown && typeof breakdown.totalMinUsd === "number" ? (
                 <div className="mb-4 overflow-hidden rounded-2xl border border-white/10">
                   <table className="w-full text-sm">
-                    <thead className="bg-black/20 text-[10px] font-black uppercase tracking-[0.2em] text-muted">
+                    <thead className="bg-background-deeper/40 text-[10px] font-black uppercase tracking-[0.2em] text-muted">
                       <tr>
                         <th className="px-4 py-3 text-left">Componente</th>
                         <th className="px-4 py-3 text-right">Min</th>
@@ -364,14 +442,14 @@ export default async function ReporteCotizacionPage({
                   {cards.map((c, idx) => (
                     <div
                       key={`${c.label}-${idx}`}
-                      className="rounded-xl border border-white/10 bg-black/20 p-4"
+                      className="rounded-xl border border-white/10 bg-white/5 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
                     >
                       <div className="flex items-start justify-between gap-4">
                         <div className="min-w-0">
                           <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
                             {c.label}
                           </div>
-                          <div className={c.highlight ? "mt-2 gold-gradient-text text-xl font-black" : "mt-2 text-lg font-black text-white"}>
+                          <div className={c.highlight ? "mt-2 text-xl font-black text-white" : "mt-2 text-lg font-black text-white"}>
                             {c.value}
                           </div>
                           {c.detail ? (
@@ -384,42 +462,109 @@ export default async function ReporteCotizacionPage({
                   ))}
                 </div>
               ) : (
-                <div className="rounded-xl border border-white/10 bg-black/20 p-4 text-sm text-muted">
-                  No hay desglose disponible. Generá una cotización en el chat.
+                <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-muted shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+                  No hay desglose disponible. Generá una cotización desde el análisis.
                 </div>
               )}
             </CardContent>
           </Card>
+
+          <Card>
+            <CardHeader eyebrow="Benchmark" title="Cost Benchmark" icon="signal_cellular_alt" />
+            <CardContent>
+              {benchmarkAvg != null && quote?.totalMaxUsd != null ? (
+                <div className="grid gap-3 md:grid-cols-3">
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                    <div className="text-[10px] uppercase tracking-[0.14em] text-muted">Total actual</div>
+                    <div className="mt-2 text-lg font-semibold text-white">{fmtUsd(quote.totalMaxUsd)}</div>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                    <div className="text-[10px] uppercase tracking-[0.14em] text-muted">Promedio histórico</div>
+                    <div className="mt-2 text-lg font-semibold text-white">{fmtUsd(benchmarkAvg)}</div>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                    <div className="text-[10px] uppercase tracking-[0.14em] text-muted">Diferencia</div>
+                    <div className={benchmarkDelta != null && benchmarkDelta <= 0 ? "mt-2 text-lg font-semibold text-emerald-300" : "mt-2 text-lg font-semibold text-amber-300"}>
+                      {benchmarkDelta != null && benchmarkDelta > 0 ? "+" : ""}
+                      {fmtUsd(benchmarkDelta ?? 0)}
+                    </div>
+                    <div className="text-xs text-muted">
+                      {benchmarkDeltaPct != null ? `${benchmarkDeltaPct.toFixed(1)}% vs histórico` : "—"}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="rounded-xl border border-dashed border-white/15 bg-white/5 p-4 text-sm text-white/70">
+                  Aún no hay historial suficiente para benchmark. Necesitás al menos 3 cotizaciones previas.
+                </div>
+              )}
+            </CardContent>
+          </Card>
+
+          {quote?.id ? <ExpertChannel quoteId={quote.id} canComment={canComment} /> : null}
         </div>
 
         <div className="space-y-6 lg:col-span-4">
-          <Card className="border-primary/30 bg-white/5 lg:sticky lg:top-24">
+          <Card className="border-primary/30 lg:sticky lg:top-24">
             <CardHeader
               eyebrow="Siguiente paso"
               title="Validar con especialista"
               icon="handshake"
-              right={<Badge tone="gold" icon="auto_awesome">Premium</Badge>}
+              right={<Badge tone="primary" icon="auto_awesome">Premium</Badge>}
             />
             <CardContent>
-              <div className="rounded-xl border border-white/10 bg-black/20 p-4 text-xs leading-relaxed text-muted">
+              <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-xs leading-relaxed text-muted shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                 Este reporte es <span className="font-bold text-white/80">orientativo</span>. Si querés operar,
                 la consultoría paga valida clasificación, requisitos y riesgos.
               </div>
               <div className="mt-4 grid gap-3">
-                <ButtonLink href="/chat" variant="gold" className="w-full py-3">
+                <ButtonLink href="/chat" variant="secondary" className="w-full py-3">
                   Hablar con asesor
-                  <span className="material-symbols-outlined text-[18px]">chat_bubble</span>
+                  <Icon name="chat_bubble" size={18} className="text-white/90" />
                 </ButtonLink>
                 <ButtonLink href="/chat" variant="primary" className="w-full py-3">
                   Agendar consultoría
-                  <span className="material-symbols-outlined text-[18px]">event</span>
+                  <Icon name="calendar_today" size={18} className="text-white/90" />
                 </ButtonLink>
               </div>
+              {quote?.id ? (
+                <div className="mt-4">
+                  <DecisionActions quoteId={quote.id} canValidate={canValidate} />
+                </div>
+              ) : null}
               <div className="mt-4 flex gap-3 rounded-lg border border-dashed border-white/10 bg-white/5 p-4">
-                <span className="material-symbols-outlined text-lg text-white/60">info</span>
+                <Icon name="info" size={18} className="text-white/60" />
                 <p className="text-[11px] italic leading-relaxed text-muted">
                   Un error en clasificación o requisitos puede generar sobrecostos, demoras o bloqueos.
                 </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader eyebrow="Trust & Compliance" title="Trazabilidad y cumplimiento" icon="verified_user" />
+            <CardContent>
+              <div className="space-y-2">
+                {auditRows.length ? (
+                  auditRows.map((row) => (
+                    <div key={row.id} className="rounded-lg border border-white/10 bg-white/5 p-3">
+                      <div className="flex items-center justify-between gap-2 text-[11px] text-white/60">
+                        <span>{row.action}</span>
+                        <span>{new Date(row.createdAt).toLocaleString("es-AR")}</span>
+                      </div>
+                      <div className="mt-1 text-xs text-white/75">
+                        actor: {row.actorRole ?? "system"}
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <div className="rounded-lg border border-dashed border-white/15 bg-white/5 p-3 text-xs text-white/70">
+                    Sin eventos de auditoría todavía para esta cotización.
+                  </div>
+                )}
+              </div>
+              <div className="mt-3 text-[11px] text-muted">
+                Disclaimer técnico: los cálculos son orientativos hasta validación documental y normativa final.
               </div>
             </CardContent>
           </Card>
@@ -434,7 +579,7 @@ export default async function ReporteCotizacionPage({
           <ButtonLink href="/chat" variant="primary" className="flex-1 py-3">
             Agendar
           </ButtonLink>
-          <ButtonLink href="/chat" variant="gold" className="flex-1 py-3">
+          <ButtonLink href="/chat" variant="secondary" className="flex-1 py-3">
             Asesor
           </ButtonLink>
         </div>

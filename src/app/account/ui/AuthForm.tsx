@@ -43,11 +43,13 @@ export default function AuthForm({
   }
 
   return (
-    <div className="rounded-xl border border-border-dark bg-card-dark p-8 shadow-2xl">
-      <div className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">
+    <div className="glass-panel rounded-2xl p-8 shadow-[0_28px_90px_-60px_rgba(124,58,237,0.65)]">
+      <div className="text-[10px] font-black uppercase tracking-[0.22em] text-white/70">
         E‑COMEX Account
       </div>
-      <div className="mt-2 text-2xl font-black tracking-tight">{title}</div>
+      <div className="mt-2 text-2xl font-black tracking-tight">
+        {title}
+      </div>
       <p className="mt-2 text-sm leading-7 text-muted">
         La cuenta es opcional. La usamos para historial y seguimiento después de
         cotizar.
@@ -58,7 +60,7 @@ export default function AuthForm({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="email@empresa.com"
-          className="w-full rounded-lg border border-border-dark bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-muted/60 focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
+          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] focus:border-primary/40 focus:ring-2 focus:ring-primary/20"
           autoComplete="email"
         />
         <input
@@ -66,11 +68,11 @@ export default function AuthForm({
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Contraseña"
           type="password"
-          className="w-full rounded-lg border border-border-dark bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-muted/60 focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
+          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] focus:border-primary/40 focus:ring-2 focus:ring-primary/20"
           autoComplete={endpoint === "/api/auth/register" ? "new-password" : "current-password"}
         />
         {error ? (
-          <div className="rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/85">
+          <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/85 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
             {error}
           </div>
         ) : null}
@@ -81,20 +83,20 @@ export default function AuthForm({
           type="button"
           disabled={pending}
           onClick={() => void submit()}
-          className="inline-flex h-11 flex-1 items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-transform active:scale-95 disabled:opacity-60"
+          className="inline-flex h-11 flex-1 items-center justify-center rounded-xl bg-primary px-6 text-sm font-extrabold tracking-tight text-white shadow-[0_18px_60px_-40px_rgba(124,58,237,0.75)] transition-all active:scale-[0.98] active:-translate-y-[1px] disabled:opacity-60"
         >
           {submitLabel}
         </button>
         <Link
           href={alternateHref}
-          className="inline-flex h-11 flex-1 items-center justify-center rounded-lg border border-border-dark bg-white/5 px-6 text-sm font-bold text-white transition-colors hover:bg-white/10"
+          className="inline-flex h-11 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-6 text-sm font-extrabold tracking-tight text-white transition-colors hover:bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
         >
           {alternateLabel}
         </Link>
       </div>
 
       <div className="mt-4 text-xs text-muted">
-        Volver al chat:{" "}
+        Volver al análisis:{" "}
         <Link href="/chat" className="text-white hover:underline">
           /chat
         </Link>

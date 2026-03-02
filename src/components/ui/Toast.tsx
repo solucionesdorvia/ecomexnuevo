@@ -2,8 +2,9 @@
 
 import { createContext, useCallback, useContext, useMemo, useState } from "react";
 import { cn } from "./cn";
+import { Icon } from "./Icon";
 
-type ToastTone = "muted" | "success" | "gold" | "danger";
+type ToastTone = "muted" | "success" | "danger";
 type ToastItem = {
   id: string;
   title: string;
@@ -64,8 +65,6 @@ function ToastViewport({
             "pointer-events-auto rounded-xl border bg-background-deeper/90 p-4 shadow-2xl backdrop-blur-xl",
             t.tone === "success"
               ? "border-emerald-400/20"
-              : t.tone === "gold"
-                ? "border-gold/30"
                 : t.tone === "danger"
                   ? "border-red-400/30"
                   : "border-white/10"
@@ -88,7 +87,7 @@ function ToastViewport({
               className="rounded-lg border border-white/10 bg-white/5 p-2 text-muted hover:bg-white/10"
               aria-label="Cerrar"
             >
-              <span className="material-symbols-outlined text-[18px]">close</span>
+              <Icon name="close" size={18} className="text-muted" />
             </button>
           </div>
         </div>

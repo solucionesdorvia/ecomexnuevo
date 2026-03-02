@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SealVerified } from "@/components/ui/SealVerified";
 import { AppShell } from "@/components/shell/AppShell";
 import { TendenciasClient, type Signal } from "@/app/tendencias/ui/TendenciasClient";
+import { Icon } from "@/components/ui/Icon";
 
 export const runtime = "nodejs";
 
@@ -89,7 +90,7 @@ export default function TendenciasPage() {
           <SealVerified />
           <ButtonLink href="/chat" variant="primary">
             Cotizar
-            <span className="material-symbols-outlined text-[18px]">bolt</span>
+            <Icon name="bolt" size={18} className="text-white/90" />
           </ButtonLink>
         </div>
       }

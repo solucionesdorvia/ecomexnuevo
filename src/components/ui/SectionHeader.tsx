@@ -1,4 +1,5 @@
 import { cn } from "./cn";
+import { Icon } from "./Icon";
 
 export function SectionHeader({
   eyebrow,
@@ -18,7 +19,7 @@ export function SectionHeader({
   return (
     <div className={cn("flex flex-col gap-2", className)}>
       {eyebrow ? (
-        <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
+        <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[rgba(196,214,242,0.64)]">
           {eyebrow}
         </div>
       ) : null}
@@ -26,14 +27,14 @@ export function SectionHeader({
         <div className="min-w-0">
           <div className="flex items-center gap-3">
             {icon ? (
-              <span className="material-symbols-outlined text-primary">{icon}</span>
+              <Icon name={icon} size={20} className="text-[#a8cbff]" />
             ) : null}
-            <h1 className="truncate text-3xl font-black tracking-tight md:text-4xl">
+            <h1 className="truncate text-3xl font-semibold tracking-tight text-[#edf4ff] md:text-4xl">
               {title}
             </h1>
           </div>
           {subtitle ? (
-            <p className="mt-2 max-w-3xl text-sm leading-7 text-muted md:text-base">
+            <p className="mt-2 max-w-3xl text-sm leading-7 text-[rgba(201,218,244,0.66)] md:text-base">
               {subtitle}
             </p>
           ) : null}

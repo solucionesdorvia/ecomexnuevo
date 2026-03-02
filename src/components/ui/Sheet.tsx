@@ -27,7 +27,7 @@ export function Sheet({
     <div className="fixed inset-0 z-50">
       <button
         type="button"
-        className="absolute inset-0 bg-black/60"
+        className="absolute inset-0 bg-black/60 backdrop-blur-[3px]"
         aria-label="Cerrar"
         onClick={() => onOpenChange(false)}
       />
@@ -57,7 +57,8 @@ export function SheetContent({
   return (
     <div
       className={cn(
-        "absolute border border-white/10 bg-background-deeper/90 shadow-2xl backdrop-blur-xl",
+        "panel-strong absolute overflow-hidden border border-subtle shadow-[0_40px_120px_-54px_rgba(42,26,116,0.88)] before:pointer-events-none before:absolute before:inset-y-0 before:w-px before:bg-[color:color-mix(in_oklab,var(--accent)_50%,transparent)]",
+        side === "left" ? "before:right-0" : side === "right" ? "before:left-0" : "before:left-0",
         pos,
         shape,
         className

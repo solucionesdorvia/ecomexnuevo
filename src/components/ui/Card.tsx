@@ -1,4 +1,5 @@
 import { cn } from "./cn";
+import { Icon } from "./Icon";
 
 export function Card({
   children,
@@ -12,10 +13,10 @@ export function Card({
   return (
     <div
       className={cn(
-        "rounded-xl border shadow-xl",
+        "rounded-[20px] border shadow-2xl",
         variant === "glass"
-          ? "glass-panel border-white/10"
-          : "border-border-dark bg-card-dark",
+          ? "panel"
+          : "border-subtle bg-[var(--surface2)]",
         className
       )}
     >
@@ -38,19 +39,19 @@ export function CardHeader({
   className?: string;
 }) {
   return (
-    <div className={cn("flex items-start justify-between gap-4 p-5", className)}>
+    <div className={cn("flex items-start justify-between gap-4 p-6", className)}>
       <div className="min-w-0">
         {eyebrow ? (
-          <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
+          <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-muted">
             {eyebrow}
           </div>
         ) : null}
         {title ? (
           <div className="mt-1 flex items-center gap-2">
             {icon ? (
-              <span className="material-symbols-outlined text-primary">{icon}</span>
+              <Icon name={icon} size={18} className="text-primary" />
             ) : null}
-            <div className="truncate text-sm font-extrabold tracking-tight text-white">
+            <div className="truncate text-sm font-bold tracking-tight text-strong">
               {title}
             </div>
           </div>
@@ -68,6 +69,6 @@ export function CardContent({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <div className={cn("px-5 pb-5", className)}>{children}</div>;
+  return <div className={cn("px-6 pb-6", className)}>{children}</div>;
 }
 

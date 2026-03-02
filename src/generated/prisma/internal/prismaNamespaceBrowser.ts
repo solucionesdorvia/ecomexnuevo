@@ -54,7 +54,9 @@ export const ModelName = {
   Quote: 'Quote',
   Lead: 'Lead',
   User: 'User',
-  OperatorBudget: 'OperatorBudget'
+  OperatorBudget: 'OperatorBudget',
+  QuoteComment: 'QuoteComment',
+  AuditLog: 'AuditLog'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -110,7 +112,8 @@ export const UserScalarFieldEnum = {
   createdAt: 'createdAt',
   email: 'email',
   passwordHash: 'passwordHash',
-  role: 'role'
+  role: 'role',
+  onboardingSeenAt: 'onboardingSeenAt'
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -130,6 +133,35 @@ export const OperatorBudgetScalarFieldEnum = {
 } as const
 
 export type OperatorBudgetScalarFieldEnum = (typeof OperatorBudgetScalarFieldEnum)[keyof typeof OperatorBudgetScalarFieldEnum]
+
+
+export const QuoteCommentScalarFieldEnum = {
+  id: 'id',
+  createdAt: 'createdAt',
+  quoteId: 'quoteId',
+  authorUserId: 'authorUserId',
+  authorRole: 'authorRole',
+  authorLabel: 'authorLabel',
+  message: 'message'
+} as const
+
+export type QuoteCommentScalarFieldEnum = (typeof QuoteCommentScalarFieldEnum)[keyof typeof QuoteCommentScalarFieldEnum]
+
+
+export const AuditLogScalarFieldEnum = {
+  id: 'id',
+  createdAt: 'createdAt',
+  entityType: 'entityType',
+  entityId: 'entityId',
+  action: 'action',
+  payload: 'payload',
+  actorUserId: 'actorUserId',
+  actorRole: 'actorRole',
+  quoteId: 'quoteId',
+  operatorBudgetId: 'operatorBudgetId'
+} as const
+
+export type AuditLogScalarFieldEnum = (typeof AuditLogScalarFieldEnum)[keyof typeof AuditLogScalarFieldEnum]
 
 
 export const SortOrder = {

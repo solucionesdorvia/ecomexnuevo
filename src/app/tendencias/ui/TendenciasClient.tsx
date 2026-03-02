@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader } from "@/components/ui/Card";
 import { cn } from "@/components/ui/cn";
+import { Icon } from "@/components/ui/Icon";
 
 export type Signal = {
   id: string;
@@ -38,17 +39,19 @@ function Chip({
       onClick={onClick}
       className={cn(
         "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] transition-colors",
-        active ? "border-primary/30 bg-primary/15 text-primary" : "border-white/10 bg-white/5 text-muted"
+        active
+          ? "border-primary/30 bg-[color:color-mix(in_oklab,var(--primary)_18%,transparent)] text-primary"
+          : "border-subtle bg-[var(--surface)] text-muted"
       )}
     >
-      {icon ? <span className="material-symbols-outlined text-[16px]">{icon}</span> : null}
+      {icon ? <Icon name={icon} size={16} className="text-current" /> : null}
       {children}
     </button>
   );
 }
 
 function impactTone(impact: Signal["impact"]) {
-  if (impact === "alto") return "gold" as const;
+  if (impact === "alto") return "primary" as const;
   if (impact === "medio") return "primary" as const;
   return "muted" as const;
 }
@@ -60,7 +63,7 @@ function impactLabel(area: Signal["impactArea"]) {
 }
 
 function recommendationBadge(rec: Signal["recommendation"]) {
-  if (rec === "recomendado") return { label: "Recomendado", tone: "gold" as const, icon: "auto_awesome" };
+  if (rec === "recomendado") return { label: "Recomendado", tone: "primary" as const, icon: "auto_awesome" };
   if (rec === "alta") return { label: "Alta señal", tone: "primary" as const, icon: "bolt" };
   return { label: "Rotación", tone: "muted" as const, icon: "cycle" };
 }
@@ -111,7 +114,7 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
   return (
     <div className="mt-6 grid grid-cols-12 gap-8">
       <div className="col-span-12 space-y-8 lg:col-span-8">
-        <Card className="border-white/10 bg-white/5">
+        <Card>
           <CardHeader
             eyebrow="Top señales"
             title="Oportunidades"
@@ -132,7 +135,7 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
                   value={q}
                   onChange={(e) => setQ(e.target.value)}
                   placeholder="Producto, rubro, palabra clave…"
-                  className="mt-2 w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-muted/60 focus:border-primary/50"
+                  className="mt-2 w-full rounded-xl border border-subtle bg-[var(--surface)] px-4 py-3 text-sm text-strong outline-none placeholder:text-muted/70 focus:border-[color:color-mix(in_oklab,var(--primary)_42%,white_8%)] focus:ring-2 focus:ring-[var(--ring)]"
                 />
                 <div className="mt-3 flex flex-wrap gap-2">
                   <Chip active={impact === "all"} onClick={() => setImpact("all")} icon="filter_alt">
@@ -171,11 +174,11 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
                 filtered.map((r) => {
                   const rec = recommendationBadge(r.recommendation);
                   return (
-                    <div key={r.id} className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                    <div key={r.id} className="panel rounded-2xl p-5">
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex min-w-0 items-start gap-3">
-                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black/20">
-                            <span className="material-symbols-outlined text-primary">{r.icon}</span>
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+                            <Icon name={r.icon} size={18} className="text-white/85" />
                           </div>
                           <div className="min-w-0">
                             <div className="truncate text-sm font-extrabold text-white">
@@ -200,12 +203,12 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
                         </div>
                         <ButtonLink href="/chat" variant="secondary">
                           Cotizar
-                          <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                          <Icon name="arrow_forward" size={18} className="text-white/90" />
                         </ButtonLink>
                       </div>
 
                       <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
-                        <div className="rounded-xl border border-white/10 bg-black/20 p-3">
+                        <div className="rounded-xl border border-white/10 bg-white/5 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                           <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
                             Impacto
                           </div>
@@ -217,7 +220,7 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
                                 : "Puede exigir permisos/intervenciones. Mejor validarlo antes de pagar al proveedor."}
                           </div>
                         </div>
-                        <div className="rounded-xl border border-white/10 bg-black/20 p-3">
+                        <div className="rounded-xl border border-white/10 bg-white/5 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                           <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
                             Razón IA
                           </div>
@@ -228,7 +231,7 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
                   );
                 })
               ) : (
-                <div className="rounded-2xl border border-white/10 bg-black/20 p-6 text-sm text-muted">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-sm text-muted shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                   No encontramos señales con esos filtros/preferencias.
                 </div>
               )}
@@ -238,7 +241,7 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
       </div>
 
       <div className="col-span-12 space-y-8 lg:col-span-4">
-        <Card className="border-white/10 bg-white/5">
+        <Card>
           <CardHeader eyebrow="Personalización" title="Preferencias de rubro" icon="tune" />
           <CardContent>
             <div className="text-xs text-muted">
@@ -258,7 +261,9 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
                     }
                     className={cn(
                       "rounded-full border px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] transition-colors",
-                      active ? "border-gold/30 bg-gold/10 text-gold" : "border-white/10 bg-black/20 text-muted"
+                      active
+                        ? "border-primary/25 bg-primary/10 text-white"
+                        : "border-white/10 bg-white/5 text-muted"
                     )}
                   >
                     {r}
@@ -268,7 +273,7 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
               <button
                 type="button"
                 onClick={() => setRubros([])}
-                className="rounded-full border border-white/10 bg-black/20 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-white/80 hover:border-white/20 hover:text-white"
+                className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-white/80 hover:border-white/20 hover:text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
               >
                 Limpiar
               </button>
@@ -276,10 +281,10 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
           </CardContent>
         </Card>
 
-        <Card className="border-white/10 bg-white/5">
+        <Card>
           <CardHeader eyebrow="Señal premium" title="Ventanilla de oportunidad" icon="auto_awesome" />
           <CardContent>
-            <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
               <div className="text-xs leading-relaxed text-muted">
                 Detectamos una baja temporal del <span className="font-bold text-white">12%</span>{" "}
                 en el flete marítimo para el corredor Ningbo‑Buenos Aires entre Nov 15 y Dec 05
@@ -289,11 +294,11 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
             <div className="mt-4 grid gap-3">
               <ButtonLink href="/chat" variant="primary" className="w-full py-3">
                 Cotizar con esta señal
-                <span className="material-symbols-outlined text-[18px]">bolt</span>
+                <Icon name="bolt" size={18} className="text-white/90" />
               </ButtonLink>
               <ButtonLink href="/cotizaciones" variant="secondary" className="w-full py-3">
                 Ver biblioteca
-                <span className="material-symbols-outlined text-[18px]">inventory_2</span>
+                <Icon name="inventory_2" size={18} className="text-white/90" />
               </ButtonLink>
             </div>
           </CardContent>

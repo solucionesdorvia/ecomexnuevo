@@ -17,7 +17,7 @@ export function TimelineStep({
     status === "done"
       ? "bg-emerald-500"
       : status === "active"
-        ? "bg-primary shadow-[0_0_10px_rgba(15,73,189,0.55)]"
+        ? "bg-primary ring-2 ring-white/10"
         : "bg-white/20";
   return (
     <div className={cn("flex items-start gap-3", className)}>

@@ -2,15 +2,15 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { Badge } from "@/components/ui/Badge";
-import { ButtonLink } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader } from "@/components/ui/Card";
-import { Sheet, SheetContent } from "@/components/ui/Sheet";
+import { CompareQuotes } from "@/components/analysis/CompareQuotes";
 import { cn } from "@/components/ui/cn";
+import { Icon } from "@/components/ui/Icon";
 
 export type QuoteRow = {
   id: string;
-  createdAt: string; // serialized
+  createdAt: string;
+  status: "draft" | "verified" | "sent";
+  rubro: string | null;
   mode: string;
   stage: string;
   userText: string;
@@ -21,91 +21,63 @@ export type QuoteRow = {
   origin: string | null;
   shippingProfile: string | null;
   quality: number | null;
-  breakdown?: {
-    cifMinUsd: number;
-    cifMaxUsd: number;
-    impuestosMinUsd: number;
-    impuestosMaxUsd: number;
-    gestionMinUsd: number;
-    gestionMaxUsd: number;
-  } | null;
 };
 
-function fmtUsd(n: number) {
-  return n.toLocaleString("en-US", { style: "currency", currency: "USD" });
+function usd(n: number | null) {
+  if (n == null) return "—";
+  return n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 }
 
-function fmtDate(iso: string) {
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString("es-AR", { year: "numeric", month: "short", day: "2-digit" });
-}
-
-function stageBucket(stage: string) {
-  const s = String(stage || "").toLowerCase();
-  if (s.startsWith("awaiting_")) return "draft";
-  if (s === "quoted") return "quoted";
-  if (s === "refined") return "refined";
-  if (s === "decision_requested") return "decision";
-  if (s === "lead_captured") return "lead";
-  return "other";
-}
-
-function toneForBucket(bucket: ReturnType<typeof stageBucket>) {
-  if (bucket === "refined") return "gold" as const;
-  if (bucket === "quoted") return "primary" as const;
-  if (bucket === "draft") return "muted" as const;
-  if (bucket === "decision") return "gold" as const;
-  if (bucket === "lead") return "success" as const;
-  return "muted" as const;
-}
-
-function Chip({
-  active,
-  onClick,
-  icon,
-  children,
-}: {
-  active?: boolean;
-  onClick: () => void;
-  icon?: string;
-  children: React.ReactNode;
-}) {
+function StatusPill({ status }: { status: QuoteRow["status"] }) {
+  if (status === "verified") {
+    return (
+      <span className="inline-flex items-center rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-300">
+        Verified
+      </span>
+    );
+  }
+  if (status === "sent") {
+    return (
+      <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
+        Sent
+      </span>
+    );
+  }
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={cn(
-        "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] transition-colors",
-        active ? "border-primary/30 bg-primary/15 text-primary" : "border-white/10 bg-white/5 text-muted"
-      )}
-    >
-      {icon ? <span className="material-symbols-outlined text-[16px]">{icon}</span> : null}
-      {children}
-    </button>
+    <span className="inline-flex items-center rounded-full border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 text-xs font-medium text-amber-300">
+      Draft
+    </span>
   );
 }
 
 export function CotizacionesClient({ quotes }: { quotes: QuoteRow[] }) {
-  const [q, setQ] = useState("");
-  const [bucket, setBucket] = useState<
-    "all" | "draft" | "quoted" | "refined" | "decision" | "lead"
-  >("all");
-  const [mode, setMode] = useState<"all" | "quote" | "budget">("all");
+  const [query, setQuery] = useState("");
+  const [status, setStatus] = useState<"all" | QuoteRow["status"]>("all");
+  const [rubro, setRubro] = useState<string>("all");
+  const [range, setRange] = useState<"all" | "7" | "30" | "90">("all");
   const [selected, setSelected] = useState<string[]>([]);
-  const [compareOpen, setCompareOpen] = useState(false);
+
+  const rubros = useMemo(
+    () => ["all", ...new Set(quotes.map((q) => q.rubro).filter(Boolean) as string[])],
+    [quotes]
+  );
 
   const filtered = useMemo(() => {
-    const query = q.trim().toLowerCase();
-    return (quotes ?? []).filter((row) => {
-      if (mode !== "all" && row.mode !== mode) return false;
-      const b = stageBucket(row.stage);
-      if (bucket !== "all" && b !== bucket) return false;
-      if (!query) return true;
-      const hay = `${row.productTitle} ${row.userText} ${(row.ncm || "")}`.toLowerCase();
-      return hay.includes(query);
+    return quotes.filter((row) => {
+      if (status !== "all" && row.status !== status) return false;
+      if (rubro !== "all" && row.rubro !== rubro) return false;
+      if (range !== "all") {
+        const date = new Date(row.createdAt);
+        const days = Number(range);
+        const threshold = new Date();
+        threshold.setDate(threshold.getDate() - days);
+        if (date < threshold) return false;
+      }
+      if (!query.trim()) return true;
+      const hay = `${row.productTitle} ${row.userText} ${row.ncm ?? ""}`.toLowerCase();
+      return hay.includes(query.trim().toLowerCase());
     });
-  }, [quotes, q, bucket, mode]);
+  }, [quotes, status, rubro, range, query]);
 
   const selectedRows = useMemo(
     () => (quotes ?? []).filter((r) => selected.includes(r.id)),
@@ -122,359 +94,175 @@ export function CotizacionesClient({ quotes }: { quotes: QuoteRow[] }) {
   };
 
   return (
-    <div>
-      <div className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_auto] lg:items-end">
-        <div>
-          <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
-            Buscar
-          </div>
-          <input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="Producto, link, NCM…"
-            className="mt-2 w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none placeholder:text-muted/60 focus:border-primary/50"
-          />
-          <div className="mt-3 flex flex-wrap gap-2">
-            <Chip active={bucket === "all"} onClick={() => setBucket("all")} icon="apps">
-              Todas
-            </Chip>
-            <Chip active={bucket === "draft"} onClick={() => setBucket("draft")} icon="edit">
-              En borrador
-            </Chip>
-            <Chip active={bucket === "quoted"} onClick={() => setBucket("quoted")} icon="receipt_long">
-              Cotizadas
-            </Chip>
-            <Chip active={bucket === "refined"} onClick={() => setBucket("refined")} icon="verified_user">
-              Refinadas
-            </Chip>
-            <Chip active={bucket === "decision"} onClick={() => setBucket("decision")} icon="handshake">
-              Decisión
-            </Chip>
-            <Chip active={bucket === "lead"} onClick={() => setBucket("lead")} icon="person_check">
-              Lead capturado
-            </Chip>
-          </div>
+    <div className="space-y-10">
+      <div className="flex flex-wrap items-end justify-between gap-4">
+        <div className="flex min-w-0 flex-col gap-1">
+          <h2 className="text-4xl font-extrabold tracking-tight text-strong">Mis Cotizaciones</h2>
+          <p className="text-base text-muted">
+            Gestiona, visualiza y compara tus operaciones de comercio exterior activas.
+          </p>
+        </div>
+        <Link
+          href="/cotizar"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-[color:color-mix(in_oklab,var(--primary)_58%,white_12%)] bg-[linear-gradient(180deg,color-mix(in_oklab,var(--primary)_84%,white_8%),var(--primary2))] px-6 text-sm font-bold text-strong shadow-[var(--shadowGlow)] transition-all hover:brightness-110 active:translate-y-[1px]"
+        >
+          <span className="material-symbols-outlined text-lg">add</span>
+          Nueva Cotización
+        </Link>
+      </div>
+
+      <div className="flex flex-wrap gap-3">
+        <div className="flex items-center gap-2 rounded-xl border border-subtle bg-[var(--surface)] px-4 py-2 text-muted hover:bg-[var(--surface2)]">
+          <span className="text-sm font-medium">
+            Estado: {status === "all" ? "Todos" : status === "draft" ? "Draft" : status === "verified" ? "Verified" : "Sent"}
+          </span>
+          <button
+            type="button"
+            className="rounded-md p-1 text-muted hover:bg-[var(--surface2)] hover:text-strong"
+            onClick={() => setStatus((prev) => (prev === "all" ? "draft" : prev === "draft" ? "verified" : prev === "verified" ? "sent" : "all"))}
+            aria-label="Cambiar estado"
+          >
+            <Icon name="expand_more" size={18} className="text-current" />
+          </button>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2 lg:justify-end">
-          <Chip active={mode === "all"} onClick={() => setMode("all")} icon="tune">
-            Todo
-          </Chip>
-          <Chip active={mode === "quote"} onClick={() => setMode("quote")} icon="calculate">
-            Cotización
-          </Chip>
-          <Chip active={mode === "budget"} onClick={() => setMode("budget")} icon="savings">
-            Presupuesto
-          </Chip>
+        <div className="flex items-center gap-2 rounded-xl border border-subtle bg-[var(--surface)] px-4 py-2 text-muted hover:bg-[var(--surface2)]">
+          <span className="text-sm font-medium">
+            Fecha: {range === "all" ? "Todo" : range === "7" ? "Últimos 7 días" : range === "30" ? "Últimos 30 días" : "Últimos 90 días"}
+          </span>
+          <button
+            type="button"
+            className="rounded-md p-1 text-muted hover:bg-[var(--surface2)] hover:text-strong"
+            onClick={() => setRange((prev) => (prev === "all" ? "30" : prev === "30" ? "7" : prev === "7" ? "90" : "all"))}
+            aria-label="Cambiar rango"
+          >
+            <Icon name="calendar_today" size={18} className="text-current" />
+          </button>
+        </div>
+
+        <div className="flex items-center gap-2 rounded-xl border border-subtle bg-[var(--surface)] px-4 py-2 text-muted hover:bg-[var(--surface2)]">
+          <span className="text-sm font-medium">
+            Categoría: {rubro === "all" ? "Todas" : rubro}
+          </span>
+          <button
+            type="button"
+            className="rounded-md p-1 text-muted hover:bg-[var(--surface2)] hover:text-strong"
+            onClick={() => {
+              const idx = rubros.indexOf(rubro);
+              const next = idx <= 0 ? (rubros[1] ?? "all") : (rubros[idx + 1] ?? "all");
+              setRubro(next);
+            }}
+            aria-label="Cambiar categoría"
+          >
+            <Icon name="category" size={18} className="text-current" />
+          </button>
+        </div>
+
+        <div className="ml-auto flex items-center gap-2 rounded-xl border border-subtle bg-[var(--surface)] px-4 py-2 text-muted hover:bg-[var(--surface2)]">
+          <Icon name="filter_list" size={18} className="text-white/70" />
+          <span className="text-sm font-medium">Filtros Avanzados</span>
         </div>
       </div>
 
-      <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {filtered.length ? (
-          filtered.map((row) => {
-            const total =
-              row.totalMinUsd != null && row.totalMaxUsd != null
-                ? `${fmtUsd(row.totalMinUsd)} – ${fmtUsd(row.totalMaxUsd)}`
-                : "—";
-            const b = stageBucket(row.stage);
-            const tone = toneForBucket(b);
-            const isSelected = selected.includes(row.id);
-            return (
-              <Card key={row.id} className="border-white/10 bg-white/5">
-                <CardHeader
-                  eyebrow={`Manifiesto • ${fmtDate(row.createdAt)}`}
-                  title={row.productTitle || "Cotización"}
-                  icon="inventory_2"
-                  right={
-                    <div className="flex items-center gap-2">
-                      <button
-                        type="button"
-                        onClick={() => toggle(row.id)}
-                        aria-label={isSelected ? "Quitar de comparar" : "Agregar a comparar"}
-                        className={cn(
-                          "flex h-9 w-9 items-center justify-center rounded-lg border transition-colors",
-                          isSelected
-                            ? "border-gold/30 bg-gold/10 text-gold"
-                            : "border-white/10 bg-black/20 text-white/60 hover:border-white/20 hover:text-white"
-                        )}
-                      >
-                        <span className="material-symbols-outlined text-[18px]">
-                          {isSelected ? "check_box" : "check_box_outline_blank"}
-                        </span>
-                      </button>
-                      <Badge tone={tone} icon="flag">
-                        {row.stage}
-                      </Badge>
-                    </div>
-                  }
-                />
-                <CardContent>
-                  <div className="flex items-end justify-between gap-3">
-                    <div className="min-w-0">
-                      <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
-                        Total estimado
-                      </div>
-                      <div className="mt-2 break-words text-lg font-black tracking-tight text-gold">
-                        {total}
-                      </div>
-                      <div className="mt-2 flex flex-wrap gap-2">
-                        <Badge tone="muted" icon="psychology">
-                          {row.mode === "budget" ? "Presupuesto" : "Cotización"}
-                        </Badge>
-                        <Badge tone="muted" icon="directions_boat">
-                          Marítimo
-                        </Badge>
-                        {row.ncm ? (
-                          <Badge tone="muted" icon="tag">
-                            NCM {row.ncm}
-                          </Badge>
-                        ) : null}
-                        {typeof row.quality === "number" ? (
-                          <Badge tone={row.quality >= 80 ? "success" : "muted"} icon="speed">
-                            Calidad {Math.round(row.quality)}%
-                          </Badge>
-                        ) : null}
-                      </div>
-                    </div>
-
-                    <ButtonLink
-                      href={`/cotizaciones/reporte?quote=${encodeURIComponent(row.id)}`}
-                      variant="secondary"
+      <div className="panel-strong overflow-hidden rounded-2xl shadow-2xl">
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-left">
+            <thead>
+              <tr className="border-b border-subtle bg-[var(--surface)]">
+                <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-muted">ID Cotización</th>
+                <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-muted">Producto / Mercancía</th>
+                <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-muted">Origen</th>
+                <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-muted">Estado</th>
+                <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-muted">Monto total</th>
+                <th className="px-6 py-4 text-right text-xs font-semibold uppercase tracking-wider text-muted">Acciones</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[var(--border)]">
+              {filtered.length ? (
+                filtered.map((row) => {
+                  const isSelected = selected.includes(row.id);
+                  const total = row.totalMaxUsd ?? row.totalMinUsd;
+                  return (
+                    <tr
+                      key={row.id}
+                      className={cn(
+                        "transition-colors",
+                        isSelected ? "bg-[color:color-mix(in_oklab,var(--primary)_16%,transparent)]" : "hover:bg-[color:color-mix(in_oklab,var(--surface2)_70%,transparent)]"
+                      )}
                     >
-                      Abrir reporte
-                      <span className="material-symbols-outlined text-[18px]">open_in_new</span>
-                    </ButtonLink>
-                  </div>
-
-                  <div className="mt-4 rounded-lg border border-white/10 bg-black/20 p-3 text-xs leading-relaxed text-muted">
-                    {row.breakdown ? (
-                      <div className="mb-2 grid grid-cols-3 gap-2">
-                        <div className="rounded-lg border border-white/10 bg-white/5 p-2">
-                          <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
-                            CIF
-                          </div>
-                          <div className="mt-1 text-[11px] font-extrabold text-white">
-                            {fmtUsd(row.breakdown.cifMinUsd)}–{fmtUsd(row.breakdown.cifMaxUsd)}
-                          </div>
+                      <td className="px-6 py-5 font-mono text-sm text-strong">
+                        #{row.id.slice(0, 6)}
+                      </td>
+                      <td className="px-6 py-5 text-sm text-strong">
+                        {row.productTitle || "Cotización"}
+                        <div className="mt-1 text-xs text-muted">
+                          {row.rubro || "General"} · {row.ncm || "NCM pendiente"}
                         </div>
-                        <div className="rounded-lg border border-white/10 bg-white/5 p-2">
-                          <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
-                            Impuestos
-                          </div>
-                          <div className="mt-1 text-[11px] font-extrabold text-white">
-                            {fmtUsd(row.breakdown.impuestosMinUsd)}–
-                            {fmtUsd(row.breakdown.impuestosMaxUsd)}
-                          </div>
-                        </div>
-                        <div className="rounded-lg border border-white/10 bg-white/5 p-2">
-                          <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
-                            Gestión
-                          </div>
-                          <div className="mt-1 text-[11px] font-extrabold text-white">
-                            {fmtUsd(row.breakdown.gestionMinUsd)}–
-                            {fmtUsd(row.breakdown.gestionMaxUsd)}
-                          </div>
-                        </div>
-                      </div>
-                    ) : null}
-                    {row.origin ? (
-                      <div>
-                        <span className="font-bold text-white/80">Origen:</span> {row.origin}
-                      </div>
-                    ) : null}
-                    {row.shippingProfile ? (
-                      <div className="mt-1">
-                        <span className="font-bold text-white/80">Perfil de carga:</span>{" "}
-                        {row.shippingProfile}
-                      </div>
-                    ) : null}
-                    {!row.origin && !row.shippingProfile ? (
-                      <div>
-                        Seleccioná 2–3 manifiestos para comparar supuestos, totales y calidad de
-                        estimación.
-                      </div>
-                    ) : null}
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })
-        ) : (
-          <div className="md:col-span-2 xl:col-span-3">
-            <Card className="border-white/10 bg-white/5">
-              <div className="p-6 text-sm text-muted">
-                No encontramos resultados con esos filtros.
-              </div>
-            </Card>
-          </div>
-        )}
-      </div>
-
-      {selected.length ? (
-        <div className="pointer-events-none fixed bottom-6 left-0 right-0 z-40">
-          <div className="mx-auto w-full max-w-4xl px-6">
-            <div className="pointer-events-auto glass-panel flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/10 bg-background-deeper/70 p-4 backdrop-blur-xl">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
-                  <span className="material-symbols-outlined text-gold">layers</span>
-                </div>
-                <div>
-                  <div className="text-xs font-extrabold text-white">
-                    Seleccionadas: {selected.length}/3
-                  </div>
-                  <div className="text-xs text-muted">
-                    Compará supuestos, NCM y totales antes de validar.
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={() => setSelected([])}
-                  className="rounded-lg border border-white/10 bg-black/20 px-3 py-2 text-xs font-black uppercase tracking-widest text-white/80 transition-colors hover:border-white/20 hover:text-white"
-                >
-                  Limpiar
-                </button>
-                <button
-                  type="button"
-                  disabled={selected.length < 2}
-                  onClick={() => setCompareOpen(true)}
-                  className="rounded-lg bg-primary px-4 py-2 text-xs font-black uppercase tracking-widest text-white shadow-lg shadow-primary/20 transition-all active:scale-95 disabled:opacity-50"
-                >
-                  Comparar
-                </button>
-              </div>
-            </div>
-          </div>
+                      </td>
+                      <td className="px-6 py-5 text-sm text-muted">
+                        <span className="rounded bg-[var(--surface)] px-2 py-0.5 text-xs text-muted">
+                          {row.origin || "—"}
+                        </span>
+                      </td>
+                      <td className="px-6 py-5">
+                        <StatusPill status={row.status} />
+                      </td>
+                      <td className="px-6 py-5 text-sm font-bold tracking-wide text-[color:var(--color-gold)]">
+                        {usd(total ?? null)}
+                      </td>
+                      <td className="px-6 py-5 text-right">
+                        <button
+                          type="button"
+                          onClick={() => toggle(row.id)}
+                          disabled={!isSelected && selected.length >= 3}
+                          className={cn(
+                            "inline-flex items-center justify-end gap-1 text-sm font-bold transition-colors",
+                            isSelected ? "text-white" : "text-primary hover:text-white"
+                          )}
+                        >
+                          {isSelected ? "Seleccionado" : "Comparar"}
+                          <Icon name="compare_arrows" size={18} className="text-current" />
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })
+              ) : (
+                <tr>
+                  <td colSpan={6} className="px-6 py-10 text-sm text-muted">
+                    No hay cotizaciones para mostrar con estos filtros.
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
         </div>
-      ) : null}
 
-      <Sheet open={compareOpen} onOpenChange={setCompareOpen}>
-        <SheetContent side="right" className="w-[520px]">
-          <div className="flex items-center justify-between gap-3 border-b border-white/10 p-5">
-            <div>
-              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
-                Comparador
-              </div>
-              <div className="mt-1 text-sm font-extrabold tracking-tight text-white">
-                Manifiestos seleccionados
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={() => setCompareOpen(false)}
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-black/20 text-white/70 hover:text-white"
-              aria-label="Cerrar"
-            >
-              <span className="material-symbols-outlined">close</span>
+        <div className="flex items-center justify-between border-t border-subtle bg-[var(--surface)] px-6 py-4">
+          <p className="text-sm text-muted">
+            Mostrando {filtered.length ? `1-${Math.min(filtered.length, 10)}` : "0"} de {filtered.length} cotizaciones
+          </p>
+          <div className="flex items-center gap-1">
+            <button className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-white/55 hover:bg-white/10">
+              <Icon name="chevron_left" size={18} className="text-current" />
+            </button>
+            <button className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white shadow shadow-primary/20">
+              1
+            </button>
+            <button className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-sm font-medium text-white/55 hover:bg-white/10">
+              2
+            </button>
+            <button className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-sm font-medium text-white/55 hover:bg-white/10">
+              3
+            </button>
+            <button className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-white/55 hover:bg-white/10">
+              <Icon name="chevron_right" size={18} className="text-current" />
             </button>
           </div>
+        </div>
+      </div>
 
-          <div className="max-h-[calc(100vh-96px)] overflow-y-auto p-5">
-            {selectedRows.length ? (
-              <div className="space-y-4">
-                {selectedRows.map((r) => {
-                  const total =
-                    r.totalMinUsd != null && r.totalMaxUsd != null
-                      ? `${fmtUsd(r.totalMinUsd)} – ${fmtUsd(r.totalMaxUsd)}`
-                      : "—";
-                  return (
-                    <div key={r.id} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                      <div className="flex items-start justify-between gap-3">
-                        <div className="min-w-0">
-                          <div className="text-xs font-extrabold text-white">{r.productTitle}</div>
-                          <div className="mt-1 text-xs text-muted">{fmtDate(r.createdAt)}</div>
-                          <div className="mt-3 text-sm font-black text-gold">{total}</div>
-                          <div className="mt-3 flex flex-wrap gap-2">
-                            <Badge tone={toneForBucket(stageBucket(r.stage))} icon="flag">
-                              {r.stage}
-                            </Badge>
-                            <Badge tone="muted" icon="directions_boat">
-                              Marítimo
-                            </Badge>
-                            {r.ncm ? (
-                              <Badge tone="muted" icon="tag">
-                                NCM {r.ncm}
-                              </Badge>
-                            ) : null}
-                            {typeof r.quality === "number" ? (
-                              <Badge
-                                tone={r.quality >= 80 ? "success" : "muted"}
-                                icon="speed"
-                              >
-                                Calidad {Math.round(r.quality)}%
-                              </Badge>
-                            ) : null}
-                          </div>
-                          <div className="mt-3 text-xs text-muted">
-                            {r.origin ? (
-                              <div>
-                                <span className="font-bold text-white/80">Origen:</span> {r.origin}
-                              </div>
-                            ) : null}
-                            {r.shippingProfile ? (
-                              <div className="mt-1">
-                                <span className="font-bold text-white/80">Perfil de carga:</span>{" "}
-                                {r.shippingProfile}
-                              </div>
-                            ) : null}
-                            {r.breakdown ? (
-                              <div className="mt-2 grid grid-cols-3 gap-2">
-                                <div className="rounded-lg border border-white/10 bg-black/20 p-2">
-                                  <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
-                                    CIF
-                                  </div>
-                                  <div className="mt-1 text-[11px] font-extrabold text-white">
-                                    {fmtUsd(r.breakdown.cifMinUsd)}–{fmtUsd(r.breakdown.cifMaxUsd)}
-                                  </div>
-                                </div>
-                                <div className="rounded-lg border border-white/10 bg-black/20 p-2">
-                                  <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
-                                    Impuestos
-                                  </div>
-                                  <div className="mt-1 text-[11px] font-extrabold text-white">
-                                    {fmtUsd(r.breakdown.impuestosMinUsd)}–
-                                    {fmtUsd(r.breakdown.impuestosMaxUsd)}
-                                  </div>
-                                </div>
-                                <div className="rounded-lg border border-white/10 bg-black/20 p-2">
-                                  <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
-                                    Gestión
-                                  </div>
-                                  <div className="mt-1 text-[11px] font-extrabold text-white">
-                                    {fmtUsd(r.breakdown.gestionMinUsd)}–
-                                    {fmtUsd(r.breakdown.gestionMaxUsd)}
-                                  </div>
-                                </div>
-                              </div>
-                            ) : null}
-                          </div>
-                        </div>
-                        <Link
-                          href={`/cotizaciones/reporte?quote=${encodeURIComponent(r.id)}`}
-                          className="rounded-lg border border-white/10 bg-black/20 px-3 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-white/80 hover:border-white/20 hover:text-white"
-                        >
-                          Abrir
-                        </Link>
-                      </div>
-                    </div>
-                  );
-                })}
-                <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-xs text-muted">
-                  Consejo: compará primero <span className="font-bold text-white/80">calidad</span>{" "}
-                  y <span className="font-bold text-white/80">supuestos</span> (origen / perfil de
-                  carga). Si querés cerrar operación, el siguiente paso es{" "}
-                  <span className="font-bold text-white/80">validación profesional</span>.
-                </div>
-              </div>
-            ) : (
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-sm text-muted">
-                No hay manifiestos seleccionados.
-              </div>
-            )}
-          </div>
-        </SheetContent>
-      </Sheet>
+      <CompareQuotes rows={selectedRows} />
     </div>
   );
 }

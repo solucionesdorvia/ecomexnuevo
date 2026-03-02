@@ -37,3 +37,13 @@ export type User = Prisma.UserModel
  * 
  */
 export type OperatorBudget = Prisma.OperatorBudgetModel
+/**
+ * Model QuoteComment
+ * 
+ */
+export type QuoteComment = Prisma.QuoteCommentModel
+/**
+ * Model AuditLog
+ * 
+ */
+export type AuditLog = Prisma.AuditLogModel

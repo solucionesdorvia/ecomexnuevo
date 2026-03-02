@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/Card";
 import { ProgressRing } from "@/components/ui/ProgressRing";
 import { SealVerified } from "@/components/ui/SealVerified";
 import { cn } from "@/components/ui/cn";
+import { Icon } from "@/components/ui/Icon";
 
 type ChatMode = "quote" | "budget";
 type Role = "user" | "assistant";
@@ -81,7 +82,7 @@ function RichText({ text }: { text: string }) {
         parts.push(
           <code
             key={`c-${i}`}
-            className="rounded bg-black/30 px-1.5 py-0.5 text-[0.95em] text-white/90"
+            className="rounded border border-white/10 bg-white/5 px-1.5 py-0.5 text-[0.95em] text-white/90 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
           >
             {code}
           </code>
@@ -141,7 +142,7 @@ function QuoteCards({
             key={key}
             className={classNames(
               "rounded-xl border bg-white/5 transition-colors",
-              c.highlight ? "border-gold/30" : "border-white/10",
+              c.highlight ? "border-primary/25 bg-primary/5" : "border-white/10",
               isTotal && c.highlight && "wow-total"
             )}
           >
@@ -163,7 +164,7 @@ function QuoteCards({
                 <div
                   className={classNames(
                     "mt-2 break-words font-black tracking-tight",
-                    c.highlight ? "gold-gradient-text text-2xl" : "text-lg text-white"
+                    c.highlight ? "text-2xl text-white" : "text-lg text-white"
                   )}
                 >
                   {c.value}
@@ -171,11 +172,11 @@ function QuoteCards({
               </div>
               <span
                 className={classNames(
-                  "material-symbols-outlined mt-1 text-muted transition-transform",
+                  "mt-1 text-muted transition-transform",
                   isOpen && "rotate-180"
                 )}
               >
-                expand_more
+                <Icon name="expand_more" size={18} className="text-white/60" />
               </span>
             </button>
             {c.detail && isOpen ? (
@@ -260,7 +261,7 @@ function BudgetPanel({
               Modo presupuesto
             </div>
             <div className="mt-1 flex items-center gap-2">
-              <span className="material-symbols-outlined text-primary">tune</span>
+              <Icon name="tune" size={18} className="text-white/85" />
               <div className="text-sm font-extrabold tracking-tight text-white">
                 Definí tu presupuesto objetivo
               </div>
@@ -269,7 +270,7 @@ function BudgetPanel({
           <SealVerified label="Motor IA" />
         </div>
 
-        <div className="mt-4 rounded-xl border border-white/10 bg-black/20 p-4">
+        <div className="mt-4 rounded-xl border border-white/10 bg-white/5 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
           <div className="flex items-end justify-between gap-4">
             <div className="text-xs font-bold uppercase tracking-widest text-muted">
               Presupuesto (USD)
@@ -312,7 +313,7 @@ function BudgetPanel({
               className="w-full"
             >
               Analizar presupuesto
-              <span className="material-symbols-outlined text-[18px]">bolt</span>
+              <Icon name="bolt" size={18} className="text-white/90" />
             </Button>
           </div>
           <p className="mt-2 text-xs leading-relaxed text-muted">
@@ -336,7 +337,7 @@ function AssumptionsControls({
 }) {
   const [origin, setOrigin] = useState("");
   return (
-    <div className="mt-3 rounded-xl border border-white/10 bg-black/20 p-4">
+    <div className="mt-3 rounded-xl border border-white/10 bg-white/5 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
       <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">
         Ajustar supuestos
       </div>
@@ -351,7 +352,7 @@ function AssumptionsControls({
               onChange={(e) => setOrigin(e.target.value)}
               placeholder="Ej: China / Brasil / EEUU"
               disabled={disabled}
-              className="h-10 w-full rounded-lg border border-white/10 bg-black/30 px-3 text-sm text-white placeholder:text-muted/60 outline-none focus:border-primary/50 disabled:opacity-60"
+              className="h-10 w-full rounded-lg border border-white/10 bg-white/5 px-3 text-sm text-white placeholder:text-white/40 outline-none shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] focus:border-primary/40 focus:ring-2 focus:ring-primary/20 disabled:opacity-60"
             />
             <Button
               variant="secondary"
@@ -596,12 +597,8 @@ export default function ChatClient({
       <div className="flex h-full flex-col justify-between p-6">
         <div className="flex flex-col gap-8">
           <Link href="/" className="flex items-center gap-3" onClick={() => setNavDrawerOpen(false)}>
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/95 p-1.5 shadow-lg shadow-black/20">
-              <img
-                src="/brand/ecomex-logo.png"
-                alt="E‑COMEX"
-                className="h-6 w-auto object-contain"
-              />
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <Icon name="dataset" size={18} className="text-current" />
             </div>
             <div className="flex flex-col">
               <h1 className="text-base font-bold tracking-tight">E‑COMEX</h1>
@@ -617,7 +614,7 @@ export default function ChatClient({
               onClick={() => setNavDrawerOpen(false)}
               className="flex items-center gap-3 rounded-xl px-4 py-3 text-muted transition-all hover:bg-white/5 hover:text-white"
             >
-              <span className="material-symbols-outlined">dashboard</span>
+              <Icon name="dashboard" size={18} className="text-white/70" />
               <span className="text-sm font-medium">Tablero</span>
             </Link>
             <Link
@@ -625,7 +622,7 @@ export default function ChatClient({
               onClick={() => setNavDrawerOpen(false)}
               className="flex items-center gap-3 rounded-xl px-4 py-3 text-muted transition-all hover:bg-white/5 hover:text-white"
             >
-              <span className="material-symbols-outlined">calculate</span>
+              <Icon name="calculate" size={18} className="text-white/70" />
               <span className="text-sm font-medium">Cotizaciones</span>
             </Link>
             <Link
@@ -633,7 +630,7 @@ export default function ChatClient({
               onClick={() => setNavDrawerOpen(false)}
               className="flex items-center gap-3 rounded-xl px-4 py-3 text-muted transition-all hover:bg-white/5 hover:text-white"
             >
-              <span className="material-symbols-outlined">trending_up</span>
+              <Icon name="trending_up" size={18} className="text-white/70" />
               <span className="text-sm font-medium">Tendencias</span>
             </Link>
             <Link
@@ -641,11 +638,11 @@ export default function ChatClient({
               onClick={() => setNavDrawerOpen(false)}
               className="flex items-center gap-3 rounded-xl border border-primary/20 bg-primary/10 px-4 py-3 text-white"
             >
-              <span className="material-symbols-outlined text-primary">smart_toy</span>
+              <Icon name="smart_toy" size={18} className="text-white" />
               <span className="text-sm font-semibold">Asistente IA</span>
             </Link>
             <div className="flex items-center gap-3 rounded-xl px-4 py-3 text-muted opacity-70">
-              <span className="material-symbols-outlined">settings</span>
+              <Icon name="settings" size={18} className="text-white/70" />
               <span className="text-sm font-medium">Ajustes</span>
             </div>
           </nav>
@@ -667,7 +664,7 @@ export default function ChatClient({
             </p>
           </div>
           <div className="flex items-center gap-3 px-4 py-3 text-muted">
-            <span className="material-symbols-outlined">support_agent</span>
+            <Icon name="support_agent" size={18} className="text-white/70" />
             <span className="text-sm font-medium">Asesor humano (al confirmar)</span>
           </div>
         </div>
@@ -711,7 +708,7 @@ export default function ChatClient({
                     </div>
                     <div className="mt-2 flex items-start gap-3">
                       {img ? (
-                        <div className="h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-white/10 bg-black/20">
+                        <div className="h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-white/10 bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                           <img
                             src={img}
                             alt=""
@@ -737,9 +734,7 @@ export default function ChatClient({
                               rel="noreferrer"
                             >
                               Ver link
-                              <span className="material-symbols-outlined text-[13px]">
-                                open_in_new
-                              </span>
+                              <Icon name="open_in_new" size={14} className="text-primary/90" />
                             </a>
                           ) : null}
                         </div>
@@ -795,7 +790,11 @@ export default function ChatClient({
               {Array.isArray(assumptions) && assumptions.length ? (
                 <div className="mt-3 flex flex-wrap gap-2">
                   {assumptions.slice(0, 8).map((a) => (
-                    <Badge key={a.id} tone={a.tone ?? "muted"} icon="tune">
+                    <Badge
+                      key={a.id}
+                      tone={a.tone === "gold" ? "primary" : (a.tone ?? "muted")}
+                      icon="tune"
+                    >
                       {a.label}: {a.value}
                     </Badge>
                   ))}
@@ -826,11 +825,10 @@ export default function ChatClient({
   };
 
   return (
-    <div className="relative flex h-[100dvh] w-full overflow-hidden container-texture text-white selection:bg-primary/30">
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-primary/40 glow-line" />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-1 bg-primary/40 glow-line" />
+    <div className="relative flex h-[100dvh] w-full overflow-hidden bg-app aurora text-strong selection:bg-[color:color-mix(in_oklab,var(--primary)_40%,transparent)]">
+      <div className="pointer-events-none absolute inset-0 grid-overlay opacity-35" />
 
-      <aside className="hidden w-72 flex-col border-r border-white/5 bg-background-deeper/50 backdrop-blur-md lg:flex">
+      <aside className="hidden w-72 flex-col border-r border-subtle bg-[var(--surface)]/90 backdrop-blur-md lg:flex">
         <LeftNav />
       </aside>
 
@@ -843,15 +841,11 @@ export default function ChatClient({
               onClick={() => setNavDrawerOpen(true)}
               aria-label="Abrir menú"
             >
-              <span className="material-symbols-outlined">menu</span>
+              <Icon name="menu" size={18} className="text-white/80" />
             </button>
             <div className="flex min-w-0 h-10 items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/95 p-1.5 shadow-lg shadow-black/20">
-                <img
-                  src="/brand/ecomex-logo.png"
-                  alt="E‑COMEX"
-                  className="h-6 w-auto object-contain"
-                />
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Icon name="dataset" size={18} className="text-current" />
               </div>
               <div className="min-w-0 text-base font-bold tracking-tight sm:text-xl">
                 <span className="block truncate">
@@ -860,9 +854,7 @@ export default function ChatClient({
               </div>
             </div>
             <div className="hidden items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 md:flex">
-              <span className="material-symbols-outlined text-xs text-muted">
-                directions_boat
-              </span>
+              <Icon name="directions_boat" size={14} className="text-white/60" />
               <span className="text-xs font-bold uppercase tracking-wider text-muted">
                 China ➔ Argentina
               </span>
@@ -876,7 +868,7 @@ export default function ChatClient({
                 onClick={() => setCardsDrawerOpen(true)}
                 className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-white transition-colors hover:bg-white/10 md:hidden sm:px-4 sm:text-xs"
               >
-                <span className="material-symbols-outlined text-sm">receipt_long</span>
+                <Icon name="receipt_long" size={16} className="text-white/90" />
                 <span className="hidden sm:inline">Desglose</span>
                 <span className="sm:hidden">Costos</span>
               </button>
@@ -934,7 +926,7 @@ export default function ChatClient({
         {navDrawerOpen ? (
           <div className="fixed inset-0 z-50 md:hidden">
             <div
-              className="absolute inset-0 bg-black/60"
+              className="absolute inset-0 bg-background-deeper/70"
               onClick={() => setNavDrawerOpen(false)}
               aria-hidden="true"
             />
@@ -947,7 +939,7 @@ export default function ChatClient({
                   onClick={() => setNavDrawerOpen(false)}
                   aria-label="Cerrar menú"
                 >
-                  <span className="material-symbols-outlined">close</span>
+                  <Icon name="close" size={18} className="text-white/80" />
                 </button>
               </div>
               <div className="h-[calc(100dvh-64px)] overflow-y-auto">
@@ -961,7 +953,7 @@ export default function ChatClient({
         {cardsDrawerOpen ? (
           <div className="fixed inset-0 z-50 md:hidden">
             <div
-              className="absolute inset-0 bg-black/60"
+              className="absolute inset-0 bg-background-deeper/70"
               onClick={() => setCardsDrawerOpen(false)}
               aria-hidden="true"
             />
@@ -978,7 +970,7 @@ export default function ChatClient({
                       className="px-3 py-2 text-xs font-bold uppercase tracking-widest"
                       onClick={() => setCardsDrawerOpen(false)}
                     >
-                      <span className="material-symbols-outlined text-sm">download</span>
+                      <Icon name="download" size={16} className="text-white/90" />
                       PDF
                     </ButtonLink>
                   ) : null}
@@ -988,7 +980,7 @@ export default function ChatClient({
                     onClick={() => setCardsDrawerOpen(false)}
                     aria-label="Cerrar desglose"
                   >
-                    <span className="material-symbols-outlined">close</span>
+                    <Icon name="close" size={18} className="text-white/80" />
                   </button>
                 </div>
               </div>
@@ -1007,11 +999,11 @@ export default function ChatClient({
                   </span>
                 </div>
 
-                <div className="rounded-xl border border-white/5 bg-white/5 px-5 py-4">
-                  <div className="text-xs font-bold uppercase tracking-widest text-primary">
+            <div className="panel rounded-2xl px-5 py-4">
+              <div className="text-xs font-bold uppercase tracking-widest text-[var(--accent)]">
                     Inicio
                   </div>
-                  <div className="mt-2 text-sm leading-relaxed text-white/85">
+              <div className="mt-2 text-sm leading-relaxed text-muted">
                     {header.sub}
                   </div>
                 </div>
@@ -1038,15 +1030,17 @@ export default function ChatClient({
                       >
                         <div
                           className={classNames(
-                            "flex h-10 w-10 shrink-0 items-center justify-center rounded-lg shadow-lg",
+                            "flex h-10 w-10 shrink-0 items-center justify-center rounded-xl shadow-lg",
                             isUser
-                              ? "bg-white/10"
-                              : "bg-primary shadow-primary/20"
+                              ? "bg-[var(--surface2)]"
+                              : "bg-[linear-gradient(180deg,color-mix(in_oklab,var(--primary)_80%,white_8%),var(--primary2))] shadow-[var(--shadowGlow)]"
                           )}
                         >
-                          <span className="material-symbols-outlined text-white">
-                            {isUser ? "person" : "smart_toy"}
-                          </span>
+                          <Icon
+                            name={isUser ? "person" : "smart_toy"}
+                            size={18}
+                            className="text-white"
+                          />
                         </div>
                         <div
                           className={classNames(
@@ -1066,8 +1060,8 @@ export default function ChatClient({
                             className={classNames(
                               "px-5 py-4 text-[15px] leading-relaxed shadow-xl",
                               isUser
-                                ? "rounded-2xl rounded-tr-none border border-white/10 bg-primary/90"
-                                : "glass-panel rounded-2xl rounded-tl-none"
+                                ? "rounded-2xl rounded-tr-none border border-subtle bg-[var(--surface2)]"
+                                : "panel rounded-2xl rounded-tl-none"
                             )}
                           >
                             <RichText text={m.content} />
@@ -1088,7 +1082,7 @@ export default function ChatClient({
                         <div className="flex items-center justify-between gap-3">
                           <div className="min-w-0">
                             <div className="flex flex-wrap items-center gap-2">
-                              <Badge tone="gold" icon="verified">
+                              <Badge tone="primary" icon="verified">
                                 Cotización lista
                               </Badge>
                               <Badge tone="muted" icon="receipt_long">
@@ -1105,7 +1099,7 @@ export default function ChatClient({
                             onClick={() => setCardsDrawerOpen(true)}
                           >
                             Ver desglose
-                            <span className="material-symbols-outlined text-sm">chevron_right</span>
+                            <Icon name="chevron_right" size={16} className="text-white/80" />
                           </Button>
                         </div>
                       </div>
@@ -1115,16 +1109,14 @@ export default function ChatClient({
                   {pending ? (
                     <div className="flex items-start gap-4">
                       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary shadow-lg shadow-primary/20">
-                        <span className="material-symbols-outlined text-white">
-                          smart_toy
-                        </span>
+                        <Icon name="smart_toy" size={18} className="text-white" />
                       </div>
                       <div className="flex max-w-3xl flex-col gap-1">
                         <p className="ml-1 text-xs font-bold uppercase tracking-wider text-muted">
                           E‑COMEX IA
                         </p>
-                        <div className="glass-panel rounded-2xl rounded-tl-none px-5 py-4 text-[15px] text-muted shadow-xl">
-                          Analizando…
+                        <div className="panel rounded-2xl rounded-tl-none px-5 py-4 text-[15px] text-muted shadow-xl">
+                          Analizando cotización...
                         </div>
                       </div>
                     </div>
@@ -1133,11 +1125,11 @@ export default function ChatClient({
               </div>
             </div>
 
-            <div className="border-t border-white/5 bg-background-deeper/70 p-4 backdrop-blur-xl sm:p-6">
+            <div className="border-t border-subtle bg-[var(--surface)]/70 p-4 backdrop-blur-xl sm:p-6">
               <div className="mx-auto max-w-4xl">
                 {requestContact ? (
                   <div className="mb-4 rounded-xl border border-white/10 bg-white/5 p-4">
-                    <div className="text-xs font-bold uppercase tracking-widest text-gold">
+                    <div className="text-xs font-bold uppercase tracking-widest text-white/70">
                       Consultoría
                     </div>
                     <div className="mt-2 text-sm font-semibold text-white">
@@ -1150,10 +1142,27 @@ export default function ChatClient({
                       value={contact}
                       onChange={(e) => setContact(e.target.value)}
                       placeholder="email@empresa.com o +54 9 ..."
-                      className="mt-3 w-full rounded-lg border border-white/10 bg-black/20 px-4 py-3 text-sm outline-none placeholder:text-muted/60 focus:border-primary/50"
+                      className="mt-3 w-full rounded-xl border border-subtle bg-[var(--surface)] px-4 py-3 text-sm text-strong outline-none placeholder:text-muted/70 focus:border-[color:color-mix(in_oklab,var(--primary)_42%,white_8%)] focus:ring-2 focus:ring-[var(--ring)]"
                     />
                   </div>
                 ) : null}
+
+                <div className="mb-3 flex flex-wrap gap-2">
+                  {[
+                    "Necesito una cotización desde Alibaba",
+                    "Tengo presupuesto de USD 10.000",
+                    "¿Qué NCM sugerís para este producto?",
+                  ].map((chip) => (
+                    <button
+                      key={chip}
+                      type="button"
+                      onClick={() => setInput(chip)}
+                      className="rounded-full border border-subtle bg-[var(--surface)] px-3 py-1 text-[11px] font-semibold text-muted transition-colors hover:text-strong"
+                    >
+                      {chip}
+                    </button>
+                  ))}
+                </div>
 
                 <form
                   onSubmit={(e) => {
@@ -1161,11 +1170,9 @@ export default function ChatClient({
                     void send(input);
                   }}
                 >
-                  <div className="glass-panel flex min-w-0 items-center gap-2 rounded-xl p-2 shadow-2xl sm:gap-3">
-                    <div className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10 sm:flex">
-                      <span className="material-symbols-outlined text-white/50">
-                        link
-                      </span>
+                  <div className="panel-strong flex min-w-0 items-center gap-2 rounded-2xl p-2 shadow-2xl sm:gap-3">
+                    <div className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--surface2)] sm:flex">
+                      <Icon name="open_in_new" size={18} className="text-white/40" />
                     </div>
                     <textarea
                       ref={inputRef}
@@ -1190,17 +1197,15 @@ export default function ChatClient({
                           : "Pegá un link del producto o hacé una consulta…"
                       }
                       rows={2}
-                      className="min-h-[48px] min-w-0 flex-1 resize-none rounded-lg bg-transparent px-2 text-base font-normal text-white outline-none placeholder:text-muted/60"
+                      className="min-h-[48px] min-w-0 flex-1 resize-none rounded-xl bg-transparent px-2 text-base font-normal text-strong outline-none placeholder:text-muted/70"
                     />
                     <button
                       type="submit"
                       disabled={pending}
-                      className="flex h-10 min-w-[96px] items-center justify-center gap-2 rounded-lg bg-primary px-3 text-sm font-bold shadow-lg shadow-primary/20 transition-all active:scale-95 disabled:opacity-60 sm:min-w-[120px] sm:px-4"
+                      className="flex h-10 min-w-[96px] items-center justify-center gap-2 rounded-xl border border-[color:color-mix(in_oklab,var(--primary)_58%,white_12%)] bg-[linear-gradient(180deg,color-mix(in_oklab,var(--primary)_84%,white_8%),var(--primary2))] px-3 text-sm font-bold text-strong shadow-[var(--shadowGlow)] transition-all active:scale-95 disabled:opacity-60 sm:min-w-[120px] sm:px-4"
                     >
                       ENVIAR
-                      <span className="material-symbols-outlined text-sm">
-                        bolt
-                      </span>
+                      <Icon name="bolt" size={16} className="text-white" />
                     </button>
                   </div>
                 </form>
@@ -1219,7 +1224,7 @@ export default function ChatClient({
                   variant="secondary"
                   className="px-3 py-2 text-xs font-bold uppercase tracking-widest"
                 >
-                  <span className="material-symbols-outlined text-sm">download</span>
+                  <Icon name="download" size={16} className="text-white/90" />
                   PDF
                 </ButtonLink>
               ) : null}

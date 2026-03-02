@@ -219,6 +219,7 @@ export type OperatorBudgetWhereInput = {
   imageType?: Prisma.StringFilter<"OperatorBudget"> | string
   parsedJson?: Prisma.JsonNullableFilter<"OperatorBudget">
   createdByUser?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
+  audits?: Prisma.AuditLogListRelationFilter
 }
 
 export type OperatorBudgetOrderByWithRelationInput = {
@@ -233,6 +234,7 @@ export type OperatorBudgetOrderByWithRelationInput = {
   imageType?: Prisma.SortOrder
   parsedJson?: Prisma.SortOrderInput | Prisma.SortOrder
   createdByUser?: Prisma.UserOrderByWithRelationInput
+  audits?: Prisma.AuditLogOrderByRelationAggregateInput
 }
 
 export type OperatorBudgetWhereUniqueInput = Prisma.AtLeast<{
@@ -250,6 +252,7 @@ export type OperatorBudgetWhereUniqueInput = Prisma.AtLeast<{
   imageType?: Prisma.StringFilter<"OperatorBudget"> | string
   parsedJson?: Prisma.JsonNullableFilter<"OperatorBudget">
   createdByUser?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
+  audits?: Prisma.AuditLogListRelationFilter
 }, "id">
 
 export type OperatorBudgetOrderByWithAggregationInput = {
@@ -295,6 +298,7 @@ export type OperatorBudgetCreateInput = {
   imageType: string
   parsedJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
   createdByUser: Prisma.UserCreateNestedOneWithoutOperatorBudgetsInput
+  audits?: Prisma.AuditLogCreateNestedManyWithoutOperatorBudgetInput
 }
 
 export type OperatorBudgetUncheckedCreateInput = {
@@ -308,6 +312,7 @@ export type OperatorBudgetUncheckedCreateInput = {
   imageBytes: runtime.Bytes
   imageType: string
   parsedJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOperatorBudgetInput
 }
 
 export type OperatorBudgetUpdateInput = {
@@ -321,6 +326,7 @@ export type OperatorBudgetUpdateInput = {
   imageType?: Prisma.StringFieldUpdateOperationsInput | string
   parsedJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
   createdByUser?: Prisma.UserUpdateOneRequiredWithoutOperatorBudgetsNestedInput
+  audits?: Prisma.AuditLogUpdateManyWithoutOperatorBudgetNestedInput
 }
 
 export type OperatorBudgetUncheckedUpdateInput = {
@@ -334,6 +340,7 @@ export type OperatorBudgetUncheckedUpdateInput = {
   imageBytes?: Prisma.BytesFieldUpdateOperationsInput | runtime.Bytes
   imageType?: Prisma.StringFieldUpdateOperationsInput | string
   parsedJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  audits?: Prisma.AuditLogUncheckedUpdateManyWithoutOperatorBudgetNestedInput
 }
 
 export type OperatorBudgetCreateManyInput = {
@@ -421,6 +428,11 @@ export type OperatorBudgetMinOrderByAggregateInput = {
   imageType?: Prisma.SortOrder
 }
 
+export type OperatorBudgetNullableScalarRelationFilter = {
+  is?: Prisma.OperatorBudgetWhereInput | null
+  isNot?: Prisma.OperatorBudgetWhereInput | null
+}
+
 export type OperatorBudgetCreateNestedManyWithoutCreatedByUserInput = {
   create?: Prisma.XOR<Prisma.OperatorBudgetCreateWithoutCreatedByUserInput, Prisma.OperatorBudgetUncheckedCreateWithoutCreatedByUserInput> | Prisma.OperatorBudgetCreateWithoutCreatedByUserInput[] | Prisma.OperatorBudgetUncheckedCreateWithoutCreatedByUserInput[]
   connectOrCreate?: Prisma.OperatorBudgetCreateOrConnectWithoutCreatedByUserInput | Prisma.OperatorBudgetCreateOrConnectWithoutCreatedByUserInput[]
@@ -467,6 +479,22 @@ export type BytesFieldUpdateOperationsInput = {
   set?: runtime.Bytes
 }
 
+export type OperatorBudgetCreateNestedOneWithoutAuditsInput = {
+  create?: Prisma.XOR<Prisma.OperatorBudgetCreateWithoutAuditsInput, Prisma.OperatorBudgetUncheckedCreateWithoutAuditsInput>
+  connectOrCreate?: Prisma.OperatorBudgetCreateOrConnectWithoutAuditsInput
+  connect?: Prisma.OperatorBudgetWhereUniqueInput
+}
+
+export type OperatorBudgetUpdateOneWithoutAuditsNestedInput = {
+  create?: Prisma.XOR<Prisma.OperatorBudgetCreateWithoutAuditsInput, Prisma.OperatorBudgetUncheckedCreateWithoutAuditsInput>
+  connectOrCreate?: Prisma.OperatorBudgetCreateOrConnectWithoutAuditsInput
+  upsert?: Prisma.OperatorBudgetUpsertWithoutAuditsInput
+  disconnect?: Prisma.OperatorBudgetWhereInput | boolean
+  delete?: Prisma.OperatorBudgetWhereInput | boolean
+  connect?: Prisma.OperatorBudgetWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorBudgetUpdateToOneWithWhereWithoutAuditsInput, Prisma.OperatorBudgetUpdateWithoutAuditsInput>, Prisma.OperatorBudgetUncheckedUpdateWithoutAuditsInput>
+}
+
 export type OperatorBudgetCreateWithoutCreatedByUserInput = {
   id?: string
   createdAt?: Date | string
@@ -477,6 +505,7 @@ export type OperatorBudgetCreateWithoutCreatedByUserInput = {
   imageBytes: runtime.Bytes
   imageType: string
   parsedJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  audits?: Prisma.AuditLogCreateNestedManyWithoutOperatorBudgetInput
 }
 
 export type OperatorBudgetUncheckedCreateWithoutCreatedByUserInput = {
@@ -489,6 +518,7 @@ export type OperatorBudgetUncheckedCreateWithoutCreatedByUserInput = {
   imageBytes: runtime.Bytes
   imageType: string
   parsedJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutOperatorBudgetInput
 }
 
 export type OperatorBudgetCreateOrConnectWithoutCreatedByUserInput = {
@@ -533,6 +563,74 @@ export type OperatorBudgetScalarWhereInput = {
   parsedJson?: Prisma.JsonNullableFilter<"OperatorBudget">
 }
 
+export type OperatorBudgetCreateWithoutAuditsInput = {
+  id?: string
+  createdAt?: Date | string
+  rubro?: string | null
+  productTitle?: string | null
+  filename: string
+  xlsxBytes: runtime.Bytes
+  imageBytes: runtime.Bytes
+  imageType: string
+  parsedJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  createdByUser: Prisma.UserCreateNestedOneWithoutOperatorBudgetsInput
+}
+
+export type OperatorBudgetUncheckedCreateWithoutAuditsInput = {
+  id?: string
+  createdAt?: Date | string
+  createdByUserId: string
+  rubro?: string | null
+  productTitle?: string | null
+  filename: string
+  xlsxBytes: runtime.Bytes
+  imageBytes: runtime.Bytes
+  imageType: string
+  parsedJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+}
+
+export type OperatorBudgetCreateOrConnectWithoutAuditsInput = {
+  where: Prisma.OperatorBudgetWhereUniqueInput
+  create: Prisma.XOR<Prisma.OperatorBudgetCreateWithoutAuditsInput, Prisma.OperatorBudgetUncheckedCreateWithoutAuditsInput>
+}
+
+export type OperatorBudgetUpsertWithoutAuditsInput = {
+  update: Prisma.XOR<Prisma.OperatorBudgetUpdateWithoutAuditsInput, Prisma.OperatorBudgetUncheckedUpdateWithoutAuditsInput>
+  create: Prisma.XOR<Prisma.OperatorBudgetCreateWithoutAuditsInput, Prisma.OperatorBudgetUncheckedCreateWithoutAuditsInput>
+  where?: Prisma.OperatorBudgetWhereInput
+}
+
+export type OperatorBudgetUpdateToOneWithWhereWithoutAuditsInput = {
+  where?: Prisma.OperatorBudgetWhereInput
+  data: Prisma.XOR<Prisma.OperatorBudgetUpdateWithoutAuditsInput, Prisma.OperatorBudgetUncheckedUpdateWithoutAuditsInput>
+}
+
+export type OperatorBudgetUpdateWithoutAuditsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  rubro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  productTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  filename?: Prisma.StringFieldUpdateOperationsInput | string
+  xlsxBytes?: Prisma.BytesFieldUpdateOperationsInput | runtime.Bytes
+  imageBytes?: Prisma.BytesFieldUpdateOperationsInput | runtime.Bytes
+  imageType?: Prisma.StringFieldUpdateOperationsInput | string
+  parsedJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  createdByUser?: Prisma.UserUpdateOneRequiredWithoutOperatorBudgetsNestedInput
+}
+
+export type OperatorBudgetUncheckedUpdateWithoutAuditsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  createdByUserId?: Prisma.StringFieldUpdateOperationsInput | string
+  rubro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  productTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  filename?: Prisma.StringFieldUpdateOperationsInput | string
+  xlsxBytes?: Prisma.BytesFieldUpdateOperationsInput | runtime.Bytes
+  imageBytes?: Prisma.BytesFieldUpdateOperationsInput | runtime.Bytes
+  imageType?: Prisma.StringFieldUpdateOperationsInput | string
+  parsedJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+}
+
 export type OperatorBudgetCreateManyCreatedByUserInput = {
   id?: string
   createdAt?: Date | string
@@ -555,6 +653,7 @@ export type OperatorBudgetUpdateWithoutCreatedByUserInput = {
   imageBytes?: Prisma.BytesFieldUpdateOperationsInput | runtime.Bytes
   imageType?: Prisma.StringFieldUpdateOperationsInput | string
   parsedJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  audits?: Prisma.AuditLogUpdateManyWithoutOperatorBudgetNestedInput
 }
 
 export type OperatorBudgetUncheckedUpdateWithoutCreatedByUserInput = {
@@ -567,6 +666,7 @@ export type OperatorBudgetUncheckedUpdateWithoutCreatedByUserInput = {
   imageBytes?: Prisma.BytesFieldUpdateOperationsInput | runtime.Bytes
   imageType?: Prisma.StringFieldUpdateOperationsInput | string
   parsedJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  audits?: Prisma.AuditLogUncheckedUpdateManyWithoutOperatorBudgetNestedInput
 }
 
 export type OperatorBudgetUncheckedUpdateManyWithoutCreatedByUserInput = {
@@ -582,6 +682,35 @@ export type OperatorBudgetUncheckedUpdateManyWithoutCreatedByUserInput = {
 }
 
 
+/**
+ * Count Type OperatorBudgetCountOutputType
+ */
+
+export type OperatorBudgetCountOutputType = {
+  audits: number
+}
+
+export type OperatorBudgetCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  audits?: boolean | OperatorBudgetCountOutputTypeCountAuditsArgs
+}
+
+/**
+ * OperatorBudgetCountOutputType without action
+ */
+export type OperatorBudgetCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the OperatorBudgetCountOutputType
+   */
+  select?: Prisma.OperatorBudgetCountOutputTypeSelect<ExtArgs> | null
+}
+
+/**
+ * OperatorBudgetCountOutputType without action
+ */
+export type OperatorBudgetCountOutputTypeCountAuditsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.AuditLogWhereInput
+}
+
 
 export type OperatorBudgetSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -595,6 +724,8 @@ export type OperatorBudgetSelect<ExtArgs extends runtime.Types.Extensions.Intern
   imageType?: boolean
   parsedJson?: boolean
   createdByUser?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  audits?: boolean | Prisma.OperatorBudget$auditsArgs<ExtArgs>
+  _count?: boolean | Prisma.OperatorBudgetCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["operatorBudget"]>
 
 export type OperatorBudgetSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -641,6 +772,8 @@ export type OperatorBudgetSelectScalar = {
 export type OperatorBudgetOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "createdAt" | "createdByUserId" | "rubro" | "productTitle" | "filename" | "xlsxBytes" | "imageBytes" | "imageType" | "parsedJson", ExtArgs["result"]["operatorBudget"]>
 export type OperatorBudgetInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   createdByUser?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  audits?: boolean | Prisma.OperatorBudget$auditsArgs<ExtArgs>
+  _count?: boolean | Prisma.OperatorBudgetCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type OperatorBudgetIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   createdByUser?: boolean | Prisma.UserDefaultArgs<ExtArgs>
@@ -653,6 +786,7 @@ export type $OperatorBudgetPayload<ExtArgs extends runtime.Types.Extensions.Inte
   name: "OperatorBudget"
   objects: {
     createdByUser: Prisma.$UserPayload<ExtArgs>
+    audits: Prisma.$AuditLogPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1060,6 +1194,7 @@ readonly fields: OperatorBudgetFieldRefs;
 export interface Prisma__OperatorBudgetClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
   createdByUser<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  audits<T extends Prisma.OperatorBudget$auditsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.OperatorBudget$auditsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AuditLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1492,6 +1627,30 @@ export type OperatorBudgetDeleteManyArgs<ExtArgs extends runtime.Types.Extension
    * Limit how many OperatorBudgets to delete.
    */
   limit?: number
+}
+
+/**
+ * OperatorBudget.audits
+ */
+export type OperatorBudget$auditsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the AuditLog
+   */
+  select?: Prisma.AuditLogSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the AuditLog
+   */
+  omit?: Prisma.AuditLogOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.AuditLogInclude<ExtArgs> | null
+  where?: Prisma.AuditLogWhereInput
+  orderBy?: Prisma.AuditLogOrderByWithRelationInput | Prisma.AuditLogOrderByWithRelationInput[]
+  cursor?: Prisma.AuditLogWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.AuditLogScalarFieldEnum | Prisma.AuditLogScalarFieldEnum[]
 }
 
 /**

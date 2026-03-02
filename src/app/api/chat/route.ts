@@ -881,6 +881,10 @@ export async function POST(req: Request) {
       const res = NextResponse.json({
         assistantMessage: `${quote.explanation}\n\n${consultingPostQuoteMessage()}`,
         cards: quote.cards,
+        analysis: {
+          stage: "budget_estimate",
+          timing: { route: "maritime", minDays: 35, maxDays: 55 },
+        },
         requestContact: false,
       });
       res.cookies.set("ecomex_anon", anonId, {
@@ -1149,11 +1153,91 @@ export async function POST(req: Request) {
       };
     };
 
-    const ask = (assistantMessage: string, product?: any) => {
+    const buildAnalysis = (product: any, quoteLike?: any) => {
+      const meta: any = product?.raw?.ncmMeta;
+      const pcram: any = product?.raw?.pcram;
+      const normalizedTitle = cleanProductTitleFromMixedInput(
+        typeof product?.displayTitle === "string" && product.displayTitle.trim()
+          ? product.displayTitle
+          : typeof product?.title === "string" && product.title.trim()
+            ? product.title
+            : userText
+      );
+
+      const interventions: string[] = Array.isArray(pcram?.interventions)
+        ? pcram.interventions.map((x: any) => String(x || "").trim()).filter(Boolean).slice(0, 18)
+        : [];
+      const reclassifications: Array<{ label: string; href: string }> = Array.isArray(
+        pcram?.reclassifications
+      )
+        ? pcram.reclassifications
+            .map((x: any) => ({
+              label: String(x?.label ?? "").trim(),
+              href: String(x?.href ?? "").trim(),
+            }))
+            .filter((x: any) => x.label && x.href)
+            .slice(0, 12)
+        : [];
+
+      const ncmCode = typeof product?.ncm === "string" ? product.ncm.trim() : "";
+      const ncmMetaConfidence =
+        typeof meta?.confidence === "number" && Number.isFinite(meta.confidence)
+          ? meta.confidence
+          : null;
+
+      // Simple, conservative flags for UI (avoid speculative scoring).
+      const flags: string[] = [];
+      if (!ncmCode || ncmCode === "9999.99.99") flags.push("ncm_missing");
+      if (meta?.ambiguous === true) flags.push("ncm_ambiguous");
+      if (product?.raw?.pcramError === true) flags.push("pcram_unavailable");
+      if (!interventions.length) flags.push("requirements_unknown");
+
+      const totalMinUsd =
+        typeof quoteLike?.breakdown?.totalMinUsd === "number" ? quoteLike.breakdown.totalMinUsd : null;
+      const totalMaxUsd =
+        typeof quoteLike?.breakdown?.totalMaxUsd === "number" ? quoteLike.breakdown.totalMaxUsd : null;
+
+      return {
+        stage: "quoted",
+        normalizedTitle: normalizedTitle || undefined,
+        ncm: ncmCode && ncmCode !== "9999.99.99" ? ncmCode : undefined,
+        ncmMeta: {
+          source: typeof meta?.source === "string" ? meta.source : undefined,
+          confidence: ncmMetaConfidence,
+          ambiguous: meta?.ambiguous === true ? true : undefined,
+        },
+        pcram: pcram
+          ? {
+              title: typeof pcram?.title === "string" ? pcram.title : undefined,
+              breadcrumbs: Array.isArray(pcram?.breadcrumbs)
+                ? pcram.breadcrumbs.map(String).filter(Boolean).slice(0, 10)
+                : undefined,
+              unit: typeof pcram?.unit === "string" ? pcram.unit : undefined,
+              interventions,
+              reclassifications,
+            }
+          : undefined,
+        timing: { route: "maritime", minDays: 35, maxDays: 55 },
+        totals: totalMinUsd != null && totalMaxUsd != null ? { totalMinUsd, totalMaxUsd } : undefined,
+        flags: flags.length ? flags : undefined,
+        quality:
+          typeof quoteLike?.quality === "number" && Number.isFinite(quoteLike.quality)
+            ? quoteLike.quality
+            : undefined,
+      };
+    };
+
+    const ask = (assistantMessage: string, product?: any, opts?: { stage?: string; questions?: string[] }) => {
       const res = NextResponse.json({
         assistantMessage,
         requestContact: false,
         productPreview: product ? buildProductPreview(product) : undefined,
+        analysis: {
+          stage: opts?.stage ?? "needs_input",
+          questions: Array.isArray(opts?.questions)
+            ? opts?.questions.map((q) => String(q || "").trim()).filter(Boolean).slice(0, 6)
+            : undefined,
+        },
       });
       res.cookies.set("ecomex_anon", anonId, {
         httpOnly: true,
@@ -1234,7 +1318,8 @@ export async function POST(req: Request) {
             "Respondeme esto (una sola línea está perfecto):",
             ...qs.map((q) => `- ${q}`),
           ].join("\n"),
-          product2
+          product2,
+          { stage: "needs_ncm_details", questions: qs }
         );
       }
 
@@ -1292,6 +1377,8 @@ export async function POST(req: Request) {
         assumptions: Array.isArray((quote as any).assumptions)
           ? (quote as any).assumptions
           : undefined,
+        breakdown: (quote as any)?.breakdown,
+        analysis: buildAnalysis(product2, quote as any),
         requestContact: false,
       });
       res.cookies.set("ecomex_anon", anonId, {

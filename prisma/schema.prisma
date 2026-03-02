@@ -37,6 +37,8 @@ model Quote {
 
   userId String?
   user   User? @relation(fields: [userId], references: [id])
+  comments QuoteComment[]
+  audits   AuditLog[]
 
   @@index([anonId, createdAt])
   @@index([leadId])
@@ -68,10 +70,13 @@ model User {
   passwordHash String
 
   role UserRole @default(user)
+  onboardingSeenAt DateTime?
 
   quotes Quote[]
   leads  Lead[]
   operatorBudgets OperatorBudget[]
+  quoteComments QuoteComment[]
+  audits        AuditLog[]
 }
 
 model OperatorBudget {
@@ -90,5 +95,49 @@ model OperatorBudget {
   imageType   String
 
   parsedJson Json?
+  audits AuditLog[]
+}
+
+model QuoteComment {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  quoteId String
+  quote   Quote @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+
+  authorUserId String?
+  authorUser   User? @relation(fields: [authorUserId], references: [id], onDelete: SetNull)
+
+  authorRole  String
+  authorLabel String?
+  message     String
+
+  @@index([quoteId, createdAt])
+  @@index([authorUserId, createdAt])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  entityType String
+  entityId   String
+  action     String
+  payload    Json?
+
+  actorUserId String?
+  actorUser   User? @relation(fields: [actorUserId], references: [id], onDelete: SetNull)
+  actorRole   String?
+
+  quoteId String?
+  quote   Quote? @relation(fields: [quoteId], references: [id], onDelete: SetNull)
+
+  operatorBudgetId String?
+  operatorBudget   OperatorBudget? @relation(fields: [operatorBudgetId], references: [id], onDelete: SetNull)
+
+  @@index([entityType, entityId, createdAt])
+  @@index([quoteId, createdAt])
+  @@index([operatorBudgetId, createdAt])
+  @@index([actorUserId, createdAt])
 }
 

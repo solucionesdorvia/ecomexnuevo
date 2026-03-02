@@ -66,8 +66,8 @@ export default function ContainerVideo({
       />
 
       {showMissingNotice && missing ? (
-        <div className="absolute inset-0 grid place-items-center bg-black/70 p-6 text-center">
-          <div className="max-w-md rounded-2xl border border-white/15 bg-black/40 p-5 text-sm text-white/85">
+        <div className="absolute inset-0 grid place-items-center bg-background-deeper/80 p-6 text-center">
+          <div className="glass-panel max-w-md rounded-2xl p-5 text-sm text-white/85">
             No encuentro el video del container en{" "}
             <span className="font-semibold">public/container.mp4</span>.
             <div className="mt-2 text-xs text-white/65">
