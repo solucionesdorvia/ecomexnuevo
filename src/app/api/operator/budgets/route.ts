@@ -18,100 +18,109 @@ function isImageFile(f: File) {
 }
 
 export async function GET(req: Request) {
-  const gate = await requireRole(["operator", "admin"]);
-  if (!gate.ok) {
-    return NextResponse.json(
-      { ok: false, error: gate.status === 401 ? "Sin sesión." : "Sin permisos." },
-      { status: gate.status }
-    );
-  }
-
-  const url = new URL(req.url);
-  const id = String(url.searchParams.get("id") ?? "").trim();
-
-  if (id) {
-    const row = await prisma.operatorBudget
-      .findUnique({
-        where: { id },
-        select: {
-          id: true,
-          createdAt: true,
-          filename: true,
-          rubro: true,
-          productTitle: true,
-          parsedJson: true,
-          xlsxBytes: true,
-          createdByUserId: true,
-        },
-      })
-      .catch(() => null);
-    if (!row) return NextResponse.json({ ok: false, error: "No encontrado." }, { status: 404 });
-    if (gate.user.role !== "admin" && row.createdByUserId !== gate.user.id) {
-      return NextResponse.json({ ok: false, error: "Sin permisos." }, { status: 403 });
+  try {
+    const gate = await requireRole(["operator", "admin"]);
+    if (!gate.ok) {
+      return NextResponse.json(
+        { ok: false, error: gate.status === 401 ? "Sin sesión." : "Sin permisos." },
+        { status: gate.status }
+      );
     }
 
-    const stored =
-      row.parsedJson && typeof row.parsedJson === "object"
-        ? normalizeStoredParsedJson(row.parsedJson as any)
-        : null;
-    const effective =
-      row.parsedJson && typeof row.parsedJson === "object"
-        ? effectiveParsedFromStored(row.parsedJson as any).effective
-        : parseBudgetXlsx(new Uint8Array(row.xlsxBytes as any));
+    const url = new URL(req.url);
+    const id = String(url.searchParams.get("id") ?? "").trim();
 
-    const overrides = stored?._overrides ?? {};
+    if (id) {
+      const row = await prisma.operatorBudget
+        .findUnique({
+          where: { id },
+          select: {
+            id: true,
+            createdAt: true,
+            filename: true,
+            rubro: true,
+            productTitle: true,
+            parsedJson: true,
+            xlsxBytes: true,
+            createdByUserId: true,
+          },
+        })
+        .catch(() => null);
+      if (!row) return NextResponse.json({ ok: false, error: "No encontrado." }, { status: 404 });
+      if (gate.user.role !== "admin" && row.createdByUserId !== gate.user.id) {
+        return NextResponse.json({ ok: false, error: "Sin permisos." }, { status: 403 });
+      }
 
-    return NextResponse.json({
-      ok: true,
-      budget: {
-        id: row.id,
-        createdAt: row.createdAt,
-        filename: row.filename,
-        rubro: row.rubro,
-        productTitle: row.productTitle,
-        effective,
-        overrides,
-        hasOverrides: Boolean(overrides && Object.keys(overrides).length),
+      const stored =
+        row.parsedJson && typeof row.parsedJson === "object"
+          ? normalizeStoredParsedJson(row.parsedJson as any)
+          : null;
+      const effective =
+        row.parsedJson && typeof row.parsedJson === "object"
+          ? effectiveParsedFromStored(row.parsedJson as any).effective
+          : parseBudgetXlsx(new Uint8Array(row.xlsxBytes as any));
+
+      const overrides = stored?._overrides ?? {};
+
+      return NextResponse.json({
+        ok: true,
+        budget: {
+          id: row.id,
+          createdAt: row.createdAt,
+          filename: row.filename,
+          rubro: row.rubro,
+          productTitle: row.productTitle,
+          effective,
+          overrides,
+          hasOverrides: Boolean(overrides && Object.keys(overrides).length),
+        },
+      });
+    }
+
+    const rows = await prisma.operatorBudget.findMany({
+      where: gate.user.role === "admin" ? undefined : { createdByUserId: gate.user.id },
+      orderBy: { createdAt: "desc" },
+      take: 30,
+      select: {
+        id: true,
+        createdAt: true,
+        filename: true,
+        rubro: true,
+        productTitle: true,
+        parsedJson: true,
+        createdByUserId: true,
       },
     });
+
+    const budgets = rows.map((r) => {
+      const parsed = normalizeStoredParsedJson(r.parsedJson as any);
+      const overrides = parsed?._overrides ?? {};
+      return {
+        id: r.id,
+        createdAt: r.createdAt,
+        filename: r.filename,
+        rubro: r.rubro,
+        productTitle: r.productTitle,
+        createdByUserId: r.createdByUserId,
+        totals: {
+          totalToShowUsd:
+            typeof (parsed as any)?.totalToShowUsd === "number" ? (parsed as any).totalToShowUsd : null,
+          totalToPayUsd:
+            typeof (parsed as any)?.totalToPayUsd === "number" ? (parsed as any).totalToPayUsd : null,
+        },
+        hasOverrides: Boolean(overrides && Object.keys(overrides).length),
+      };
+    });
+
+    return NextResponse.json({ ok: true, budgets });
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.error("[operator/budgets] list error", e);
+    return NextResponse.json(
+      { ok: false, error: "No se pudo cargar presupuestos." },
+      { status: 500 }
+    );
   }
-
-  const rows = await prisma.operatorBudget.findMany({
-    where: gate.user.role === "admin" ? undefined : { createdByUserId: gate.user.id },
-    orderBy: { createdAt: "desc" },
-    take: 30,
-    select: {
-      id: true,
-      createdAt: true,
-      filename: true,
-      rubro: true,
-      productTitle: true,
-      parsedJson: true,
-      createdByUserId: true,
-    },
-  });
-
-  const budgets = rows.map((r) => {
-    const parsed = normalizeStoredParsedJson(r.parsedJson as any);
-    const overrides = parsed?._overrides ?? {};
-    return {
-      id: r.id,
-      createdAt: r.createdAt,
-      filename: r.filename,
-      rubro: r.rubro,
-      productTitle: r.productTitle,
-      createdByUserId: r.createdByUserId,
-      totals: {
-        totalToShowUsd:
-          typeof (parsed as any)?.totalToShowUsd === "number" ? (parsed as any).totalToShowUsd : null,
-        totalToPayUsd:
-          typeof (parsed as any)?.totalToPayUsd === "number" ? (parsed as any).totalToPayUsd : null,
-      },
-      hasOverrides: Boolean(overrides && Object.keys(overrides).length),
-    };
-  });
-
-  return NextResponse.json({ ok: true, budgets });
 }
 
 export async function POST(req: Request) {
