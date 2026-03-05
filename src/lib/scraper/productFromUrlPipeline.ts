@@ -3,6 +3,7 @@ import { openaiJson } from "@/lib/ai/openaiClient";
 import { classifyWithAI } from "@/lib/ai/ncmClassifier";
 import { PcramClient } from "@/lib/pcram/pcramClient";
 import { LocalNomenclator } from "@/lib/nomenclator/localNomenclator";
+import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
 
 export type ScrapedProduct = {
   title?: string;
@@ -107,6 +108,7 @@ function normalizeCurrency(cur?: string) {
   if (c === "RMB") return "CNY";
   if (c === "YUAN") return "CNY";
   if (c === "CN¥") return "CNY";
+  if (c === "AR$" || c === "ARS" || c === "PESO" || c === "PESOS") return "ARS";
   return c;
 }
 
@@ -285,6 +287,12 @@ function extractRegexCandidates(text?: string): PriceCandidate[] {
     out.push({ amount: n, currency: "CNY", source: "regex", confidence: 0.5 });
   }
 
+  for (const m of t.matchAll(/(?:\bARS\b|AR\$)\s*([0-9][0-9.,]{0,14})/gi)) {
+    const n = Number(normalizeNumberLike(m[1] ?? ""));
+    if (!Number.isFinite(n) || n <= 0) continue;
+    out.push({ amount: n, currency: "ARS", source: "regex", confidence: 0.62 });
+  }
+
   return out;
 }
 
@@ -309,11 +317,14 @@ function extractRegexRangeCandidates(text?: string): PriceRangeCandidate[] {
     if (a <= 0 || b <= 0) return;
     const min = Math.min(a, b);
     const max = Math.max(a, b);
-    if (min > 5_000_000 || max > 5_000_000) return;
+    const cur = normCur(curRaw ?? "");
+    // ARS amounts can be much larger than USD/CNY nominal values; keep a higher ceiling there.
+    const maxAllowed = cur === "ARS" ? 1_000_000_000 : 5_000_000;
+    if (min > maxAllowed || max > maxAllowed) return;
     out.push({
       min,
       max,
-      currency: curRaw ? normCur(curRaw) : undefined,
+      currency: curRaw ? cur : undefined,
       unit: unitRaw ? String(unitRaw).trim() : undefined,
       source: "regex",
       confidence: conf,
@@ -322,18 +333,18 @@ function extractRegexRangeCandidates(text?: string): PriceRangeCandidate[] {
 
   // Currency first: "USD 9,800 - 15,000 / set"
   for (const m of t.matchAll(
-    /(?:\bUSD\b|US\$|U\$S|\bCNY\b|\bRMB\b|¥|€|\$)\s*([0-9][0-9.,]{0,14})\s*(?:-|~|to)\s*([0-9][0-9.,]{0,14})(?:\s*\/\s*([a-zA-Z]+))?/gi
+    /(?:\bUSD\b|US\$|U\$S|\bCNY\b|\bRMB\b|¥|€|\bARS\b|AR\$|\$)\s*([0-9][0-9.,]{0,14})\s*(?:-|–|—|~|to)\s*([0-9][0-9.,]{0,14})(?:\s*\/\s*([a-zA-Z]+))?/gi
   )) {
-    const cur = m[0].match(/(?:\bUSD\b|US\$|U\$S|\bCNY\b|\bRMB\b|¥|€|\$)/i)?.[0];
+    const cur = m[0].match(/(?:\bUSD\b|US\$|U\$S|\bCNY\b|\bRMB\b|¥|€|\bARS\b|AR\$|\$)/i)?.[0];
     push(m[1] ?? "", m[2] ?? "", cur, m[3], cur ? 0.75 : 0.65);
     if (out.length >= 6) break;
   }
 
   // Currency after: "9,800 - 15,000 USD"
   for (const m of t.matchAll(
-    /([0-9][0-9.,]{0,14})\s*(?:-|~|to)\s*([0-9][0-9.,]{0,14})\s*(?:\bUSD\b|US\$|U\$S|\bCNY\b|\bRMB\b|¥|€|\$)/gi
+    /([0-9][0-9.,]{0,14})\s*(?:-|–|—|~|to)\s*([0-9][0-9.,]{0,14})\s*(?:\bUSD\b|US\$|U\$S|\bCNY\b|\bRMB\b|¥|€|\bARS\b|AR\$|\$)/gi
   )) {
-    const cur = m[0].match(/(?:\bUSD\b|US\$|U\$S|\bCNY\b|\bRMB\b|¥|€|\$)/i)?.[0];
+    const cur = m[0].match(/(?:\bUSD\b|US\$|U\$S|\bCNY\b|\bRMB\b|¥|€|\bARS\b|AR\$|\$)/i)?.[0];
     push(m[1] ?? "", m[2] ?? "", cur, undefined, cur ? 0.7 : 0.6);
     if (out.length >= 6) break;
   }
@@ -343,7 +354,12 @@ function extractRegexRangeCandidates(text?: string): PriceRangeCandidate[] {
 
 function chooseBestPrice(candidates: PriceCandidate[]): PriceCandidate | null {
   const filtered = candidates
-    .filter((c) => Number.isFinite(c.amount) && c.amount > 0 && c.amount < 5_000_000)
+    .filter((c) => {
+      if (!Number.isFinite(c.amount) || c.amount <= 0) return false;
+      const cur = normalizeCurrency(c.currency);
+      const maxAllowed = cur === "ARS" ? 1_000_000_000 : 5_000_000;
+      return c.amount < maxAllowed;
+    })
     .map((c) => ({ ...c, currency: normalizeCurrency(c.currency) }));
   if (!filtered.length) return null;
 
@@ -569,7 +585,10 @@ export async function productFromUrlPipeline(
     const filtered = rangeCandidates
       .filter((r) => Number.isFinite(r.min) && Number.isFinite(r.max) && r.min > 0 && r.max > 0)
       .sort((a, b) => (b.confidence ?? 0) - (a.confidence ?? 0));
-    return filtered[0] ?? null;
+    if (!filtered.length) return null;
+    // If ARS range is explicitly present, prioritize it over weaker inferred currencies.
+    const arsFirst = filtered.filter((r) => normalizeCurrency(r.currency) === "ARS");
+    return (arsFirst[0] ?? filtered[0]) ?? null;
   })();
 
   if (bestRange) {
@@ -591,11 +610,21 @@ export async function productFromUrlPipeline(
       price = { type: "range", min: minUsd, max: maxUsd, currency: "USD", unit };
       fobUsd = minUsd;
       currency = "USD";
+    } else if (cur === "ARS") {
+      const fxArsPerUsd = await getArsPerUsd().catch(() => null);
+      if (typeof fxArsPerUsd === "number" && Number.isFinite(fxArsPerUsd) && fxArsPerUsd > 0) {
+        const minUsd = Math.round((bestRange.min / fxArsPerUsd) * 100) / 100;
+        const maxUsd = Math.round((bestRange.max / fxArsPerUsd) * 100) / 100;
+        price = { type: "range", min: minUsd, max: maxUsd, currency: "USD", unit };
+        fobUsd = minUsd;
+        currency = "USD";
+      }
     }
     priceMeta = {
       rangeChosen: bestRange,
       rangeCandidates: rangeCandidates.slice(0, 6),
       fxCnyPerUsd: cur === "CNY" ? fxCnyPerUsd : undefined,
+      fxArsPerUsd: cur === "ARS" ? await getArsPerUsd().catch(() => undefined) : undefined,
     };
   }
 
@@ -607,17 +636,38 @@ export async function productFromUrlPipeline(
     } else if (best.currency === "CNY" && Number.isFinite(fxCnyPerUsd) && fxCnyPerUsd > 0) {
       fobUsd = Math.round((best.amount / fxCnyPerUsd) * 100) / 100;
       currency = "USD";
+    } else if (best.currency === "ARS") {
+      const fxArsPerUsd = await getArsPerUsd().catch(() => null);
+      if (typeof fxArsPerUsd === "number" && Number.isFinite(fxArsPerUsd) && fxArsPerUsd > 0) {
+        fobUsd = Math.round((best.amount / fxArsPerUsd) * 100) / 100;
+        currency = "USD";
+      }
     }
 
     priceMeta = {
       chosen: best,
       fxCnyPerUsd: best.currency === "CNY" ? fxCnyPerUsd : undefined,
+      fxArsPerUsd: best.currency === "ARS" ? await getArsPerUsd().catch(() => undefined) : undefined,
       usdEstimated: typeof fobUsd === "number" ? fobUsd : undefined,
       candidates: priceCandidates.slice(0, 10),
     };
   } else if (best && priceMeta) {
     // keep chosen metadata for debugging without altering the decided range
     priceMeta = { ...priceMeta, chosen: best, candidates: priceCandidates.slice(0, 10) };
+  }
+
+  // Defensive guard: avoid placeholder prices (e.g. 0.99) from blocked/unavailable pages.
+  // In those cases, prefer asking for real price instead of quoting with garbage data.
+  const unavailableSignal = /product\s+not\s+available|out\s+of\s+stock|unavailable/i.test(
+    `${title ?? ""} ${description ?? ""} ${String(analysis.text ?? "").slice(0, 2500)}`
+  );
+  const blockedHint = String((analysis as any)?.blockedHint ?? "").trim().toLowerCase();
+  const blockedOrFailed = blockedHint === "unusual_traffic" || blockedHint === "fetch_failed";
+  if (!bestRange && typeof fobUsd === "number" && fobUsd <= 5 && (unavailableSignal || blockedOrFailed)) {
+    fobUsd = undefined;
+    currency = undefined;
+    price = undefined;
+    priceMeta = { ...(priceMeta ?? {}), suspiciousPlaceholderDiscarded: true };
   }
 
   // If we only have a single price, expose it in a consistent shape too.
@@ -773,18 +823,35 @@ export async function productFromUrlPipeline(
             ncmMeta.ambiguous = true;
           }
         }
+      } else if (!ncmAdjusted) {
+        // If OpenAI is unavailable, pick top evidence candidate as deterministic fallback.
+        const top = enriched?.[0]?.ncmCode;
+        if (top) {
+          ncmAdjusted = top;
+          if (ncmMeta) ncmMeta.ambiguous = true;
+        }
       }
     }
     if (ncmAdjusted) {
       pcram = await client.getDetail(ncmAdjusted).catch(() => undefined);
-      // IMPORTANT: If we can't fetch PCRAM detail, don't claim a "real" NCM.
+      // Keep inferred NCM even if PCRAM detail is unavailable.
+      // This allows quoting flows to continue with explicit "estimado" flags.
       if (!pcram) {
-        ncmAdjusted = undefined;
         if (ncmMeta) ncmMeta.ambiguous = true;
       } else if (typeof (pcram as any)?.ncmCode === "string" && (pcram as any).ncmCode.trim()) {
         // Persist authoritative format/value from PCRAM.
         ncmAdjusted = String((pcram as any).ncmCode).trim();
       }
+    }
+  }
+
+  // Last fallback: use top local candidate if we still couldn't resolve ncm.
+  if (!ncmAdjusted && Array.isArray(localCandidates) && localCandidates.length) {
+    const topLocal = String(localCandidates[0]?.ncmCode ?? "").trim();
+    if (topLocal) {
+      ncmAdjusted = topLocal;
+      ncmMeta = ncmMeta ?? { localCandidates };
+      if (ncmMeta) ncmMeta.ambiguous = true;
     }
   }
 

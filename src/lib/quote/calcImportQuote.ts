@@ -222,21 +222,49 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       ? Math.max(1, Math.floor(qtyRaw))
       : 1;
 
-  const explicitRange =
+  const priceCurrency = String(inputs.product.price?.currency ?? "").toUpperCase();
+  const hasRawRange =
     inputs.product.price?.type === "range" &&
-    inputs.product.price.currency === "USD" &&
     typeof inputs.product.price.min === "number" &&
     typeof inputs.product.price.max === "number" &&
     Number.isFinite(inputs.product.price.min) &&
     Number.isFinite(inputs.product.price.max) &&
     inputs.product.price.min > 0 &&
-    inputs.product.price.max > 0
-      ? { min: inputs.product.price.min, max: inputs.product.price.max }
-      : null;
+    inputs.product.price.max > 0;
+
+  let explicitRange: { min: number; max: number } | null = null;
+  if (hasRawRange && priceCurrency === "USD") {
+    explicitRange = { min: inputs.product.price!.min!, max: inputs.product.price!.max! };
+  } else if (hasRawRange && (priceCurrency === "ARS" || priceCurrency === "AR$")) {
+    const fxArsPerUsd = await getArsPerUsd().catch(() => null);
+    if (typeof fxArsPerUsd === "number" && Number.isFinite(fxArsPerUsd) && fxArsPerUsd > 0) {
+      explicitRange = {
+        min: round2(inputs.product.price!.min! / fxArsPerUsd),
+        max: round2(inputs.product.price!.max! / fxArsPerUsd),
+      };
+    }
+  }
+
+  const fobUsdNormalized = async () => {
+    const raw = inputs.product.fobUsd;
+    if (typeof raw !== "number" || !Number.isFinite(raw) || raw <= 0) return null;
+    const cur = String(inputs.product.currency ?? "").toUpperCase();
+    // If currency is absent or already USD, keep value as-is.
+    if (!cur || cur === "USD" || cur === "US$" || cur === "U$S") return raw;
+    if (cur === "ARS" || cur === "AR$") {
+      const fxArsPerUsd = await getArsPerUsd().catch(() => null);
+      if (typeof fxArsPerUsd === "number" && Number.isFinite(fxArsPerUsd) && fxArsPerUsd > 0) {
+        return round2(raw / fxArsPerUsd);
+      }
+    }
+    return null;
+  };
+
+  const fobUsdFromProduct = await fobUsdNormalized();
 
   const fobGuess =
     (explicitRange ? (explicitRange.min + explicitRange.max) / 2 : undefined) ??
-    inputs.product.fobUsd ??
+    fobUsdFromProduct ??
     estimateFobFromText(inputs.rawUserText) ??
     120; // default unit FOB
 

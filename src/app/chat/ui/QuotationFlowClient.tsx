@@ -184,6 +184,8 @@ export default function QuotationFlowClient({ initialMode }: { initialMode: Flow
   const [origin, setOrigin] = useState("");
   const [shippingProfile, setShippingProfile] = useState<"" | "light" | "medium" | "heavy">("");
   const [budgetUsd, setBudgetUsd] = useState<string>("10000");
+  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
 
   const anonIdRef = useRef<string | null>(null);
 
@@ -368,58 +370,69 @@ export default function QuotationFlowClient({ initialMode }: { initialMode: Flow
                       className="min-h-[96px] w-full resize-none rounded-2xl border border-subtle bg-[var(--surface)] px-4 py-3 text-sm text-strong outline-none placeholder:text-muted/70 focus:border-[color:color-mix(in_oklab,var(--primary)_42%,white_8%)] focus:ring-2 focus:ring-[var(--ring)]"
                     />
 
-                    <div className="grid gap-3 md:grid-cols-4">
-                      <div className="grid gap-2">
-                        <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
-                          Cantidad (opcional)
+                    <button
+                      type="button"
+                      onClick={() => setShowAdvanced((v) => !v)}
+                      className="inline-flex items-center gap-2 rounded-lg border border-subtle bg-[var(--surface)] px-3 py-2 text-xs font-bold text-muted hover:text-strong"
+                    >
+                      <Icon name={showAdvanced ? "expand_less" : "expand_more"} size={16} className="text-current" />
+                      {showAdvanced ? "Ocultar campos opcionales" : "Mostrar campos opcionales"}
+                    </button>
+
+                    {showAdvanced ? (
+                      <div className="grid gap-3 md:grid-cols-4">
+                        <div className="grid gap-2">
+                          <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
+                            Cantidad
+                          </div>
+                          <input
+                            value={qty}
+                            onChange={(e) => setQty(e.target.value)}
+                            inputMode="numeric"
+                            placeholder="100"
+                            className="w-full rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2.5 text-sm text-strong outline-none placeholder:text-muted/70 focus:border-[color:color-mix(in_oklab,var(--primary)_42%,white_8%)] focus:ring-2 focus:ring-[var(--ring)]"
+                          />
                         </div>
-                        <input
-                          value={qty}
-                          onChange={(e) => setQty(e.target.value)}
-                          inputMode="numeric"
-                          placeholder="100"
-                          className="w-full rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2.5 text-sm text-strong outline-none placeholder:text-muted/70 focus:border-[color:color-mix(in_oklab,var(--primary)_42%,white_8%)] focus:ring-2 focus:ring-[var(--ring)]"
-                        />
-                      </div>
-                      <div className="grid gap-2">
-                        <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
-                          Precio unitario USD (opcional)
+                        <div className="grid gap-2">
+                          <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
+                            Precio unitario USD
+                          </div>
+                          <input
+                            value={unitPrice}
+                            onChange={(e) => setUnitPrice(e.target.value)}
+                            inputMode="decimal"
+                            placeholder="12.50"
+                            className="w-full rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2.5 text-sm text-strong outline-none placeholder:text-muted/70 focus:border-[color:color-mix(in_oklab,var(--primary)_42%,white_8%)] focus:ring-2 focus:ring-[var(--ring)]"
+                          />
                         </div>
-                        <input
-                          value={unitPrice}
-                          onChange={(e) => setUnitPrice(e.target.value)}
-                          inputMode="decimal"
-                          placeholder="12.50"
-                          className="w-full rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2.5 text-sm text-strong outline-none placeholder:text-muted/70 focus:border-[color:color-mix(in_oklab,var(--primary)_42%,white_8%)] focus:ring-2 focus:ring-[var(--ring)]"
-                        />
-                      </div>
-                      <div className="grid gap-2">
-                        <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
-                          Origen (opcional)
+                        <div className="grid gap-2">
+                          <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
+                            Origen
+                          </div>
+                          <input
+                            value={origin}
+                            onChange={(e) => setOrigin(e.target.value)}
+                            placeholder="China"
+                            className="w-full rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2.5 text-sm text-strong outline-none placeholder:text-muted/70 focus:border-[color:color-mix(in_oklab,var(--primary)_42%,white_8%)] focus:ring-2 focus:ring-[var(--ring)]"
+                          />
                         </div>
-                        <input
-                          value={origin}
-                          onChange={(e) => setOrigin(e.target.value)}
-                          placeholder="China"
-                          className="w-full rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2.5 text-sm text-strong outline-none placeholder:text-muted/70 focus:border-[color:color-mix(in_oklab,var(--primary)_42%,white_8%)] focus:ring-2 focus:ring-[var(--ring)]"
-                        />
-                      </div>
-                      <div className="grid gap-2">
-                        <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
-                          Perfil carga (opcional)
+                        <div className="grid gap-2">
+                          <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
+                            Perfil carga
+                          </div>
+                          <select
+                            value={shippingProfile}
+                            onChange={(e) => setShippingProfile(e.target.value as any)}
+                            className="w-full rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2.5 text-sm text-strong outline-none focus:border-[color:color-mix(in_oklab,var(--primary)_42%,white_8%)] focus:ring-2 focus:ring-[var(--ring)]"
+                          >
+                            <option value="">Auto</option>
+                            <option value="light">Liviana</option>
+                            <option value="medium">Media</option>
+                            <option value="heavy">Pesada</option>
+                          </select>
                         </div>
-                        <select
-                          value={shippingProfile}
-                          onChange={(e) => setShippingProfile(e.target.value as any)}
-                          className="w-full rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2.5 text-sm text-strong outline-none focus:border-[color:color-mix(in_oklab,var(--primary)_42%,white_8%)] focus:ring-2 focus:ring-[var(--ring)]"
-                        >
-                          <option value="">Auto</option>
-                          <option value="light">Liviana</option>
-                          <option value="medium">Media</option>
-                          <option value="heavy">Pesada</option>
-                        </select>
                       </div>
-                    </div>
+                    ) : null}
                   </>
                 ) : (
                   <div className="grid gap-3 md:grid-cols-2">
@@ -527,263 +540,86 @@ export default function QuotationFlowClient({ initialMode }: { initialMode: Flow
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.24, ease: "easeOut" }}
-                  className="space-y-6"
+                  className="space-y-4"
                 >
-                  <div className="grid gap-6 md:grid-cols-12">
-                    <div className="md:col-span-7">
-                      <Card className="border-white/10 bg-white/5">
-                        <CardHeader
-                          eyebrow="PRODUCTO"
-                          title={data.productPreview?.title ?? data.analysis?.normalizedTitle ?? "Producto detectado"}
-                          icon="inventory_2"
-                          right={
-                            data.productPreview?.sourceUrl ? (
-                              <a
-                                href={data.productPreview.sourceUrl}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-white/80 hover:bg-white/10"
-                              >
-                                <Icon name="open_in_new" size={14} className="text-white/70" />
-                                Fuente
-                              </a>
-                            ) : (
-                              <Badge tone="muted" icon="link">
-                                Sin URL
-                              </Badge>
-                            )
-                          }
-                        />
-                        <CardContent className="space-y-4">
-                          <div className="flex items-start gap-4">
-                            <div className="h-20 w-20 overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-                              {data.productPreview?.imageUrl ? (
-                                <img
-                                  src={data.productPreview.imageUrl}
-                                  alt=""
-                                  className="h-full w-full object-cover"
-                                />
-                              ) : (
-                                <div className="flex h-full w-full items-center justify-center text-white/50">
-                                  <Icon name="image" size={22} className="text-white/40" />
-                                </div>
-                              )}
+                  <Card>
+                    <CardHeader
+                      eyebrow="RESUMEN"
+                      title={data.productPreview?.title ?? data.analysis?.normalizedTitle ?? "Resultado del análisis"}
+                      icon="summarize"
+                      right={
+                        <div className="flex items-center gap-2">
+                          <RiskBadge flags={flags} />
+                          <Badge tone="neutral" icon="schedule">
+                            {timing}
+                          </Badge>
+                        </div>
+                      }
+                    />
+                    <CardContent className="space-y-4">
+                      <div className="grid gap-3 md:grid-cols-3">
+                        <div className="panel rounded-xl p-4">
+                          <div className="text-[10px] font-black uppercase tracking-[0.18em] text-muted">Total estimado</div>
+                          <div className="mt-1 text-xl font-black text-[color:var(--color-gold)]">{total}</div>
+                        </div>
+                        <div className="panel rounded-xl p-4">
+                          <div className="text-[10px] font-black uppercase tracking-[0.18em] text-muted">NCM</div>
+                          <div className="mt-1 text-sm font-extrabold text-strong">{data.ncm ?? data.analysis?.ncm ?? "A validar"}</div>
+                        </div>
+                        <div className="panel rounded-xl p-4">
+                          <div className="text-[10px] font-black uppercase tracking-[0.18em] text-muted">Origen</div>
+                          <div className="mt-1 text-sm font-extrabold text-strong">{data.productPreview?.origin ?? "No informado"}</div>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2">
+                        <ButtonLink href={pdfHref} variant="secondary" size="sm">
+                          <Icon name="download" size={14} className="text-current" />
+                          PDF
+                        </ButtonLink>
+                        <button
+                          type="button"
+                          onClick={() => setShowDetails((v) => !v)}
+                          className="inline-flex h-9 items-center gap-2 rounded-xl border border-subtle bg-[var(--surface)] px-3 text-xs font-extrabold uppercase tracking-[0.14em] text-muted hover:text-strong"
+                        >
+                          <Icon name={showDetails ? "expand_less" : "expand_more"} size={14} className="text-current" />
+                          {showDetails ? "Ocultar detalles" : "Ver detalles"}
+                        </button>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {showDetails ? (
+                    <div className="grid gap-4 md:grid-cols-2">
+                      <Card>
+                        <CardHeader eyebrow="DETALLE" title="Costos principales" icon="receipt_long" />
+                        <CardContent className="space-y-2">
+                          {(data.cards ?? []).slice(0, 4).map((c) => (
+                            <div key={c.label} className="flex items-start justify-between gap-3 rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2">
+                              <span className="text-xs text-muted">{c.label}</span>
+                              <span className="text-xs font-bold text-strong">{c.value}</span>
                             </div>
-                            <div className="min-w-0 flex-1">
-                              <div className="text-xs font-black uppercase tracking-[0.22em] text-muted">
-                                Descripción normalizada
-                              </div>
-                              <div className="mt-2 text-sm font-extrabold tracking-tight text-white/95">
-                                {data.analysis?.normalizedTitle ?? "—"}
-                              </div>
-                              <div className="mt-2 flex flex-wrap gap-2">
-                                {data.productPreview?.origin ? (
-                                  <Badge tone="muted" icon="public">
-                                    Origen: {data.productPreview.origin}
-                                  </Badge>
-                                ) : null}
-                                {typeof data.productPreview?.quantity === "number" ? (
-                                  <Badge tone="muted" icon="tag">
-                                    Cantidad: {data.productPreview.quantity}
-                                  </Badge>
-                                ) : null}
-                              </div>
-                            </div>
-                          </div>
+                          ))}
                         </CardContent>
                       </Card>
-                    </div>
-
-                    <div className="md:col-span-5 space-y-6">
-                      <Card className="border-white/10 bg-white/5">
-                        <CardHeader
-                          eyebrow="CLASIFICACIÓN"
-                          title="NCM + confianza"
-                          icon="gavel"
-                          right={
-                            typeof data.analysis?.ncmMeta?.confidence === "number" ? (
-                              <Badge tone="primary" icon="psychology">
-                                Confianza {Math.round((data.analysis!.ncmMeta!.confidence as number) * 100)}%
-                              </Badge>
-                            ) : (
-                              <Badge tone="muted" icon="help">
-                                Confianza —
-                              </Badge>
-                            )
-                          }
-                        />
-                        <CardContent className="space-y-3">
-                          <div className="flex items-center justify-between gap-3">
-                            <div className="text-2xl font-black tracking-tight text-white">
-                              {data.ncm ?? data.analysis?.ncm ?? "—"}
-                            </div>
-                            <div className="text-xs font-bold uppercase tracking-widest text-muted">
-                              {data.analysis?.ncmMeta?.source ? `Fuente: ${data.analysis.ncmMeta.source}` : "Fuente: —"}
-                            </div>
-                          </div>
-
-                          {data.analysis?.pcram?.title ? (
-                            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-7 text-muted shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-                              {data.analysis.pcram.title}
-                            </div>
-                          ) : null}
-                        </CardContent>
-                      </Card>
-
-                      <Card className="border-white/10 bg-white/5">
-                        <CardHeader
-                          eyebrow="REQUISITOS"
-                          title="Intervenciones / regulaciones"
-                          icon="verified_user"
-                          right={
-                            Array.isArray(data.analysis?.pcram?.interventions) &&
-                            data.analysis!.pcram!.interventions!.length ? (
-                              <Badge tone="success" icon="check_circle">
-                                Detectado
-                              </Badge>
-                            ) : (
-                              <Badge tone="muted" icon="help">
-                                A confirmar
-                              </Badge>
-                            )
-                          }
-                        />
-                        <CardContent className="space-y-3">
-                          {Array.isArray(data.analysis?.pcram?.interventions) &&
-                          data.analysis!.pcram!.interventions!.length ? (
-                            <div className="grid gap-2">
-                              {data.analysis!.pcram!.interventions!.slice(0, 10).map((x, i) => (
-                                <div
-                                  key={`${x}-${i}`}
-                                  className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/85 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
-                                >
-                                  {x}
-                                </div>
-                              ))}
-                            </div>
+                      <Card>
+                        <CardHeader eyebrow="DETALLE" title="Requisitos" icon="verified_user" />
+                        <CardContent className="space-y-2">
+                          {Array.isArray(data.analysis?.pcram?.interventions) && data.analysis!.pcram!.interventions!.length ? (
+                            data.analysis!.pcram!.interventions!.slice(0, 4).map((x, i) => (
+                              <div key={`${x}-${i}`} className="rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2 text-xs text-muted">
+                                {x}
+                              </div>
+                            ))
                           ) : (
-                            <div className="text-sm leading-7 text-muted">
-                              Sin señales oficiales aún para este caso. El sistema puede pedir datos técnicos para
-                              resolver NCM y requisitos.
+                            <div className="rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2 text-xs text-muted">
+                              No hay requisitos adicionales para mostrar en este paso.
                             </div>
                           )}
                         </CardContent>
                       </Card>
                     </div>
-                  </div>
-
-                  <Card className="border-white/10 bg-white/5">
-                    <CardHeader
-                      eyebrow="COSTOS"
-                      title="Desglose (cards) + trazabilidad"
-                      icon="receipt_long"
-                      right={
-                        data.cards?.length ? (
-                          <a
-                            href={pdfHref}
-                            className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/10"
-                          >
-                            <Icon name="download" size={18} className="text-white/85" />
-                            PDF
-                          </a>
-                        ) : null
-                      }
-                    />
-                    <CardContent className="space-y-4">
-                      {Array.isArray(data.cards) && data.cards.length ? (
-                        <div className="grid gap-3 md:grid-cols-3">
-                          {data.cards.map((c) => (
-                            <div
-                              key={c.label}
-                              className={cn(
-                                "rounded-2xl border border-white/10 bg-white/5 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]",
-                                c.highlight && "border-primary/25 bg-primary/10"
-                              )}
-                            >
-                              <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
-                                {c.label}
-                              </div>
-                              <div
-                                className={cn(
-                                  "mt-2 text-lg font-black tracking-tight text-white",
-                                  c.label === "Total puesto en Argentina" && "wow-total text-[color:var(--color-gold)]"
-                                )}
-                              >
-                                {c.value}
-                              </div>
-                              {c.detail ? (
-                                <div className="mt-2 text-xs leading-relaxed text-muted">{c.detail}</div>
-                              ) : null}
-                            </div>
-                          ))}
-                        </div>
-                      ) : (
-                        <div className="text-sm leading-7 text-muted">Todavía no hay desglose para mostrar.</div>
-                      )}
-
-                      {data.breakdown ? (
-                        <div className="grid gap-3 md:grid-cols-4">
-                          {[
-                            { k: "FOB", v: fmtUsd(data.breakdown.fobTotalUsd) },
-                            { k: "Flete", v: fmtUsdRange(data.breakdown.fleteMinUsd, data.breakdown.fleteMaxUsd) },
-                            { k: "Impuestos", v: fmtUsdRange(data.breakdown.impuestosTotalMinUsd, data.breakdown.impuestosTotalMaxUsd) },
-                            { k: "Gestión", v: fmtUsdRange(data.breakdown.gestionMinUsd, data.breakdown.gestionMaxUsd) },
-                          ].map((x) => (
-                            <div
-                              key={x.k}
-                              className="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
-                            >
-                              <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
-                                {x.k}
-                              </div>
-                              <div className="mt-2 text-sm font-extrabold text-white/90">{x.v}</div>
-                            </div>
-                          ))}
-                        </div>
-                      ) : null}
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-white/10 bg-white/5">
-                    <CardHeader eyebrow="LOGÍSTICA" title="Timing y próxima acción" icon="directions_boat" />
-                    <CardContent className="grid gap-3 md:grid-cols-3">
-                      <div className="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-                        <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
-                          Tiempo estimado
-                        </div>
-                        <div className="mt-2 text-sm font-extrabold text-white/90">{timing}</div>
-                        <div className="mt-2 text-xs leading-relaxed text-muted">
-                          Incluye origen, consolidación, tránsito y aduana (rango típico).
-                        </div>
-                      </div>
-                      <div className="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-                        <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
-                          Próximo paso
-                        </div>
-                        <div className="mt-2 text-sm font-extrabold text-white/90">
-                          Afinar supuestos
-                        </div>
-                        <div className="mt-2 text-xs leading-relaxed text-muted">
-                          Origen + perfil de carga + ficha técnica reducen error de impuestos y flete.
-                        </div>
-                      </div>
-                      <div className="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-                        <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
-                          Exportación
-                        </div>
-                        <div className="mt-2 flex flex-wrap gap-2">
-                          <ButtonLink href={pdfHref} variant="secondary" className="h-10 px-4 text-xs">
-                            <Icon name="download" size={16} className="text-white/85" />
-                            PDF
-                          </ButtonLink>
-                          <ButtonLink href="/cotizaciones" variant="secondary" className="h-10 px-4 text-xs">
-                            <Icon name="open_in_new" size={16} className="text-white/85" />
-                            Reporte
-                          </ButtonLink>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  ) : null}
                 </motion.div>
               ) : null}
             </AnimatePresence>
@@ -814,26 +650,16 @@ export default function QuotationFlowClient({ initialMode }: { initialMode: Flow
               </div>
 
               <div className="glass-panel rounded-2xl border border-white/10 bg-white/5 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-                <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
-                  Acciones
-                </div>
+                <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">Acciones rápidas</div>
                 <div className="mt-3 grid gap-2">
                   <ButtonLink href={pdfHref} variant="primary" className="h-11">
                     <Icon name="download" size={18} className="text-white/90" />
-                    Descargar PDF profesional
+                    Descargar PDF
                   </ButtonLink>
-                  <ButtonLink href="/account" variant="secondary" className="h-11">
-                    <Icon name="dashboard" size={18} className="text-white/85" />
-                    Ver historial / tablero
+                  <ButtonLink href="/cotizaciones" variant="secondary" className="h-11">
+                    <Icon name="receipt_long" size={18} className="text-white/85" />
+                    Ver reportes
                   </ButtonLink>
-                  <ButtonLink href="/interno" variant="secondary" className="h-11">
-                    <Icon name="support_agent" size={18} className="text-white/85" />
-                    Panel Operador
-                  </ButtonLink>
-                </div>
-                <div className="mt-3 text-xs leading-relaxed text-muted">
-                  El sistema entrega una estimación orientativa. La validación final (NCM/requisitos) se afina con datos
-                  técnicos y documentación.
                 </div>
               </div>
             </div>

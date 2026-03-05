@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import CotizarClient from "@/app/cotizar/ui/CotizarClient";
-import { getSessionUser } from "@/lib/auth/session";
+import QuotationFlowClient from "@/app/chat/ui/QuotationFlowClient";
 
 export const metadata: Metadata = {
   title: "E-COMEX | Import Analysis Flow",
@@ -9,7 +8,6 @@ export const metadata: Metadata = {
 };
 
 export default async function CotizarPage() {
-  const user = await getSessionUser();
-  return <CotizarClient currentRole={user?.role ?? "user"} />;
+  return <QuotationFlowClient initialMode="quote" />;
 }
 

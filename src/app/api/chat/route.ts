@@ -174,7 +174,7 @@ function looksLikeProductText(text: string) {
       .replace(/\b[0-9][0-9.,]*\b/g, "")
       .replace(/\s+/g, " ")
       .trim();
-    if (stripped.length < 10) return false;
+    if (stripped.length < 4) return false;
   }
   // Avoid treating "500 unidades" as product, but allow "500 unidades de <producto>".
   const q = parseQuantityWithMode(t, { allowBareNumber: false });
@@ -186,9 +186,24 @@ function looksLikeProductText(text: string) {
       .replace(/\b\d{1,6}\b/g, "")
       .replace(/\s+/g, " ")
       .trim();
-    if (stripped.length < 10) return false;
+    if (stripped.length < 4) return false;
   }
   return true;
+}
+
+function looksLikeFreshProductIntent(text: string) {
+  const t = String(text || "").trim();
+  if (!t) return false;
+  if (extractUrl(t)) return true;
+  if (looksLikeJustNumber(t)) return false;
+  if (looksLikeProductText(t)) return true;
+  const cleaned = cleanProductTitleFromMixedInput(t);
+  const hasLetters = /[a-záéíóúñ]/i.test(cleaned);
+  const hasIntentVerb =
+    /\b(quiero|necesito|importar|cotizar|producto|articulo|artículo|mercader[ií]a|modelo)\b/i.test(
+      t
+    );
+  return hasLetters && cleaned.length >= 4 && hasIntentVerb;
 }
 
 function lastUserMessage(messages: IncomingMessage[]) {
@@ -268,22 +283,12 @@ function inferStageHintFromMessages(messages: IncomingMessage[]): StageHint {
 }
 
 function inferSeedForProductFromMessages(messages: IncomingMessage[]): string | null {
-  // Prefer the most recent URL user pasted.
-  for (let i = messages.length - 1; i >= 0; i--) {
-    const m = messages[i];
-    if (!m || m.role !== "user") continue;
-    const url = extractUrl(m.content);
-    if (url) return url;
-  }
-  // Fallback: most recent user text that looks like a product description.
   for (let i = messages.length - 1; i >= 0; i--) {
     const m = messages[i];
     if (!m || m.role !== "user") continue;
     const txt = String(m.content || "").trim();
     if (!txt) continue;
-    if (extractUrl(txt)) continue;
-    if (looksLikeJustNumber(txt)) continue;
-    if (looksLikeProductText(txt)) return txt;
+    if (looksLikeFreshProductIntent(txt)) return txt;
   }
   return null;
 }
@@ -402,6 +407,54 @@ function applyAssumptionUpdate(product: any, upd: { origin?: string; shippingPro
     product.raw = { ...(product.raw ?? {}), shippingProfile: upd.shippingProfile };
   }
   return product;
+}
+
+function validateNoGuessQuoteInputs(product: any, opts?: { requireNcm?: boolean }) {
+  const missing: string[] = [];
+  const questions: string[] = [];
+  const requireNcm = opts?.requireNcm ?? true;
+
+  const hasPriceRange =
+    product?.price?.type === "range" &&
+    typeof product?.price?.min === "number" &&
+    typeof product?.price?.max === "number" &&
+    Number.isFinite(product.price.min) &&
+    Number.isFinite(product.price.max) &&
+    product.price.min > 0 &&
+    product.price.max > 0;
+  const hasUnitPrice =
+    typeof product?.fobUsd === "number" && Number.isFinite(product.fobUsd) && product.fobUsd > 0;
+  if (!hasPriceRange && !hasUnitPrice) {
+    missing.push("precio");
+    questions.push("¿Cuál es el **precio unitario** real en **USD** (o rango real del proveedor)?");
+  }
+
+  if (requireNcm) {
+    const ncm = String(product?.ncm ?? "").trim();
+    const hasValidNcm = /^\d{4}\.\d{2}\.\d{2}$/.test(ncm) && ncm !== "9999.99.99";
+    if (!hasValidNcm) {
+      missing.push("clasificacion");
+      questions.push(
+        "Necesito la **clasificación arancelaria (NCM)** para calcular impuestos sin inventar."
+      );
+    }
+  }
+
+  return { ok: missing.length === 0, missing, questions };
+}
+
+function originFromPurchaseUrl(u?: string) {
+  const raw = String(u ?? "").trim();
+  if (!raw) return null;
+  try {
+    const h = new URL(raw).hostname.replace(/^www\./i, "").toLowerCase();
+    if (/alibaba|1688|made-in-china|taobao|tmall/.test(h)) return "China";
+    if (/amazon\./.test(h)) return "Marketplace (Amazon)";
+    if (/mercadolibre|mercado libre/.test(h)) return "Marketplace (Mercado Libre)";
+    return h;
+  } catch {
+    return null;
+  }
 }
 
 function buildHiddenChoiceSet(
@@ -1020,6 +1073,17 @@ export async function POST(req: Request) {
             if ((p as any)?.raw?.ncmMeta) (p as any).raw.ncmMeta.ambiguous = true;
           }
         }
+        const inferredOrigin = originFromPurchaseUrl(url);
+        if (
+          inferredOrigin &&
+          (!String((p as any)?.origin ?? "").trim() ||
+            /^origen a confirmar$/i.test(String((p as any)?.origin ?? "").trim()))
+        ) {
+          (p as any).origin = inferredOrigin;
+        }
+        if (!Number.isFinite((p as any)?.quantity) || Number((p as any)?.quantity) <= 0) {
+          (p as any).quantity = 1;
+        }
         return p as any;
       }
       const base: any = { title: cleanProductTitleFromMixedInput(inputText) };
@@ -1251,6 +1315,11 @@ export async function POST(req: Request) {
 
     const quoteAndRespond = async (quoteRowId: string | null, product: any) => {
       const product2 = await ensurePcram(product);
+      const isLinkContext = Boolean(
+        typeof product2?.url === "string" ||
+          typeof product2?.sourceUrl === "string" ||
+          typeof product2?.raw?.urlAnalysis === "object"
+      );
 
       // If the NCM is ambiguous (or not PCRAM-validated) and we have follow-up questions,
       // ask for minimal technical info BEFORE quoting (so we can fetch the real code in PCRAM).
@@ -1278,6 +1347,7 @@ export async function POST(req: Request) {
         wantsPcram &&
         candidates.length >= 2 &&
         qs.length > 0 &&
+        !isLinkContext &&
         // Avoid looping if we already asked in this stored product context.
         product2?.raw?.ncmDisambiguationAsked !== true;
 
@@ -1320,6 +1390,31 @@ export async function POST(req: Request) {
           ].join("\n"),
           product2,
           { stage: "needs_ncm_details", questions: qs }
+        );
+      }
+
+      // Strict policy requested by user: do not invent values.
+      // If key facts are missing/unverified, ask for them instead of estimating.
+      const noGuessGate = validateNoGuessQuoteInputs(product2, { requireNcm: !isLinkContext });
+      if (!noGuessGate.ok) {
+        if (quoteRowId) {
+          await prisma.quote
+            .update({
+              where: { id: quoteRowId },
+              data: { productJson: product2 as any, stage: "awaiting_product" },
+            })
+            .catch(() => null);
+        }
+        return ask(
+          [
+            "Para cotizar **sin inventar datos** me faltan estos datos reales:",
+            ...noGuessGate.missing.map((m) => `- ${m}`),
+            "",
+            "Respondeme esto y cotizo con datos reales:",
+            ...noGuessGate.questions.map((q) => `- ${q}`),
+          ].join("\n"),
+          product2,
+          { stage: "needs_verified_inputs", questions: noGuessGate.questions }
         );
       }
 
@@ -1983,8 +2078,7 @@ export async function POST(req: Request) {
     }
 
     // If there's no active DB row (cookies blocked, refresh, etc.), reconstruct context from message history.
-    const seedText =
-      extractUrl(userText) || looksLikeProductText(userText) ? userText : seedForProduct ?? userText;
+    const seedText = looksLikeFreshProductIntent(userText) ? userText : seedForProduct ?? userText;
 
     const url = extractUrl(seedText);
     const initialProductProvided = url != null || looksLikeProductText(seedText);
@@ -2046,7 +2140,7 @@ export async function POST(req: Request) {
             kind: builtMeta?.kind,
             candidates: builtCandidates,
           });
-    if (builtCandidates.length >= 2 && qsBuilt.length) {
+    if (!url && builtCandidates.length >= 2 && qsBuilt.length) {
       const qs = qsBuilt;
       if (qs.length) {
         const { hidden } = buildHiddenChoiceSet(builtCandidates, built?.ncm, 5);
