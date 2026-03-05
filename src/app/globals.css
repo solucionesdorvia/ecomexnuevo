@@ -53,7 +53,7 @@
   --color-accent: var(--primary);
   --color-accent-2: var(--accent);
 
-  --font-sans: "General Sans", ui-sans-serif, system-ui;
+  --font-sans: "Manrope", ui-sans-serif, system-ui;
   --font-mono: var(--font-jetbrains-mono);
 }
 

@@ -31,7 +31,7 @@ export default function RootLayout({
       <head>
         <link
           rel="stylesheet"
-          href="https://api.fontshare.com/v2/css?f%5B%5D=general-sans%40400,500,600,700,800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
         />
         <link
           rel="stylesheet"
