@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -63,6 +63,8 @@ function parseNum(input: string): number | null {
 }
 
 export function OperatorBudgetClient() {
+  const xlsxInputRef = useRef<HTMLInputElement | null>(null);
+  const imageInputRef = useRef<HTMLInputElement | null>(null);
   const [xlsx, setXlsx] = useState<File | null>(null);
   const [image, setImage] = useState<File | null>(null);
   const [rubro, setRubro] = useState("");
@@ -299,22 +301,42 @@ export function OperatorBudgetClient() {
                     XLSX
                   </div>
                   <input
+                    ref={xlsxInputRef}
                     type="file"
                     accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                     onChange={(e) => setXlsx(e.target.files?.[0] ?? null)}
-                    className="block w-full text-sm text-white/80 file:mr-4 file:rounded-xl file:border file:border-white/10 file:bg-primary file:px-4 file:py-2 file:text-xs file:font-black file:uppercase file:tracking-[0.22em] file:text-white file:shadow-[0_18px_60px_-40px_rgba(124,58,237,0.75)] hover:file:bg-primary/90"
+                    className="hidden"
                   />
+                  <button
+                    type="button"
+                    onClick={() => xlsxInputRef.current?.click()}
+                    className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/10 bg-primary px-4 text-xs font-black uppercase tracking-[0.22em] text-white shadow-[0_18px_60px_-40px_rgba(124,58,237,0.75)] hover:bg-primary/90"
+                  >
+                    <Icon name="upload_file" size={16} className="text-white/90" />
+                    Seleccionar XLSX
+                  </button>
+                  <div className="text-xs text-white/70">{xlsx?.name ?? "Ningún archivo seleccionado"}</div>
                 </div>
                 <div className="grid gap-2">
                   <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
                     Foto
                   </div>
                   <input
+                    ref={imageInputRef}
                     type="file"
                     accept="image/png,image/jpeg,image/webp"
                     onChange={(e) => setImage(e.target.files?.[0] ?? null)}
-                    className="block w-full text-sm text-white/80 file:mr-4 file:rounded-xl file:border file:border-white/10 file:bg-white/5 file:px-4 file:py-2 file:text-xs file:font-black file:uppercase file:tracking-[0.22em] file:text-white file:shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:file:bg-white/10"
+                    className="hidden"
                   />
+                  <button
+                    type="button"
+                    onClick={() => imageInputRef.current?.click()}
+                    className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 text-xs font-black uppercase tracking-[0.22em] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:bg-white/10"
+                  >
+                    <Icon name="image" size={16} className="text-white/80" />
+                    Seleccionar foto
+                  </button>
+                  <div className="text-xs text-white/70">{image?.name ?? "Ningún archivo seleccionado"}</div>
                 </div>
               </div>
 
