@@ -6,6 +6,12 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/components/ui/cn";
+import { OperatorAdjustmentsPanel } from "@/components/analysis/OperatorAdjustmentsPanel";
+import { ProductSnapshot } from "@/components/analysis/ProductSnapshot";
+import { QuoteBreakdownPanel } from "@/components/analysis/QuoteBreakdownPanel";
+import { PdfPreviewPanel } from "@/components/analysis/PdfPreviewPanel";
+import { QuoteActionsBar } from "@/components/analysis/QuoteActionsBar";
+import type { AnalysisResponse } from "@/components/analysis/flowTypes";
 
 type UploadState =
   | { status: "idle" }
@@ -116,6 +122,24 @@ export function OperatorBudgetClient() {
       detail: "Valor ajustado manualmente por operador.",
     }));
     return [...base, ...manual];
+  }, [detail]);
+
+  const analysisLike = useMemo<AnalysisResponse | null>(() => {
+    if (!detail) return null;
+    return {
+      productPreview: {
+        title: detail.productTitle ?? detail.filename,
+        origin: "Operador",
+        category: detail.rubro ?? undefined,
+      },
+      breakdown: {
+        totalMinUsd: detail.effective.totalToShowUsd ?? undefined,
+        totalMaxUsd: detail.effective.totalToShowUsd ?? undefined,
+        fobTotalUsd: detail.effective.fobUsd ?? undefined,
+        fleteMinUsd: detail.effective.fleteUsd ?? undefined,
+        fleteMaxUsd: detail.effective.fleteUsd ?? undefined,
+      },
+    };
   }, [detail]);
 
   async function refreshList() {
@@ -441,7 +465,14 @@ export function OperatorBudgetClient() {
         </Card>
       </div>
 
-      <div className="lg:sticky lg:top-24">
+      <div className="space-y-4 lg:sticky lg:top-24">
+        {analysisLike ? (
+          <div className="grid gap-4 md:grid-cols-2">
+            <ProductSnapshot data={analysisLike} />
+            <QuoteBreakdownPanel data={analysisLike} />
+          </div>
+        ) : null}
+        {pdfHref ? <PdfPreviewPanel href={pdfHref} /> : null}
         <Card className="border-white/10 bg-white/5">
           <div className="p-6">
             <div className="flex items-start justify-between gap-4">
@@ -518,7 +549,7 @@ export function OperatorBudgetClient() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+              <OperatorAdjustmentsPanel>
                 <div className="flex items-center justify-between gap-3">
                   <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
                     Ajustes manuales (USD)
@@ -571,7 +602,7 @@ export function OperatorBudgetClient() {
                 <div className="mt-4 text-xs leading-relaxed text-muted">
                   Estos ajustes no editan el XLSX. Se guardan como “override” y el PDF sale con los valores efectivos.
                 </div>
-              </div>
+              </OperatorAdjustmentsPanel>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                 <div className="flex items-center justify-between gap-3">
@@ -627,16 +658,8 @@ export function OperatorBudgetClient() {
                   <Icon name="refresh" size={16} className="text-white/80" />
                   Reset overrides
                 </button>
-                {pdfHref ? (
-                  <a
-                    href={pdfHref}
-                    className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 text-xs font-black uppercase tracking-[0.22em] text-white/90 hover:bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
-                  >
-                    <Icon name="download" size={16} className="text-white/80" />
-                    Exportar PDF
-                  </a>
-                ) : null}
               </div>
+              {pdfHref ? <QuoteActionsBar pdfHref={pdfHref} /> : null}
             </div>
           </div>
         </Card>

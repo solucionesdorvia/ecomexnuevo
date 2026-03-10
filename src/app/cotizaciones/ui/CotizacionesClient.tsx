@@ -211,18 +211,27 @@ export function CotizacionesClient({ quotes }: { quotes: QuoteRow[] }) {
                         {usd(total ?? null)}
                       </td>
                       <td className="px-6 py-5 text-right">
-                        <button
-                          type="button"
-                          onClick={() => toggle(row.id)}
-                          disabled={!isSelected && selected.length >= 3}
-                          className={cn(
-                            "inline-flex items-center justify-end gap-1 text-sm font-bold transition-colors",
-                            isSelected ? "text-white" : "text-primary hover:text-white"
-                          )}
-                        >
-                          {isSelected ? "Seleccionado" : "Comparar"}
-                          <Icon name="compare_arrows" size={18} className="text-current" />
-                        </button>
+                        <div className="inline-flex items-center gap-3">
+                          <Link
+                            href={`/cotizaciones/${row.id}`}
+                            className="inline-flex items-center gap-1 text-sm font-bold text-muted transition-colors hover:text-strong"
+                          >
+                            Ver detalle
+                            <Icon name="open_in_new" size={16} className="text-current" />
+                          </Link>
+                          <button
+                            type="button"
+                            onClick={() => toggle(row.id)}
+                            disabled={!isSelected && selected.length >= 3}
+                            className={cn(
+                              "inline-flex items-center justify-end gap-1 text-sm font-bold transition-colors",
+                              isSelected ? "text-white" : "text-primary hover:text-white"
+                            )}
+                          >
+                            {isSelected ? "Seleccionado" : "Comparar"}
+                            <Icon name="compare_arrows" size={18} className="text-current" />
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   );

@@ -8,6 +8,15 @@ import { Button, ButtonLink } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader } from "@/components/ui/Card";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/components/ui/cn";
+import { InputSourceSelector } from "@/components/analysis/InputSourceSelector";
+import { ProductSnapshot } from "@/components/analysis/ProductSnapshot";
+import { NormalizedDescriptionPanel } from "@/components/analysis/NormalizedDescriptionPanel";
+import { NcmClassificationPanel } from "@/components/analysis/NcmClassificationPanel";
+import { RequirementsPanel } from "@/components/analysis/RequirementsPanel";
+import { QuoteBreakdownPanel } from "@/components/analysis/QuoteBreakdownPanel";
+import { LogisticsTimeline } from "@/components/analysis/LogisticsTimeline";
+import { PdfPreviewPanel } from "@/components/analysis/PdfPreviewPanel";
+import { QuoteActionsBar } from "@/components/analysis/QuoteActionsBar";
 
 type FlowMode = "quote" | "budget";
 
@@ -172,13 +181,22 @@ function RiskBadge({ flags }: { flags: string[] }) {
   );
 }
 
-export default function QuotationFlowClient({ initialMode }: { initialMode: FlowMode }) {
+export default function QuotationFlowClient({
+  initialMode,
+  initialSource = "url",
+}: {
+  initialMode: FlowMode;
+  initialSource?: "url" | "image" | "invoice" | "text";
+}) {
   const [mode, setMode] = useState<FlowMode>(initialMode);
   const [pending, setPending] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([]);
   const [data, setData] = useState<ServerResponse | null>(null);
 
   const [input, setInput] = useState("");
+  const [sourceType, setSourceType] = useState<"url" | "image" | "invoice" | "text">(initialSource);
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [invoiceFile, setInvoiceFile] = useState<File | null>(null);
   const [qty, setQty] = useState<string>("");
   const [unitPrice, setUnitPrice] = useState<string>("");
   const [origin, setOrigin] = useState("");
@@ -223,7 +241,12 @@ export default function QuotationFlowClient({ initialMode }: { initialMode: Flow
     const baseText =
       mode === "budget"
         ? `Presupuesto: USD ${String(budgetUsd || "").trim()}`
-        : String(input || "").trim();
+        : String(input || "").trim() ||
+          (sourceType === "image" && imageFile
+            ? `[SOURCE_IMAGE] ${imageFile.name}`
+            : sourceType === "invoice" && invoiceFile
+              ? `[SOURCE_INVOICE] ${invoiceFile.name}`
+              : "");
     if (!baseText) return;
 
     const extra: string[] = [];
@@ -363,12 +386,20 @@ export default function QuotationFlowClient({ initialMode }: { initialMode: Flow
               <CardContent className="space-y-4">
                 {mode === "quote" ? (
                   <>
-                    <textarea
-                      value={input}
-                      onChange={(e) => setInput(e.target.value)}
-                      placeholder="Pegá el link del proveedor o describí el producto (marca, material, uso, modelo)."
-                      className="min-h-[96px] w-full resize-none rounded-2xl border border-subtle bg-[var(--surface)] px-4 py-3 text-sm text-strong outline-none placeholder:text-muted/70 focus:border-[color:color-mix(in_oklab,var(--primary)_42%,white_8%)] focus:ring-2 focus:ring-[var(--ring)]"
+                    <InputSourceSelector
+                      sourceType={sourceType}
+                      onSourceTypeChange={setSourceType}
+                      sourceValue={input}
+                      onSourceValueChange={setInput}
+                      onImageSelected={setImageFile}
+                      onInvoiceSelected={setInvoiceFile}
                     />
+                    {imageFile ? (
+                      <div className="text-xs text-muted">Imagen seleccionada: {imageFile.name}</div>
+                    ) : null}
+                    {invoiceFile ? (
+                      <div className="text-xs text-muted">Factura/Proforma seleccionada: {invoiceFile.name}</div>
+                    ) : null}
 
                     <button
                       type="button"
@@ -620,6 +651,22 @@ export default function QuotationFlowClient({ initialMode }: { initialMode: Flow
                       </Card>
                     </div>
                   ) : null}
+
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <ProductSnapshot data={data} />
+                    <NormalizedDescriptionPanel text={data.analysis?.normalizedTitle ?? data.productPreview?.title ?? ""} />
+                    <NcmClassificationPanel data={data} />
+                    <RequirementsPanel data={data} />
+                    <QuoteBreakdownPanel data={data} />
+                    <LogisticsTimeline data={data} />
+                    <PdfPreviewPanel href={pdfHref} />
+                    <Card>
+                      <CardHeader eyebrow="ACCIONES" title="Quote actions" icon="checklist" />
+                      <CardContent>
+                        <QuoteActionsBar pdfHref={pdfHref} />
+                      </CardContent>
+                    </Card>
+                  </div>
                 </motion.div>
               ) : null}
             </AnimatePresence>

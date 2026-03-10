@@ -1,6 +1,14 @@
+import ContainerVideo from "@/components/ContainerVideo";
+
 export default function LandingContainerGate() {
   return (
     <div className="relative flex min-h-screen flex-col overflow-x-hidden bg-[var(--bg)] text-[var(--text)]">
+      <div className="absolute inset-0 -z-10">
+        <ContainerVideo
+          overlayClassName="bg-[linear-gradient(180deg,rgba(5,10,22,0.48)_0%,rgba(5,10,22,0.82)_70%,rgba(5,10,22,0.94)_100%)]"
+          showMissingNotice
+        />
+      </div>
       <header className="fixed top-0 z-[100] w-full px-6 py-6 lg:px-20">
         <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-[var(--border)] bg-[var(--surface)] px-8 py-3 shadow-2xl backdrop-blur-xl">
           <div className="flex items-center gap-3">
@@ -65,6 +73,19 @@ export default function LandingContainerGate() {
             <a href="/account" className="rounded-full border border-[var(--border)] bg-white/5 px-10 py-5 text-sm font-black tracking-widest uppercase text-white backdrop-blur-md transition-all hover:bg-white/10">
               Explorar Ecosistema
             </a>
+          </div>
+          <div className="mx-auto mt-8 grid max-w-4xl grid-cols-2 gap-2 text-left md:grid-cols-4">
+            {[
+              ["URL de producto", "/cotizar?source=url", "link"],
+              ["Imagen de producto", "/cotizar?source=image", "image"],
+              ["Factura / Proforma", "/cotizar?source=invoice", "description"],
+              ["Descripci?n libre", "/cotizar?source=text", "edit_note"],
+            ].map(([label, href, icon]) => (
+              <a key={label} href={href} className="inline-flex items-center gap-2 rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2 text-xs font-bold text-muted hover:text-strong">
+                <span className="material-symbols-outlined text-sm">{icon}</span>
+                {label}
+              </a>
+            ))}
           </div>
         </div>
       </section>
