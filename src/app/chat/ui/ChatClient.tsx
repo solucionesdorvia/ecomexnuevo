@@ -9,6 +9,7 @@ import { ProgressRing } from "@/components/ui/ProgressRing";
 import { SealVerified } from "@/components/ui/SealVerified";
 import { cn } from "@/components/ui/cn";
 import { Icon } from "@/components/ui/Icon";
+import { BrandLogo } from "@/components/BrandLogo";
 
 type ChatMode = "quote" | "budget";
 type Role = "user" | "assistant";
@@ -597,8 +598,8 @@ export default function ChatClient({
       <div className="flex h-full flex-col justify-between p-6">
         <div className="flex flex-col gap-8">
           <Link href="/" className="flex items-center gap-3" onClick={() => setNavDrawerOpen(false)}>
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-              <Icon name="dataset" size={18} className="text-current" />
+            <div className="rounded-lg bg-white px-2 py-1 shadow-sm">
+              <BrandLogo className="h-6" />
             </div>
             <div className="flex flex-col">
               <h1 className="text-base font-bold tracking-tight">E‑COMEX</h1>
@@ -844,8 +845,8 @@ export default function ChatClient({
               <Icon name="menu" size={18} className="text-white/80" />
             </button>
             <div className="flex min-w-0 h-10 items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Icon name="dataset" size={18} className="text-current" />
+              <div className="rounded-lg bg-white px-2 py-1 shadow-sm">
+                <BrandLogo className="h-6" />
               </div>
               <div className="min-w-0 text-base font-bold tracking-tight sm:text-xl">
                 <span className="block truncate">

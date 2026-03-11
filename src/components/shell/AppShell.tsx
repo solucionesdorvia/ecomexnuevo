@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/Sheet";
 import { cn } from "@/components/ui/cn";
 import { Icon } from "@/components/ui/Icon";
+import { BrandLogo } from "@/components/BrandLogo";
 
 type NavKey =
   | "cotizar"
@@ -67,10 +68,9 @@ export function AppShell({
               <Icon name="menu" size={18} />
             </button>
             <Link href="/" className="flex items-center gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[color:color-mix(in_oklab,var(--primary)_16%,transparent)] text-[var(--accent)]">
-                <Icon name="dataset" size={18} />
+              <span className="rounded-lg bg-white px-2 py-1 shadow-sm">
+                <BrandLogo className="h-6" priority />
               </span>
-              <span className="text-base font-extrabold tracking-tight text-strong">E‑COMEX</span>
             </Link>
 
             <label className="hidden min-w-40 max-w-72 flex-1 md:flex">

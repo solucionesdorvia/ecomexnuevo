@@ -1,4 +1,5 @@
 import ContainerVideo from "@/components/ContainerVideo";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export default function LandingContainerGate() {
   return (
@@ -11,16 +12,8 @@ export default function LandingContainerGate() {
       </div>
       <header className="fixed top-0 z-[100] w-full px-6 py-6 lg:px-20">
         <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-[var(--border)] bg-[var(--surface)] px-8 py-3 shadow-2xl backdrop-blur-xl">
-          <div className="flex items-center gap-3">
-            <div className="text-[var(--primary)]">
-              <svg className="h-7 w-7" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            <span className="text-lg font-black tracking-tighter text-white">E-COMEX</span>
+          <div className="rounded-lg bg-white px-3 py-1.5 shadow-sm">
+            <BrandLogo className="h-7" priority />
           </div>
           <nav className="hidden items-center gap-12 md:flex">
             <a className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-colors hover:text-white" href="#sistema">SISTEMA</a>
@@ -247,16 +240,8 @@ export default function LandingContainerGate() {
       <footer className="border-t border-[var(--border)] bg-[var(--bg)] px-6 pt-24 pb-12 lg:px-20">
         <div className="mx-auto mb-20 grid max-w-7xl grid-cols-1 gap-20 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <div className="mb-8 flex items-center gap-3">
-              <div className="text-[var(--primary)]">
-                <svg className="h-8 w-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-              <span className="text-2xl font-black tracking-tighter text-white">E-COMEX</span>
+            <div className="mb-8 w-fit rounded-lg bg-white px-3 py-2 shadow-sm">
+              <BrandLogo className="h-8" />
             </div>
             <p className="max-w-sm text-lg leading-relaxed font-light text-slate-500">
               Liderando la vanguardia del comercio internacional a traves de inteligencia tecnologica y vision humana.

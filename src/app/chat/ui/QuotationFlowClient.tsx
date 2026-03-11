@@ -17,6 +17,7 @@ import { QuoteBreakdownPanel } from "@/components/analysis/QuoteBreakdownPanel";
 import { LogisticsTimeline } from "@/components/analysis/LogisticsTimeline";
 import { PdfPreviewPanel } from "@/components/analysis/PdfPreviewPanel";
 import { QuoteActionsBar } from "@/components/analysis/QuoteActionsBar";
+import { BrandLogo } from "@/components/BrandLogo";
 
 type FlowMode = "quote" | "budget";
 
@@ -310,8 +311,8 @@ export default function QuotationFlowClient({
         <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-6 py-4">
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Icon name="dataset" size={18} className="text-current" />
+              <div className="rounded-lg bg-white px-2 py-1 shadow-sm">
+                <BrandLogo className="h-6" />
               </div>
               <div className="flex flex-col leading-tight">
                 <div className="text-sm font-extrabold tracking-tight">
