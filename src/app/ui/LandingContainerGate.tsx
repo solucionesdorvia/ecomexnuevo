@@ -48,7 +48,10 @@ export default function LandingContainerGate() {
               Tecnologia y experiencia para analizar importaciones.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-              Pega un link, subi una foto o una factura y obtene clasificacion NCM, requisitos y costos estimados en minutos.
+              Pega un link, subi una foto o una factura y obtene clasificacion NCM, requisitos regulatorios y costos estimados de importacion en minutos.
+            </p>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300">
+              E-COMEX combina experiencia en comercio exterior con herramientas tecnologicas disenadas para analizar productos antes de importar.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
@@ -71,7 +74,7 @@ export default function LandingContainerGate() {
               <div className="flex flex-col gap-3 md:flex-row">
                 <input
                   readOnly
-                  value="Pega un link de producto o subi una imagen"
+                  value="Pega un link de producto o subi una imagen para comenzar el analisis."
                   className="h-11 flex-1 rounded-lg border border-white/10 bg-[color:color-mix(in_oklab,var(--bg)_72%,transparent)] px-3 text-sm text-slate-200"
                 />
                 <div className="flex gap-2">
@@ -82,7 +85,7 @@ export default function LandingContainerGate() {
                     Imagen
                   </a>
                   <a className="rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold text-slate-200" href="/cotizar?source=invoice">
-                    Factura
+                    Factura / Proforma
                   </a>
                 </div>
               </div>
@@ -96,13 +99,13 @@ export default function LandingContainerGate() {
           <h2 className="text-3xl font-black text-white md:text-4xl">Que es E-COMEX</h2>
           <div className="mt-8 space-y-5 text-lg leading-relaxed text-slate-300">
             <p>
-              E-COMEX es una plataforma de inteligencia para comercio exterior que combina experiencia profesional con herramientas tecnologicas para analizar productos antes de importarlos.
+              E-COMEX es una plataforma de inteligencia aplicada al comercio exterior que combina experiencia profesional con herramientas tecnologicas para analizar productos antes de importarlos.
             </p>
             <p>
-              Nuestro sistema permite evaluar operaciones de importacion de forma rapida y estructurada, identificando clasificacion arancelaria, regulaciones y costos estimados.
+              Nuestro sistema permite evaluar operaciones de importacion de forma rapida y estructurada, identificando clasificacion arancelaria, requisitos regulatorios y estimaciones de costos logisticos y fiscales.
             </p>
             <p>
-              E-COMEX nace a partir de anios de experiencia en comercio internacional y del desarrollo de herramientas digitales que facilitan la toma de decisiones en cada operacion.
+              La plataforma nace a partir de anios de experiencia en comercio internacional y del desarrollo de herramientas digitales que ayudan a empresas, importadores y operadores a tomar decisiones mas informadas en cada operacion.
             </p>
           </div>
         </div>
@@ -115,22 +118,44 @@ export default function LandingContainerGate() {
             {[
               {
                 title: "1. Cargas un producto",
-                text: "Podes comenzar pegando un link, subiendo una foto, una factura/proforma o describiendo el producto.",
+                text: "Podes iniciar el analisis de distintas maneras:",
+                details: [
+                  "pegando un link de producto",
+                  "subiendo una imagen",
+                  "cargando una factura o proforma",
+                  "describiendo el producto manualmente",
+                ],
                 icon: "upload_file",
               },
               {
                 title: "2. El sistema analiza el producto",
-                text: "E-COMEX extrae informacion como titulo, descripcion, imagenes, precio y proveedor.",
+                text: "E-COMEX procesa la informacion disponible y extrae datos relevantes como:",
+                details: [
+                  "titulo del producto",
+                  "descripcion tecnica",
+                  "imagenes",
+                  "precio estimado",
+                  "proveedor o fuente",
+                ],
+                note: "Esta informacion se organiza para iniciar el analisis de importacion.",
                 icon: "search",
               },
               {
                 title: "3. Clasificacion arancelaria",
-                text: "La plataforma sugiere una posicion NCM y detecta requisitos regulatorios asociados.",
+                text: "La plataforma sugiere una posicion arancelaria (NCM) en base a la descripcion del producto y diferentes fuentes de informacion.",
+                note: "Ademas identifica posibles requisitos regulatorios, organismos involucrados y normativas aplicables.",
                 icon: "rule",
               },
               {
                 title: "4. Cotizacion estimada",
-                text: "Se genera una estimacion del costo de importacion con impuestos, logistica y tiempos aproximados.",
+                text: "El sistema genera una estimacion del costo de importacion considerando:",
+                details: [
+                  "impuestos",
+                  "logistica internacional",
+                  "costos operativos",
+                  "tiempos estimados de operacion",
+                ],
+                note: "Esto permite evaluar la viabilidad de la operacion antes de realizar la compra.",
                 icon: "calculate",
               },
             ].map((step) => (
@@ -140,6 +165,14 @@ export default function LandingContainerGate() {
                 </div>
                 <h3 className="text-xl font-extrabold text-white">{step.title}</h3>
                 <p className="mt-3 text-slate-400">{step.text}</p>
+                {"details" in step && Array.isArray(step.details) ? (
+                  <ul className="mt-3 space-y-1 text-sm text-slate-300">
+                    {step.details.map((d) => (
+                      <li key={d}>- {d}</li>
+                    ))}
+                  </ul>
+                ) : null}
+                {"note" in step && step.note ? <p className="mt-3 text-sm text-slate-300">{step.note}</p> : null}
               </div>
             ))}
           </div>
@@ -149,16 +182,19 @@ export default function LandingContainerGate() {
       <section id="plataforma" className="py-24">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="text-center text-3xl font-black text-white md:text-4xl">Plataforma E-COMEX</h2>
+          <p className="mx-auto mt-4 max-w-4xl text-center text-lg text-slate-300">
+            Una herramienta disenada para analizar operaciones de comercio exterior antes de importar.
+          </p>
           <p className="mt-3 text-center text-slate-400">
-            Una herramienta para analizar productos antes de importarlos.
+            La plataforma centraliza informacion clave y permite evaluar productos desde distintas fuentes para facilitar la toma de decisiones.
           </p>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
             {[
               ["Analisis de producto", "Identificacion automatica de informacion del producto a partir de links, imagenes o documentos.", "search"],
-              ["Clasificacion arancelaria", "Estimacion de NCM con base en descripcion tecnica y bases de datos.", "list_alt"],
-              ["Requisitos regulatorios", "Identificacion de posibles organismos y certificaciones aplicables.", "policy"],
-              ["Estimacion de costos", "Calculo estructurado de impuestos, logistica y costos totales de importacion.", "monetization_on"],
-              ["Generacion de reportes", "Creacion de informes profesionales para evaluar operaciones.", "insert_chart"],
+              ["Clasificacion arancelaria", "Estimacion de la posicion NCM basada en descripciones tecnicas y bases de datos de comercio exterior.", "list_alt"],
+              ["Requisitos regulatorios", "Identificacion de posibles organismos, certificaciones y requisitos legales asociados a la importacion del producto.", "policy"],
+              ["Estimacion de costos", "Calculo estructurado de impuestos, logistica internacional y costos totales estimados de importacion.", "monetization_on"],
+              ["Generacion de reportes", "Creacion de informes profesionales que permiten analizar operaciones y compartir la informacion con equipos o clientes.", "insert_chart"],
             ].map(([title, text, icon]) => (
               <div key={title} className="rounded-xl border border-white/10 bg-white/5 p-5">
                 <span className="material-symbols-outlined text-[var(--accent)]">{icon}</span>
@@ -173,7 +209,15 @@ export default function LandingContainerGate() {
       <section id="demo" className="bg-primary/5 py-24">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="text-center text-3xl font-black text-white md:text-4xl">Demo del sistema</h2>
-          <p className="mt-3 text-center text-slate-400">Analisis de producto, clasificacion NCM, costos, operador y reporte PDF.</p>
+          <p className="mt-3 text-center text-slate-400">
+            La plataforma E-COMEX permite visualizar cada operacion de forma estructurada.
+          </p>
+          <p className="mt-2 text-center text-slate-400">
+            El sistema integra distintos modulos de analisis para evaluar un producto antes de importar.
+          </p>
+          <p className="mt-6 text-center text-sm font-black uppercase tracking-[0.12em] text-slate-300">
+            Modulos principales
+          </p>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
             {[
               "Analisis de producto",
@@ -195,7 +239,10 @@ export default function LandingContainerGate() {
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="text-3xl font-black text-white md:text-4xl">Panel operador</h2>
           <p className="mt-4 text-lg text-slate-400">
-            E-COMEX tambien permite a operadores y consultores generar presupuestos de importacion de forma automatizada.
+            E-COMEX tambien incorpora herramientas pensadas para operadores y consultores de comercio exterior.
+          </p>
+          <p className="mt-2 text-lg text-slate-400">
+            El panel operador permite generar presupuestos de importacion de forma automatizada y estructurada.
           </p>
           <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
             {[
@@ -216,23 +263,27 @@ export default function LandingContainerGate() {
 
       <section id="servicios" className="bg-primary/5 py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl font-black text-white md:text-4xl">Servicios de E-COMEX</h2>
+          <h2 className="text-3xl font-black text-white md:text-4xl">Servicios E-COMEX</h2>
           <p className="mt-4 text-lg text-slate-400">
             Ademas de la plataforma tecnologica, E-COMEX cuenta con un equipo de especialistas que asesora operaciones de comercio exterior.
           </p>
+          <p className="mt-6 text-sm font-black uppercase tracking-[0.12em] text-slate-300">Nuestros servicios incluyen:</p>
           <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {[
               "Clasificacion arancelaria",
-              "Logistica inteligente",
-              "Desarrollo de proveedores",
+              "Logistica internacional inteligente",
+              "Desarrollo de proveedores y productos",
               "Consultoria en comercio exterior",
-              "Analisis de costos de importacion",
+              "Analisis de costos de importacion y exportacion",
             ].map((service) => (
               <div key={service} className="rounded-xl border border-white/10 bg-white/5 p-4 text-slate-200">
                 {service}
               </div>
             ))}
           </div>
+          <p className="mt-8 text-slate-400">
+            La combinacion de experiencia profesional y herramientas tecnologicas permite optimizar cada operacion.
+          </p>
         </div>
       </section>
 
@@ -255,6 +306,9 @@ export default function LandingContainerGate() {
               </div>
             ))}
           </div>
+          <p className="mt-6 text-center text-slate-400">
+            E-COMEX permite analizar operaciones con mayor velocidad, estructura y claridad.
+          </p>
         </div>
       </section>
 
@@ -278,6 +332,8 @@ export default function LandingContainerGate() {
       <section id="contacto" className="py-24">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="text-3xl font-black text-white md:text-4xl">Contacto</h2>
+          <p className="mt-4 text-lg text-slate-400">Queres conocer mas sobre E-COMEX o evaluar una operacion?</p>
+          <p className="mt-1 text-slate-400">Dejanos tus datos y nos pondremos en contacto.</p>
           <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
             <form className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <div className="grid gap-4">
@@ -307,7 +363,11 @@ export default function LandingContainerGate() {
               <div className="mt-6 space-y-4 text-slate-300">
                 <p className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-[var(--primary)]">location_on</span>
-                  Av. Comercio Exterior 123, Buenos Aires
+                  Av. Comercio Exterior 123
+                </p>
+                <p className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-[var(--primary)]">location_city</span>
+                  Buenos Aires, Argentina
                 </p>
                 <p className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-[var(--primary)]">call</span>
@@ -325,13 +385,13 @@ export default function LandingContainerGate() {
 
       <footer className="border-t border-white/5 bg-[var(--bg)] py-16">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-5">
+          <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-6">
             <div className="md:col-span-2">
               <div className="mb-6 w-fit rounded-lg bg-white px-3 py-1.5 shadow-sm">
                 <BrandLogo className="h-6" />
               </div>
               <p className="text-sm leading-relaxed text-slate-500">
-                E-COMEX une tecnologia y experiencia profesional para decisiones mas seguras en comercio exterior.
+                E-COMEX combina tecnologia y experiencia profesional para mejorar la toma de decisiones en operaciones de comercio exterior.
               </p>
             </div>
             <div>
@@ -362,6 +422,12 @@ export default function LandingContainerGate() {
               </a>
               <a className="block py-1 text-sm text-slate-500 hover:text-white" href="#contacto">
                 Contacto
+              </a>
+            </div>
+            <div>
+              <h3 className="mb-4 font-bold text-white">Contacto</h3>
+              <a className="block py-1 text-sm text-slate-500 hover:text-white" href="#contacto">
+                Formulario
               </a>
             </div>
           </div>
