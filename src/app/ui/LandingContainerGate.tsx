@@ -6,7 +6,7 @@ export default function LandingContainerGate() {
     <div className="bg-app text-strong">
       <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-[color:color-mix(in_oklab,var(--bg)_76%,transparent)] backdrop-blur-xl">
         <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6">
-          <div className="rounded-lg bg-white px-3 py-1.5 shadow-sm shadow-black/20">
+          <div>
             <BrandLogo className="h-6" priority />
           </div>
           <nav className="hidden items-center gap-7 md:flex">
@@ -387,7 +387,7 @@ export default function LandingContainerGate() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-6">
             <div className="md:col-span-2">
-              <div className="mb-6 w-fit rounded-lg bg-white px-3 py-1.5 shadow-sm">
+              <div className="mb-6 w-fit">
                 <BrandLogo className="h-6" />
               </div>
               <p className="text-sm leading-relaxed text-slate-500">
