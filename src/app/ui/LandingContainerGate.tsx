@@ -19,8 +19,8 @@ export default function LandingContainerGate() {
             <a className="text-sm font-semibold text-slate-300 transition-colors hover:text-[var(--accent)]" href="#como-funciona">
               Como funciona
             </a>
-            <a className="text-sm font-semibold text-slate-300 transition-colors hover:text-[var(--accent)]" href="#plataforma">
-              Plataforma
+            <a className="text-sm font-semibold text-slate-300 transition-colors hover:text-[var(--accent)]" href="#servicios">
+              Servicios
             </a>
             <a className="text-sm font-semibold text-slate-300 transition-colors hover:text-[var(--accent)]" href="#contacto">
               Contacto
@@ -30,7 +30,7 @@ export default function LandingContainerGate() {
             href="#contacto"
             className="rounded-lg bg-[var(--primary)] px-6 py-2.5 text-sm font-extrabold text-white transition-all hover:brightness-110"
           >
-            Solicitar acceso
+            Hablar con un especialista
           </a>
         </div>
       </header>
@@ -45,20 +45,20 @@ export default function LandingContainerGate() {
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-black leading-[1.06] tracking-tight text-white md:text-7xl">
-              Tecnologia y experiencia para analizar importaciones.
+              Experiencia real en comercio exterior, potenciada con tecnologia.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-              Pega un link, subi una foto o una factura y obtene clasificacion NCM, requisitos regulatorios y costos estimados de importacion en minutos.
+              Acompanamos a importadores y empresas con servicios profesionales para clasificar productos, validar requisitos regulatorios y estructurar costos de importacion.
             </p>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300">
-              E-COMEX combina experiencia en comercio exterior con herramientas tecnologicas disenadas para analizar productos antes de importar.
+              E-COMEX combina experiencia operativa en mercado exterior con herramientas digitales para tomar mejores decisiones antes de cerrar una compra.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="#contacto"
+                href="#servicios"
                 className="rounded-lg bg-[var(--primary)] px-8 py-4 font-extrabold text-white transition-all hover:shadow-[0_0_20px_rgba(92,92,255,0.4)]"
               >
-                Solicitar acceso
+                Conocer servicios
               </a>
               <a
                 href="#que-es"
@@ -69,7 +69,7 @@ export default function LandingContainerGate() {
             </div>
             <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
               <div className="mb-2 text-xs font-black uppercase tracking-[0.15em] text-slate-300">
-                Entrada opcional
+                Plataforma (adicional opcional)
               </div>
               <div className="flex flex-col gap-3 md:flex-row">
                 <input
@@ -99,13 +99,13 @@ export default function LandingContainerGate() {
           <h2 className="text-3xl font-black text-white md:text-4xl">Que es E-COMEX</h2>
           <div className="mt-8 space-y-5 text-lg leading-relaxed text-slate-300">
             <p>
-              E-COMEX es una plataforma de inteligencia aplicada al comercio exterior que combina experiencia profesional con herramientas tecnologicas para analizar productos antes de importarlos.
+              E-COMEX es un equipo especializado en comercio exterior que combina experiencia profesional con herramientas tecnologicas para analizar productos antes de importarlos.
             </p>
             <p>
-              Nuestro sistema permite evaluar operaciones de importacion de forma rapida y estructurada, identificando clasificacion arancelaria, requisitos regulatorios y estimaciones de costos logisticos y fiscales.
+              Brindamos servicios de clasificacion arancelaria, analisis regulatorio y estimacion de costos para evaluar operaciones de importacion de forma rapida y estructurada.
             </p>
             <p>
-              La plataforma nace a partir de anios de experiencia en comercio internacional y del desarrollo de herramientas digitales que ayudan a empresas, importadores y operadores a tomar decisiones mas informadas en cada operacion.
+              La plataforma nace como un complemento de nuestra experiencia en comercio internacional para ayudar a empresas, importadores y operadores a tomar decisiones mas informadas.
             </p>
           </div>
         </div>
@@ -181,20 +181,20 @@ export default function LandingContainerGate() {
 
       <section id="plataforma" className="py-24">
         <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-center text-3xl font-black text-white md:text-4xl">Plataforma E-COMEX</h2>
+          <h2 className="text-center text-3xl font-black text-white md:text-4xl">Plataforma de cotizacion instantanea</h2>
           <p className="mx-auto mt-4 max-w-4xl text-center text-lg text-slate-300">
-            Una herramienta disenada para analizar operaciones de comercio exterior antes de importar.
+            Nuestra plataforma es un adicional para acelerar el analisis tecnico de productos.
           </p>
           <p className="mt-3 text-center text-slate-400">
-            La plataforma centraliza informacion clave y permite evaluar productos desde distintas fuentes para facilitar la toma de decisiones.
+            Podes probarla para obtener una primera cotizacion estimada y luego avanzar con acompanamiento profesional de nuestro equipo.
           </p>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
             {[
-              ["Analisis de producto", "Identificacion automatica de informacion del producto a partir de links, imagenes o documentos.", "search"],
-              ["Clasificacion arancelaria", "Estimacion de la posicion NCM basada en descripciones tecnicas y bases de datos de comercio exterior.", "list_alt"],
-              ["Requisitos regulatorios", "Identificacion de posibles organismos, certificaciones y requisitos legales asociados a la importacion del producto.", "policy"],
-              ["Estimacion de costos", "Calculo estructurado de impuestos, logistica internacional y costos totales estimados de importacion.", "monetization_on"],
-              ["Generacion de reportes", "Creacion de informes profesionales que permiten analizar operaciones y compartir la informacion con equipos o clientes.", "insert_chart"],
+              ["Cotizacion instantanea", "Carga un link, imagen o documento y obtene una estimacion inicial del producto.", "search"],
+              ["Pre-clasificacion NCM", "Recibi una sugerencia de posicion arancelaria para acelerar la evaluacion.", "list_alt"],
+              ["Alertas regulatorias", "Visualiza requisitos y organismos que podrian aplicar a la importacion.", "policy"],
+              ["Estimacion de costos", "Obtene una primera aproximacion de impuestos, logistica y costos asociados.", "monetization_on"],
+              ["Reporte para revision", "Genera un resumen para revisarlo con un especialista de E-COMEX.", "insert_chart"],
             ].map(([title, text, icon]) => (
               <div key={title} className="rounded-xl border border-white/10 bg-white/5 p-5">
                 <span className="material-symbols-outlined text-[var(--accent)]">{icon}</span>
@@ -265,7 +265,7 @@ export default function LandingContainerGate() {
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="text-3xl font-black text-white md:text-4xl">Servicios E-COMEX</h2>
           <p className="mt-4 text-lg text-slate-400">
-            Ademas de la plataforma tecnologica, E-COMEX cuenta con un equipo de especialistas que asesora operaciones de comercio exterior.
+            E-COMEX cuenta con un equipo de especialistas que asesora operaciones de comercio exterior de punta a punta.
           </p>
           <p className="mt-6 text-sm font-black uppercase tracking-[0.12em] text-slate-300">Nuestros servicios incluyen:</p>
           <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -282,7 +282,7 @@ export default function LandingContainerGate() {
             ))}
           </div>
           <p className="mt-8 text-slate-400">
-            La combinacion de experiencia profesional y herramientas tecnologicas permite optimizar cada operacion.
+            La combinacion de experiencia profesional y herramientas tecnologicas permite optimizar cada operacion y reducir riesgos antes de importar.
           </p>
         </div>
       </section>
@@ -316,15 +316,15 @@ export default function LandingContainerGate() {
         <div className="absolute inset-0 z-0 bg-primary/20" />
         <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-[var(--accent)]/10 blur-[100px]" />
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-4xl font-black text-white">Toma mejores decisiones antes de importar.</h2>
+          <h2 className="text-4xl font-black text-white">Experiencia profesional + plataforma cuando la necesites.</h2>
           <p className="mt-6 text-xl text-slate-300">
-            Analiza productos, estima costos y evalua requisitos regulatorios con E-COMEX.
+            Nuestro equipo te acompana en cada etapa y, si queres, podes probar nuestra cotizacion instantanea como primer paso.
           </p>
           <a
-            href="#contacto"
+            href="#plataforma"
             className="mt-10 inline-flex rounded-lg bg-[var(--primary)] px-10 py-4 font-extrabold text-white transition-all hover:shadow-[0_0_30px_rgba(92,92,255,0.6)]"
           >
-            Solicitar acceso
+            Proba la cotizacion instantanea
           </a>
         </div>
       </section>
