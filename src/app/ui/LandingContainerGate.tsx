@@ -27,10 +27,10 @@ export default function LandingContainerGate() {
             </a>
           </nav>
           <a
-            href="/cotizar"
+            href="#contacto"
             className="rounded-lg bg-[var(--primary)] px-6 py-2.5 text-sm font-extrabold text-white transition-all hover:brightness-110"
           >
-            Probar plataforma
+            Solicitar acceso
           </a>
         </div>
       </header>
@@ -55,10 +55,10 @@ export default function LandingContainerGate() {
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="/cotizar"
+                href="#contacto"
                 className="rounded-lg bg-[var(--primary)] px-8 py-4 font-extrabold text-white transition-all hover:shadow-[0_0_20px_rgba(92,92,255,0.4)]"
               >
-                Probar plataforma
+                Solicitar acceso
               </a>
               <a
                 href="#que-es"
@@ -78,13 +78,13 @@ export default function LandingContainerGate() {
                   className="h-11 flex-1 rounded-lg border border-white/10 bg-[color:color-mix(in_oklab,var(--bg)_72%,transparent)] px-3 text-sm text-slate-200"
                 />
                 <div className="flex gap-2">
-                  <a className="rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold text-slate-200" href="/cotizar?source=url">
+                  <a className="rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold text-slate-200" href="#contacto">
                     URL
                   </a>
-                  <a className="rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold text-slate-200" href="/cotizar?source=image">
+                  <a className="rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold text-slate-200" href="#contacto">
                     Imagen
                   </a>
-                  <a className="rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold text-slate-200" href="/cotizar?source=invoice">
+                  <a className="rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold text-slate-200" href="#contacto">
                     Factura / Proforma
                   </a>
                 </div>
@@ -321,10 +321,10 @@ export default function LandingContainerGate() {
             Analiza productos, estima costos y evalua requisitos regulatorios con E-COMEX.
           </p>
           <a
-            href="/cotizar"
+            href="#contacto"
             className="mt-10 inline-flex rounded-lg bg-[var(--primary)] px-10 py-4 font-extrabold text-white transition-all hover:shadow-[0_0_30px_rgba(92,92,255,0.6)]"
           >
-            Probar plataforma
+            Solicitar acceso
           </a>
         </div>
       </section>
