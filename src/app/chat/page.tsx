@@ -1,6 +1,5 @@
 import { redirect } from "next/navigation";
 
-export default function ChatPage() {
-  redirect("/cotizar");
+export default function ChatRedirect() {
+  redirect("/app/nueva");
 }
-

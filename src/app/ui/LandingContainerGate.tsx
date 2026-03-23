@@ -1,453 +1,373 @@
-import ContainerVideo from "@/components/ContainerVideo";
-import { BrandLogo } from "@/components/BrandLogo";
+"use client";
+
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import TopoBackground from "@/components/TopoBackground";
+
+function Reveal({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([e]) => { if (e?.isIntersecting) { setShow(true); obs.disconnect(); } }, { threshold: 0.12 });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+  return (
+    <div ref={ref} className={className} style={{
+      opacity: show ? 1 : 0,
+      transform: show ? "none" : "translateY(16px)",
+      transition: `opacity 0.6s cubic-bezier(.16,1,.3,1) ${delay}ms, transform 0.6s cubic-bezier(.16,1,.3,1) ${delay}ms`,
+    }}>{children}</div>
+  );
+}
 
 export default function LandingContainerGate() {
   return (
-    <div className="bg-app text-strong">
-      <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-[color:color-mix(in_oklab,var(--bg)_76%,transparent)] backdrop-blur-xl">
-        <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6">
-          <div>
-            <BrandLogo className="h-6" priority />
-          </div>
-          <nav className="hidden items-center gap-7 md:flex">
-            <a className="text-sm font-semibold text-slate-300 transition-colors hover:text-[var(--accent)]" href="#hero">
-              Inicio
-            </a>
-            <a className="text-sm font-semibold text-slate-300 transition-colors hover:text-[var(--accent)]" href="#que-es">
-              Que es
-            </a>
-            <a className="text-sm font-semibold text-slate-300 transition-colors hover:text-[var(--accent)]" href="#como-funciona">
-              Como funciona
-            </a>
-            <a className="text-sm font-semibold text-slate-300 transition-colors hover:text-[var(--accent)]" href="#servicios">
-              Servicios
-            </a>
-            <a className="text-sm font-semibold text-slate-300 transition-colors hover:text-[var(--accent)]" href="#contacto">
-              Contacto
-            </a>
-          </nav>
-          <a
-            href="#contacto"
-            className="rounded-lg bg-[var(--primary)] px-6 py-2.5 text-sm font-extrabold text-white transition-all hover:brightness-110"
-          >
-            Hablar con un especialista
-          </a>
-        </div>
-      </header>
+    <div className="bg-[#07111A] text-[#b0b8c9] antialiased" style={{ fontFamily: "var(--font-body, 'Inter', sans-serif)" }}>
 
-      <section id="hero" className="relative flex min-h-screen items-center overflow-hidden pt-20">
-        <div className="absolute inset-0 z-0">
-          <ContainerVideo
-            overlayClassName="bg-[linear-gradient(180deg,rgba(7,12,25,0.4)_0%,rgba(7,12,25,0.92)_100%)]"
-            showMissingNotice
-          />
+      {/* ── NAV ── */}
+      <nav className="sticky top-0 z-50 border-b border-white/[0.04] bg-[#07111A]/85 backdrop-blur-xl">
+        <div className="mx-auto flex h-14 max-w-[1100px] items-center justify-between px-6">
+          <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-6 brightness-0 invert" />
+          <div className="hidden items-center gap-8 md:flex">
+            {["Nosotros","Servicios","Plataforma","Contacto"].map((l)=>(
+              <a key={l} href={`#${l.toLowerCase()}`} className="text-[13px] text-[#555c6b] transition-colors hover:text-white">{l}</a>
+            ))}
+          </div>
+          <Link href="/login" className="relative rounded-md bg-[#2b59ff] px-5 py-[7px] text-[13px] font-medium text-white transition-all duration-200 hover:shadow-[0_0_20px_-4px_rgba(43,89,255,0.4)]">
+            Acceder
+          </Link>
         </div>
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl font-black leading-[1.06] tracking-tight text-white md:text-7xl">
-              Experiencia real en comercio exterior, potenciada con tecnologia.
+      </nav>
+
+      {/* ── HERO ── */}
+      <section className="relative overflow-hidden px-6 pb-0 pt-20 lg:pt-32">
+        <TopoBackground />
+
+        <div className="relative mx-auto max-w-[1100px]">
+          <Reveal>
+            <p className="text-[13px] font-medium text-[#2b59ff]">Servicios de importación y comercio exterior</p>
+          </Reveal>
+          <Reveal delay={60}>
+            <h1 className="mt-5 max-w-[700px] text-[clamp(2.4rem,5vw,4rem)] font-extrabold leading-[1.02] tracking-[-0.04em] text-white" style={{ fontFamily: "var(--font-display, 'Manrope', sans-serif)" }}>
+              Inteligencia de importación.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-              Acompanamos a importadores y empresas con servicios profesionales para clasificar productos, validar requisitos regulatorios y estructurar costos de importacion.
+          </Reveal>
+          <Reveal delay={120}>
+            <p className="mt-6 max-w-[500px] text-[17px] leading-[1.7] text-[#6b7280]">
+              E-COMEX nace de más de 20 años de experiencia en comercio exterior.
+              Convertimos ese conocimiento en una plataforma que automatiza en minutos
+              lo que antes llevaba horas.
             </p>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300">
-              E-COMEX combina experiencia operativa en mercado exterior con herramientas digitales para tomar mejores decisiones antes de cerrar una compra.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#servicios"
-                className="rounded-lg bg-[var(--primary)] px-8 py-4 font-extrabold text-white transition-all hover:shadow-[0_0_20px_rgba(92,92,255,0.4)]"
-              >
-                Conocer servicios
+          </Reveal>
+          <Reveal delay={180}>
+            <div className="mt-8 flex items-center gap-4">
+              <a href="#contacto" className="rounded-md bg-white px-6 py-3 text-[14px] font-medium text-[#07111A] transition-colors hover:bg-[#dde1e8]">
+                Hablar con un especialista
               </a>
-              <a
-                href="#que-es"
-                className="rounded-lg border border-white/15 bg-white/5 px-8 py-4 font-extrabold text-white backdrop-blur-sm transition-all hover:bg-white/10"
-              >
-                Conocer E-COMEX
-              </a>
+              <Link href="/app/nueva" className="text-[14px] font-medium text-[#555c6b] underline decoration-[#2b59ff]/30 underline-offset-4 transition-colors hover:text-white hover:decoration-[#2b59ff]">
+                Probar la plataforma
+              </Link>
             </div>
-            <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-              <div className="mb-2 text-xs font-black uppercase tracking-[0.15em] text-slate-300">
-                Plataforma (adicional opcional)
-              </div>
-              <div className="flex flex-col gap-3 md:flex-row">
-                <input
-                  readOnly
-                  value="Pega un link de producto o subi una imagen para comenzar el analisis."
-                  className="h-11 flex-1 rounded-lg border border-white/10 bg-[color:color-mix(in_oklab,var(--bg)_72%,transparent)] px-3 text-sm text-slate-200"
-                />
-                <div className="flex gap-2">
-                  <a className="rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold text-slate-200" href="#contacto">
-                    URL
-                  </a>
-                  <a className="rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold text-slate-200" href="#contacto">
-                    Imagen
-                  </a>
-                  <a className="rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold text-slate-200" href="#contacto">
-                    Factura / Proforma
-                  </a>
+          </Reveal>
+
+          {/* Platform mockup — the hero moment */}
+          <Reveal delay={260}>
+            <div className="relative mt-24" style={{ perspective: "1200px" }}>
+              {/* Glow behind the mockup */}
+              <div className="pointer-events-none absolute -inset-8 rounded-3xl" style={{
+                background: "radial-gradient(ellipse 70% 50% at 50% 60%, rgba(43,89,255,0.08), transparent 70%)"
+              }} />
+              <div style={{ transform: "rotateX(2deg)", transformOrigin: "center bottom" }}>
+                <div className="overflow-hidden rounded-xl border border-white/[0.06] bg-[#0B1622] shadow-[0_50px_100px_-30px_rgba(43,89,255,0.08),0_30px_60px_-20px_rgba(0,0,0,0.4)]">
+                  {/* Chrome */}
+                  <div className="flex items-center gap-2 border-b border-white/[0.04] px-4 py-2.5 bg-[#0B1622]">
+                    <div className="flex gap-1.5">
+                      <span className="h-[9px] w-[9px] rounded-full bg-[#ff5f57]" />
+                      <span className="h-[9px] w-[9px] rounded-full bg-[#febc2e]" />
+                      <span className="h-[9px] w-[9px] rounded-full bg-[#28c840]" />
+                    </div>
+                    <div className="mx-auto rounded-md bg-[#07111A] px-4 py-1 text-[11px] text-[#555c6b]">e-comex.app/analisis</div>
+                  </div>
+                  {/* App */}
+                  <div className="flex min-h-[320px]">
+                    <div className="hidden w-[48px] shrink-0 flex-col items-center gap-3 border-r border-white/[0.04] py-4 sm:flex">
+                      {[0,1,2,3].map((i)=>(
+                        <div key={i} className="h-5 w-5 rounded" style={{ background: i === 0 ? "rgba(43,89,255,0.15)" : "#0B1622" }} />
+                      ))}
+                    </div>
+                    <div className="flex flex-1 gap-4 p-5">
+                      <div className="flex-1 space-y-2.5">
+                        <div className="flex items-center gap-3 rounded-lg bg-[#0B1622] p-3">
+                          <div className="h-9 w-9 rounded bg-[#0B1622]" />
+                          <div className="flex-1"><div className="h-2.5 w-36 rounded bg-[#0B1622]" /><div className="mt-1.5 h-2 w-20 rounded bg-[#0B1622]" /></div>
+                          <span className="rounded bg-[#2b59ff]/15 px-2 py-0.5 text-[8px] font-bold text-[#2b59ff]">Analizado</span>
+                        </div>
+                        <div className="flex items-center justify-between rounded-lg bg-[#0B1622] px-4 py-2.5">
+                          <span className="text-[10px] text-[#555c6b]">NCM</span>
+                          <span className="font-mono text-[13px] font-bold text-white">8703.23.10</span>
+                        </div>
+                        <div className="grid grid-cols-3 gap-1">
+                          {[["FOB","$2,400"],["Flete","$680"],["Impuestos","$1,920"]].map(([l,v])=>(
+                            <div key={l} className="rounded-lg bg-[#0B1622] p-2.5">
+                              <p className="text-[7px] font-medium uppercase tracking-wider text-[#555c6b]">{l}</p>
+                              <p className="mt-0.5 text-[13px] font-bold text-white">{v}</p>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="rounded-lg bg-[#0B1622] p-3 border-l-2 border-[#d4a843]">
+                          <p className="text-[7px] font-medium uppercase tracking-wider text-[#555c6b]">Total puesto en Argentina</p>
+                          <p className="mt-0.5 text-[20px] font-extrabold text-[#d4a843]" style={{ fontFamily: "var(--font-display)" }}>USD 6,840</p>
+                        </div>
+                      </div>
+                      <div className="hidden w-[160px] shrink-0 space-y-2 lg:block">
+                        {[["Riesgo","Bajo","#7c3aed"],["Timing","35–55 días","#b0b8c9"],["Ruta","Marítimo","#b0b8c9"]].map(([l,v,c])=>(
+                          <div key={l} className="rounded-lg bg-[#0B1622] p-2.5">
+                            <p className="text-[7px] font-medium uppercase tracking-wider text-[#555c6b]">{l}</p>
+                            <p className="mt-0.5 text-[11px] font-bold" style={{ color: c }}>{v}</p>
+                          </div>
+                        ))}
+                        <div className="rounded bg-[#2b59ff] py-2 text-center text-[9px] font-bold text-white">Descargar PDF</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+              {/* Fade bottom */}
+              <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#07111A] to-transparent" />
             </div>
-          </div>
+          </Reveal>
+
+          <div className="h-20" />
         </div>
       </section>
 
-      <section id="que-es" className="py-24">
-        <div className="mx-auto max-w-5xl px-6">
-          <h2 className="text-3xl font-black text-white md:text-4xl">Que es E-COMEX</h2>
-          <div className="mt-8 space-y-5 text-lg leading-relaxed text-slate-300">
-            <p>
-              E-COMEX es un equipo especializado en comercio exterior que combina experiencia profesional con herramientas tecnologicas para analizar productos antes de importarlos.
-            </p>
-            <p>
-              Brindamos servicios de clasificacion arancelaria, analisis regulatorio y estimacion de costos para evaluar operaciones de importacion de forma rapida y estructurada.
-            </p>
-            <p>
-              La plataforma nace como un complemento de nuestra experiencia en comercio internacional para ayudar a empresas, importadores y operadores a tomar decisiones mas informadas.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Accent divider */}
+      <div className="mx-auto max-w-[1100px] px-6">
+        <div className="h-px" style={{ background: "linear-gradient(90deg, #2b59ff, #7c3aed, transparent)" }} />
+      </div>
 
-      <section id="como-funciona" className="bg-primary/5 py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-center text-3xl font-black text-white md:text-4xl">Como funciona</h2>
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {[
-              {
-                title: "1. Cargas un producto",
-                text: "Podes iniciar el analisis de distintas maneras:",
-                details: [
-                  "pegando un link de producto",
-                  "subiendo una imagen",
-                  "cargando una factura o proforma",
-                  "describiendo el producto manualmente",
-                ],
-                icon: "upload_file",
-              },
-              {
-                title: "2. El sistema analiza el producto",
-                text: "E-COMEX procesa la informacion disponible y extrae datos relevantes como:",
-                details: [
-                  "titulo del producto",
-                  "descripcion tecnica",
-                  "imagenes",
-                  "precio estimado",
-                  "proveedor o fuente",
-                ],
-                note: "Esta informacion se organiza para iniciar el analisis de importacion.",
-                icon: "search",
-              },
-              {
-                title: "3. Clasificacion arancelaria",
-                text: "La plataforma sugiere una posicion arancelaria (NCM) en base a la descripcion del producto y diferentes fuentes de informacion.",
-                note: "Ademas identifica posibles requisitos regulatorios, organismos involucrados y normativas aplicables.",
-                icon: "rule",
-              },
-              {
-                title: "4. Cotizacion estimada",
-                text: "El sistema genera una estimacion del costo de importacion considerando:",
-                details: [
-                  "impuestos",
-                  "logistica internacional",
-                  "costos operativos",
-                  "tiempos estimados de operacion",
-                ],
-                note: "Esto permite evaluar la viabilidad de la operacion antes de realizar la compra.",
-                icon: "calculate",
-              },
-            ].map((step) => (
-              <div key={step.title} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[color:color-mix(in_oklab,var(--primary)_22%,transparent)] text-[var(--primary)]">
-                  <span className="material-symbols-outlined">{step.icon}</span>
-                </div>
-                <h3 className="text-xl font-extrabold text-white">{step.title}</h3>
-                <p className="mt-3 text-slate-400">{step.text}</p>
-                {"details" in step && Array.isArray(step.details) ? (
-                  <ul className="mt-3 space-y-1 text-sm text-slate-300">
-                    {step.details.map((d) => (
-                      <li key={d}>- {d}</li>
-                    ))}
-                  </ul>
-                ) : null}
-                {"note" in step && step.note ? <p className="mt-3 text-sm text-slate-300">{step.note}</p> : null}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── NOSOTROS ── */}
+      <section id="nosotros" className="relative px-6 py-28 overflow-hidden">
+        <div className="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-[#7c3aed] opacity-[0.025] blur-[140px]" />
 
-      <section id="plataforma" className="py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-center text-3xl font-black text-white md:text-4xl">Plataforma de cotizacion instantanea</h2>
-          <p className="mx-auto mt-4 max-w-4xl text-center text-lg text-slate-300">
-            Nuestra plataforma es un adicional para acelerar el analisis tecnico de productos.
-          </p>
-          <p className="mt-3 text-center text-slate-400">
-            Podes probarla para obtener una primera cotizacion estimada y luego avanzar con acompanamiento profesional de nuestro equipo.
-          </p>
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
-            {[
-              ["Cotizacion instantanea", "Carga un link, imagen o documento y obtene una estimacion inicial del producto.", "search"],
-              ["Pre-clasificacion NCM", "Recibi una sugerencia de posicion arancelaria para acelerar la evaluacion.", "list_alt"],
-              ["Alertas regulatorias", "Visualiza requisitos y organismos que podrian aplicar a la importacion.", "policy"],
-              ["Estimacion de costos", "Obtene una primera aproximacion de impuestos, logistica y costos asociados.", "monetization_on"],
-              ["Reporte para revision", "Genera un resumen para revisarlo con un especialista de E-COMEX.", "insert_chart"],
-            ].map(([title, text, icon]) => (
-              <div key={title} className="rounded-xl border border-white/10 bg-white/5 p-5">
-                <span className="material-symbols-outlined text-[var(--accent)]">{icon}</span>
-                <h3 className="mt-3 font-extrabold text-white">{title}</h3>
-                <p className="mt-2 text-sm text-slate-400">{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="demo" className="bg-primary/5 py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-center text-3xl font-black text-white md:text-4xl">Demo del sistema</h2>
-          <p className="mt-3 text-center text-slate-400">
-            La plataforma E-COMEX permite visualizar cada operacion de forma estructurada.
-          </p>
-          <p className="mt-2 text-center text-slate-400">
-            El sistema integra distintos modulos de analisis para evaluar un producto antes de importar.
-          </p>
-          <p className="mt-6 text-center text-sm font-black uppercase tracking-[0.12em] text-slate-300">
-            Modulos principales
-          </p>
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
-            {[
-              "Analisis de producto",
-              "Clasificacion NCM",
-              "Desglose de costos",
-              "Panel operador",
-              "Reporte PDF",
-            ].map((title) => (
-              <div key={title} className="rounded-xl border border-white/10 bg-white/5 p-3">
-                <div className="mb-3 h-32 rounded-lg bg-[linear-gradient(140deg,color-mix(in_oklab,var(--primary)_28%,transparent),color-mix(in_oklab,var(--accent)_28%,transparent))]" />
-                <h3 className="text-center text-sm font-extrabold text-white">{title}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="panel-operador" className="py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl font-black text-white md:text-4xl">Panel operador</h2>
-          <p className="mt-4 text-lg text-slate-400">
-            E-COMEX tambien incorpora herramientas pensadas para operadores y consultores de comercio exterior.
-          </p>
-          <p className="mt-2 text-lg text-slate-400">
-            El panel operador permite generar presupuestos de importacion de forma automatizada y estructurada.
-          </p>
-          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-            {[
-              "Carga de Excel con estructuras de costos",
-              "Carga de fotos o facturas",
-              "Generacion automatica de presupuestos",
-              "Ajustes manuales",
-              "Exportacion de reportes en PDF",
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4">
-                <span className="material-symbols-outlined text-[var(--primary)]">check_circle</span>
-                <span className="text-slate-300">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="servicios" className="bg-primary/5 py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl font-black text-white md:text-4xl">Servicios E-COMEX</h2>
-          <p className="mt-4 text-lg text-slate-400">
-            E-COMEX cuenta con un equipo de especialistas que asesora operaciones de comercio exterior de punta a punta.
-          </p>
-          <p className="mt-6 text-sm font-black uppercase tracking-[0.12em] text-slate-300">Nuestros servicios incluyen:</p>
-          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              "Clasificacion arancelaria",
-              "Logistica internacional inteligente",
-              "Desarrollo de proveedores y productos",
-              "Consultoria en comercio exterior",
-              "Analisis de costos de importacion y exportacion",
-            ].map((service) => (
-              <div key={service} className="rounded-xl border border-white/10 bg-white/5 p-4 text-slate-200">
-                {service}
-              </div>
-            ))}
-          </div>
-          <p className="mt-8 text-slate-400">
-            La combinacion de experiencia profesional y herramientas tecnologicas permite optimizar cada operacion y reducir riesgos antes de importar.
-          </p>
-        </div>
-      </section>
-
-      <section id="diferencial" className="py-24">
-        <div className="mx-auto max-w-5xl px-6">
-          <h2 className="text-center text-3xl font-black text-white md:text-4xl">Diferencial</h2>
-          <div className="mt-10 overflow-hidden rounded-2xl border border-white/10">
-            <div className="grid grid-cols-2 bg-white/5 text-sm font-black uppercase tracking-[0.12em] text-slate-300">
-              <div className="border-r border-white/10 p-4 text-center">Metodo tradicional</div>
-              <div className="p-4 text-center">E-COMEX</div>
-            </div>
-            {[
-              ["Consultas manuales", "Analisis automatizado"],
-              ["Dias de analisis", "Minutos"],
-              ["Estimaciones informales", "Reportes estructurados"],
-            ].map(([left, right]) => (
-              <div key={left} className="grid grid-cols-2 border-t border-white/10 bg-[color:color-mix(in_oklab,var(--bg)_72%,transparent)]">
-                <div className="border-r border-white/10 p-4 text-slate-400">{left}</div>
-                <div className="p-4 font-semibold text-slate-100">{right}</div>
-              </div>
-            ))}
-          </div>
-          <p className="mt-6 text-center text-slate-400">
-            E-COMEX permite analizar operaciones con mayor velocidad, estructura y claridad.
-          </p>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden py-24">
-        <div className="absolute inset-0 z-0 bg-primary/20" />
-        <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-[var(--accent)]/10 blur-[100px]" />
-        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-4xl font-black text-white">Experiencia profesional + plataforma cuando la necesites.</h2>
-          <p className="mt-6 text-xl text-slate-300">
-            Nuestro equipo te acompana en cada etapa y, si queres, podes probar nuestra cotizacion instantanea como primer paso.
-          </p>
-          <a
-            href="#plataforma"
-            className="mt-10 inline-flex rounded-lg bg-[var(--primary)] px-10 py-4 font-extrabold text-white transition-all hover:shadow-[0_0_30px_rgba(92,92,255,0.6)]"
-          >
-            Proba la cotizacion instantanea
-          </a>
-        </div>
-      </section>
-
-      <section id="contacto" className="py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl font-black text-white md:text-4xl">Contacto</h2>
-          <p className="mt-4 text-lg text-slate-400">Queres conocer mas sobre E-COMEX o evaluar una operacion?</p>
-          <p className="mt-1 text-slate-400">Dejanos tus datos y nos pondremos en contacto.</p>
-          <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
-            <form className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <div className="grid gap-4">
-                <label className="grid gap-1 text-sm text-slate-300">
-                  Nombre
-                  <input className="h-11 rounded-lg border border-white/10 bg-[var(--surface)] px-3 text-sm text-white" />
-                </label>
-                <label className="grid gap-1 text-sm text-slate-300">
-                  Empresa
-                  <input className="h-11 rounded-lg border border-white/10 bg-[var(--surface)] px-3 text-sm text-white" />
-                </label>
-                <label className="grid gap-1 text-sm text-slate-300">
-                  Email
-                  <input type="email" className="h-11 rounded-lg border border-white/10 bg-[var(--surface)] px-3 text-sm text-white" />
-                </label>
-                <label className="grid gap-1 text-sm text-slate-300">
-                  Consulta
-                  <textarea className="min-h-[120px] rounded-lg border border-white/10 bg-[var(--surface)] p-3 text-sm text-white" />
-                </label>
-                <button type="button" className="rounded-lg bg-[var(--primary)] py-3 font-bold text-white">
-                  Enviar consulta
-                </button>
-              </div>
-            </form>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <h3 className="text-xl font-extrabold text-white">Datos de contacto</h3>
-              <div className="mt-6 space-y-4 text-slate-300">
-                <p className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-[var(--primary)]">location_on</span>
-                  Av. Comercio Exterior 123
-                </p>
-                <p className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-[var(--primary)]">location_city</span>
-                  Buenos Aires, Argentina
-                </p>
-                <p className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-[var(--primary)]">call</span>
-                  +54 11 5555-0000
-                </p>
-                <p className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-[var(--primary)]">mail</span>
-                  inteligencia@e-comex.com
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer className="border-t border-white/5 bg-[var(--bg)] py-16">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-6">
-            <div className="md:col-span-2">
-              <div className="mb-6 w-fit">
-                <BrandLogo className="h-6" />
-              </div>
-              <p className="text-sm leading-relaxed text-slate-500">
-                E-COMEX combina tecnologia y experiencia profesional para mejorar la toma de decisiones en operaciones de comercio exterior.
+        <div className="mx-auto max-w-[1100px]">
+          {/* Intro */}
+          <Reveal>
+            <div className="max-w-[600px]">
+              <p className="text-[13px] font-medium text-[#7c3aed]">Nosotros</p>
+              <h2 className="mt-4 text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-white" style={{ fontFamily: "var(--font-display)" }}>
+                ¿Para qué nacimos?
+              </h2>
+              <p className="mt-5 text-[15px] leading-[1.75] text-[#b0b8c9]">
+                Nacimos con el firme propósito de brindarles a nuestros clientes un mejor entorno para sus operaciones de comercio exterior. Nos distingue nuestro compromiso con importadores y exportadores, basado en la asociatividad de servicios especializados y un gran grupo profesional, fuertemente involucrado en cada proceso.
               </p>
             </div>
-            <div>
-              <h3 className="mb-4 font-bold text-white">Nosotros</h3>
-              <a className="block py-1 text-sm text-slate-500 hover:text-white" href="#que-es">
-                Que es E-COMEX
-              </a>
-              <a className="block py-1 text-sm text-slate-500 hover:text-white" href="#diferencial">
-                Diferencial
-              </a>
+          </Reveal>
+
+          {/* 4 pillars */}
+          <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              ["Propósito", "Brindar a nuestros clientes el mejor entorno para sus operaciones de comex."],
+              ["Metodología", "Trabajamos en equipo y con alianzas estratégicas para alcanzar grandes resultados."],
+              ["Expertise", "Cada consultor tiene experiencia en un área específica del comercio exterior."],
+              ["Herramientas", "La economía colaborativa, alianzas estratégicas e intercambio de recursos."],
+            ].map(([t, d], i) => (
+              <Reveal key={t} delay={i * 60}>
+                <div className="group flex h-full flex-col rounded-xl border border-white/[0.04] p-6 transition-all duration-300 hover:border-[#7c3aed]/20 hover:bg-[#7c3aed]/[0.03]">
+                  <p className="text-[13px] font-bold text-[#7c3aed]">{t}</p>
+                  <p className="mt-3 text-[13px] leading-[1.7] text-[#555c6b]">{d}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* How we work + differentiators */}
+          <div className="mt-20 grid gap-16 lg:grid-cols-2">
+            <Reveal>
+              <div>
+                <h3 className="text-[18px] font-bold text-white" style={{ fontFamily: "var(--font-display)" }}>¿Cómo trabajamos?</h3>
+                <div className="mt-4 space-y-4 text-[14px] leading-[1.75] text-[#b0b8c9]">
+                  <p>Elegimos trabajar en equipo y con alianzas estratégicas, que nos permiten crear soluciones innovadoras para nuestros clientes en sus operaciones de importación y exportación.</p>
+                  <p>Cada uno de nuestros consultores y asesores tienen experiencia en un sector específico de la industria del comercio exterior. Teniendo en cuenta su expertise, cada consultor es asignado a cada proyecto en particular.</p>
+                  <p className="text-[#555c6b]">Esta dinámica de trabajo, que implica la colaboración y asesoría permanente de los consultores que integran E-Comex, permiten dinamizar y optimizar las operaciones de comercio exterior, generando un crecimiento sostenido y mensurable.</p>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={80}>
+              <div>
+                <h3 className="text-[18px] font-bold text-white" style={{ fontFamily: "var(--font-display)" }}>¿En qué nos diferenciamos?</h3>
+                <div className="mt-4 space-y-3">
+                  {[
+                    "Generamos y desarrollamos negocios internacionales para empresas, facilitando todas sus operaciones de importación y exportación.",
+                    "Asesoramos, gestionamos, generamos soluciones en negocios internacionales. Con HQ en Argentina, hacia el mundo.",
+                    "Damos solución a las deficiencias en tiempos, comunicación, financiación, pagos, seguimiento de operaciones, gestión administrativa y requerimientos legales.",
+                    "Tercerizamos el departamento de comercio exterior de empresas de diversos rubros y áreas de actividad.",
+                  ].map((text) => (
+                    <div key={text.slice(0, 30)} className="flex gap-3">
+                      <div className="mt-2 h-[2px] w-4 shrink-0 bg-[#2b59ff]/30" />
+                      <p className="text-[13px] leading-[1.7] text-[#555c6b]">{text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SERVICIOS ── */}
+      <section id="servicios" className="relative border-t border-white/[0.04] px-6 py-28">
+        <div className="pointer-events-none absolute bottom-0 left-[20%] h-[300px] w-[300px] rounded-full bg-[#2b59ff] opacity-[0.02] blur-[120px]" />
+        <div className="mx-auto max-w-[1100px]">
+          <Reveal>
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-[13px] font-medium text-[#2b59ff]">Servicios</p>
+                <h2 className="mt-4 text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-white" style={{ fontFamily: "var(--font-display)" }}>
+                  Acompañamiento integral.
+                </h2>
+              </div>
+              <p className="max-w-[260px] text-[13px] leading-[1.7] text-[#555c6b]">
+                La plataforma es una herramienta más dentro de un servicio profesional completo.
+              </p>
             </div>
-            <div>
-              <h3 className="mb-4 font-bold text-white">Servicios</h3>
-              <a className="block py-1 text-sm text-slate-500 hover:text-white" href="#servicios">
-                Consultoria
-              </a>
-              <a className="block py-1 text-sm text-slate-500 hover:text-white" href="#panel-operador">
-                Panel operador
-              </a>
+          </Reveal>
+
+          <div className="mt-16 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              ["Análisis de producto", "Viabilidad técnica y comercial antes de operar."],
+              ["Análisis regulatorio", "Intervenciones, permisos y requisitos anticipados."],
+              ["Estimación de costos", "FOB, flete, impuestos, operativos — landed cost."],
+              ["Logística internacional", "Rutas, tiempos y modalidades optimizadas."],
+              ["Desarrollo de proveedores", "Búsqueda y validación de proveedores confiables."],
+              ["Consultoría estratégica", "Acompañamiento recurrente para importadores."],
+            ].map(([t, d], i) => (
+              <Reveal key={t} delay={i * 50}>
+                <div className="group flex h-full flex-col rounded-xl border border-white/[0.04] p-6 transition-all duration-300 hover:border-white/[0.08]">
+                  <div className="mb-3 flex items-center gap-2">
+                    <div className="h-[2px] w-5 bg-[#2b59ff]/25 transition-all duration-300 group-hover:w-8 group-hover:bg-[#2b59ff]/60" />
+                    <span className="text-[10px] font-medium text-[#555c6b]">{String(i + 1).padStart(2, "0")}</span>
+                  </div>
+                  <h4 className="text-[15px] font-semibold text-white">{t}</h4>
+                  <p className="mt-2 text-[13px] leading-[1.75] text-[#555c6b]">{d}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── PLATAFORMA ── */}
+      <section id="plataforma" className="relative border-t border-white/[0.04] px-6 py-28 overflow-hidden">
+        <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-[#7c3aed] opacity-[0.02] blur-[160px]" />
+        <div className="mx-auto max-w-[1100px]">
+          <Reveal>
+            <p className="text-[13px] font-medium text-[#7c3aed]">Plataforma</p>
+            <h2 className="mt-4 max-w-[500px] text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-white" style={{ fontFamily: "var(--font-display)" }}>
+              Del producto al costo final en minutos.
+            </h2>
+            <p className="mt-4 max-w-[420px] text-[15px] leading-[1.7] text-[#6b7280]">
+              Link, imagen, factura o descripción. La plataforma hace el resto.
+            </p>
+          </Reveal>
+
+          <div className="mt-16 grid gap-6 lg:grid-cols-3">
+            {[
+              { n: "01", title: "Cargá el producto", desc: "Link de Alibaba, foto, factura o texto libre. El sistema extrae todo automáticamente.", color: "#2b59ff" },
+              { n: "02", title: "Análisis estructurado", desc: "NCM, requisitos regulatorios, costos e impuestos. Trazable y documentado.", color: "#7c3aed" },
+              { n: "03", title: "Resultado profesional", desc: "Reporte PDF, comparación de escenarios o consultoría para validar.", color: "#2b59ff" },
+            ].map((s, i) => (
+              <Reveal key={s.n} delay={i * 80}>
+                <div className="group rounded-xl border border-white/[0.04] p-7 transition-all duration-300 hover:border-white/[0.08]" style={{ background: `linear-gradient(160deg, ${s.color}04, transparent 60%)` }}>
+                  <span className="text-[40px] font-extrabold leading-none" style={{ fontFamily: "var(--font-display)", color: `${s.color}15` }}>{s.n}</span>
+                  <h4 className="mt-4 text-[15px] font-semibold text-white">{s.title}</h4>
+                  <p className="mt-2 text-[13px] leading-[1.75] text-[#555c6b]">{s.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={200}>
+            <div className="mt-12">
+              <Link href="/app/nueva" className="rounded-md bg-[#2b59ff] px-6 py-3 text-[14px] font-medium text-white transition-colors hover:bg-[#2348d4]">
+                Probar la plataforma
+              </Link>
             </div>
-            <div>
-              <h3 className="mb-4 font-bold text-white">Plataforma</h3>
-              <a className="block py-1 text-sm text-slate-500 hover:text-white" href="#plataforma">
-                Modulos
-              </a>
-              <a className="block py-1 text-sm text-slate-500 hover:text-white" href="#demo">
-                Demo
-              </a>
-              <a className="block py-1 text-sm text-slate-500 hover:text-white" href="#contacto">
-                Contacto
-              </a>
-            </div>
-            <div>
-              <h3 className="mb-4 font-bold text-white">Contacto</h3>
-              <a className="block py-1 text-sm text-slate-500 hover:text-white" href="#contacto">
-                Formulario
-              </a>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── CTA BANNER ── */}
+      <section className="px-6 py-20">
+        <Reveal>
+          <div className="mx-auto max-w-[1100px] overflow-hidden rounded-2xl px-6 py-12 sm:px-12 sm:py-16 relative border border-white/[0.04]" style={{ background: "linear-gradient(135deg, #0d1029, #110d20)" }}>
+            {/* Animated accent line at top */}
+            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, #2b59ff, #7c3aed, transparent)" }} />
+            <div className="pointer-events-none absolute -top-20 -right-20 h-[300px] w-[300px] rounded-full bg-[#2b59ff] opacity-[0.07] blur-[100px]" />
+            <div className="pointer-events-none absolute -bottom-20 -left-20 h-[200px] w-[200px] rounded-full bg-[#7c3aed] opacity-[0.05] blur-[80px]" />
+            <div className="relative flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <h3 className="text-[clamp(1.4rem,2.5vw,2rem)] font-extrabold tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
+                  ¿Listo para importar con más claridad?
+                </h3>
+                <p className="mt-2 text-[15px] text-[#6b7280]">Hablá con un especialista o probá la plataforma.</p>
+              </div>
+              <div className="flex gap-3 shrink-0">
+                <a href="#contacto" className="rounded-md bg-white px-6 py-3 text-[14px] font-medium text-[#07111A] transition-colors hover:bg-[#dde1e8]">
+                  Contacto
+                </a>
+                <Link href="/app/nueva" className="rounded-md border border-white/10 px-6 py-3 text-[14px] font-medium text-white transition-colors hover:bg-white/5">
+                  Plataforma
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 text-xs text-slate-600 md:flex-row">
-            <p>? 2026 E-COMEX. Todos los derechos reservados.</p>
-            <div className="flex gap-6">
-              <a className="transition-colors hover:text-white" href="#contacto">
-                Instagram
-              </a>
-              <a className="transition-colors hover:text-white" href="#contacto">
-                LinkedIn
-              </a>
-              <a className="transition-colors hover:text-white" href="#contacto">
-                X
-              </a>
-            </div>
+        </Reveal>
+      </section>
+
+      {/* ── CONTACTO ── */}
+      <section id="contacto" className="border-t border-white/[0.04] px-6 py-28">
+        <div className="mx-auto max-w-[1100px]">
+          <div className="grid gap-16 lg:grid-cols-[1fr_400px]">
+            <Reveal>
+              <div>
+                <p className="text-[13px] font-medium text-[#7c3aed]">Contacto</p>
+                <h2 className="mt-4 text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-white" style={{ fontFamily: "var(--font-display)" }}>
+                  Dejá tus datos y te contactamos.
+                </h2>
+                <div className="mt-8 space-y-3 text-[14px] text-[#555c6b]">
+                  <p>inteligencia@e-comex.com</p>
+                  <p>Buenos Aires, Argentina</p>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={80}>
+              <form className="space-y-3">
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <input type="text" placeholder="Nombre" className="w-full rounded-md border border-white/[0.06] bg-transparent px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#2a2e38] transition-colors focus:border-[#2b59ff]/40" />
+                  <input type="text" placeholder="Empresa" className="w-full rounded-md border border-white/[0.06] bg-transparent px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#2a2e38] transition-colors focus:border-[#2b59ff]/40" />
+                </div>
+                <input type="email" placeholder="Email" className="w-full rounded-md border border-white/[0.06] bg-transparent px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#2a2e38] transition-colors focus:border-[#2b59ff]/40" />
+                <textarea rows={3} placeholder="Mensaje" className="w-full resize-none rounded-md border border-white/[0.06] bg-transparent px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#2a2e38] transition-colors focus:border-[#2b59ff]/40" />
+                <button type="button" className="w-full rounded-md bg-white py-3 text-[14px] font-medium text-[#07111A] transition-colors hover:bg-[#dde1e8]">
+                  Enviar
+                </button>
+              </form>
+            </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* ── FOOTER ── */}
+      <footer className="border-t border-white/[0.04] px-6 py-8">
+        <div className="mx-auto flex max-w-[1100px] items-center justify-between text-[12px] text-[#2a2e38]">
+          <span>© 2026 E-COMEX</span>
+          <span>Buenos Aires, Argentina</span>
         </div>
       </footer>
     </div>
   );
 }
-

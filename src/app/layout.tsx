@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Inter, Manrope, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -9,14 +21,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "E-Comex — Importá a Argentina con costos reales",
+  title: "E-COMEX — Inteligencia de importación",
   description:
-    "Obtené un análisis orientativo y validalo con un especialista: producto, flete, impuestos, gestión, tiempos y total puesto en Argentina.",
+    "Analizá, clasificá y cotizá importaciones a Argentina con claridad total. Tecnología + experiencia profesional.",
   metadataBase: new URL("https://e-comex.app"),
   openGraph: {
-    title: "E-Comex",
-    description:
-      "Análisis inteligente de importación: entendé el costo real y validalo con un especialista antes de decidir.",
+    title: "E-COMEX",
+    description: "Inteligencia de importación para Argentina.",
     type: "website",
   },
 };
@@ -28,17 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es-AR" className="dark">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        />
-      </head>
-      <body className={`${jetbrainsMono.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
