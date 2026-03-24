@@ -409,10 +409,9 @@ function applyAssumptionUpdate(product: any, upd: { origin?: string; shippingPro
   return product;
 }
 
-function validateNoGuessQuoteInputs(product: any, opts?: { requireNcm?: boolean }) {
+function validateNoGuessQuoteInputs(product: any, _opts?: { requireNcm?: boolean }) {
   const missing: string[] = [];
   const questions: string[] = [];
-  const requireNcm = false;
 
   const hasPriceRange =
     product?.price?.type === "range" &&
@@ -426,18 +425,7 @@ function validateNoGuessQuoteInputs(product: any, opts?: { requireNcm?: boolean 
     typeof product?.fobUsd === "number" && Number.isFinite(product.fobUsd) && product.fobUsd > 0;
   if (!hasPriceRange && !hasUnitPrice) {
     missing.push("precio");
-    questions.push("¿Cuál es el **precio unitario** real en **USD** (o rango real del proveedor)?");
-  }
-
-  if (requireNcm) {
-    const ncm = String(product?.ncm ?? "").trim();
-    const hasValidNcm = /^\d{4}\.\d{2}\.\d{2}$/.test(ncm) && ncm !== "9999.99.99";
-    if (!hasValidNcm) {
-      missing.push("clasificacion");
-      questions.push(
-        "Necesito la **clasificación arancelaria (NCM)** para calcular impuestos sin inventar."
-      );
-    }
+    questions.push("¿Cuál es el **precio** en **USD**? (valor FOB o precio del proveedor)");
   }
 
   return { ok: missing.length === 0, missing, questions };
@@ -1407,11 +1395,11 @@ export async function POST(req: Request) {
         }
         return ask(
           [
-            "Para cotizar **sin inventar datos** me faltan estos datos reales:",
-            ...noGuessGate.missing.map((m) => `- ${m}`),
+            "Para darte una cotización precisa necesito:",
             "",
-            "Respondeme esto y cotizo con datos reales:",
             ...noGuessGate.questions.map((q) => `- ${q}`),
+            "",
+            "Con eso te doy el desglose completo.",
           ].join("\n"),
           product2,
           { stage: "needs_verified_inputs", questions: noGuessGate.questions }
