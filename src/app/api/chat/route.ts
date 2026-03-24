@@ -1629,7 +1629,7 @@ export async function POST(req: Request) {
             ncmDisambiguationAsked: true,
           };
           await prisma.quote
-            .update({ where: { id: active.id }, data: { productJson: product as any } })
+            .update({ where: { id: active!.id }, data: { productJson: product as any } })
             .catch(() => null);
           return ask(
             [
@@ -1798,7 +1798,7 @@ export async function POST(req: Request) {
               ncmDisambiguationAsked: true,
             };
             await prisma.quote
-              .update({ where: { id: active.id }, data: { productJson: merged as any } })
+              .update({ where: { id: active!.id }, data: { productJson: merged as any } })
               .catch(() => null);
 
             return ask(
