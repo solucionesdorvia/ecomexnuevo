@@ -227,9 +227,7 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
       if (Array.isArray(cls.search_terms) && cls.search_terms.length) {
         ncmMeta.searchTerms = cls.search_terms.map(String).filter(Boolean).slice(0, 6);
       }
-      if (Array.isArray(cls.missing_info_questions) && cls.missing_info_questions.length) {
-        ncmMeta.missingInfoQuestions = cls.missing_info_questions;
-      }
+      // Never store missing_info_questions — the system classifies automatically
     } catch {
       // In production (e.g. Railway), OpenAI can intermittently fail (timeouts/quotas).
       // Don't abort the entire pipeline; we'll fall back to PCRAM/local evidence below.
@@ -349,9 +347,7 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
               ncmMeta.adjustedTo = picked;
             }
             if (typeof aiPick?.confidence === "number") ncmMeta.confidence = aiPick.confidence;
-            if (Array.isArray(aiPick?.missing_info_questions) && aiPick!.missing_info_questions!.length) {
-              ncmMeta.missingInfoQuestions = aiPick!.missing_info_questions;
-            }
+            // Never store missing_info_questions — the system classifies automatically
             ncmMeta.ambiguous = Boolean(aiPick && aiPick.confidence != null && aiPick.confidence < 0.55);
           } else {
             // Fallback: if AI cannot pick, default to the top PCRAM candidate.

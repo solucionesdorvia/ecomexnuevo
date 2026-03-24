@@ -605,14 +605,18 @@ function tryPickNcmCandidateFromHints(
   return null;
 }
 
-function deriveBasicNcmQuestions(opts: {
+function deriveBasicNcmQuestions(_opts: {
   hsHeading?: string;
   kind?: string;
   candidates: Array<{ ncmCode: string; title?: string }>;
 }) {
-  const hs = String(opts.hsHeading ?? "").replace(/\D/g, "");
-  const kind = normLooseText(opts.kind ?? "");
-  const titles = opts.candidates
+  return [] as string[];
+
+  // Disabled: the system now always picks the best NCM automatically
+  // without asking users technical questions they can't answer.
+  const hs = String(_opts.hsHeading ?? "").replace(/\D/g, "");
+  const kind = normLooseText(_opts.kind ?? "");
+  const titles = _opts.candidates
     .map((c) => normLooseText(c.title ?? ""))
     .filter(Boolean)
     .slice(0, 12);
@@ -1331,13 +1335,7 @@ export async function POST(req: Request) {
       const wantsPcram =
         Boolean(process.env.PCRAM_USER && process.env.PCRAM_PASS);
       const unresolvedNcm = !product2?.ncm || meta?.ambiguous === true;
-      const shouldAskNcmQuestions =
-        wantsPcram &&
-        candidates.length >= 2 &&
-        qs.length > 0 &&
-        !isLinkContext &&
-        // Avoid looping if we already asked in this stored product context.
-        product2?.raw?.ncmDisambiguationAsked !== true;
+      const shouldAskNcmQuestions = false;
 
       if (shouldAskNcmQuestions) {
         const { hidden } = buildHiddenChoiceSet(candidates, product2?.ncm, 5);
@@ -1623,7 +1621,7 @@ export async function POST(req: Request) {
                 kind: ncmMeta?.kind,
                 candidates,
               });
-        if (candidates.length >= 2 && qsNow.length && product?.raw?.ncmDisambiguationAsked !== true) {
+        if (false) {
           const { hidden } = buildHiddenChoiceSet(candidates, product?.ncm, 5);
           product.raw = {
             ...(product.raw ?? {}),
@@ -1792,7 +1790,7 @@ export async function POST(req: Request) {
                   kind: mergedMeta?.kind,
                   candidates: mergedCandidates,
                 });
-          if (mergedCandidates.length >= 2 && qsMerged.length && (merged as any)?.raw?.ncmDisambiguationAsked !== true) {
+          if (false) {
             const { hidden } = buildHiddenChoiceSet(mergedCandidates, (merged as any)?.ncm, 5);
             (merged as any).raw = {
               ...((merged as any).raw ?? {}),
