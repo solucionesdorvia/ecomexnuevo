@@ -133,7 +133,7 @@ export default function ClasificadorClient() {
                     Describí el producto que querés importar. El sistema te da la posición arancelaria, impuestos, intervenciones y costo estimado.
                   </p>
                   <div className="mt-8 flex flex-wrap justify-center gap-2">
-                    {["Cargador USB-C 20W desde China", "Auriculares bluetooth", "Remeras de algodón", "Panel solar 500W"].map((s) => (
+                    {["Cargador USB-C 20W, USD 3, 500u, China", "Auriculares bluetooth, USD 8, 100u, China", "Remeras algodón, USD 4, 200u, China", "Mercedes SL600 1995, USD 25000, 1u, USA"].map((s) => (
                       <button key={s} type="button" onClick={() => setInput(s)} className="rounded-lg border border-white/[0.06] px-3 py-2 text-[12px] text-[#5A6577] transition-colors hover:border-white/[0.12] hover:text-[#A7B3C2]">{s}</button>
                     ))}
                   </div>
@@ -174,7 +174,7 @@ export default function ClasificadorClient() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); } }}
-                  placeholder="Describí el producto que querés clasificar..."
+                  placeholder="Producto, precio USD, cantidad, origen (ej: Cargador USB, USD 5, 100u, China)"
                   className="flex-1 bg-transparent py-2.5 text-[14px] text-white outline-none placeholder:text-[#5A6577]"
                 />
                 <button type="button" disabled={pending || !input.trim()} onClick={send} className="shrink-0 rounded-lg bg-[#2F80ED] px-4 py-2 text-[12px] font-medium text-white transition-colors hover:bg-[#2563eb] disabled:opacity-20">
