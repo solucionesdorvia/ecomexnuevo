@@ -21,8 +21,8 @@ export default async function OperacionDetallePage({ params }: { params: Promise
   const payload = token ? await verifyAuthToken(token) : null;
   if (!payload?.sub) notFound();
 
-  const quote = await prisma.quote.findUnique({
-    where: { id },
+  const quote = await prisma.quote.findFirst({
+    where: { id, userId: payload.sub },
     select: {
       id: true, createdAt: true, updatedAt: true, mode: true, userText: true, sourceUrl: true,
       productJson: true, quoteJson: true, totalMinUsd: true, totalMaxUsd: true, stage: true,

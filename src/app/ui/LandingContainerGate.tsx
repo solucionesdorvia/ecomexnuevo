@@ -2,368 +2,484 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import TopoBackground from "@/components/TopoBackground";
 
-function Reveal({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+/* ── Scroll reveal ── */
+function R({ children, cl = "", d = 0 }: { children: React.ReactNode; cl?: string; d?: number }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [show, setShow] = useState(false);
+  const [v, setV] = useState(false);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e?.isIntersecting) { setShow(true); obs.disconnect(); } }, { threshold: 0.12 });
-    obs.observe(el);
-    return () => obs.disconnect();
+    const o = new IntersectionObserver(([e]) => { if (e?.isIntersecting) { setV(true); o.disconnect(); } }, { threshold: 0.1 });
+    o.observe(el);
+    return () => o.disconnect();
   }, []);
+  return <div ref={ref} className={cl} style={{ opacity: v ? 1 : 0, transform: v ? "none" : "translateY(18px)", transition: `opacity .65s cubic-bezier(.16,1,.3,1) ${d}ms, transform .65s cubic-bezier(.16,1,.3,1) ${d}ms` }}>{children}</div>;
+}
+
+/* ── Palette ── */
+const P = {
+  bg: "#07111A", bg2: "#0B1622", navy: "#102235",
+  cyan: "#18C3D6", blue: "#2F80ED",
+  t1: "#F5F7FA", t2: "#A7B3C2", t3: "#5A6577",
+  border: "rgba(255,255,255,0.06)",
+};
+
+/* ── Navbar with scroll blur ── */
+function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  useEffect(() => {
+    const fn = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", fn, { passive: true });
+    return () => window.removeEventListener("scroll", fn);
+  }, []);
+
+  const links = [["#servicios","Servicios"],["#como","Cómo trabajamos"],["#plataforma","Plataforma"],["#contacto","Contacto"]];
+
   return (
-    <div ref={ref} className={className} style={{
-      opacity: show ? 1 : 0,
-      transform: show ? "none" : "translateY(16px)",
-      transition: `opacity 0.6s cubic-bezier(.16,1,.3,1) ${delay}ms, transform 0.6s cubic-bezier(.16,1,.3,1) ${delay}ms`,
-    }}>{children}</div>
+    <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? "bg-[#07111A]/80 backdrop-blur-xl border-b" : "bg-transparent"}`} style={{ borderColor: scrolled ? P.border : "transparent" }}>
+      <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-5 lg:px-8">
+        <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-5 brightness-0 invert" />
+
+        {/* Desktop */}
+        <div className="hidden items-center gap-8 md:flex">
+          {links.map(([h,l]) => <a key={l} href={h} className="text-[13px] text-[#A7B3C2] transition-colors hover:text-white">{l}</a>)}
+          <a href="#contacto" className="rounded-lg px-5 py-2 text-[13px] font-medium text-white transition-all hover:shadow-[0_0_20px_-4px_rgba(47,128,237,0.4)]" style={{ background: P.blue }}>
+            Hablar con un especialista
+          </a>
+        </div>
+
+        {/* Mobile hamburger */}
+        <button type="button" onClick={() => setMenuOpen(!menuOpen)} className="text-[#A7B3C2] md:hidden">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d={menuOpen ? "M6 6l12 12M6 18L18 6" : "M4 6h16M4 12h16M4 18h16"} /></svg>
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className="border-t bg-[#07111A]/95 backdrop-blur-xl px-5 pb-6 pt-4 md:hidden" style={{ borderColor: P.border }}>
+          <div className="flex flex-col gap-4">
+            {links.map(([h,l]) => <a key={l} href={h} onClick={() => setMenuOpen(false)} className="text-[14px] text-[#A7B3C2]">{l}</a>)}
+            <a href="#contacto" onClick={() => setMenuOpen(false)} className="mt-2 rounded-lg py-3 text-center text-[14px] font-medium text-white" style={{ background: P.blue }}>
+              Hablar con un especialista
+            </a>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 }
 
 export default function LandingContainerGate() {
   return (
-    <div className="bg-[#07111A] text-[#b0b8c9] antialiased" style={{ fontFamily: "var(--font-body, 'Inter', sans-serif)" }}>
+    <div style={{ background: P.bg, color: P.t2, fontFamily: "var(--font-body, 'Inter', sans-serif)" }} className="antialiased">
+      <Navbar />
 
-      {/* ── NAV ── */}
-      <nav className="sticky top-0 z-50 border-b border-white/[0.04] bg-[#07111A]/85 backdrop-blur-xl">
-        <div className="mx-auto flex h-14 max-w-[1100px] items-center justify-between px-6">
-          <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-6 brightness-0 invert" />
-          <div className="hidden items-center gap-8 md:flex">
-            {["Nosotros","Servicios","Plataforma","Contacto"].map((l)=>(
-              <a key={l} href={`#${l.toLowerCase()}`} className="text-[13px] text-[#555c6b] transition-colors hover:text-white">{l}</a>
-            ))}
-          </div>
-          <Link href="/login" className="relative rounded-md bg-[#2b59ff] px-5 py-[7px] text-[13px] font-medium text-white transition-all duration-200 hover:shadow-[0_0_20px_-4px_rgba(43,89,255,0.4)]">
-            Acceder
-          </Link>
-        </div>
-      </nav>
+      {/* ══════════ HERO ══════════ */}
+      <section className="relative overflow-hidden px-5 pb-20 pt-28 lg:px-8 lg:pt-36">
+        {/* Grid bg */}
+        <div className="pointer-events-none absolute inset-0" style={{ backgroundImage: `linear-gradient(${P.border} 1px, transparent 1px), linear-gradient(90deg, ${P.border} 1px, transparent 1px)`, backgroundSize: "72px 72px", maskImage: "radial-gradient(ellipse 60% 50% at 50% 30%, black, transparent 70%)", WebkitMaskImage: "radial-gradient(ellipse 60% 50% at 50% 30%, black, transparent 70%)" }} />
+        {/* Glows */}
+        <div className="pointer-events-none absolute -top-32 left-[15%] h-[500px] w-[500px] rounded-full opacity-[0.05] blur-[160px]" style={{ background: P.blue }} />
+        <div className="pointer-events-none absolute top-[40%] right-[10%] h-[350px] w-[350px] rounded-full opacity-[0.04] blur-[140px]" style={{ background: P.cyan }} />
 
-      {/* ── HERO ── */}
-      <section className="relative overflow-hidden px-6 pb-0 pt-20 lg:pt-32">
-        <TopoBackground />
+        <div className="relative mx-auto max-w-[1200px]">
+          <div className="grid items-center gap-16 lg:grid-cols-[1fr_480px]">
+            <div className="max-w-[600px]">
+              <R>
+                <div className="inline-flex items-center gap-2.5 rounded-full px-4 py-1.5" style={{ border: `1px solid ${P.border}`, background: `${P.bg2}cc` }}>
+                  <span className="h-1.5 w-1.5 rounded-full animate-pulse" style={{ background: P.cyan, boxShadow: `0 0 8px ${P.cyan}` }} />
+                  <span className="text-[11px] font-medium tracking-wide" style={{ color: P.t3 }}>+20 años en comercio exterior</span>
+                </div>
+              </R>
 
-        <div className="relative mx-auto max-w-[1100px]">
-          <Reveal>
-            <p className="text-[13px] font-medium text-[#2b59ff]">Servicios de importación y comercio exterior</p>
-          </Reveal>
-          <Reveal delay={60}>
-            <h1 className="mt-5 max-w-[700px] text-[clamp(2.4rem,5vw,4rem)] font-extrabold leading-[1.02] tracking-[-0.04em] text-white" style={{ fontFamily: "var(--font-display, 'Manrope', sans-serif)" }}>
-              Inteligencia de importación.
-            </h1>
-          </Reveal>
-          <Reveal delay={120}>
-            <p className="mt-6 max-w-[500px] text-[17px] leading-[1.7] text-[#6b7280]">
-              E-COMEX nace de más de 20 años de experiencia en comercio exterior.
-              Convertimos ese conocimiento en una plataforma que automatiza en minutos
-              lo que antes llevaba horas.
-            </p>
-          </Reveal>
-          <Reveal delay={180}>
-            <div className="mt-8 flex items-center gap-4">
-              <a href="#contacto" className="rounded-md bg-white px-6 py-3 text-[14px] font-medium text-[#07111A] transition-colors hover:bg-[#dde1e8]">
-                Hablar con un especialista
-              </a>
-              <Link href="/app/nueva" className="text-[14px] font-medium text-[#555c6b] underline decoration-[#2b59ff]/30 underline-offset-4 transition-colors hover:text-white hover:decoration-[#2b59ff]">
-                Probar la plataforma
-              </Link>
-            </div>
-          </Reveal>
+              <R d={60}>
+                <h1 className="mt-7 text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-[1.06] tracking-[-0.04em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
+                  Tomá el control de tus importaciones
+                </h1>
+              </R>
 
-          {/* Platform mockup — the hero moment */}
-          <Reveal delay={260}>
-            <div className="relative mt-24" style={{ perspective: "1200px" }}>
-              {/* Glow behind the mockup */}
-              <div className="pointer-events-none absolute -inset-8 rounded-3xl" style={{
-                background: "radial-gradient(ellipse 70% 50% at 50% 60%, rgba(43,89,255,0.08), transparent 70%)"
-              }} />
-              <div style={{ transform: "rotateX(2deg)", transformOrigin: "center bottom" }}>
-                <div className="overflow-hidden rounded-xl border border-white/[0.06] bg-[#0B1622] shadow-[0_50px_100px_-30px_rgba(43,89,255,0.08),0_30px_60px_-20px_rgba(0,0,0,0.4)]">
-                  {/* Chrome */}
-                  <div className="flex items-center gap-2 border-b border-white/[0.04] px-4 py-2.5 bg-[#0B1622]">
-                    <div className="flex gap-1.5">
-                      <span className="h-[9px] w-[9px] rounded-full bg-[#ff5f57]" />
-                      <span className="h-[9px] w-[9px] rounded-full bg-[#febc2e]" />
-                      <span className="h-[9px] w-[9px] rounded-full bg-[#28c840]" />
+              <R d={120}>
+                <p className="mt-6 text-[16px] leading-[1.75]" style={{ color: P.t2 }}>
+                  E-COMEX combina experiencia en comercio exterior con tecnología para resolver clasificación, regulaciones, costos y logística con claridad y velocidad.
+                </p>
+              </R>
+
+              <R d={180}>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <a href="#contacto" className="rounded-lg px-6 py-3 text-center text-[14px] font-medium text-white transition-all hover:shadow-[0_0_30px_-6px_rgba(47,128,237,0.4)]" style={{ background: P.blue }}>
+                    Hablar con un especialista
+                  </a>
+                  <a href="#como" className="rounded-lg px-6 py-3 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
+                    Ver cómo funciona
+                  </a>
+                </div>
+              </R>
+
+              <R d={240}>
+                <div className="mt-12 flex flex-wrap gap-8">
+                  {[["Más claridad","visibility"],["Más velocidad","bolt"],["Menos errores","verified"]].map(([t]) => (
+                    <div key={t} className="flex items-center gap-2">
+                      <div className="h-1 w-1 rounded-full" style={{ background: P.cyan }} />
+                      <span className="text-[12px] font-medium tracking-wide" style={{ color: P.t3 }}>{t}</span>
                     </div>
-                    <div className="mx-auto rounded-md bg-[#07111A] px-4 py-1 text-[11px] text-[#555c6b]">e-comex.app/analisis</div>
+                  ))}
+                </div>
+              </R>
+            </div>
+
+            {/* Mockup */}
+            <R d={300} cl="hidden lg:block">
+              <div className="relative">
+                <div className="absolute -inset-6 rounded-3xl opacity-50" style={{ background: `radial-gradient(circle at 50% 60%, ${P.blue}10, transparent 70%)` }} />
+                <div className="relative overflow-hidden rounded-2xl shadow-[0_40px_100px_-30px_rgba(0,0,0,0.6)]" style={{ background: P.bg2, border: `1px solid ${P.border}` }}>
+                  <div className="flex items-center border-b px-4 py-2.5" style={{ borderColor: P.border, background: `${P.bg}80` }}>
+                    <div className="flex gap-1.5">
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
+                    </div>
+                    <div className="mx-auto flex items-center gap-2 rounded-md px-3 py-1" style={{ background: P.bg }}>
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#28c840]" />
+                      <span className="text-[10px]" style={{ color: P.t3 }}>e-comex.app/analisis</span>
+                    </div>
                   </div>
-                  {/* App */}
-                  <div className="flex min-h-[320px]">
-                    <div className="hidden w-[48px] shrink-0 flex-col items-center gap-3 border-r border-white/[0.04] py-4 sm:flex">
-                      {[0,1,2,3].map((i)=>(
-                        <div key={i} className="h-5 w-5 rounded" style={{ background: i === 0 ? "rgba(43,89,255,0.15)" : "#0B1622" }} />
-                      ))}
+                  <div className="flex">
+                    <div className="hidden w-12 shrink-0 flex-col items-center gap-3 border-r py-4 sm:flex" style={{ borderColor: P.border }}>
+                      {[0,1,2,3].map(i=><div key={i} className="h-5 w-5 rounded" style={{ background: i===0 ? `${P.blue}15` : P.navy }} />)}
                     </div>
                     <div className="flex flex-1 gap-4 p-5">
                       <div className="flex-1 space-y-2.5">
-                        <div className="flex items-center gap-3 rounded-lg bg-[#0B1622] p-3">
-                          <div className="h-9 w-9 rounded bg-[#0B1622]" />
-                          <div className="flex-1"><div className="h-2.5 w-36 rounded bg-[#0B1622]" /><div className="mt-1.5 h-2 w-20 rounded bg-[#0B1622]" /></div>
-                          <span className="rounded bg-[#2b59ff]/15 px-2 py-0.5 text-[8px] font-bold text-[#2b59ff]">Analizado</span>
+                        <div className="flex items-center gap-3 rounded-lg p-3" style={{ background: P.bg }}>
+                          <div className="h-9 w-9 rounded-md" style={{ background: P.navy }} />
+                          <div className="flex-1"><div className="h-2.5 w-36 rounded" style={{ background: P.navy }} /><div className="mt-1.5 h-2 w-20 rounded" style={{ background: `${P.navy}80` }} /></div>
+                          <span className="rounded px-2 py-0.5 text-[8px] font-bold" style={{ background: `${P.cyan}15`, color: P.cyan }}>Analizado</span>
                         </div>
-                        <div className="flex items-center justify-between rounded-lg bg-[#0B1622] px-4 py-2.5">
-                          <span className="text-[10px] text-[#555c6b]">NCM</span>
-                          <span className="font-mono text-[13px] font-bold text-white">8703.23.10</span>
+                        <div className="flex items-center justify-between rounded-lg px-4 py-2.5" style={{ background: P.bg }}>
+                          <span className="text-[10px]" style={{ color: P.t3 }}>NCM</span>
+                          <span className="font-mono text-[13px] font-bold" style={{ color: P.t1 }}>8703.23.10</span>
                         </div>
                         <div className="grid grid-cols-3 gap-1">
                           {[["FOB","$2,400"],["Flete","$680"],["Impuestos","$1,920"]].map(([l,v])=>(
-                            <div key={l} className="rounded-lg bg-[#0B1622] p-2.5">
-                              <p className="text-[7px] font-medium uppercase tracking-wider text-[#555c6b]">{l}</p>
-                              <p className="mt-0.5 text-[13px] font-bold text-white">{v}</p>
+                            <div key={l} className="rounded-lg p-2.5" style={{ background: P.bg }}>
+                              <p className="text-[7px] font-medium uppercase tracking-wider" style={{ color: P.t3 }}>{l}</p>
+                              <p className="mt-0.5 text-[13px] font-bold" style={{ color: P.t1 }}>{v}</p>
                             </div>
                           ))}
                         </div>
-                        <div className="rounded-lg bg-[#0B1622] p-3 border-l-2 border-[#d4a843]">
-                          <p className="text-[7px] font-medium uppercase tracking-wider text-[#555c6b]">Total puesto en Argentina</p>
-                          <p className="mt-0.5 text-[20px] font-extrabold text-[#d4a843]" style={{ fontFamily: "var(--font-display)" }}>USD 6,840</p>
+                        <div className="rounded-lg p-3" style={{ background: P.bg, borderLeft: "2px solid #d4a843" }}>
+                          <p className="text-[7px] font-medium uppercase tracking-wider" style={{ color: P.t3 }}>Total puesto en Argentina</p>
+                          <p className="mt-0.5 text-[18px] font-extrabold text-[#d4a843]" style={{ fontFamily: "var(--font-display)" }}>USD 6,840</p>
                         </div>
-                      </div>
-                      <div className="hidden w-[160px] shrink-0 space-y-2 lg:block">
-                        {[["Riesgo","Bajo","#7c3aed"],["Timing","35–55 días","#b0b8c9"],["Ruta","Marítimo","#b0b8c9"]].map(([l,v,c])=>(
-                          <div key={l} className="rounded-lg bg-[#0B1622] p-2.5">
-                            <p className="text-[7px] font-medium uppercase tracking-wider text-[#555c6b]">{l}</p>
-                            <p className="mt-0.5 text-[11px] font-bold" style={{ color: c }}>{v}</p>
-                          </div>
-                        ))}
-                        <div className="rounded bg-[#2b59ff] py-2 text-center text-[9px] font-bold text-white">Descargar PDF</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              {/* Fade bottom */}
-              <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#07111A] to-transparent" />
-            </div>
-          </Reveal>
-
-          <div className="h-20" />
+            </R>
+          </div>
         </div>
       </section>
 
-      {/* Accent divider */}
-      <div className="mx-auto max-w-[1100px] px-6">
-        <div className="h-px" style={{ background: "linear-gradient(90deg, #2b59ff, #7c3aed, transparent)" }} />
-      </div>
-
-      {/* ── NOSOTROS ── */}
-      <section id="nosotros" className="relative px-6 py-28 overflow-hidden">
-        <div className="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-[#7c3aed] opacity-[0.025] blur-[140px]" />
-
-        <div className="mx-auto max-w-[1100px]">
-          {/* Intro */}
-          <Reveal>
-            <div className="max-w-[600px]">
-              <p className="text-[13px] font-medium text-[#7c3aed]">Nosotros</p>
-              <h2 className="mt-4 text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-white" style={{ fontFamily: "var(--font-display)" }}>
-                ¿Para qué nacimos?
-              </h2>
-              <p className="mt-5 text-[15px] leading-[1.75] text-[#b0b8c9]">
-                Nacimos con el firme propósito de brindarles a nuestros clientes un mejor entorno para sus operaciones de comercio exterior. Nos distingue nuestro compromiso con importadores y exportadores, basado en la asociatividad de servicios especializados y un gran grupo profesional, fuertemente involucrado en cada proceso.
-              </p>
-            </div>
-          </Reveal>
-
-          {/* 4 pillars */}
+      {/* ══════════ PROBLEMA ══════════ */}
+      <section className="px-5 py-24 lg:px-8" style={{ background: P.bg2 }}>
+        <div className="mx-auto max-w-[1200px]">
+          <R>
+            <p className="text-[12px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.cyan }}>El problema</p>
+            <h2 className="mt-4 max-w-[600px] text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.02em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
+              El problema no es importar. Es cómo lo estás gestionando.
+            </h2>
+          </R>
           <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ["Propósito", "Brindar a nuestros clientes el mejor entorno para sus operaciones de comex."],
-              ["Metodología", "Trabajamos en equipo y con alianzas estratégicas para alcanzar grandes resultados."],
-              ["Expertise", "Cada consultor tiene experiencia en un área específica del comercio exterior."],
-              ["Herramientas", "La economía colaborativa, alianzas estratégicas e intercambio de recursos."],
-            ].map(([t, d], i) => (
-              <Reveal key={t} delay={i * 60}>
-                <div className="group flex h-full flex-col rounded-xl border border-white/[0.04] p-6 transition-all duration-300 hover:border-[#7c3aed]/20 hover:bg-[#7c3aed]/[0.03]">
-                  <p className="text-[13px] font-bold text-[#7c3aed]">{t}</p>
-                  <p className="mt-3 text-[13px] leading-[1.7] text-[#555c6b]">{d}</p>
+              ["Información dispersa","Datos en mails, excels y llamadas que nunca se consolidan."],
+              ["Procesos manuales","Carga repetitiva y burocracia que consume el tiempo del equipo."],
+              ["Falta de claridad","Dificultad para conocer el estado real de costos y tiempos."],
+              ["Dependencia de terceros","Sentir que no tenés el control de tus propios flujos comerciales."],
+            ].map(([t,d],i) => (
+              <R key={t} d={i*60}>
+                <div className="group flex h-full flex-col rounded-xl p-6 transition-all duration-300 hover:bg-white/[0.02]" style={{ border: `1px solid ${P.border}` }}>
+                  <div className="mb-4 h-[2px] w-6 transition-all duration-300 group-hover:w-10" style={{ background: `${P.cyan}40` }} />
+                  <h4 className="text-[14px] font-semibold" style={{ color: P.t1 }}>{t}</h4>
+                  <p className="mt-2 text-[13px] leading-[1.7]" style={{ color: P.t3 }}>{d}</p>
                 </div>
-              </Reveal>
+              </R>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* How we work + differentiators */}
-          <div className="mt-20 grid gap-16 lg:grid-cols-2">
-            <Reveal>
+      {/* ══════════ SOLUCIÓN ══════════ */}
+      <section className="px-5 py-24 lg:px-8">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+            <R>
               <div>
-                <h3 className="text-[18px] font-bold text-white" style={{ fontFamily: "var(--font-display)" }}>¿Cómo trabajamos?</h3>
-                <div className="mt-4 space-y-4 text-[14px] leading-[1.75] text-[#b0b8c9]">
-                  <p>Elegimos trabajar en equipo y con alianzas estratégicas, que nos permiten crear soluciones innovadoras para nuestros clientes en sus operaciones de importación y exportación.</p>
-                  <p>Cada uno de nuestros consultores y asesores tienen experiencia en un sector específico de la industria del comercio exterior. Teniendo en cuenta su expertise, cada consultor es asignado a cada proyecto en particular.</p>
-                  <p className="text-[#555c6b]">Esta dinámica de trabajo, que implica la colaboración y asesoría permanente de los consultores que integran E-Comex, permiten dinamizar y optimizar las operaciones de comercio exterior, generando un crecimiento sostenido y mensurable.</p>
-                </div>
+                <p className="text-[12px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.blue }}>La solución</p>
+                <h2 className="mt-4 text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.02em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
+                  E-COMEX cambia la forma en la que operás
+                </h2>
+                <p className="mt-5 text-[15px] leading-[1.8]" style={{ color: P.t2 }}>
+                  No somos solo una plataforma, ni solo una consultora. Somos el eslabón que faltaba: un equipo de expertos que usa tecnología propia para que tu empresa recupere el control de su logística internacional.
+                </p>
               </div>
-            </Reveal>
-            <Reveal delay={80}>
-              <div>
-                <h3 className="text-[18px] font-bold text-white" style={{ fontFamily: "var(--font-display)" }}>¿En qué nos diferenciamos?</h3>
-                <div className="mt-4 space-y-3">
-                  {[
-                    "Generamos y desarrollamos negocios internacionales para empresas, facilitando todas sus operaciones de importación y exportación.",
-                    "Asesoramos, gestionamos, generamos soluciones en negocios internacionales. Con HQ en Argentina, hacia el mundo.",
-                    "Damos solución a las deficiencias en tiempos, comunicación, financiación, pagos, seguimiento de operaciones, gestión administrativa y requerimientos legales.",
-                    "Tercerizamos el departamento de comercio exterior de empresas de diversos rubros y áreas de actividad.",
-                  ].map((text) => (
-                    <div key={text.slice(0, 30)} className="flex gap-3">
-                      <div className="mt-2 h-[2px] w-4 shrink-0 bg-[#2b59ff]/30" />
-                      <p className="text-[13px] leading-[1.7] text-[#555c6b]">{text}</p>
+            </R>
+            <R d={100}>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  ["+40%","Eficiencia operativa"],
+                  ["100%","Visibilidad total"],
+                  ["3 min","Tiempo de análisis"],
+                  ["20+","Años de experiencia"],
+                ].map(([n,l]) => (
+                  <div key={n} className="rounded-xl p-6" style={{ background: P.bg2, border: `1px solid ${P.border}` }}>
+                    <p className="text-[24px] font-extrabold" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>{n}</p>
+                    <p className="mt-1 text-[11px]" style={{ color: P.t3 }}>{l}</p>
+                  </div>
+                ))}
+              </div>
+            </R>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════ SERVICIOS ══════════ */}
+      <section id="servicios" className="px-5 py-24 lg:px-8" style={{ background: P.bg2 }}>
+        <div className="mx-auto max-w-[1200px]">
+          <R>
+            <p className="text-[12px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.cyan }}>Servicios</p>
+            <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <h2 className="max-w-[500px] text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.02em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
+                Todo lo que necesitás para operar con claridad.
+              </h2>
+              <p className="max-w-[280px] text-[13px] leading-[1.7]" style={{ color: P.t3 }}>
+                Servicio profesional completo + plataforma de análisis propia.
+              </p>
+            </div>
+          </R>
+
+          <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { t: "Clasificación de productos", d: "Evaluamos viabilidad técnica y posición arancelaria antes de operar.", c: P.blue },
+              { t: "Regulaciones", d: "Identificamos intervenciones, permisos y requisitos anticipadamente.", c: P.cyan },
+              { t: "Costos", d: "Desglose completo: FOB, flete, impuestos, gastos operativos, landed cost.", c: P.blue },
+              { t: "Logística", d: "Rutas, tiempos y modalidades optimizadas para cada operación.", c: P.cyan },
+              { t: "Documentación", d: "Centralización y gestión de toda la documentación operativa.", c: P.blue },
+              { t: "Acompañamiento", d: "Consultoría estratégica continua para importadores recurrentes.", c: P.cyan },
+            ].map((s, i) => (
+              <R key={s.t} d={i*50}>
+                <div className="group relative flex h-full flex-col overflow-hidden rounded-xl p-7 transition-all duration-300 hover:translate-y-[-2px]" style={{ background: P.bg, border: `1px solid ${P.border}` }}>
+                  <div className="absolute top-0 left-0 right-0 h-px opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ background: `linear-gradient(90deg, transparent, ${s.c}40, transparent)` }} />
+                  <h4 className="text-[14px] font-semibold" style={{ color: P.t1 }}>{s.t}</h4>
+                  <p className="mt-3 text-[13px] leading-[1.75]" style={{ color: P.t3 }}>{s.d}</p>
+                </div>
+              </R>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════ CÓMO TRABAJAMOS ══════════ */}
+      <section id="como" className="px-5 py-24 lg:px-8">
+        <div className="mx-auto max-w-[1200px]">
+          <R>
+            <p className="text-[12px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.blue }}>Cómo trabajamos</p>
+            <h2 className="mt-4 max-w-[500px] text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.02em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
+              Cuatro pasos. Sin fricciones.
+            </h2>
+          </R>
+
+          <div className="relative mt-16">
+            <div className="hidden lg:block absolute top-[30px] left-[12.5%] right-[12.5%] h-px" style={{ background: `linear-gradient(90deg, ${P.cyan}30, ${P.blue}30)` }} />
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { n: "01", t: "Entendemos tu operación", d: "Mapeamos necesidades y desafíos específicos de tu industria.", c: P.cyan },
+                { n: "02", t: "Analizamos la información", d: "Procesamos datos para encontrar patrones de mejora.", c: P.blue },
+                { n: "03", t: "Organizamos los datos", d: "Estructuramos el flujo de trabajo en nuestra plataforma.", c: P.cyan },
+                { n: "04", t: "Ejecutamos con claridad", d: "Reportes y estados en tiempo real para decidir con seguridad.", c: P.blue },
+              ].map((s, i) => (
+                <R key={s.n} d={i*80}>
+                  <div className="group flex flex-col items-center text-center">
+                    <div className="relative z-10 mb-6 flex h-[52px] w-[52px] items-center justify-center rounded-full transition-shadow duration-300 group-hover:shadow-[0_0_20px_-4px_var(--glow)]" style={{ background: P.bg, border: `2px solid ${s.c}`, ["--glow" as string]: `${s.c}50` }}>
+                      <span className="text-[14px] font-extrabold" style={{ color: s.c, fontFamily: "var(--font-display)" }}>{s.n}</span>
+                    </div>
+                    <h4 className="text-[14px] font-semibold" style={{ color: P.t1 }}>{s.t}</h4>
+                    <p className="mt-2 text-[13px] leading-[1.7]" style={{ color: P.t3 }}>{s.d}</p>
+                  </div>
+                </R>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════ PLATAFORMA ══════════ */}
+      <section id="plataforma" className="px-5 py-24 lg:px-8" style={{ background: P.bg2 }}>
+        <div className="mx-auto max-w-[1200px]">
+          <R>
+            <p className="text-[12px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.cyan }}>Plataforma</p>
+            <h2 className="mt-4 max-w-[560px] text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.02em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
+              Además, una plataforma que potencia todo.
+            </h2>
+            <p className="mt-4 max-w-[460px] text-[15px] leading-[1.75]" style={{ color: P.t2 }}>
+              Nuestra tecnología no reemplaza el criterio humano, lo amplifica. Todo tu comercio exterior en un solo lugar.
+            </p>
+          </R>
+
+          <R d={100}>
+            <div className="mt-14 grid gap-4 sm:grid-cols-3">
+              {[
+                ["Dashboard de control","Visibilidad total de operaciones, costos y tiempos."],
+                ["Análisis automatizado","Clasificación, regulaciones y costos en minutos."],
+                ["Reportes profesionales","PDFs listos para presentar a tu equipo o clientes."],
+              ].map(([t,d]) => (
+                <div key={t} className="rounded-xl p-6" style={{ background: P.bg, border: `1px solid ${P.border}` }}>
+                  <h4 className="text-[14px] font-semibold" style={{ color: P.t1 }}>{t}</h4>
+                  <p className="mt-2 text-[13px] leading-[1.7]" style={{ color: P.t3 }}>{d}</p>
+                </div>
+              ))}
+            </div>
+          </R>
+
+          <R d={160}>
+            <div className="mt-8">
+              <Link href="/app/nueva" className="rounded-lg px-6 py-3 text-[14px] font-medium text-white transition-all hover:shadow-[0_0_30px_-6px_rgba(47,128,237,0.4)]" style={{ background: P.blue }}>
+                Probar la plataforma
+              </Link>
+            </div>
+          </R>
+        </div>
+      </section>
+
+      {/* ══════════ DIFERENCIAL ══════════ */}
+      <section className="px-5 py-24 lg:px-8">
+        <div className="mx-auto max-w-[800px]">
+          <R>
+            <h2 className="text-center text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.02em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
+              Transformación E-COMEX
+            </h2>
+          </R>
+
+          <R d={80}>
+            <div className="mt-12 grid overflow-hidden rounded-xl sm:grid-cols-2" style={{ border: `1px solid ${P.border}` }}>
+              <div className="p-8 sm:p-10" style={{ background: P.bg }}>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.t3 }}>Antes</p>
+                <div className="mt-6 space-y-5">
+                  {["Caos documental","Cero previsibilidad","Gestión reactiva"].map(t => (
+                    <div key={t} className="flex items-start gap-3">
+                      <span className="mt-0.5 text-[16px] leading-none text-red-400/60">✕</span>
+                      <span className="text-[14px]" style={{ color: P.t2 }}>{t}</span>
                     </div>
                   ))}
                 </div>
               </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ── SERVICIOS ── */}
-      <section id="servicios" className="relative border-t border-white/[0.04] px-6 py-28">
-        <div className="pointer-events-none absolute bottom-0 left-[20%] h-[300px] w-[300px] rounded-full bg-[#2b59ff] opacity-[0.02] blur-[120px]" />
-        <div className="mx-auto max-w-[1100px]">
-          <Reveal>
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="text-[13px] font-medium text-[#2b59ff]">Servicios</p>
-                <h2 className="mt-4 text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-white" style={{ fontFamily: "var(--font-display)" }}>
-                  Acompañamiento integral.
-                </h2>
+              <div className="p-8 sm:p-10" style={{ background: P.navy }}>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.cyan }}>Con E-COMEX</p>
+                <div className="mt-6 space-y-5">
+                  {["Flujo unificado","Control de costos","Gestión proactiva"].map(t => (
+                    <div key={t} className="flex items-start gap-3">
+                      <span className="mt-0.5 text-[16px] leading-none" style={{ color: P.cyan }}>✓</span>
+                      <span className="text-[14px]" style={{ color: P.t1 }}>{t}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <p className="max-w-[260px] text-[13px] leading-[1.7] text-[#555c6b]">
-                La plataforma es una herramienta más dentro de un servicio profesional completo.
-              </p>
             </div>
-          </Reveal>
+          </R>
+        </div>
+      </section>
 
-          <div className="mt-16 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {/* ══════════ PARA QUIÉN ══════════ */}
+      <section className="px-5 py-24 lg:px-8" style={{ background: P.bg2 }}>
+        <div className="mx-auto max-w-[1200px]">
+          <R>
+            <h2 className="text-center text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.02em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
+              Aliados para cada perfil
+            </h2>
+            <p className="mx-auto mt-4 max-w-[480px] text-center text-[14px]" style={{ color: P.t3 }}>
+              Soluciones escalables para empresas que entienden que el comercio exterior es el corazón de su competitividad.
+            </p>
+          </R>
+
+          <div className="mt-14 grid gap-3 sm:grid-cols-3">
             {[
-              ["Análisis de producto", "Viabilidad técnica y comercial antes de operar."],
-              ["Análisis regulatorio", "Intervenciones, permisos y requisitos anticipados."],
-              ["Estimación de costos", "FOB, flete, impuestos, operativos — landed cost."],
-              ["Logística internacional", "Rutas, tiempos y modalidades optimizadas."],
-              ["Desarrollo de proveedores", "Búsqueda y validación de proveedores confiables."],
-              ["Consultoría estratégica", "Acompañamiento recurrente para importadores."],
-            ].map(([t, d], i) => (
-              <Reveal key={t} delay={i * 50}>
-                <div className="group flex h-full flex-col rounded-xl border border-white/[0.04] p-6 transition-all duration-300 hover:border-white/[0.08]">
-                  <div className="mb-3 flex items-center gap-2">
-                    <div className="h-[2px] w-5 bg-[#2b59ff]/25 transition-all duration-300 group-hover:w-8 group-hover:bg-[#2b59ff]/60" />
-                    <span className="text-[10px] font-medium text-[#555c6b]">{String(i + 1).padStart(2, "0")}</span>
-                  </div>
-                  <h4 className="text-[15px] font-semibold text-white">{t}</h4>
-                  <p className="mt-2 text-[13px] leading-[1.75] text-[#555c6b]">{d}</p>
+              ["Importadores","Optimizá márgenes y profesionalizá tu cadena de suministros."],
+              ["Empresas comerciales","Gestioná catálogos diversos con agilidad y stock garantizado."],
+              ["Equipos de compras","Decisiones basadas en datos con herramientas poderosas."],
+            ].map(([t,d],i) => (
+              <R key={t} d={i*60}>
+                <div className="group flex h-full flex-col rounded-xl p-8 text-center transition-all duration-300 hover:translate-y-[-2px]" style={{ background: P.bg, border: `1px solid ${P.border}` }}>
+                  <h3 className="text-[16px] font-bold" style={{ color: P.t1 }}>{t}</h3>
+                  <p className="mt-3 text-[13px] leading-[1.7]" style={{ color: P.t3 }}>{d}</p>
                 </div>
-              </Reveal>
+              </R>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── PLATAFORMA ── */}
-      <section id="plataforma" className="relative border-t border-white/[0.04] px-6 py-28 overflow-hidden">
-        <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-[#7c3aed] opacity-[0.02] blur-[160px]" />
-        <div className="mx-auto max-w-[1100px]">
-          <Reveal>
-            <p className="text-[13px] font-medium text-[#7c3aed]">Plataforma</p>
-            <h2 className="mt-4 max-w-[500px] text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-white" style={{ fontFamily: "var(--font-display)" }}>
-              Del producto al costo final en minutos.
+      {/* ══════════ CTA FINAL ══════════ */}
+      <section className="relative px-5 py-28 lg:px-8 overflow-hidden">
+        <div className="pointer-events-none absolute -top-20 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full opacity-[0.04] blur-[160px]" style={{ background: P.blue }} />
+        <div className="relative mx-auto max-w-[600px] text-center">
+          <R>
+            <h2 className="text-[clamp(1.6rem,4vw,2.6rem)] font-extrabold leading-[1.08] tracking-[-0.03em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
+              Empezá a importar con más claridad
             </h2>
-            <p className="mt-4 max-w-[420px] text-[15px] leading-[1.7] text-[#6b7280]">
-              Link, imagen, factura o descripción. La plataforma hace el resto.
+            <p className="mt-4 text-[15px]" style={{ color: P.t2 }}>
+              Unite a las empresas que ya transformaron sus operaciones con E-COMEX.
             </p>
-          </Reveal>
-
-          <div className="mt-16 grid gap-6 lg:grid-cols-3">
-            {[
-              { n: "01", title: "Cargá el producto", desc: "Link de Alibaba, foto, factura o texto libre. El sistema extrae todo automáticamente.", color: "#2b59ff" },
-              { n: "02", title: "Análisis estructurado", desc: "NCM, requisitos regulatorios, costos e impuestos. Trazable y documentado.", color: "#7c3aed" },
-              { n: "03", title: "Resultado profesional", desc: "Reporte PDF, comparación de escenarios o consultoría para validar.", color: "#2b59ff" },
-            ].map((s, i) => (
-              <Reveal key={s.n} delay={i * 80}>
-                <div className="group rounded-xl border border-white/[0.04] p-7 transition-all duration-300 hover:border-white/[0.08]" style={{ background: `linear-gradient(160deg, ${s.color}04, transparent 60%)` }}>
-                  <span className="text-[40px] font-extrabold leading-none" style={{ fontFamily: "var(--font-display)", color: `${s.color}15` }}>{s.n}</span>
-                  <h4 className="mt-4 text-[15px] font-semibold text-white">{s.title}</h4>
-                  <p className="mt-2 text-[13px] leading-[1.75] text-[#555c6b]">{s.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={200}>
-            <div className="mt-12">
-              <Link href="/app/nueva" className="rounded-md bg-[#2b59ff] px-6 py-3 text-[14px] font-medium text-white transition-colors hover:bg-[#2348d4]">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+              <a href="#contacto" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-medium text-white transition-all hover:shadow-[0_0_30px_-6px_rgba(47,128,237,0.4)]" style={{ background: P.blue }}>
+                Hablar con un especialista
+              </a>
+              <Link href="/app/nueva" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
                 Probar la plataforma
               </Link>
             </div>
-          </Reveal>
+          </R>
         </div>
       </section>
 
-      {/* ── CTA BANNER ── */}
-      <section className="px-6 py-20">
-        <Reveal>
-          <div className="mx-auto max-w-[1100px] overflow-hidden rounded-2xl px-6 py-12 sm:px-12 sm:py-16 relative border border-white/[0.04]" style={{ background: "linear-gradient(135deg, #0d1029, #110d20)" }}>
-            {/* Animated accent line at top */}
-            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, #2b59ff, #7c3aed, transparent)" }} />
-            <div className="pointer-events-none absolute -top-20 -right-20 h-[300px] w-[300px] rounded-full bg-[#2b59ff] opacity-[0.07] blur-[100px]" />
-            <div className="pointer-events-none absolute -bottom-20 -left-20 h-[200px] w-[200px] rounded-full bg-[#7c3aed] opacity-[0.05] blur-[80px]" />
-            <div className="relative flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
+      {/* ══════════ CONTACTO ══════════ */}
+      <section id="contacto" className="px-5 py-24 lg:px-8" style={{ background: P.bg2 }}>
+        <div className="mx-auto max-w-[1200px]">
+          <div className="grid gap-16 lg:grid-cols-[1fr_420px]">
+            <R>
               <div>
-                <h3 className="text-[clamp(1.4rem,2.5vw,2rem)] font-extrabold tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
-                  ¿Listo para importar con más claridad?
-                </h3>
-                <p className="mt-2 text-[15px] text-[#6b7280]">Hablá con un especialista o probá la plataforma.</p>
-              </div>
-              <div className="flex gap-3 shrink-0">
-                <a href="#contacto" className="rounded-md bg-white px-6 py-3 text-[14px] font-medium text-[#07111A] transition-colors hover:bg-[#dde1e8]">
-                  Contacto
-                </a>
-                <Link href="/app/nueva" className="rounded-md border border-white/10 px-6 py-3 text-[14px] font-medium text-white transition-colors hover:bg-white/5">
-                  Plataforma
-                </Link>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* ── CONTACTO ── */}
-      <section id="contacto" className="border-t border-white/[0.04] px-6 py-28">
-        <div className="mx-auto max-w-[1100px]">
-          <div className="grid gap-16 lg:grid-cols-[1fr_400px]">
-            <Reveal>
-              <div>
-                <p className="text-[13px] font-medium text-[#7c3aed]">Contacto</p>
-                <h2 className="mt-4 text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-white" style={{ fontFamily: "var(--font-display)" }}>
-                  Dejá tus datos y te contactamos.
+                <p className="text-[12px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.blue }}>Contacto</p>
+                <h2 className="mt-4 text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.02em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
+                  ¿Querés evaluar una operación?
                 </h2>
-                <div className="mt-8 space-y-3 text-[14px] text-[#555c6b]">
+                <p className="mt-4" style={{ color: P.t2 }}>Dejá tus datos y un especialista se comunica con vos.</p>
+                <div className="mt-8 space-y-3 text-[14px]" style={{ color: P.t3 }}>
                   <p>inteligencia@e-comex.com</p>
                   <p>Buenos Aires, Argentina</p>
                 </div>
               </div>
-            </Reveal>
-            <Reveal delay={80}>
+            </R>
+            <R d={80}>
               <form className="space-y-3">
                 <div className="grid gap-3 sm:grid-cols-2">
-                  <input type="text" placeholder="Nombre" className="w-full rounded-md border border-white/[0.06] bg-transparent px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#2a2e38] transition-colors focus:border-[#2b59ff]/40" />
-                  <input type="text" placeholder="Empresa" className="w-full rounded-md border border-white/[0.06] bg-transparent px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#2a2e38] transition-colors focus:border-[#2b59ff]/40" />
+                  {["Nombre","Empresa"].map(ph => (
+                    <input key={ph} type="text" placeholder={ph} className="w-full rounded-lg px-4 py-3 text-[14px] outline-none transition-colors focus:border-[#2F80ED]/40" style={{ background: P.bg, border: `1px solid ${P.border}`, color: P.t1 }} />
+                  ))}
                 </div>
-                <input type="email" placeholder="Email" className="w-full rounded-md border border-white/[0.06] bg-transparent px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#2a2e38] transition-colors focus:border-[#2b59ff]/40" />
-                <textarea rows={3} placeholder="Mensaje" className="w-full resize-none rounded-md border border-white/[0.06] bg-transparent px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#2a2e38] transition-colors focus:border-[#2b59ff]/40" />
-                <button type="button" className="w-full rounded-md bg-white py-3 text-[14px] font-medium text-[#07111A] transition-colors hover:bg-[#dde1e8]">
+                <input type="email" placeholder="Email" className="w-full rounded-lg px-4 py-3 text-[14px] outline-none transition-colors focus:border-[#2F80ED]/40" style={{ background: P.bg, border: `1px solid ${P.border}`, color: P.t1 }} />
+                <textarea rows={3} placeholder="Mensaje" className="w-full resize-none rounded-lg px-4 py-3 text-[14px] outline-none transition-colors focus:border-[#2F80ED]/40" style={{ background: P.bg, border: `1px solid ${P.border}`, color: P.t1 }} />
+                <button type="button" className="w-full rounded-lg py-3 text-[14px] font-medium text-white transition-all hover:shadow-[0_0_20px_-4px_rgba(47,128,237,0.3)]" style={{ background: P.blue }}>
                   Enviar
                 </button>
               </form>
-            </Reveal>
+            </R>
           </div>
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer className="border-t border-white/[0.04] px-6 py-8">
-        <div className="mx-auto flex max-w-[1100px] items-center justify-between text-[12px] text-[#2a2e38]">
+      {/* ══════════ FOOTER ══════════ */}
+      <footer className="px-5 py-8 lg:px-8" style={{ borderTop: `1px solid ${P.border}` }}>
+        <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-4 text-[12px] sm:flex-row" style={{ color: P.t3 }}>
           <span>© 2026 E-COMEX</span>
           <span>Buenos Aires, Argentina</span>
         </div>

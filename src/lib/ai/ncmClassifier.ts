@@ -16,11 +16,10 @@ export type NcmClassification = {
   confidence: number;
   rationale: string;
   candidates: NcmCandidate[];
-  // Extra signals (optional) to improve PCRAM validation/search.
-  hs_heading?: string; // e.g. "8701", "8703"
-  kind?: string; // e.g. "tractor", "auto", "camion", "partes", "otro"
-  search_terms?: string[]; // PCRAM-friendly keywords
-  missing_info_questions?: string[]; // short questions to ask user if needed
+  hs_heading?: string;
+  kind?: string;
+  search_terms?: string[];
+  missing_info_questions?: string[];
 };
 
 function formatNcm(ncmRaw: string) {
@@ -37,15 +36,83 @@ function clamp01(n: number) {
   return Math.max(0, Math.min(1, n));
 }
 
+const CLASSIFICATION_SYSTEM = `Eres un clasificador experto de NCM (Nomenclatura Común del Mercosur) para Argentina.
+
+METODOLOGÍA OBLIGATORIA — Seguí estos pasos en orden:
+
+PASO 1 — ANÁLISIS DEL PRODUCTO
+Sintetizá en 2-3 líneas: qué es, de qué material está hecho, para qué sirve.
+Identificá palabras clave técnicas para búsqueda.
+
+PASO 2 — DETERMINACIÓN DE SECCIÓN Y CAPÍTULO
+Determiná la Sección (I a XXI) y Capítulo (01 a 97) correctos.
+Regla: La función principal del producto define el capítulo, NO el material.
+
+Secciones clave:
+- Sección XVI (Cap. 84-85): Máquinas, aparatos eléctricos
+- Sección XVII (Cap. 86-89): Material de transporte
+- Sección IV (Cap. 16-24): Productos alimenticios
+- Sección XI (Cap. 50-63): Materias textiles
+- Sección VII (Cap. 38-40): Plásticos, caucho
+- Sección XV (Cap. 72-83): Metales comunes
+
+PASO 3 — IDENTIFICACIÓN DE PARTIDA (4 DÍGITOS)
+Dentro del capítulo, buscá la partida que mejor describe el producto.
+Aplicá RGI 1: El texto de la partida + notas de sección/capítulo prevalecen.
+Aplicá RGI 3a: La descripción más específica tiene prioridad.
+
+PASO 4 — SUBPARTIDA Y NCM (6 y 8 DÍGITOS)
+Seleccioná la subpartida de 6 dígitos y el ítem NCM de 8 dígitos.
+Verificá posiciones vecinas (subpartidas hermanas) antes de confirmar.
+RGI 6: Las RGI 1-5 se aplican a nivel subpartida.
+
+PASO 5 — VALIDACIÓN CRUZADA
+Verificá que la posición elegida sea la MÁS ESPECÍFICA.
+Listá al menos 2 posiciones DESCARTADAS con motivo.
+Verificá exclusiones por notas de capítulo.
+
+PASO 6 — EVALUACIÓN DE CONFIANZA
+Base 60%. Sumá:
++15% coincidencia literal con descripción oficial
++10% sin ambigüedad en RGI
++10% posiciones vecinas validadas
++5% exclusiones claras documentadas
+Restá:
+-20% si hay ambigüedad entre capítulos
+-10% si faltan datos técnicos CRÍTICOS (no cosméticos)
+
+IMPORTANTE: Para productos comunes y bien conocidos (cargadores USB, auriculares, ropa básica, juguetes simples), la confianza debería ser >= 70% sin necesitar datos adicionales. Solo pedí información extra si hay ambigüedad REAL entre capítulos o subpartidas. No pidas certificaciones, manuales, o datos de packaging — eso NO afecta la clasificación NCM.
+
+REGLAS CRÍTICAS (OBLIGATORIAS — prevalecen sobre tu conocimiento general):
+
+CARGADORES Y FUENTES DE ALIMENTACIÓN:
+- Cargadores USB (Type-C, micro-USB, etc.), adaptadores de corriente, fuentes switching → 8504.40.XX (convertidores estáticos)
+- 8504.40.21: rectificadores (conversión AC/DC) potencia ≤ 750W → esto es lo correcto para la mayoría de cargadores USB
+- 8504.40.29: otros convertidores estáticos ≤ 750W
+- NUNCA clasificar un cargador USB como 8504.10.XX (eso es transformadores de dieléctrico LÍQUIDO, tipo los de postes de electricidad)
+- NUNCA clasificar un cargador USB como 8504.31/32/33/34 (eso es otros transformadores)
+- Smartphones/tablets: 8517.13 (teléfonos) o 8471 (máquinas de tratamiento de datos)
+- Auriculares bluetooth: 8518.30
+- Cables USB: 8544.42
+- Vehículos personas: 8703, mercancías: 8704
+- Ropa: Cap.61 (punto) o 62 (tejido plano)
+- Juguetes: Cap.95
+
+Devolvé SOLO JSON válido con estas claves:
+- ncm_code: formato XXXX.XX.XX
+- confidence: 0 a 1
+- rationale: explicación paso a paso de cómo llegaste al NCM (sección → capítulo → partida → subpartida)
+- candidates: array de 2-4 posiciones alternativas con ncm_code, confidence, rationale
+- hs_heading: 4 dígitos (ej: "8504")
+- kind: etiqueta corta en español
+- search_terms: 2-6 términos para buscar en PCRAM
+- missing_info_questions: 1-4 preguntas si faltan datos técnicos críticos
+- excluded_positions: array de objetos {ncm_code, reason} con posiciones descartadas y por qué`;
+
 export async function classifyWithAI(
   text: string,
   opts?: {
-    /**
-     * Optional evidence list to "research" from.
-     * If provided, the model must pick an NCM from this list (unless it returns 9999.99.99).
-     */
     candidates?: NcmEvidenceCandidate[];
-    /** Extra context (e.g. hints from PCRAM search / local nomenclator). */
     evidenceNote?: string;
   }
 ): Promise<NcmClassification> {
@@ -53,32 +120,21 @@ export async function classifyWithAI(
   const evidence = Array.isArray(opts?.candidates) ? opts!.candidates.slice(0, 12) : [];
 
   const system = [
-    "Eres un clasificador experto de NCM (Argentina).",
-    "Tu tarea es proponer el NCM más probable para el producto descrito, investigando con la evidencia disponible.",
-    "Devuelve SOLO JSON válido con estas claves: ncm_code, confidence, rationale, candidates, hs_heading, kind, search_terms, missing_info_questions.",
-    "confidence debe ser un número entre 0 y 1.",
-    "ncm_code debe tener el formato XXXX.XX.XX (si recibes solo dígitos, formatea).",
-    "hs_heading debe ser 4 dígitos cuando puedas (por ejemplo 8701, 8703, 8427). Si no aplica, null.",
-    "kind debe ser una etiqueta corta en español (por ejemplo: tractor, automóvil, camioneta, camión, partes, maquinaria, alimento, otro).",
-    "search_terms deben ser 2–6 términos en español útiles para buscar en PCRAM. Priorizá términos genéricos técnicos; evitá marcas/modelos salvo que sea la única pista.",
+    CLASSIFICATION_SYSTEM,
     evidence.length
       ? "REGLA CRÍTICA: si te doy una lista de candidatos (EVIDENCE_CANDIDATES), tu ncm_code DEBE ser uno de esos códigos. Si no podés decidir, devolvé 9999.99.99 con confidence baja y 1–4 missing_info_questions."
       : "",
-    "Reglas rápidas (orientativas) para vehículos (Cap. 87):",
-    "- 8703: vehículos diseñados principalmente para transporte de personas (autos/SUV).",
-    "- 8704: vehículos para transporte de mercancías (pick-up/camioneta de carga/vehículo utilitario).",
-    "- Si te dan SOLO un modelo (ej. 'Hilux', 'Ranger', 'Amarok', 'F-150') y no hay más contexto, asumí 'pick-up/utilitario' y pedí confirmación con una pregunta corta (personas vs carga).",
-    "missing_info_questions: si el NCM depende de datos técnicos faltantes (vehículos: personas vs carga, cilindrada, peso total con carga máxima, etc.), devolvé 1–4 preguntas cortas para destrabar.",
-    knowledge ? `Base de conocimiento (referencia):\n${knowledge}` : "",
+    knowledge ? `Base de conocimiento adicional:\n${knowledge}` : "",
   ]
     .filter(Boolean)
     .join("\n\n");
 
   const user = [
-    "Clasifica el NCM del siguiente producto.",
+    "Clasificá el NCM del siguiente producto usando la metodología de 6 pasos.",
+    "IMPORTANTE: Seguí cada paso y documentá tu razonamiento en 'rationale'.",
     opts?.evidenceNote ? `EVIDENCE_NOTE:\n${String(opts.evidenceNote).slice(0, 1500)}` : "",
     evidence.length
-      ? `EVIDENCE_CANDIDATES (elige de esta lista):\n${JSON.stringify(evidence, null, 2)}`
+      ? `EVIDENCE_CANDIDATES (elegí de esta lista):\n${JSON.stringify(evidence, null, 2)}`
       : "",
     "Producto:",
     text.slice(0, 8000),
@@ -98,11 +154,24 @@ export async function classifyWithAI(
       kind?: string;
       search_terms?: string[];
       missing_info_questions?: string[];
+      excluded_positions?: Array<{ ncm_code?: string; reason?: string }>;
     }>({ system, user, model: process.env.OPENAI_MODEL || "gpt-4o-mini" });
 
     const ncm_code = formatNcm(String(r.ncm_code ?? ""));
     const confidence = clamp01(Number(r.confidence ?? 0));
-    const rationale = String(r.rationale ?? "Clasificación sugerida por IA.").trim();
+
+    const excludedInfo = Array.isArray(r.excluded_positions)
+      ? r.excluded_positions
+          .slice(0, 4)
+          .map((e) => `- Descartado ${formatNcm(String(e.ncm_code ?? ""))}: ${e.reason ?? "sin motivo"}`)
+          .join("\n")
+      : "";
+
+    const rationale = [
+      String(r.rationale ?? "Clasificación sugerida por IA.").trim(),
+      excludedInfo ? `\nPosiciones descartadas:\n${excludedInfo}` : "",
+    ].join("");
+
     const candidates =
       Array.isArray(r.candidates) && r.candidates.length
         ? r.candidates.slice(0, 6).map((c) => ({
@@ -116,16 +185,10 @@ export async function classifyWithAI(
     const hs_heading = hsRaw.length === 4 ? hsRaw : undefined;
     const kind = r.kind ? String(r.kind).trim() : undefined;
     const search_terms = Array.isArray(r.search_terms)
-      ? r.search_terms
-          .map((x) => String(x).trim())
-          .filter(Boolean)
-          .slice(0, 6)
+      ? r.search_terms.map((x) => String(x).trim()).filter(Boolean).slice(0, 6)
       : undefined;
     const missing_info_questions = Array.isArray(r.missing_info_questions)
-      ? r.missing_info_questions
-          .map((x) => String(x).trim())
-          .filter(Boolean)
-          .slice(0, 4)
+      ? r.missing_info_questions.map((x) => String(x).trim()).filter(Boolean).slice(0, 4)
       : undefined;
 
     return {
@@ -147,4 +210,3 @@ export async function classifyWithAI(
     };
   }
 }
-

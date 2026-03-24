@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
 import { generateQuotePdf } from "@/lib/pdf/quotePdf";
 import { writeAuditLog } from "@/lib/audit/log";
+import { verifyAuthToken } from "@/lib/auth/jwt";
 
 export const runtime = "nodejs";
 
@@ -20,23 +21,29 @@ export async function GET(req: Request) {
   const cookieStore = await cookies();
   const anonFromQuery = (url.searchParams.get("anon") ?? "").trim();
   const anonId = cookieStore.get("ecomex_anon")?.value || anonFromQuery;
-  if (!anonId) {
+
+  const authToken = cookieStore.get("ecomex_auth")?.value;
+  const auth = authToken ? await verifyAuthToken(authToken) : null;
+  const userId = auth?.sub ?? null;
+
+  if (!anonId && !userId) {
     return NextResponse.json(
       { error: "Sesión no encontrada. Abrí el análisis y generá una cotización primero." },
       { status: 401 }
     );
   }
 
+  const where = id
+    ? userId
+      ? { id, mode, OR: [{ userId }, ...(anonId ? [{ anonId }] : [])] }
+      : { id, anonId, mode }
+    : userId
+      ? { userId, mode, totalMinUsd: { not: null }, totalMaxUsd: { not: null } }
+      : { anonId, mode, totalMinUsd: { not: null }, totalMaxUsd: { not: null } };
+
   const quote = await prisma.quote
     .findFirst({
-      where: id
-        ? { id, anonId, mode }
-        : {
-            anonId,
-            mode,
-            totalMinUsd: { not: null },
-            totalMaxUsd: { not: null },
-          },
+      where: where as any,
       orderBy: { createdAt: "desc" },
     })
     .catch(() => null);
