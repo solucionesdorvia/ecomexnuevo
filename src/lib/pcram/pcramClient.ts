@@ -742,10 +742,15 @@ export class PcramClient {
       $("title").text().trim() ||
       undefined;
 
+    const MENU_NOISE = new Set([
+      "NOMENCLATURAS", "NORMATIVAS", "CONSULTAS", "OPERACIONES", "LINKs",
+      "Mercado de Cambios", "Precios FOB", "MENU", "BOLETIN", "CONTRASEÑA",
+      "Inicio", "Home", "Salir", "Cerrar", "Login",
+    ]);
     const breadcrumbs = $("nav a")
       .toArray()
       .map((a) => $(a).text().trim())
-      .filter(Boolean);
+      .filter((t) => t && !MENU_NOISE.has(t) && t.length > 2 && !/^(https?:|javascript:)/i.test(t));
 
     const taxes: PcramTaxRates = {};
     const taxRows: PcramTaxRow[] = [];
@@ -833,12 +838,16 @@ export class PcramClient {
       .toArray()
       .forEach((a) => {
         const t = $(a).text().trim();
-        if (t) interventions.add(t);
+        if (t && t.length > 3) interventions.add(t);
       });
 
-    // Also search common keywords in text
+    // Search for intervention keywords only in table/content cells, not nav menus
+    const contentText = $("table, .content, main, #content, .detalle, .datos")
+      .text()
+      .replace(/\s+/g, " ");
+    const searchIn = contentText.length > 50 ? contentText : text;
     for (const k of ["ANMAT", "SENASA", "ENACOM", "INAL", "INTI"]) {
-      if (new RegExp(`\\b${k}\\b`, "i").test(text)) interventions.add(k);
+      if (new RegExp(`\\b${k}\\b`, "i").test(searchIn)) interventions.add(k);
     }
 
     const reclassifications: Array<{ label: string; href: string }> = [];

@@ -36,84 +36,57 @@ function clamp01(n: number) {
   return Math.max(0, Math.min(1, n));
 }
 
-const CLASSIFICATION_SYSTEM = `Eres un clasificador experto de NCM (Nomenclatura Común del Mercosur) para Argentina.
+const SYSTEM_PROMPT = `Sos un clasificador experto NCM (Argentina/Mercosur). Devolvé SOLO JSON.
 
-METODOLOGÍA OBLIGATORIA — Seguí estos pasos en orden:
+=== REGLAS OBLIGATORIAS (prevalecen sobre todo) ===
 
-PASO 1 — ANÁLISIS DEL PRODUCTO
-Sintetizá en 2-3 líneas: qué es, de qué material está hecho, para qué sirve.
-Identificá palabras clave técnicas para búsqueda.
+PROHIBIDO devolver estos NCM para estos productos:
+- Cargador USB / adaptador corriente / fuente switching → 8504.40.21 (NUNCA 8504.10.XX)
+- 8504.10 es SOLO para transformadores de dieléctrico LÍQUIDO (postes de electricidad)
 
-PASO 2 — DETERMINACIÓN DE SECCIÓN Y CAPÍTULO
-Determiná la Sección (I a XXI) y Capítulo (01 a 97) correctos.
-Regla: La función principal del producto define el capítulo, NO el material.
+TABLA DE REFERENCIA RÁPIDA:
+- Cargador USB/Type-C/adaptador corriente → 8504.40.21
+- Fuente de alimentación / power supply → 8504.40.22
+- Smartphone → 8517.13.00
+- Tablet → 8471.30.19
+- Notebook/laptop → 8471.30.19
+- Auriculares/cascos bluetooth → 8518.30.00
+- Cable USB/HDMI → 8544.42.00
+- Batería litio → 8507.60.00
+- LED/lámpara LED → 8539.50.00
+- Panel solar → 8541.40.22
+- TV/monitor → 8528.72.00
+- Impresora → 8443.32.21
+- Auto nafta ≤1500cc → 8703.22.10
+- Auto nafta 1500-3000cc → 8703.23.10
+- Auto nafta >3000cc → 8703.24.10
+- Auto diesel → 8703.32.10
+- Auto eléctrico → 8703.80.00
+- Pickup/camioneta carga → 8704.21.90
+- Moto ≤250cc → 8711.20.10
+- Bicicleta → 8712.00.10
+- Remera algodón → 6109.10.00
+- Pantalón algodón hombre → 6203.42.00
+- Zapatilla deportiva → 6404.11.00
+- Juguete → 9503.00.97
+- Videoconsola → 9504.50.00
 
-Secciones clave:
-- Sección XVI (Cap. 84-85): Máquinas, aparatos eléctricos
-- Sección XVII (Cap. 86-89): Material de transporte
-- Sección IV (Cap. 16-24): Productos alimenticios
-- Sección XI (Cap. 50-63): Materias textiles
-- Sección VII (Cap. 38-40): Plásticos, caucho
-- Sección XV (Cap. 72-83): Metales comunes
+=== INSTRUCCIONES ===
 
-PASO 3 — IDENTIFICACIÓN DE PARTIDA (4 DÍGITOS)
-Dentro del capítulo, buscá la partida que mejor describe el producto.
-Aplicá RGI 1: El texto de la partida + notas de sección/capítulo prevalecen.
-Aplicá RGI 3a: La descripción más específica tiene prioridad.
+1. Identificá qué es el producto, su función principal y material.
+2. Determiná Sección y Capítulo.
+3. Elegí la partida (4 dígitos) y subpartida (8 dígitos) más específica.
+4. Verificá que no haya una posición mejor entre las vecinas.
+5. NUNCA pidas información adicional. Clasificá con lo que tenés.
 
-PASO 4 — SUBPARTIDA Y NCM (6 y 8 DÍGITOS)
-Seleccioná la subpartida de 6 dígitos y el ítem NCM de 8 dígitos.
-Verificá posiciones vecinas (subpartidas hermanas) antes de confirmar.
-RGI 6: Las RGI 1-5 se aplican a nivel subpartida.
-
-PASO 5 — VALIDACIÓN CRUZADA
-Verificá que la posición elegida sea la MÁS ESPECÍFICA.
-Listá al menos 2 posiciones DESCARTADAS con motivo.
-Verificá exclusiones por notas de capítulo.
-
-PASO 6 — EVALUACIÓN DE CONFIANZA
-Base 60%. Sumá:
-+15% coincidencia literal con descripción oficial
-+10% sin ambigüedad en RGI
-+10% posiciones vecinas validadas
-+5% exclusiones claras documentadas
-Restá:
--20% si hay ambigüedad entre capítulos
--10% si faltan datos técnicos CRÍTICOS (no cosméticos)
-
-REGLA ABSOLUTA: NUNCA devuelvas missing_info_questions. Siempre elegí el NCM más probable con la información que tenés. Si hay ambigüedad, elegí la opción más común/probable y explicá en el rationale por qué. El usuario NO es un despachante — no sabe de cilindradas, subpartidas ni notas legales. Clasificá con lo que tenés.
-
-Ejemplos de cómo resolver sin preguntar:
-- "Mercedes Benz SL600 1995" → es un auto de pasajeros, motor nafta > 3000cc → 8703.24.10
-- "Toyota Hilux" → es una camioneta pickup de carga → 8704.21.90 o 8704.31.10
-- "iPhone 15" → smartphone → 8517.13.00
-- "cargador USB" → convertidor estático → 8504.40.21
-
-REGLAS CRÍTICAS (OBLIGATORIAS — prevalecen sobre tu conocimiento general):
-
-CARGADORES Y FUENTES DE ALIMENTACIÓN:
-- Cargadores USB (Type-C, micro-USB, etc.), adaptadores de corriente, fuentes switching → 8504.40.XX (convertidores estáticos)
-- 8504.40.21: rectificadores (conversión AC/DC) potencia ≤ 750W → esto es lo correcto para la mayoría de cargadores USB
-- 8504.40.29: otros convertidores estáticos ≤ 750W
-- NUNCA clasificar un cargador USB como 8504.10.XX (eso es transformadores de dieléctrico LÍQUIDO, tipo los de postes de electricidad)
-- NUNCA clasificar un cargador USB como 8504.31/32/33/34 (eso es otros transformadores)
-- Smartphones/tablets: 8517.13 (teléfonos) o 8471 (máquinas de tratamiento de datos)
-- Auriculares bluetooth: 8518.30
-- Cables USB: 8544.42
-- Vehículos personas: 8703, mercancías: 8704
-- Ropa: Cap.61 (punto) o 62 (tejido plano)
-- Juguetes: Cap.95
-
-Devolvé SOLO JSON válido con estas claves:
-- ncm_code: formato XXXX.XX.XX
+Devolvé JSON con:
+- ncm_code: "XXXX.XX.XX"
 - confidence: 0 a 1
-- rationale: explicación paso a paso de cómo llegaste al NCM (sección → capítulo → partida → subpartida)
-- candidates: array de 2-4 posiciones alternativas con ncm_code, confidence, rationale
-- hs_heading: 4 dígitos (ej: "8504")
-- kind: etiqueta corta en español
-- search_terms: 2-6 términos para buscar en PCRAM
-- missing_info_questions: 1-4 preguntas si faltan datos técnicos críticos
-- excluded_positions: array de objetos {ncm_code, reason} con posiciones descartadas y por qué`;
+- rationale: explicación breve (sección → capítulo → partida → subpartida)
+- candidates: 2-3 alternativas [{ncm_code, confidence, rationale}]
+- hs_heading: 4 dígitos (ej "8504")
+- kind: etiqueta corta español
+- search_terms: 2-4 términos para PCRAM`;
 
 export async function classifyWithAI(
   text: string,
@@ -122,28 +95,20 @@ export async function classifyWithAI(
     evidenceNote?: string;
   }
 ): Promise<NcmClassification> {
-  const knowledge = process.env.NCM_KNOWLEDGE ?? "";
   const evidence = Array.isArray(opts?.candidates) ? opts!.candidates.slice(0, 12) : [];
 
   const system = [
-    CLASSIFICATION_SYSTEM,
+    SYSTEM_PROMPT,
     evidence.length
-      ? "REGLA CRÍTICA: si te doy una lista de candidatos (EVIDENCE_CANDIDATES), tu ncm_code DEBE ser uno de esos códigos. Si no podés decidir, devolvé 9999.99.99 con confidence baja y 1–4 missing_info_questions."
+      ? "REGLA: tu ncm_code DEBE ser uno de los EVIDENCE_CANDIDATES. Si no podés decidir, devolvé 9999.99.99."
       : "",
-    knowledge ? `Base de conocimiento adicional:\n${knowledge}` : "",
-  ]
-    .filter(Boolean)
-    .join("\n\n");
+  ].filter(Boolean).join("\n\n");
 
   const user = [
-    "Clasificá el NCM del siguiente producto usando la metodología de 6 pasos.",
-    "IMPORTANTE: Seguí cada paso y documentá tu razonamiento en 'rationale'.",
-    opts?.evidenceNote ? `EVIDENCE_NOTE:\n${String(opts.evidenceNote).slice(0, 1500)}` : "",
-    evidence.length
-      ? `EVIDENCE_CANDIDATES (elegí de esta lista):\n${JSON.stringify(evidence, null, 2)}`
-      : "",
-    "Producto:",
-    text.slice(0, 8000),
+    "Clasificá el NCM:",
+    opts?.evidenceNote ? `EVIDENCE_NOTE:\n${String(opts.evidenceNote).slice(0, 1000)}` : "",
+    evidence.length ? `EVIDENCE_CANDIDATES:\n${JSON.stringify(evidence, null, 2)}` : "",
+    text.slice(0, 4000),
   ].join("\n");
 
   try {
@@ -154,44 +119,26 @@ export async function classifyWithAI(
       ncm_code?: string;
       confidence?: number;
       rationale?: string;
-      candidates?: Array<{
-        ncm_code?: string;
-        confidence?: number;
-        rationale?: string;
-      }>;
+      candidates?: Array<{ ncm_code?: string; confidence?: number; rationale?: string }>;
       hs_heading?: string;
       kind?: string;
       search_terms?: string[];
-      missing_info_questions?: string[];
-      excluded_positions?: Array<{ ncm_code?: string; reason?: string }>;
     }>({ system, user, model: process.env.OPENAI_MODEL || "gpt-4o-mini" });
 
     const elapsed = Date.now() - start;
     const ncm_code = formatNcm(String(r.ncm_code ?? ""));
     // eslint-disable-next-line no-console
     console.log(`[ncmClassifier] result: ${ncm_code} (confidence: ${r.confidence}, ${elapsed}ms)`);
+
     const confidence = clamp01(Number(r.confidence ?? 0));
-
-    const excludedInfo = Array.isArray(r.excluded_positions)
-      ? r.excluded_positions
-          .slice(0, 4)
-          .map((e) => `- Descartado ${formatNcm(String(e.ncm_code ?? ""))}: ${e.reason ?? "sin motivo"}`)
-          .join("\n")
-      : "";
-
-    const rationale = [
-      String(r.rationale ?? "Clasificación sugerida por IA.").trim(),
-      excludedInfo ? `\nPosiciones descartadas:\n${excludedInfo}` : "",
-    ].join("");
-
-    const candidates =
-      Array.isArray(r.candidates) && r.candidates.length
-        ? r.candidates.slice(0, 6).map((c) => ({
-            ncm_code: formatNcm(String(c.ncm_code ?? "")),
-            confidence: clamp01(Number(c.confidence ?? 0)),
-            rationale: c.rationale ? String(c.rationale) : undefined,
-          }))
-        : [];
+    const rationale = String(r.rationale ?? "Clasificación sugerida por IA.").trim();
+    const candidates = Array.isArray(r.candidates) && r.candidates.length
+      ? r.candidates.slice(0, 6).map((c) => ({
+          ncm_code: formatNcm(String(c.ncm_code ?? "")),
+          confidence: clamp01(Number(c.confidence ?? 0)),
+          rationale: c.rationale ? String(c.rationale) : undefined,
+        }))
+      : [];
 
     const hsRaw = String(r.hs_heading ?? "").replace(/\D/g, "");
     const hs_heading = hsRaw.length === 4 ? hsRaw : undefined;
@@ -199,20 +146,8 @@ export async function classifyWithAI(
     const search_terms = Array.isArray(r.search_terms)
       ? r.search_terms.map((x) => String(x).trim()).filter(Boolean).slice(0, 6)
       : undefined;
-    const missing_info_questions = Array.isArray(r.missing_info_questions)
-      ? r.missing_info_questions.map((x) => String(x).trim()).filter(Boolean).slice(0, 4)
-      : undefined;
 
-    return {
-      ncm_code,
-      confidence,
-      rationale,
-      candidates,
-      hs_heading,
-      kind,
-      search_terms,
-      missing_info_questions,
-    };
+    return { ncm_code, confidence, rationale, candidates, hs_heading, kind, search_terms };
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error("[ncmClassifier] FAILED:", err instanceof Error ? err.message : err);
