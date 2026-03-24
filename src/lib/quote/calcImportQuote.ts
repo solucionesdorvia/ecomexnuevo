@@ -271,27 +271,18 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   const fobUnitMin = explicitRange ? explicitRange.min : fobGuess;
   const fobUnitMax = explicitRange ? explicitRange.max : fobGuess;
 
-  // Heuristics: landed cost composition (unit-level estimate)
-  // We'll return ranges to avoid false precision.
-  const fleteUnitMin = clamp(fobUnitMin * 0.18, 45, 650);
-  const fleteUnitMax = clamp(fobUnitMax * 0.42, 95, 1400);
-
-  const shippingProfile = String((inputs.product.raw as any)?.shippingProfile ?? "").toLowerCase();
-  const freightFactor =
-    shippingProfile === "light"
-      ? { min: 0.75, max: 0.85 }
-      : shippingProfile === "heavy"
-        ? { min: 1.15, max: 1.35 }
-        : { min: 1, max: 1 };
-
-  const fleteUnitMin2 = clamp(fleteUnitMin * freightFactor.min, 45, 900);
-  const fleteUnitMax2 = clamp(fleteUnitMax * freightFactor.max, 95, 2400);
-
   const fobTotalMin = fobUnitMin * qty;
   const fobTotalMax = fobUnitMax * qty;
   const fobTotal = fobGuess * qty;
-  const fleteMin = fleteUnitMin2 * qty;
-  const fleteMax = fleteUnitMax2 * qty;
+
+  // Freight: calculated on TOTAL FOB, not per-unit
+  // Typical maritime freight: 15%-35% of FOB for most goods, with minimums for small shipments
+  const shippingProfile = String((inputs.product.raw as any)?.shippingProfile ?? "").toLowerCase();
+  const freightPctMin = shippingProfile === "light" ? 0.12 : shippingProfile === "heavy" ? 0.25 : 0.15;
+  const freightPctMax = shippingProfile === "light" ? 0.25 : shippingProfile === "heavy" ? 0.50 : 0.35;
+
+  const fleteMin = clamp(fobTotalMin * freightPctMin, 200, 15000);
+  const fleteMax = clamp(fobTotalMax * freightPctMax, 400, 35000);
 
   const cifMin = fobTotalMin + fleteMin;
   const cifMax = fobTotalMax + fleteMax;
