@@ -63,7 +63,7 @@ export async function openaiJson<T extends JsonValue>(opts: {
 }): Promise<T> {
   const apiKey = requireEnv("OPENAI_API_KEY");
   const model = opts.model ?? (process.env.OPENAI_MODEL || "gpt-4o-mini");
-  const timeoutMs = opts.timeoutMs ?? 25_000;
+  const timeoutMs = opts.timeoutMs ?? 45_000;
 
   const controller = new AbortController();
   const t = setTimeout(() => controller.abort(), timeoutMs);

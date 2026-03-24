@@ -147,6 +147,9 @@ export async function classifyWithAI(
   ].join("\n");
 
   try {
+    const start = Date.now();
+    // eslint-disable-next-line no-console
+    console.log("[ncmClassifier] calling OpenAI for:", text.slice(0, 80));
     const r = await openaiJson<{
       ncm_code?: string;
       confidence?: number;
@@ -163,7 +166,10 @@ export async function classifyWithAI(
       excluded_positions?: Array<{ ncm_code?: string; reason?: string }>;
     }>({ system, user, model: process.env.OPENAI_MODEL || "gpt-4o-mini" });
 
+    const elapsed = Date.now() - start;
     const ncm_code = formatNcm(String(r.ncm_code ?? ""));
+    // eslint-disable-next-line no-console
+    console.log(`[ncmClassifier] result: ${ncm_code} (confidence: ${r.confidence}, ${elapsed}ms)`);
     const confidence = clamp01(Number(r.confidence ?? 0));
 
     const excludedInfo = Array.isArray(r.excluded_positions)
@@ -207,7 +213,9 @@ export async function classifyWithAI(
       search_terms,
       missing_info_questions,
     };
-  } catch {
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error("[ncmClassifier] FAILED:", err instanceof Error ? err.message : err);
     return {
       ncm_code: "9999.99.99",
       confidence: 0.2,

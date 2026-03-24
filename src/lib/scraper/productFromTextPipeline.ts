@@ -247,14 +247,7 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
       if (!ncmMeta) ncmMeta = { source: "pcram_search" };
       if (ncmMeta)
         ncmMeta.localCandidates = local.map((r) => ({ ncmCode: r.ncmCode, title: r.title }));
-      // Fallback: if AI didn't resolve NCM, pick the top local match
-      if (!ncm && local[0]?.ncmCode) {
-        ncm = local[0].ncmCode;
-        if (ncmMeta) {
-          ncmMeta.source = ncmMeta.source ?? "local_fallback";
-          ncmMeta.ambiguous = true;
-        }
-      }
+      
     }
   } catch {
     // ignore
