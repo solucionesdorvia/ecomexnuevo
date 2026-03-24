@@ -412,7 +412,7 @@ function applyAssumptionUpdate(product: any, upd: { origin?: string; shippingPro
 function validateNoGuessQuoteInputs(product: any, opts?: { requireNcm?: boolean }) {
   const missing: string[] = [];
   const questions: string[] = [];
-  const requireNcm = opts?.requireNcm ?? true;
+  const requireNcm = false;
 
   const hasPriceRange =
     product?.price?.type === "range" &&
