@@ -276,7 +276,7 @@ export function OperatorBudgetClient() {
   return (
     <div className="grid gap-6 lg:grid-cols-[420px_minmax(0,1fr)] lg:items-start">
       <div className="space-y-4">
-        <Card className="border-white/10 bg-white/5">
+        <Card className="border-[rgba(140,177,236,0.2)] bg-[rgba(16,29,52,0.45)]">
           <div className="p-5">
             <div className="flex items-start justify-between gap-3">
               <div>
@@ -334,7 +334,7 @@ export function OperatorBudgetClient() {
                   <button
                     type="button"
                     onClick={() => xlsxInputRef.current?.click()}
-                    className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/10 bg-primary px-4 text-xs font-black uppercase tracking-[0.22em] text-white shadow-[0_18px_60px_-40px_rgba(124,58,237,0.75)] hover:bg-primary/90"
+                    className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-primary/30 bg-primary px-4 text-xs font-black uppercase tracking-[0.22em] text-white hover:bg-primary/90"
                   >
                     <Icon name="upload_file" size={16} className="text-white/90" />
                     Seleccionar XLSX
@@ -355,7 +355,7 @@ export function OperatorBudgetClient() {
                   <button
                     type="button"
                     onClick={() => imageInputRef.current?.click()}
-                    className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 text-xs font-black uppercase tracking-[0.22em] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:bg-white/10"
+                    className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-[rgba(140,177,236,0.2)] bg-[rgba(16,29,52,0.7)] px-4 text-xs font-black uppercase tracking-[0.22em] text-white hover:bg-[rgba(16,29,52,0.9)]"
                   >
                     <Icon name="image" size={16} className="text-white/80" />
                     Seleccionar foto
@@ -365,7 +365,7 @@ export function OperatorBudgetClient() {
               </div>
 
               {state.status === "error" ? (
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/85 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+                <div className="rounded-2xl border border-red-400/30 bg-red-500/10 p-4 text-sm text-red-100">
                   {state.message}
                 </div>
               ) : null}
@@ -384,7 +384,7 @@ export function OperatorBudgetClient() {
                   onClick={() => void refreshList()}
                   disabled={loadingList}
                   className={cn(
-                    "inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 text-xs font-black uppercase tracking-[0.22em] text-white/85 hover:bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]",
+                    "inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-[rgba(140,177,236,0.2)] bg-[rgba(16,29,52,0.7)] px-4 text-xs font-black uppercase tracking-[0.22em] text-white/85 hover:bg-[rgba(16,29,52,0.9)]",
                     loadingList && "opacity-60"
                   )}
                 >
@@ -396,7 +396,7 @@ export function OperatorBudgetClient() {
           </div>
         </Card>
 
-        <Card className="border-white/10 bg-white/5">
+        <Card className="border-[rgba(140,177,236,0.2)] bg-[rgba(16,29,52,0.45)]">
           <div className="p-5">
             <div className="flex items-center justify-between gap-3">
               <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted">
@@ -421,7 +421,7 @@ export function OperatorBudgetClient() {
                     type="button"
                     onClick={() => setSelectedId(b.id)}
                     className={cn(
-                      "flex w-full items-start justify-between gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-left shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:bg-white/10",
+                      "flex w-full items-start justify-between gap-3 rounded-2xl border border-[rgba(140,177,236,0.2)] bg-[rgba(16,29,52,0.55)] p-4 text-left hover:bg-[rgba(16,29,52,0.8)]",
                       b.id === selectedId && "border-primary/25 bg-primary/10"
                     )}
                   >
@@ -473,7 +473,7 @@ export function OperatorBudgetClient() {
           </div>
         ) : null}
         {pdfHref ? <PdfPreviewPanel href={pdfHref} /> : null}
-        <Card className="border-white/10 bg-white/5">
+        <Card className="border-[rgba(140,177,236,0.2)] bg-[rgba(16,29,52,0.45)]">
           <div className="p-6">
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
@@ -651,7 +651,7 @@ export function OperatorBudgetClient() {
                   onClick={() => void resetOverrides()}
                   disabled={!selectedId || saving}
                   className={cn(
-                    "inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 text-xs font-black uppercase tracking-[0.22em] text-white/90 hover:bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]",
+                    "inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-[rgba(140,177,236,0.2)] bg-[rgba(16,29,52,0.7)] px-5 text-xs font-black uppercase tracking-[0.22em] text-white/90 hover:bg-[rgba(16,29,52,0.9)]",
                     (!selectedId || saving) && "opacity-60"
                   )}
                 >
