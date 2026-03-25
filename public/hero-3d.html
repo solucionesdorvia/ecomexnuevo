@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Trade Infrastructure</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #07111A;
+        }
+        #container {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+        import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+        import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+        import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+        import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+        import { BokehPass } from 'three/addons/postprocessing/BokehPass.js';
+
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x07111A);
+        scene.fog = new THREE.FogExp2(0x07111A, 0.045);
+
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 200);
+        camera.position.set(0, 0, 12);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.0;
+        document.getElementById('container').appendChild(renderer.domElement);
+
+        // Lighting
+        const ambientLight = new THREE.AmbientLight(0x0B1622, 0.4);
+        ambientLight.name = 'ambientLight1';
+        scene.add(ambientLight);
+
+        const mainLight = new THREE.DirectionalLight(0x2F80ED, 0.3);
+        mainLight.position.set(5, 3, 5);
+        mainLight.name = 'mainLight1';
+        scene.add(mainLight);
+
+        const accentLight = new THREE.PointLight(0x18C3D6, 0.5, 30);
+        accentLight.position.set(-3, 2, 0);
+        accentLight.name = 'accentLight1';
+        scene.add(accentLight);
+
+        const violetLight = new THREE.PointLight(0x7c3aed, 0.3, 25);
+        violetLight.position.set(3, -1, -2);
+        violetLight.name = 'violetLight1';
+        scene.add(violetLight);
+
+        // Colors
+        const COL_DARK_BASE = 0x07111A;
+        const COL_GLASS = 0x0B1622;
+        const COL_BLUE = 0x2F80ED;
+        const COL_CYAN = 0x18C3D6;
+        const COL_VIOLET = 0x7c3aed;
+        const COL_GOLD = 0xd4a843;
+        const COL_WHITE = 0xF5F7FA;
+
+        // ---- GLASS PANELS ----
+        const panels = [];
+        const panelGroup = new THREE.Group();
+        panelGroup.name = 'panelGroup';
+        scene.add(panelGroup);
+
+        function createPanel(width, height, x, y, z, rotY, rotX) {
+            const group = new THREE.Group();
+
+            // Main glass panel
+            const geo = new THREE.PlaneGeometry(width, height);
+            const mat = new THREE.MeshPhysicalMaterial({
+                color: COL_GLASS,
+                transparent: true,
+                opacity: 0.15,
+                roughness: 0.1,
+                metalness: 0.5,
+                side: THREE.DoubleSide,
+                depthWrite: false,
+                emissive: new THREE.Color(COL_BLUE),
+                emissiveIntensity: 0.03,
+            });
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.name = 'panelGlass_' + panels.length;
+            group.add(mesh);
+
+            // Edge glow lines (violet pulsing)
+            const edgeGeo = new THREE.EdgesGeometry(geo);
+            const edgeMat = new THREE.LineBasicMaterial({
+                color: COL_VIOLET,
+                transparent: true,
+                opacity: 0.3,
+                linewidth: 1,
+            });
+            const edges = new THREE.LineSegments(edgeGeo, edgeMat);
+            edges.name = 'panelEdge_' + panels.length;
+            group.add(edges);
+
+            // Inner subtle glow plane
+            const innerGlowGeo = new THREE.PlaneGeometry(width * 0.85, height * 0.85);
+            const innerGlowMat = new THREE.MeshBasicMaterial({
+                color: COL_BLUE,
+                transparent: true,
+                opacity: 0.02,
+                side: THREE.DoubleSide,
+                depthWrite: false,
+            });
+            const innerGlow = new THREE.Mesh(innerGlowGeo, innerGlowMat);
+            innerGlow.position.z = 0.01;
+            innerGlow.name = 'panelInnerGlow_' + panels.length;
+            group.add(innerGlow);
+
+            group.position.set(x, y, z);
+            group.rotation.y = rotY || 0;
+            group.rotation.x = rotX || 0;
+
+            panelGroup.add(group);
+            panels.push({ group, mat, edgeMat, innerGlowMat, baseY: y, baseX: x });
+            return group;
+        }
+
+        // Arrange panels in a command center layout - multiple layers in depth
+        const panelConfigs = [
+            // Near layer
+            { w: 2.4, h: 1.4, x: -2.5, y: 0.8, z: -2, ry: 0.15, rx: 0 },
+            { w: 1.8, h: 2.2, x: 2.8, y: -0.3, z: -1.5, ry: -0.2, rx: 0 },
+            { w: 3.0, h: 1.0, x: 0, y: -1.5, z: -3, ry: 0, rx: 0.1 },
+            { w: 1.5, h: 1.5, x: -3.5, y: -0.8, z: -4, ry: 0.3, rx: 0 },
+            { w: 2.0, h: 1.2, x: 3.2, y: 1.5, z: -3.5, ry: -0.15, rx: 0.05 },
+            // Mid layer
+            { w: 2.8, h: 1.8, x: -1.0, y: 0.2, z: -7, ry: 0.05, rx: 0 },
+            { w: 1.6, h: 2.5, x: 2.0, y: -0.5, z: -8, ry: -0.1, rx: 0 },
+            { w: 3.5, h: 1.2, x: -3.0, y: 1.5, z: -9, ry: 0.2, rx: -0.05 },
+            { w: 2.0, h: 1.6, x: 3.8, y: 0.8, z: -10, ry: -0.25, rx: 0 },
+            { w: 1.4, h: 1.4, x: 0.5, y: -1.8, z: -6.5, ry: 0, rx: 0.15 },
+            // Far layer
+            { w: 3.2, h: 2.0, x: -2.0, y: -0.5, z: -14, ry: 0.1, rx: 0 },
+            { w: 2.5, h: 1.5, x: 2.5, y: 1.0, z: -15, ry: -0.15, rx: 0 },
+            { w: 1.8, h: 2.8, x: -4.0, y: 0.5, z: -16, ry: 0.3, rx: 0 },
+            { w: 2.2, h: 1.3, x: 0, y: 2.0, z: -13, ry: 0, rx: -0.1 },
+            { w: 2.8, h: 1.6, x: 4.0, y: -1.0, z: -17, ry: -0.2, rx: 0.05 },
+            // Extra far layer for depth
+            { w: 3.0, h: 2.2, x: -1.5, y: 0.8, z: -21, ry: 0.08, rx: 0 },
+            { w: 2.6, h: 1.4, x: 2.0, y: -0.8, z: -22, ry: -0.12, rx: 0 },
+            { w: 2.0, h: 1.8, x: -3.5, y: -0.3, z: -24, ry: 0.2, rx: 0 },
+            { w: 3.2, h: 1.0, x: 1.0, y: 1.5, z: -23, ry: 0, rx: -0.05 },
+            { w: 1.6, h: 2.0, x: 4.2, y: 0.2, z: -25, ry: -0.18, rx: 0 },
+            // Loop panels (appear as camera wraps)
+            { w: 2.4, h: 1.6, x: -2.0, y: 0.5, z: -30, ry: 0.1, rx: 0 },
+            { w: 2.0, h: 1.2, x: 2.5, y: -0.5, z: -31, ry: -0.15, rx: 0 },
+            { w: 3.0, h: 1.8, x: 0, y: 0, z: -33, ry: 0, rx: 0 },
+        ];
+
+        panelConfigs.forEach(c => createPanel(c.w, c.h, c.x, c.y, c.z, c.ry, c.rx));
+
+        // ---- DATA STREAM LINES (flowing blue/cyan) ----
+        const dataStreams = [];
+        const streamGroup = new THREE.Group();
+        streamGroup.name = 'streamGroup';
+        scene.add(streamGroup);
+
+        function createDataStream(startPanel, endPanel, color, particleCount) {
+            const startPos = new THREE.Vector3();
+            startPanel.group.getWorldPosition(startPos);
+            const endPos = new THREE.Vector3();
+            endPanel.group.getWorldPosition(endPos);
+
+            const midPoint = new THREE.Vector3().lerpVectors(startPos, endPos, 0.5);
+            midPoint.x += (Math.random() - 0.5) * 2;
+            midPoint.y += (Math.random() - 0.5) * 1.5;
+
+            const curve = new THREE.QuadraticBezierCurve3(startPos, midPoint, endPos);
+            const points = curve.getPoints(60);
+
+            // Thin line
+            const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
+            const lineMat = new THREE.LineBasicMaterial({
+                color: color,
+                transparent: true,
+                opacity: 0.12,
+                depthWrite: false,
+            });
+            const line = new THREE.Line(lineGeo, lineMat);
+            line.name = 'streamLine_' + dataStreams.length;
+            streamGroup.add(line);
+
+            // Flowing particles along the stream
+            const pCount = particleCount || 8;
+            const pGeo = new THREE.BufferGeometry();
+            const positions = new Float32Array(pCount * 3);
+            const sizes = new Float32Array(pCount);
+            const offsets = new Float32Array(pCount);
+
+            for (let i = 0; i < pCount; i++) {
+                offsets[i] = Math.random();
+                sizes[i] = 0.03 + Math.random() * 0.04;
+            }
+
+            pGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            pGeo.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+            const pMat = new THREE.PointsMaterial({
+                color: color,
+                size: 0.06,
+                transparent: true,
+                opacity: 0.8,
+                depthWrite: false,
+                blending: THREE.AdditiveBlending,
+                sizeAttenuation: true,
+            });
+
+            const pts = new THREE.Points(pGeo, pMat);
+            pts.name = 'streamParticles_' + dataStreams.length;
+            streamGroup.add(pts);
+
+            dataStreams.push({ curve, line, lineMat, pts, pGeo, offsets, pCount });
+        }
+
+        // Connect panels with data streams
+        const streamPairs = [
+            [0, 5, COL_BLUE, 10], [1, 6, COL_CYAN, 8], [2, 9, COL_BLUE, 12],
+            [3, 7, COL_CYAN, 6], [4, 8, COL_BLUE, 9], [5, 10, COL_CYAN, 10],
+            [6, 11, COL_BLUE, 8], [7, 12, COL_CYAN, 7], [8, 14, COL_BLUE, 11],
+            [9, 13, COL_CYAN, 6], [10, 15, COL_BLUE, 9], [11, 16, COL_CYAN, 8],
+            [12, 17, COL_BLUE, 7], [13, 18, COL_CYAN, 10], [14, 19, COL_BLUE, 8],
+            [15, 20, COL_CYAN, 9], [16, 21, COL_BLUE, 7], [17, 22, COL_CYAN, 8],
+        ];
+
+        streamPairs.forEach(([a, b, col, cnt]) => {
+            if (panels[a] && panels[b]) createDataStream(panels[a], panels[b], col, cnt);
+        });
+
+        // ---- GOLD SHIMMER PARTICLES on some panels ----
+        const goldParticleGroups = [];
+
+        function createGoldShimmer(panel, count) {
+            const geo = new THREE.BufferGeometry();
+            const positions = new Float32Array(count * 3);
+            const velocities = [];
+            const panelPos = new THREE.Vector3();
+            panel.group.getWorldPosition(panelPos);
+
+            for (let i = 0; i < count; i++) {
+                positions[i * 3] = panelPos.x + (Math.random() - 0.5) * 1.5;
+                positions[i * 3 + 1] = panelPos.y + (Math.random() - 0.5) * 1.0;
+                positions[i * 3 + 2] = panelPos.z + (Math.random() - 0.5) * 0.3;
+                velocities.push({
+                    x: (Math.random() - 0.5) * 0.002,
+                    y: (Math.random() - 0.5) * 0.002,
+                    z: (Math.random() - 0.5) * 0.001,
+                    phase: Math.random() * Math.PI * 2,
+                });
+            }
+
+            geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+            const mat = new THREE.PointsMaterial({
+                color: COL_GOLD,
+                size: 0.025,
+                transparent: true,
+                opacity: 0.6,
+                depthWrite: false,
+                blending: THREE.AdditiveBlending,
+                sizeAttenuation: true,
+            });
+
+            const pts = new THREE.Points(geo, mat);
+            pts.name = 'goldShimmer_' + goldParticleGroups.length;
+            scene.add(pts);
+            goldParticleGroups.push({ pts, geo, mat, velocities, center: panelPos.clone(), count });
+        }
+
+        // Add gold shimmer to select panels
+        [0, 2, 5, 8, 11, 14, 17, 20].forEach(i => {
+            if (panels[i]) createGoldShimmer(panels[i], 15);
+        });
+
+        // ---- FLOATING DATA PARTICLES (white) ----
+        const floatingParticleCount = 600;
+        const floatingGeo = new THREE.BufferGeometry();
+        const floatPositions = new Float32Array(floatingParticleCount * 3);
+        const floatVelocities = [];
+        const floatPhases = new Float32Array(floatingParticleCount);
+        const floatSizes = new Float32Array(floatingParticleCount);
+
+        for (let i = 0; i < floatingParticleCount; i++) {
+            floatPositions[i * 3] = (Math.random() - 0.5) * 14;
+            floatPositions[i * 3 + 1] = (Math.random() - 0.5) * 8;
+            floatPositions[i * 3 + 2] = Math.random() * -40 + 5;
+            floatVelocities.push({
+                x: (Math.random() - 0.5) * 0.003,
+                y: (Math.random() - 0.5) * 0.002,
+                z: -0.001 - Math.random() * 0.003,
+            });
+            floatPhases[i] = Math.random() * Math.PI * 2;
+            floatSizes[i] = 0.01 + Math.random() * 0.025;
+        }
+
+        floatingGeo.setAttribute('position', new THREE.BufferAttribute(floatPositions, 3));
+
+        const floatingMat = new THREE.PointsMaterial({
+            color: COL_WHITE,
+            size: 0.025,
+            transparent: true,
+            opacity: 0.5,
+            depthWrite: false,
+            blending: THREE.AdditiveBlending,
+            sizeAttenuation: true,
+        });
+
+        const floatingParticles = new THREE.Points(floatingGeo, floatingMat);
+        floatingParticles.name = 'floatingDataParticles';
+        scene.add(floatingParticles);
+
+        // ---- VOLUMETRIC FOG PLANES ----
+        for (let i = 0; i < 8; i++) {
+            const fogGeo = new THREE.PlaneGeometry(20, 10);
+            const fogMat = new THREE.MeshBasicMaterial({
+                color: COL_DARK_BASE,
+                transparent: true,
+                opacity: 0.06,
+                depthWrite: false,
+                side: THREE.DoubleSide,
+                blending: THREE.NormalBlending,
+            });
+            const fogPlane = new THREE.Mesh(fogGeo, fogMat);
+            fogPlane.position.z = -4 - i * 4;
+            fogPlane.position.x = (Math.random() - 0.5) * 3;
+            fogPlane.position.y = (Math.random() - 0.5) * 2;
+            fogPlane.name = 'fogPlane_' + i;
+            scene.add(fogPlane);
+        }
+
+        // ---- POST PROCESSING ----
+        const composer = new EffectComposer(renderer);
+        const renderPass = new RenderPass(scene, camera);
+        composer.addPass(renderPass);
+
+        const bloomPass = new UnrealBloomPass(
+            new THREE.Vector2(window.innerWidth, window.innerHeight),
+            0.8, 0.5, 0.3
+        );
+        composer.addPass(bloomPass);
+
+        // Depth of field
+        const bokehPass = new BokehPass(scene, camera, {
+            focus: 8.0,
+            aperture: 0.002,
+            maxblur: 0.008,
+        });
+        composer.addPass(bokehPass);
+
+        // Vignette pass
+        const vignetteShader = {
+            uniforms: {
+                tDiffuse: { value: null },
+                darkness: { value: 1.8 },
+                offset: { value: 1.2 },
+            },
+            vertexShader: `
+                varying vec2 vUv;
+                void main() {
+                    vUv = uv;
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                }
+            `,
+            fragmentShader: `
+                uniform sampler2D tDiffuse;
+                uniform float darkness;
+                uniform float offset;
+                varying vec2 vUv;
+                void main() {
+                    vec4 texel = texture2D(tDiffuse, vUv);
+                    vec2 uv = (vUv - vec2(0.5)) * vec2(offset);
+                    float vig = 1.0 - dot(uv, uv);
+                    vig = clamp(pow(vig, darkness), 0.0, 1.0);
+                    gl_FragColor = vec4(texel.rgb * vig, texel.a);
+                }
+            `,
+        };
+        const vignettePass = new ShaderPass(vignetteShader);
+        composer.addPass(vignettePass);
+
+        const outputPass = new OutputPass();
+        composer.addPass(outputPass);
+
+        // ---- ANIMATION ----
+        let time = 0;
+        const LOOP_DURATION = 8.0; // 8 second loop
+        const CAMERA_START_Z = 12;
+        const CAMERA_END_Z = -26;
+        const TOTAL_DEPTH = CAMERA_START_Z - CAMERA_END_Z; // 38 units
+
+        function animate() {
+            requestAnimationFrame(animate);
+            time += 1 / 60;
+
+            // Seamless loop: camera pushes forward
+            const loopT = (time % LOOP_DURATION) / LOOP_DURATION;
+            const cameraZ = CAMERA_START_Z - loopT * TOTAL_DEPTH;
+            camera.position.z = cameraZ;
+            // Subtle vertical and horizontal sway
+            camera.position.x = Math.sin(loopT * Math.PI * 2) * 0.15;
+            camera.position.y = Math.cos(loopT * Math.PI * 2 * 0.7) * 0.08;
+            camera.lookAt(camera.position.x * 0.3, camera.position.y * 0.3, cameraZ - 10);
+
+            // Panels: wrap around for seamless loop
+            panels.forEach((p, i) => {
+                // Violet edge glow pulsing
+                const pulse = Math.sin(time * 0.8 + i * 0.7) * 0.5 + 0.5;
+                p.edgeMat.opacity = 0.1 + pulse * 0.35;
+
+                // Inner glow subtle pulse
+                p.innerGlowMat.opacity = 0.01 + Math.sin(time * 0.5 + i * 1.1) * 0.015;
+
+                // Gentle float
+                p.group.position.y = p.baseY + Math.sin(time * 0.3 + i * 0.5) * 0.05;
+            });
+
+            // Data stream particles flow
+            dataStreams.forEach((stream, si) => {
+                const posAttr = stream.pGeo.attributes.position;
+                for (let i = 0; i < stream.pCount; i++) {
+                    stream.offsets[i] = (stream.offsets[i] + 0.003 + si * 0.0003) % 1.0;
+                    const pt = stream.curve.getPointAt(stream.offsets[i]);
+                    posAttr.array[i * 3] = pt.x;
+                    posAttr.array[i * 3 + 1] = pt.y;
+                    posAttr.array[i * 3 + 2] = pt.z;
+                }
+                posAttr.needsUpdate = true;
+
+                // Pulse line opacity
+                stream.lineMat.opacity = 0.06 + Math.sin(time * 1.5 + si * 0.8) * 0.06;
+            });
+
+            // Gold shimmer
+            goldParticleGroups.forEach((g, gi) => {
+                const posAttr = g.geo.attributes.position;
+                for (let i = 0; i < g.count; i++) {
+                    const v = g.velocities[i];
+                    posAttr.array[i * 3] += v.x;
+                    posAttr.array[i * 3 + 1] += v.y + Math.sin(time * 2 + v.phase) * 0.0005;
+                    posAttr.array[i * 3 + 2] += v.z;
+
+                    // Soft containment
+                    if (Math.abs(posAttr.array[i * 3] - g.center.x) > 1.0) v.x *= -1;
+                    if (Math.abs(posAttr.array[i * 3 + 1] - g.center.y) > 0.7) v.y *= -1;
+                }
+                posAttr.needsUpdate = true;
+                g.mat.opacity = 0.3 + Math.sin(time * 1.2 + gi * 1.5) * 0.3;
+            });
+
+            // Floating data particles
+            const fpAttr = floatingGeo.attributes.position;
+            for (let i = 0; i < floatingParticleCount; i++) {
+                const v = floatVelocities[i];
+                fpAttr.array[i * 3] += v.x;
+                fpAttr.array[i * 3 + 1] += v.y + Math.sin(time + floatPhases[i]) * 0.0003;
+                fpAttr.array[i * 3 + 2] += v.z;
+
+                // Wrap particles for seamless loop
+                if (fpAttr.array[i * 3] > 7) fpAttr.array[i * 3] = -7;
+                if (fpAttr.array[i * 3] < -7) fpAttr.array[i * 3] = 7;
+                if (fpAttr.array[i * 3 + 1] > 4) fpAttr.array[i * 3 + 1] = -4;
+                if (fpAttr.array[i * 3 + 1] < -4) fpAttr.array[i * 3 + 1] = 4;
+                if (fpAttr.array[i * 3 + 2] > CAMERA_START_Z + 5) fpAttr.array[i * 3 + 2] -= TOTAL_DEPTH;
+                if (fpAttr.array[i * 3 + 2] < CAMERA_END_Z - 10) fpAttr.array[i * 3 + 2] += TOTAL_DEPTH;
+            }
+            fpAttr.needsUpdate = true;
+            floatingMat.opacity = 0.3 + Math.sin(time * 0.7) * 0.15;
+
+            // Accent lights drift
+            accentLight.position.x = -3 + Math.sin(time * 0.2) * 2;
+            accentLight.position.z = cameraZ - 5;
+            violetLight.position.x = 3 + Math.cos(time * 0.15) * 2;
+            violetLight.position.z = cameraZ - 8;
+
+            composer.render();
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            composer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        animate();
+    </script>
+</body>
+</html>

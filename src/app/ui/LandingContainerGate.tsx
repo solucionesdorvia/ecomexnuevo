@@ -77,12 +77,19 @@ export default function LandingContainerGate() {
       <Navbar />
 
       {/* ══════════ HERO ══════════ */}
-      <section className="relative overflow-hidden px-5 pb-20 pt-28 lg:px-8 lg:pt-36">
-        {/* Grid bg */}
-        <div className="pointer-events-none absolute inset-0" style={{ backgroundImage: `linear-gradient(${P.border} 1px, transparent 1px), linear-gradient(90deg, ${P.border} 1px, transparent 1px)`, backgroundSize: "72px 72px", maskImage: "radial-gradient(ellipse 60% 50% at 50% 30%, black, transparent 70%)", WebkitMaskImage: "radial-gradient(ellipse 60% 50% at 50% 30%, black, transparent 70%)" }} />
-        {/* Glows */}
-        <div className="pointer-events-none absolute -top-32 left-[15%] h-[500px] w-[500px] rounded-full opacity-[0.05] blur-[160px]" style={{ background: P.blue }} />
-        <div className="pointer-events-none absolute top-[40%] right-[10%] h-[350px] w-[350px] rounded-full opacity-[0.04] blur-[140px]" style={{ background: P.cyan }} />
+      <section className="relative overflow-hidden px-5 pb-20 pt-28 lg:px-8 lg:pt-36" style={{ minHeight: "100vh" }}>
+        {/* 3D animated background */}
+        <iframe
+          src="/hero-3d.html"
+          className="pointer-events-none absolute inset-0 h-full w-full border-0"
+          style={{ opacity: 0.6 }}
+          loading="lazy"
+          title="Background animation"
+        />
+        {/* Dark overlay for text legibility */}
+        <div className="pointer-events-none absolute inset-0" style={{
+          background: `linear-gradient(180deg, ${P.bg}dd 0%, ${P.bg}99 40%, ${P.bg}dd 100%)`
+        }} />
 
         <div className="relative mx-auto max-w-[1200px]">
           <div className="grid items-center gap-16 lg:grid-cols-[1fr_480px]">
