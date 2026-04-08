@@ -1,11 +1,16 @@
 import { existsSync, readFileSync } from "fs";
 import path from "path";
-import Fuse from "fuse.js";
 import type { NcmKnowledgeRecord, NcmSearchHit } from "./types";
 import { filterIncoherentForProductText } from "./coherence";
 import { ncmDigitsOnly } from "./normalize";
 
 let cachedRecords: NcmKnowledgeRecord[] | null = null;
+
+/** Por defecto solo subpartidas (posiciones legales); menos ruido. Incluir partidas: `NCM_SEARCH_INCLUDE_HEADINGS=1`. */
+function searchPool(records: NcmKnowledgeRecord[]): NcmKnowledgeRecord[] {
+  if (process.env.NCM_SEARCH_INCLUDE_HEADINGS === "1") return records;
+  return records.filter((r) => r.level === "subheading");
+}
 
 export function getKnowledgeIndexPath(): string {
   const override = process.env.NCM_KNOWLEDGE_INDEX_PATH;
@@ -30,33 +35,27 @@ export function loadKnowledgeRecords(): NcmKnowledgeRecord[] {
   return cachedRecords;
 }
 
-/** Tras re-ingesta o cambio de `index.json` en caliente. */
 export function clearKnowledgeCache(): void {
   cachedRecords = null;
-  fuseInstance = null;
-  fuseBuiltForCount = -1;
 }
 
-let fuseInstance: Fuse<NcmKnowledgeRecord> | null = null;
-let fuseBuiltForCount = -1;
-
-function getFuse(records: NcmKnowledgeRecord[]): Fuse<NcmKnowledgeRecord> {
-  if (fuseInstance && records.length === fuseBuiltForCount) return fuseInstance;
-  fuseBuiltForCount = records.length;
-  fuseInstance = new Fuse(records, {
-    keys: [
-      { name: "searchText", weight: 0.55 },
-      { name: "description", weight: 0.3 },
-      { name: "code", weight: 0.1 },
-      { name: "chapterTitle", weight: 0.05 },
-    ],
-    threshold: 0.42,
-    ignoreLocation: true,
-    minMatchCharLength: 2,
-    includeScore: true,
-  });
-  return fuseInstance;
-}
+const STOP = new Set([
+  "los",
+  "las",
+  "una",
+  "uno",
+  "del",
+  "por",
+  "con",
+  "para",
+  "como",
+  "más",
+  "este",
+  "esta",
+  "eso",
+  "son",
+  "que",
+]);
 
 function tokenizeForMatch(q: string): string[] {
   return q
@@ -65,8 +64,8 @@ function tokenizeForMatch(q: string): string[] {
     .replace(/\p{M}/gu, "")
     .split(/[^\p{L}\d]+/u)
     .map((t) => t.trim())
-    .filter((t) => t.length > 1)
-    .slice(0, 24);
+    .filter((t) => t.length > 1 && !STOP.has(t))
+    .slice(0, 32);
 }
 
 function matchedTerms(query: string, record: NcmKnowledgeRecord): string[] {
@@ -83,56 +82,76 @@ function matchedTerms(query: string, record: NcmKnowledgeRecord): string[] {
   return [...new Set(out)].slice(0, 12);
 }
 
-function fuseScoreToDisplay(score: number | undefined): number {
-  if (score == null || !Number.isFinite(score)) return 0.55;
-  return Math.max(0, Math.min(1, 1 / (1 + score * 4)));
+/** Coincidencia por términos + prefijo NCM (sin Fuse: evita bloqueos de minutos al indexar ~44k filas). */
+function scoreRecord(query: string, rec: NcmKnowledgeRecord): number {
+  const qTerms = tokenizeForMatch(query);
+  const hay = `${rec.searchText}\n${rec.description}\n${rec.code}`.toLowerCase().slice(0, 1200);
+  let s = 0;
+  for (const t of qTerms) {
+    if (t.length >= 4 && hay.includes(t)) s += 3;
+    else if (t.length >= 3 && hay.includes(t)) s += 2;
+    else if (t.length >= 2 && hay.includes(t)) s += 0.6;
+  }
+
+  const d = ncmDigitsOnly(query);
+  if (d.length >= 4) {
+    const pref4 = d.slice(0, 4);
+    const take = Math.min(8, d.length);
+    const pref = d.slice(0, take);
+    if (rec.codeDigits.startsWith(pref)) s += 12;
+    else if (rec.codeDigits.startsWith(pref4)) s += 5;
+    else if (rec.headingCode === pref4) s += 3;
+  }
+
+  return s;
 }
 
 export type SearchNcmOptions = {
   limit?: number;
-  /** Aplicar filtro wearable vs infra (default true) */
   applyCoherence?: boolean;
-  /** Texto del producto (para coherencia). Si no se pasa, se usa `query`. */
   productContext?: string;
 };
 
 /**
- * Búsqueda híbrida: Fuse.js sobre índice + refuerzo si el query trae dígitos NCM.
- * Requiere `data/ncm/index.json` (generado con `npm run ncm:ingest`).
+ * Búsqueda sobre `data/ncm/index.json`.
  */
 export function searchNcm(query: string, opts?: SearchNcmOptions): NcmSearchHit[] {
   const records = loadKnowledgeRecords();
   if (!records.length || !query.trim()) return [];
 
-  const limit = Math.min(Math.max(opts?.limit ?? 10, 1), 30);
-  const fuse = getFuse(records);
+  const pool = searchPool(records);
   const q = query.trim().slice(0, 800);
+  const limit = Math.min(Math.max(opts?.limit ?? 10, 1), 30);
+  const scanLimit = Math.min(pool.length, Number(process.env.NCM_SEARCH_MAX_SCAN) || 60_000);
 
-  const raw = fuse.search(q, { limit: limit * 3 });
-  const digitQuery = ncmDigitsOnly(q);
+  const scored: { item: NcmKnowledgeRecord; raw: number }[] = [];
+  for (let i = 0; i < scanLimit; i++) {
+    const item = pool[i]!;
+    const raw = scoreRecord(q, item);
+    if (raw > 0) scored.push({ item, raw });
+  }
 
-  const hits: NcmSearchHit[] = raw.map((r) => {
-    const item = r.item;
-    const base = fuseScoreToDisplay(r.score);
-    let score = base;
-    if (digitQuery.length >= 4 && item.codeDigits.startsWith(digitQuery.slice(0, Math.min(8, digitQuery.length)))) {
-      score = Math.min(1, score + 0.35);
-    }
-    return {
-      code: item.code,
-      description: item.description,
-      chapter: item.chapter,
-      chapterTitle: item.chapterTitle,
-      headingCode: item.headingCode,
-      score,
-      matchedTerms: matchedTerms(q, item),
-      level: item.level,
-    };
-  });
+  if (scored.length === 0) return [];
+
+  scored.sort((a, b) => b.raw - a.raw);
+  const maxRaw = scored[0]!.raw;
+  const slice = scored.slice(0, Math.min(Math.max(limit * 4, 40), 200));
+
+  let hits: NcmSearchHit[] = slice.map(({ item, raw }) => ({
+    code: item.code,
+    description: item.description,
+    chapter: item.chapter,
+    chapterTitle: item.chapterTitle,
+    headingCode: item.headingCode,
+    score: Math.min(1, raw / Math.max(maxRaw, 1e-6)),
+    matchedTerms: matchedTerms(q, item),
+    level: item.level,
+  }));
 
   hits.sort((a, b) => b.score - a.score);
-  const sliced = hits.slice(0, limit);
-  if (opts?.applyCoherence === false) return sliced;
+  hits = hits.slice(0, limit);
+
+  if (opts?.applyCoherence === false) return hits;
   const productCtx = (opts?.productContext ?? q).trim();
-  return filterIncoherentForProductText(productCtx, sliced);
+  return filterIncoherentForProductText(productCtx, hits);
 }

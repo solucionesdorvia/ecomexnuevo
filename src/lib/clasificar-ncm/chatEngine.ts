@@ -356,6 +356,9 @@ export async function processClasificarTurn(opts: {
     const cls = await classifyWithAI(techText, {
       timeoutMs: CLASSIFY_TIMEOUT_MS,
       model: process.env.NCM_CHAT_CLASSIFY_MODEL ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
+      /** Desactiva búsqueda NCM local (evita parsear index.json en cold start). */
+      skipNcmKnowledge:
+        process.env.NCM_CHAT_SKIP_KNOWLEDGE === "1" || process.env.NCM_CHAT_SKIP_KNOWLEDGE === "true",
     });
     const rawConf = clamp01(Number(cls.confidence ?? 0));
     const ambiguous = Boolean(cls.ambiguous);
