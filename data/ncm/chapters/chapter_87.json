@@ -1,0 +1,2368 @@
+{
+  "chapter": "87",
+  "title": "Capítulo 39",
+  "sectionTitle": "CAP. 87 SECCION XVII MATERIAL DE TRANSPORTE Notas. 1. Esta Sección no comprende los artículos de las partidas 95.03 ó 95",
+  "headings": [
+    {
+      "code": "8701",
+      "description": "TRACTORES (EXCEPTO LAS CARRETILLAS TRACTOR DE LA PARTIDA 8709)",
+      "subheadings": [
+        {
+          "code": "8701.10.00",
+          "description": "Tractores de un solo eje"
+        },
+        {
+          "code": "8701.10.00",
+          "description": "000Y -Tractores de un solo eje 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8701.20.00",
+          "description": "Tractores de carretera para semirremolques"
+        },
+        {
+          "code": "8701.20.00",
+          "description": "De carga máxima inferior o igual a 5 t"
+        },
+        {
+          "code": "8701.20.00",
+          "description": "110W De CUATRO (4) o más ejes o con tracción 4x4 o 6x6 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8701.20.00",
+          "description": "190X Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8701.20.00",
+          "description": "De carga máxima superior a 5 t"
+        },
+        {
+          "code": "8701.20.00",
+          "description": "210B De CUATRO (4) o más ejes o con tracción 4x4 o 6x6 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8701.20.00",
+          "description": "290C Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8701.30.00",
+          "description": "Tractores de orugas"
+        },
+        {
+          "code": "8701.30.00",
+          "description": "000B -Tractores de orugas 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8701.9",
+          "description": "Los demás, con motor de potencia:"
+        },
+        {
+          "code": "8701.91.00",
+          "description": "Inferior o igual a 18 kW"
+        },
+        {
+          "code": "8701.91.00",
+          "description": "000Y --Inferior o igual a 18 kW 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8701.92.00",
+          "description": "Superior a 18 kW pero inferior o igual a 37 kW"
+        },
+        {
+          "code": "8701.92.00",
+          "description": "000K --Superior a 18 kW pero inferior o igual a 37 kW 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8701.93.00",
+          "description": "Superior a 37 kW pero inferior o igual a 75 kW"
+        },
+        {
+          "code": "8701.93.00",
+          "description": "000X --Superior a 37 kW pero inferior o igual a 75 kW 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8701.94",
+          "description": "Superior a 75 kW pero inferior o igual a 130 kW"
+        },
+        {
+          "code": "8701.94.10",
+          "description": "Tractores especialmente diseñados para arrastrar troncos («log skidders»)"
+        },
+        {
+          "code": "8701.94.10",
+          "description": "000U Tractores especialmente diseñados para arrastrar troncos («log skidders») 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8701.94.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8701.94.90",
+          "description": "100C Concebidos para utilizarlos fuera de la red de carreteras para semirremolques 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8701.94.90",
+          "description": "900W Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8701.95",
+          "description": "Superior a 130 kW"
+        },
+        {
+          "code": "8701.95.10",
+          "description": "Tractores especialmente diseñados para arrastrar troncos («log skidders»)"
+        },
+        {
+          "code": "8701.95.10",
+          "description": "000F Tractores especialmente diseñados para arrastrar troncos («log skidders») 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8701.95.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8701.95.90",
+          "description": "100P Concebidos para utilizarlos fuera de la red de carreteras para semirremolques 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8701.95.90",
+          "description": "900H Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8702",
+      "description": "VEHÍCULOS AUTOMÓVILES PARA EL TRANSPORTE DE DIEZ O MÁS PERSONAS, INCLUIDO EL CONDUCTOR",
+      "subheadings": [
+        {
+          "code": "8702.10.00",
+          "description": "Únicamente con motor de émbolo (pistón), de encendido por compresión (diésel o semi-diésel)"
+        },
+        {
+          "code": "8702.10.00",
+          "description": "100X Vehículos blindados (R. 3115/94 ANA) 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8702.10.00",
+          "description": "900Q Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8702.20.00",
+          "description": "Equipados para la propulsión, con motor de émbolo (pistón), de encendido por compresión (diésel o semi-diésel) y"
+        },
+        {
+          "code": "8702.20.00",
+          "description": "000F -Equipados para la propulsión, con motor de embolo (pistón), de encendido por compresión (diesel o semi-diesel) y con"
+        }
+      ]
+    },
+    {
+      "code": "2000",
+      "description": "35.00 3.00 LNA 4.50 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "8703",
+      "description": "AUTOMÓVILES DE TURISMO Y DEMÁS VEHÍCULOS AUTOMÓVILES CONCEBIDOS PRINCIPALMENTE PARA EL",
+      "subheadings": [
+        {
+          "code": "8703.10.00",
+          "description": "Vehículos especialmente concebidos para desplazarse sobre nieve; vehículos especiales para el transporte de"
+        },
+        {
+          "code": "8703.10.00",
+          "description": "100Q Vehiculo de tres o cuatro ruedas, con motor electrico alimentado por acumulador; una plataforma horizontal que une"
+        }
+      ]
+    },
+    {
+      "code": "2000",
+      "description": "20.00 3.00 LNA 4.50 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "8704",
+      "description": "VEHÍCULOS AUTOMÓVILES PARA EL TRANSPORTE DE MERCANCÍAS",
+      "subheadings": [
+        {
+          "code": "8704.10",
+          "description": "Volquetes automotores concebidos para utilizarlos fuera de la red de carreteras"
+        },
+        {
+          "code": "8704.10.10",
+          "description": "Con capacidad de carga superior o igual a 85 t"
+        },
+        {
+          "code": "8704.10.10",
+          "description": "000N Con capacidad de carga superior o igual a 85 t 0.00 0.00 0.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8704.10.90",
+          "description": "100X De carga máxima inferior o igual a 5 t 14.00 14.00 0.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.10.90",
+          "description": "De carga máxima superior a 5 t pero inferior a 85 t"
+        },
+        {
+          "code": "8704.10.90",
+          "description": "210F Articulados 14.00 2.00 0.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.10.90",
+          "description": "290G Los demas 14.00 14.00 0.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.2",
+          "description": "Los demás, con motor de émbolo (pistón), de encendido por compresión (diésel o semi-diésel):"
+        },
+        {
+          "code": "8704.21",
+          "description": "De peso total con carga máxima inferior o igual a 5 t"
+        },
+        {
+          "code": "8704.21.10",
+          "description": "Chasis con motor y cabina"
+        },
+        {
+          "code": "8704.21.10",
+          "description": "100V De cabina simple,de carga máxima menor o igual a 1,5 t. 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.10",
+          "description": "200A De doble cabina o cabina y media,de carga máxima menor o igual a 1,5 t. 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.10",
+          "description": "900N Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.20",
+          "description": "Con caja basculante"
+        },
+        {
+          "code": "8704.21.20",
+          "description": "100E De carga máxima menor o igual a 1,5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.20",
+          "description": "900Y Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.30",
+          "description": "Frigoríficos o isotérmicos"
+        },
+        {
+          "code": "8704.21.30",
+          "description": "100P De carga máxima menor o igual a 1,5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.30",
+          "description": "900H Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8704.21.90",
+          "description": "Vehículos blindados (R.3115/94 ANA)"
+        },
+        {
+          "code": "8704.21.90",
+          "description": "110B De carga máxima menor o igual a 1,5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.90",
+          "description": "190C Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.90",
+          "description": "200D De cabina simple,de carga máxima menor o igual a 1,5 t. 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.90",
+          "description": "De doble cabina o cabina y media,de carga máxima menor o igual a 1,5 t."
+        },
+        {
+          "code": "8704.21.90",
+          "description": "310M Que no cuenten con caja de carga separada del habitáculo (Cap. V - Titulo II - Ley 24.674 y modif.) 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.90",
+          "description": "390N Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.90",
+          "description": "800L Otros de doble cabina o cabina y media, de carga máxima mayor a 1,5 t. 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.90",
+          "description": "910V De carga máxima menor o igual a 1,5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.21.90",
+          "description": "990W Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.22",
+          "description": "De peso total con carga máxima superior a 5 t pero inferior o igual a 20 t"
+        },
+        {
+          "code": "8704.22.10",
+          "description": "Chasis con motor y cabina"
+        },
+        {
+          "code": "8704.22.10",
+          "description": "100G De carga máxima inferior o igual a 5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.22.10",
+          "description": "200M De carga máxima superior a 5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.22.20",
+          "description": "Con caja basculante"
+        },
+        {
+          "code": "8704.22.20",
+          "description": "100R De carga máxima inferior o igual a 5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.22.20",
+          "description": "200X De carga máxima superior a 5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.22.30",
+          "description": "Frigoríficos o isotérmicos"
+        },
+        {
+          "code": "8704.22.30",
+          "description": "100B De carga máxima inferior o igual a 5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.22.30",
+          "description": "200G De carga máxima superior a 5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.22.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8704.22.90",
+          "description": "Vehiculos blindados (R.3115/94 ANA)"
+        },
+        {
+          "code": "8704.22.90",
+          "description": "110N De carga máxima inferior o igual a 5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.22.90",
+          "description": "120R De carga máxima superior a 5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.22.90",
+          "description": "910G De carga máxima inferior o igual a 5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.22.90",
+          "description": "920K De carga máxima superior a 5 t 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.23",
+          "description": "De peso total con carga máxima superior a 20 t"
+        },
+        {
+          "code": "8704.23.10",
+          "description": "Chasis con motor y cabina"
+        },
+        {
+          "code": "8704.23.10",
+          "description": "100U Con más de dos ejes tractores (R.91/95 SI) 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.23.10",
+          "description": "900M Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.23.20",
+          "description": "Con caja basculante"
+        },
+        {
+          "code": "8704.23.20",
+          "description": "100D De CUATRO (4) o más ejes 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.23.20",
+          "description": "900X Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.23.30",
+          "description": "Frigoríficos o isotérmicos"
+        },
+        {
+          "code": "8704.23.30",
+          "description": "000H Frigoríficos o isotérmicos 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8704.23.40",
+          "description": "De chasis articulado, para el transporte de troncos ('forwarder') con grúa incorporada, de potencia máxima superior o"
+        },
+        {
+          "code": "8704.23.40",
+          "description": "000T De chasis articulado, para el transporte de troncos (\"forwarder\") con grua incorporada, de potencia maxima superior o"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "2.00 3.00 LNA 4.50 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "8705",
+      "description": "VEHÍCULOS AUTOMÓVILES PARA USOS ESPECIALES, EXCEPTO LOS CONCEBIDOS PRINCIPALMENTE PARA",
+      "subheadings": [
+        {
+          "code": "8705.10",
+          "description": "Camiones grúa"
+        },
+        {
+          "code": "8705.10.10",
+          "description": "Con pluma telescópica de altura máxima superior o igual a 42 m, capacidad de izaje máxima superior o igual a 60 t,"
+        },
+        {
+          "code": "8705.10.10",
+          "description": "000G Con pluma telescópica de altura máxima superior o igual a 42 m, capacidad de izaje máxima superior o igual a 60 t,"
+        },
+        {
+          "code": "8705.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8705.10.90",
+          "description": "200W Con una capacidad de izaje inferior o igual a DIEZ TONELADAS (10 t), medidas sobre la vertical que pasa a un minimo"
+        },
+        {
+          "code": "8705.10.90",
+          "description": "300B Con una capacidad de izaje mayor a DIEZ TONELADAS (10 t), medidas sobre la vertical que pasa a un minimo de"
+        },
+        {
+          "code": "8705.10.90",
+          "description": "900J Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8705.20.00",
+          "description": "Camiones automóviles para sondeo o perforación"
+        },
+        {
+          "code": "8705.20.00",
+          "description": "000L -Camiones automóviles para sondeo o perforación 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8705.30.00",
+          "description": "Camiones de bomberos"
+        },
+        {
+          "code": "8705.30.00",
+          "description": "000A -Camiones de bomberos 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8705.40.00",
+          "description": "Camiones hormigonera"
+        },
+        {
+          "code": "8705.40.00",
+          "description": "100V De CUATRO (4) o más ejes 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8705.40.00",
+          "description": "900N Los demás 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8705.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8705.90.10",
+          "description": "Camiones para la determinación de parámetros físicos característicos (perfilaje) de pozos petrolíferos"
+        },
+        {
+          "code": "8705.90.10",
+          "description": "000V Camiones para la determinación de parámetros físicos característicos (perfilaje) de pozos petrolíferos 2.00 2.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8705.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8705.90.90",
+          "description": "100D Quitanieve 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8705.90.90",
+          "description": "200J Vehículos con escalera mecánica, con o sin barquilla para bomberos 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "8705.90.90",
+          "description": "300P Vehículos pisapistas diseñados especialmente para mantenimiento y preparación de terrenos de nieve en pistas de"
+        }
+      ]
+    },
+    {
+      "code": "2000",
+      "description": "2.00 3.00 LNA 4.50 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "8706",
+      "description": "CHASIS DE VEHÍCULOS AUTOMÓVILES DE LAS PARTIDAS 8701 A 8705, EQUIPADOS CON SU MOTOR",
+      "subheadings": [
+        {
+          "code": "8706.00.10",
+          "description": "De los vehículos de la partida 8702"
+        },
+        {
+          "code": "8706.00.10",
+          "description": "000L De los vehículos de la partida n° 87.02 18.00 35.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "8706.00.20",
+          "description": "De los vehículos de las subpartidas 870110, 870130, 870191 a 870195 u 870410"
+        },
+        {
+          "code": "8706.00.20",
+          "description": "000W De los vehículos de las subpartidas 8701.10, 8701.30, 8701.91 a 8701.95 u 8704.10 14.00 14.00 0.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "8706.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8706.00.90",
+          "description": "De los vehículos de las subpartidas 8703.31, 8703.32, 8703.33, 8703.50 u 8703.70"
+        },
+        {
+          "code": "8706.00.90",
+          "description": "110Y Cuyo precio de venta, sin considerar impuestos, incluidos los opcionales, supe- re los PESOS TRESCIENTOS"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "35.00 3.00 LNA 3.00 6.50",
+      "subheadings": []
+    },
+    {
+      "code": "8707",
+      "description": "CARROCERÍAS DE VEHÍCULOS AUTOMÓVILES DE LAS PARTIDAS 8701 A 8705, INCLUIDAS LAS CABINAS",
+      "subheadings": [
+        {
+          "code": "8707.10.00",
+          "description": "De vehículos de la partida 8703"
+        },
+        {
+          "code": "8707.10.00",
+          "description": "300A Cabinas blindadas (R.3115/94 ANA) 18.00 35.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "8707.10.00",
+          "description": "900H Los demás 18.00 35.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "8707.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "8707.90.10",
+          "description": "De los vehículos de las subpartidas 870110, 870130, 870191 a 870195 u 870410"
+        },
+        {
+          "code": "8707.90.10",
+          "description": "000G De los vehículos de las subpartidas 8701.10, 8701.30, 8701.91 a 8701.95 u 8704.10 14.00 14.00 0.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "8707.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "8707.90.90",
+          "description": "100Q Cabinas blindadas (R.3115/94 ANA) 18.00 35.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "8707.90.90",
+          "description": "200W De autobuses, colectivos, trolebuses y autocares (R.2289/92 ANA) 18.00 35.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "8707.90.90",
+          "description": "900J Los demás 18.00 35.00 3.00 LNA 3.00 6.50"
+        }
+      ]
+    },
+    {
+      "code": "8708",
+      "description": "PARTES Y ACCESORIOS DE VEHÍCULOS AUTOMÓVILES DE LAS PARTIDAS 8701 A 8705",
+      "subheadings": [
+        {
+          "code": "8708.10.00",
+          "description": "Parachoques (paragolpes, defensas) y sus partes"
+        },
+        {
+          "code": "8708.10.00",
+          "description": "000C -Parachoques (paragolpes, defensas) y sus partes 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.2",
+          "description": "Las demás partes y accesorios de carrocería (incluidas las de cabina):"
+        },
+        {
+          "code": "8708.21.00",
+          "description": "Cinturones de seguridad"
+        },
+        {
+          "code": "8708.21.00",
+          "description": "000D --Cinturones de seguridad 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "8708.29.11",
+          "description": "Guardabarros"
+        },
+        {
+          "code": "8708.29.11",
+          "description": "000R Guardabarros 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.12",
+          "description": "Parrillas de radiador"
+        },
+        {
+          "code": "8708.29.12",
+          "description": "000Z Parrillas de radiador 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.13",
+          "description": "Puertas"
+        },
+        {
+          "code": "8708.29.13",
+          "description": "000G Puertas 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.14",
+          "description": "Paneles de instrumentos"
+        },
+        {
+          "code": "8708.29.14",
+          "description": "000P Paneles de instrumentos 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "8708.29.19",
+          "description": "100H Accesorios 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.19",
+          "description": "900B Partes (R.909/94 MEOSP) 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.91",
+          "description": "Guardabarros"
+        },
+        {
+          "code": "8708.29.91",
+          "description": "000V Guardabarros 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.92",
+          "description": "Parrillas de radiador"
+        },
+        {
+          "code": "8708.29.92",
+          "description": "000C Parrillas de radiador 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.93",
+          "description": "Puertas"
+        },
+        {
+          "code": "8708.29.93",
+          "description": "000K Puertas 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.94",
+          "description": "Paneles de instrumentos"
+        },
+        {
+          "code": "8708.29.94",
+          "description": "000T Paneles de instrumentos 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.95",
+          "description": "Generadores de gas para accionar retractores de cinturones de seguridad"
+        },
+        {
+          "code": "8708.29.95",
+          "description": "000A Generadores de gas para accionar retractores de cinturones de seguridad 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8708.29.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "8708.29.99",
+          "description": "100L Accesorios 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.99",
+          "description": "Partes"
+        },
+        {
+          "code": "8708.29.99",
+          "description": "910H Lunas de seguridad a prueba de balas,con dispositivos de conexion electricos y resistencias calentadoras 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.99",
+          "description": "920L Capó de aluminio 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8708.29.99",
+          "description": "930P Techo solar corredizo, accionado electricamente, incluso con dispositivos de control, de los tipos utilizados en"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LNA 3.00 5.50",
+      "subheadings": []
+    },
+    {
+      "code": "8709",
+      "description": "CARRETILLAS AUTOMÓVIL SIN DISPOSITIVO DE ELEVACIÓN DE LOS TIPOS UTILIZADOS EN FÁBRICAS,",
+      "subheadings": [
+        {
+          "code": "8709.1",
+          "description": "Carretillas:"
+        },
+        {
+          "code": "8709.11.00",
+          "description": "Eléctricas"
+        },
+        {
+          "code": "8709.11.00",
+          "description": "000H --Electricas 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8709.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "8709.19.00",
+          "description": "000D --Las demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8709.90.00",
+          "description": "Partes"
+        },
+        {
+          "code": "8709.90.00",
+          "description": "000J -Partes 14.00 14.00 0.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "8710",
+      "description": "TANQUES Y DEMÁS VEHÍCULOS AUTOMÓVILES BLINDADOS DE COMBATE, INCLUSO CON SU ARMAMENTO;",
+      "subheadings": [
+        {
+          "code": "8710.00.00",
+          "description": "Tanques y demás vehículos automóviles blindados de combate, incluso con su armamento; sus partes"
+        },
+        {
+          "code": "8710.00.00",
+          "description": "000L TANQUES Y DEMÁS VEHÍCULOS AUTOMÓVILES BLINDADOS DE COMBATE, INCLUSO CON SU ARMAMENTO"
+        }
+      ]
+    },
+    {
+      "code": "8711",
+      "description": "MOTOCICLETAS (INCLUIDOS LOS CICLOMOTORES) Y VELOCÍPEDOS EQUIPADOS CON MOTOR AUXILIAR,",
+      "subheadings": [
+        {
+          "code": "8711.10.00",
+          "description": "Con motor de émbolo (pistón) alternativo de cilindrada inferior o igual a 50 cm3"
+        },
+        {
+          "code": "8711.10.00",
+          "description": "Completas"
+        },
+        {
+          "code": "8711.10.00",
+          "description": "110C Completamente desarmada (sin componentes montados en el cuadro) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.10.00",
+          "description": "120F Semidesarmada (SKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.10.00",
+          "description": "130J Totalmente armada (CBU) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.10.00",
+          "description": "190D Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.10.00",
+          "description": "Incompletas"
+        },
+        {
+          "code": "8711.10.00",
+          "description": "210H Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.10.00",
+          "description": "220L Completamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.10.00",
+          "description": "290J Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20",
+          "description": "Con motor de émbolo (pistón) alternativo de cilindrada superior a 50 cm3 pero inferior o igual a 250 cm3"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "Motocicletas de cilindrada inferior o igual a 125 cm3"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "De cilindrada superior a 50 cm3 pero inferior o igual a 55 cm3"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "Completas"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "111D Completamente desarmada (sin componentes montados en el cuadro) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "112F Semidesarmada (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "113H Totalmente armada (CBU) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "119W Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "Incompletas"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "121G Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "122J Completamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "129Z Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "De cilindrada superior a 55 cm3 pero inferior o igual a 75 cm3"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "211J Completamente desarmada (sin componentes montados en el cuadro) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "212L Semidesarmada (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "213N Totalmente armada (CBU) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "219B Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "221M Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "222P Competamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "229E Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "De cilindrada superior a 75 cm3 pero inferior o igual a 100 cm3"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "311P Completamente desarmada (sin componentes montados en el cuadro) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "312R Semidesarmada (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "313U Totalmente armada (CBU) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "319G Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "321T Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "322V Completamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "329K Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "De cilindrada superior a 100 cm3 pero inferior o igual a 110 cm3"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "411V Completamente desarmada (sin componentes montados en el cuadro) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "412X Semidesarmada (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "413Z Totalmente armada (CBU) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "419M Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "421Y Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "422A Completamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "429Q Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "De cilindrada superior a 110 cm3 pero inferior o igual a 125 cm3"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "511A Completamente desarmada (sin componentes montados en el cuadro) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "512C Semidesarmada (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "513E Totalmente armada (CBU) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "519T Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "521D Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "522F Completamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.10",
+          "description": "529W Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "Motocicletas de cilindrada superior a 125 cm3"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "De cilindrada superior a 125 cm3 pero inferior o igual a 150 cm3"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "Completas"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "111N Completamente desarmada (sin componentes montados en el cuadro) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "112Q Semidesarmada (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "113T Totalmente armada (CBU) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "119F Las demás 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "Incompletas"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "121R Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "122U Completamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "129J Las demás 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "Los demás"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "911G Completamente desarmada (sin componentes montados en el cuadro) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "912J Semidesarmada (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "913L Totalmente armada (CBU) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "919Z Las demás 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "921K Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "922M Completamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.20",
+          "description": "929C Las demás 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8711.20.90",
+          "description": "Completas"
+        },
+        {
+          "code": "8711.20.90",
+          "description": "110E Completamente desarmada (sin componentes montados en el cuadro) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.90",
+          "description": "120H Semidesarmada (SKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.90",
+          "description": "130L Totalmente armada (CBU) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.90",
+          "description": "190F Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.90",
+          "description": "Incompletas"
+        },
+        {
+          "code": "8711.20.90",
+          "description": "210K Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.90",
+          "description": "220N Completamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.20.90",
+          "description": "290L Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.30.00",
+          "description": "Con motor de émbolo (pistón) alternativo de cilindrada superior a 250 cm3 pero inferior o igual a 500 cm3"
+        },
+        {
+          "code": "8711.30.00",
+          "description": "Completas"
+        },
+        {
+          "code": "8711.30.00",
+          "description": "110F Completamente desarmada (sin componentes montados en el cuadro) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.30.00",
+          "description": "120J Semidesarmada (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.30.00",
+          "description": "130M Totalmente armada (CBU) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.30.00",
+          "description": "190G Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.30.00",
+          "description": "Incompletas"
+        },
+        {
+          "code": "8711.30.00",
+          "description": "210L Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.30.00",
+          "description": "220P Completamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.30.00",
+          "description": "290M Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.40.00",
+          "description": "Con motor de émbolo (pistón) alternativo de cilindrada superior a 500 cm3 pero inferior o igual a 800 cm3"
+        },
+        {
+          "code": "8711.40.00",
+          "description": "Completas"
+        },
+        {
+          "code": "8711.40.00",
+          "description": "110V Completamente desarmada (sin componentes montados en el cuadro ) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.40.00",
+          "description": "120Y Semidesarmada (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.40.00",
+          "description": "130B Totalmente armada (CBU) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.40.00",
+          "description": "190W Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.40.00",
+          "description": "Incompletas"
+        },
+        {
+          "code": "8711.40.00",
+          "description": "210A Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.40.00",
+          "description": "220D Completamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.40.00",
+          "description": "290B Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.50.00",
+          "description": "Con motor de émbolo (pistón) alternativo de cilindrada superior a 800 cm3"
+        },
+        {
+          "code": "8711.50.00",
+          "description": "Completas"
+        },
+        {
+          "code": "8711.50.00",
+          "description": "110J Completamente desarmada (sin componentes montados en el cuadro ) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.50.00",
+          "description": "120M Semidesarmada (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.50.00",
+          "description": "130Q Totalmente armada (CBU) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.50.00",
+          "description": "190K Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.50.00",
+          "description": "Incompletas"
+        },
+        {
+          "code": "8711.50.00",
+          "description": "210P Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.50.00",
+          "description": "220T Completamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.50.00",
+          "description": "290Q Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "Propulsados con motor eléctrico"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "Bicicletas"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "110Y Con asistencia eléctrica al pedaleo (o bicicleta con asistencia eléctrica o EPAC) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "190Z Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "Motocicletas"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "Completas"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "211F Completamente desarmada (sin componentes montados en el cuadro ) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "212H Semidesarmada (SKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "213K Totalmente armada (CBU) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "219Y Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "Incompletas"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "221J Semidesarmada, conteniendo cuadro y motor (SKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "222L Completamente desarmada, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "229B Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "Completos"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "911U Completamente desarmado (sin componentes montados en el cuadro ) (CKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "912W Semidesarmado (SKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "913Y Totalmente armado (CBU) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "919L Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "Incompletos"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "921X Semidesarmado, conteniendo cuadro y motor (SKD) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "922Z Completamente desarmado, conteniendo cuadro y motor 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.60.00",
+          "description": "929P Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8711.90.00",
+          "description": "400D Sidecares 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8711.90.00",
+          "description": "900F Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8712",
+      "description": "BICICLETAS Y DEMÁS VELOCÍPEDOS (INCLUIDOS LOS TRICICLOS DE REPARTO), SIN MOTOR",
+      "subheadings": [
+        {
+          "code": "8712.00.10",
+          "description": "Bicicletas"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "Del tipo \"de paseo\", incluso las del tipo \"playeras\""
+        },
+        {
+          "code": "8712.00.10",
+          "description": "Construida esencialmente en acero"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "111U De rodado superior o igual a 254 mm (nº 10) pero inferior o igual a 406,4 mm (nº16) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "112W De rodado superior a 406,4 mm (nº 16) pero inferior o igual a 508 mm (nº20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "113Y De rodado superior a 508 mm (nº 20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "119L Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "Construida esencialmente en aleaciones de aluminio"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "121X De rodado superior o igual a 254 mm (nº10) pero inferior o igual a 406,4 mm (nº16) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "122Z De rodado superior a 406,4 mm (nº 16) pero inferior o igual a 508 mm (nº20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "123B De rodado superior a 508 mm (nº20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "129P Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "Las demás"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "191V De rodado superior o igual a 254 mm (nº 10) pero inferior o igual a 406,4 mm (nº16) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "192X De rodado superior a 406,4 mm (nº 16) pero inferior o igual a 508 mm (nº20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "193Z De rodado superior a 508 mm (nº 20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "199M Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "De carrera"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "211Z De rodado superior o igual a 508 mm (nº 20) pero inferior o igual a 609,6 mm (nº24) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "212B De rodado superior a 609,6 mm (nº24) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "219R Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "221C De rodado superior o igual a 508 mm (nº 20) pero inferior o igual a 609,6 mm (nº24) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "222E De rodado superior a 609,6 mm (nº24) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "229V Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "291A De rodado superior o igual a 508 mm (nº 20) pero inferior o igual a 609,6 mm (nº24) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "292C De rodado superior a 609,6 mm (nº 24) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "299T Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "Del tipo \"cross\" o \"mountain bike\""
+        },
+        {
+          "code": "8712.00.10",
+          "description": "Construidas esencialmente en acero, excepto con cuadro tipo \"Y\" de sección oval y doble suspensión"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "311E De rodado superior o igual a 254 mm (nº 10) pero inferior o igual a 406,4 mm (nº16) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "312G De rodado superior a 406,4 mm (nº 16) pero inferior o igual a 508 mm (nº20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "313J De rodado superior a 508 mm (nº20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "319X Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "Construidas esencialmente en aluminio, excepto con cuadro tipo \"Y\" de sección oval y doble suspensión"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "321H De rodado superior o igual a 254 mm (nº 10) pero inferior o igual a 406,4 mm (nº16) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "322K De rodado superior a 406,4 mm (nº 16) pero inferior o igual a 508 mm (nº20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "323M De rodado superior a 508 mm (nº 20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "329A Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "Otras, construidas esencialmente en acero, con cuadro tipo \"Y\" de sección oval y doble suspensión"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "331L De rodado superior o igual a 254 mm (nº 10) pero inferior o igual a 406,4 mm (nº16) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "332N De rodado superior a 406,4 mm (nº 16) pero inferior o igual a 508 mm (nº20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "333Q De rodado superior a 508 mm (nº20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "339D Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "Otras, construidas esencialmente en aluminio, con cuadro tipo \"Y\" de sección oval y doble suspensión"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "341P De rodado superior o igual a 254 mm (nº 10) pero inferior o igual a 406,4 mm (nº16) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "342R De rodado superior a 406,4 mm (nº 16) pero inferior o igual a 508 mm (nº20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "343U De rodado superior a 508 mm (nº 20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "349G Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "391F De rodado superior o igual a 254 mm (nº 10) pero inferior o igual a 406,4 mm (nº16) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "392H De rodado superior a 406,4 mm (nº 16) pero inferior o igual a 508 mm (nº20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "393K De rodado superior a 508 mm (nº20) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "399Y Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "910K Construidas esencialmente en acero 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "920N Construidas esencialmente en aleaciones de aluminio 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.10",
+          "description": "990L Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8712.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8712.00.90",
+          "description": "000L Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8713",
+      "description": "SILLONES DE RUEDAS Y DEMÁS VEHÍCULOS PARA INVÁLIDOS, INCLUSO CON MOTOR U OTRO MECANISMO",
+      "subheadings": [
+        {
+          "code": "8713.10.00",
+          "description": "Sin mecanismo de propulsión"
+        },
+        {
+          "code": "8713.10.00",
+          "description": "000F -Sin mecanismo de propulsión 12.00 12.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8713.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8713.90.00",
+          "description": "000U -Los demás 2.00 2.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8714",
+      "description": "PARTES Y ACCESORIOS DE VEHÍCULOS DE LAS PARTIDAS 8711 A 8713",
+      "subheadings": [
+        {
+          "code": "8714.10.00",
+          "description": "De motocicletas (incluidos los ciclomotores)"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "100E Accesorios 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "200K Chasis 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "300Q Manubrio con o sin acople para dirección 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "400W Horquillón trasero 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "500B Soporte central rebatible (caballete) o lateral 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "Llantas"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "Constuidas esencialmente en acero"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "611M Con neumatico 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "619E Las demas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "Construidas esencialmente en aluminio"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "621Q Con neumatico 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "629H Las demas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "Las demas"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "691N Con neumatico 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "699F Las demas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "Aros de llantas"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "710Q Construidos esencialmente en acero 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "720U Construidos esencialmente en aluminio 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "790R Los demas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "Las demás partes (R.909/94 MEOSP)"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "Radios de longitud superior o igual a 60 mm pero inferior o igual a 317 mm, con niples"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "911D Cuyo diámetro sea superior o igual a 1,80 mm pero inferior o igual a 2 mm (R.811/98 MEOSP y R.25/05 SICyPyME) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "912F Cuyo diámetro sea superior a 2 mm pero inferior o igual a 2,5 mm (R.811/98 MEOSP y R. 25/05 SICyPyME) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "919W Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "Los demás radios, con niples"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "921G Cuyo diámetro sea superior o igual a 1,80 mm pero inferior o igual a 2 mm (R.811/98 MEOSP) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "922J Cuyo diámetro sea superior a 2 mm pero inferior o igual a 2,5 mm (R.811/98 MEOSP) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "929Z Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "Radios de longitud superior o igual a 60 mm pero inferior o igual a 317 mm, sin niples"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "931K Cuyo diámetro sea superior o igual a 1.80 mm pero inferior o igual a 2 mm (R. 811/98 MEOSP y R. 25/05 SICyPyME) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "932M Cuyo diámetro sea superior a 2 mm pero inferior o igual a 2.5 mm (R. 811/98 MEOSP y R.25/05 SICyPyME) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "939C Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "Los demás radios"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "941N Cuyo diámetro sea superior o igual a 1.80 mm pero inferior o igual a 2 mm (R. 811/98 MEOSP) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "942Q Cuyo diámetro sea superior a 2 mm pero inferior o igual a 2.5 mm (R. 811/98 MEOSP) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "949F Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "950P Sillines (asientos) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "991E Niples (R. 25/05 SICyPyME) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "992G Guarniciones de fricción para frenos, montadas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "993J Discos de freno 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "994L Coronas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "995N Piñones para cadenas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "996Q Juegos de corona y piñon o corona, piñon y cadena, presentados en un envase común 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "997T Amortiguadores, incluso conjunto resorte-amortiguador formando un solo cuerpo 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "998V Silenciadores y tubos (caños) de escape 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.10.00",
+          "description": "999X Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.20.00",
+          "description": "De sillones de ruedas y demás vehículos para inválidos"
+        },
+        {
+          "code": "8714.20.00",
+          "description": "100U Accesorios 10.00 10.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.20.00",
+          "description": "900M Partes (R.909/94 MEOSP) 10.00 10.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "Cuadros y horquillas, y sus partes"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "Cuadros de bicicletas"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "Construidos esencialmente en acero"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "111K Con horquilla unicamente 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "112M Con horquilla y suspensión 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "119C Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "Construidos esencialmente en aleaciones de aluminio"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "121N Con horquilla unicamente 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "122Q Con horquilla y suspensión 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "129F Los demás 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "191L Con horquilla unicamente 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "192N Con horquilla y suspensión 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "199D Los demás 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "Horquillas de bicicletas"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "Construidas esencialmente en acero"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "211Q Con suspensión 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "219H Las demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "Construidas esencialmente en aleaciones de aluminio"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "221U Con suspensión 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "229L Las demás 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "290P Las demás 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "Los demás cuadros y horquillas"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "Cuadros, incluso con horquilla y suspensión"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "311W Construidos esencialmente en acero. 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "319N Los demas. 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "391X Horquillas construidas esencialmente en acero, sin suspension. 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "399P Los demas. 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "Partes"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "De bicicletas"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "911D De cuadros 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "919W Las demás 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.91.00",
+          "description": "990C Las demás 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "Llantas y radios"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "Llantas de bicicleta"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "110V Construidas esencialmente en acero 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "120Y Construidas esencialmente en aleaciones de aluminio 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "190W Las demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "Radios de longitud superior o igual a 60 mm pero inferior o igual a 317 mm"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "Con niples"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "211C Cuyo diámetro sea superior o igual a 1,80 mm pero inferior o igual a 2 mm (R.811/98 MEOSP y R. 25/05 SICyPyME) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "212E Cuyo diámetro sea superior a 2 mm pero inferior o igual a 2,5 mm (R.811/98 MEOSP y R. 25/05 SICyPyME) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "219V Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "291D Cuyo diámetro sea superior o igual a 1,80 mm pero inferior o igual a 2 mm (R.811/98 MEOSP y R. 25/05 SICyPyME) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "292F Cuyo diámetro sea superior a 2 mm pero inferior o igual a 2,5 mm (R.811/98 MEOSP y R. 25/05 SICyPyME) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "299W Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "Los demás radios"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "311H Cuyo diámetro sea superior o igual a 1.80 mm pero inferior o igual a 2 mm (R. 811/98 MEOSP) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "312K Cuyo diámetro sea superior a 2 mm pero inferior o igual a 2.5 mm (R. 811/98 MEOSP) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "319A Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "391J Cuyo diámetro sea superior o igual a 1.80 mm pero inferior o igual a 2 mm (R. 811/98 MEOSP) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "392L Cuyo diámetro sea superior a 2 mm pero inferior o igual a 2.5 mm (R. 811/98 MEOSP) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "399B Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.92.00",
+          "description": "900K Las demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.93",
+          "description": "Bujes sin freno y piñones libres"
+        },
+        {
+          "code": "8714.93.10",
+          "description": "Bujes sin freno"
+        },
+        {
+          "code": "8714.93.10",
+          "description": "000H Bujes sin freno 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.93.20",
+          "description": "Piñones libres"
+        },
+        {
+          "code": "8714.93.20",
+          "description": "100Y De una corona 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.93.20",
+          "description": "900R Los demás 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.94",
+          "description": "Frenos, incluidos los bujes con freno, y sus partes"
+        },
+        {
+          "code": "8714.94.10",
+          "description": "Bujes con frenos"
+        },
+        {
+          "code": "8714.94.10",
+          "description": "000V Bujes con frenos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.94.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8714.94.90",
+          "description": "100D Frenos 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.94.90",
+          "description": "Partes"
+        },
+        {
+          "code": "8714.94.90",
+          "description": "910A De frenos, excluidos los cables y vainas 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.94.90",
+          "description": "990B Las demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.95.00",
+          "description": "Sillines (asientos)"
+        },
+        {
+          "code": "8714.95.00",
+          "description": "100C Con resortes 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.95.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8714.95.00",
+          "description": "910Z De carrera 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.95.00",
+          "description": "990A Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "Pedales y mecanismos de pedal, y sus partes"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "Pedales"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "110T Construidos esencialmente en acero 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "120W Construidos esencialmente en aleaciones de aluminio 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "130Z Construidos esencialmente en material plástico 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "190U Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "200V Mecanismos de pedal 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "Partes"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "910L Palanca 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "920P Plato 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "930T Cubetas de caja 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "940W Eje de caja 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.96.00",
+          "description": "990M Las demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "8714.99.10",
+          "description": "Cambios de velocidades"
+        },
+        {
+          "code": "8714.99.10",
+          "description": "000E Cambios de velocidades 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "Accesorios"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "110R Pie de apoyo 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "120V Portapaquetes y canastos de los tipos utilizados en bicicletas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "190T Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "Partes"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "Ruedas de bicicleta"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "911M Con cubierta 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "912P Con cubierta y cámara 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "913R Macizas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "914U De los tipos de las utilizadas como estabilizadoras 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "919E Las demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "920N Manillar 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "930R Vástago de manillar 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "940V Caño para sillín 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "Puños"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "951A Con manija de cambio 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "959T Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "960B Descarriladores; comandos y cables de cambio de velocidades 16.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "Amortiguadores, incluso conjunto resorte-amortiguador formando un solo cuerpo"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "971G De los tipos utilizados en velocípedos equipados con motor auxiliar, con sidecar o sin el 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "979Z Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "992Q Cubrecadenas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "993T Niples 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "994V Guardabarros 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8714.99.90",
+          "description": "999F Las demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "8715",
+      "description": "COCHES, SILLAS Y VEHÍCULOS SIMILARES PARA EL TRANSPORTE DE NIÑOS, Y SUS PARTES",
+      "subheadings": [
+        {
+          "code": "8715.00.00",
+          "description": "Coches, sillas y vehículos similares para el transporte de niños, y sus partes"
+        },
+        {
+          "code": "8715.00.00",
+          "description": "100J Coches, sillas y vehículos similares para el transporte de niños 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8715.00.00",
+          "description": "900C Partes (R.909/94 MEOSP) 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8716",
+      "description": "REMOLQUES Y SEMIRREMOLQUES PARA CUALQUIER VEHÍCULO; LOS DEMÁS VEHÍCULOS NO",
+      "subheadings": [
+        {
+          "code": "8716.10.00",
+          "description": "Remolques y semirremolques para vivienda o acampar, del tipo caravana"
+        },
+        {
+          "code": "8716.10.00",
+          "description": "000L -Remolques y semirremolques para vivienda o acampar, del tipo caravana 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8716.20.00",
+          "description": "Remolques y semirremolques, autocargadores o autodescargadores, para uso agrícola"
+        },
+        {
+          "code": "8716.20.00",
+          "description": "100F Trailers para transportar algodón compactado (R.1653/93 ANA) 14.00 35.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8716.20.00",
+          "description": "900Z Los demás 14.00 35.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8716.3",
+          "description": "Los demás remolques y semirremolques para el transporte de mercancías:"
+        },
+        {
+          "code": "8716.31.00",
+          "description": "Cisternas"
+        },
+        {
+          "code": "8716.31.00",
+          "description": "100G Semirremolque con DOCE (12) cilindros de acero, montados sobre el mismo, para almacenar gas natural comprimido"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "35.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LNA 3.00 5.50",
+      "subheadings": []
+    }
+  ],
+  "_rowCount": 995
+}

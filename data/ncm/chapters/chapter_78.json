@@ -1,0 +1,145 @@
+{
+  "chapter": "78",
+  "title": "Capítulo 71",
+  "sectionTitle": "CAP. 78 SECCION XV METALES COMUNES Y MANUFACTURAS DE ESTOS METALES Notas. 1. Esta Sección no comprende: a. los colores y",
+  "headings": [
+    {
+      "code": "3207",
+      "description": "a 32.10, 32.12, 32.13 ó 32.15);",
+      "subheadings": []
+    },
+    {
+      "code": "7801",
+      "description": "PLOMO EN BRUTO",
+      "subheadings": [
+        {
+          "code": "7801.10",
+          "description": "Plomo refinado"
+        },
+        {
+          "code": "7801.10.11",
+          "description": "En lingotes"
+        },
+        {
+          "code": "7801.10.11",
+          "description": "000N En lingotes 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7801.10.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "7801.10.19",
+          "description": "000Z Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7801.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7801.10.90",
+          "description": "000J Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7801.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "7801.91.00",
+          "description": "Con antimonio como el otro elemento predominante en peso"
+        },
+        {
+          "code": "7801.91.00",
+          "description": "000W --Con antimonio como el otro elemento predominante en peso 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7801.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7801.99.00",
+          "description": "000R --Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7802",
+      "description": "DESPERDICIOS Y DESECHOS, DE PLOMO",
+      "subheadings": [
+        {
+          "code": "7802.00.00",
+          "description": "Desperdicios y desechos, de plomo"
+        },
+        {
+          "code": "7802.00.00",
+          "description": "000A DESPERDICIOS Y DESECHOS, DE PLOMO. 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7804",
+      "description": "CHAPAS, HOJAS Y TIRAS, DE PLOMO; POLVO Y ESCAMILLAS, DE PLOMO",
+      "subheadings": [
+        {
+          "code": "7804.1",
+          "description": "Chapas, hojas y tiras:"
+        },
+        {
+          "code": "7804.11.00",
+          "description": "Hojas y tiras, de espesor inferior o igual a 0,2 mm (sin incluir el soporte)"
+        },
+        {
+          "code": "7804.11.00",
+          "description": "000N --Hojas y tiras, de espesor inferior o igual a 0,2 mm (sin incluir el soporte) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7804.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7804.19.00",
+          "description": "000J --Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7804.20.00",
+          "description": "Polvo y escamillas"
+        },
+        {
+          "code": "7804.20.00",
+          "description": "000Q -Polvo y escamillas 6.00 6.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7806",
+      "description": "LAS DEMÁS MANUFACTURAS DE PLOMO",
+      "subheadings": [
+        {
+          "code": "7806.00.10",
+          "description": "Barras, perfiles y alambre"
+        },
+        {
+          "code": "7806.00.10",
+          "description": "000J Barras, perfiles y alambre 12.00 12.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "7806.00.20",
+          "description": "Tubos y accesorios de tubería"
+        },
+        {
+          "code": "7806.00.20",
+          "description": "000U Tubos y accesorios de tubería 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7806.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7806.00.90",
+          "description": "000M Las demás 16.00 16.00 3.00 LA 3.00 4.50"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 32
+}

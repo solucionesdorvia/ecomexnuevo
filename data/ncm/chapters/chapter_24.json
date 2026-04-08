@@ -1,0 +1,222 @@
+{
+  "chapter": "24",
+  "title": "Capítulo 24",
+  "sectionTitle": "CAP. 24 SECCION IV PRODUCTOS DE LAS INDUSTRIAS ALIMENTARIAS; BEBIDAS, LIQUIDOS ALCOHOLICOS Y VINAGRE; TABACO Y SUCEDANEO",
+  "headings": [
+    {
+      "code": "2401",
+      "description": "TABACO EN RAMA O SIN ELABORAR; DESPERDICIOS DE TABACO",
+      "subheadings": [
+        {
+          "code": "2401.10",
+          "description": "Tabaco sin desvenar o desnervar"
+        },
+        {
+          "code": "2401.10.10",
+          "description": "En hojas, sin secar ni fermentar"
+        },
+        {
+          "code": "2401.10.10",
+          "description": "000L En hojas, sin secar ni fermentar 14.00 14.00 3.00 LA 12.00 0.75"
+        },
+        {
+          "code": "2401.10.20",
+          "description": "En hojas secas o fermentadas tipo capa"
+        },
+        {
+          "code": "2401.10.20",
+          "description": "000W En hojas secas o fermentadas tipo capa 14.00 14.00 3.00 LA 12.00 0.75"
+        },
+        {
+          "code": "2401.10.30",
+          "description": "En hojas secas en secadero de aire caliente («Flue cured»), del tipo Virginia"
+        },
+        {
+          "code": "2401.10.30",
+          "description": "000F En hojas secas en secadero de aire caliente (<<Flue cured>>), del tipo Virginia 14.00 14.00 3.00 LA 12.00 0.75"
+        },
+        {
+          "code": "2401.10.40",
+          "description": "En hojas secas, del tipo turco, con un contenido de aceites volátiles superior al 0,2 % en peso"
+        },
+        {
+          "code": "2401.10.40",
+          "description": "000Q En hojas secas, del tipo turco, con un contenido de aceites volátiles superior al 0,2 % en peso 10.00 10.00 3.00 LA 12.00 0.75"
+        },
+        {
+          "code": "2401.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2401.10.90",
+          "description": "000P Los demás 14.00 35.00 3.00 LA 12.00 0.75"
+        },
+        {
+          "code": "2401.20",
+          "description": "Tabaco total o parcialmente desvenado o desnervado"
+        },
+        {
+          "code": "2401.20.10",
+          "description": "En hojas, sin secar ni fermentar"
+        },
+        {
+          "code": "2401.20.10",
+          "description": "000A En hojas, sin secar ni fermentar 14.00 14.00 3.00 LA 12.00 0.75"
+        },
+        {
+          "code": "2401.20.20",
+          "description": "En hojas secas o fermentadas tipo capa"
+        },
+        {
+          "code": "2401.20.20",
+          "description": "000K En hojas secas o fermentadas tipo capa 14.00 14.00 3.00 LA 12.00 0.75"
+        },
+        {
+          "code": "2401.20.30",
+          "description": "En hojas secas en secadero de aire caliente («Flue cured»), del tipo Virginia"
+        },
+        {
+          "code": "2401.20.30",
+          "description": "000V En hojas secas en secadero de aire caliente (<<Flue cured>>), del tipo Virginia 14.00 14.00 3.00 LA 12.00 0.75"
+        },
+        {
+          "code": "2401.20.40",
+          "description": "En hojas secas («light air cured»), del tipo Burley"
+        },
+        {
+          "code": "2401.20.40",
+          "description": "000E En hojas secas (<<light air cured>>), del tipo Burley 14.00 14.00 3.00 LA 12.00 0.75"
+        },
+        {
+          "code": "2401.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2401.20.90",
+          "description": "000D Los demás 14.00 14.00 3.00 LA 12.00 0.75"
+        },
+        {
+          "code": "2401.30.00",
+          "description": "Desperdicios de tabaco"
+        },
+        {
+          "code": "2401.30.00",
+          "description": "000E -Desperdicios de tabaco 14.00 14.00 3.00 LA 12.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "2402",
+      "description": "CIGARROS (PUROS) (INCLUSO DESPUNTADOS), CIGARRITOS (PURITOS) Y CIGARRILLOS, DE TABACO O DE",
+      "subheadings": [
+        {
+          "code": "2402.10.00",
+          "description": "Cigarros (puros) (incluso despuntados) y cigarritos (puritos), que contengan tabaco"
+        },
+        {
+          "code": "2402.10.00",
+          "description": "100A Cigarros (puros) (incluso despuntados), excepto rabillos y trompetillas 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2402.10.00",
+          "description": "200F Cigarritos (puritos) 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2402.10.00",
+          "description": "900U Los demás 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2402.20.00",
+          "description": "Cigarrillos que contengan tabaco"
+        },
+        {
+          "code": "2402.20.00",
+          "description": "100P Negros 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2402.20.00",
+          "description": "200V Rubios 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2402.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2402.90.00",
+          "description": "100N Cigarrillos de picadura de lechuga, sin tabaco ni nicotina (R.2013/93 ex-ANA) 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2402.90.00",
+          "description": "900G Los demás 20.00 20.00 3.00 LA 4.50 2.50"
+        }
+      ]
+    },
+    {
+      "code": "2403",
+      "description": "LOS DEMÁS TABACOS Y SUCEDÁNEOS DEL TABACO, ELABORADOS; TABACO «HOMOGENEIZADO» O",
+      "subheadings": [
+        {
+          "code": "2403.1",
+          "description": "Tabaco para fumar, incluso con sucedáneos de tabaco en cualquier proporción:"
+        },
+        {
+          "code": "2403.11.00",
+          "description": "Tabaco para pipa de agua mencionado en la Nota 1 de subpartida de este Capítulo"
+        },
+        {
+          "code": "2403.11.00",
+          "description": "000A --Tabaco para pipa de agua mencionado en la Nota 1 de subpartida de este Capítulo 20.00 20.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2403.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2403.19.00",
+          "description": "100B Tabaco picado o en hebras 20.00 20.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2403.19.00",
+          "description": "900V Los demás 20.00 20.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2403.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "2403.91.00",
+          "description": "Tabaco «homogeneizado» o «reconstituido»"
+        },
+        {
+          "code": "2403.91.00",
+          "description": "000N --Tabaco <<homogeneizado>> o <<reconstituido>> 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2403.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "2403.99.10",
+          "description": "Extractos y jugos"
+        },
+        {
+          "code": "2403.99.10",
+          "description": "000U Extractos y jugos 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2403.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2403.99.90",
+          "description": "100C Cartuchos o barras de tabaco de los tipos utilizados en cigarrillos electrónicos o dispositivos similares 18.00 18.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2403.99.90",
+          "description": "900W Los demas 18.00 18.00 3.00 LA 4.50 1.25"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 52
+}

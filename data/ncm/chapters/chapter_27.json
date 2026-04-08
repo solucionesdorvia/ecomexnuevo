@@ -1,0 +1,972 @@
+{
+  "chapter": "27",
+  "title": "Capítulo 27",
+  "sectionTitle": "CAP. 27 SECCION V PRODUCTOS MINERALES 2023 | Diciembre La información contenida en esta publicación debe ser ratificada",
+  "headings": [
+    {
+      "code": "2701",
+      "description": "HULLAS; BRIQUETAS, OVOIDES Y COMBUSTIBLES SÓLIDOS SIMILARES, OBTENIDOS DE LA HULLA",
+      "subheadings": [
+        {
+          "code": "2701.1",
+          "description": "Hullas, incluso pulverizadas, pero sin aglomerar:"
+        },
+        {
+          "code": "2701.11.00",
+          "description": "Antracitas"
+        },
+        {
+          "code": "2701.11.00",
+          "description": "000H --Antracitas 0.00 0.00 0.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2701.12.00",
+          "description": "Hulla bituminosa"
+        },
+        {
+          "code": "2701.12.00",
+          "description": "000V --Hulla bituminosa 0.00 0.00 0.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2701.19.00",
+          "description": "Las demás hullas"
+        },
+        {
+          "code": "2701.19.00",
+          "description": "000D --Las demás hullas 0.00 0.00 0.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2701.20.00",
+          "description": "Briquetas, ovoides y combustibles sólidos similares, obtenidos de la hulla"
+        },
+        {
+          "code": "2701.20.00",
+          "description": "000K -Briquetas, ovoides y combustibles sólidos similares, obtenidos de la hulla 0.00 0.00 0.00 LA 16.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2702",
+      "description": "LIGNITOS, INCLUSO AGLOMERADOS, EXCEPTO EL AZABACHE",
+      "subheadings": [
+        {
+          "code": "2702.10.00",
+          "description": "Lignitos, incluso pulverizados, pero sin aglomerar"
+        },
+        {
+          "code": "2702.10.00",
+          "description": "000P -Lignitos, incluso pulverizados, pero sin aglomerar 0.00 0.00 0.00 LA 16.50 0.00"
+        },
+        {
+          "code": "2702.20.00",
+          "description": "Lignitos aglomerados"
+        },
+        {
+          "code": "2702.20.00",
+          "description": "000D -Lignitos aglomerados 0.00 0.00 0.00 LA 16.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2703",
+      "description": "TURBA (COMPRENDIDA LA UTILIZADA PARA CAMA DE ANIMALES), INCLUSO AGLOMERADA",
+      "subheadings": [
+        {
+          "code": "2703.00.00",
+          "description": "Turba (comprendida la utilizada para cama de animales), incluso aglomerada"
+        },
+        {
+          "code": "2703.00.00",
+          "description": "000U TURBA (COMPRENDIDA LA UTILIZADA PARA CAMA DE ANIMALES), INCLUSO AGLOMERADA. 0.00 0.00 0.00 LA 8.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2704",
+      "description": "COQUES Y SEMICOQUES DE HULLA, LIGNITO O TURBA, INCLUSO AGLOMERADOS; CARBÓN DE RETORTA",
+      "subheadings": [
+        {
+          "code": "2704.00.11",
+          "description": "Con granulometría superior o igual a 80 mm"
+        },
+        {
+          "code": "2704.00.11",
+          "description": "000E Con granulometria superior o igual a 80 mm 0.00 0.00 0.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2704.00.12",
+          "description": "Con granulometría inferior a 80 mm"
+        },
+        {
+          "code": "2704.00.12",
+          "description": "000M Con granulometria inferior a 80 mm 0.00 0.00 0.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2704.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2704.00.90",
+          "description": "100F Carbón de retorta 0.00 0.00 0.00 LA 16.50 0.00"
+        },
+        {
+          "code": "2704.00.90",
+          "description": "200L Semi-coques 0.00 0.00 0.00 LA 16.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2705",
+      "description": "GAS DE HULLA, GAS DE AGUA, GAS POBRE Y GASES SIMILARES, EXCEPTO EL GAS DE PETRÓLEO Y DEMÁS",
+      "subheadings": [
+        {
+          "code": "2705.00.00",
+          "description": "Gas de hulla, gas de agua, gas pobre y gases similares, excepto el gas de petróleo y demás hidrocarburos gaseosos"
+        },
+        {
+          "code": "2705.00.00",
+          "description": "000F GAS DE HULLA, GAS DE AGUA, GAS POBRE Y GASES SIMILARES, EXCEPTO EL GAS DE PETRÓLEO Y DEMÁS"
+        }
+      ]
+    },
+    {
+      "code": "2706",
+      "description": "ALQUITRANES DE HULLA, LIGNITO O TURBA Y DEMÁS ALQUITRANES MINERALES, AUNQUE ESTÉN",
+      "subheadings": [
+        {
+          "code": "2706.00.00",
+          "description": "Alquitranes de hulla, lignito o turba y demás alquitranes minerales, aunque estén deshidratados o descabezados,"
+        },
+        {
+          "code": "2706.00.00",
+          "description": "100E Alquitrán de hulla 0.00 0.00 0.00 LA 16.50 0.00"
+        },
+        {
+          "code": "2706.00.00",
+          "description": "200K Alquitrán de lignito 0.00 0.00 0.00 LA 16.50 0.00"
+        },
+        {
+          "code": "2706.00.00",
+          "description": "300Q Alquitrán de turba 0.00 0.00 0.00 LA 16.50 0.00"
+        },
+        {
+          "code": "2706.00.00",
+          "description": "400W Los demás alquitranes minerales 0.00 0.00 0.00 LA 16.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2707",
+      "description": "ACEITES Y DEMÁS PRODUCTOS DE LA DESTILACIÓN DE LOS ALQUITRANES DE HULLA DE ALTA",
+      "subheadings": [
+        {
+          "code": "2707.10.00",
+          "description": "Benzol (benceno)"
+        },
+        {
+          "code": "2707.10.00",
+          "description": "000G -Benzol (benceno) 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2707.20.00",
+          "description": "Toluol (tolueno)"
+        },
+        {
+          "code": "2707.20.00",
+          "description": "000W -Toluol (tolueno) 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2707.30.00",
+          "description": "Xilol (xilenos)"
+        },
+        {
+          "code": "2707.30.00",
+          "description": "000K -Xilol (xilenos) 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2707.40.00",
+          "description": "Naftaleno"
+        },
+        {
+          "code": "2707.40.00",
+          "description": "000Z -Naftaleno 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2707.50",
+          "description": "Las demás mezclas de hidrocarburos aromáticos que destilen, incluidas las pérdidas, una proporción superior o igual"
+        },
+        {
+          "code": "2707.50.10",
+          "description": "Mezclas que contengan trimetilbencenos y etiltoluenos, como componentes mayoritarios"
+        },
+        {
+          "code": "2707.50.10",
+          "description": "000Y Mezclas que contengan trimetilbencenos y etiltoluenos, como componentes mayoritarios 4.00 4.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2707.50.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2707.50.90",
+          "description": "100G Mezcla de alquil-bencenos de fórmula C10 H14 y C11 H16 como componentes mayoritarios 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2707.50.90",
+          "description": "900A Las demas 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2707.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "2707.91.00",
+          "description": "Aceites de creosota"
+        },
+        {
+          "code": "2707.91.00",
+          "description": "000G --Aceites de creosota 0.00 0.00 0.00 LA 16.50 0.00"
+        },
+        {
+          "code": "2707.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "2707.99.10",
+          "description": "Cresoles"
+        },
+        {
+          "code": "2707.99.10",
+          "description": "000M Cresoles 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2707.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2707.99.90",
+          "description": "100W Antracenos 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2707.99.90",
+          "description": "200B Fenoles 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2707.99.90",
+          "description": "910T Productos que se correspondan con las definiciones de la Ley N° 23.966, Título III, sus normas modificatorias y"
+        },
+        {
+          "code": "2707.99.90",
+          "description": "990U Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2708",
+      "description": "BREA Y COQUE DE BREA DE ALQUITRÁN DE HULLA O DE OTROS ALQUITRANES MINERALES",
+      "subheadings": [
+        {
+          "code": "2708.10.00",
+          "description": "Brea"
+        },
+        {
+          "code": "2708.10.00",
+          "description": "000A -Brea 0.00 0.00 0.00 LA 16.50 0.00"
+        },
+        {
+          "code": "2708.20.00",
+          "description": "Coque de brea"
+        },
+        {
+          "code": "2708.20.00",
+          "description": "000P -Coque de brea 0.00 0.00 0.00 LA 16.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2709",
+      "description": "ACEITES CRUDOS DE PETRÓLEO O DE MINERAL BITUMINOSO",
+      "subheadings": [
+        {
+          "code": "2709.00.10",
+          "description": "De petróleo"
+        },
+        {
+          "code": "2709.00.10",
+          "description": "100V En envases con capacidad inferior o igual a 205 l 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2709.00.10",
+          "description": "900N Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2709.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2709.00.90",
+          "description": "000T Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2710",
+      "description": "ACEITES DE PETRÓLEO O DE MINERAL BITUMINOSO, EXCEPTO LOS ACEITES CRUDOS; PREPARACIONES",
+      "subheadings": [
+        {
+          "code": "2710.1",
+          "description": "Aceites de petróleo o de mineral bituminoso (excepto los aceites crudos) y preparaciones no expresadas ni"
+        },
+        {
+          "code": "2710.12",
+          "description": "Aceites livianos (ligeros)* y preparaciones"
+        },
+        {
+          "code": "2710.12.10",
+          "description": "Hexano comercial"
+        },
+        {
+          "code": "2710.12.10",
+          "description": "000G Hexano comercial 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.21",
+          "description": "Diisobutileno"
+        },
+        {
+          "code": "2710.12.21",
+          "description": "000Z Diisobutileno 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "2710.12.29",
+          "description": "100Q En envases con capacidad inferior o igual a 205 l 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.29",
+          "description": "900J Las demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.30",
+          "description": "Aguarrás mineral («white spirit»)"
+        },
+        {
+          "code": "2710.12.30",
+          "description": "100G En envases con capacidad inferior o igual a 205 l. 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.30",
+          "description": "900A Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.41",
+          "description": "Para petroquímica"
+        },
+        {
+          "code": "2710.12.41",
+          "description": "000U Para petroquímica 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.49",
+          "description": "Las demás"
+        },
+        {
+          "code": "2710.12.49",
+          "description": "100K Solventes que se correspondan con las definiciones de la Ley Nº 23.966, Título III, sus normas modificatorias y"
+        },
+        {
+          "code": "2710.12.49",
+          "description": "200Q Gasolina natural que se corresponda con las definiciones de la Ley Nº 23.966, Título III, sus normas modificatorias y"
+        },
+        {
+          "code": "2710.12.49",
+          "description": "300W Mezcla de hidrocarburos de octanaje superior a 98 Ron (\"Unblended reformate\") 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.49",
+          "description": "910G En envases con capacidad inferior o igual a 205 l 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.49",
+          "description": "990H Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.51",
+          "description": "De aviación"
+        },
+        {
+          "code": "2710.12.51",
+          "description": "000D De aviación 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.59",
+          "description": "Las demás"
+        },
+        {
+          "code": "2710.12.59",
+          "description": "Sin plomo"
+        },
+        {
+          "code": "2710.12.59",
+          "description": "110Y De RON inferior o igual a 92 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.59",
+          "description": "De RON superior a 92"
+        },
+        {
+          "code": "2710.12.59",
+          "description": "121D Grado 2 o grado 3, especificadas por la Res. SE N° 1283/2006 y sus modificatorias 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.59",
+          "description": "129W Las demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.59",
+          "description": "Con plomo"
+        },
+        {
+          "code": "2710.12.59",
+          "description": "210D De RON inferior o igual a 92 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.59",
+          "description": "221J Grado 2 o grado 3, especificadas por la Res. SE N° 1283/2006 y sus modificatorias 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.59",
+          "description": "229B Las demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.60",
+          "description": "Mezcla de hidrocarburos acíclicos y cíclicos, saturados, derivados de fracciones del petróleo, con un contenido de"
+        },
+        {
+          "code": "2710.12.60",
+          "description": "000F Mezcla de hidrocarburos acíclicos y cíclicos, saturados, derivados de fracciones del petróleo, con un contenido de"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "Eter de petróleo"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "110U En envases con capacidad inferior o igual a 205 l. 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "190V Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "200W Únicamente aceites minerales destinados a aplicaciones agroquímicas (R.2013/93 ex-ANA) 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "Mezclas de isoparafinas de C8 a C10 o de C10 a C12"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "310E En envases con capacidad inferior o igual a 205 l 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "390F Las demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "Mezclas de diciclopentadieno (aproximadamente 75 a 85 % en peso) con hidrocarburos de C9 a C11 (codímeros) y, en"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "410K En envases con capacidad inferior o igual a 205 l 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "490L Las demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "500M Mezclas de parafinas ramificadas que contienen isooctano, en proporción superior o igual a 60 % en peso, cuyo rango"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "910M Productos que se correspondan con las definiciones de la Ley Nº 23.966, Título III, sus normas modificatorias y"
+        },
+        {
+          "code": "2710.12.90",
+          "description": "990N Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "2710.19.11",
+          "description": "De aviación"
+        },
+        {
+          "code": "2710.19.11",
+          "description": "000Y De aviación 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "2710.19.19",
+          "description": "100P En envases con capacidad inferior o igual a 205 l. 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.19",
+          "description": "900H Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.21",
+          "description": "Gasóleo («gas oil»)"
+        },
+        {
+          "code": "2710.19.21",
+          "description": "000H Gasóleo (\"gas oil\") 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.22",
+          "description": "Fuel («fuel oil»)"
+        },
+        {
+          "code": "2710.19.22",
+          "description": "000Q Fuel (\"fuel oil\") 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "2710.19.29",
+          "description": "Diesel oil"
+        },
+        {
+          "code": "2710.19.29",
+          "description": "110C En envases con capacidad inferior o igual a 205 l 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.29",
+          "description": "190D Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.29",
+          "description": "900T Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.31",
+          "description": "Sin aditivos"
+        },
+        {
+          "code": "2710.19.31",
+          "description": "000T Sin aditivos 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.32",
+          "description": "Con aditivos"
+        },
+        {
+          "code": "2710.19.32",
+          "description": "100F De los tipos utilizados en los vehículos del Capítulo 87 6.00 6.00 3.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.32",
+          "description": "900Z Los demás 6.00 6.00 3.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.91",
+          "description": "Aceites minerales blancos (aceites de vaselina o de parafina)"
+        },
+        {
+          "code": "2710.19.91",
+          "description": "000B Aceites minerales blancos (aceites de vaselina o de parafina) 4.00 4.00 3.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.92",
+          "description": "Líquidos para transmisiones hidráulicas"
+        },
+        {
+          "code": "2710.19.92",
+          "description": "100P Para frenos hidráulicos 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.92",
+          "description": "900H Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.93",
+          "description": "Aceites para aislación eléctrica"
+        },
+        {
+          "code": "2710.19.93",
+          "description": "000R Aceites para aislación eléctrica 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.94",
+          "description": "Mezcla de hidrocarburos acíclicos y cíclicos, saturados, derivados de fracciones del petróleo, con un contenido de"
+        },
+        {
+          "code": "2710.19.94",
+          "description": "000Z Mezcla de hidrocarburos acíclicos y cíclicos, saturados, derivados de fracciones del petróleo, con un contenido de"
+        },
+        {
+          "code": "2710.19.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "2710.19.99",
+          "description": "100T Preparaciones para desmoldeo 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.99",
+          "description": "200Y Preparaciones antioxidantes 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.99",
+          "description": "300D Únicamente aceites minerales destinados a aplicaciones agroquímicas (R.2013/93 ex-ANA) 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.99",
+          "description": "500P Mezclas de parafinas lineales y ramificadas de C12 a C14 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.19.99",
+          "description": "910P Productos que se correspondan con las definiciones de la Ley Nº 23.966, Título III, sus normas modificatorias y"
+        },
+        {
+          "code": "2710.19.99",
+          "description": "990Q Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2710.20.00",
+          "description": "Aceites de petróleo o de mineral bituminoso (excepto los aceites crudos) y preparaciones no expresadas ni"
+        },
+        {
+          "code": "2710.20.00",
+          "description": "Biodiesel con gas oil u otros productos gravados como componentes"
+        },
+        {
+          "code": "2710.20.00",
+          "description": "110W Mezcla B-20 0.00 0.00 0.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2710.20.00",
+          "description": "120Z Las demás mezclas con gas oil 0.00 0.00 0.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2710.20.00",
+          "description": "190X Las demás 0.00 0.00 0.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2710.20.00",
+          "description": "900L Los demás 0.00 0.00 0.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2710.9",
+          "description": "Desechos de aceites:"
+        },
+        {
+          "code": "2710.91.00",
+          "description": "Que contengan bifenilos policlorados (PCB), terfenilos policlorados (PCT) o bifenilos polibromados (PBB)"
+        },
+        {
+          "code": "2710.91.00",
+          "description": "000Y --Que contengan bifenilos policlorados (PCB), terfenilos policlorados (PCT) o bifenilos polibromados (PBB) 0.00 0.00 0.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2710.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2710.99.00",
+          "description": "100Z Que contengan monometiltetraclorodifenilmetano, monometildiclorodifenilmetano o monometildibromodifenilmetano 0.00 0.00 0.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2710.99.00",
+          "description": "900T Los demás 0.00 0.00 0.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2711",
+      "description": "GAS DE PETRÓLEO Y DEMÁS HIDROCARBUROS GASEOSOS",
+      "subheadings": [
+        {
+          "code": "2711.1",
+          "description": "Licuados:"
+        },
+        {
+          "code": "2711.11.00",
+          "description": "Gas natural"
+        },
+        {
+          "code": "2711.11.00",
+          "description": "000D --Gas natural 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2711.12",
+          "description": "Propano"
+        },
+        {
+          "code": "2711.12.10",
+          "description": "Crudo"
+        },
+        {
+          "code": "2711.12.10",
+          "description": "000A Crudo 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2711.12.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2711.12.90",
+          "description": "000D Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2711.13.00",
+          "description": "Butanos"
+        },
+        {
+          "code": "2711.13.00",
+          "description": "000C --Butanos 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2711.14.00",
+          "description": "Etileno, propileno, butileno y butadieno"
+        },
+        {
+          "code": "2711.14.00",
+          "description": "000P --Etileno, propileno, butileno y butadieno 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2711.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "2711.19.10",
+          "description": "Gas licuado de petróleo (GLP)"
+        },
+        {
+          "code": "2711.19.10",
+          "description": "100P De uso automotor (Dto.1396/01) 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2711.19.10",
+          "description": "900H Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2711.19.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2711.19.90",
+          "description": "000M Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2711.2",
+          "description": "En estado gaseoso:"
+        },
+        {
+          "code": "2711.21.00",
+          "description": "Gas natural"
+        },
+        {
+          "code": "2711.21.00",
+          "description": "000T --Gas natural 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2711.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "2711.29.10",
+          "description": "Butanos"
+        },
+        {
+          "code": "2711.29.10",
+          "description": "000Y Butanos 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2711.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2711.29.90",
+          "description": "000B Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2712",
+      "description": "VASELINA; PARAFINA, CERA DE PETRÓLEO MICROCRISTALINA, «SLACK WAX», OZOQUERITA, CERA DE",
+      "subheadings": [
+        {
+          "code": "2712.10.00",
+          "description": "Vaselina"
+        },
+        {
+          "code": "2712.10.00",
+          "description": "000K -Vaselina 4.00 4.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2712.20.00",
+          "description": "Parafina con un contenido de aceite inferior al 0,75 % en peso"
+        },
+        {
+          "code": "2712.20.00",
+          "description": "000Z -Parafina con un contenido de aceite inferior al 0,75 % en peso 4.00 4.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2712.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2712.90.00",
+          "description": "100D Cera de petróleo microcristalina 4.00 4.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2712.90.00",
+          "description": "200J Ozoquerita 4.00 4.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2712.90.00",
+          "description": "300P \"Slack Wax\" 4.00 4.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2712.90.00",
+          "description": "Parafina"
+        },
+        {
+          "code": "2712.90.00",
+          "description": "410Y Sintetica 4.00 4.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2712.90.00",
+          "description": "490Z Las demás 4.00 4.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2712.90.00",
+          "description": "900X Los demás 4.00 4.00 3.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2713",
+      "description": "COQUE DE PETRÓLEO, BETÚN DE PETRÓLEO Y DEMÁS RESIDUOS DE LOS ACEITES DE PETRÓLEO O DE",
+      "subheadings": [
+        {
+          "code": "2713.1",
+          "description": "Coque de petróleo:"
+        },
+        {
+          "code": "2713.11.00",
+          "description": "Sin calcinar"
+        },
+        {
+          "code": "2713.11.00",
+          "description": "000Q --Sin calcinar 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2713.12.00",
+          "description": "Calcinado"
+        },
+        {
+          "code": "2713.12.00",
+          "description": "100H Con un contenido mayor a 98,5 % de carbono destinado a la fabricación de ánodos para la producción de aluminio"
+        },
+        {
+          "code": "2713.12.00",
+          "description": "900B Los demás 2.00 2.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2713.20.00",
+          "description": "Betún de petróleo"
+        },
+        {
+          "code": "2713.20.00",
+          "description": "000T -Betún de petróleo 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2713.90.00",
+          "description": "Los demás residuos de los aceites de petróleo o de mineral bituminoso"
+        },
+        {
+          "code": "2713.90.00",
+          "description": "000R -Los demás residuos de los aceites de petróleo o de mineral bituminoso 0.00 0.00 0.00 LA 8.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2714",
+      "description": "BETUNES Y ASFALTOS NATURALES; PIZARRAS Y ARENAS BITUMINOSAS; ASFALTITAS Y ROCAS",
+      "subheadings": [
+        {
+          "code": "2714.10.00",
+          "description": "Pizarras y arenas bituminosas"
+        },
+        {
+          "code": "2714.10.00",
+          "description": "000X -Pizarras y arenas bituminosas 0.00 0.00 0.00 LA 12.00 0.00"
+        },
+        {
+          "code": "2714.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2714.90.00",
+          "description": "100Q Betunes y asfaltos naturales 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2714.90.00",
+          "description": "200W Asfaltitas 0.00 0.00 0.00 LA 8.00 0.00"
+        },
+        {
+          "code": "2714.90.00",
+          "description": "900J Los demás 0.00 0.00 0.00 LA 8.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2715",
+      "description": "MEZCLAS BITUMINOSAS A BASE DE ASFALTO O DE BETÚN NATURALES, DE BETÚN DE PETRÓLEO, DE",
+      "subheadings": [
+        {
+          "code": "2715.00.00",
+          "description": "Mezclas bituminosas a base de asfalto o de betún naturales, de betún de petróleo, de alquitrán mineral o de brea de"
+        },
+        {
+          "code": "2715.00.00",
+          "description": "000B MEZCLAS BITUMINOSAS A BASE DE ASFALTO O DE BETÚN NATURALES, DE BETÚN DE PETRÓLEO, DE"
+        }
+      ]
+    },
+    {
+      "code": "2716",
+      "description": "ENERGÍA ELÉCTRICA",
+      "subheadings": [
+        {
+          "code": "2716.00.00",
+          "description": "Energía eléctrica"
+        },
+        {
+          "code": "2716.00.00",
+          "description": "000V ENERGÍA ELECTRICA. 0.00 0.00 0.00 LA 16.50 0.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 238
+}

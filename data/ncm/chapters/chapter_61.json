@@ -1,0 +1,4767 @@
+{
+  "chapter": "61",
+  "title": "Capítulo 14",
+  "sectionTitle": "CAP. 61 SECCION XI MATERIAS TEXTILES Y SUS MANUFACTURAS Notas. 1. Esta Sección no comprende: a. los pelos y cerdas para",
+  "headings": [
+    {
+      "code": "4303",
+      "description": "o 43.04;",
+      "subheadings": []
+    },
+    {
+      "code": "6101",
+      "description": "ABRIGOS, CHAQUETONES, CAPAS, ANORAKS, CAZADORAS Y ARTÍCULOS SIMILARES, DE PUNTO, PARA",
+      "subheadings": [
+        {
+          "code": "6101.20.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "Con relleno"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "111R Abrigos (sobretodos) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "112U Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "113W Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "114Y Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "190Q Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "Sin relleno"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "211X Abrigos (sobretodos) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "212Z Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "213B Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "214D Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.20.00",
+          "description": "290W Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "Con relleno"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "111F Abrigos (sobretodos) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "112H Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "113K Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "114M Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "190E Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "Sin relleno"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "211L Abrigos (sobretodos) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "212N Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "213Q Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "214T Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.30.00",
+          "description": "290K Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "Rellenos"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "111A Abrigos (sobretodos) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "112C Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "113E Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "114G Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "190Z Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "Sin relleno"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "211F Abrigos (sobretodos) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "212H Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "213K Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "214M Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.10",
+          "description": "290E Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "Con relleno"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "111D Abrigos (sobretodos) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "112F Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "113H Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "114K Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "190C Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "Sin relleno"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "211J Abrigos (sobretodos) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "212L Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "213N Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "214Q Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6101.90.90",
+          "description": "290H Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6102",
+      "description": "ABRIGOS, CHAQUETONES, CAPAS, ANORAKS, CAZADORAS Y ARTÍCULOS SIMILARES, DE PUNTO, PARA",
+      "subheadings": [
+        {
+          "code": "6102.10.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "Con relleno"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "111W Abrigos (tapados) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "112Y Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "113A Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "114C Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "190V Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "Sin relleno"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "211B Abrigos (tapados) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "212D Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "213F Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "214H Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.10.00",
+          "description": "290A Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "Con relleno"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "111K Abrigos (tapados) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "112M Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "113P Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "114R Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "190J Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "Sin relleno"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "211Q Abrigos (tapados) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "212T Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "213V Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "214X Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.20.00",
+          "description": "290P Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "Con relleno"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "111Z Abrigos (tapados) y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "112B Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "113D Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "114F Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "190Y Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "Sin relleno"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "211E Abrigos (tapados) y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "212G Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "213J Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "214L Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6102.30.00",
+          "description": "290D Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "Con relleno"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "111J Abrigos (tapados) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "112L Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "113N Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "114Q Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "190H Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "Sin relleno"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "211P Abrigos (tapados) y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "212R Chaquetones y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "213U Capas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "214W Anoraks, cazadoras, parkas y artículos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6102.90.00",
+          "description": "290N Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6103",
+      "description": "TRAJES (AMBOS O TERNOS), CONJUNTOS, CHAQUETAS (SACOS), PANTALONES LARGOS, PANTALONES",
+      "subheadings": [
+        {
+          "code": "6103.10",
+          "description": "Trajes (ambos o ternos)"
+        },
+        {
+          "code": "6103.10.10",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6103.10.10",
+          "description": "Ambos"
+        },
+        {
+          "code": "6103.10.10",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6103.10.10",
+          "description": "111Z Con un contenido de lana superior o igual al 90 %, en peso 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.10",
+          "description": "119R Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.10",
+          "description": "190Y Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.10",
+          "description": "Ternos"
+        },
+        {
+          "code": "6103.10.10",
+          "description": "211E Con un contenido de lana superior o igual al 90 %, en peso 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.10",
+          "description": "219X Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.10",
+          "description": "290D Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.20",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6103.10.20",
+          "description": "Ambos"
+        },
+        {
+          "code": "6103.10.20",
+          "description": "110G De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.20",
+          "description": "190H Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.20",
+          "description": "Ternos"
+        },
+        {
+          "code": "6103.10.20",
+          "description": "210M De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.20",
+          "description": "290N Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.90",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6103.10.90",
+          "description": "Ambos"
+        },
+        {
+          "code": "6103.10.90",
+          "description": "110A De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.90",
+          "description": "190B Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.90",
+          "description": "Ternos"
+        },
+        {
+          "code": "6103.10.90",
+          "description": "210F De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.10.90",
+          "description": "290G Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.2",
+          "description": "Conjuntos:"
+        },
+        {
+          "code": "6103.22.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6103.22.00",
+          "description": "Ambos"
+        },
+        {
+          "code": "6103.22.00",
+          "description": "110A De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.22.00",
+          "description": "190B Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.22.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6103.22.00",
+          "description": "910U De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.22.00",
+          "description": "990V Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.23.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6103.23.00",
+          "description": "Ambos"
+        },
+        {
+          "code": "6103.23.00",
+          "description": "110M De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.23.00",
+          "description": "190N Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.23.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6103.23.00",
+          "description": "910F De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.23.00",
+          "description": "990G Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.29",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6103.29.10",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6103.29.10",
+          "description": "Ambos"
+        },
+        {
+          "code": "6103.29.10",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6103.29.10",
+          "description": "111W Con un contenido de lana superior o igual al 90 % en peso 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.29.10",
+          "description": "119N Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.29.10",
+          "description": "190V Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.29.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "6103.29.10",
+          "description": "911P Con un contenido de lana superior o igual al 90 % en peso 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.29.10",
+          "description": "919G Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.29.10",
+          "description": "990N Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6103.29.90",
+          "description": "Ambos"
+        },
+        {
+          "code": "6103.29.90",
+          "description": "110X De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.29.90",
+          "description": "190Y Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.29.90",
+          "description": "910Q De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.29.90",
+          "description": "990R Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.3",
+          "description": "Chaquetas (sacos):"
+        },
+        {
+          "code": "6103.31.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6103.31.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6103.31.00",
+          "description": "110C Con un contenido de lana superior o igual al 90 % en peso 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.31.00",
+          "description": "190D Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.31.00",
+          "description": "900T Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.32.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6103.32.00",
+          "description": "100L De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.32.00",
+          "description": "900E Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.33.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6103.33.00",
+          "description": "100Y De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.33.00",
+          "description": "900R Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.39.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6103.39.00",
+          "description": "100V De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.39.00",
+          "description": "900N Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.4",
+          "description": "Pantalones largos, pantalones con peto, pantalones cortos (calzones) y shorts:"
+        },
+        {
+          "code": "6103.41.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6103.41.00",
+          "description": "Pantalones largos, sin peto"
+        },
+        {
+          "code": "6103.41.00",
+          "description": "110R De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.41.00",
+          "description": "190T Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.41.00",
+          "description": "Pantalones cortos y shorts, sin peto"
+        },
+        {
+          "code": "6103.41.00",
+          "description": "210X De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.41.00",
+          "description": "290Y Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.41.00",
+          "description": "Pantalones con peto (jardineros)"
+        },
+        {
+          "code": "6103.41.00",
+          "description": "310C De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.41.00",
+          "description": "390D Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.42.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6103.42.00",
+          "description": "Pantalones largos, sin peto"
+        },
+        {
+          "code": "6103.42.00",
+          "description": "110D De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.42.00",
+          "description": "190E Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.42.00",
+          "description": "Pantalones cortos y shorts, sin peto"
+        },
+        {
+          "code": "6103.42.00",
+          "description": "210J De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.42.00",
+          "description": "290K Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.42.00",
+          "description": "Pantalones con peto (jardineros)"
+        },
+        {
+          "code": "6103.42.00",
+          "description": "310P De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.42.00",
+          "description": "390Q Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.43.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6103.43.00",
+          "description": "Pantalones largos, sin peto"
+        },
+        {
+          "code": "6103.43.00",
+          "description": "110Q De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.43.00",
+          "description": "190R Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.43.00",
+          "description": "Pantalones cortos y shorts, sin peto"
+        },
+        {
+          "code": "6103.43.00",
+          "description": "210W De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.43.00",
+          "description": "290X Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.43.00",
+          "description": "Pantalones con peto (jardineros)"
+        },
+        {
+          "code": "6103.43.00",
+          "description": "310B De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.43.00",
+          "description": "390C Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6103.49.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6103.49.00",
+          "description": "Pantalones largos, sin peto"
+        },
+        {
+          "code": "6103.49.00",
+          "description": "110M De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.49.00",
+          "description": "190N Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.49.00",
+          "description": "Pantalones cortos y shorts, sin peto"
+        },
+        {
+          "code": "6103.49.00",
+          "description": "210T De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.49.00",
+          "description": "290U Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.49.00",
+          "description": "Pantalones con peto (jardineros)"
+        },
+        {
+          "code": "6103.49.00",
+          "description": "310Y De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6103.49.00",
+          "description": "390Z Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6104",
+      "description": "TRAJES SASTRE, CONJUNTOS, CHAQUETAS (SACOS), VESTIDOS, FALDAS, FALDAS PANTALÓN,",
+      "subheadings": [
+        {
+          "code": "6104.1",
+          "description": "Trajes sastre:"
+        },
+        {
+          "code": "6104.13.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6104.13.00",
+          "description": "100N De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.13.00",
+          "description": "900G Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.19",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6104.19.10",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6104.19.10",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6104.19.10",
+          "description": "110Y Con un contenido de lana superior o igual al 90 % en peso 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.19.10",
+          "description": "190Z Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.19.10",
+          "description": "900N Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.19.20",
+          "description": "De algodón"
+        },
+        {
+          "code": "6104.19.20",
+          "description": "100E De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.19.20",
+          "description": "900Y Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.19.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6104.19.90",
+          "description": "100Y De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.19.90",
+          "description": "900R Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.2",
+          "description": "Conjuntos:"
+        },
+        {
+          "code": "6104.22.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6104.22.00",
+          "description": "100Q De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.22.00",
+          "description": "900J Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.23.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6104.23.00",
+          "description": "100C De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.23.00",
+          "description": "900W Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.29",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6104.29.10",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6104.29.10",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6104.29.10",
+          "description": "110M Con un contenido de lana superior o igual al 90 % en peso 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.29.10",
+          "description": "190N Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.29.10",
+          "description": "900C Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6104.29.90",
+          "description": "100M De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.29.90",
+          "description": "900F Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.3",
+          "description": "Chaquetas (sacos):"
+        },
+        {
+          "code": "6104.31.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6104.31.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6104.31.00",
+          "description": "110W Con un contenido de lana superior o igual al 90 % en peso 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.31.00",
+          "description": "190X Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.31.00",
+          "description": "900L Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.32.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6104.32.00",
+          "description": "100E De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.32.00",
+          "description": "900Y Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.33.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6104.33.00",
+          "description": "100R De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.33.00",
+          "description": "900K Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.39.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6104.39.00",
+          "description": "100N De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.39.00",
+          "description": "900G Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.4",
+          "description": "Vestidos:"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "Forrados"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "Cuyo largo no sobrepase la rodilla"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "111M De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "119E Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "191N De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "199F Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "Sin forrar"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "211T De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "219K Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "291U De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.41.00",
+          "description": "299L Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "Forrados"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "Cuyo largo no sobrepase la rodilla"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "111Z De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "119R Los demás 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "191A De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "199T Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "Sin forrar"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "211E De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "219X Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "291F De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.42.00",
+          "description": "299Y Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "Forrados"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "Cuyo largo no sobrepase la rodilla"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "111L De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "119D Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "191M De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "199E Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "Sin forrar"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "211R De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "219J Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "291T De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.43.00",
+          "description": "299K Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "De fibras artificiales"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "Forrados"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "Cuyo largo no sobrepase la rodilla"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "111Y De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "119Q Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "191Z De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "199R Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "Sin forrar"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "211D De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "219W Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "291E De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.44.00",
+          "description": "299X Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "Forrados"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "Cuyo largo no sobrepase la rodilla"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "111H De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "119A Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "191J De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "199B Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "Sin forrar"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "211N De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "219F Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "291P De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.49.00",
+          "description": "299G Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.5",
+          "description": "Faldas y faldas pantalón:"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "Forradas"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "Cuyo largo no sobrepase la rodilla"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "111B De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "119U Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "191C De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "199V Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "Sin forrar"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "211G De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "219Z Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "291H De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.51.00",
+          "description": "299A Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "Forradas"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "Cuyo largo no sobrepase la rodilla"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "111N De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "119F Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "191P De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "199G Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "Sin forrar"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "211U De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "219L los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "291V De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.52.00",
+          "description": "299M Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "Forradas"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "Cuyo largo no sobrepase la rodilla"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "111A De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "119T Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "191B De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "199U Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "Sin forrar"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "211F De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "219Y Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "291G De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.53.00",
+          "description": "299Z Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "Forradas"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "Cuyo largo no sobrepase la rodilla"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "111X De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "119P Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "191Y De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "199Q Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "Sin forrar"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "211C De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "219V Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "291D De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.59.00",
+          "description": "299W Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.6",
+          "description": "Pantalones largos, pantalones con peto, pantalones cortos (calzones) y shorts:"
+        },
+        {
+          "code": "6104.61.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6104.61.00",
+          "description": "Pantalones largos, sin peto"
+        },
+        {
+          "code": "6104.61.00",
+          "description": "110N De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.61.00",
+          "description": "190P Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.61.00",
+          "description": "Pantalones cortos y shorts, sin peto"
+        },
+        {
+          "code": "6104.61.00",
+          "description": "210U De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.61.00",
+          "description": "290V Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.61.00",
+          "description": "Pantalones con peto (jardineros)"
+        },
+        {
+          "code": "6104.61.00",
+          "description": "310Z De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.61.00",
+          "description": "390A Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6104.62.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6104.62.00",
+          "description": "Pantalones largos, sin peto"
+        },
+        {
+          "code": "6104.62.00",
+          "description": "110A De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.62.00",
+          "description": "190B Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.62.00",
+          "description": "Pantalones cortos y shorts, sin peto"
+        },
+        {
+          "code": "6104.62.00",
+          "description": "210F De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.62.00",
+          "description": "290G Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.62.00",
+          "description": "Pantalones con peto (jardineros)"
+        },
+        {
+          "code": "6104.62.00",
+          "description": "310L De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.62.00",
+          "description": "390M Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.63.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6104.63.00",
+          "description": "Pantalones largos, sin peto"
+        },
+        {
+          "code": "6104.63.00",
+          "description": "110M De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.63.00",
+          "description": "190N Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.63.00",
+          "description": "Pantalones cortos y shorts, sin peto"
+        },
+        {
+          "code": "6104.63.00",
+          "description": "210T De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.63.00",
+          "description": "290U Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.63.00",
+          "description": "Pantalones con peto (jardineros)"
+        },
+        {
+          "code": "6104.63.00",
+          "description": "310Y De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.63.00",
+          "description": "390Z Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.69.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6104.69.00",
+          "description": "Pantalones largos, sin peto"
+        },
+        {
+          "code": "6104.69.00",
+          "description": "110J De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.69.00",
+          "description": "190K Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.69.00",
+          "description": "Pantalones cortos y shorts, sin peto"
+        },
+        {
+          "code": "6104.69.00",
+          "description": "210P De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.69.00",
+          "description": "290Q Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.69.00",
+          "description": "Pantalones con peto (jardineros)"
+        },
+        {
+          "code": "6104.69.00",
+          "description": "310V De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6104.69.00",
+          "description": "390W Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        }
+      ]
+    },
+    {
+      "code": "6105",
+      "description": "CAMISAS DE PUNTO PARA HOMBRES O NIÑOS",
+      "subheadings": [
+        {
+          "code": "6105.10.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6105.10.00",
+          "description": "Con mangas cortas que no cubran el codo"
+        },
+        {
+          "code": "6105.10.00",
+          "description": "110Z De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6105.10.00",
+          "description": "190A Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6105.10.00",
+          "description": "Con mangas largas"
+        },
+        {
+          "code": "6105.10.00",
+          "description": "210E De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6105.10.00",
+          "description": "290F Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6105.20.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6105.20.00",
+          "description": "Con mangas cortas que no cubran el codo"
+        },
+        {
+          "code": "6105.20.00",
+          "description": "110N De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6105.20.00",
+          "description": "190P Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6105.20.00",
+          "description": "Con mangas largas"
+        },
+        {
+          "code": "6105.20.00",
+          "description": "210U De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6105.20.00",
+          "description": "290V Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6105.90.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6105.90.00",
+          "description": "Con mangas cortas que cubran el codo"
+        },
+        {
+          "code": "6105.90.00",
+          "description": "110M De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6105.90.00",
+          "description": "190N Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6105.90.00",
+          "description": "Con mangas largas"
+        },
+        {
+          "code": "6105.90.00",
+          "description": "210T De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6105.90.00",
+          "description": "290U Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        }
+      ]
+    },
+    {
+      "code": "6106",
+      "description": "CAMISAS, BLUSAS Y BLUSAS CAMISERAS, DE PUNTO, PARA MUJERES O NIÑAS",
+      "subheadings": [
+        {
+          "code": "6106.10.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6106.10.00",
+          "description": "Sin mangas o con mangas cortas que no cubran el codo"
+        },
+        {
+          "code": "6106.10.00",
+          "description": "110T De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6106.10.00",
+          "description": "190U Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6106.10.00",
+          "description": "Con mangas largas"
+        },
+        {
+          "code": "6106.10.00",
+          "description": "210Y De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6106.10.00",
+          "description": "290Z Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6106.20.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6106.20.00",
+          "description": "Sin mangas o con mangas cortas que no cubran el codo"
+        },
+        {
+          "code": "6106.20.00",
+          "description": "110G De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6106.20.00",
+          "description": "190H Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6106.20.00",
+          "description": "Con mangas largas"
+        },
+        {
+          "code": "6106.20.00",
+          "description": "210M De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6106.20.00",
+          "description": "290N Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6106.90.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6106.90.00",
+          "description": "Sin mangas o con mangas cortas que no cubran el codo"
+        },
+        {
+          "code": "6106.90.00",
+          "description": "110F De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6106.90.00",
+          "description": "190G Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6106.90.00",
+          "description": "Con mangas largas"
+        },
+        {
+          "code": "6106.90.00",
+          "description": "210L De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6106.90.00",
+          "description": "290M Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        }
+      ]
+    },
+    {
+      "code": "6107",
+      "description": "CALZONCILLOS (INCLUIDOS LOS LARGOS Y LOS SLIPS), CAMISONES, PIJAMAS, ALBORNOCES DE BAÑO,",
+      "subheadings": [
+        {
+          "code": "6107.1",
+          "description": "Calzoncillos (incluidos los largos y los slips):"
+        },
+        {
+          "code": "6107.11.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6107.11.00",
+          "description": "100V Calzoncillos 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6107.11.00",
+          "description": "200A Slips 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6107.12.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6107.12.00",
+          "description": "100G Calzoncillos 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6107.12.00",
+          "description": "200M Slips 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6107.19.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6107.19.00",
+          "description": "100Q Calzoncillos 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.19.00",
+          "description": "200W Slips 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.2",
+          "description": "Camisones y pijamas:"
+        },
+        {
+          "code": "6107.21.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6107.21.00",
+          "description": "Camisones"
+        },
+        {
+          "code": "6107.21.00",
+          "description": "110M De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.21.00",
+          "description": "190N Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.21.00",
+          "description": "Pijamas"
+        },
+        {
+          "code": "6107.21.00",
+          "description": "210T De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.21.00",
+          "description": "290U Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.22.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6107.22.00",
+          "description": "Camisones"
+        },
+        {
+          "code": "6107.22.00",
+          "description": "110Z De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.22.00",
+          "description": "190A Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.22.00",
+          "description": "Pijamas"
+        },
+        {
+          "code": "6107.22.00",
+          "description": "210E De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.22.00",
+          "description": "290F Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.29.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6107.29.00",
+          "description": "Camisones"
+        },
+        {
+          "code": "6107.29.00",
+          "description": "110H De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.29.00",
+          "description": "190J Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.29.00",
+          "description": "Pijamas"
+        },
+        {
+          "code": "6107.29.00",
+          "description": "210N De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.29.00",
+          "description": "290P Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "6107.91.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6107.91.00",
+          "description": "100H De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.91.00",
+          "description": "900B Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.99",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6107.99.10",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6107.99.10",
+          "description": "100N De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.99.10",
+          "description": "900G Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6107.99.90",
+          "description": "100R De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6107.99.90",
+          "description": "900K Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6108",
+      "description": "COMBINACIONES, ENAGUAS, BRAGAS (BOMBACHAS, CALZONES) (INCLUSO LAS QUE NO LLEGAN HASTA LA",
+      "subheadings": [
+        {
+          "code": "6108.1",
+          "description": "Combinaciones y enaguas:"
+        },
+        {
+          "code": "6108.11.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6108.11.00",
+          "description": "000H --De fibras sinteticas o artificiales 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.19.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6108.19.00",
+          "description": "000D --De las demás materias textiles 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.2",
+          "description": "Bragas (bombachas, calzones) (incluso las que no llegan hasta la cintura):"
+        },
+        {
+          "code": "6108.21.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6108.21.00",
+          "description": "000X --De algodón 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6108.22.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6108.22.00",
+          "description": "000J --De fibras sinteticas o artificiales 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6108.29.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6108.29.00",
+          "description": "000T --De las demás materias textiles 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.3",
+          "description": "Camisones y pijamas:"
+        },
+        {
+          "code": "6108.31.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6108.31.00",
+          "description": "Camisones"
+        },
+        {
+          "code": "6108.31.00",
+          "description": "110V De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.31.00",
+          "description": "190W Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.31.00",
+          "description": "Pijamas"
+        },
+        {
+          "code": "6108.31.00",
+          "description": "210A De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.31.00",
+          "description": "290B Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.32.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6108.32.00",
+          "description": "Camisones"
+        },
+        {
+          "code": "6108.32.00",
+          "description": "110G De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6108.32.00",
+          "description": "190H Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6108.32.00",
+          "description": "Pijamas"
+        },
+        {
+          "code": "6108.32.00",
+          "description": "210M De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6108.32.00",
+          "description": "290N Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6108.39.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6108.39.00",
+          "description": "Camisones"
+        },
+        {
+          "code": "6108.39.00",
+          "description": "110Q De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.39.00",
+          "description": "190R Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.39.00",
+          "description": "Pijamas"
+        },
+        {
+          "code": "6108.39.00",
+          "description": "210W De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.39.00",
+          "description": "290X Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "6108.91.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6108.91.00",
+          "description": "100B De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.91.00",
+          "description": "900V Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.92.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6108.92.00",
+          "description": "100N De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.92.00",
+          "description": "900G Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.99.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6108.99.00",
+          "description": "100X De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6108.99.00",
+          "description": "900Q Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6109",
+      "description": "«T-SHIRTS» Y CAMISETAS, DE PUNTO",
+      "subheadings": [
+        {
+          "code": "6109.10.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6109.10.00",
+          "description": "«T-shirts»"
+        },
+        {
+          "code": "6109.10.00",
+          "description": "110Y De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6109.10.00",
+          "description": "190Z Las demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6109.10.00",
+          "description": "Camisetas interiores"
+        },
+        {
+          "code": "6109.10.00",
+          "description": "210D De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6109.10.00",
+          "description": "290E Las demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6109.90.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6109.90.00",
+          "description": "«T-shirts»"
+        },
+        {
+          "code": "6109.90.00",
+          "description": "De fibras sinteticas o artificiales"
+        },
+        {
+          "code": "6109.90.00",
+          "description": "111N De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6109.90.00",
+          "description": "119F Las demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6109.90.00",
+          "description": "191P De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6109.90.00",
+          "description": "199G Las demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6109.90.00",
+          "description": "Camisetas interiores"
+        },
+        {
+          "code": "6109.90.00",
+          "description": "210R De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6109.90.00",
+          "description": "290T Las demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        }
+      ]
+    },
+    {
+      "code": "6110",
+      "description": "SUÉTERES (JERSEYS), PULÓVERES, CÁRDIGAN, CHALECOS Y ARTÍCULOS SIMILARES, DE PUNTO",
+      "subheadings": [
+        {
+          "code": "6110.1",
+          "description": "De lana o pelo fino:"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "De lana"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "Mezclado exclusivamente con pelo fino"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "111R Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "112U Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "113W Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "191T Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "192V Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "193X Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "Mezclado exclusivamente con fibras sinteticas"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "211X Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "212Z Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "213B Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "291Y Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "292A Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "293C Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "911K Suéteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "912M Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "913P Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "991L Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "992N Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.11.00",
+          "description": "993Q Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "De cabra de Cachemira"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "Mezclado exclusivamente con lana"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "111D Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "112F Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "113H Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "191E Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "192G Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "193J Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "Mezclado exclusivamente con fibras sinteticas"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "211J Suéteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "212L Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "213N Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "291K Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "292M Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "293P Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "911X Suéteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "912Z Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "913B Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "991Y Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "992A Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.12.00",
+          "description": "993C Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "Mezclado exclusivamente con lana"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "111M Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "112P Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "113R Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "191N Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "192Q Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "193T Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "Mezclado exclusivamente con fibras sinteticas"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "211T Suéteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "212V Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "213X Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "291U Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "292W Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "293Y Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "911F Suéteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "912H Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "913K Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "991G Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "992J Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.19.00",
+          "description": "993L Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.20.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6110.20.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6110.20.00",
+          "description": "110R Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.20.00",
+          "description": "120V Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.20.00",
+          "description": "130Y Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.20.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6110.20.00",
+          "description": "910K Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.20.00",
+          "description": "920N Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.20.00",
+          "description": "930R Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "De acrílico"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "111H Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "112K Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "113M Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "191J Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "192L Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "193N Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "De rayòn viscosa"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "211N Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "212Q Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "213T Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "291P Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "292R Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "293U Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "911B Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "912D Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "913F Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "991C Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "992E Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.30.00",
+          "description": "993G Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.90.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6110.90.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6110.90.00",
+          "description": "110Q Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.90.00",
+          "description": "120U Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.90.00",
+          "description": "130X Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6110.90.00",
+          "description": "910J Sueteres (jerseys), «pullovers» y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.90.00",
+          "description": "920M Cardiganes y artículos similares. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6110.90.00",
+          "description": "930Q Chalecos sin mangas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        }
+      ]
+    },
+    {
+      "code": "6111",
+      "description": "PRENDAS Y COMPLEMENTOS (ACCESORIOS), DE VESTIR, DE PUNTO, PARA BEBÉS",
+      "subheadings": [
+        {
+          "code": "6111.20.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6111.20.00",
+          "description": "100G Prendas de vestir del tipo de las citadas en las partidas 61.01 ò 61.02 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6111.20.00",
+          "description": "200M Pantalones 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6111.20.00",
+          "description": "300T Vestidos 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6111.20.00",
+          "description": "400Y Camisas, blusas y blusas camiseras 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6111.20.00",
+          "description": "500D \"T- shirts\" 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6111.20.00",
+          "description": "Prendas de vestir del tipo de las citadas en las partidas 61.10"
+        },
+        {
+          "code": "6111.20.00",
+          "description": "610M Sueteres (jerseys) 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6111.20.00",
+          "description": "690N Las demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6111.20.00",
+          "description": "700P Enteritos 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6111.20.00",
+          "description": "800V Complementos (accesorios) de vestir 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6111.20.00",
+          "description": "900A Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6111.30.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6111.30.00",
+          "description": "100W Prendas de vestir del tipo de las citadas en las partidas 61.01 ò 61.02 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.30.00",
+          "description": "200B Pantalones 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.30.00",
+          "description": "300G Vestidos 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.30.00",
+          "description": "400M Camisas, blusas y blusas camiseras 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.30.00",
+          "description": "500T \"T- shirts\" 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.30.00",
+          "description": "Prendas de vestir del tipo de las citadas en las partidas 61.10"
+        },
+        {
+          "code": "6111.30.00",
+          "description": "610B Sueteres (jerseys) 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.30.00",
+          "description": "690C Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.30.00",
+          "description": "700D Enteritos 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.30.00",
+          "description": "800J Complementos (accesorios) de vestir 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.30.00",
+          "description": "900P Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6111.90.10",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6111.90.10",
+          "description": "100Q Prendas de vestir del tipo de las citadas en las partidas 61.01 ò 61.02 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.10",
+          "description": "200W Pantalones 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.10",
+          "description": "300B Vestidos 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.10",
+          "description": "Prendas de vestir del tipo de las citadas en las partidas 61.10"
+        },
+        {
+          "code": "6111.90.10",
+          "description": "410K Sueteres (jerseys) 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.10",
+          "description": "490L Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.10",
+          "description": "500M Enteritos 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.10",
+          "description": "600T Complementos (accesorios) de vestir 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.10",
+          "description": "900J Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6111.90.90",
+          "description": "100U Prendas de vestir del tipo de las citadas en las partidas 61.01 ò 61.02 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.90",
+          "description": "200Z Pantalones 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.90",
+          "description": "300E Vestidos 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.90",
+          "description": "Prendas de vestir del tipo de las citadas en las partidas 61.10"
+        },
+        {
+          "code": "6111.90.90",
+          "description": "410N Sueteres (jerseys) 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.90",
+          "description": "490P Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.90",
+          "description": "500Q Enteritos 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.90",
+          "description": "600W Complementos (accesorios) de vestir 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6111.90.90",
+          "description": "900M Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6112",
+      "description": "CONJUNTOS DE ABRIGO PARA ENTRENAMIENTO O DEPORTE (CHANDALES), MONOS (OVEROLES) Y",
+      "subheadings": [
+        {
+          "code": "6112.1",
+          "description": "Conjuntos de abrigo para entrenamiento o deporte (chandales):"
+        },
+        {
+          "code": "6112.11.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6112.11.00",
+          "description": "100Y De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6112.11.00",
+          "description": "900R Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6112.12.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6112.12.00",
+          "description": "100K De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6112.12.00",
+          "description": "900D Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6112.19.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6112.19.00",
+          "description": "100U De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6112.19.00",
+          "description": "900M Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6112.20.00",
+          "description": "Monos (overoles) y conjuntos de esquí"
+        },
+        {
+          "code": "6112.20.00",
+          "description": "100A De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6112.20.00",
+          "description": "900U Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6112.3",
+          "description": "Bañadores para hombres o niños:"
+        },
+        {
+          "code": "6112.31.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6112.31.00",
+          "description": "000W --De fibras sinteticas 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6112.39.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6112.39.00",
+          "description": "000R --De las demás materias textiles 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6112.4",
+          "description": "Bañadores para mujeres o niñas:"
+        },
+        {
+          "code": "6112.41.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6112.41.00",
+          "description": "100Q Enterizas 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6112.41.00",
+          "description": "900J Las demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6112.49.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6112.49.00",
+          "description": "100L Enterizas 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6112.49.00",
+          "description": "900E Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6113",
+      "description": "PRENDAS DE VESTIR CONFECCIONADAS CON TEJIDOS DE PUNTO DE LAS PARTIDAS 5903, 5906 Ó 5907",
+      "subheadings": [
+        {
+          "code": "6113.00.00",
+          "description": "Prendas de vestir confeccionadas con tejidos de punto de las partidas 5903, 5906 ó 5907"
+        },
+        {
+          "code": "6113.00.00",
+          "description": "Confeccionadas con tejidos de la partida nº 59.03"
+        },
+        {
+          "code": "6113.00.00",
+          "description": "110U Productos alcanzados por la Res. 163/2005 SCT 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6113.00.00",
+          "description": "190V Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6113.00.00",
+          "description": "Confeccionadas con tejidos de la partida 59.06"
+        },
+        {
+          "code": "6113.00.00",
+          "description": "210Z Definidas en la Res. N° 421/2018 SC 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6113.00.00",
+          "description": "290A Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6113.00.00",
+          "description": "Confeccionadas con tejidos de la partida 59.07"
+        },
+        {
+          "code": "6113.00.00",
+          "description": "310E Productos alcanzados por la Res. 163/2005 SCT 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6113.00.00",
+          "description": "390F Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6114",
+      "description": "LAS DEMÁS PRENDAS DE VESTIR, DE PUNTO",
+      "subheadings": [
+        {
+          "code": "6114.20.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6114.20.00",
+          "description": "100M De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6114.20.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6114.20.00",
+          "description": "910J Productos alcanzados por la Res. 163/2005 SCT 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6114.20.00",
+          "description": "990K Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6114.30.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6114.30.00",
+          "description": "De talle superior al 16 o sus equivalentes"
+        },
+        {
+          "code": "6114.30.00",
+          "description": "110E Guardapolvos, ropas para trabajo (overoles y otros), ropas especiales, de punto, para ambos sexos. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6114.30.00",
+          "description": "190F Los demas 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6114.30.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6114.30.00",
+          "description": "910Y Productos alcanzados por la Res. 163/2005 SCT 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6114.30.00",
+          "description": "Los demas"
+        },
+        {
+          "code": "6114.30.00",
+          "description": "991B Guardapolvos, ropas para trabajo (overoles y otros), ropas especiales, de punto, para ambos sexos. 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6114.30.00",
+          "description": "999U Los demas 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6114.90",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6114.90.10",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6114.90.10",
+          "description": "100W De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6114.90.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "6114.90.10",
+          "description": "910T Productos alcanzados por la Res. 163/2005 SCT 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6114.90.10",
+          "description": "990U Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6114.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6114.90.90",
+          "description": "100Z De talle superior al 16 o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6114.90.90",
+          "description": "910W Productos alcanzados por la Res. 163/2005 SCT 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6114.90.90",
+          "description": "990X Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6115",
+      "description": "CALZAS, PANTY-MEDIAS, LEOTARDOS, MEDIAS, CALCETINES Y DEMÁS ARTÍCULOS DE CALCETERÍA,",
+      "subheadings": [
+        {
+          "code": "6115.10",
+          "description": "Calzas, panty-medias, leotardos y medias, de compresión progresiva (por ejemplo, medias para várices)"
+        },
+        {
+          "code": "6115.10.11",
+          "description": "De fibras sintéticas, de título inferior a 67 decitex por hilo sencillo"
+        },
+        {
+          "code": "6115.10.11",
+          "description": "000D De fibras sintéticas, de título inferior a 67 decitex por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.10.12",
+          "description": "De fibras sintéticas, de título superior o igual a 67 decitex por hilo sencillo"
+        },
+        {
+          "code": "6115.10.12",
+          "description": "000L De fibras sintéticas, de título superior o igual a 67 decitex por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.10.13",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6115.10.13",
+          "description": "000U De lana o pelo fino 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.10.14",
+          "description": "De algodón"
+        },
+        {
+          "code": "6115.10.14",
+          "description": "000B De algodón 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.10.19",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6115.10.19",
+          "description": "000P De las demás materias textiles 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.10.21",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6115.10.21",
+          "description": "000N De fibras sinteticas o artificiales 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.10.22",
+          "description": "De algodón"
+        },
+        {
+          "code": "6115.10.22",
+          "description": "000W De algodón 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.10.29",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6115.10.29",
+          "description": "000Z De las demás materias textiles 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.10.91",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6115.10.91",
+          "description": "000G De lana o pelo fino 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.10.92",
+          "description": "De algodón"
+        },
+        {
+          "code": "6115.10.92",
+          "description": "000P De algodón 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.10.93",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6115.10.93",
+          "description": "000X De fibras sinteticas 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.10.99",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6115.10.99",
+          "description": "000T De las demás materias textiles 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.2",
+          "description": "Las demás calzas, panty-medias y leotardos:"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "De fibras sintéticas, de título inferior a 67 decitex por hilo sencillo"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "Panty-medias de nailon o demás poliamidas, con un contenido de hilados de elastómeros inferior al 3% en peso"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "Sin dibujo (lisas) y sin entrepierna"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "111Y De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "112A De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "113C De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "Sin dibujo (lisas) y con entrepierna"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "121B De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "122D De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "123F De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "Con dibujo y sin entrepierna"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "131E De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "132G De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "133J De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "Con dibujo y con entrepierna"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "141H De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "142K De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "143M De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "Panty-medias de nailon o demás poliamidas, con un contenido de hilados de elastómeros superior o igual al 3% en"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "211D De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "212F De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "213H De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "221G De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "222J De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "223L De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "231K De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "232M De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "233P De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "241N De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "242Q De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "243T De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "Panty-medias de poliésteres, con un contenido de hilados de elastómeros inferior al 3% en peso"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "311J De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "312L De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "313N De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "321M De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "322P De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "323R De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "331Q De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "332T De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "333V De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "341U De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "342W De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "343Y De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "Panty-medias de poliesteres, con un contenido de hilados de elastómeros superior o igual al 3% en peso"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "411P De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "412R De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "413U De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "421T De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "422V De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "423X De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "431W De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "432Y De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "433A De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "441Z De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "442B De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "443D De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "Panty-medias de las demás fibras sinteticas, con un contenido de hilados de elastómeros inferior al 3% en peso"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "511V De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "512X De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "513Z De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "521Y De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "522A De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "523C De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "531B De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "532D De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "533F De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "541E De tìtulo inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "542G De tìtulo superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "543J De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "Panty-medias de las demás fibras sinteticas, con un contenido de hilados de elastómeros superior o igual al 3% en"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "611A De título inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "612C De título superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "613E De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "621D De título inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "622F De título superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "623H De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "631G De título inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "632J De título superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "633L De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "641K De título inferior a 11 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "642M De título superior o igual a 11 decitex pero inferior a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "643P De título superior o igual a 43 decitex, por hilo sencillo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.21.00",
+          "description": "900L Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "De fibras sintéticas, de título superior o igual a 67 decitex por hilo sencillo"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "Panty-medias"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "De nailon, con un contenido de hilados de elastómeros inferior al 3 %, en peso"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "111K Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "112M Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "113P Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "114R Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "De nailon, con un contenido de hilados de elastómeros superior o igual al 3 %, en peso"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "121N Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "122Q Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "123T Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "124V Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "De poliesteres, con un contenido de hilados de elastómeros inferior al 3 %, en peso"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "131R Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "132U Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "133W Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "134Y Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "De poliesteres, con un contenido de hilados de elastómeros superior o igual al 3 %, en peso"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "141V Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "142X Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "143Z Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "144B Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "De acrílico, con un contenido de hilados de elastómeros inferior al 3 %, en peso"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "151Y Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "152A Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "153C Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "154E Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "De acrílico, con un contenido de hilados de elastómeros superior o igual al 3 %, en peso"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "161B Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "162D Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "163F Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "164H Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "De las demás fibras sintéticas, con un contenido de hilados de elastómeros inferior al 3 %, en peso"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "171E Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "172G Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "173J Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "174L Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "De las demás fibras sinteticas, con un contenido de hilados de elastómeros superior o igual al 3 %, en peso"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "181H Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "182K Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "183M Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "184P Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.22.00",
+          "description": "900Y Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "Panty-medias, de lana"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "Con un contenido de hilados de elastómeros inferior al 3 %, en peso"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "111D Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "112F Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "113H Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "114K Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "Con un contenido de hilados de elastómeros superior o igual al 3 %, en peso"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "121G Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "122J Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "123L Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "124N Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.10",
+          "description": "900R Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "De algodón"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "Panty-medias"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "Con un contenido de hilados de elastómeros inferior al 3 %, en peso"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "111N Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "112Q Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "113T Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "114V Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "Con un contenido de hilados de elastómeros superior o igual al 3 %, en peso"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "121R Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "122U Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "123W Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "124Y Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.20",
+          "description": "900B Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "Panty-medias, de seda"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "Con un contenido de hilados de elastómeros inferior al 3 %, en peso"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "111G Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "112J Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "113L Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "114N Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "Con un contenido de hilados de elastómeros superior o igual al 3 %, en peso"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "121K Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "122M Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "123P Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "124R Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "Panty-medias, de las demás materias textiles"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "211M Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "212P Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "213R Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "214U Con dibujos y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "221Q Sin dibujos (lisas) y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "222T Sin dibujos (lisas) y con entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "223V Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "224X Con dibujos y sin entrepierna 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.29.90",
+          "description": "900V Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30",
+          "description": "Las demás medias de mujer, de título inferior a 67 decitex por hilo sencillo"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "De nailon o demás poliamidas"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "Soquetes"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "111K Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "112M Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "113P Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "114R Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "Medias tres cuarto (3/4)"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "121N Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "122Q Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "123T Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "124V Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "Medias siete octavo (7/8)"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "131R Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "132U Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "133W Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "134Y Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "190J Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "De poliesteres"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "211Q Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "212T Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "213V Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "214X Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "221U Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "222W Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "223Y Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "224A Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "231X Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "232Z Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "233B Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "234D Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "290P Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "De las demás fibras sinteticas o artificiales"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "911D Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "912F Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "913H Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "914K Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "921G Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "922J Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "923L Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "924N Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "931K Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "932M Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "933P Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "934R Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.10",
+          "description": "990C Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "De algodón"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "Soquetes"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "110T Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "120W Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "130Z Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "140C Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "Medias tres cuarto (3/4)"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "210Y Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "220B Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "230E Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "240H Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "Medias siete octavo (7/8)"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "310D Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "320G Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "330K Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "340N Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.20",
+          "description": "900H Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "Soquetes"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "110L Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "120P Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "130T Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "140W Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "Medias tres cuarto (3/4)"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "210R Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "220V Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "230Y Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "240B Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "Medias siete octavo (7/8)"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "310X Sin dibujos (lisas) y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "320A Sin dibujos (lisas) y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "330D Con dibujos y sin encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "340G Con dibujos y con encaje o similar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.30.90",
+          "description": "900B Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "6115.94.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6115.94.00",
+          "description": "100C Soquetes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.94.00",
+          "description": "200H Medias tres cuarto (3/4) 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.94.00",
+          "description": "900W Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6115.95.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6115.95.00",
+          "description": "100P Soquetes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6115.95.00",
+          "description": "200V Medias tres cuarto (3/4) 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6115.95.00",
+          "description": "900H Las demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6115.96.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6115.96.00",
+          "description": "100B Soquetes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6115.96.00",
+          "description": "200G Medias tres cuarto (3/4) 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6115.96.00",
+          "description": "900V Las demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6115.99.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6115.99.00",
+          "description": "100M Soquetes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6115.99.00",
+          "description": "200T Medias tres cuarto (3/4) 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6115.99.00",
+          "description": "900F Las demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        }
+      ]
+    },
+    {
+      "code": "6116",
+      "description": "GUANTES, MITONES Y MANOPLAS, DE PUNTO",
+      "subheadings": [
+        {
+          "code": "6116.10.00",
+          "description": "Impregnados, recubiertos o revestidos con plástico o caucho"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "200Q Guantes de vestir 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "Los demás guantes"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "Recubiertos o revestidos en una sola cara, incluso parcialmente"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "311B De latex 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "312D De nitrilo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "313F De poli (cloruro de vinilo) 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "314H De poliuretano 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "319U Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "Recubiertos o revestidos en ambas caras, incluso parcialmente"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "321E De latex 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "322G De nitrilo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "323J De poli (cloruro de vinilo) 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "324L De poliuretano 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "329X Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "330F Impregnados 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.10.00",
+          "description": "900D Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "6116.91.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6116.91.00",
+          "description": "000E --De lana o pelo fino 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.92.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6116.92.00",
+          "description": "100X Guantes de vestir 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.92.00",
+          "description": "200C Los demás guantes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.92.00",
+          "description": "900Q Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6116.93.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6116.93.00",
+          "description": "100J Guantes de vestir 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6116.93.00",
+          "description": "200P Los demás guantes 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6116.93.00",
+          "description": "900C Los demás 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6116.99.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6116.99.00",
+          "description": "000A --De las demás materias textiles 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6117",
+      "description": "LOS DEMÁS COMPLEMENTOS (ACCESORIOS) DE VESTIR CONFECCIONADOS, DE PUNTO; PARTES DE",
+      "subheadings": [
+        {
+          "code": "6117.10.00",
+          "description": "Chales, pañuelos de cuello, bufandas, mantillas, velos y artículos similares"
+        },
+        {
+          "code": "6117.10.00",
+          "description": "100D Chales, mantillas, velos y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6117.10.00",
+          "description": "200J Pañuelos de cuello y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6117.10.00",
+          "description": "300P Bufandas y artículos similares 35.00 35.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "6117.80",
+          "description": "Los demás complementos (accesorios) de vestir"
+        },
+        {
+          "code": "6117.80.10",
+          "description": "Corbatas o lazos similares"
+        },
+        {
+          "code": "6117.80.10",
+          "description": "000G Corbatas y lazos similares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.80.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6117.80.90",
+          "description": "000K Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "Partes"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "De prendas de vestir"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "111X De las partidas 61.01 o 61.02 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "112Z De pantalones 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "113B De camisas, blusas o blusas camiseras 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "119P Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "De algodon"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "121A De las partidas 61.01 o 61.02 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "122C De pantalones 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "123E De camisas, blusas o blusas camiseras 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "129T Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "De fibras sinteticas artificiales"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "131D De las partidas 61.01 o 61.02 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "132F De pantalones 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "133H De camisas, blusas o blusas camiseras 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "139W Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "191Y De las partidas 61.01 o 61.02 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "192A De pantalones 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "193C De camisas, blusas o blusas camiseras 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "199Q Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "910N De lana o pelo fino 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "920R De algodón 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "930V De fibras sinteticas o artificiales 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6117.90.00",
+          "description": "990P De las demás materias textiles 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 1257
+}

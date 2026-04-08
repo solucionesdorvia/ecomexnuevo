@@ -1,3 +1,4 @@
+import { buildNcmKnowledgeEvidence } from "@/lib/ncm/knowledge/ncmKnowledgeEvidence";
 import { openaiJson } from "@/lib/ai/openaiClient";
 
 export type NcmCandidate = {
@@ -245,9 +246,31 @@ export async function classifyWithAI(
   opts?: {
     candidates?: NcmEvidenceCandidate[];
     evidenceNote?: string;
+    /** Default 45s. Usar valores menores en chat interactivo. */
+    timeoutMs?: number;
+    model?: string;
+    /** No enriquecer con búsqueda sobre `data/ncm/index.json` (modo libre o candidatos ya provistos). */
+    skipNcmKnowledge?: boolean;
   }
 ): Promise<NcmClassification> {
-  const evidence = Array.isArray(opts?.candidates) ? opts!.candidates.slice(0, 12) : [];
+  let evidence = Array.isArray(opts?.candidates) ? opts!.candidates.slice(0, 12) : [];
+  let evidenceNoteExtra = opts?.evidenceNote ?? "";
+
+  if (
+    !evidence.length &&
+    !opts?.skipNcmKnowledge &&
+    process.env.NCM_KNOWLEDGE_ENABLED !== "false"
+  ) {
+    try {
+      const kn = buildNcmKnowledgeEvidence(text);
+      if (kn?.candidates.length) {
+        evidence = kn.candidates;
+        evidenceNoteExtra = [kn.note, evidenceNoteExtra].filter(Boolean).join("\n\n");
+      }
+    } catch {
+      // índice ausente o corrupto: seguir en modo libre
+    }
+  }
 
   const system = evidence.length
     ? EVIDENCE_SYSTEM_PROMPT
@@ -272,11 +295,11 @@ export async function classifyWithAI(
           null,
           2
         ),
-        opts?.evidenceNote ? `\nNota adicional:\n${String(opts.evidenceNote).slice(0, 1000)}` : "",
+        evidenceNoteExtra ? `\nNota adicional:\n${String(evidenceNoteExtra).slice(0, 1000)}` : "",
       ].join("\n")
     : [
         "Clasificá el NCM:",
-        opts?.evidenceNote ? `EVIDENCE_NOTE:\n${String(opts.evidenceNote).slice(0, 1000)}` : "",
+        evidenceNoteExtra ? `EVIDENCE_NOTE:\n${String(evidenceNoteExtra).slice(0, 1000)}` : "",
         text.slice(0, 4000),
       ].join("\n");
 
@@ -298,7 +321,12 @@ export async function classifyWithAI(
       needs_clarification?: boolean;
       missing_info_questions?: string[];
       follow_up_questions?: string[];
-    }>({ system, user, model: process.env.OPENAI_MODEL || "gpt-4o-mini" });
+    }>({
+      system,
+      user,
+      model: opts?.model ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
+      timeoutMs: opts?.timeoutMs ?? 45_000,
+    });
 
     const elapsed = Date.now() - start;
     let ncm_code = formatNcm(String(r.ncm_code ?? ""));

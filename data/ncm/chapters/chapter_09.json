@@ -1,0 +1,608 @@
+{
+  "chapter": "09",
+  "title": "Capítulo 09",
+  "sectionTitle": "CAP. 09 SECCION II PRODUCTOS DEL REINO VEGETAL Notas. 1. En esta Sección, el término \"pellets\" designa los productos en",
+  "headings": [
+    {
+      "code": "0901",
+      "description": "CAFÉ, INCLUSO TOSTADO O DESCAFEINADO; CÁSCARA Y CASCARILLA DE CAFÉ; SUCEDÁNEOS DEL CAFÉ",
+      "subheadings": [
+        {
+          "code": "0901.1",
+          "description": "Café sin tostar:"
+        },
+        {
+          "code": "0901.11",
+          "description": "Sin descafeinar"
+        },
+        {
+          "code": "0901.11.10",
+          "description": "En grano"
+        },
+        {
+          "code": "0901.11.10",
+          "description": "100U Arábigos 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0901.11.10",
+          "description": "200Z Robustas (Conillón) 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0901.11.10",
+          "description": "900M Los demás 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0901.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0901.11.90",
+          "description": "000R Los demás 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0901.12.00",
+          "description": "Descafeinado"
+        },
+        {
+          "code": "0901.12.00",
+          "description": "En grano"
+        },
+        {
+          "code": "0901.12.00",
+          "description": "110Z Arábigos 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0901.12.00",
+          "description": "120C Robustas (Conillón) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0901.12.00",
+          "description": "190A Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0901.12.00",
+          "description": "900P Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0901.2",
+          "description": "Café tostado:"
+        },
+        {
+          "code": "0901.21.00",
+          "description": "Sin descafeinar"
+        },
+        {
+          "code": "0901.21.00",
+          "description": "En grano"
+        },
+        {
+          "code": "0901.21.00",
+          "description": "110B En envases inmediatos de contenido inferior o igual a 2 kg 10.00 35.00 3.00 LNA 0.00 1.75"
+        },
+        {
+          "code": "0901.21.00",
+          "description": "190C Los demás 10.00 35.00 3.00 LNA 0.00 1.25"
+        },
+        {
+          "code": "0901.21.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0901.21.00",
+          "description": "En envases inmediatos de contenido inferior o igual a 2kg"
+        },
+        {
+          "code": "0901.21.00",
+          "description": "911X Presentado en cápsula 10.00 35.00 3.00 LNA 0.00 1.75"
+        },
+        {
+          "code": "0901.21.00",
+          "description": "919P Los demás 10.00 35.00 3.00 LNA 0.00 1.75"
+        },
+        {
+          "code": "0901.21.00",
+          "description": "990W Los demás 10.00 35.00 3.00 LNA 0.00 1.25"
+        },
+        {
+          "code": "0901.22.00",
+          "description": "Descafeinado"
+        },
+        {
+          "code": "0901.22.00",
+          "description": "En grano"
+        },
+        {
+          "code": "0901.22.00",
+          "description": "110N En envases inmediatos de contenido inferior o igual a 2 kg 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0901.22.00",
+          "description": "190P Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0901.22.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0901.22.00",
+          "description": "910G En envases de contenido inferior o igual a 2 kg 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0901.22.00",
+          "description": "990H Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0901.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0901.90.00",
+          "description": "000E -Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0902",
+      "description": "TÉ, INCLUSO AROMATIZADO",
+      "subheadings": [
+        {
+          "code": "0902.10.00",
+          "description": "Té verde (sin fermentar) presentado en envases inmediatos con un contenido inferior o igual a 3 kg"
+        },
+        {
+          "code": "0902.10.00",
+          "description": "000K -té verde (sin fermentar) presentado en envases inmediatos con un contenido inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0902.20.00",
+          "description": "Té verde (sin fermentar) presentado de otra forma"
+        },
+        {
+          "code": "0902.20.00",
+          "description": "000Z -té verde (sin fermentar) presentado de otra forma 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0902.30.00",
+          "description": "Té negro (fermentado) y té parcialmente fermentado, presentados en envases inmediatos con un contenido inferior o"
+        },
+        {
+          "code": "0902.30.00",
+          "description": "100U Con un contenido de extracto acuoso superior o igual a 15 g/% determinado por infusión a 20° C durante 5 minutos 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0902.30.00",
+          "description": "900M Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0902.40.00",
+          "description": "Té negro (fermentado) y té parcialmente fermentado, presentados de otra forma"
+        },
+        {
+          "code": "0902.40.00",
+          "description": "100H Con un contenido de extracto acuoso superior o igual a 15 g/% determinado por infusión a 20° C durante 5 minutos 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0902.40.00",
+          "description": "900B Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0903",
+      "description": "YERBA MATE",
+      "subheadings": [
+        {
+          "code": "0903.00.10",
+          "description": "Simplemente canchada"
+        },
+        {
+          "code": "0903.00.10",
+          "description": "100E En envases inmediatos de contenido neto inferior o igual a 3 kg (R. 967/99 MEYOSP) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0903.00.10",
+          "description": "900Y Las demás 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0903.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0903.00.90",
+          "description": "100H En envases inmediatos de contenido neto inferior o igual a 3 kg (R. 967/99 MEYOSP) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0903.00.90",
+          "description": "900B Las demás 10.00 10.00 3.00 LA 0.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "0904",
+      "description": "PIMIENTA DEL GÉNERO PIPER; FRUTOS DE LOS GÉNEROS CAPSICUM O PIMENTA, SECOS, TRITURADOS O",
+      "subheadings": [
+        {
+          "code": "0904.1",
+          "description": "Pimienta:"
+        },
+        {
+          "code": "0904.11.00",
+          "description": "Sin triturar ni pulverizar"
+        },
+        {
+          "code": "0904.11.00",
+          "description": "100P Negra 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0904.11.00",
+          "description": "200V Blanca 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0904.11.00",
+          "description": "900H Las demás 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0904.12.00",
+          "description": "Triturada o pulverizada"
+        },
+        {
+          "code": "0904.12.00",
+          "description": "100B Negra 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0904.12.00",
+          "description": "200G Blanca 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0904.12.00",
+          "description": "900V Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0904.2",
+          "description": "Frutos de los géneros Capsicum o Pimenta:"
+        },
+        {
+          "code": "0904.21.00",
+          "description": "Secos, sin triturar ni pulverizar"
+        },
+        {
+          "code": "0904.21.00",
+          "description": "000Y --Secos, sin triturar ni pulverizar 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0904.22.00",
+          "description": "Triturados o pulverizados"
+        },
+        {
+          "code": "0904.22.00",
+          "description": "000K --Triturados o pulverizados 10.00 10.00 3.00 LA 0.00 1.75"
+        }
+      ]
+    },
+    {
+      "code": "0905",
+      "description": "VAINILLA",
+      "subheadings": [
+        {
+          "code": "0905.10.00",
+          "description": "Sin triturar ni pulverizar"
+        },
+        {
+          "code": "0905.10.00",
+          "description": "000Q -Sin triturar ni pulverizar 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0905.20.00",
+          "description": "Triturada o pulverizada"
+        },
+        {
+          "code": "0905.20.00",
+          "description": "000E -Triturada o pulverizada 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0906",
+      "description": "CANELA Y FLORES DE CANELERO",
+      "subheadings": [
+        {
+          "code": "0906.1",
+          "description": "Sin triturar ni pulverizar:"
+        },
+        {
+          "code": "0906.11.00",
+          "description": "Canela (Cinnamomum zeylanicum Blume)"
+        },
+        {
+          "code": "0906.11.00",
+          "description": "000W --Canela (Cinnamomum zeylanicum Blume) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0906.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0906.19.00",
+          "description": "000R --Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0906.20.00",
+          "description": "Trituradas o pulverizadas"
+        },
+        {
+          "code": "0906.20.00",
+          "description": "000Y -Trituradas o pulverizadas 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0907",
+      "description": "CLAVOS (FRUTOS ENTEROS, CLAVILLOS Y PEDÚNCULOS)",
+      "subheadings": [
+        {
+          "code": "0907.10.00",
+          "description": "Sin triturar ni pulverizar"
+        },
+        {
+          "code": "0907.10.00",
+          "description": "000C -Sin triturar ni pulverizar 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0907.20.00",
+          "description": "Triturados o pulverizados"
+        },
+        {
+          "code": "0907.20.00",
+          "description": "000R -Triturado o pulverizado 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0908",
+      "description": "NUEZ MOSCADA, MACIS, AMOMOS Y CARDAMOMOS",
+      "subheadings": [
+        {
+          "code": "0908.1",
+          "description": "Nuez moscada:"
+        },
+        {
+          "code": "0908.11.00",
+          "description": "Sin triturar ni pulverizar"
+        },
+        {
+          "code": "0908.11.00",
+          "description": "000H --Sin triturar ni pulverizar 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0908.12.00",
+          "description": "Triturada o pulverizada"
+        },
+        {
+          "code": "0908.12.00",
+          "description": "000V --Triturada o pulverizada 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0908.2",
+          "description": "Macis:"
+        },
+        {
+          "code": "0908.21.00",
+          "description": "Sin triturar ni pulverizar"
+        },
+        {
+          "code": "0908.21.00",
+          "description": "000X --Sin triturar ni pulverizar 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0908.22.00",
+          "description": "Triturado o pulverizado"
+        },
+        {
+          "code": "0908.22.00",
+          "description": "000J --Triturado o pulverizado 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0908.3",
+          "description": "Amomos y cardamomos:"
+        },
+        {
+          "code": "0908.31.00",
+          "description": "Sin triturar ni pulverizar"
+        },
+        {
+          "code": "0908.31.00",
+          "description": "000L --Sin triturar ni pulverizar 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0908.32.00",
+          "description": "Triturados o pulverizados"
+        },
+        {
+          "code": "0908.32.00",
+          "description": "000Y --Triturados o pulverizados 10.00 10.00 3.00 LA 0.00 1.00"
+        }
+      ]
+    },
+    {
+      "code": "0909",
+      "description": "SEMILLAS DE ANÍS, BADIANA, HINOJO, CILANTRO, COMINO O ALCARAVEA; BAYAS DE ENEBRO",
+      "subheadings": [
+        {
+          "code": "0909.2",
+          "description": "Semillas de cilantro:"
+        },
+        {
+          "code": "0909.21.00",
+          "description": "Sin triturar ni pulverizar"
+        },
+        {
+          "code": "0909.21.00",
+          "description": "000Q --Sin triturar ni pulverizar 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0909.22.00",
+          "description": "Trituradas o pulverizadas"
+        },
+        {
+          "code": "0909.22.00",
+          "description": "000C --Trituradas o pulverizadas 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0909.3",
+          "description": "Semillas de comino:"
+        },
+        {
+          "code": "0909.31.00",
+          "description": "Sin triturar ni pulverizar"
+        },
+        {
+          "code": "0909.31.00",
+          "description": "000E --Sin triturar ni pulverizar 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0909.32.00",
+          "description": "Trituradas o pulverizadas"
+        },
+        {
+          "code": "0909.32.00",
+          "description": "000R --Trituradas o pulverizadas 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0909.6",
+          "description": "Semillas de anís, badiana, alcaravea o hinojo; bayas de enebro:"
+        },
+        {
+          "code": "0909.61",
+          "description": "Sin triturar ni pulverizar"
+        },
+        {
+          "code": "0909.61.10",
+          "description": "De anís (anís verde)"
+        },
+        {
+          "code": "0909.61.10",
+          "description": "000G De anís (anís verde) 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0909.61.20",
+          "description": "De badiana (anís estrellado)"
+        },
+        {
+          "code": "0909.61.20",
+          "description": "000R De badiana (anís estrellado) 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0909.61.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0909.61.90",
+          "description": "000K Los demás 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0909.62",
+          "description": "Trituradas o pulverizadas"
+        },
+        {
+          "code": "0909.62.10",
+          "description": "De anís (anís verde)"
+        },
+        {
+          "code": "0909.62.10",
+          "description": "000U De anís (anís verde) 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0909.62.20",
+          "description": "De badiana (anís estrellado)"
+        },
+        {
+          "code": "0909.62.20",
+          "description": "000D De badiana (anís estrellado) 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0909.62.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0909.62.90",
+          "description": "000X Los demás 10.00 10.00 3.00 LA 0.00 1.00"
+        }
+      ]
+    },
+    {
+      "code": "0910",
+      "description": "JENGIBRE, AZAFRÁN, CÚRCUMA, TOMILLO, HOJAS DE LAUREL, CURRI Y DEMÁS ESPECIAS",
+      "subheadings": [
+        {
+          "code": "0910.1",
+          "description": "Jengibre:"
+        },
+        {
+          "code": "0910.11.00",
+          "description": "Sin triturar ni pulverizar"
+        },
+        {
+          "code": "0910.11.00",
+          "description": "000F --Sin triturar ni pulverizar 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0910.12.00",
+          "description": "Triturado o pulverizado"
+        },
+        {
+          "code": "0910.12.00",
+          "description": "000T --Triturado o pulverizado 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0910.20.00",
+          "description": "Azafrán"
+        },
+        {
+          "code": "0910.20.00",
+          "description": "000H -Azafrán 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0910.30.00",
+          "description": "Cúrcuma"
+        },
+        {
+          "code": "0910.30.00",
+          "description": "000X -Cúrcuma 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0910.9",
+          "description": "Las demás especias:"
+        },
+        {
+          "code": "0910.91.00",
+          "description": "Mezclas previstas en la Nota 1 b) de este Capítulo"
+        },
+        {
+          "code": "0910.91.00",
+          "description": "000U --Mezclas previstas en la Nota 1 b) de este Capítulo 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0910.99.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0910.99.00",
+          "description": "100V Tomillo 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0910.99.00",
+          "description": "200A Hojas de laurel 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0910.99.00",
+          "description": "300F Curry 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0910.99.00",
+          "description": "900N Las demás 10.00 10.00 3.00 LA 0.00 1.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 145
+}

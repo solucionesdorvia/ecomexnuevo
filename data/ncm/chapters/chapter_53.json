@@ -1,0 +1,761 @@
+{
+  "chapter": "53",
+  "title": "Capítulo 14",
+  "sectionTitle": "CAP. 53 SECCION XI MATERIAS TEXTILES Y SUS MANUFACTURAS Notas. 1. Esta Sección no comprende: a. los pelos y cerdas para",
+  "headings": [
+    {
+      "code": "4303",
+      "description": "o 43.04;",
+      "subheadings": []
+    },
+    {
+      "code": "5301",
+      "description": "LINO EN BRUTO O TRABAJADO, PERO SIN HILAR; ESTOPAS Y DESPERDICIOS DE LINO (INCLUIDOS LOS",
+      "subheadings": [
+        {
+          "code": "5301.10.00",
+          "description": "Lino en bruto o enriado"
+        },
+        {
+          "code": "5301.10.00",
+          "description": "000W -Lino en bruto o enriado 6.00 6.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "5301.2",
+          "description": "Lino agramado, espadado, peinado o trabajado de otro modo, pero sin hilar:"
+        },
+        {
+          "code": "5301.21",
+          "description": "Agramado o espadado"
+        },
+        {
+          "code": "5301.21.10",
+          "description": "Agramado"
+        },
+        {
+          "code": "5301.21.10",
+          "description": "000G Agramado 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "5301.21.20",
+          "description": "Espadado"
+        },
+        {
+          "code": "5301.21.20",
+          "description": "000R Espadado 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "5301.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "5301.29.10",
+          "description": "Peinado"
+        },
+        {
+          "code": "5301.29.10",
+          "description": "000C Peinado 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "5301.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "5301.29.90",
+          "description": "000F Los demás 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "5301.30.00",
+          "description": "Estopas y desperdicios de lino"
+        },
+        {
+          "code": "5301.30.00",
+          "description": "000Z -Estopas y desperdicios de lino 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "5302",
+      "description": "CÁÑAMO (CANNABIS SATIVA L) EN BRUTO O TRABAJADO, PERO SIN HILAR; ESTOPAS Y DESPERDICIOS DE",
+      "subheadings": [
+        {
+          "code": "5302.10.00",
+          "description": "Cáñamo en bruto o enriado"
+        },
+        {
+          "code": "5302.10.00",
+          "description": "000P -Cáñamo en bruto o enriado 6.00 6.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "5302.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5302.90.00",
+          "description": "000C -Los demás 6.00 6.00 3.00 LA 4.50 1.00"
+        }
+      ]
+    },
+    {
+      "code": "5303",
+      "description": "YUTE Y DEMÁS FIBRAS TEXTILES DEL LÍBER (EXCEPTO EL LINO, CÁÑAMO Y RAMIO), EN BRUTO O",
+      "subheadings": [
+        {
+          "code": "5303.10",
+          "description": "Yute y demás fibras textiles del líber, en bruto o enriados"
+        },
+        {
+          "code": "5303.10.10",
+          "description": "Yute"
+        },
+        {
+          "code": "5303.10.10",
+          "description": "000T Yute 8.00 8.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "5303.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "5303.10.90",
+          "description": "000W Las demás 8.00 8.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "5303.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "5303.90.10",
+          "description": "Yute"
+        },
+        {
+          "code": "5303.90.10",
+          "description": "000F Yute 8.00 8.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "5303.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "5303.90.90",
+          "description": "000J Los demás 8.00 8.00 3.00 LA 4.50 1.00"
+        }
+      ]
+    },
+    {
+      "code": "5305",
+      "description": "COCO, ABACÁ (CÁÑAMO DE MANILA (MUSA TEXTILIS NEE)), RAMIO Y DEMÁS FIBRAS TEXTILES VEGETALES",
+      "subheadings": [
+        {
+          "code": "5305.00.10",
+          "description": "De abacá, en bruto"
+        },
+        {
+          "code": "5305.00.10",
+          "description": "000Q De abacá, en bruto 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "5305.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "5305.00.90",
+          "description": "000U Los demás 6.00 6.00 3.00 LA 4.50 1.00"
+        }
+      ]
+    },
+    {
+      "code": "5306",
+      "description": "HILADOS DE LINO",
+      "subheadings": [
+        {
+          "code": "5306.10.00",
+          "description": "Sencillos"
+        },
+        {
+          "code": "5306.10.00",
+          "description": "100U Acondicionados para la venta al por menor 18.00 18.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5306.10.00",
+          "description": "900M Los demás 18.00 18.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5306.20.00",
+          "description": "Retorcidos o cableados"
+        },
+        {
+          "code": "5306.20.00",
+          "description": "100H Acondicionados para la venta al por menor 18.00 18.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5306.20.00",
+          "description": "900B Los demás 18.00 18.00 3.00 LNA 3.00 3.00"
+        }
+      ]
+    },
+    {
+      "code": "5307",
+      "description": "HILADOS DE YUTE O DEMÁS FIBRAS TEXTILES DEL LÍBER DE LA PARTIDA 5303",
+      "subheadings": [
+        {
+          "code": "5307.10",
+          "description": "Sencillos"
+        },
+        {
+          "code": "5307.10.10",
+          "description": "De yute"
+        },
+        {
+          "code": "5307.10.10",
+          "description": "100X Acondicionados para la venta al por menor 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5307.10.10",
+          "description": "900Q Los demás 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5307.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "5307.10.90",
+          "description": "100A Acondicionados para la venta al por menor 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5307.10.90",
+          "description": "900U Los demás 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5307.20",
+          "description": "Retorcidos o cableados"
+        },
+        {
+          "code": "5307.20.10",
+          "description": "De yute"
+        },
+        {
+          "code": "5307.20.10",
+          "description": "100L Acondicionados para la venta al por menor 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5307.20.10",
+          "description": "900E Los demás 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5307.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "5307.20.90",
+          "description": "100P Acondicionados para la venta al por menor 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5307.20.90",
+          "description": "900H Los demás 18.00 18.00 3.00 LNA 3.00 2.50"
+        }
+      ]
+    },
+    {
+      "code": "5308",
+      "description": "HILADOS DE LAS DEMÁS FIBRAS TEXTILES VEGETALES; HILADOS DE PAPEL",
+      "subheadings": [
+        {
+          "code": "5308.10.00",
+          "description": "Hilados de coco"
+        },
+        {
+          "code": "5308.10.00",
+          "description": "100F Acondicionados para la venta al por menor 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5308.10.00",
+          "description": "900Z Los demás 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5308.20.00",
+          "description": "Hilados de cáñamo"
+        },
+        {
+          "code": "5308.20.00",
+          "description": "100V Acondicionados para la venta al por menor 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5308.20.00",
+          "description": "900N Los demás 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5308.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5308.90.00",
+          "description": "Hilados de papel"
+        },
+        {
+          "code": "5308.90.00",
+          "description": "110X Acondicionados para la venta al por menor 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5308.90.00",
+          "description": "190Y Los demás 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5308.90.00",
+          "description": "910Q Acondicionados para la venta al por menor 18.00 18.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "5308.90.00",
+          "description": "990R Los demás 18.00 18.00 3.00 LNA 3.00 2.50"
+        }
+      ]
+    },
+    {
+      "code": "5309",
+      "description": "TEJIDOS DE LINO",
+      "subheadings": [
+        {
+          "code": "5309.1",
+          "description": "Con un contenido de lino superior o igual al 85 % en peso:"
+        },
+        {
+          "code": "5309.11.00",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "5309.11.00",
+          "description": "100L De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.11.00",
+          "description": "200R De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.11.00",
+          "description": "300X De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.11.00",
+          "description": "400C De peso superior o igual a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "Teñidos"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "110K De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "120N De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "130R De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "140V De peso superior o igual a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "210Q De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "220U De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "230X De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "240A De peso superior o igual a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "Estampados"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "310W De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "320Z De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "330C De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.19.00",
+          "description": "340F De peso superior o igual a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.2",
+          "description": "Con un contenido de lino inferior al 85 % en peso:"
+        },
+        {
+          "code": "5309.21.00",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "5309.21.00",
+          "description": "100A De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.21.00",
+          "description": "200F De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.21.00",
+          "description": "300L De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.21.00",
+          "description": "400R De peso superior o igual a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "Teñidos"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "110Z De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "120C De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "130F De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "140J De peso superior o igual a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "210E De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "220H De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "230L De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "240P De peso superior o igual a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "Estampados"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "310K De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "320N De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "330R De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5309.29.00",
+          "description": "340V De peso superior o igual a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "5310",
+      "description": "TEJIDOS DE YUTE O DEMÁS FIBRAS TEXTILES DEL LÍBER DE LA PARTIDA 5303",
+      "subheadings": [
+        {
+          "code": "5310.10",
+          "description": "Crudos"
+        },
+        {
+          "code": "5310.10.10",
+          "description": "Arpillera de yute"
+        },
+        {
+          "code": "5310.10.10",
+          "description": "000H Arpillera de yute 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5310.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "5310.10.90",
+          "description": "000L Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5310.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5310.90.00",
+          "description": "100R Arpillera de yute 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5310.90.00",
+          "description": "900K Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "5311",
+      "description": "TEJIDOS DE LAS DEMÁS FIBRAS TEXTILES VEGETALES; TEJIDOS DE HILADOS DE PAPEL",
+      "subheadings": [
+        {
+          "code": "5311.00.00",
+          "description": "Tejidos de las demás fibras textiles vegetales; tejidos de hilados de papel"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "Con un contenido de ramio superior o igual al 85 % en peso"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "111N De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "112Q De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "113T De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "114V De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "119F Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "Teñidos"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "121R De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "122U De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "123W De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "124Y De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "129J Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "131V De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "132X De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "133Z De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "134B De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "139M Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "Estampados"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "141Y De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "142A De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "143C De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "144E De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "149Q Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "Con un contenido de ramio inferior al 85 % en peso"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "211U De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "212W De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "213Y De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "214A De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "219L Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "221X De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "222Z De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "223B De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "224D De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "229P Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "Con hilos de distintos colores"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "231A De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "232C De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "233E De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "234G De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "239T Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "241D De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "242F De peso superior o igual a 100 g/m2 pero inferior a 150 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "243H De peso superior o igual a 150 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "244K De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "249W Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "De hilados de papel"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "310X De peso inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "320A De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "330D De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "340G De peso superior o igual a 400 g/m2 pero inferior a 500 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "390Y Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5311.00.00",
+          "description": "900B Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 187
+}

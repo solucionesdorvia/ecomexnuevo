@@ -1,0 +1,108 @@
+{
+  "chapter": "14",
+  "title": "Capítulo 14",
+  "sectionTitle": "CAP. 14 SECCION II PRODUCTOS DEL REINO VEGETAL Notas. 1. En esta Sección, el término \"pellets\" designa los productos en",
+  "headings": [
+    {
+      "code": "1401",
+      "description": "MATERIAS VEGETALES DE LAS ESPECIES UTILIZADAS PRINCIPALMENTE EN CESTERÍA O ESPARTERÍA (POR",
+      "subheadings": [
+        {
+          "code": "1401.10.00",
+          "description": "Bambú"
+        },
+        {
+          "code": "1401.10.00",
+          "description": "000T -Bambú 6.00 6.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1401.20.00",
+          "description": "Roten (ratán)*"
+        },
+        {
+          "code": "1401.20.00",
+          "description": "000G -Roten (ratón)* 6.00 6.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1401.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1401.90.00",
+          "description": "100L Caña colihue 6.00 6.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1401.90.00",
+          "description": "200R Rafia 6.00 6.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1401.90.00",
+          "description": "300X Mimbre 6.00 6.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1401.90.00",
+          "description": "900E Los demás 6.00 6.00 3.00 LA 0.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1404",
+      "description": "PRODUCTOS VEGETALES NO EXPRESADOS NI COMPRENDIDOS EN OTRA PARTE",
+      "subheadings": [
+        {
+          "code": "1404.20",
+          "description": "Línteres de algodón"
+        },
+        {
+          "code": "1404.20.10",
+          "description": "En bruto"
+        },
+        {
+          "code": "1404.20.10",
+          "description": "000X En bruto 6.00 6.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1404.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1404.20.90",
+          "description": "000A Los demás 6.00 6.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1404.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1404.90.10",
+          "description": "Materias vegetales de las especies utilizadas principalmente en la fabricación de escobas, cepillos o brochas (por"
+        },
+        {
+          "code": "1404.90.10",
+          "description": "100B Paja de Guinea (R.2507/93 ex-ANA) 6.00 6.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1404.90.10",
+          "description": "900V Las demás 6.00 6.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1404.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1404.90.90",
+          "description": "100E Materias vegetales de las especies utlilizadas principalmente para relleno (por ejemplo: 'kapok' (miriguano de"
+        },
+        {
+          "code": "1404.90.90",
+          "description": "200K Materias primas vegetales de las especies utilizadas principalmente para teñir o curtir 6.00 6.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1404.90.90",
+          "description": "900Y Los demás 6.00 6.00 3.00 LA 0.00 0.50"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 24
+}

@@ -1,0 +1,1951 @@
+{
+  "chapter": "03",
+  "title": "Capítulo 03",
+  "sectionTitle": "CAP. 03 SECCION I ANIMALES VIVOS Y PRODUCTOS DEL REINO ANIMAL Notas. 1. En esta Sección, cualquier referencia a un géner",
+  "headings": [
+    {
+      "code": "0301",
+      "description": "PECES VIVOS",
+      "subheadings": [
+        {
+          "code": "0301.1",
+          "description": "Peces ornamentales:"
+        },
+        {
+          "code": "0301.11",
+          "description": "De agua dulce"
+        },
+        {
+          "code": "0301.11.10",
+          "description": "Arawanas (Osteoglossum bicirrhosum)"
+        },
+        {
+          "code": "0301.11.10",
+          "description": "000Z Arawanas (Osteoglossum bicirrhosum) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0301.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0301.11.90",
+          "description": "000C Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0301.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0301.19.00",
+          "description": "000K --Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0301.9",
+          "description": "Los demás peces vivos:"
+        },
+        {
+          "code": "0301.91",
+          "description": "Truchas (Salmo trutta, Oncorhynchus mykiss, Oncorhynchus clarki, Oncorhynchus aguabonita, Oncorhynchus gilae,"
+        },
+        {
+          "code": "0301.91.10",
+          "description": "Para reproducción"
+        },
+        {
+          "code": "0301.91.10",
+          "description": "000M Para reproducción 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0301.91.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0301.91.90",
+          "description": "000Q Las demás 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0301.92",
+          "description": "Anguilas (Anguilla spp)"
+        },
+        {
+          "code": "0301.92.10",
+          "description": "Para reproducción"
+        },
+        {
+          "code": "0301.92.10",
+          "description": "000Z Para reproducción 0.00 0.00 0.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0301.92.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0301.92.90",
+          "description": "000C Las demás 10.00 10.00 3.00 LA 7.00 1.00"
+        },
+        {
+          "code": "0301.93",
+          "description": "Carpas (Cyprinus spp, Carassius spp, Ctenopharyngodon idellus, Hypophthalmichthys spp, Cirrhinus spp,"
+        },
+        {
+          "code": "0301.93.10",
+          "description": "Para reproducción"
+        },
+        {
+          "code": "0301.93.10",
+          "description": "000L Para reproducción 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0301.93.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0301.93.90",
+          "description": "000P Las demás 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0301.94",
+          "description": "Atunes comunes o de aleta azul, del Atlántico y del Pacífico (Thunnus thynnus, Thunnus orientalis)"
+        },
+        {
+          "code": "0301.94.10",
+          "description": "Para reproducción"
+        },
+        {
+          "code": "0301.94.10",
+          "description": "000Y Para reproducción 0.00 0.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0301.94.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0301.94.90",
+          "description": "000B Los demás 10.00 10.00 3.00 LA 7.00 1.00"
+        },
+        {
+          "code": "0301.95",
+          "description": "Atunes del sur (Thunnus maccoyii)"
+        },
+        {
+          "code": "0301.95.10",
+          "description": "Para reproducción"
+        },
+        {
+          "code": "0301.95.10",
+          "description": "000K Para reproducción 0.00 0.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0301.95.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0301.95.90",
+          "description": "000N Los demás 10.00 10.00 3.00 LA 7.00 1.00"
+        },
+        {
+          "code": "0301.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "0301.99.11",
+          "description": "Tilapias (Tilapia spp, Oreochromis spp, Sarotherodon spp, Danakilia spp; sus híbridos)"
+        },
+        {
+          "code": "0301.99.11",
+          "description": "000Q Tilapias (Tilapia spp., Oreochromis spp., Sarotherodon spp., Danakilia spp.; sus híbridos) 0.00 0.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0301.99.12",
+          "description": "Esturiones (Acipenser baerii, Acipenser gueldenstaedtii, Acipenser persicus, Acipenser stellatus)"
+        },
+        {
+          "code": "0301.99.12",
+          "description": "000Y Esturiones (Acipenser baeri, Acipenser gueldenstaedtii, Acipenser persicus, Acipenser stellatus) 0.00 0.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0301.99.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "0301.99.19",
+          "description": "000B Los demás 0.00 0.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0301.99.91",
+          "description": "Tilapias (Tilapia spp, Oreochromis spp, Sarotherodon spp, Danakilia spp; sus híbridos)"
+        },
+        {
+          "code": "0301.99.91",
+          "description": "000U Tilapias (Tilapia spp., Oreochromis spp., Sarotherodon spp., Danakilia spp.; sus híbridos) 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0301.99.92",
+          "description": "Esturiones (Acipenser baerii, Acipenser gueldenstaedtii, Acipenser persicus, Acipenser stellatus)"
+        },
+        {
+          "code": "0301.99.92",
+          "description": "000B Esturiones (Acipencer baeri, Acipenser gueldenstaedtii, Acipenser persicus, Acipenser stellatus) 10.00 10.00 3.00 LA 7.00 1.00"
+        },
+        {
+          "code": "0301.99.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "0301.99.99",
+          "description": "000E Los demás 10.00 10.00 3.00 LA 7.00 1.00"
+        }
+      ]
+    },
+    {
+      "code": "0302",
+      "description": "PESCADO FRESCO O REFRIGERADO, EXCEPTO LOS FILETES Y DEMÁS CARNE DE PESCADO DE LA",
+      "subheadings": [
+        {
+          "code": "0302.1",
+          "description": "Salmónidos, excepto los despojos comestibles de pescado de las subpartidas 030291 a 030299:"
+        },
+        {
+          "code": "0302.11.00",
+          "description": "Truchas (Salmo trutta, Oncorhynchus mykiss, Oncorhynchus clarki, Oncorhynchus aguabonita, Oncorhynchus gilae,"
+        },
+        {
+          "code": "0302.11.00",
+          "description": "100N Truchas enteras provenientes de cultivo (Oncorhynchus mykiss) (Res. 137/08 MEYP) 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0302.11.00",
+          "description": "900G Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0302.13.00",
+          "description": "Salmones del Pacífico (Oncorhynchus nerka, Oncorhynchus gorbuscha, Oncorhynchus keta, Oncorhynchus"
+        },
+        {
+          "code": "0302.13.00",
+          "description": "000G --Salmones del Pacífico (Oncorhynchus nerka, Oncorhynchus gorbuscha, Oncorhynchus keta, Oncorhynchus"
+        }
+      ]
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 7.00 0.50",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 0.00 0.50",
+      "subheadings": []
+    },
+    {
+      "code": "0303",
+      "description": "PESCADO CONGELADO, EXCEPTO LOS FILETES Y DEMÁS CARNE DE PESCADO DE LA PARTIDA 0304",
+      "subheadings": [
+        {
+          "code": "0303.1",
+          "description": "Salmónidos, excepto los despojos comestibles de pescado de las subpartidas 030391 a 030399:"
+        },
+        {
+          "code": "0303.11.00",
+          "description": "Salmones rojos (Oncorhynchus nerka)"
+        },
+        {
+          "code": "0303.11.00",
+          "description": "000B --Salmones rojos (Oncorhynchus nerka) 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0303.12.00",
+          "description": "Los demás salmones del Pacífico (Oncorhynchus gorbuscha, Oncorhynchus keta, Oncorhynchus tschawytscha,"
+        },
+        {
+          "code": "0303.12.00",
+          "description": "000N --Los demás salmones del Pacífico (Oncorhynchus gorbuscha, Oncorhynchus keta, Oncorhynchus tschawytscha,"
+        }
+      ]
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 9.00 0.50",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 9.00 1.25",
+      "subheadings": []
+    },
+    {
+      "code": "0304",
+      "description": "FILETES Y DEMÁS CARNE DE PESCADO (INCLUSO PICADA), FRESCOS, REFRIGERADOS O CONGELADOS",
+      "subheadings": [
+        {
+          "code": "0304.3",
+          "description": "Filetes frescos o refrigerados de tilapias (Oreochromis spp), bagres o peces gato (Pangasius spp, Silurus spp, Clarias"
+        },
+        {
+          "code": "0304.31.00",
+          "description": "Tilapias (Oreochromis spp)"
+        },
+        {
+          "code": "0304.31.00",
+          "description": "000Y --Tilapias (Oreochromis spp.) 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0304.32",
+          "description": "Bagres o peces gato (Pangasius spp, Silurus spp, Clarias spp, Ictalurus spp)"
+        },
+        {
+          "code": "0304.32.10",
+          "description": "Bagres de canal (Ictalurus punctatus)"
+        },
+        {
+          "code": "0304.32.10",
+          "description": "000V Bagres de canal (Ictalurus punctatus) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.32.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0304.32.90",
+          "description": "000Y Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.33.00",
+          "description": "Percas del Nilo (Lates niloticus)"
+        },
+        {
+          "code": "0304.33.00",
+          "description": "000X --Percas del Nilo (Lates niloticus) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0304.39.00",
+          "description": "000U --Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0304.4",
+          "description": "Filetes de los demás pescados, frescos o refrigerados:"
+        },
+        {
+          "code": "0304.41.00",
+          "description": "Salmones del Pacífico (Oncorhynchus nerka, Oncorhynchus gorbuscha, Oncorhynchus keta, Oncorhynchus"
+        },
+        {
+          "code": "0304.41.00",
+          "description": "100T Salmones del Atlántico (Salmo salar) 10.00 10.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "0304.41.00",
+          "description": "900L Los demás 10.00 10.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "0304.42.00",
+          "description": "Truchas (Salmo trutta, Oncorhynchus mykiss, Oncorhynchus clarki, Oncorhynchus aguabonita, Oncorhynchus gilae,"
+        },
+        {
+          "code": "0304.42.00",
+          "description": "100E Trucha proveniente de cultivo (Oncorhynchus mykiss) (Res. 137/08 MEYP) 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0304.42.00",
+          "description": "900Y Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0304.43.00",
+          "description": "Pescados planos (Pleuronectidae, Bothidae, Cynoglossidae, Soleidae, Scophthalmidae y Citharidae)"
+        },
+        {
+          "code": "0304.43.00",
+          "description": "000L --Pescados planos (Pleuronectidae, Bothidae, Cynoglossidae, Soleidae, Scophthalmidae y Citharidae) 10.00 10.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0304.44.00",
+          "description": "Pescados de las familias Bregmacerotidae, Euclichthyidae, Gadidae, Macrouridae, Melanonidae, Merlucciidae,"
+        },
+        {
+          "code": "0304.44.00",
+          "description": "100D Hubbsi (Merluccius hubbsi) (Res. 137/08 MEYP) 10.00 10.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0304.44.00",
+          "description": "200J Merluza de cola (Macruronus magellanicus) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.44.00",
+          "description": "300P Polaca (Micromesistius australis) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.44.00",
+          "description": "900X Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.45.00",
+          "description": "Peces espada (Xiphias gladius)"
+        },
+        {
+          "code": "0304.45.00",
+          "description": "000K --Peces espada (Xiphias gladius) 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0304.46.00",
+          "description": "Austromerluzas antárticas y merluzas negras (austromerluzas negras, bacalaos de profundidad, nototenias negras)*"
+        },
+        {
+          "code": "0304.46.00",
+          "description": "100C Merluza negra (Dissostichus eleginoides) 10.00 10.00 3.00 LA 7.00 1.00"
+        },
+        {
+          "code": "0304.46.00",
+          "description": "900W Las demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.47.00",
+          "description": "Cazones y demás escualos"
+        },
+        {
+          "code": "0304.47.00",
+          "description": "100P Gatuzo (Mustelus schmitti) 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0304.47.00",
+          "description": "200V Cazón (Galeorhinus galeus) 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0304.47.00",
+          "description": "300A Tiburón espinoso (Squalus acanthias) 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0304.47.00",
+          "description": "400F Pez ángel (Squatina spp.) 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0304.47.00",
+          "description": "900H Los demás 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0304.48.00",
+          "description": "Rayas (Rajidae)"
+        },
+        {
+          "code": "0304.48.00",
+          "description": "100B Raya roja (Zearaja chilensis) 10.00 10.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0304.48.00",
+          "description": "200G Raya pintada (Atlantoraja castelnaui) 10.00 10.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0304.48.00",
+          "description": "900V Las demás 10.00 10.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0304.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "0304.49.10",
+          "description": "Chernas (Polyprion americanus )"
+        },
+        {
+          "code": "0304.49.10",
+          "description": "000T Cherna (Polyprion americanus) 10.00 10.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "0304.49.20",
+          "description": "Meros (Acanthistius spp)"
+        },
+        {
+          "code": "0304.49.20",
+          "description": "000C Meros (Acanthistius spp.) 10.00 10.00 3.00 LA 3.00 1.00"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "100B Lenguado (Paralichtys spp.) (Res. 137/08 MEYP) 10.00 10.00 3.00 LA 3.00 1.75"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "Armados (Pterodoras spp.; Oxydoras spp.; Rhinodoras spp.; Anadoras spp.; Platydoras spp.; Trachidoras spp.; Doras"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "210K Armados (Pterodoras spp.; Oxydoras spp.; Rhinodoras spp.; Anadoras spp.; Platydoras spp.; Trachidoras spp.; Doras"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "220N Bagres de río (Pimelodus spp.; Rhamdia spp.) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "230R Bogas (Leporinus spp.) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "240V Dorados de río (Salminus spp.) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "250Y Manduvíes (Ageneiosus spp.; Auchenipterus spp.) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "260B Manguruyúes (Zungaro spp.) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "270E Patíes (Luciopimelodus pati) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "280H Sábalos (Prochilodus spp.) 10.00 10.00 3.00 LA 7.00 1.75"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "290L Surubíes (Pseudoplatystoma spp.) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "300M Tarariras (Hoplias malabaricus y H cf. lacerdae) (Decreto 2684/2012) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "400T Corvinas (Micropogonias furnieri) 10.00 10.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "600D Chuchos (Dasyatidae, Myliobatidae); guitarras (Rhinobatidae); torpedos (Narcinidae, Torpedinidae) 10.00 10.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "700J Abadejo (Genypterus blacodes) 10.00 10.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0304.49.90",
+          "description": "900V Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.5",
+          "description": "Los demás, frescos o refrigerados:"
+        },
+        {
+          "code": "0304.51.00",
+          "description": "Tilapias (Oreochromis spp), bagres o peces gato (Pangasius spp, Silurus spp, Clarias spp, Ictalurus spp), carpas"
+        },
+        {
+          "code": "0304.51.00",
+          "description": "000B --Tilapias (Oreochromis spp.), bagres o peces gato (Pangasius spp., Silurus spp., Clarias spp., Ictalurus spp.), carpas"
+        },
+        {
+          "code": "0304.52.00",
+          "description": "Salmónidos"
+        },
+        {
+          "code": "0304.52.00",
+          "description": "000N --Salmónidos 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.53.00",
+          "description": "Pescados de las familias Bregmacerotidae, Euclichthyidae, Gadidae, Macrouridae, Melanonidae, Merlucciidae,"
+        },
+        {
+          "code": "0304.53.00",
+          "description": "Hubbsi (Merluccius hubbsi)"
+        },
+        {
+          "code": "0304.53.00",
+          "description": "110J Cocochas (Res. 137/08 MEYP) 10.00 10.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0304.53.00",
+          "description": "190K Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.53.00",
+          "description": "200L Merluza de cola (Macruronus magellanicus) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.53.00",
+          "description": "300R Polaca (Micromesistius australis) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.53.00",
+          "description": "900Z Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.54.00",
+          "description": "Peces espada (Xiphias gladius)"
+        },
+        {
+          "code": "0304.54.00",
+          "description": "000M --Peces espada (Xiphias gladius) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.55.00",
+          "description": "Austromerluzas antárticas y merluzas negras (austromerluzas negras, bacalaos de profundidad, nototenias negras)*"
+        },
+        {
+          "code": "0304.55.00",
+          "description": "100E Merluza negra (Dissostichus eleginoides) 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0304.55.00",
+          "description": "900Y Los demás 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0304.56.00",
+          "description": "Cazones y demás escualos"
+        },
+        {
+          "code": "0304.56.00",
+          "description": "000L --Cazones y demás escualos 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0304.57.00",
+          "description": "Rayas (Rajidae)"
+        },
+        {
+          "code": "0304.57.00",
+          "description": "000Y --Rayas (Rajidae) 10.00 10.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0304.59.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0304.59.00",
+          "description": "100C Corvinas (Micropogonias furnieri) 10.00 10.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0304.59.00",
+          "description": "200H Abadejo (Genypterus blacodes) 10.00 10.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0304.59.00",
+          "description": "400U Chuchos (Dasyatidae, Myliobatidae); guitarras (Rhinobatidae); torpedos (Narcinidae, Torpedinidae) 10.00 10.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0304.59.00",
+          "description": "900W Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0304.6",
+          "description": "Filetes congelados de tilapias (Oreochromis spp), bagres o peces gato (Pangasius spp, Silurus spp, Clarias spp,"
+        },
+        {
+          "code": "0304.61.00",
+          "description": "Tilapias (Oreochromis spp)"
+        },
+        {
+          "code": "0304.61.00",
+          "description": "000Q --Tilapias (Oreochromis spp.) 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0304.62",
+          "description": "Bagres o peces gato (Pangasius spp, Silurus spp, Clarias spp, Ictalurus spp)"
+        },
+        {
+          "code": "0304.62.10",
+          "description": "Bagres de canal (Ictalurus punctatus)"
+        },
+        {
+          "code": "0304.62.10",
+          "description": "100T Desgrasados, en envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP) 10.00 10.00 3.00 LA 7.00 1.50"
+        },
+        {
+          "code": "0304.62.10",
+          "description": "200Y Los demás, excepto desgrasados, en envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99"
+        }
+      ]
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 7.00 1.50",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 9.00 1.50",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 3.00 1.50",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 3.00 0.50",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 0.00 0.75",
+      "subheadings": []
+    },
+    {
+      "code": "0305",
+      "description": "PESCADO SECO, SALADO O EN SALMUERA; PESCADO AHUMADO, INCLUSO COCIDO ANTES O DURANTE EL",
+      "subheadings": [
+        {
+          "code": "0305.10.00",
+          "description": "Harina, polvo y «pellets» de pescado, aptos para la alimentación humana"
+        },
+        {
+          "code": "0305.10.00",
+          "description": "100G De merluza negra (Dissostichus eleginoides) 10.00 10.00 3.00 LA 7.00 1.25"
+        },
+        {
+          "code": "0305.10.00",
+          "description": "200M De Austromerluza antártica (Dissostichus mawsoni) 10.00 10.00 3.00 LA 7.00 1.25"
+        },
+        {
+          "code": "0305.10.00",
+          "description": "900A Los demás 10.00 10.00 3.00 LA 7.00 1.25"
+        },
+        {
+          "code": "0305.20.00",
+          "description": "Hígados, huevas y lechas, de pescado, secos, ahumados, salados o en salmuera"
+        },
+        {
+          "code": "0305.20.00",
+          "description": "100W Huevas de Esturión (Ascipenser baeri) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0305.20.00",
+          "description": "900P Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0305.3",
+          "description": "Filetes de pescado, secos, salados o en salmuera, sin ahumar:"
+        },
+        {
+          "code": "0305.31.00",
+          "description": "Tilapias (Oreochromis spp), bagres o peces gato (Pangasius spp, Silurus spp, Clarias spp, Ictalurus spp), carpas"
+        },
+        {
+          "code": "0305.31.00",
+          "description": "000R --Tilapias (Oreochromis spp.), bagres o peces gato (Pangasius spp., Silurus spp., Clarias spp., Ictalurus spp.), carpas"
+        }
+      ]
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 0.00 1.00",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 7.00 1.00",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 0.00 3.50",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 7.00 0.75",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 0.00 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 0.00 LA 7.00 0.75",
+      "subheadings": []
+    },
+    {
+      "code": "0306",
+      "description": "CRUSTÁCEOS, INCLUSO PELADOS, VIVOS, FRESCOS, REFRIGERADOS, CONGELADOS, SECOS, SALADOS O",
+      "subheadings": [
+        {
+          "code": "0306.1",
+          "description": "Congelados:"
+        },
+        {
+          "code": "0306.11",
+          "description": "Langostas (Palinurus spp, Panulirus spp, Jasus spp)"
+        },
+        {
+          "code": "0306.11.10",
+          "description": "Enteras"
+        },
+        {
+          "code": "0306.11.10",
+          "description": "100X En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP) 10.00 10.00 3.00 LA 7.00 1.25"
+        },
+        {
+          "code": "0306.11.10",
+          "description": "900Q Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.11.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0306.11.90",
+          "description": "100A En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP) 10.00 10.00 3.00 LA 7.00 1.25"
+        },
+        {
+          "code": "0306.11.90",
+          "description": "900U Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.12.00",
+          "description": "Bogavantes (Homarus spp)"
+        },
+        {
+          "code": "0306.12.00",
+          "description": "100Z Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.12.00",
+          "description": "900T Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "Cangrejos (excepto macruros)"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "Centolla y centollón, en envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "Pelados, ahumados, incluso cocidos antes o durante el ahumado"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "111D Centolla (Lithodes santolla) 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "112F Centollon 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "191E Centolla (Lithodes santolla) 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "192G Centollon 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "Centolla (Lithodes santolla), en envases inmediatos de contenido neto superior a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "921A Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "929T Los demas 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "Centollon, en envases inmediatos de contenido neto superior a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "931D Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "939W Los demas 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "991Y Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0306.14.00",
+          "description": "999Q Los demás 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0306.14.10",
+          "description": "111N Centolla (Lithodes santolla) 0.00 0.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0306.15.00",
+          "description": "Cigalas (Nephrops norvegicus)"
+        },
+        {
+          "code": "0306.15.00",
+          "description": "100K Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.15.00",
+          "description": "900D Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.16",
+          "description": "Camarones, langostinos y demás decápodos Natantia, de agua fría (Pandalus spp, Crangon crangon)"
+        },
+        {
+          "code": "0306.16.10",
+          "description": "Enteros"
+        },
+        {
+          "code": "0306.16.10",
+          "description": "Langostinos"
+        },
+        {
+          "code": "0306.16.10",
+          "description": "110K En envases inmediatos de contenido neto inferior o igual a 1 kg 10.00 10.00 3.00 LA 7.00 3.00"
+        },
+        {
+          "code": "0306.16.10",
+          "description": "190L Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.16.10",
+          "description": "900A Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.16.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0306.16.90",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg"
+        },
+        {
+          "code": "0306.16.90",
+          "description": "Langostinos"
+        },
+        {
+          "code": "0306.16.90",
+          "description": "111Q Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.16.90",
+          "description": "119H Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.16.90",
+          "description": "191R Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.16.90",
+          "description": "199J Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.16.90",
+          "description": "911J Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.16.90",
+          "description": "919B Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.16.90",
+          "description": "991K Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.16.90",
+          "description": "999C Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.17",
+          "description": "Los demás camarones, langostinos y demás decápodos Natantia"
+        },
+        {
+          "code": "0306.17.10",
+          "description": "Enteros"
+        },
+        {
+          "code": "0306.17.10",
+          "description": "100U Langostinos sin clasificar según cantidad de piezas por unidad de peso (R.2053/93 ex-ANA) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.17.10",
+          "description": "Los demas langostinos (Pleoticus muelleri)"
+        },
+        {
+          "code": "0306.17.10",
+          "description": "210C En envases inmediatos de contenido neto inferior o igual a 1 kg 10.00 10.00 3.00 LA 7.00 2.50"
+        },
+        {
+          "code": "0306.17.10",
+          "description": "220F En envases inmediatos de contenido neto superior a 1 kg pero inferior o igual a 2 kg 10.00 10.00 3.00 LA 6.00 1.50"
+        },
+        {
+          "code": "0306.17.10",
+          "description": "290D Los demás 10.00 10.00 3.00 LA 7.00 1.50"
+        },
+        {
+          "code": "0306.17.10",
+          "description": "900M Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "Langostinos (Pleoticus muelleri)"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "111C Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 1.00 3.00"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "113G Pelados y devenados 10.00 10.00 3.00 LA 1.00 1.75"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "114J Devenados sin pelar (Easy Peel) 10.00 10.00 3.00 LA 1.00 1.00"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "115L Pelados 10.00 10.00 3.00 LA 1.00 1.75"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "119V Los demás 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "191D Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "199W Los demás 10.00 10.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "En envases inmediatos de contenido neto superior a 1 kg pero inferior o igual a 2 kg"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "211H Pelados y devenados 10.00 10.00 3.00 LA 3.00 1.75"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "212K Devenados sin pelar (Easy Peel) 10.00 10.00 3.00 LA 3.00 1.25"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "213M Pelados 10.00 10.00 3.00 LA 3.00 1.75"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "214P Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 9.00 3.00"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "219A Los demas 10.00 10.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "290G Los demas 10.00 10.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "911W Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 3.00 1.75"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "913A Pelados y devenados 10.00 10.00 3.00 LA 3.00 1.75"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "914C Devenados sin pelar (Easy Peel) 10.00 10.00 3.00 LA 7.00 1.25"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "915E Pelados 10.00 10.00 3.00 LA 3.00 1.75"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "919N Los demás 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "991X Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.17.90",
+          "description": "999P Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.19",
+          "description": "Los demás, incluidos la harina, polvo y «pellets» de crustáceos, aptos para la alimentación humana"
+        },
+        {
+          "code": "0306.19.10",
+          "description": "«Krill» (Euphausia superba)"
+        },
+        {
+          "code": "0306.19.10",
+          "description": "100T Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.19.10",
+          "description": "900L Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.19.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0306.19.90",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0306.19.90",
+          "description": "110Z Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.19.90",
+          "description": "190A Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.19.90",
+          "description": "910T Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.19.90",
+          "description": "990U Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.3",
+          "description": "Vivos, frescos o refrigerados:"
+        },
+        {
+          "code": "0306.31.00",
+          "description": "Langostas (Palinurus spp, Panulirus spp, Jasus spp)"
+        },
+        {
+          "code": "0306.31.00",
+          "description": "100Q Peladas, ahumadas, incluso cocidas antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.31.00",
+          "description": "900J Las demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.32.00",
+          "description": "Bogavantes (Homarus spp)"
+        },
+        {
+          "code": "0306.32.00",
+          "description": "100C Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.32.00",
+          "description": "900W Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.33.00",
+          "description": "Cangrejos (excepto macruros)"
+        },
+        {
+          "code": "0306.33.00",
+          "description": "Pelados, ahumados, incluso cocidos antes o durante el ahumado"
+        },
+        {
+          "code": "0306.33.00",
+          "description": "110T Centolla (Lithodes santolla) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.33.00",
+          "description": "190U Los demas 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.33.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0306.33.00",
+          "description": "910L Centolla (Lithodes santolla) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.33.00",
+          "description": "990M Los demas 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.34.00",
+          "description": "Cigalas (Nephrops norvegicus)"
+        },
+        {
+          "code": "0306.34.00",
+          "description": "100B Peladas, ahumadas, incluso cocidas antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.34.00",
+          "description": "900V Las demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.35.00",
+          "description": "Camarones, langostinos y demás decápodos Natantia, de agua fría (Pandalus spp, Crangon crangon)"
+        },
+        {
+          "code": "0306.35.00",
+          "description": "100N Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.35.00",
+          "description": "900G Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.36.00",
+          "description": "Los demás camarones, langostinos y demás decápodos Natantia"
+        },
+        {
+          "code": "0306.36.00",
+          "description": "100A Langostinos sin clasificar según cantidad de piezas por unidad de peso (R.2053/93 ex- ANA) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.36.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0306.36.00",
+          "description": "Pelados, ahumados, incluso cocidos antes o durante el ahumado"
+        },
+        {
+          "code": "0306.36.00",
+          "description": "911Z Langostinos (Pleoticus Muelleri) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.36.00",
+          "description": "919R Los demas 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.36.00",
+          "description": "Los demas"
+        },
+        {
+          "code": "0306.36.00",
+          "description": "991A Langostinos (Pleoticus Muelleri) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.36.00",
+          "description": "999T Los demas 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.39",
+          "description": "Los demás, incluidos la harina, polvo y «pellets» de crustáceos, aptos para la alimentación humana"
+        },
+        {
+          "code": "0306.39.10",
+          "description": "Langostas de agua dulce (Cherax quadricarinatus)"
+        },
+        {
+          "code": "0306.39.10",
+          "description": "100W Peladas, ahumadas, incluso cocidas antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.39.10",
+          "description": "900P Las demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.39.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0306.39.90",
+          "description": "100Z Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.39.90",
+          "description": "900T Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "0306.91.00",
+          "description": "Langostas (Palinurus spp, Panulirus spp, Jasus spp)"
+        },
+        {
+          "code": "0306.91.00",
+          "description": "100A Peladas, ahumadas, incluso cocidas antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.91.00",
+          "description": "900U Las demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.92.00",
+          "description": "Bogavantes (Homarus spp)"
+        },
+        {
+          "code": "0306.92.00",
+          "description": "100M Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.92.00",
+          "description": "900F Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.93.00",
+          "description": "Cangrejos (excepto macruros)"
+        },
+        {
+          "code": "0306.93.00",
+          "description": "100Z Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.93.00",
+          "description": "900T Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.94.00",
+          "description": "Cigalas (Nephrops norvegicus)"
+        },
+        {
+          "code": "0306.94.00",
+          "description": "100L Peladas, ahumadas, incluso cocidas antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.94.00",
+          "description": "900E Las demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.95.00",
+          "description": "Camarones, langostinos y demás decápodos Natantia"
+        },
+        {
+          "code": "0306.95.00",
+          "description": "100Y Langostinos sin clasificar según cantidad de piezas por unidad de peso (R.2053/93 ex-ANA) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.95.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0306.95.00",
+          "description": "Pelados, ahumados, incluso cocidos antes o durante el ahumado"
+        },
+        {
+          "code": "0306.95.00",
+          "description": "911X Langostinos (Pleoticus Muelleri) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.95.00",
+          "description": "919P Los demas 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.95.00",
+          "description": "Los demas"
+        },
+        {
+          "code": "0306.95.00",
+          "description": "991Y Langostinos (Pleoticus Muelleri) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.95.00",
+          "description": "999Q Los demas 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.99",
+          "description": "Los demás, incluidos la harina, polvo y «pellets» de crustáceos, aptos para la alimentación humana"
+        },
+        {
+          "code": "0306.99.10",
+          "description": "Langostas de agua dulce (Cherax quadricarinatus)"
+        },
+        {
+          "code": "0306.99.10",
+          "description": "100F Peladas, ahumadas, incluso cocidas antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.99.10",
+          "description": "900Z Las demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0306.99.90",
+          "description": "100J Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0306.99.90",
+          "description": "900C Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "0307",
+      "description": "MOLUSCOS, INCLUSO SEPARADOS DE SUS VALVAS, VIVOS, FRESCOS, REFRIGERADOS, CONGELADOS,",
+      "subheadings": [
+        {
+          "code": "0307.1",
+          "description": "Ostras:"
+        },
+        {
+          "code": "0307.11.00",
+          "description": "Vivas, frescas o refrigeradas"
+        },
+        {
+          "code": "0307.11.00",
+          "description": "000A --Vivas, frescas o refrigeradas 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0307.12.00",
+          "description": "Congeladas"
+        },
+        {
+          "code": "0307.12.00",
+          "description": "000M Congeladas 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0307.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0307.19.00",
+          "description": "200G Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0307.19.00",
+          "description": "900V Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0307.2",
+          "description": "Vieiras, volandeiras y demás moluscos de los géneros Pecten, Chlamys o Placopecten:"
+        },
+        {
+          "code": "0307.21.00",
+          "description": "Vivos, frescos o refrigerados"
+        },
+        {
+          "code": "0307.21.00",
+          "description": "000P --Vivos, frescos o refrigerados 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.22.00",
+          "description": "Congelados"
+        },
+        {
+          "code": "0307.22.00",
+          "description": "100G En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP) 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0307.22.00",
+          "description": "900A Los demás 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0307.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0307.29.00",
+          "description": "100Q Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0307.29.00",
+          "description": "900J Los demás 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0307.3",
+          "description": "Mejillones (Mytilus spp, Perna spp):"
+        },
+        {
+          "code": "0307.31.00",
+          "description": "Vivos, frescos o refrigerados"
+        },
+        {
+          "code": "0307.31.00",
+          "description": "000D --Vivos, frescos o refrigerados 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0307.32.00",
+          "description": "Congelados"
+        },
+        {
+          "code": "0307.32.00",
+          "description": "100W En envases inmediatos de contenido neto inferior o igual a 1 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0307.32.00",
+          "description": "900P Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0307.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0307.39.00",
+          "description": "200K Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0307.39.00",
+          "description": "900Y Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0307.4",
+          "description": "Jibias (sepias)* y globitos; calamares y potas:"
+        },
+        {
+          "code": "0307.42.00",
+          "description": "Vivos, frescos o refrigerados"
+        },
+        {
+          "code": "0307.42.00",
+          "description": "100K Calamar (llex argentinus) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.42.00",
+          "description": "900D Los demas 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.43",
+          "description": "Congelados"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "Calamares y potas"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "Calamar (Illex argentinus)"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "110K Enteros (Res. 137/08 MEYP) 10.00 10.00 3.00 LA 7.00 1.25"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "120N Anillas sin piel (Res.137/08 MEYP) 10.00 10.00 3.00 LA 0.00 4.25"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "130R Vainas (Res. 137/08 MEYP) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "140V Picos, huevas, gónadas, trozos (Res. 137/08 MEYP) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "150Y Tentáculos sin pico y sin ojos (Res. 137/08 MEYP) 10.00 10.00 3.00 LA 7.00 3.25"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "Tubos"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "161D Limpios (Res. 137/08 MEYP) 10.00 10.00 3.00 LA 5.00 3.75"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "169W Los demás 10.00 10.00 3.00 LA 7.00 4.50"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "170E Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "190L Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.43.10",
+          "description": "900A Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.43.20",
+          "description": "Jibias (sepias)* y globitos"
+        },
+        {
+          "code": "0307.43.20",
+          "description": "000L Jibias (sepias)* y globitos 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0307.49.00",
+          "description": "100U Secos, salados o en salmuera 10.00 10.00 3.00 LA 7.00 1.75"
+        },
+        {
+          "code": "0307.49.00",
+          "description": "200Z Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 1.75"
+        },
+        {
+          "code": "0307.49.00",
+          "description": "900M Los demás 10.00 10.00 3.00 LA 7.00 1.75"
+        },
+        {
+          "code": "0307.5",
+          "description": "Pulpos (Octopus spp):"
+        },
+        {
+          "code": "0307.51.00",
+          "description": "Vivos, frescos o refrigerados"
+        },
+        {
+          "code": "0307.51.00",
+          "description": "000G --Vivos, frescos o refrigerados 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.52.00",
+          "description": "Congelados"
+        },
+        {
+          "code": "0307.52.00",
+          "description": "100Z Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.52.00",
+          "description": "900T Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.59.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0307.59.00",
+          "description": "100H Secos, salados o en salmuera 10.00 10.00 3.00 LA 7.00 1.50"
+        },
+        {
+          "code": "0307.59.00",
+          "description": "200N Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 1.50"
+        },
+        {
+          "code": "0307.59.00",
+          "description": "900B Los demás 10.00 10.00 3.00 LA 7.00 1.50"
+        },
+        {
+          "code": "0307.60.00",
+          "description": "Caracoles, excepto los de mar"
+        },
+        {
+          "code": "0307.60.00",
+          "description": "De tierra (Helix aspersa)"
+        },
+        {
+          "code": "0307.60.00",
+          "description": "110T Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.00"
+        },
+        {
+          "code": "0307.60.00",
+          "description": "190U Los demás 10.00 10.00 3.00 LA 7.00 0.00"
+        },
+        {
+          "code": "0307.60.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0307.60.00",
+          "description": "910L Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.00"
+        },
+        {
+          "code": "0307.60.00",
+          "description": "990M Los demás 10.00 10.00 3.00 LA 7.00 0.00"
+        },
+        {
+          "code": "0307.7",
+          "description": "Almejas, berberechos y arcas (familias Arcidae, Arcticidae, Cardiidae, Donacidae, Hiatellidae, Mactridae,"
+        },
+        {
+          "code": "0307.71.00",
+          "description": "Vivos, frescos o refrigerados"
+        },
+        {
+          "code": "0307.71.00",
+          "description": "000K --Vivos, frescos o refrigerados 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.72.00",
+          "description": "Congelados"
+        },
+        {
+          "code": "0307.72.00",
+          "description": "100C Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.72.00",
+          "description": "900W Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.79.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0307.79.00",
+          "description": "100L Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.79.00",
+          "description": "900E Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.8",
+          "description": "Abulones u orejas de mar (Haliotis spp) y cobos (caracoles de mar) (Strombus spp):"
+        },
+        {
+          "code": "0307.81.00",
+          "description": "Abulones u orejas de mar (Haliotis spp), vivos, frescos o refrigerados"
+        },
+        {
+          "code": "0307.81.00",
+          "description": "000Z --Abulones u orejas de mar (Haliotis spp.), vivos, frescos o refrigerados 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.82.00",
+          "description": "Cobos (caracoles de mar) (Strombus spp), vivos, frescos o refrigerados"
+        },
+        {
+          "code": "0307.82.00",
+          "description": "000L --Cobos (caracoles de mar) (Strombus spp.), vivos, frescos o refrigerados 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.83.00",
+          "description": "Abulones u orejas de mar (Haliotis spp), congelados"
+        },
+        {
+          "code": "0307.83.00",
+          "description": "000Y --Abulones u orejas de mar (Haliotis spp.), congelados 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.84.00",
+          "description": "Cobos (caracoles de mar) (Strombus spp), congelados"
+        },
+        {
+          "code": "0307.84.00",
+          "description": "000K --Cobos (caracoles de mar) (Strombus spp.), congelados 10.00 10.00 3.00 LA 7.00 0.00"
+        },
+        {
+          "code": "0307.87.00",
+          "description": "Los demás abulones u orejas de mar (Haliotis spp)"
+        },
+        {
+          "code": "0307.87.00",
+          "description": "100B Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.87.00",
+          "description": "900V Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.88.00",
+          "description": "Los demás cobos (caracoles de mar) (Strombus spp)"
+        },
+        {
+          "code": "0307.88.00",
+          "description": "100N Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.00"
+        },
+        {
+          "code": "0307.88.00",
+          "description": "900G Los demás 10.00 10.00 3.00 LA 7.00 0.00"
+        },
+        {
+          "code": "0307.9",
+          "description": "Los demás, incluidos la harina, polvo y «pellets», aptos para la alimentación humana:"
+        },
+        {
+          "code": "0307.91.00",
+          "description": "Vivos, frescos o refrigerados"
+        },
+        {
+          "code": "0307.91.00",
+          "description": "Vieiras (zygochlamis patagonica)"
+        },
+        {
+          "code": "0307.91.00",
+          "description": "110X En envases inmediatos de contenido neto inferior o igual a 1 kg. 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.91.00",
+          "description": "190Y Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.91.00",
+          "description": "900M Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0307.92.00",
+          "description": "Congelados"
+        },
+        {
+          "code": "0307.92.00",
+          "description": "Vieiras (Zygochlamys patagonica)"
+        },
+        {
+          "code": "0307.92.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0307.92.00",
+          "description": "111L Peladas, ahumadas, incluso cocidas antes o durante el ahumado 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0307.92.00",
+          "description": "119D Los demás 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0307.92.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0307.92.00",
+          "description": "191M Peladas, ahumadas, incluso cocidas antes o durante el ahumado 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0307.92.00",
+          "description": "199E Los demás 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0307.92.00",
+          "description": "900Z Los demás 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0307.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0307.99.00",
+          "description": "Vieiras (Zygochlamys patagonica)"
+        },
+        {
+          "code": "0307.99.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg."
+        },
+        {
+          "code": "0307.99.00",
+          "description": "211A Peladas, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0307.99.00",
+          "description": "219T Las demás 10.00 10.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0307.99.00",
+          "description": "290Z Los demás 10.00 10.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0307.99.00",
+          "description": "920P Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0307.99.00",
+          "description": "990M Los demás 10.00 10.00 3.00 LA 9.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "0308",
+      "description": "INVERTEBRADOS ACUÁTICOS, EXCEPTO LOS CRUSTÁCEOS Y MOLUSCOS, VIVOS, FRESCOS,",
+      "subheadings": [
+        {
+          "code": "0308.1",
+          "description": "Pepinos de mar (Stichopus japonicus, Holothuroidea):"
+        },
+        {
+          "code": "0308.11.00",
+          "description": "Vivos, frescos o refrigerados"
+        },
+        {
+          "code": "0308.11.00",
+          "description": "000U --Vivos, frescos o refrigerados 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0308.12.00",
+          "description": "Congelados"
+        },
+        {
+          "code": "0308.12.00",
+          "description": "000F --Congelados 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0308.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0308.19.00",
+          "description": "100V Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0308.19.00",
+          "description": "900N Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0308.2",
+          "description": "Erizos de mar (Strongylocentrotus spp, Paracentrotus lividus, Loxechinus albus, Echinus esculentus):"
+        },
+        {
+          "code": "0308.21.00",
+          "description": "Vivos, frescos o refrigerados"
+        },
+        {
+          "code": "0308.21.00",
+          "description": "000H --Vivos, frescos o refrigerados 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0308.22.00",
+          "description": "Congelados"
+        },
+        {
+          "code": "0308.22.00",
+          "description": "000V --Congelados 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0308.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0308.29.00",
+          "description": "100J Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0308.29.00",
+          "description": "900C Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0308.30.00",
+          "description": "Medusas (Rhopilema spp)"
+        },
+        {
+          "code": "0308.30.00",
+          "description": "100Q Peladas, ahumadas, incluso cocidas antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 1.75"
+        },
+        {
+          "code": "0308.30.00",
+          "description": "900J Las demás 10.00 10.00 3.00 LA 7.00 1.75"
+        },
+        {
+          "code": "0308.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0308.90.00",
+          "description": "100A Pelados, ahumados, incluso cocidos antes o durante el ahumado 10.00 10.00 3.00 LA 7.00 1.75"
+        },
+        {
+          "code": "0308.90.00",
+          "description": "900U Los demás 10.00 10.00 3.00 LA 7.00 1.75"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 1503
+}

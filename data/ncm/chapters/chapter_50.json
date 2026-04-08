@@ -1,0 +1,200 @@
+{
+  "chapter": "50",
+  "title": "Capítulo 14",
+  "sectionTitle": "CAP. 50 SECCION XI MATERIAS TEXTILES Y SUS MANUFACTURAS Notas. 1. Esta Sección no comprende: a. los pelos y cerdas para",
+  "headings": [
+    {
+      "code": "4303",
+      "description": "o 43.04;",
+      "subheadings": []
+    },
+    {
+      "code": "5001",
+      "description": "CAPULLOS DE SEDA APTOS PARA EL DEVANADO",
+      "subheadings": [
+        {
+          "code": "5001.00.00",
+          "description": "Capullos de seda aptos para el devanado"
+        },
+        {
+          "code": "5001.00.00",
+          "description": "000M CAPULLOS DE SEDA APTOS PARA EL DEVANADO. 4.00 4.00 3.00 LA 4.50 0.50"
+        }
+      ]
+    },
+    {
+      "code": "5002",
+      "description": "SEDA CRUDA (SIN TORCER)",
+      "subheadings": [
+        {
+          "code": "5002.00.00",
+          "description": "Seda cruda (sin torcer)"
+        },
+        {
+          "code": "5002.00.00",
+          "description": "000F SEDA CRUDA (SIN TORCER). 4.00 4.00 3.00 LA 4.50 0.50"
+        }
+      ]
+    },
+    {
+      "code": "5003",
+      "description": "DESPERDICIOS DE SEDA (INCLUIDOS LOS CAPULLOS NO APTOS PARA EL DEVANADO, DESPERDICIOS DE",
+      "subheadings": [
+        {
+          "code": "5003.00.10",
+          "description": "Sin cardar ni peinar"
+        },
+        {
+          "code": "5003.00.10",
+          "description": "000J Sin cardar ni peinar 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "5003.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "5003.00.90",
+          "description": "000M Los demás 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "5004",
+      "description": "HILADOS DE SEDA (EXCEPTO LOS HILADOS DE DESPERDICIOS DE SEDA) SIN ACONDICIONAR PARA LA",
+      "subheadings": [
+        {
+          "code": "5004.00.00",
+          "description": "Hilados de seda (excepto los hilados de desperdicios de seda) sin acondicionar para la venta al por menor"
+        },
+        {
+          "code": "5004.00.00",
+          "description": "000T HILADOS DE SEDA (EXCEPTO LOS HILADOS DE DESPERDICIOS DE SEDA) SIN ACONDICIONAR PARA LA"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LNA 3.00 3.00",
+      "subheadings": []
+    },
+    {
+      "code": "5005",
+      "description": "HILADOS DE DESPERDICIOS DE SEDA SIN ACONDICIONAR PARA LA VENTA AL POR MENOR",
+      "subheadings": [
+        {
+          "code": "5005.00.00",
+          "description": "Hilados de desperdicios de seda sin acondicionar para la venta al por menor"
+        },
+        {
+          "code": "5005.00.00",
+          "description": "000L HILADOS DE DESPERDICIOS DE SEDA SIN ACONDICIONAR PARA LA VENTA AL POR MENOR. 18.00 18.00 3.00 LNA 3.00 3.00"
+        }
+      ]
+    },
+    {
+      "code": "5006",
+      "description": "HILADOS DE SEDA O DE DESPERDICIOS DE SEDA, ACONDICIONADOS PARA LA VENTA AL POR MENOR;",
+      "subheadings": [
+        {
+          "code": "5006.00.00",
+          "description": "Hilados de seda o de desperdicios de seda, acondicionados para la venta al por menor; «pelo de Mesina» («crin de"
+        },
+        {
+          "code": "5006.00.00",
+          "description": "000E HILADOS DE SEDA O DE DESPERDICIOS DE SEDA, ACONDICIONADOS PARA LA VENTA AL POR MENOR;"
+        }
+      ]
+    },
+    {
+      "code": "5007",
+      "description": "TEJIDOS DE SEDA O DE DESPERDICIOS DE SEDA",
+      "subheadings": [
+        {
+          "code": "5007.10",
+          "description": "Tejidos de borrilla"
+        },
+        {
+          "code": "5007.10.10",
+          "description": "Estampados, teñidos o de hilados de distintos colores"
+        },
+        {
+          "code": "5007.10.10",
+          "description": "000X Estampados, teñidos o de hilados de distintos colores 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "5007.10.90",
+          "description": "000A Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.20",
+          "description": "Los demás tejidos con un contenido de seda o de desperdicios de seda, distintos de la borrilla, superior o igual al 85"
+        },
+        {
+          "code": "5007.20.10",
+          "description": "Estampados, teñidos o de hilados de distintos colores"
+        },
+        {
+          "code": "5007.20.10",
+          "description": "100R De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.20.10",
+          "description": "200X De peso superior o igual a 100 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.20.10",
+          "description": "900K Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "5007.20.90",
+          "description": "100V De peso inferior a 100 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.20.90",
+          "description": "200A De peso superior o igual a 100 g/m2 pero inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.20.90",
+          "description": "900N Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.90.00",
+          "description": "Los demás tejidos"
+        },
+        {
+          "code": "5007.90.00",
+          "description": "100F Mezclados exclusiva o principalmente con lana 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.90.00",
+          "description": "200L Mezclados exclusiva o principalmente con ramio 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.90.00",
+          "description": "300R Mezclados exclusiva o principalmente con fibras de nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.90.00",
+          "description": "400X Mezclados exclusiva o principalmente con fibras de poliésteres 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.90.00",
+          "description": "500C Mezclados exclusiva o principalmente con fibras de rayón viscosa. 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5007.90.00",
+          "description": "900Z Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 45
+}

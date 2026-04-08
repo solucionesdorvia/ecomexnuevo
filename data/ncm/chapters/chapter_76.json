@@ -1,0 +1,926 @@
+{
+  "chapter": "76",
+  "title": "Capítulo 71",
+  "sectionTitle": "CAP. 76 SECCION XV METALES COMUNES Y MANUFACTURAS DE ESTOS METALES Notas. 1. Esta Sección no comprende: a. los colores y",
+  "headings": [
+    {
+      "code": "3207",
+      "description": "a 32.10, 32.12, 32.13 ó 32.15);",
+      "subheadings": []
+    },
+    {
+      "code": "7601",
+      "description": "ALUMINIO EN BRUTO",
+      "subheadings": [
+        {
+          "code": "7601.10.00",
+          "description": "Aluminio sin alear"
+        },
+        {
+          "code": "7601.10.00",
+          "description": "100N Con un contenido de aluminio superior o igual al 99,7% en peso, hierro inferior o igual al 0,20% en peso y silicio inferior"
+        },
+        {
+          "code": "7601.10.00",
+          "description": "900G Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7601.20.00",
+          "description": "Aleaciones de aluminio"
+        },
+        {
+          "code": "7601.20.00",
+          "description": "000X -Aleaciones de aluminio 6.00 6.00 3.00 LNA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7602",
+      "description": "DESPERDICIOS Y DESECHOS, DE ALUMINIO",
+      "subheadings": [
+        {
+          "code": "7602.00.00",
+          "description": "Desperdicios y desechos, de aluminio"
+        },
+        {
+          "code": "7602.00.00",
+          "description": "100T Manufacturas inservibles 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7602.00.00",
+          "description": "900L Los demás 0.00 0.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7603",
+      "description": "POLVO Y ESCAMILLAS, DE ALUMINIO",
+      "subheadings": [
+        {
+          "code": "7603.10.00",
+          "description": "Polvo de estructura no laminar"
+        },
+        {
+          "code": "7603.10.00",
+          "description": "100A De grano esferico que presente una distribución de partículas inferior o igual a 60 micrómetros, con un contenido de"
+        },
+        {
+          "code": "7603.10.00",
+          "description": "900U Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7603.20.00",
+          "description": "Polvo de estructura laminar; escamillas"
+        },
+        {
+          "code": "7603.20.00",
+          "description": "000J -Polvo de estructura laminar; escamillas 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7604",
+      "description": "BARRAS Y PERFILES, DE ALUMINIO",
+      "subheadings": [
+        {
+          "code": "7604.10",
+          "description": "De aluminio sin alear"
+        },
+        {
+          "code": "7604.10.10",
+          "description": "Barras"
+        },
+        {
+          "code": "7604.10.10",
+          "description": "000Y Barras 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7604.10.21",
+          "description": "Huecos"
+        },
+        {
+          "code": "7604.10.21",
+          "description": "000Q Huecos 12.00 12.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7604.10.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "7604.10.29",
+          "description": "100G De sección transversal abierta y cuyo espesor máximo sea inferior a 1,30 mm, que sean utilizados con destino"
+        }
+      ]
+    },
+    {
+      "code": "1200",
+      "description": "12.00 3.00 LNA 3.00 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "7605",
+      "description": "ALAMBRE DE ALUMINIO",
+      "subheadings": [
+        {
+          "code": "7605.1",
+          "description": "De aluminio sin alear:"
+        },
+        {
+          "code": "7605.11",
+          "description": "Con la mayor dimensión de la sección transversal superior a 7 mm"
+        },
+        {
+          "code": "7605.11.10",
+          "description": "Con un contenido de aluminio superior o igual al 99,45 % en peso y una resistividad eléctrica inferior o igual a 0,0283"
+        },
+        {
+          "code": "7605.11.10",
+          "description": "000D Con un contenido de aluminio superior o igual al 99,45 % en peso y una resistividad electrica inferior o igual a 0,0283"
+        }
+      ]
+    },
+    {
+      "code": "1200",
+      "description": "12.00 3.00 LA 3.00 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "7606",
+      "description": "CHAPAS Y TIRAS, DE ALUMINIO, DE ESPESOR SUPERIOR A 0,2 MM",
+      "subheadings": [
+        {
+          "code": "7606.1",
+          "description": "Cuadradas o rectangulares:"
+        },
+        {
+          "code": "7606.11",
+          "description": "De aluminio sin alear"
+        },
+        {
+          "code": "7606.11.10",
+          "description": "Con un contenido de silicio superior o igual al 0,05 % pero inferior o igual al 0,20 %, en peso, hierro superior o igual al"
+        },
+        {
+          "code": "7606.11.10",
+          "description": "000X Con un contenido de silicio superior o igual al 0,05 % pero inferior o igual al 0,20 %, en peso, hierro superior o igual al"
+        },
+        {
+          "code": "7606.11.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7606.11.90",
+          "description": "000A Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7606.12",
+          "description": "De aleaciones de aluminio"
+        },
+        {
+          "code": "7606.12.10",
+          "description": "Con un contenido de magnesio superior o igual al 4 % pero inferior o igual al 5 %, en peso, manganeso superior o igual"
+        },
+        {
+          "code": "7606.12.10",
+          "description": "000J Con un contenido de magnesio superior o igual al 4 % pero inferior o igual al 5 %, en peso, manganeso superior o igual"
+        },
+        {
+          "code": "7606.12.20",
+          "description": "Con un contenido de aluminio superior o igual al 99 % en peso y de magnesio superior al 0,10 % en peso, de espesor"
+        },
+        {
+          "code": "7606.12.20",
+          "description": "000U Con un contenido de aluminio superior o igual al 99 % en peso y de magnesio superior al 0,10 % en peso, de espesor"
+        },
+        {
+          "code": "7606.12.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7606.12.90",
+          "description": "100T Con un contenido de magnesio superior o igual al 0,80 % pero inferior o igual al 1,30 %, en peso, manganeso superior"
+        }
+      ]
+    },
+    {
+      "code": "1200",
+      "description": "2.00 3.00 LA 3.00 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "7607",
+      "description": "HOJAS Y TIRAS, DELGADAS, DE ALUMINIO (INCLUSO IMPRESAS O FIJADAS SOBRE PAPEL, CARTÓN,",
+      "subheadings": [
+        {
+          "code": "7607.1",
+          "description": "Sin soporte:"
+        },
+        {
+          "code": "7607.11",
+          "description": "Simplemente laminadas"
+        },
+        {
+          "code": "7607.11.10",
+          "description": "Con un contenido de aluminio superior o igual al 99 % en peso y de magnesio superior al 0,06 % en peso, de espesor"
+        },
+        {
+          "code": "7607.11.10",
+          "description": "000Q Con un contenido de aluminio superior o igual al 99 % en peso y de magnesio superior al 0,06 % en peso, de espesor"
+        },
+        {
+          "code": "7607.11.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7607.11.90",
+          "description": "100Z Lisas, con un contenido de aluminio superior o igual al 99,2%, en peso, de espesor inferior o igual a 6 micrómetros, en"
+        },
+        {
+          "code": "7607.11.90",
+          "description": "De anchura inferior o igual a 1300 mm"
+        },
+        {
+          "code": "7607.11.90",
+          "description": "911Y De espesor superior o igual a 0,006 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7607.11.90",
+          "description": "919Q Las demas 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7607.11.90",
+          "description": "990X Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7607.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "7607.19.10",
+          "description": "Grabadas, incluso con capa de óxido de aluminio, de espesor inferior o igual a 110 micrómetros y un contenido de"
+        },
+        {
+          "code": "7607.19.10",
+          "description": "000L Grabadas, incluso con capa de óxido de aluminio, de espesor inferior o igual a 110 micrómetros y un contenido de"
+        },
+        {
+          "code": "7607.19.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7607.19.90",
+          "description": "Impresas"
+        },
+        {
+          "code": "7607.19.90",
+          "description": "110Y Revestidas de cera 12.00 12.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7607.19.90",
+          "description": "120B Revestidas de polímeros acrilicos o vinílicos, en una cara, y de nitrocelulosa, polímeros vinílicos o poliesteres en la otra"
+        },
+        {
+          "code": "7607.19.90",
+          "description": "190Z Las demás 12.00 12.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7607.19.90",
+          "description": "910R Revestidas de cera 12.00 12.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7607.19.90",
+          "description": "920V Revestidas de polímeros acrilicos o vinílicos, en una cara, y de nitrocelulosa, polímeros vinílicos o poliesteres en la otra"
+        },
+        {
+          "code": "7607.19.90",
+          "description": "990T Las demás 12.00 12.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7607.20.00",
+          "description": "Con soporte"
+        },
+        {
+          "code": "7607.20.00",
+          "description": "100N únicamente de papel revestido de cera 12.00 12.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7607.20.00",
+          "description": "200U De poliamida biorientada, en una cara, y de poli(cloruro de vinilo), en la otra cara, de los tipos utilizados en la industria"
+        },
+        {
+          "code": "7607.20.00",
+          "description": "900G Las demás 12.00 12.00 3.00 LNA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7608",
+      "description": "TUBOS DE ALUMINIO",
+      "subheadings": [
+        {
+          "code": "7608.10.00",
+          "description": "De aluminio sin alear"
+        },
+        {
+          "code": "7608.10.00",
+          "description": "100T Conformados en las dimensiones finales para utilizacion en vehiculos o autopartes. 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7608.10.00",
+          "description": "200Y Sin conformar, de diametro exterior inferior o igual a 130 mm, incluso presentados en rollo. 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7608.10.00",
+          "description": "900L Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7608.20",
+          "description": "De aleaciones de aluminio"
+        },
+        {
+          "code": "7608.20.10",
+          "description": "Sin costura, extrudidos y trefilados según Norma ASTM B210, de sección circular, de aleación AA 6061 («Aluminium"
+        },
+        {
+          "code": "7608.20.10",
+          "description": "100R Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7608.20.10",
+          "description": "900K Las demas 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7608.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7608.20.90",
+          "description": "Solamente cortado o conformados, en dimensiones apropiadas como piezas de vehículos automóviles"
+        },
+        {
+          "code": "7608.20.90",
+          "description": "110Y Tubo de aluminio (ALMn1 según DIN 1725), con recubrimiento de poliamida-12(PA12) de espesor superior o igual a"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LA 3.00 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "7609",
+      "description": "ACCESORIOS DE TUBERÍA (POR EJEMPLO: EMPALMES (RACORES), CODOS, MANGUITOS) DE ALUMINIO",
+      "subheadings": [
+        {
+          "code": "7609.00.00",
+          "description": "Accesorios de tubería (por ejemplo: empalmes (racores), codos, manguitos) de aluminio"
+        },
+        {
+          "code": "7609.00.00",
+          "description": "000R ACCESORIOS DE TUBERIA (POR EJEMPLO: EMPALMES (RACORES), CODOS, MANGUITOS) DE ALUMINIO 14.00 14.00 3.00 LA 3.00 4.50"
+        }
+      ]
+    },
+    {
+      "code": "7610",
+      "description": "CONSTRUCCIONES Y SUS PARTES (POR EJEMPLO: PUENTES Y SUS PARTES, TORRES, CASTILLETES,",
+      "subheadings": [
+        {
+          "code": "7610.10.00",
+          "description": "Puertas y ventanas, y sus marcos, contramarcos y umbrales"
+        },
+        {
+          "code": "7610.10.00",
+          "description": "100Q Puertas y sus marcos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7610.10.00",
+          "description": "200W Ventanas y sus marcos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7610.10.00",
+          "description": "900J Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7610.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7610.90.00",
+          "description": "Chapas, barras, perfiles, tubos y similares preparados para la construcción"
+        },
+        {
+          "code": "7610.90.00",
+          "description": "110G Barras 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7610.90.00",
+          "description": "120K Perfiles 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7610.90.00",
+          "description": "190H Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7610.90.00",
+          "description": "200J Armazones para techumbre 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7610.90.00",
+          "description": "900X Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7611",
+      "description": "DEPÓSITOS, CISTERNAS, CUBAS Y RECIPIENTES SIMILARES PARA CUALQUIER MATERIA (EXCEPTO GAS",
+      "subheadings": [
+        {
+          "code": "7611.00.00",
+          "description": "Depósitos, cisternas, cubas y recipientes similares para cualquier materia (excepto gas comprimido o licuado), de"
+        },
+        {
+          "code": "7611.00.00",
+          "description": "100V De capacidad inferior o igual a 500 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7611.00.00",
+          "description": "200A De capacidad superior a 500 l pero inferior o igual a 1.000 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7611.00.00",
+          "description": "300F De capacidad superior a 1.000 l pero inferior o igual a 5.000 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7611.00.00",
+          "description": "400L De capacidad superior a 5.000 l pero inferior o igual a 10.000 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7611.00.00",
+          "description": "500R De capacidad superior a 10.000 l pero inferior o igual a 20.000 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7611.00.00",
+          "description": "900N Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7612",
+      "description": "DEPÓSITOS, BARRILES, TAMBORES, BIDONES, BOTES, CAJAS Y RECIPIENTES SIMILARES, DE ALUMINIO",
+      "subheadings": [
+        {
+          "code": "7612.10.00",
+          "description": "Envases tubulares flexibles"
+        },
+        {
+          "code": "7612.10.00",
+          "description": "100C De capacidad inferior o igual a 0,15 l 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.10.00",
+          "description": "200H De capacidad superior a 0,15 l pero inferior o igual a 0,25 l 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.10.00",
+          "description": "300N De capacidad superior a 0,25 l pero inferior o igual a 0,5 l 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.10.00",
+          "description": "400U De capacidad superior a 0,5 l pero inferior o igual a 0,75 l 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.10.00",
+          "description": "900W Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7612.90.11",
+          "description": "Para aerosoles, de capacidad inferior o igual a 700 cm3"
+        },
+        {
+          "code": "7612.90.11",
+          "description": "000C Para aerosoles, de capacidad inferior o igual a 700 cm3 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.90.12",
+          "description": "Isotérmicos refrigerados a nitrógeno líquido, de los tipos utilizados para semen, sangre, tejidos biológicos y productos"
+        },
+        {
+          "code": "7612.90.12",
+          "description": "000K Isotermicos refrigerados a nitrógeno líquido, de los tipos utilizados para semen, sangre, tejidos biológicos y productos"
+        },
+        {
+          "code": "7612.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "7612.90.19",
+          "description": "De los tipos utilizados para bebidas"
+        },
+        {
+          "code": "7612.90.19",
+          "description": "110X De capacidad inferior o igual a 0,25 l 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.90.19",
+          "description": "120A De capacidad superior a 0,25 l pero inferior o igual a 0,5 l 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.90.19",
+          "description": "130D De capacidad superior a 0,5 l pero inferior o igual a 0,75 l 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.90.19",
+          "description": "190Y Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.90.19",
+          "description": "910Q De capacidad inferior o igual a 0,25 l 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.90.19",
+          "description": "920U De capacidad superior a 0,25 l pero inferior o igual a 0,5 l 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.90.19",
+          "description": "930X De capacidad superior a 0,5 l pero inferior o igual a 0,75 l 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.90.19",
+          "description": "990R Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7612.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7612.90.90",
+          "description": "100D De capacidad inferior o igual a 50 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7612.90.90",
+          "description": "200J De capacidad superior a 50 l pero inferior o igual a 100 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7612.90.90",
+          "description": "900X Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7613",
+      "description": "RECIPIENTES PARA GAS COMPRIMIDO O LICUADO, DE ALUMINIO",
+      "subheadings": [
+        {
+          "code": "7613.00.00",
+          "description": "Recipientes para gas comprimido o licuado, de aluminio"
+        },
+        {
+          "code": "7613.00.00",
+          "description": "100G De capacidad inferior o igual a 0,5 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7613.00.00",
+          "description": "200M De capacidad superior a 0,5 l pero inferior o igual a 1 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7613.00.00",
+          "description": "300T De capacidad superior a 1 l pero inferior o igual a 5 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7613.00.00",
+          "description": "400Y De capacidad superior a 5 l pero inferior o igual a 10 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7613.00.00",
+          "description": "500D De capacidad superior a 10 l pero inferior o igual a 20 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7613.00.00",
+          "description": "600J De capacidad superior a 20 l pero inferior o igual a 30 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7613.00.00",
+          "description": "700P De capacidad superior a 30 l pero inferior o igual a 50 l 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7613.00.00",
+          "description": "900A Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7614",
+      "description": "CABLES, TRENZAS Y SIMILARES, DE ALUMINIO, SIN AISLAR PARA ELECTRICIDAD",
+      "subheadings": [
+        {
+          "code": "7614.10",
+          "description": "Con alma de acero"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "Cables"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "De sección nominal inferior a 150/25 mm2, según norma IRAM 2187 y equivalentes de otras normas (R.308/96"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "110C Inferior a 50/8 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "120F Superior o igual a 50/8 mm2 pero inferior a 70/12 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "130J Superior o igual a 70/12 mm2 pero inferior a 95/15 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "140M Superior o igual a 95/15 mm2 pero inferior a 120/20 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "150Q Superior o igual a 120/20 mm2 pero inferior a 150/25 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "De sección nominal superior o igual a 150/25 mm2 según norma IRAM 2187 y equivalentes de otras normas (R.308/96"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "210H Inferior a 185/30 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "220L Superior o igual a 185/30 mm2 pero inferior a 240/40 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "230P Superior o igual a 240/40 mm2 pero inferior a 300/50 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "240T Superior o igual a 300/50 mm2 pero inferior a 317/28 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "250W Superior o igual a 317/28 mm2 pero inferior a 435/55 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "290J Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.10.10",
+          "description": "900T Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7614.10.90",
+          "description": "000X Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "Cables"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "De aleación de aluminio"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "De sección nominal inferior a 70 mm2 (R.308/96 MEOSP)"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "111T Inferior a 16 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "112V Superior o igual a 16 mm2 pero inferior a 25 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "113X Superior o igual a 25 mm2 pero inferior a 35 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "114Z Superior o igual a 35 mm2 pero inferior a 50 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "115B Superior o igual a 50 mm2 pero inferior a 70 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "De sección nominal superior o igual a 70 mm2"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "121W Inferior a 95 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "122Y Superior o igual a 95 mm2 pero inferior a 120 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "123A Superior o igual a 120 mm2 pero inferior a 150 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "124C Superior o igual a 150 mm2 pero inferior a 185 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "125E Superior o igual a 185 mm2 pero inferior a 240 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "129N Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "911L Inferior a 16 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "912N Superior o igual a 16 mm2 pero inferior a 25 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "913Q Superior o igual a 25 mm2 pero inferior a 35 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "914T Superior o igual a 35 mm2 pero inferior a 50 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "915V Superior o igual a 50 mm2 pero inferior a 70 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "De sección nominal superior o igual a 70 mm2 (R.308/96 MEOSP)"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "921P Inferior a 95 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "922R Superior o igual a 95 mm2 pero inferior a 120 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "923U Superior o igual a 120 mm2 pero inferior a 150 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "924W Superior o igual a 150 mm2 pero inferior a 185 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "925Y Superior o igual a 185 mm2 pero inferior a 240 mm2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.10",
+          "description": "929G Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7614.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7614.90.90",
+          "description": "000K Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7615",
+      "description": "ARTÍCULOS DE USO DOMÉSTICO, HIGIENE O TOCADOR, Y SUS PARTES, DE ALUMINIO; ESPONJAS,",
+      "subheadings": [
+        {
+          "code": "7615.10.00",
+          "description": "Artículos de uso doméstico y sus partes; esponjas, estropajos, guantes y artículos similares para fregar, lustrar o usos"
+        },
+        {
+          "code": "7615.10.00",
+          "description": "100H Esponjas, estropajos, guantes y artículos similares para fregar, lustrar o usos análogos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7615.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7615.10.00",
+          "description": "910E Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7615.10.00",
+          "description": "991H Radiadores para calefacción central, de calentamiento no electrico, incluidos los elementos radiadores presentados"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "7616",
+      "description": "LAS DEMÁS MANUFACTURAS DE ALUMINIO",
+      "subheadings": [
+        {
+          "code": "7616.10.00",
+          "description": "Puntas, clavos, grapas apuntadas, tornillos, pernos, tuercas, escarpias roscadas, remaches, pasadores, clavijas,"
+        },
+        {
+          "code": "7616.10.00",
+          "description": "100B Tornillos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7616.10.00",
+          "description": "200G Tuercas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7616.10.00",
+          "description": "Remaches"
+        },
+        {
+          "code": "7616.10.00",
+          "description": "310Q Parcialmente huecos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7616.10.00",
+          "description": "390R Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7616.10.00",
+          "description": "400T Arandelas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7616.10.00",
+          "description": "900V Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7616.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "7616.91.00",
+          "description": "Telas metálicas, redes y rejas, de alambre de aluminio"
+        },
+        {
+          "code": "7616.91.00",
+          "description": "000W --Telas metálicas, redes y rejas, de alambre de aluminio 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7616.99.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7616.99.00",
+          "description": "100X Aptos para estar en contacto con alimentos 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7616.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7616.99.00",
+          "description": "910U Cajas, estuches y similares 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7616.99.00",
+          "description": "920X Capuchones de aleación de aluminio (R.67/18 SI) 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7616.99.00",
+          "description": "990V Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 291
+}

@@ -1,0 +1,704 @@
+{
+  "chapter": "49",
+  "title": "Capítulo 49",
+  "sectionTitle": "CAP. 49 SECCION X PASTA DE MADERA O DE LAS DEMAS MATERIAS FIBROSAS CELULOSICAS; PAPEL O CARTON PARA RECICLAR (DESPERDICI",
+  "headings": [
+    {
+      "code": "4901",
+      "description": "LIBROS, FOLLETOS E IMPRESOS SIMILARES, INCLUSO EN HOJAS SUELTAS",
+      "subheadings": [
+        {
+          "code": "4901.10.00",
+          "description": "En hojas sueltas, incluso plegadas"
+        },
+        {
+          "code": "4901.10.00",
+          "description": "En juegos o surtidos"
+        },
+        {
+          "code": "4901.10.00",
+          "description": "110K Elementos complementarios indispensables para la utilización de los impresos y que no posean valor propio de"
+        },
+        {
+          "code": "4901.10.00",
+          "description": "120N Elementos complementarios no indispensables para la utilización de los impresos o que posean valor propio de"
+        },
+        {
+          "code": "4901.10.00",
+          "description": "190L Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.10.00",
+          "description": "900A Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "4901.91.00",
+          "description": "Diccionarios y enciclopedias, incluso en fascículos"
+        },
+        {
+          "code": "4901.91.00",
+          "description": "En juegos o surtidos"
+        },
+        {
+          "code": "4901.91.00",
+          "description": "110K Elementos complementarios indispensables para la utilización de los impresos y que no posean valor propio de"
+        },
+        {
+          "code": "4901.91.00",
+          "description": "120N Elementos complementarios no indispensables para la utilización de los impresos o que posean valor propio de"
+        },
+        {
+          "code": "4901.91.00",
+          "description": "190L Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.91.00",
+          "description": "900A Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "En juegos o surtidos"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "Elementos complementarios indispensables para la utilización de los impresos y que no posean valor propio de"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "111H Que contengan agar-agar 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "112K Que contengan preparaciones de belleza o maquillaje 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "113M Que contengan algún artículo de la partida 95,03 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "119A Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "Elementos complementarios no indispensables para la utilización de los impresos o que posean valor propio de"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "121L Que contengan agar-agar 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "122N Que contengan preparaciones de belleza o maquillaje 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "123Q Que contengan algún artículo de la partida 95,03 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "129D Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "190G Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "910Z Directorios 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "Guías turísticas"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "921E De contenido exclusivamente cultural (datos históricos, geográficos, de gobierno o de índole similar), de un país o de"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "929X Las demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "930F Horarios de vuelo 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "940J Productos alcanzados por la Res. 163/2005 SCT 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4901.99.00",
+          "description": "990A Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4902",
+      "description": "DIARIOS Y PUBLICACIONES PERIÓDICAS, IMPRESOS, INCLUSO ILUSTRADOS O CON PUBLICIDAD",
+      "subheadings": [
+        {
+          "code": "4902.10.00",
+          "description": "Que se publiquen cuatro veces por semana como mínimo"
+        },
+        {
+          "code": "4902.10.00",
+          "description": "100A Con fecha de publicación que no exceda de 10 días de antigüedad (R.36/96 MEOSP) 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.10.00",
+          "description": "900U Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "En juegos (surtidos), con fecha de publicación que no exceda los 30 días de antigüedad y con más del 30% de su"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "Elementos complementarios indispensables para la utilización de los impresos y que no posean valor propio de"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "111U Que contengan algún artículo de la partida 95,03 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "119L Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "Elementos complementarios no indispensables para la utilización de los impresos que posean valor propio de"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "121X Que contengan algún artículo de la partida 95,03 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "129P Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "190T Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "En juegos (surtidos), con fecha de publicación que no exceda los 30 días de antigüedad y con el 30% o menos de su"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "211Z Que contengan algún artículo de la partida 95,03 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "219R Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "221C Que contengan algún artículo de la partida 95,03 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "229V Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "290Y Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "Otros, en juegos (surtidos) y con más del 30% de su publicidad, medida en cm2 calculados sobre la superficie"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "711B Que contengan algún artículo de la partida 95,03 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "719U Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "721E Que contengan algún artículo de la partida 95,03 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "729X Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "790A Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "Otros, en juegos (surtidos) y con el 30% o menos de su publicidad, medida en cm2 calculados sobre la superficie"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "811G Que contengan algún artículo de la partida 95,03 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "819Z Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "821K Que contengan algún artículo de la partida 95,03 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "829C Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "890F Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "910K Con fecha de publicación que no exceda de 30 días de antigüedad y con más del 30% de su publicidad, medida en"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "920N Con fecha de publicación que no exceda de 30 días de antigüedad y con el 30% o menos de su publicidad, medida en"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "980H Otros, con más del 30 % de su publicidad, medida en cm2 calculados sobre la superficie geométrica regular que ocupa"
+        },
+        {
+          "code": "4902.90.00",
+          "description": "990L Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4903",
+      "description": "ÁLBUMES O LIBROS DE ESTAMPAS Y CUADERNOS PARA DIBUJAR O COLOREAR, PARA NIÑOS",
+      "subheadings": [
+        {
+          "code": "4903.00.00",
+          "description": "Álbumes o libros de estampas y cuadernos para dibujar o colorear, para niños"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "En juegos o surtidos"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "Elementos complementarios indispensables para la utilización de los impresos y que no posean valor propio de"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "111K Que contengan algún artículo de la partida 95,03 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "119C Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "Elementos complementarios no indispensables para la utilización de los impresos que posean valor propio de"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "121N Que contengan algún artículo de la partida 95,03 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "129F Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "191L Álbumes o libros de estampas de hojas rígidas, con somero texto (R.300/01 ME) 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "199D Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "Álbumes o libros de estampas de hojas rígidas, con somero texto (R.300/01 ME)"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "911D Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "919W Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "991E Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4903.00.00",
+          "description": "999X Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4904",
+      "description": "MÚSICA MANUSCRITA O IMPRESA, INCLUSO CON ILUSTRACIONES O ENCUADERNADA",
+      "subheadings": [
+        {
+          "code": "4904.00.00",
+          "description": "Música manuscrita o impresa, incluso con ilustraciones o encuadernada"
+        },
+        {
+          "code": "4904.00.00",
+          "description": "En juegos o surtidos"
+        },
+        {
+          "code": "4904.00.00",
+          "description": "Elementos complementarios"
+        },
+        {
+          "code": "4904.00.00",
+          "description": "111D Indispensables para la utilización de los impresos y que no posean valor propio de comercialización (precio no"
+        },
+        {
+          "code": "4904.00.00",
+          "description": "119W Los demás 0.00 0.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4904.00.00",
+          "description": "190C Los demás 0.00 0.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4904.00.00",
+          "description": "900R Los demás 0.00 0.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4905",
+      "description": "MANUFACTURAS CARTOGRÁFICAS DE TODAS CLASES, INCLUIDOS LOS MAPAS MURALES, PLANOS",
+      "subheadings": [
+        {
+          "code": "4905.10.00",
+          "description": "Esferas"
+        },
+        {
+          "code": "4905.10.00",
+          "description": "100F Productos alcanzados por la Res. 163/2005 SCT 4.00 4.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4905.10.00",
+          "description": "900Z Los demás 4.00 4.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4905.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "4905.91.00",
+          "description": "En forma de libros o folletos"
+        },
+        {
+          "code": "4905.91.00",
+          "description": "000A --En formas de libros o folletos 2.00 2.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4905.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4905.99.00",
+          "description": "Mapas"
+        },
+        {
+          "code": "4905.99.00",
+          "description": "110E Que representen accidentes geográficos naturales 4.00 4.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4905.99.00",
+          "description": "120H De carreteras 4.00 4.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4905.99.00",
+          "description": "190F Los demás 4.00 4.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4905.99.00",
+          "description": "200G Planos topográficos o catastrales 4.00 4.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4905.99.00",
+          "description": "900V Los demás 4.00 4.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4906",
+      "description": "PLANOS Y DIBUJOS ORIGINALES HECHOS A MANO, DE ARQUITECTURA, INGENIERÍA, INDUSTRIALES,",
+      "subheadings": [
+        {
+          "code": "4906.00.00",
+          "description": "Planos y dibujos originales hechos a mano, de arquitectura, ingeniería, industriales, comerciales, topográficos o"
+        },
+        {
+          "code": "4906.00.00",
+          "description": "100K Planos originales hechos a mano 4.00 4.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4906.00.00",
+          "description": "200Q Dibujos originales hechos a mano 4.00 4.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4906.00.00",
+          "description": "300W Textos manuscritos 4.00 4.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4906.00.00",
+          "description": "400B Reproducciones fotográficas sobre papel sensibilizado 4.00 4.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4906.00.00",
+          "description": "900D Los demás 4.00 4.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4907",
+      "description": "SELLOS (ESTAMPILLAS) DE CORREOS, TIMBRES FISCALES Y ANÁLOGOS, SIN OBLITERAR, QUE TENGAN O",
+      "subheadings": [
+        {
+          "code": "4907.00.10",
+          "description": "Billetes de banco"
+        },
+        {
+          "code": "4907.00.10",
+          "description": "100N Destinados a tener curso legal en el país importador (R.747/95 MEOSP) 0.00 0.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "4907.00.10",
+          "description": "900G Los demás 0.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4907.00.20",
+          "description": "Cheques de viajero"
+        },
+        {
+          "code": "4907.00.20",
+          "description": "100Y En pliegos 0.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4907.00.20",
+          "description": "900R Los demás 0.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4907.00.30",
+          "description": "Títulos de acciones u obligaciones y títulos similares, convalidados y firmados"
+        },
+        {
+          "code": "4907.00.30",
+          "description": "100H Cartas de crédito 0.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4907.00.30",
+          "description": "200N Letras de cambio 0.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4907.00.30",
+          "description": "300U Cheques (Res.N° 9/02 AFIP) 0.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4907.00.30",
+          "description": "900B Los demás 0.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4907.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4907.00.90",
+          "description": "100R Sellos de correo, timbres fiscales y análogos, de curso legal o destinados a tener curso legal en el país de destino"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LNA 3.00 6.50",
+      "subheadings": []
+    },
+    {
+      "code": "4908",
+      "description": "CALCOMANÍAS DE CUALQUIER CLASE",
+      "subheadings": [
+        {
+          "code": "4908.10.00",
+          "description": "Calcomanías vitrificables"
+        },
+        {
+          "code": "4908.10.00",
+          "description": "000F -Calcomanías vitrificables 16.00 16.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "4908.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4908.90.00",
+          "description": "Productos alcanzados por la Res. 163/2005 SCT"
+        },
+        {
+          "code": "4908.90.00",
+          "description": "110C Tatuajes temporales 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4908.90.00",
+          "description": "190D Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4908.90.00",
+          "description": "900T Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4909",
+      "description": "TARJETAS POSTALES IMPRESAS O ILUSTRADAS; TARJETAS IMPRESAS CON FELICITACIONES O",
+      "subheadings": [
+        {
+          "code": "4909.00.00",
+          "description": "Tarjetas postales impresas o ilustradas; tarjetas impresas con felicitaciones o comunicaciones personales, incluso con"
+        },
+        {
+          "code": "4909.00.00",
+          "description": "Tarjetas postales impresas o ilustradas"
+        },
+        {
+          "code": "4909.00.00",
+          "description": "110U Con sobres 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4909.00.00",
+          "description": "190V Las demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4909.00.00",
+          "description": "Tarjetas impresas con felicitaciones o comunicaciones personales, incluso con ilustraciones, adornos o aplicaciones, o"
+        },
+        {
+          "code": "4909.00.00",
+          "description": "210Z Con sobres 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4909.00.00",
+          "description": "290A Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4910",
+      "description": "CALENDARIOS DE CUALQUIER CLASE IMPRESOS, INCLUIDOS LOS TACOS DE CALENDARIO",
+      "subheadings": [
+        {
+          "code": "4910.00.00",
+          "description": "Calendarios de cualquier clase impresos, incluidos los tacos de calendario"
+        },
+        {
+          "code": "4910.00.00",
+          "description": "De pared"
+        },
+        {
+          "code": "4910.00.00",
+          "description": "110Y Inferior o igual a tres láminas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4910.00.00",
+          "description": "120B Superior a tres láminas pero inferior o igual a seis 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4910.00.00",
+          "description": "190Z Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4910.00.00",
+          "description": "900N Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4911",
+      "description": "LOS DEMÁS IMPRESOS, INCLUIDAS LAS ESTAMPAS, GRABADOS Y FOTOGRAFÍAS",
+      "subheadings": [
+        {
+          "code": "4911.10",
+          "description": "Impresos publicitarios, catálogos comerciales y similares"
+        },
+        {
+          "code": "4911.10.10",
+          "description": "Que contengan información relativa al funcionamiento, mantenimiento, reparación o utilización de máquinas, aparatos,"
+        },
+        {
+          "code": "4911.10.10",
+          "description": "000G Que contengan información relativa al funcionamiento, mantenimiento, reparación o utilización de máquinas, aparatos,"
+        },
+        {
+          "code": "4911.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4911.10.90",
+          "description": "100Q Guías turísticas 16.00 16.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "4911.10.90",
+          "description": "Unicamente impresos, catálogos y similares, cuyo proceso gráfico haya sido efectuado en el exterior, que contengan"
+        },
+        {
+          "code": "4911.10.90",
+          "description": "210Z De los tipos utilizados en vehiculos automoviles. 16.00 16.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "4911.10.90",
+          "description": "290A Los demas. 16.00 16.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "4911.10.90",
+          "description": "900J Los demás 16.00 16.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "4911.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "4911.91.00",
+          "description": "Estampas, grabados y fotografías"
+        },
+        {
+          "code": "4911.91.00",
+          "description": "100C Figuritas o pegatinas («stickers») 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4911.91.00",
+          "description": "200H Reproducciones impresas de estampas, gravados y fotografías de los bienes comprendidos en las partidas del Sistema"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    }
+  ],
+  "_rowCount": 198
+}

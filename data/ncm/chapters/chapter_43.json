@@ -1,0 +1,206 @@
+{
+  "chapter": "43",
+  "title": "Capítulo 43",
+  "sectionTitle": "CAP. 43 SECCION VIII PIELES, CUEROS, PELETERIA Y MANUFACTURAS DE ESTAS MATERIAS; ARTICULOS DE TALABARTERIA O GUARNICIONE",
+  "headings": [
+    {
+      "code": "5801",
+      "description": "ó 60.01, generalmente).",
+      "subheadings": []
+    },
+    {
+      "code": "4301",
+      "description": "PELETERÍA EN BRUTO (INCLUIDAS LAS CABEZAS, COLAS, PATAS Y DEMÁS TROZOS UTILIZABLES EN",
+      "subheadings": [
+        {
+          "code": "4301.10.00",
+          "description": "De visón, enteras, incluso sin la cabeza, cola o patas"
+        },
+        {
+          "code": "4301.10.00",
+          "description": "000M -De visón, enteras, incluso sin la cabeza, cola o patas 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "4301.30.00",
+          "description": "De cordero llamadas astracán, «Breitschwanz», «caracul», «persa» o similares, de cordero de Indias, de China, de"
+        },
+        {
+          "code": "4301.30.00",
+          "description": "000Q -De cordero llamadas 'astracán', 'Breitschwanz', 'caracul', 'persa' o similares, de cordero de Indias, de China, de"
+        }
+      ]
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 4.50 0.50",
+      "subheadings": []
+    },
+    {
+      "code": "4302",
+      "description": "PELETERÍA CURTIDA O ADOBADA (INCLUIDAS LAS CABEZAS, COLAS, PATAS Y DEMÁS TROZOS, DESECHOS",
+      "subheadings": [
+        {
+          "code": "4302.1",
+          "description": "Pieles enteras, incluso sin la cabeza, cola o patas, sin ensamblar:"
+        },
+        {
+          "code": "4302.11.00",
+          "description": "De visón"
+        },
+        {
+          "code": "4302.11.00",
+          "description": "000T --De visón 14.00 14.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "4302.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "4302.19.10",
+          "description": "De ovinos"
+        },
+        {
+          "code": "4302.19.10",
+          "description": "000Y De ovinos 14.00 14.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "4302.19.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "4302.19.90",
+          "description": "100G De conejo o liebre 14.00 14.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "4302.19.90",
+          "description": "200M De Coipo (Myocastor Coypus) 14.00 14.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "4302.19.90",
+          "description": "900A Las demás 14.00 14.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "4302.20.00",
+          "description": "Cabezas, colas, patas y demás trozos, desechos y recortes, sin ensamblar"
+        },
+        {
+          "code": "4302.20.00",
+          "description": "000V -Cabezas, colas, patas y demas trozos, desechos y recortes, sin ensamblar 14.00 14.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "4302.30.00",
+          "description": "Pieles enteras y trozos y recortes de pieles, ensamblados"
+        },
+        {
+          "code": "4302.30.00",
+          "description": "000J -Pieles enteras y trozos y recortes de pieles, ensamblados 14.00 14.00 3.00 LA 4.50 3.00"
+        }
+      ]
+    },
+    {
+      "code": "4303",
+      "description": "PRENDAS Y COMPLEMENTOS (ACCESORIOS), DE VESTIR, Y DEMÁS ARTÍCULOS DE PELETERÍA",
+      "subheadings": [
+        {
+          "code": "4303.10.00",
+          "description": "Prendas y complementos (accesorios), de vestir"
+        },
+        {
+          "code": "4303.10.00",
+          "description": "Prendas"
+        },
+        {
+          "code": "4303.10.00",
+          "description": "Tapados y sacos"
+        },
+        {
+          "code": "4303.10.00",
+          "description": "111K Confeccionados con recortes (retales) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.10.00",
+          "description": "119C Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.10.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4303.10.00",
+          "description": "191L Confeccionadas con recortes (retales) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.10.00",
+          "description": "199D Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.10.00",
+          "description": "Complementos (accesorios) de vestir"
+        },
+        {
+          "code": "4303.10.00",
+          "description": "210N Estolas, cuellos y boas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.10.00",
+          "description": "290P Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4303.90.00",
+          "description": "Confeccionados con recortes (retales)"
+        },
+        {
+          "code": "4303.90.00",
+          "description": "110W Alfombras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.90.00",
+          "description": "120Z Mantas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.90.00",
+          "description": "130C Cubreasientos 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.90.00",
+          "description": "190X Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.90.00",
+          "description": "910P Alfombras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.90.00",
+          "description": "920T Mantas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.90.00",
+          "description": "930W Cubreasientos 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4303.90.00",
+          "description": "990Q Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4304",
+      "description": "PELETERÍA FACTICIA O ARTIFICIAL Y ARTÍCULOS DE PELETERÍA FACTICIA O ARTIFICIAL",
+      "subheadings": [
+        {
+          "code": "4304.00.00",
+          "description": "Peletería facticia o artificial y artículos de peletería facticia o artificial"
+        },
+        {
+          "code": "4304.00.00",
+          "description": "000D PELETERÍA FACTICIA O ARTIFICIAL Y ARTÍCULOS DE PELETERÍA FACTICIA O ARTIFICIAL. 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 58
+}

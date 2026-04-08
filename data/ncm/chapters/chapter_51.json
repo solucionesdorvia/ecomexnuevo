@@ -1,0 +1,1859 @@
+{
+  "chapter": "51",
+  "title": "Capítulo 14",
+  "sectionTitle": "CAP. 51 SECCION XI MATERIAS TEXTILES Y SUS MANUFACTURAS Notas. 1. Esta Sección no comprende: a. los pelos y cerdas para",
+  "headings": [
+    {
+      "code": "4303",
+      "description": "o 43.04;",
+      "subheadings": []
+    },
+    {
+      "code": "5101",
+      "description": "LANA SIN CARDAR NI PEINAR",
+      "subheadings": [
+        {
+          "code": "5101.1",
+          "description": "Lana sucia, incluida la lavada en vivo:"
+        },
+        {
+          "code": "5101.11",
+          "description": "Lana esquilada"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "De finura superior o igual a 22,05 micrómetros pero inferior o igual a 32,6 micrómetros"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "Con un contenido de impurezas inferior o igual al 2 %"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "De finura superior o igual a 22,05 micrómetros, pero inferior o igual a 24,9 micrómetros"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "111Q De finura superior a 22,05 micrómetros, pero inferior o igual a 22,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "112T De finura superior a 22,9 micrómetros, pero inferior o igual a 23,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "113V De finura superior a 23,9 micrómetros, pero inferior o igual a 24,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "120R De finura superior a 24,9 micrómetros, pero inferior o igual a 25,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "130V De finura superior a 25,9 micrómetros, pero inferior o igual a 26,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "140Y De finura superior a 26,9 micrómetros, pero inferior o igual a 27,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "150B De finura superior a 27,9 micrómetros, pero inferior o igual a 28,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "160E De finura superior a 28,9 micrómetros, pero inferior o igual a 29,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "170H De finura superior a 29,9 micrómetros, pero inferior o igual a 30,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "180L De finura superior a 30,9 micrómetros, pero inferior o igual a 31,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "190P De finura superior a 31.9 micrómetros, pero inferior o igual a 32,6 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "Con un contenido de impurezas superior al 2 %"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "211W De finura superior a 22,05 micrómetros, pero inferior o igual a 22,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "212Y De finura superior a 22,9 micrómetros, pero inferior o igual a 23,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "213A De finura superior a 23,9 micrómetros, pero inferior o igual a 24,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "220X De finura superior a 24,9 micrómetros, pero inferior o igual a 25,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "230A De finura superior a 25,9 micrómetros, pero inferior o igual a 26,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "240D De finura superior a 26,9 micrómetros, pero inferior o igual a 27,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "250G De finura superior a 27,9 micrómetros, pero inferior o igual a 28,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "260K De finura superior a 28,9 micrómetros, pero inferior o igual a 29,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "270N De finura superior a 29,9 micrómetros, pero inferior o igual a 30,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "280R De finura superior a 30,9 micrómetros, pero inferior o igual a 31,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.10",
+          "description": "290V De finura superior a 31,9 micrómetros, pero inferior o igual a 32,6 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "Con un contenido de impurezas inferior o igual al 2 %"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "110R De finura superior o igual a 17 micrómetros, pero inferior o igual a 17,4 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "120V De finura superior a 17,4 micrómetros, pero inferior o igual a 17,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "130Y De finura superior a 17,9 micrómetros, pero inferior o igual a 18,4 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "140B De finura superior a 18,4 micrómetros, pero inferior o igual a 18,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "150E De finura superior a 18,9 micrómetros, pero inferior o igual a 19,4 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "160H De finura superior a 19,4 micrómetros, pero inferior o igual a 19,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "170L De finura superior a 19,9 micrómetros, pero inferior o igual a 20,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "180P De finura superior a 20,9 micrómetros, pero inferior a 22,05 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "190T Los demás 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "Con un contenido de impurezas superior al 2 %"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "210X De finura superior o igual a 19 micrómetros, pero inferior o igual a 19,4 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "220A De finura superior a 19,4 micrómetros, pero inferior o igual a 19,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "230D De finura superior a 19,9 micrómetros, pero inferior o igual a 20,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "240G De finura superior a 20,9 micrómetros, pero inferior o igual a 21,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "250K De finura superior a 21,9 micrómetros, pero inferior o igual a 22,05 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "260N De finura superior a 32,6 micrómetros, pero inferior o igual a 35,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.11.90",
+          "description": "270R De finura superior a 35,9 micrómetros 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "5101.19.00",
+          "description": "000Q --Las demás 8.00 8.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "5101.2",
+          "description": "Desgrasada, sin carbonizar:"
+        },
+        {
+          "code": "5101.21.00",
+          "description": "Lana esquilada"
+        },
+        {
+          "code": "5101.21.00",
+          "description": "000J --Lana esquilada 8.00 8.00 3.00 LNA 0.00 3.50"
+        },
+        {
+          "code": "5101.29.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "5101.29.00",
+          "description": "000E --Las demás 8.00 8.00 3.00 LNA 0.00 3.50"
+        },
+        {
+          "code": "5101.30.00",
+          "description": "Carbonizada"
+        },
+        {
+          "code": "5101.30.00",
+          "description": "000L -Carbonizada 8.00 8.00 3.00 LNA 0.00 3.00"
+        }
+      ]
+    },
+    {
+      "code": "5102",
+      "description": "PELO FINO U ORDINARIO, SIN CARDAR NI PEINAR",
+      "subheadings": [
+        {
+          "code": "5102.1",
+          "description": "Pelo fino:"
+        },
+        {
+          "code": "5102.11.00",
+          "description": "De cabra de Cachemira"
+        },
+        {
+          "code": "5102.11.00",
+          "description": "100U Sucio (R.2012/93 ex-ANA) 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.11.00",
+          "description": "Lavado"
+        },
+        {
+          "code": "5102.11.00",
+          "description": "210C Sin descerdar 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.11.00",
+          "description": "220F Descerdado 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "De cabra de Angora (Mohair)"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "Sucio (R.2012/93 ex-ANA)"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "111V De finura inferior o igual a 27 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "112X De finura superior a 27 micrómetros pero inferior o igual a 30 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "119M Los demás 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "Lavado, sin descerdar"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "121Y De finura inferior o igual a 27 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "122A De finura superior a 27 micrómetros pero inferior o igual a 30 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "129Q Los demás 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "Lavado, descerdado"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "131B De finura inferior o igual a 27 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "132D De finura superior a 27 micrómetros pero inferior o igual a 30 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "139U Los demás 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "De vicuña"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "210Y Sucio (R.2012/93 ex-ANA) 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "Lavado"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "221D Sin descerdar 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "222F Descerdado 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "De guanaco"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "310D Sucio (R.2012/93 ex-ANA) 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "321J Sin descerdar 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "322L Descerdado 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "De llama"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "411L De finura inferior o igual a 22,5 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "412N De finura superior a 22,5 micrómetros pero inferior o igual a 25 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "419D Los demás 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "421P De finura inferior o igual a 22,5 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "422R De finura superior a 22,5 micrómetros pero inferior o igual a 25 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "429G Los demás 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "431T De finura inferior o igual a 22,5 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "432V De finura superior a 22,5 micrómetros pero inferior o igual a 25 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "439K Los demás 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "De alpaca"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "511R De finura inferior o igual a 22,5 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "512U De finura superior a 22,5 micrómetros pero inferior o igual a 25 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "519J Los demás 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "521V De finura inferior o igual a 22,5 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "522X De finura superior a 22,5 micrómetros pero inferior o igual a 25 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "529M Los demás 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "531Y De finura inferior o igual a 22,5 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "532A De finura superior a 22,5 micrómetros pero inferior o igual a 25 micrómetros 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "539Q Los demás 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "De liebre"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "610V Sucio (R.2112/93 ex-ANA) 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "621A Sin descerdar 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "622C Descerdado 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "De conejo"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "De Angora"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "711C Sucio 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "712E Lavado 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "791D Sucio 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "792F Lavado 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "910L Sucio 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "921R Sin descerdar 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.19.00",
+          "description": "922U Descerdado 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.20.00",
+          "description": "Pelo ordinario"
+        },
+        {
+          "code": "5102.20.00",
+          "description": "100W Sucio(R.2012/93 ex-ANA) 8.00 8.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5102.20.00",
+          "description": "900P Los demás 8.00 8.00 3.00 LNA 3.00 3.00"
+        }
+      ]
+    },
+    {
+      "code": "5103",
+      "description": "DESPERDICIOS DE LANA O DE PELO FINO U ORDINARIO, INCLUIDOS LOS DESPERDICIOS DE HILADOS,",
+      "subheadings": [
+        {
+          "code": "5103.10.00",
+          "description": "Borras del peinado de lana o pelo fino"
+        },
+        {
+          "code": "5103.10.00",
+          "description": "100A De lana 6.00 6.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5103.10.00",
+          "description": "200F De pelo fino 6.00 6.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5103.20.00",
+          "description": "Los demás desperdicios de lana o pelo fino"
+        },
+        {
+          "code": "5103.20.00",
+          "description": "000J -Los demás desperdicios de lana o pelo fino 6.00 6.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5103.30.00",
+          "description": "Desperdicios de pelo ordinario"
+        },
+        {
+          "code": "5103.30.00",
+          "description": "000Y -Desperdicios de pelo ordinario 6.00 6.00 3.00 LNA 3.00 3.00"
+        }
+      ]
+    },
+    {
+      "code": "5104",
+      "description": "HILACHAS DE LANA O DE PELO FINO U ORDINARIO",
+      "subheadings": [
+        {
+          "code": "5104.00.00",
+          "description": "Hilachas de lana o de pelo fino u ordinario"
+        },
+        {
+          "code": "5104.00.00",
+          "description": "100E De lana 6.00 6.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5104.00.00",
+          "description": "200K De pelo fino 6.00 6.00 3.00 LNA 3.00 3.00"
+        },
+        {
+          "code": "5104.00.00",
+          "description": "300Q De pelo ordinario 6.00 6.00 3.00 LNA 3.00 3.00"
+        }
+      ]
+    },
+    {
+      "code": "5105",
+      "description": "LANA Y PELO FINO U ORDINARIO, CARDADOS O PEINADOS (INCLUIDA LA «LANA PEINADA A GRANEL»)",
+      "subheadings": [
+        {
+          "code": "5105.10.00",
+          "description": "Lana cardada"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "Con un contenido de impurezas inferior o igual al 2 %"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "De finura superior o igual a 17 micrómetros, pero inferior o igual a 18,4 micrómetros"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "111T De finura superior o igual a 17 micrómetros, pero inferior o igual a 17,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "112V De finura superior a 17,4 micrómetros, pero inferior o igual a 17,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "113X De finura superior a 17,9 micrómetros, pero inferior o igual a 18,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "De finura superior a 18,4 micrómetros, pero inferior o igual a 19,9 micrómetros"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "121W De finura superior a 18,4 micrómetros, pero inferior o igual a 18,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "122Y De finura superior a 18,9 micrómetros, pero inferior o igual a 19,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "123A De finura superior a 19,4 micrómetros, pero inferior o igual a 19,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "De finura superior a 19,9 micrómetros, pero inferior o igual a 22,9 micrómetros"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "131Z De finura superior a 19,9 micrómetros, pero inferior o igual a 20,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "132B De finura superior a 20,9 micrómetros, pero inferior o igual a 21,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "133D De finura superior a 21,9 micrómetros, pero inferior o igual a 22,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "De finura superior a 22,9 micrómetros, pero inferior o igual a 25,9 micrómetros"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "141C De finura superior a 22,9 micrómetros, pero inferior o igual a 23,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "142E De finura superior a 23,9 micrómetros, pero inferior o igual a 24,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "143G De finura superior a 24,9 micrómetros, pero inferior o igual a 25,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "De finura superior a 25,9 micrómetros, pero inferior o igual a 27,9 micrómetros"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "151F De finura superior a 25,9 micrómetros, pero inferior o igual a 26,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "152H De finura superior a 26,9 micrómetros, pero inferior o igual a 27,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "De finura superior a 27,9 micrómetros, pero inferior o igual a 29,9 micrómetros"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "161J De finura superior a 28,9 micrómetros, pero inferior o igual a 29,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "162L De finura superior a 28,9 micrómetros, pero inferior o igual a 29,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "De finura superior a 29,9 micrómetros, pero inferior o igual a 31,9 micrómetros"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "171M De finura superior a 29,9 micrómetros, pero inferior o igual a 30,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "172P De finura superior a 30,9 micrómetros, pero inferior o igual a 31,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "180N De finura superior a 31,9 micrómetros, pero inferior o igual a 35,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "190R Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "Con un contenido de impurezas superior al 2 %"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "De finura superior o igual a 17 micrómetros, pero inferior o igual a 18.4 micrómetros"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "211Y De finura superior o igual a 17 micrómetros, pero inferior o igual a 17,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "212A De finura superior a 17.4 micrómetros, pero inferior o igual a 17,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "213C De finura superior a 17,9 micrómetros, pero inferior o igual a 18,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "221B De finura superior a 18,4 micrómetros, pero inferior o igual a 18,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "222D De finura superior a 18,9 micrómetros, pero inferior o igual a 19,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "223F De finura superior a 19,4 micrómetros, pero inferior o igual a 19,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "231E De finura superior a 19,9 micrómetros, pero inferior o igual a 20,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "232G De finura superior a 20,9 micrómetros, pero inferior o igual a 21,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "233J De finura superior a 21,9 micrómetros, pero inferior o igual a 22,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "241H De finura superior a 22,9 micrómetros, pero inferior o igual a 23,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "242K De finura superior a 23,9 micrómetros, pero inferior o igual a 24,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "243M De finura superior a 24,9 micrómetros, pero inferior o igual a 25,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "251L De finura superior a 25,9 micrómetros, pero inferior o igual a 26,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "252N De finura superior a 26,9 micrómetros, pero inferior o igual a 27,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "261P De finura superior a 27,9 micrómetros, pero inferior o igual a 28,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "262R De finura superior a 28,9 micrómetros, pero inferior o igual a 29,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "271T De finura superior a 29,9 micrómetros, pero inferior o igual a 30,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "272V De finura superior a 30,9 micrómetros, pero inferior o igual a 31,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "280U De finura superior a 31,9 micrómetros, pero inferior o igual a 35,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.10.00",
+          "description": "290X Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.2",
+          "description": "Lana peinada:"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "«Lana peinada a granel»"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "De finura superior o igual a 17 micrómetros, pero inferior o igual a 18,4 micrómetros"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "110R De finura superior o igual a 17 micrómetros, pero inferior o igual a 17,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "120V De finura superior a 17,4 micrómetros, pero inferior o igual a 17,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "130Y De finura superior a 17,9 micrómetros, pero inferior o igual a 18,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "De finura superior a 18,4 micrómetros, pero inferior o igual a 19,9 micrómetros"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "210X De finura superior a 18,4 micrómetros, pero inferior o igual a 18,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "220A De finura superior a 18,9 micrómetros, pero inferior o igual a 19,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "230D De finura superior a 19,4 micrómetros, pero inferior o igual a 19,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "De finura superior a 19,9 micrómetros, pero inferior o igual a 22,9 micrómetros"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "310C De finura superior a 19,9 micrómetros, pero inferior o igual a 20,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "320F De finura superior a 20,9 micrómetros, pero inferior o igual a 21,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "330J De finura superior a 21,9 micrómetros, pero inferior o igual a 22,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "De finura superior a 22,9 micrómetros, pero inferior o igual a 25,9 micrómetros"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "410H De finura superior a 22,9 micrómetros, pero inferior o igual a 23,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "420L De finura superior a 23,9 micrómetros, pero inferior o igual a 24,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "430P De finura superior a 24,9 micrómetros, pero inferior o igual a 25,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "De finura superior a 25,9 micrómetros, pero inferior o igual a 27,9 micrómetros"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "510N De finura superior a 25,9 micrómetros, pero inferior o igual a 26,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "520R De finura superior a 26,9 micrómetros, pero inferior o igual a 27,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "De finura superior a 27,9 micrómetros, pero inferior o igual a 29,9 micrómetros"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "610U De finura superior a 27,9 micrómetros, pero inferior o igual a 28,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "620X De finura superior a 28,9 micrómetros, pero inferior o igual a 29,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "De finura superior a 29,9 micrómetros, pero inferior o igual a 31,9 micrómetros"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "710Z De finura superior a 29,9 micrómetros, pero inferior o igual a 30,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "720C De finura superior a 30,9 micrómetros, pero inferior o igual a 31,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "800B De finura superior a 31,9 micrómetros, pero inferior o igual a 36,0 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.21.00",
+          "description": "900G Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "«Tops»"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "De finura superior o igual a 17 micrómetros, pero inferior o igual a 18,4 micrómetros"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "110X De finura superior o igual a 17 micrómetros, pero inferior o igual a 17,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "120A De finura superior a 17,4 micrómetros, pero inferior o igual a 17,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "130D De finura superior a 17,9 micrómetros, pero inferior o igual a 18,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "De finura superior a 18,4 micrómetros, pero inferior o igual a 19,9 micrómetros"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "210C De finura superior a 18,4 micrómetros, pero inferior o igual a 18,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "220F De finura superior a 18,9 micrómetros, pero inferior o igual a 19,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "230J De finura superior a 19,4 micrómetros, pero inferior o igual a 19,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "De finura superior a 19,9 micrómetros, pero inferior o igual a 22,9 micrómetros"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "310H De finura superior a 19,9 micrómetros, pero inferior o igual a 20,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "320L De finura superior a 20,9 micrómetros, pero inferior o igual a 21,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "330P De finura superior a 21,9 micrómetros, pero inferior o igual a 22,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "De finura superior a 22,9 micrómetros, pero inferior o igual a 25,9 micrómetros"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "410N De finura superior a 22,9 micrómetros, pero inferior o igual a 23,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "420R De finura superior a 23,9 micrómetros, pero inferior o igual a 24,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "430V De finura superior a 24,9 micrómetros, pero inferior o igual a 25,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "De finura superior a 25,9 micrómetros, pero inferior o igual a 27,9 micrómetros"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "510U De finura superior a 25,9 micrómetros, pero inferior o igual a 26,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "520X De finura superior a 26,9 micrómetros, pero inferior o igual a 27,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "De finura superior a 27,9 micrómetros, pero inferior o igual a 29,9 micrómetros"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "610Z De finura superior a 27,9 micrómetros, pero inferior o igual a 28,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "620C De finura superior a 28,9 micrómetros, pero inferior o igual a 29,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "De finura superior a 29,9 micrómetros, pero inferior o igual a 31,9 micrómetros"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "710E De finura superior a 29,9 micrómetros, pero inferior o igual a 30,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "720H De finura superior a 30,9 micrómetros, pero inferior o igual a 31,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "800G De finura superior a 31,9 micrómetros, pero inferior o igual a 36,0 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.10",
+          "description": "900M Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.91",
+          "description": "De finura inferior a 22,5 micrómetros"
+        },
+        {
+          "code": "5105.29.91",
+          "description": "100E De finura superior o igual a 17 micrómetros, pero inferior o igual a 17,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.91",
+          "description": "200K De finura superior a 17,4 micrómetros, pero inferior o igual a 17,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.91",
+          "description": "300Q De finura superior a 17,9 micrómetros, pero inferior o igual a 18,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.91",
+          "description": "400W De finura superior a 18,4 micrómetros, pero inferior o igual a 18,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.91",
+          "description": "500B De finura superior a 18,9 micrómetros, pero inferior o igual a 19,4 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.91",
+          "description": "600G De finura superior a 19,4 micrómetros, pero inferior o igual a 19,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.91",
+          "description": "700M De finura superior a 19,9 micrómetros, pero inferior o igual a 20,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.91",
+          "description": "800T De finura superior a 20,9 micrómetros, pero inferior o igual a 21,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.91",
+          "description": "900Y Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "De finura superior o igual a 22,5 micrómetros, pero inferior o igual a 24,9 micrómetros"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "110U De finura superior a 22,05 micrómetros, pero inferior o igual a 22,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "120X De finura superior a 22,9 micrómetros, pero inferior o igual a 23,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "130A De finura superior a 23,9 micrómetros, pero inferior o igual a 24,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "200W De finura superior a 24,9 micrómetros, pero inferior o igual a 25,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "300B De finura superior a 25,9 micrómetros, pero inferior o igual a 26,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "400G De finura superior a 26,9 micrómetros, pero inferior o igual a 27,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "500M De finura superior a 27,9 micrómetros, pero inferior o igual a 28,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "600T De finura superior a 28,9 micrómetros, pero inferior o igual a 29,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "700Y De finura superior a 29,9 micrómetros, pero inferior o igual a 30,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "De finura superior a 30,9 micrómetros, pero inferior o igual a 35,9 micrómetros"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "810G De finura superior a 30,9 micrómetros, pero inferior o igual a 31,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "820K De finura superior a 31,9 micrómetros, pero inferior o igual a 35,9 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.29.99",
+          "description": "900J Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.3",
+          "description": "Pelo fino cardado o peinado:"
+        },
+        {
+          "code": "5105.31.00",
+          "description": "De cabra de Cachemira"
+        },
+        {
+          "code": "5105.31.00",
+          "description": "100C Cardado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.31.00",
+          "description": "200H Peinado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "De cabra de Angora (Mohair)"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "Cardado"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "111D De finura inferior o igual a 27 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "112F De finura superior a 27 micrómetros pero inferior o igual a 30 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "119W Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "Peinado"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "121G De finura inferior o igual a 27 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "122J De finura superior a 27 micrómetros pero inferior o igual a 30 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "129Z Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "De vicuña"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "210G Cardado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "220K Peinado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "De guanaco"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "310M Cardado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "320Q Peinado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "De llama"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "411V De finura inferior o igual a 22,5 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "412X De finura superior a 22,5 micrómetros pero inferior o igual a 25 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "419M Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "421Y De finura inferior o igual a 22,5 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "422A De finura superior a 22,5 micrómetros pero inferior o igual a 25 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "429Q Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "De alpaca"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "511A De finura inferior o igual a 22,5 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "512C De finura superior a 22,5 micrómetros pero inferior o igual a 25 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "519T Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "521D De finura inferior o igual a 22,5 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "522F De finura superior a 22,5 micrómetros pero inferior o igual a 25 micrómetros 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "529W Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "De liebre"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "610D Cardado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "620G Peinado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "De conejo"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "De angora"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "711L Cardado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "712N Peinado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "791M Cardado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "792P Peinado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "910V Cardado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.39.00",
+          "description": "920Y Peinado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.40.00",
+          "description": "Pelo ordinario cardado o peinado"
+        },
+        {
+          "code": "5105.40.00",
+          "description": "100E De cabra común cardado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.40.00",
+          "description": "200K De cabra común peinado 10.00 10.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "5105.40.00",
+          "description": "900Y Los demás 10.00 10.00 3.00 LNA 3.00 8.00"
+        }
+      ]
+    },
+    {
+      "code": "5106",
+      "description": "HILADOS DE LANA CARDADA SIN ACONDICIONAR PARA LA VENTA AL POR MENOR",
+      "subheadings": [
+        {
+          "code": "5106.10.00",
+          "description": "Con un contenido de lana superior o igual al 85 % en peso"
+        },
+        {
+          "code": "5106.10.00",
+          "description": "000A -Con un contenido de lana superior o igual al 85 % en peso 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5106.20.00",
+          "description": "Con un contenido de lana inferior al 85 % en peso"
+        },
+        {
+          "code": "5106.20.00",
+          "description": "100V Mezclado exclusiva o principalmente con pelo fino 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5106.20.00",
+          "description": "200A Mezclado exclusiva o principalmente con algodón 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5106.20.00",
+          "description": "300F Mezclado exclusiva o principalmente con ramio 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5106.20.00",
+          "description": "400L Mezclado exclusiva o principalmente con fibras de nailon o demás poliamidas 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5106.20.00",
+          "description": "500R Mezclado exclusiva o principalmente con fibras de poliésteres 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5106.20.00",
+          "description": "600X Mezclado exclusiva o principalmente con fibras acrílicas 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5106.20.00",
+          "description": "700C Mezclado exclusiva o principalmente con fibras de rayón viscosa 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5106.20.00",
+          "description": "900N Los demás 18.00 18.00 3.00 LNA 3.00 1.75"
+        }
+      ]
+    },
+    {
+      "code": "5107",
+      "description": "HILADOS DE LANA PEINADA SIN ACONDICIONAR PARA LA VENTA AL POR MENOR",
+      "subheadings": [
+        {
+          "code": "5107.10",
+          "description": "Con un contenido de lana superior o igual al 85 % en peso"
+        },
+        {
+          "code": "5107.10.11",
+          "description": "De dos cabos, de título inferior o igual a 184,58 decitex por cabo"
+        },
+        {
+          "code": "5107.10.11",
+          "description": "000L De dos cabos, de título inferior o igual a 184,58 decitex por cabo 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5107.10.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "5107.10.19",
+          "description": "000X Los demás 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5107.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "5107.10.90",
+          "description": "000G Los demás 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5107.20.00",
+          "description": "Con un contenido de lana inferior al 85 % en peso"
+        },
+        {
+          "code": "5107.20.00",
+          "description": "100N Mezclado exclusiva o principalmente con seda 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5107.20.00",
+          "description": "200U Mezclado exclusiva o principalmente con pelo fino 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5107.20.00",
+          "description": "300Z Mezclado exclusiva o principalmente con algodón 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5107.20.00",
+          "description": "400E Mezclado exclusiva o principalmente con ramio 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5107.20.00",
+          "description": "500K Mezclado exclusiva o principalmente con fibras de nailon o demás poliamidas 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5107.20.00",
+          "description": "600Q Mezclado exclusiva o principalmente con fibras de poliesteres 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5107.20.00",
+          "description": "700W Mezclado exclusiva o principalmente con fibras acrílicas 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5107.20.00",
+          "description": "800B Mezclado exclusiva o principalmente con fibras de rayón viscosa 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5107.20.00",
+          "description": "900G Los demás 18.00 18.00 3.00 LNA 3.00 1.75"
+        }
+      ]
+    },
+    {
+      "code": "5108",
+      "description": "HILADOS DE PELO FINO CARDADO O PEINADO, SIN ACONDICIONAR PARA LA VENTA AL POR MENOR",
+      "subheadings": [
+        {
+          "code": "5108.10.00",
+          "description": "Cardado"
+        },
+        {
+          "code": "5108.10.00",
+          "description": "000M -Cardado 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5108.20.00",
+          "description": "Peinado"
+        },
+        {
+          "code": "5108.20.00",
+          "description": "000B -Peinado 18.00 18.00 3.00 LNA 3.00 1.75"
+        }
+      ]
+    },
+    {
+      "code": "5109",
+      "description": "HILADOS DE LANA O PELO FINO, ACONDICIONADOS PARA LA VENTA AL POR MENOR",
+      "subheadings": [
+        {
+          "code": "5109.10.00",
+          "description": "Con un contenido de lana o pelo fino superior o igual al 85 % en peso"
+        },
+        {
+          "code": "5109.10.00",
+          "description": "000F -Con un contenido de lana o pelo fino superior o igual al 85 % en peso 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5109.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5109.90.00",
+          "description": "100Z Mezclado exclusiva o principalmente con seda 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5109.90.00",
+          "description": "200E Mezclado exclusiva o principalmente con pelo fino 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5109.90.00",
+          "description": "300K Mezclado exclusiva o principalmente con algodón 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5109.90.00",
+          "description": "400Q Mezclado exclusiva o principalmente con ramio 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5109.90.00",
+          "description": "500W Mezclado exclusiva o principalmente con fibras de nailon o demás poliamidas 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5109.90.00",
+          "description": "600B Mezclado exclusiva o principalmente con fibras de poliesteres 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5109.90.00",
+          "description": "700G Mezclado exclusiva o principalmente con fibras acrílicas 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5109.90.00",
+          "description": "800M Mezclado exclusiva o principalmente con fibras de rayón viscosa 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5109.90.00",
+          "description": "900T Los demás 18.00 18.00 3.00 LNA 3.00 1.75"
+        }
+      ]
+    },
+    {
+      "code": "5110",
+      "description": "HILADOS DE PELO ORDINARIO O DE CRIN (INCLUIDOS LOS HILADOS DE CRIN ENTORCHADOS), AUNQUE",
+      "subheadings": [
+        {
+          "code": "5110.00.00",
+          "description": "Hilados de pelo ordinario o de crin (incluidos los hilados de crin entorchados), aunque estén acondicionados para la"
+        },
+        {
+          "code": "5110.00.00",
+          "description": "100B Acondicionados para la venta al por menor 18.00 18.00 3.00 LNA 3.00 1.75"
+        },
+        {
+          "code": "5110.00.00",
+          "description": "900V Los demás 18.00 18.00 3.00 LNA 3.00 1.75"
+        }
+      ]
+    },
+    {
+      "code": "5111",
+      "description": "TEJIDOS DE LANA CARDADA O PELO FINO CARDADO",
+      "subheadings": [
+        {
+          "code": "5111.1",
+          "description": "Con un contenido de lana o pelo fino superior o igual al 85 % en peso:"
+        },
+        {
+          "code": "5111.11",
+          "description": "De peso inferior o igual a 300 g/m2"
+        },
+        {
+          "code": "5111.11.10",
+          "description": "De lana"
+        },
+        {
+          "code": "5111.11.10",
+          "description": "000A De lana 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.11.20",
+          "description": "De pelo fino"
+        },
+        {
+          "code": "5111.11.20",
+          "description": "000K De pelo fino 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5111.19.00",
+          "description": "000L --Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.20.00",
+          "description": "Los demás, mezclados exclusiva o principalmente con filamentos sintéticos o artificiales"
+        },
+        {
+          "code": "5111.20.00",
+          "description": "100Y Con nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.20.00",
+          "description": "200D Con poliesteres 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.20.00",
+          "description": "300J Con acrílicos 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.20.00",
+          "description": "400P Con rayón viscosa 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.20.00",
+          "description": "900R Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.30",
+          "description": "Los demás, mezclados exclusiva o principalmente con fibras sintéticas o artificiales discontinuas"
+        },
+        {
+          "code": "5111.30.10",
+          "description": "De lana, afieltrados, con trama mezclada exclusivamente con fibras sintéticas y urdimbre exclusivamente de algodón,"
+        },
+        {
+          "code": "5111.30.10",
+          "description": "000R De lana, afieltrados, con trama mezclada exclusivamente con fibras sinteticas y urdimbre exclusivamente de algodón,"
+        },
+        {
+          "code": "5111.30.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "5111.30.90",
+          "description": "100A Con nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.30.90",
+          "description": "200F Con poliesteres 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.30.90",
+          "description": "300L Con acrílicos 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.30.90",
+          "description": "400R Con rayón viscosa 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.30.90",
+          "description": "900U Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5111.90.00",
+          "description": "100X Mezclados exclusiva o principalmente con seda 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.90.00",
+          "description": "200C Mezclados exclusiva o principalmente con lana 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.90.00",
+          "description": "300H Mezclados exclusiva o principalmente con pelo fino 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.90.00",
+          "description": "400N Mezclados exclusiva o principalmente con algodón 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.90.00",
+          "description": "500U Mezclados exclusiva o principalmente con ramio 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5111.90.00",
+          "description": "900Q Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "5112",
+      "description": "TEJIDOS DE LANA PEINADA O PELO FINO PEINADO",
+      "subheadings": [
+        {
+          "code": "5112.1",
+          "description": "Con un contenido de lana o pelo fino superior o igual al 85 % en peso:"
+        },
+        {
+          "code": "5112.11.00",
+          "description": "De peso inferior o igual a 200 g/m2"
+        },
+        {
+          "code": "5112.11.00",
+          "description": "100P De lana 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.11.00",
+          "description": "200V De pelo fino 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "5112.19.10",
+          "description": "De lana"
+        },
+        {
+          "code": "5112.19.10",
+          "description": "000P De lana 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.19.20",
+          "description": "De pelo fino"
+        },
+        {
+          "code": "5112.19.20",
+          "description": "000Z De pelo fino 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.20",
+          "description": "Los demás, mezclados exclusiva o principalmente con filamentos sintéticos o artificiales"
+        },
+        {
+          "code": "5112.20.10",
+          "description": "De lana"
+        },
+        {
+          "code": "5112.20.10",
+          "description": "100B Con nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.20.10",
+          "description": "200G Con poliesteres 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.20.10",
+          "description": "300M Con acrílicos 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.20.10",
+          "description": "400T Con rayón viscosa 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.20.10",
+          "description": "900V Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.20.20",
+          "description": "De pelo fino"
+        },
+        {
+          "code": "5112.20.20",
+          "description": "100L Con nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.20.20",
+          "description": "200R Con poliesteres 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.20.20",
+          "description": "300X Con acrílicos 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.20.20",
+          "description": "400C Con rayón viscosa 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.20.20",
+          "description": "900E Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.30",
+          "description": "Los demás, mezclados exclusiva o principalmente con fibras sintéticas o artificiales discontinuas"
+        },
+        {
+          "code": "5112.30.10",
+          "description": "De lana"
+        },
+        {
+          "code": "5112.30.10",
+          "description": "100Q Con nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.30.10",
+          "description": "200W Con poliesteres 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.30.10",
+          "description": "300B Con acrílicos 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.30.10",
+          "description": "400G Con rayón viscosa 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.30.10",
+          "description": "900J Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.30.20",
+          "description": "De pelo fino"
+        },
+        {
+          "code": "5112.30.20",
+          "description": "100A Con nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.30.20",
+          "description": "200F Con poliesteres 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.30.20",
+          "description": "300L Con acrílicos 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.30.20",
+          "description": "400R Con rayón viscosa 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.30.20",
+          "description": "900U Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5112.90.00",
+          "description": "100Q Mezclados exclusiva o principalmente con seda 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.90.00",
+          "description": "200W Mezclados exclusiva o principalmente con lana 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.90.00",
+          "description": "300B Mezclados exclusiva o principalmente con pelo fino 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.90.00",
+          "description": "400G Mezclados exclusiva o principalmente con algodón 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.90.00",
+          "description": "500M Mezclados exclusiva o principalmente con ramio 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5112.90.00",
+          "description": "900J Los demás 26.00 26.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "5113",
+      "description": "TEJIDOS DE PELO ORDINARIO O DE CRIN",
+      "subheadings": [
+        {
+          "code": "5113.00.11",
+          "description": "Con un contenido de pelo ordinario superior o igual al 85 % en peso"
+        },
+        {
+          "code": "5113.00.11",
+          "description": "000U Con un contenido de pelo ordinario superior o igual al 85 % en peso 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5113.00.12",
+          "description": "Con un contenido de pelo ordinario inferior al 85 % en peso y que contengan algodón"
+        },
+        {
+          "code": "5113.00.12",
+          "description": "000B Con un contenido de pelo ordinario inferior al 85 % en peso, y que contengan algodón 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5113.00.13",
+          "description": "Con un contenido de pelo ordinario inferior al 85 % en peso y que no contengan algodón"
+        },
+        {
+          "code": "5113.00.13",
+          "description": "000J Con un contenido de pelo ordinario inferior al 85 % en peso, y que no contengan algodón 26.00 26.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "5113.00.20",
+          "description": "De crin"
+        },
+        {
+          "code": "5113.00.20",
+          "description": "000W De crin 26.00 26.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 480
+}

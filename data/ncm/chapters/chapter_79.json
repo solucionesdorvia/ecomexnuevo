@@ -1,0 +1,197 @@
+{
+  "chapter": "79",
+  "title": "Capítulo 71",
+  "sectionTitle": "CAP. 79 SECCION XV METALES COMUNES Y MANUFACTURAS DE ESTOS METALES Notas. 1. Esta Sección no comprende: a. los colores y",
+  "headings": [
+    {
+      "code": "3207",
+      "description": "a 32.10, 32.12, 32.13 ó 32.15);",
+      "subheadings": []
+    },
+    {
+      "code": "7901",
+      "description": "CINC EN BRUTO",
+      "subheadings": [
+        {
+          "code": "7901.1",
+          "description": "Cinc sin alear:"
+        },
+        {
+          "code": "7901.11",
+          "description": "Con un contenido de cinc superior o igual al 99,99 % en peso"
+        },
+        {
+          "code": "7901.11.11",
+          "description": "En lingotes"
+        },
+        {
+          "code": "7901.11.11",
+          "description": "000G En lingotes 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7901.11.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "7901.11.19",
+          "description": "000T Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7901.11.91",
+          "description": "En lingotes"
+        },
+        {
+          "code": "7901.11.91",
+          "description": "000K En lingotes 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7901.11.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "7901.11.99",
+          "description": "000W Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7901.12",
+          "description": "Con un contenido de cinc inferior al 99,99 % en peso"
+        },
+        {
+          "code": "7901.12.10",
+          "description": "En lingotes"
+        },
+        {
+          "code": "7901.12.10",
+          "description": "000L En lingotes 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7901.12.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7901.12.90",
+          "description": "100V En panes 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7901.12.90",
+          "description": "900N Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7901.20",
+          "description": "Aleaciones de cinc"
+        },
+        {
+          "code": "7901.20.10",
+          "description": "En lingotes"
+        },
+        {
+          "code": "7901.20.10",
+          "description": "000B En lingotes 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7901.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7901.20.90",
+          "description": "000E Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7902",
+      "description": "DESPERDICIOS Y DESECHOS, DE CINC",
+      "subheadings": [
+        {
+          "code": "7902.00.00",
+          "description": "Desperdicios y desechos, de cinc"
+        },
+        {
+          "code": "7902.00.00",
+          "description": "000G DESPERDICIOS Y DESECHOS, DE CINC. 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7903",
+      "description": "POLVO Y ESCAMILLAS, DE CINC",
+      "subheadings": [
+        {
+          "code": "7903.10.00",
+          "description": "Polvo de condensación"
+        },
+        {
+          "code": "7903.10.00",
+          "description": "000P -Polvo de condensación 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7903.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7903.90.00",
+          "description": "000C -Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7904",
+      "description": "BARRAS, PERFILES Y ALAMBRE, DE CINC",
+      "subheadings": [
+        {
+          "code": "7904.00.00",
+          "description": "Barras, perfiles y alambre, de cinc"
+        },
+        {
+          "code": "7904.00.00",
+          "description": "100Z Barras 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7904.00.00",
+          "description": "200E Perfiles 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7904.00.00",
+          "description": "300K Alambre 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7905",
+      "description": "CHAPAS, HOJAS Y TIRAS, DE CINC",
+      "subheadings": [
+        {
+          "code": "7905.00.00",
+          "description": "Chapas, hojas y tiras, de cinc"
+        },
+        {
+          "code": "7905.00.00",
+          "description": "000M CHAPAS, HOJAS Y TIRAS, DE CINC. 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7907",
+      "description": "LAS DEMÁS MANUFACTURAS DE CINC",
+      "subheadings": [
+        {
+          "code": "7907.00.10",
+          "description": "Tubos y accesorios de tubería"
+        },
+        {
+          "code": "7907.00.10",
+          "description": "000J Tubos y accesorios de tubería 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7907.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7907.00.90",
+          "description": "000M Las demás 16.00 16.00 3.00 LA 3.00 4.50"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 44
+}

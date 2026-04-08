@@ -1,0 +1,703 @@
+{
+  "chapter": "37",
+  "title": "Capítulo 37",
+  "sectionTitle": "CAP. 37 SECCION VI PRODUCTOS DE LAS INDUSTRIAS QUIMICAS O DE LAS INDUSTRIAS CONEXAS Notas. A. Cualquier producto que res",
+  "headings": [
+    {
+      "code": "3701",
+      "description": "PLACAS Y PELÍCULAS PLANAS, FOTOGRÁFICAS, SENSIBILIZADAS, SIN IMPRESIONAR, EXCEPTO LAS DE",
+      "subheadings": [
+        {
+          "code": "3701.10",
+          "description": "Para rayos X"
+        },
+        {
+          "code": "3701.10.10",
+          "description": "Sensibilizadas en una cara"
+        },
+        {
+          "code": "3701.10.10",
+          "description": "100V De los tipos utilizados para mamografías 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.10.10",
+          "description": "900N Las demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.10.21",
+          "description": "Aptas para uso odontológico"
+        },
+        {
+          "code": "3701.10.21",
+          "description": "000G Aptas para uso odontológico 2.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.10.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3701.10.29",
+          "description": "200D De los tipos utilizados en medicina con pantallas en el espectro de luz verde 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.10.29",
+          "description": "900R Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.20",
+          "description": "Películas autorrevelables"
+        },
+        {
+          "code": "3701.20.10",
+          "description": "Para fotografía en colores (policroma)"
+        },
+        {
+          "code": "3701.20.10",
+          "description": "000D Para fotografía en colores (policroma) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.20.20",
+          "description": "Para fotografía monocromática"
+        },
+        {
+          "code": "3701.20.20",
+          "description": "000N Para fotografía monocromática 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.30",
+          "description": "Las demás placas y películas planas en las que por lo menos un lado sea superior a 255 mm"
+        },
+        {
+          "code": "3701.30.10",
+          "description": "Para fotografía en colores (policroma)"
+        },
+        {
+          "code": "3701.30.10",
+          "description": "000T Para fotografía en colores (policroma) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.30.21",
+          "description": "De aluminio"
+        },
+        {
+          "code": "3701.30.21",
+          "description": "000K De aluminio 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.30.22",
+          "description": "De poliéster"
+        },
+        {
+          "code": "3701.30.22",
+          "description": "000T De poliester 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.30.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3701.30.29",
+          "description": "000W Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.30.31",
+          "description": "De aluminio"
+        },
+        {
+          "code": "3701.30.31",
+          "description": "000V De aluminio 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.30.39",
+          "description": "Las demás"
+        },
+        {
+          "code": "3701.30.39",
+          "description": "000F Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.30.40",
+          "description": "Películas para las artes gráficas"
+        },
+        {
+          "code": "3701.30.40",
+          "description": "000X Películas para las artes gricas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.30.50",
+          "description": "Películas heliográficas, de poliéster"
+        },
+        {
+          "code": "3701.30.50",
+          "description": "000G Películas heliográficas, de poliester 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.30.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3701.30.90",
+          "description": "000W Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "3701.91.00",
+          "description": "Para fotografía en colores (policroma)"
+        },
+        {
+          "code": "3701.91.00",
+          "description": "000E --Para fotografía en colores (policroma) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3701.99.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3701.99.00",
+          "description": "000A --Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3702",
+      "description": "PELÍCULAS FOTOGRÁFICAS EN ROLLOS, SENSIBILIZADAS, SIN IMPRESIONAR, EXCEPTO LAS DE PAPEL,",
+      "subheadings": [
+        {
+          "code": "3702.10",
+          "description": "Para rayos X"
+        },
+        {
+          "code": "3702.10.10",
+          "description": "Sensibilizadas en una cara"
+        },
+        {
+          "code": "3702.10.10",
+          "description": "000H Sensibilizadas en una cara 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.10.20",
+          "description": "Sensibilizadas en ambas caras"
+        },
+        {
+          "code": "3702.10.20",
+          "description": "000T Sensibilizadas en ambas caras 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.3",
+          "description": "Las demás películas, sin perforar, de anchura inferior o igual a 105 mm:"
+        },
+        {
+          "code": "3702.31.00",
+          "description": "Para fotografía en colores (policroma)"
+        },
+        {
+          "code": "3702.31.00",
+          "description": "000N --Para fotografía en colores (policroma) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.32.00",
+          "description": "Las demás, con emulsión de halogenuros de plata"
+        },
+        {
+          "code": "3702.32.00",
+          "description": "000A --Las demás, con emulsión de halogenuros de plata 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.39.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3702.39.00",
+          "description": "000J --Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.4",
+          "description": "Las demás películas, sin perforar, de anchura superior a 105 mm:"
+        },
+        {
+          "code": "3702.41.00",
+          "description": "De anchura superior a 610 mm y longitud superior a 200 m, para fotografía en colores (policroma)"
+        },
+        {
+          "code": "3702.41.00",
+          "description": "000C --De anchura superior a 610 mm y longitud superior a 200 m, para fotografía en colores (policroma) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.42",
+          "description": "De anchura superior a 610 mm y longitud superior a 200 m, excepto para fotografía en colores"
+        },
+        {
+          "code": "3702.42.10",
+          "description": "Para las artes gráficas"
+        },
+        {
+          "code": "3702.42.10",
+          "description": "000Z Para las artes gricas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.42.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3702.42.90",
+          "description": "000C Las demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.43",
+          "description": "De anchura superior a 610 mm y longitud inferior o igual a 200 m"
+        },
+        {
+          "code": "3702.43.10",
+          "description": "Para las artes gráficas"
+        },
+        {
+          "code": "3702.43.10",
+          "description": "000L Para las artes gricas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.43.20",
+          "description": "Heliográficas, de poliéster"
+        },
+        {
+          "code": "3702.43.20",
+          "description": "000W Heliográficas, de poliester 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.43.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3702.43.90",
+          "description": "000P Las demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.44",
+          "description": "De anchura superior a 105 mm pero inferior o igual a 610 mm"
+        },
+        {
+          "code": "3702.44.10",
+          "description": "Para fotografía en colores (policroma)"
+        },
+        {
+          "code": "3702.44.10",
+          "description": "100D Autorrevelables 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.44.10",
+          "description": "900X Las demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.44.21",
+          "description": "Para las artes gráficas"
+        },
+        {
+          "code": "3702.44.21",
+          "description": "000Q Para las artes gricas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.44.22",
+          "description": "Fotopolimerizables, sensibilizadas a base de compuestos acrílicos, de los tipos utilizados para la fabricación de"
+        },
+        {
+          "code": "3702.44.22",
+          "description": "000Y Fotopolimerizables, sensibilizadas a base de compuestos acrílicos, de los tipos utilizados para la fabricación de"
+        },
+        {
+          "code": "3702.44.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3702.44.29",
+          "description": "100G Autorrevelables 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.44.29",
+          "description": "900A Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.5",
+          "description": "Las demás películas para fotografía en colores (policroma):"
+        },
+        {
+          "code": "3702.52.00",
+          "description": "De anchura inferior o igual a 16 mm"
+        },
+        {
+          "code": "3702.52.00",
+          "description": "100J De longitud inferior o igual a 14 m 2.00 2.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.52.00",
+          "description": "900C Las demás 2.00 2.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.53.00",
+          "description": "De anchura superior a 16 mm pero inferior o igual a 35 mm y longitud inferior o igual a 30 m, para diapositivas"
+        },
+        {
+          "code": "3702.53.00",
+          "description": "000Q --De anchura superior a 16 mm pero inferior o igual a 35 mm y longitud inferior o igual a 30 m, para diapositivas 2.00 2.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54",
+          "description": "De anchura superior a 16 mm pero inferior o igual a 35 mm y longitud inferior o igual a 30 m, excepto para"
+        },
+        {
+          "code": "3702.54.11",
+          "description": "En cargadores («filmpacks»)"
+        },
+        {
+          "code": "3702.54.11",
+          "description": "000V En cargadores (\"filmpacks\") 2.00 2.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54.12",
+          "description": "De 12 exposiciones (0,5 m de longitud), de 24 exposiciones (1,0 m de longitud) o de 36 exposiciones (1,5 m de"
+        },
+        {
+          "code": "3702.54.12",
+          "description": "De 24 exposiciones"
+        },
+        {
+          "code": "3702.54.12",
+          "description": "110L De 100 ASA 10.00 10.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54.12",
+          "description": "120P De 200 ASA 10.00 10.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54.12",
+          "description": "130T De 400 ASA 10.00 10.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54.12",
+          "description": "190M Los demás. 10.00 10.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54.12",
+          "description": "De 36 exposiciones"
+        },
+        {
+          "code": "3702.54.12",
+          "description": "210R De 100 ASA 10.00 10.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54.12",
+          "description": "220V De 200 ASA 10.00 10.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54.12",
+          "description": "230Y De 400 ASA 10.00 10.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54.12",
+          "description": "290T Los demás 10.00 10.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54.12",
+          "description": "900B Los demás 10.00 10.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3702.54.19",
+          "description": "000F Las demás 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54.91",
+          "description": "En cargadores («filmpacks»)"
+        },
+        {
+          "code": "3702.54.91",
+          "description": "000Y En cargadores (\"filmpacks\") 2.00 2.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.54.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "3702.54.99",
+          "description": "000J Las demás 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.55",
+          "description": "De anchura superior a 16 mm pero inferior o igual a 35 mm y longitud superior a 30 m"
+        },
+        {
+          "code": "3702.55.10",
+          "description": "De 35 mm de anchura"
+        },
+        {
+          "code": "3702.55.10",
+          "description": "100E Cinematográficas (R.2289/92 ex-ANA) 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.55.10",
+          "description": "900Y Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.55.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3702.55.90",
+          "description": "000C Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.56.00",
+          "description": "De anchura superior a 35 mm"
+        },
+        {
+          "code": "3702.56.00",
+          "description": "000B --De anchura superior a 35 mm 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "3702.96.00",
+          "description": "De anchura inferior o igual a 35 mm y longitud inferior o igual a 30 m"
+        },
+        {
+          "code": "3702.96.00",
+          "description": "100N De anchura inferior o igual a 16 mm 2.00 2.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.96.00",
+          "description": "900G Las demás 2.00 2.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3702.97.00",
+          "description": "De anchura inferior o igual a 35 mm y longitud superior a 30 m"
+        },
+        {
+          "code": "3702.97.00",
+          "description": "100A De anchura inferior o igual a 16 mm 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.97.00",
+          "description": "900U Las demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3702.98.00",
+          "description": "De anchura superior a 35 mm"
+        },
+        {
+          "code": "3702.98.00",
+          "description": "000G --De anchura superior a 35 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3703",
+      "description": "PAPEL, CARTÓN Y TEXTILES, FOTOGRÁFICOS, SENSIBILIZADOS, SIN IMPRESIONAR",
+      "subheadings": [
+        {
+          "code": "3703.10",
+          "description": "En rollos de anchura superior a 610 mm"
+        },
+        {
+          "code": "3703.10.10",
+          "description": "Para fotografía en colores (policroma)"
+        },
+        {
+          "code": "3703.10.10",
+          "description": "000B Para fotografía en colores (policroma) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.10.21",
+          "description": "Papel heliográfico"
+        },
+        {
+          "code": "3703.10.21",
+          "description": "000U Papel heliográfico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.10.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3703.10.29",
+          "description": "000E Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.20.00",
+          "description": "Los demás, para fotografía en colores (policroma)"
+        },
+        {
+          "code": "3703.20.00",
+          "description": "Papel"
+        },
+        {
+          "code": "3703.20.00",
+          "description": "110P De anchura igual a 10,2 cm y longitud igual a 85 m 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.20.00",
+          "description": "120T De anchura igual a 10,2 cm y longitud igual a 175 m 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.20.00",
+          "description": "130W De anchura igual a 12,7 cm y longitud igual a 85 m 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.20.00",
+          "description": "140Z De anchura igual a 12,7 cm y longitud igual a 175 m 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.20.00",
+          "description": "150C De anchura igual a 15,2 cm y longitud igual a 85 m 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.20.00",
+          "description": "160F De anchura igual a 15,2 cm y longitud igual a 175 m 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.20.00",
+          "description": "190Q Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.20.00",
+          "description": "200R Cartón 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.20.00",
+          "description": "900E Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3703.90.10",
+          "description": "Papel para fotocomposición"
+        },
+        {
+          "code": "3703.90.10",
+          "description": "000P Papel para fotocomposición 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3703.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3703.90.90",
+          "description": "000T Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3704",
+      "description": "PLACAS, PELÍCULAS, PAPEL, CARTÓN Y TEXTILES, FOTOGRÁFICOS, IMPRESIONADOS PERO SIN REVELAR",
+      "subheadings": [
+        {
+          "code": "3704.00.00",
+          "description": "Placas, películas, papel, cartón y textiles, fotográficos, impresionados pero sin revelar"
+        },
+        {
+          "code": "3704.00.00",
+          "description": "000W PLACAS, PELÍCULAS, PAPEL, CARTÓN Y TEXTILES, FOTOGRÁFICOS, IMPRESIONADOS PERO SIN REVELAR. 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3705",
+      "description": "PLACAS Y PELÍCULAS, FOTOGRÁFICAS, IMPRESIONADAS Y REVELADAS, EXCEPTO LAS",
+      "subheadings": [
+        {
+          "code": "3705.00.10",
+          "description": "Fotomáscaras sobre vidrio plano, positivas, aptas para la grabación en pastilla de silicio (chips) para fabricación de"
+        },
+        {
+          "code": "3705.00.10",
+          "description": "000Z Fotomáscaras sobre vidrio plano, positivas, aptas para la grabación en pastilla de silicio (chips) para la fabricación de"
+        },
+        {
+          "code": "3705.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3705.00.90",
+          "description": "000C Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3706",
+      "description": "PELÍCULAS CINEMATOGRÁFICAS (FILMES), IMPRESIONADAS Y REVELADAS, CON REGISTRO DE SONIDO O",
+      "subheadings": [
+        {
+          "code": "3706.10.00",
+          "description": "De anchura superior o igual a 35 mm"
+        },
+        {
+          "code": "3706.10.00",
+          "description": "100C Conteniendo material didáctico, científico o tecnico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3706.10.00",
+          "description": "900W Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3706.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3706.90.00",
+          "description": "100Q Conteniendo material didáctico, científico o tecnico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3706.90.00",
+          "description": "900J Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3707",
+      "description": "PREPARACIONES QUÍMICAS PARA USO FOTOGRÁFICO, EXCEPTO LOS BARNICES, COLAS, ADHESIVOS Y",
+      "subheadings": [
+        {
+          "code": "3707.10.00",
+          "description": "Emulsiones para sensibilizar superficies"
+        },
+        {
+          "code": "3707.10.00",
+          "description": "000Q -Emulsiones para sensibilizar superficies 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3707.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3707.90.10",
+          "description": "Fijadores"
+        },
+        {
+          "code": "3707.90.10",
+          "description": "000N Fijadores 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3707.90.21",
+          "description": "A base de negro de humo o de un colorante y resinas termoplásticas, para reproducción de documentos por sistemas"
+        },
+        {
+          "code": "3707.90.21",
+          "description": "000F A base de negro de humo o de un colorante y resinas termoplásticas, para reproducción de documentos por sistemas"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "0.00 3.00 LA 3.00 5.00",
+      "subheadings": []
+    }
+  ],
+  "_rowCount": 181
+}

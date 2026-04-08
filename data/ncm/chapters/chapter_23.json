@@ -1,0 +1,726 @@
+{
+  "chapter": "23",
+  "title": "Capítulo 23",
+  "sectionTitle": "CAP. 23 SECCION IV PRODUCTOS DE LAS INDUSTRIAS ALIMENTARIAS; BEBIDAS, LIQUIDOS ALCOHOLICOS Y VINAGRE; TABACO Y SUCEDANEO",
+  "headings": [
+    {
+      "code": "2301",
+      "description": "HARINA, POLVO Y «PELLETS», DE CARNE, DESPOJOS, PESCADO O DE CRUSTÁCEOS, MOLUSCOS O DEMÁS",
+      "subheadings": [
+        {
+          "code": "2301.10",
+          "description": "Harina, polvo y «pellets», de carne o despojos; chicharrones"
+        },
+        {
+          "code": "2301.10.10",
+          "description": "De carne"
+        },
+        {
+          "code": "2301.10.10",
+          "description": "100K Harina 6.00 6.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "2301.10.10",
+          "description": "900D Los demás 6.00 6.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "2301.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2301.10.90",
+          "description": "000H Los demás 6.00 6.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "2301.20",
+          "description": "Harina, polvo y «pellets», de pescado o de crustáceos, moluscos o demás invertebrados acuáticos"
+        },
+        {
+          "code": "2301.20.10",
+          "description": "De pescado"
+        },
+        {
+          "code": "2301.20.10",
+          "description": "Harina"
+        },
+        {
+          "code": "2301.20.10",
+          "description": "110C En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP) 6.00 6.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "2301.20.10",
+          "description": "190D Las demás 6.00 6.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "2301.20.10",
+          "description": "900T Los demás 6.00 6.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "2301.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2301.20.90",
+          "description": "Harina (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "2301.20.90",
+          "description": "110F En envases de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP) 6.00 6.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "2301.20.90",
+          "description": "190G Las demás 6.00 6.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "2301.20.90",
+          "description": "900W Los demás 6.00 6.00 3.00 LA 5.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "2302",
+      "description": "SALVADOS, MOYUELOS Y DEMÁS RESIDUOS DEL CERNIDO, DE LA MOLIENDA O DE OTROS TRATAMIENTOS",
+      "subheadings": [
+        {
+          "code": "2302.10.00",
+          "description": "De maíz"
+        },
+        {
+          "code": "2302.10.00",
+          "description": "000N -De maíz 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2302.30",
+          "description": "De trigo"
+        },
+        {
+          "code": "2302.30.10",
+          "description": "Moyuelo"
+        },
+        {
+          "code": "2302.30.10",
+          "description": "Pellets (Ley 21.453)"
+        },
+        {
+          "code": "2302.30.10",
+          "description": "110K A granel, con hasta un 10 % embolsado 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2302.30.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "2302.30.10",
+          "description": "191N En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2302.30.10",
+          "description": "199F Los demás 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2302.30.10",
+          "description": "Los demás (Ley 21.453)"
+        },
+        {
+          "code": "2302.30.10",
+          "description": "910D En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2302.30.10",
+          "description": "990E Los demás 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2302.30.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2302.30.90",
+          "description": "Pellets (Ley 21.453)"
+        },
+        {
+          "code": "2302.30.90",
+          "description": "110N A granel, con hasta un 10 % embolsado (Ley 21.453) 6.00 6.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "2302.30.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "2302.30.90",
+          "description": "191R En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 6.00 6.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "2302.30.90",
+          "description": "199J Los demás 6.00 6.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "2302.30.90",
+          "description": "900D Los demás 6.00 6.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "2302.40.00",
+          "description": "De los demás cereales"
+        },
+        {
+          "code": "2302.40.00",
+          "description": "De arroz"
+        },
+        {
+          "code": "2302.40.00",
+          "description": "110P Moyuelo 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2302.40.00",
+          "description": "190Q Los demás 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2302.40.00",
+          "description": "900E Los demás 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2302.50.00",
+          "description": "De leguminosas"
+        },
+        {
+          "code": "2302.50.00",
+          "description": "100A Pellets de cáscara de soja 6.00 6.00 3.00 LA 31.00 0.50"
+        },
+        {
+          "code": "2302.50.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2302.50.00",
+          "description": "910X De soja 6.00 6.00 3.00 LA 31.00 0.50"
+        },
+        {
+          "code": "2302.50.00",
+          "description": "990Y Los demás 6.00 6.00 3.00 LA 12.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "2303",
+      "description": "RESIDUOS DE LA INDUSTRIA DEL ALMIDÓN Y RESIDUOS SIMILARES, PULPA DE REMOLACHA, BAGAZO DE",
+      "subheadings": [
+        {
+          "code": "2303.10.00",
+          "description": "Residuos de la industria del almidón y residuos similares"
+        },
+        {
+          "code": "2303.10.00",
+          "description": "000G -Residuos de la industria del almidón y residuos similares 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2303.20.00",
+          "description": "Pulpa de remolacha, bagazo de caña de azúcar y demás desperdicios de la industria azucarera"
+        },
+        {
+          "code": "2303.20.00",
+          "description": "000W -Pulpa de remolacha, bagazo de caña de azúcar y demás desperdicios de la industria azucarera 6.00 6.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "2303.30.00",
+          "description": "Heces y desperdicios de cervecería o de destilería"
+        },
+        {
+          "code": "2303.30.00",
+          "description": "000K -Heces y desperdicios de cervecería o de destilería 6.00 6.00 3.00 LA 5.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "2304",
+      "description": "TORTAS Y DEMÁS RESIDUOS SÓLIDOS DE LA EXTRACCIÓN DEL ACEITE DE SOJA (SOYA), INCLUSO",
+      "subheadings": [
+        {
+          "code": "2304.00.10",
+          "description": "Harina y «pellets»"
+        },
+        {
+          "code": "2304.00.10",
+          "description": "100B Harina de tortas (Ley 21.453) 6.00 6.00 3.00 LA 31.00 0.00"
+        },
+        {
+          "code": "2304.00.10",
+          "description": "200G Pellets (Ley 21.453) 6.00 6.00 3.00 LA 31.00 0.00"
+        },
+        {
+          "code": "2304.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2304.00.90",
+          "description": "100E Tortas (Ley 21.453) 6.00 6.00 3.00 LA 31.00 0.00"
+        },
+        {
+          "code": "2304.00.90",
+          "description": "200K Expellers 6.00 6.00 3.00 LA 31.00 0.00"
+        },
+        {
+          "code": "2304.00.90",
+          "description": "900Y Las demás 6.00 6.00 3.00 LA 31.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2305",
+      "description": "TORTAS Y DEMÁS RESIDUOS SÓLIDOS DE LA EXTRACCIÓN DEL ACEITE DE MANÍ (CACAHUATE,",
+      "subheadings": [
+        {
+          "code": "2305.00.00",
+          "description": "Tortas y demás residuos sólidos de la extracción del aceite de maní (cacahuate, cacahuete)*, incluso molidos o en"
+        },
+        {
+          "code": "2305.00.00",
+          "description": "100K Tortas (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2305.00.00",
+          "description": "200Q Expellers (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2305.00.00",
+          "description": "300W Pellets (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2305.00.00",
+          "description": "400B Harina de tortas (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2305.00.00",
+          "description": "900D Las demás 6.00 6.00 3.00 LA 5.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "2306",
+      "description": "TORTAS Y DEMÁS RESIDUOS SÓLIDOS DE LA EXTRACCIÓN DE GRASAS O ACEITES VEGETALES, INCLUSO",
+      "subheadings": [
+        {
+          "code": "2306.10.00",
+          "description": "De semillas de algodón"
+        },
+        {
+          "code": "2306.10.00",
+          "description": "100T Tortas (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.10.00",
+          "description": "200Y Expellers (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.10.00",
+          "description": "300D Pellets (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.10.00",
+          "description": "400J Harina de tortas (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.10.00",
+          "description": "900L Las demás 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.20.00",
+          "description": "De semillas de lino"
+        },
+        {
+          "code": "2306.20.00",
+          "description": "100G Tortas 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.20.00",
+          "description": "200M Expellers 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.20.00",
+          "description": "300T Pellets 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.20.00",
+          "description": "400Y Harina de tortas 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.20.00",
+          "description": "900A Las demás 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.30",
+          "description": "De semillas de girasol"
+        },
+        {
+          "code": "2306.30.10",
+          "description": "Tortas, harinas y «pellets»"
+        },
+        {
+          "code": "2306.30.10",
+          "description": "100F Tortas (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.30.10",
+          "description": "200L Harina de tortas (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.30.10",
+          "description": "Pellets (Ley 21.453)"
+        },
+        {
+          "code": "2306.30.10",
+          "description": "310V De harina de tortas (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.30.10",
+          "description": "320Y Integral (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.30.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2306.30.90",
+          "description": "100J Expellers (Ley 21.453) 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.30.90",
+          "description": "900C Las demás 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.4",
+          "description": "De semillas de nabo (nabina) o de colza:"
+        },
+        {
+          "code": "2306.41.00",
+          "description": "Con bajo contenido de ácido erúcico"
+        },
+        {
+          "code": "2306.41.00",
+          "description": "100X Tortas 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.41.00",
+          "description": "200C Expellers 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.41.00",
+          "description": "300H Pellets 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.41.00",
+          "description": "400N Harina de tortas 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.41.00",
+          "description": "900Q Las demás 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2306.49.00",
+          "description": "100T Tortas 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.49.00",
+          "description": "200Y Expellers 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.49.00",
+          "description": "300D Pellets 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.49.00",
+          "description": "400J Harina de tortas 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.49.00",
+          "description": "900L Las demás 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.50.00",
+          "description": "De coco o de copra"
+        },
+        {
+          "code": "2306.50.00",
+          "description": "000U -De coco o de copra 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.60.00",
+          "description": "De nuez o de almendra de palma"
+        },
+        {
+          "code": "2306.60.00",
+          "description": "000H -De nuez o de almendra de palma 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2306.90.10",
+          "description": "De germen de maíz"
+        },
+        {
+          "code": "2306.90.10",
+          "description": "000K De germen de maíz 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "2306.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2306.90.90",
+          "description": "000N Los demás 6.00 6.00 3.00 LA 5.00 1.00"
+        }
+      ]
+    },
+    {
+      "code": "2307",
+      "description": "LÍAS O HECES DE VINO; TÁRTARO BRUTO",
+      "subheadings": [
+        {
+          "code": "2307.00.00",
+          "description": "Lías o heces de vino; tártaro bruto"
+        },
+        {
+          "code": "2307.00.00",
+          "description": "000R LÍAS O HECES DE VINO; TÁRTARO BRUTO. 6.00 6.00 3.00 LA 5.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "2308",
+      "description": "MATERIAS VEGETALES Y DESPERDICIOS VEGETALES, RESIDUOS Y SUBPRODUCTOS VEGETALES,",
+      "subheadings": [
+        {
+          "code": "2308.00.00",
+          "description": "Materias vegetales y desperdicios vegetales, residuos y subproductos vegetales, incluso en «pellets», de los tipos"
+        },
+        {
+          "code": "2308.00.00",
+          "description": "100Q Productos que contengan soja en su composición 6.00 6.00 3.00 LA 31.00 1.00"
+        },
+        {
+          "code": "2308.00.00",
+          "description": "900J Los demás 6.00 6.00 3.00 LA 12.00 1.00"
+        }
+      ]
+    },
+    {
+      "code": "2309",
+      "description": "PREPARACIONES DE LOS TIPOS UTILIZADOS PARA LA ALIMENTACIÓN DE LOS ANIMALES",
+      "subheadings": [
+        {
+          "code": "2309.10.00",
+          "description": "Alimentos para perros o gatos, acondicionados para la venta al por menor"
+        },
+        {
+          "code": "2309.10.00",
+          "description": "100Y Que contengan cloranfenicol (R.2507/93 ex-ANA) 14.00 14.00 3.00 LNA 4.50 2.00"
+        },
+        {
+          "code": "2309.10.00",
+          "description": "900R Los demás (R.2012/93 ex-ANA) 14.00 14.00 3.00 LNA 4.50 2.00"
+        },
+        {
+          "code": "2309.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "Preparaciones destinadas a proporcionar al animal la totalidad de los elementos nutritivos necesarios para una"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "100W Que contengan cloranfenicol (R.2507/93 ex-ANA) 8.00 8.00 3.00 LNA 12.00 0.50"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "200B Que contengan carbadox (R.57/16 SENASA) 8.00 8.00 3.00 LNA 0.00 0.50"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "Las demas preparaciones que contengan soja, sus subproductos o residuos, en su composición"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "En bolsas rotuladas de peso neto inferior o igual a 50kg"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "311M Con una granulometria que permita su retencion en un tamiz IRAM N° 30 en una proporcion superior o igual al 80% y"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "319E Las demas 8.00 8.00 3.00 LNA 0.00 0.50"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "En bolsas rotuladas de peso neto superior a 50 kg. pero inferior o igual a 1500kg."
+        },
+        {
+          "code": "2309.90.10",
+          "description": "321Q Con una granulometria que permita su retencion en un tamiz IRAM N° 30 en una proporcion superior o igual al 80% y"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "329H Las demás 8.00 8.00 3.00 LNA 26.00 0.50"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "Las demás"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "391N En una proporción inferior o igual al 30%, presentadas con una granulometría que permita su retención en un tamiz"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "399F Las demás 8.00 8.00 3.00 LNA 0.00 0.50"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "Los demás (R.2012/93 ANA)"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "910T En bolsas rotuladas de peso neto inferior o igual a 50kg. 8.00 8.00 3.00 LNA 0.00 0.50"
+        },
+        {
+          "code": "2309.90.10",
+          "description": "990U Las demas. 8.00 8.00 3.00 LNA 12.00 0.50"
+        },
+        {
+          "code": "2309.90.20",
+          "description": "Preparados a base de sal iodada, harina de hueso, harina de concha, cobre y cobalto"
+        },
+        {
+          "code": "2309.90.20",
+          "description": "100F Que contengan cloranfenicol (R.2507/93 ex-ANA) 8.00 8.00 3.00 LNA 5.00 0.50"
+        },
+        {
+          "code": "2309.90.20",
+          "description": "200L Las demás que contengan soja, sus subproductos o residuos, en su composición. 8.00 8.00 3.00 LNA 5.00 0.50"
+        },
+        {
+          "code": "2309.90.20",
+          "description": "900Z Los demás (R.2012/93 ex-ANA) 8.00 8.00 3.00 LNA 5.00 0.50"
+        },
+        {
+          "code": "2309.90.30",
+          "description": "Galletas"
+        },
+        {
+          "code": "2309.90.30",
+          "description": "100Q Que contengan cloranfenicol (R.2507/93 ex-ANA) 14.00 14.00 3.00 LNA 5.00 0.50"
+        },
+        {
+          "code": "2309.90.30",
+          "description": "200W Las demás que contengan soja, sus subproductos o residuos en su composición. 14.00 14.00 3.00 LNA 5.00 0.50"
+        },
+        {
+          "code": "2309.90.30",
+          "description": "900J Los demás 14.00 14.00 3.00 LNA 5.00 0.50"
+        },
+        {
+          "code": "2309.90.40",
+          "description": "Preparaciones que contengan diclazuril"
+        },
+        {
+          "code": "2309.90.40",
+          "description": "100A Que contengan soja, sus subproductos o residuos, en su composición. 2.00 2.00 3.00 LNA 5.00 0.00"
+        },
+        {
+          "code": "2309.90.40",
+          "description": "900U Las demás 2.00 2.00 3.00 LNA 5.00 0.00"
+        },
+        {
+          "code": "2309.90.50",
+          "description": "Preparaciones con un contenido de clorhidrato de ractopamina superior o igual al 2 % en peso, con soporte de salvado"
+        },
+        {
+          "code": "2309.90.50",
+          "description": "100K Que contengan cloranfenicol (R.2507/93 ex-ANA) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "2309.90.50",
+          "description": "900D Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "2309.90.60",
+          "description": "Preparaciones que contengan xilanasa y betaglucanasa con soporte de harina de trigo"
+        },
+        {
+          "code": "2309.90.60",
+          "description": "100V Que contengan cloranfenicol (R.2507/93 ex-ANA) 2.00 2.00 3.00 LNA 0.00 0.00"
+        },
+        {
+          "code": "2309.90.60",
+          "description": "Las demás preparaciones que contengan soja, sus subproductos o residuos, en su composición"
+        },
+        {
+          "code": "2309.90.60",
+          "description": "210D En bolsas rotuladas de peso neto inferior o igual a 50 kg 2.00 2.00 3.00 LNA 4.50 0.00"
+        },
+        {
+          "code": "2309.90.60",
+          "description": "290E Las demás 2.00 2.00 3.00 LNA 24.50 0.00"
+        },
+        {
+          "code": "2309.90.60",
+          "description": "Los demás"
+        },
+        {
+          "code": "2309.90.60",
+          "description": "910R En bolsas rotuladas de peso neto inferior o igual a 50kg 2.00 2.00 3.00 LNA 12.00 0.00"
+        },
+        {
+          "code": "2309.90.60",
+          "description": "990T Las demas. 2.00 2.00 3.00 LNA 12.00 0.00"
+        },
+        {
+          "code": "2309.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "2309.90.90",
+          "description": "100Z Que contengan cloranfenicol (R.2507/93 ex-ANA) 8.00 20.00 3.00 LNA 0.00 0.50"
+        },
+        {
+          "code": "2309.90.90",
+          "description": "200E Que contengan carbadox (R.57/16 SENASA) 8.00 20.00 3.00 LNA 0.00 0.50"
+        },
+        {
+          "code": "2309.90.90",
+          "description": "Los demás (R.2012/93 ex-ANA)"
+        },
+        {
+          "code": "2309.90.90",
+          "description": "Preparaciones que contengan soja, sus subproductos o residuos, en su composición"
+        },
+        {
+          "code": "2309.90.90",
+          "description": "911Y Presentados en bolsas rotuladas, de peso neto inferior o igual a 50 Kg.. 8.00 20.00 3.00 LNA 4.50 0.50"
+        },
+        {
+          "code": "2309.90.90",
+          "description": "919Q Los demás 8.00 20.00 3.00 LNA 31.00 0.50"
+        },
+        {
+          "code": "2309.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2309.90.90",
+          "description": "991Z En bolsas rotuladas de peso neto inferior o igual a 50kg. 8.00 20.00 3.00 LNA 4.50 0.50"
+        },
+        {
+          "code": "2309.90.90",
+          "description": "999R Las demas. 8.00 20.00 3.00 LNA 5.00 0.50"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 175
+}

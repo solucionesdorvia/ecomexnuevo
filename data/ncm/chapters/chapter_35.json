@@ -1,0 +1,542 @@
+{
+  "chapter": "35",
+  "title": "Capítulo 35",
+  "sectionTitle": "CAP. 35 SECCION VI PRODUCTOS DE LAS INDUSTRIAS QUIMICAS O DE LAS INDUSTRIAS CONEXAS Notas. A. Cualquier producto que res",
+  "headings": [
+    {
+      "code": "3501",
+      "description": "CASEÍNA, CASEINATOS Y DEMÁS DERIVADOS DE LA CASEÍNA; COLAS DE CASEÍNA",
+      "subheadings": [
+        {
+          "code": "3501.10.00",
+          "description": "Caseína"
+        },
+        {
+          "code": "3501.10.00",
+          "description": "100X Elaborada con leche bovina 14.00 14.00 3.00 LA 9.00 5.00"
+        },
+        {
+          "code": "3501.10.00",
+          "description": "900Q Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3501.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3501.90.11",
+          "description": "Caseinato de sodio"
+        },
+        {
+          "code": "3501.90.11",
+          "description": "100C Elaborado con leche bovina 14.00 14.00 3.00 LA 9.00 5.00"
+        },
+        {
+          "code": "3501.90.11",
+          "description": "900W Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3501.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3501.90.19",
+          "description": "Caseinato de calcio"
+        },
+        {
+          "code": "3501.90.19",
+          "description": "De uso alimenticio, acondicionado para su venta directa al público"
+        },
+        {
+          "code": "3501.90.19",
+          "description": "111U Elaborado con leche bovina 14.00 14.00 3.00 LA 9.00 5.00"
+        },
+        {
+          "code": "3501.90.19",
+          "description": "119L Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3501.90.19",
+          "description": "191V Elaborado con leche bovina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3501.90.19",
+          "description": "199M Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3501.90.19",
+          "description": "Caseínato de potasio"
+        },
+        {
+          "code": "3501.90.19",
+          "description": "210X Elaborado con leche bovina 14.00 14.00 3.00 LA 9.00 5.00"
+        },
+        {
+          "code": "3501.90.19",
+          "description": "290Y Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3501.90.19",
+          "description": "910K Elaborado con leche bovina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3501.90.19",
+          "description": "990L Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3501.90.20",
+          "description": "Colas de caseína"
+        },
+        {
+          "code": "3501.90.20",
+          "description": "000Z Colas de caseína 14.00 14.00 3.00 LA 9.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3502",
+      "description": "ALBÚMINAS (INCLUIDOS LOS CONCENTRADOS DE VARIAS PROTEÍNAS DEL LACTOSUERO, CON UN",
+      "subheadings": [
+        {
+          "code": "3502.1",
+          "description": "Ovoalbúmina:"
+        },
+        {
+          "code": "3502.11.00",
+          "description": "Seca"
+        },
+        {
+          "code": "3502.11.00",
+          "description": "000X --Seca 14.00 14.00 3.00 LNA 0.00 5.00"
+        },
+        {
+          "code": "3502.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3502.19.00",
+          "description": "000T --Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3502.20.00",
+          "description": "Lactoalbúmina, incluidos los concentrados de dos o más proteínas del lactosuero"
+        },
+        {
+          "code": "3502.20.00",
+          "description": "000Z -Lactoalbúmina, incluidos los concentrados de dos o más proteínas del lactosuero 14.00 14.00 3.00 LA 9.00 5.00"
+        },
+        {
+          "code": "3502.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3502.90.10",
+          "description": "Seroalbúmina"
+        },
+        {
+          "code": "3502.90.10",
+          "description": "000H Seroalbúmina 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3502.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3502.90.90",
+          "description": "000L Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3503",
+      "description": "GELATINAS (AUNQUE SE PRESENTEN EN HOJAS CUADRADAS O RECTANGULARES, INCLUSO TRABAJADAS",
+      "subheadings": [
+        {
+          "code": "3503.00.11",
+          "description": "De oseína, de pureza superior o igual al 99,98 % en peso"
+        },
+        {
+          "code": "3503.00.11",
+          "description": "100M De la especie bovina 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3503.00.11",
+          "description": "900F Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3503.00.12",
+          "description": "De oseína, de pureza inferior al 99,98 % en peso"
+        },
+        {
+          "code": "3503.00.12",
+          "description": "100V De la especie bovina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3503.00.12",
+          "description": "900N Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3503.00.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3503.00.19",
+          "description": "000T Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3503.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3503.00.90",
+          "description": "100H Ictiocola 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3503.00.90",
+          "description": "200N Cola de pieles 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3503.00.90",
+          "description": "300U Cola de huesos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3503.00.90",
+          "description": "900B Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3504",
+      "description": "PEPTONAS Y SUS DERIVADOS; LAS DEMÁS MATERIAS PROTEÍNICAS Y SUS DERIVADOS, NO EXPRESADOS",
+      "subheadings": [
+        {
+          "code": "3504.00.11",
+          "description": "Peptonas y peptonatos"
+        },
+        {
+          "code": "3504.00.11",
+          "description": "000A Peptonas y peptonatos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3504.00.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3504.00.19",
+          "description": "000L Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3504.00.20",
+          "description": "Proteínas de soja en polvo, con un contenido de proteínas superior o igual al 90 % en peso, en base seca"
+        },
+        {
+          "code": "3504.00.20",
+          "description": "000C Proteínas de soja en polvo, con un contenido de proteínas superior o igual al 90 % en peso, sobre base seca 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3504.00.30",
+          "description": "Proteínas de papa (patata) en polvo, con un contenido de proteínas superior o igual al 80 % en peso, en base seca"
+        },
+        {
+          "code": "3504.00.30",
+          "description": "000M Proteínas de papa (patata) en polvo, con un contenido de proteínas superior o igual al 80 % en peso, en base seca 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3504.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3504.00.90",
+          "description": "100B Polvo de cueros y pieles, incluso tratados al cromo 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3504.00.90",
+          "description": "200G Queratinas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3504.00.90",
+          "description": "300M Las demás, de origen animal 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3504.00.90",
+          "description": "900V Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3505",
+      "description": "DEXTRINA Y DEMÁS ALMIDONES Y FÉCULAS MODIFICADOS (POR EJEMPLO: ALMIDONES Y FÉCULAS",
+      "subheadings": [
+        {
+          "code": "3505.10.00",
+          "description": "Dextrina y demás almidones y féculas modificados"
+        },
+        {
+          "code": "3505.10.00",
+          "description": "100W Dextrina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3505.10.00",
+          "description": "Los demás almidones y féculas modificados"
+        },
+        {
+          "code": "3505.10.00",
+          "description": "Almidón y fécula eterificados o esterificados"
+        },
+        {
+          "code": "3505.10.00",
+          "description": "211G Nitratos de almidón 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3505.10.00",
+          "description": "219Z Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3505.10.00",
+          "description": "290F Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3505.20.00",
+          "description": "Colas"
+        },
+        {
+          "code": "3505.20.00",
+          "description": "100K De dextrina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3505.20.00",
+          "description": "200Q De los demás almidones y féculas 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3506",
+      "description": "COLAS Y DEMÁS ADHESIVOS PREPARADOS, NO EXPRESADOS NI COMPRENDIDOS EN OTRA PARTE;",
+      "subheadings": [
+        {
+          "code": "3506.10",
+          "description": "Productos de cualquier clase utilizados como colas o adhesivos, acondicionados para la venta al por menor como"
+        },
+        {
+          "code": "3506.10.10",
+          "description": "A base de cianoacrilatos"
+        },
+        {
+          "code": "3506.10.10",
+          "description": "100Z En envases de peso neto inferior o igual a 3 gramos 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3506.10.10",
+          "description": "200E En envases de peso neto superior a 3 pero inferior o igual a 10 gramos 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3506.10.10",
+          "description": "300K En envases de peso neto superior a 10 gramos 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3506.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3506.10.90",
+          "description": "100C A base de caucho 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3506.10.90",
+          "description": "200H A base de plástico (incluidas las resinas artificiales) 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3506.10.90",
+          "description": "900W Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3506.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "3506.91",
+          "description": "Adhesivos a base de polímeros de las partidas 3901 a 3913 o de caucho"
+        },
+        {
+          "code": "3506.91.10",
+          "description": "A base de caucho"
+        },
+        {
+          "code": "3506.91.10",
+          "description": "000U A base de caucho 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3506.91.20",
+          "description": "A base de polímeros de las partidas 3901 a 3913, dispersos o para dispersar en un medio acuoso"
+        },
+        {
+          "code": "3506.91.20",
+          "description": "000D A base de polímeros de las partidas 39.01 a 39.13, dispersos o para dispersar en un medio acuoso 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3506.91.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3506.91.90",
+          "description": "000X Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3506.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3506.99.00",
+          "description": "000E --Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3507",
+      "description": "ENZIMAS; PREPARACIONES ENZIMATICAS NO EXPRESADAS NI COMPRENDIDAS EN OTRA PARTE",
+      "subheadings": [
+        {
+          "code": "3507.10.00",
+          "description": "Cuajo y sus concentrados"
+        },
+        {
+          "code": "3507.10.00",
+          "description": "000C -Cuajo y sus concentrados 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3507.90.11",
+          "description": "Alfa amilasa (Aspergillus oryzae)"
+        },
+        {
+          "code": "3507.90.11",
+          "description": "000H Alfa amilasa (Aspergillus oryzae) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3507.90.19",
+          "description": "000U Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.21",
+          "description": "Fibrinucleasas"
+        },
+        {
+          "code": "3507.90.21",
+          "description": "000T Fibrinucleasas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.22",
+          "description": "Bromelina"
+        },
+        {
+          "code": "3507.90.22",
+          "description": "000A Bromelina 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.23",
+          "description": "Estreptoquinasa"
+        },
+        {
+          "code": "3507.90.23",
+          "description": "000H Estreptoquinasa 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.24",
+          "description": "Estreptodornasa"
+        },
+        {
+          "code": "3507.90.24",
+          "description": "000Q Estreptodornasa 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.25",
+          "description": "Mezcla de estreptoquinasa y estreptodornasa"
+        },
+        {
+          "code": "3507.90.25",
+          "description": "000Y Mezcla de estreptoquinasa y estreptodornasa 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.26",
+          "description": "Papaína"
+        },
+        {
+          "code": "3507.90.26",
+          "description": "000F Papaína 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3507.90.29",
+          "description": "000D Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.31",
+          "description": "Lisozima y su clorhidrato"
+        },
+        {
+          "code": "3507.90.31",
+          "description": "000C Lisozima y su clorhidrato 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.32",
+          "description": "L-Asparaginasa"
+        },
+        {
+          "code": "3507.90.32",
+          "description": "000K L- Asparaginasa 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3507.90.39",
+          "description": "000N Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.41",
+          "description": "A base de celulasas"
+        },
+        {
+          "code": "3507.90.41",
+          "description": "000M A base de celulasas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.42",
+          "description": "A base de transglutaminasa"
+        },
+        {
+          "code": "3507.90.42",
+          "description": "000V A base transglutaminasa 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.49",
+          "description": "Las demás"
+        },
+        {
+          "code": "3507.90.49",
+          "description": "100D A base de amilasas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.49",
+          "description": "200J A base de proteasas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3507.90.49",
+          "description": "900X Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 132
+}

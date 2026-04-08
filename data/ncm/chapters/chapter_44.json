@@ -1,0 +1,2322 @@
+{
+  "chapter": "44",
+  "title": "Capítulo 44",
+  "sectionTitle": "CAP. 44 SECCION IX MADERA, CARBON VEGETAL Y MANUFACTURAS DE MADERA; CORCHO Y SUS MANUFACTURAS; MANUFACTURAS DE ESPARTERI",
+  "headings": [
+    {
+      "code": "4401",
+      "description": "LEÑA; MADERA EN PLAQUITAS O PARTÍCULAS; ASERRÍN, DESPERDICIOS Y DESECHOS, DE MADERA,",
+      "subheadings": [
+        {
+          "code": "4401.1",
+          "description": "Leña:"
+        },
+        {
+          "code": "4401.11.00",
+          "description": "De coníferas"
+        },
+        {
+          "code": "4401.11.00",
+          "description": "000F --De coníferas 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.12.00",
+          "description": "Distinta de la de coníferas"
+        },
+        {
+          "code": "4401.12.00",
+          "description": "100Y De quebracho 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.12.00",
+          "description": "900R Las demás 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.2",
+          "description": "Madera en plaquitas o partículas:"
+        },
+        {
+          "code": "4401.21.00",
+          "description": "De coníferas"
+        },
+        {
+          "code": "4401.21.00",
+          "description": "100A De pino (pinus spp.) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.21.00",
+          "description": "900U Las demás 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.22.00",
+          "description": "Distinta de la de coníferas"
+        },
+        {
+          "code": "4401.22.00",
+          "description": "100M De álamo (Populus spp) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.22.00",
+          "description": "200T De eucalipto (Eucaliptus spp) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.22.00",
+          "description": "900F Las demás 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.3",
+          "description": "Aserrín, desperdicios y desechos de madera, aglomerados en leños, briquetas, «pellets» o formas similares:"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "«Pellets» de madera"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 20 kg"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "110T De Palo Santo (Bulnesia Sarmientoi) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "120W De Guayacán (Caesalpinia paraguatiensis) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "130Z De Quina (Myroxylon peruviferum) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "140C De Lapacho (Tabebuia impetiginosa) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "150F De Itín (Proposis Kuntzei) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "160J De Calden (Proposis caldenia) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "190U Los demás 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "En envases inmediatos de contenido neto superior a 20 kg pero inferior o igual a 1.250 kg"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "210Y De Palo Santo (Bulnesia Sarmientoi) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "220B De Guayacán (Caesalpinia paraguatiensis) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "230E De Quina (Myroxylon peruviferum) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "240H De Lapacho (Tabebuia impetiginosa) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "250L De Itín (Proposis Kuntzei) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "260P De Calden (Proposis caldenia) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "290Z Los demás 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "910L De Palo Santo (Bulnesia Sarmientoi) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "920P De Guayacán (Caesalpinia paraguatiensis) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "930T De Quina (Myroxylon peruviferum) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "940W De Lapacho (Tabebuia impetiginosa) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "950Z De Itín (Proposis Kuntzei) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "960C De Calden (Proposis caldenia) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.31.00",
+          "description": "990M Los demás 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "Aglomerados, en envases inmediatos de contenido neto inferior o igual a 20 kg"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "110N De Palo Santo (Bulnesia Sarmientoi) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "120R De Guayacán (Caesalpinia paraguatiensis) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "130V De Quina (Myroxylon peruviferum) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "140Y De Lapacho (Tabebuia impetiginosa) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "150B De Itín (Proposis Kuntzei) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "160E De Calden (Proposis caldenia) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "190P Los demás 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "Aglomerados, en envases inmediatos de contenido neto superior a 20 kg pero inferior o igual a 1.250 kg"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "210U De Palo Santo (Bulnesia Sarmientoi) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "220X De Guayacán (Caesalpinia paraguatiensis) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "230A De Quina (Myroxylon peruviferum) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "240D De Lapacho (Tabebuia impetiginosa) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "250G De Itín (Proposis Kuntzei) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "260K De Calden (Proposis caldenia) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "290V Los demás 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "Los demás, aglomerados"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "310Z De Palo Santo (Bulnesia Sarmientoi) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "320C De Guayacán (Caesalpinia paraguatiensis) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "330F De Quina (Myroxylon peruviferum) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "340J De Lapacho (Tabebuia impetiginosa) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "350M De Itín (Proposis Kuntzei) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "360Q De Calden (Proposis caldenia) 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.39.00",
+          "description": "390A Los demás 2.00 2.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "4401.40.00",
+          "description": "Aserrín, desperdicios y desechos, de madera, sin aglomerar"
+        },
+        {
+          "code": "4401.40.00",
+          "description": "100R En envases inmediatos de contenido neto inferior o igual a 20 kg 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4401.40.00",
+          "description": "200X En envases inmediatos de contenido neto superior a 20 kg pero inferior o igual a 1.250 kg 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4401.40.00",
+          "description": "900K Los demás 2.00 2.00 3.00 LA 5.00 0.25"
+        }
+      ]
+    },
+    {
+      "code": "4402",
+      "description": "CARBÓN VEGETAL (COMPRENDIDO EL DE CÁSCARAS O DE HUESOS (CAROZOS)* DE FRUTOS), INCLUSO",
+      "subheadings": [
+        {
+          "code": "4402.10.00",
+          "description": "De bambú"
+        },
+        {
+          "code": "4402.10.00",
+          "description": "100T En envases inmediatos de contenido neto inferior o igual a 5 kg (R. 1044/00 ME) 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4402.10.00",
+          "description": "200Y En envases inmediatos de contenido neto superior a 5 kg e inferior o igual a 20 kg (R. 1044/00 ME) 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4402.10.00",
+          "description": "900L Los demás 2.00 2.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "4402.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4402.90.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 5 kg (R. 1044/00 ME)"
+        },
+        {
+          "code": "4402.90.00",
+          "description": "110J De Eucaliptus grandis, citriodora y colorado 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4402.90.00",
+          "description": "190K Los demás 2.00 2.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "4402.90.00",
+          "description": "En envases inmediatos de contenido neto superior a 5 kg e inferior o igual a 20 kg (R. 1044/00 ME)"
+        },
+        {
+          "code": "4402.90.00",
+          "description": "210P De Eucaliptus grandis, citriodora y colorado 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4402.90.00",
+          "description": "290Q Los demás 2.00 2.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "4402.90.00",
+          "description": "910C De Eucaliptus grandis, citriodora y colorado 2.00 2.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "4402.90.00",
+          "description": "990D Los demás 2.00 2.00 3.00 LA 5.00 1.00"
+        }
+      ]
+    },
+    {
+      "code": "4403",
+      "description": "MADERA EN BRUTO, INCLUSO DESCORTEZADA, DESALBURADA O ESCUADRADA",
+      "subheadings": [
+        {
+          "code": "4403.1",
+          "description": "Tratada con pintura, creosota u otros agentes de conservación:"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "De coníferas"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "Postes"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "De longitud inferior a 4 m"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "111D De pino elliotti (Pinus elliotti) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "112F De pino brasil (Araucaria angustifolia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "119W Las demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "191E De pino elliotti (Pinus elliotti) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "192G De pino brasil (Araucaria angustifolia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "199X Las demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "Rollizos"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "210G De pino elliotti (Pinus elliotti) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "220K De pino brasil (Araucaria angustifolia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "230N De pino Taeda (Pinus Taeda) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "290H Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.11.00",
+          "description": "900R Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "Distinta de la de coníferas"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "Postes"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "De longitud inferior a 4 m"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "111Q De Palo Santo (Bulnesia Sarmientoi) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "112T De Guayacán (Caesalpinia paraguatiensis) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "113V De Quina (Myroxylon peruviferum) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "114X De Lapacho (Tabebuia impetiginosa) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "115Z De Itín (Proposis Kuntzei) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "116B De Calden (Proposis caldenia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "119H Las demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "190P Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "910G De Palo Santo (Bulnesia Sarmientoi) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "920K De Guayacán (Caesalpinia paraguatiensis) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "930N De Quina (Myroxylon peruviferum) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "940R De Lapacho (Tabebuia impetiginosa) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "950V De Itín (Proposis Kuntzei) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "960Y De Calden (Proposis caldenia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.12.00",
+          "description": "990H Las demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.2",
+          "description": "Las demás, de coníferas:"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "De pino (Pinus spp), cuya mayor dimensión de la sección transversal sea superior o igual a 15 cm"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "Postes"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "De longitud inferior a 4 m"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "111T De pino elliotti (Pinus elliotti) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "112V De pino brasil (Araucaria angustifolia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "119K Las demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "191U De pino elliotti (Pinus elliotti) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "192W De pino brasil (Araucaria angustifolia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "199L Las demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "Rollizos"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "210W De pino elliotti (Pinus elliotti) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "220Z De pino brasil (Araucaria angustifolia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "230C De pino Taeda (Pinus Taeda) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "290X Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.21.00",
+          "description": "900F Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "Las demás, de pino (Pinus spp)"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "Postes"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "De longitud inferior a 4 m"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "111E De pino elliotti (Pinus elliotti) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "112G De pino brasil (Araucaria angustifolia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "119X Las demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "191F De pino elliotti (Pinus elliotti) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "192H De pino brasil (Araucaria angustifolia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "199Y Las demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "Rollizos"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "210H De pino elliotti (Pinus elliotti) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "220L De pino brasil (Araucaria angustifolia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "230P De pino Taeda (Pinus Taeda) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "290J Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.22.00",
+          "description": "900T Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.23.00",
+          "description": "De abeto (Abies spp) y de pícea (Picea spp), cuya mayor dimensión de la sección transversal sea superior o igual a"
+        },
+        {
+          "code": "4403.23.00",
+          "description": "000F --De abeto (Abies spp.) y de pícea (Picea spp.), cuya mayor dimensión de la sección transversal sea superior o igual a"
+        },
+        {
+          "code": "4403.24.00",
+          "description": "Las demás, de abeto (Abies spp) y de pícea (Picea spp)"
+        },
+        {
+          "code": "4403.24.00",
+          "description": "000T --Las demás, de abeto (Abies spp.) y de pícea (Picea spp.) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.25.00",
+          "description": "Las demás, cuya mayor dimensión de la sección transversal sea superior o igual a 15 cm"
+        },
+        {
+          "code": "4403.25.00",
+          "description": "000E --Las demás, cuya mayor dimensión de la sección transversal sea superior o igual a 15 cm 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.26.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4403.26.00",
+          "description": "000R --Las demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.4",
+          "description": "Las demás, de maderas tropicales:"
+        },
+        {
+          "code": "4403.41.00",
+          "description": "Dark Red Meranti, Light Red Meranti y Meranti Bakau"
+        },
+        {
+          "code": "4403.41.00",
+          "description": "000K --Dark Red Meranti, Light Red Meranti y Meranti Bakau 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.49.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4403.49.00",
+          "description": "000F --Las demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "4403.91.00",
+          "description": "De roble (Quercus spp)"
+        },
+        {
+          "code": "4403.91.00",
+          "description": "000F --De roble (Quercus spp.) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.93.00",
+          "description": "De haya (Fagus spp), cuya mayor dimensión de la sección transversal sea superior o igual a 15 cm"
+        },
+        {
+          "code": "4403.93.00",
+          "description": "000E --De haya (Fagus spp.), cuya mayor dimensión de la sección transversal sea superior o igual a 15 cm 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.94.00",
+          "description": "Las demás, de haya (Fagus spp)"
+        },
+        {
+          "code": "4403.94.00",
+          "description": "000R --Las demás, de haya (fagus spp.) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.95.00",
+          "description": "De abedul (Betula spp), cuya mayor dimensión de la sección transversal sea superior o igual a 15 cm"
+        },
+        {
+          "code": "4403.95.00",
+          "description": "000D --De abedul (Betula spp.), cuya mayor dimensión de la sección transversal sea superior o igual a 15 cm 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.96.00",
+          "description": "Las demás, de abedul (Betula spp)"
+        },
+        {
+          "code": "4403.96.00",
+          "description": "000Q --Las demás, de abedul (Betula spp.) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.97.00",
+          "description": "De álamo (Populus spp)"
+        },
+        {
+          "code": "4403.97.00",
+          "description": "000C --De álamo (Populus spp.) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.98.00",
+          "description": "De eucalipto (Eucalyptus spp)"
+        },
+        {
+          "code": "4403.98.00",
+          "description": "100V Postes 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.98.00",
+          "description": "200A Rollizos 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.98.00",
+          "description": "900N Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "Postes"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "De longitud inferior a 4 m"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "112P De Palo Santo (Bulnesia Sarmientoi) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "113R De Guayacán (Caesalpinia paraguatiensis) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "114U De Quina (Myroxylon peruviferum) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "116Y De Itín (Proposis Kuntzei) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "117A De Calden (Proposis caldenia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "119E Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "192Q De Palo Santo (Bulnesia Sarmientoi) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "193T De Guayacán (Caesalpinia paraguatiensis) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "194V De Quina (Myroxylon peruviferum) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "196Z De Itín (Proposis Kuntzei) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "197B De Calden (Proposis caldenia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "199F Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "Rollizos"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "230X De sauce (Salix spp.) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "240A De paraíso (Melia spp.) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "250D De Palo Santo (Bulnesia Sarmientoi) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "260G De Guayacán (Caesalpinia paraguatiensis) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "270K De Quina (Myroxylon peruviferum) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "290R Las demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "910D De Palo Santo (Bulnesia Sarmientoi) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "920G De Guayacán (Caesalpinia paraguatiensis) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "930K De Quina (Myroxylon peruviferum) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "950R De Itín (Proposis Kuntzei) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "960V De Caldén (Proposis caldenia) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "4403.99.00",
+          "description": "990E Las demás 2.00 2.00 3.00 LA 5.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "4404",
+      "description": "FLEJES DE MADERA; RODRIGONES HENDIDOS; ESTACAS Y ESTAQUILLAS DE MADERA, APUNTADAS, SIN",
+      "subheadings": [
+        {
+          "code": "4404.10.00",
+          "description": "De coníferas"
+        },
+        {
+          "code": "4404.10.00",
+          "description": "000Z -De coníferas 2.00 2.00 3.00 LA 4.50 0.25"
+        },
+        {
+          "code": "4404.20.00",
+          "description": "Distinta de la de coníferas"
+        },
+        {
+          "code": "4404.20.00",
+          "description": "Tratada con pintura, creosota u otros agentes de conservación"
+        },
+        {
+          "code": "4404.20.00",
+          "description": "Rodrigones hendidos"
+        },
+        {
+          "code": "4404.20.00",
+          "description": "111Z De eucalipto (Eucaliptus spp.) 2.00 2.00 3.00 LA 4.50 0.25"
+        },
+        {
+          "code": "4404.20.00",
+          "description": "119R Los demás 2.00 2.00 3.00 LA 4.50 0.25"
+        },
+        {
+          "code": "4404.20.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4404.20.00",
+          "description": "191A De eucalipto (Eucaliptus spp) 2.00 2.00 3.00 LA 4.50 0.25"
+        },
+        {
+          "code": "4404.20.00",
+          "description": "199T Los demás 2.00 2.00 3.00 LA 4.50 0.25"
+        },
+        {
+          "code": "4404.20.00",
+          "description": "911T De eucalipto (eucaliptus spp.) 2.00 2.00 3.00 LA 4.50 0.25"
+        },
+        {
+          "code": "4404.20.00",
+          "description": "919K Los demás 2.00 2.00 3.00 LA 4.50 0.25"
+        },
+        {
+          "code": "4404.20.00",
+          "description": "991U De eucalipto (Eucaliptus spp.) 2.00 2.00 3.00 LA 4.50 0.25"
+        },
+        {
+          "code": "4404.20.00",
+          "description": "999L Los demás 2.00 2.00 3.00 LA 4.50 0.25"
+        }
+      ]
+    },
+    {
+      "code": "4405",
+      "description": "LANA DE MADERA; HARINA DE MADERA",
+      "subheadings": [
+        {
+          "code": "4405.00.00",
+          "description": "Lana de madera; harina de madera"
+        },
+        {
+          "code": "4405.00.00",
+          "description": "000D LANA DE MADERA; HARINA DE MADERA. 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "4406",
+      "description": "TRAVIESAS (DURMIENTES) DE MADERA PARA VÍAS FÉRREAS O SIMILARES",
+      "subheadings": [
+        {
+          "code": "4406.1",
+          "description": "Sin impregnar:"
+        },
+        {
+          "code": "4406.11.00",
+          "description": "De coníferas"
+        },
+        {
+          "code": "4406.11.00",
+          "description": "000Y --De coníferas 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "4406.12.00",
+          "description": "Distinta de la de coníferas"
+        },
+        {
+          "code": "4406.12.00",
+          "description": "000K --Distinta de la de coníferas 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "4406.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "4406.91.00",
+          "description": "De coníferas"
+        },
+        {
+          "code": "4406.91.00",
+          "description": "000L --De coníferas 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "4406.92.00",
+          "description": "Distinta de la de coníferas"
+        },
+        {
+          "code": "4406.92.00",
+          "description": "000Y --Distinta de la de coníferas 4.00 4.00 3.00 LA 4.50 0.50"
+        }
+      ]
+    },
+    {
+      "code": "4407",
+      "description": "MADERA ASERRADA O DESBASTADA LONGITUDINALMENTE, CORTADA O DESENROLLADA, INCLUSO",
+      "subheadings": [
+        {
+          "code": "4407.1",
+          "description": "De coníferas:"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "De pino (Pinus spp)"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "Tratada con pintura, creosota u otros agentes de conservación"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "110A De pino insigne (Pinus insignis) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "120D De pino sprus (Pinus spruce) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "130G De pino elliotti (pinus elliottii) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "140K De pino taeda (Pinus taeda) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "150N De pino paraná (Araucaria augustifolia) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "190B Los demás 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "910U De pino insigne (Pinus insignis) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "920X De pino sprus (Pinus spruce) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "930A De pino elliotti (Pinus elliottii) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "940D De pino taeda (Pinus taeda) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "950G De pino paraná (Araucaria augustifolia) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.11.00",
+          "description": "990V Los demás 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.12.00",
+          "description": "De abeto (Abies spp) y de pícea (Picea spp)"
+        },
+        {
+          "code": "4407.12.00",
+          "description": "Tratada con pintura, creosata u otros agentes de conservación"
+        },
+        {
+          "code": "4407.12.00",
+          "description": "110M De abeto (Abies spp.) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.12.00",
+          "description": "120Q De pícea (Picea spp) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.12.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4407.12.00",
+          "description": "910F De abeto (Abies spp.) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.12.00",
+          "description": "920J De pícea (Picea spp) 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4407.19.00",
+          "description": "100T Tratada con pintura, creosata u otros agentes de conservación 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.19.00",
+          "description": "900L Los demás 6.00 6.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4407.2",
+          "description": "De maderas tropicales:"
+        },
+        {
+          "code": "4407.21.00",
+          "description": "Mahogany (Swietenia spp)"
+        },
+        {
+          "code": "4407.21.00",
+          "description": "000F --Mahogany (Switenia spp.) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.22.00",
+          "description": "Virola, Imbuia y Balsa"
+        },
+        {
+          "code": "4407.22.00",
+          "description": "000T --Virola, Imbuia y Balsa 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.25.00",
+          "description": "Dark Red Meranti, Light Red Meranti y Meranti Bakau"
+        },
+        {
+          "code": "4407.25.00",
+          "description": "000D --Dark Red Meranti, Light Red Meranti y Meranti Bakau 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.26.00",
+          "description": "White Lauan, White Meranti, White Seraya, Yellow Meranti y Alan"
+        },
+        {
+          "code": "4407.26.00",
+          "description": "000Q --White Lauan, White Meranti, White Seraya, Yellow Meranti y Alan 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.27.00",
+          "description": "Sapelli"
+        },
+        {
+          "code": "4407.27.00",
+          "description": "000C --Sapelli 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.28.00",
+          "description": "Iroko"
+        },
+        {
+          "code": "4407.28.00",
+          "description": "000P --Iroko 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "4407.29.10",
+          "description": "De cedro"
+        },
+        {
+          "code": "4407.29.10",
+          "description": "000L De Cedro 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.29.20",
+          "description": "De ipé (Lapacho)"
+        },
+        {
+          "code": "4407.29.20",
+          "description": "000W De Ipe (Lapacho) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.29.30",
+          "description": "De pau marfím (Guatambú)"
+        },
+        {
+          "code": "4407.29.30",
+          "description": "000F De Pau Marfím (Guatambú) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.29.40",
+          "description": "De louro (Peteribí o Peterivy)"
+        },
+        {
+          "code": "4407.29.40",
+          "description": "000Q De Louro (Peteribí o Peterivy) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.29.50",
+          "description": "De cañafístula (ybyrapytá) (Peltophorum vogelianum)"
+        },
+        {
+          "code": "4407.29.50",
+          "description": "000A De cañafistula (ybyrapytá) (Peltophorum vogelianum) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.29.60",
+          "description": "De incienso (Myrocarpus spp)"
+        },
+        {
+          "code": "4407.29.60",
+          "description": "000K De incienso (Myrocarpus spp.) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.29.70",
+          "description": "De urunday (urundey) (Astronium balansae)"
+        },
+        {
+          "code": "4407.29.70",
+          "description": "000V De urunday (urundey) (Astronium balansae) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.29.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "4407.29.90",
+          "description": "000P Las demás 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "4407.91.00",
+          "description": "De roble (Quercus spp)"
+        },
+        {
+          "code": "4407.91.00",
+          "description": "000E --De roble (Quercus spp.) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.92.00",
+          "description": "De haya (Fagus spp)"
+        },
+        {
+          "code": "4407.92.00",
+          "description": "000R --De haya (Fagus spp.) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.93.00",
+          "description": "De arce (Acer spp)"
+        },
+        {
+          "code": "4407.93.00",
+          "description": "000D --De arce (Hacer spp.) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.94.00",
+          "description": "De cerezo (Prunus spp)"
+        },
+        {
+          "code": "4407.94.00",
+          "description": "000Q --De cerezo (Prunus spp.) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.95.00",
+          "description": "De fresno (Fraxinus spp)"
+        },
+        {
+          "code": "4407.95.00",
+          "description": "000C --De fresno (Fraxinus spp.) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.96.00",
+          "description": "De abedul (Betula spp)"
+        },
+        {
+          "code": "4407.96.00",
+          "description": "000P --De abedul (Betula spp) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.97.00",
+          "description": "De álamo (Populus spp)"
+        },
+        {
+          "code": "4407.97.00",
+          "description": "000B --De álamo (Populus spp) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "4407.99.20",
+          "description": "De peroba (Paratecoma peroba)"
+        },
+        {
+          "code": "4407.99.20",
+          "description": "000V De peroba (Paratecoma peroba) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.99.30",
+          "description": "De guayaibí (Patagonula americana)"
+        },
+        {
+          "code": "4407.99.30",
+          "description": "000E De guayaibí (Patagonula americana) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.99.60",
+          "description": "De viraró (yvyraro) (Pterogyne nitens)"
+        },
+        {
+          "code": "4407.99.60",
+          "description": "000J De viraró (yvyraro) (Pterogyne nitens) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.99.70",
+          "description": "De curupay (kurupay) (Piptadenia macrocarpa)"
+        },
+        {
+          "code": "4407.99.70",
+          "description": "000U De curupay (kurupay) (Piptadenia macrocarpa) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.99.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "4407.99.90",
+          "description": "100U Palo trebol (Amburana Cearensis) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.99.90",
+          "description": "200Z De eucalipto (Eucaliptus spp.) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.99.90",
+          "description": "300E De Palo Santo (Bulnesia Sarmientoi) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.99.90",
+          "description": "400K De Guayacán (Caesalpinia paraguatiensis) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.99.90",
+          "description": "500Q De Quina (Myroxylon peruviferum) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.99.90",
+          "description": "700B De Itín (Proposis Kuntzei) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.99.90",
+          "description": "800G De Calden (Proposis caldenia) 6.00 6.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "4407.99.90",
+          "description": "900M Los demás 6.00 6.00 3.00 LA 4.50 1.00"
+        }
+      ]
+    },
+    {
+      "code": "4408",
+      "description": "HOJAS PARA CHAPADO (INCLUIDAS LAS OBTENIDAS POR CORTADO DE MADERA ESTRATIFICADA), PARA",
+      "subheadings": [
+        {
+          "code": "4408.10",
+          "description": "De coníferas"
+        },
+        {
+          "code": "4408.10.10",
+          "description": "Obtenidas por cortado de madera estratificada"
+        },
+        {
+          "code": "4408.10.10",
+          "description": "100N De espesor inferior o igual a 0,65 mm 10.00 10.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4408.10.10",
+          "description": "900G Las demás 10.00 10.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4408.10.91",
+          "description": "De pino brasil (Araucaria angustifolia)"
+        },
+        {
+          "code": "4408.10.91",
+          "description": "100Z De espesor inferior o igual a 0,65 mm 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.10.91",
+          "description": "900T Las demás 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.10.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "4408.10.99",
+          "description": "De espesor inferior o igual a 0,65 mm"
+        },
+        {
+          "code": "4408.10.99",
+          "description": "110N De pino elliotti (pinus elliottii) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.10.99",
+          "description": "120R De pino taeda (pinus taeda) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.10.99",
+          "description": "190P Las demás 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.10.99",
+          "description": "910G De pino elliotti (pinus elliottii) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.10.99",
+          "description": "920K De pino taeda (pinus taeda) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.10.99",
+          "description": "990H Las demás 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.3",
+          "description": "De maderas tropicales:"
+        },
+        {
+          "code": "4408.31",
+          "description": "Dark Red Meranti, Light Red Meranti y Meranti Bakau"
+        },
+        {
+          "code": "4408.31.10",
+          "description": "Obtenidas por cortado de madera estratificada"
+        },
+        {
+          "code": "4408.31.10",
+          "description": "000Y Obtenidas por cortado de madera estratificada 10.00 10.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4408.31.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "4408.31.90",
+          "description": "000B Las demás 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.39",
+          "description": "Las demás"
+        },
+        {
+          "code": "4408.39.10",
+          "description": "Obtenidas por cortado de madera estratificada"
+        },
+        {
+          "code": "4408.39.10",
+          "description": "100Z De espesor inferior o igual a 0,65 mm 10.00 10.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4408.39.10",
+          "description": "900T Las demás 10.00 10.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4408.39.91",
+          "description": "De cedro"
+        },
+        {
+          "code": "4408.39.91",
+          "description": "100K De espesor inferior o igual a 0,65 mm 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.39.91",
+          "description": "900D Las demás 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.39.92",
+          "description": "De pau marfím (Guatambú)"
+        },
+        {
+          "code": "4408.39.92",
+          "description": "100T De espesor inferior o igual a 0,65 mm 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.39.92",
+          "description": "900L Las demás 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.39.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "4408.39.99",
+          "description": "De Mogno"
+        },
+        {
+          "code": "4408.39.99",
+          "description": "110Z De espesor inferior o igual a 0,65 mm 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.39.99",
+          "description": "190A Las demás 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.39.99",
+          "description": "910T De espesor inferior o igual a 0,65 mm 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.39.99",
+          "description": "990U Las demás 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "4408.90.10",
+          "description": "Obtenidas por cortado de madera estratificada"
+        },
+        {
+          "code": "4408.90.10",
+          "description": "100B De espesor inferior o igual a 0,65 mm 10.00 10.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4408.90.10",
+          "description": "900V Las demás 10.00 10.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "De espesor inferior o igual a 0,65 mm"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "110H De álamo (Populus spp.) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "120L De eucalipto (Eucaliptus spp.) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "130P De paraíso (Melia spp.) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "140T De Palo Santo (Bulnesia Sarmientoi) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "150W De Guayacán (Caesalpinia paraguatiensis) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "160Z De Quina (Myroxylon peruviferum) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "180F De Itín (Proposis Kuntzei), De Calden (Proposis caldenia) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "190J Las demás 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "910B De álamo (Populus spp.) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "920E De eucalipto (Eucaliptus spp.) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "930H De paraíso (Melia spp.) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "940L De Palo Santo (Bulnesia Sarmientoi) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "950P De Guayacán (Caesalpinia paraguatiensis) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "960T De Quina (Myroxylon peruviferum) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "980Z De Itín (Proposis Kuntzei), De Calden (Proposis caldenia) 6.00 6.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "4408.90.90",
+          "description": "990C Las demás 6.00 6.00 3.00 LA 4.50 0.75"
+        }
+      ]
+    },
+    {
+      "code": "4409",
+      "description": "MADERA (INCLUIDAS LAS TABLILLAS Y FRISOS PARA PARQUÉS, SIN ENSAMBLAR) PERFILADA",
+      "subheadings": [
+        {
+          "code": "4409.10.00",
+          "description": "De coníferas"
+        },
+        {
+          "code": "4409.10.00",
+          "description": "000R -De coníferas 10.00 10.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "4409.2",
+          "description": "Distinta de la de coníferas:"
+        },
+        {
+          "code": "4409.21.00",
+          "description": "De bambú"
+        },
+        {
+          "code": "4409.21.00",
+          "description": "000T --De bambú 10.00 10.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "4409.22.00",
+          "description": "De maderas tropicales"
+        },
+        {
+          "code": "4409.22.00",
+          "description": "000E --De maderas tropicales 10.00 10.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "4409.29.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4409.29.00",
+          "description": "100U De Palo Santo (Bulnesia Sarmientoi) 10.00 10.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "4409.29.00",
+          "description": "200Z De Guayacán (Caesalpinia paraguatiensis) 10.00 10.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "4409.29.00",
+          "description": "300E De Quina (Myroxylon peruviferum) 10.00 10.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "4409.29.00",
+          "description": "400K De Calden (Proposis caldenia) 10.00 10.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "4409.29.00",
+          "description": "600W De Itín (Proposis Kuntzei) 10.00 10.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "4409.29.00",
+          "description": "900M Las demás 10.00 10.00 3.00 LNA 4.50 2.50"
+        }
+      ]
+    },
+    {
+      "code": "4410",
+      "description": "TABLEROS DE PARTÍCULAS, TABLEROS LLAMADOS «ORIENTED STRAND BOARD» (OSB) Y TABLEROS",
+      "subheadings": [
+        {
+          "code": "4410.1",
+          "description": "De madera:"
+        },
+        {
+          "code": "4410.11",
+          "description": "Tableros de partículas"
+        },
+        {
+          "code": "4410.11.10",
+          "description": "En bruto o simplemente lijados"
+        },
+        {
+          "code": "4410.11.10",
+          "description": "100Y De espesor inferior o igual a 8 mm 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4410.11.10",
+          "description": "900R Los demás 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4410.11.21",
+          "description": "En ambas caras, con película protectora en la cara vista y trabajo de encastre en sus cuatro cantos, de los tipos"
+        },
+        {
+          "code": "4410.11.21",
+          "description": "000K En ambas caras, con pelicula protectora en la cara vista y trabajo de encastre en sus cuatro cantos, de los tipos"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LNA 3.00 2.50",
+      "subheadings": []
+    },
+    {
+      "code": "4411",
+      "description": "TABLEROS DE FIBRA DE MADERA U OTRAS MATERIAS LEÑOSAS, INCLUSO AGLOMERADAS CON RESINAS O",
+      "subheadings": [
+        {
+          "code": "4411.1",
+          "description": "Tableros de fibra de densidad media (llamados «MDF»):"
+        },
+        {
+          "code": "4411.12",
+          "description": "De espesor inferior o igual a 5 mm"
+        },
+        {
+          "code": "4411.12.10",
+          "description": "Sin trabajo mecánico ni recubrimiento de superficie"
+        },
+        {
+          "code": "4411.12.10",
+          "description": "100D De densidad superior a 0,5 g/cm3 pero inferior o igual a 0,8 g/cm3 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.12.10",
+          "description": "900X Los demás 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.12.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4411.12.90",
+          "description": "Con recubrimiento de superficie en una o ambas caras y con trabajo mecánico en dos (2) o cuatro (4) de sus cantos"
+        },
+        {
+          "code": "4411.12.90",
+          "description": "110K De espesor igual a 5 mm 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.12.90",
+          "description": "190L Los demás 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.12.90",
+          "description": "900A Los demás 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.13",
+          "description": "De espesor superior a 5 mm pero inferior o igual a 9 mm"
+        },
+        {
+          "code": "4411.13.10",
+          "description": "Sin trabajo mecánico ni recubrimiento de superficie"
+        },
+        {
+          "code": "4411.13.10",
+          "description": "100Q De densidad superior a 0,5 g/cm3 pero inferior o igual a 0,8 g/cm3 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.13.10",
+          "description": "900J Los demás 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.13.91",
+          "description": "Recubiertos en ambas caras con papel impregnado con melamina, película protectora en la cara vista y trabajo de"
+        },
+        {
+          "code": "4411.13.91",
+          "description": "000W Recubiertos en ambas caras con papel impregnado con melamina, película protectora en la cara vista y trabajo de"
+        },
+        {
+          "code": "4411.13.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "4411.13.99",
+          "description": "100M Con recubrimiento de superficie en una o ambas caras y con trabajo mecánico en dos (2) o cuatro (4) de sus cantos 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.13.99",
+          "description": "900F Los demás 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.14",
+          "description": "De espesor superior a 9 mm"
+        },
+        {
+          "code": "4411.14.10",
+          "description": "Sin trabajo mecánico ni recubrimiento de superficie"
+        },
+        {
+          "code": "4411.14.10",
+          "description": "100C De densidad superior a 0,5 g/cm3 pero inferior o igual a 0,8 g/cm3 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.14.10",
+          "description": "900W Los demás 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.14.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4411.14.90",
+          "description": "Con recubrimiento de superficie en una o ambas caras y con trabajo mecánico en dos (2) o cuatro (4) de sus cantos"
+        },
+        {
+          "code": "4411.14.90",
+          "description": "210P De espesor superior a 9 mm pero inferior o igual a 12 mm 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.14.90",
+          "description": "290Q Los demás 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.14.90",
+          "description": "900Z Los demás 10.00 10.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "4411.92",
+          "description": "De densidad superior a 0,8 g/cm³"
+        },
+        {
+          "code": "4411.92.10",
+          "description": "Sin trabajo mecánico ni recubrimiento de superficie"
+        },
+        {
+          "code": "4411.92.10",
+          "description": "100R De espesor inferior o igual a 8 mm 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.92.10",
+          "description": "900K Los demás 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.92.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4411.92.90",
+          "description": "De densidad inferior o igual a 0.95 g/cm3"
+        },
+        {
+          "code": "4411.92.90",
+          "description": "Con recubrimiento de superficie en una o ambas caras y con trabajo mecánico en dos (2) o cuatro (4) de sus cantos"
+        },
+        {
+          "code": "4411.92.90",
+          "description": "211F De espesor superior o igual a 5 mm pero inferior o igual a 12 mm 10.00 35.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.92.90",
+          "description": "219Y Los demás 10.00 35.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.92.90",
+          "description": "290E Los demás 10.00 35.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.92.90",
+          "description": "900N Los demás 10.00 35.00 3.00 LNA 3.00 2.50"
+        },
+        {
+          "code": "4411.93",
+          "description": "De densidad superior a 0,5 g/cm3 pero inferior o igual a 0,8 g/cm³"
+        },
+        {
+          "code": "4411.93.10",
+          "description": "Sin trabajo mecánico ni recubrimiento de superficie"
+        },
+        {
+          "code": "4411.93.10",
+          "description": "100D De espesor inferior o igual a 8 mm 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.93.10",
+          "description": "900X Los demás 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.93.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4411.93.90",
+          "description": "Con recubrimiento de superficie en una o ambas caras y con trabajo mecánico en dos (2) o cuatro (4) de sus cantos"
+        },
+        {
+          "code": "4411.93.90",
+          "description": "210Q De espesor superior o igual a 5 mm pero inferior o igual a 12 mm 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.93.90",
+          "description": "290R Los demás 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.93.90",
+          "description": "900A Los demás 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.94",
+          "description": "De densidad inferior o igual a 0,5 g/cm³"
+        },
+        {
+          "code": "4411.94.10",
+          "description": "Sin trabajo mecánico ni recubrimiento de superficie"
+        },
+        {
+          "code": "4411.94.10",
+          "description": "100Q De espesor inferior o igual a 8 mm 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.94.10",
+          "description": "900J Los demás 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.94.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4411.94.90",
+          "description": "100U De espesor inferior o igual a 8 mm 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "4411.94.90",
+          "description": "900M Los demás 10.00 10.00 3.00 LA 3.00 2.50"
+        }
+      ]
+    },
+    {
+      "code": "4412",
+      "description": "MADERA CONTRACHAPADA, MADERA CHAPADA Y MADERA ESTRATIFICADA SIMILAR",
+      "subheadings": [
+        {
+          "code": "4412.10.00",
+          "description": "De bambú"
+        },
+        {
+          "code": "4412.10.00",
+          "description": "100N Maderas contrachapadas, constituidas exclusivamente por hojas de madera de espesor unitario inferior o igual a 6 mm,"
+        }
+      ]
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 3.00 2.50",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LNA 3.00 2.50",
+      "subheadings": []
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LNA 3.00 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "4413",
+      "description": "MADERA DENSIFICADA EN BLOQUES, TABLAS, TIRAS O PERFILES",
+      "subheadings": [
+        {
+          "code": "4413.00.00",
+          "description": "Madera densificada en bloques, tablas, tiras o perfiles"
+        },
+        {
+          "code": "4413.00.00",
+          "description": "000M MADERA DENSIFICADA EN BLOQUES, TABLAS, TIRAS O PERFILES. 10.00 10.00 3.00 LA 3.00 2.50"
+        }
+      ]
+    },
+    {
+      "code": "4414",
+      "description": "MARCOS DE MADERA PARA CUADROS, FOTOGRAFÍAS, ESPEJOS U OBJETOS SIMILARES",
+      "subheadings": [
+        {
+          "code": "4414.00.00",
+          "description": "Marcos de madera para cuadros, fotografías, espejos u objetos similares"
+        },
+        {
+          "code": "4414.00.00",
+          "description": "000F MARCOS DE MADERA PARA CUADROS, FOTOGRAFÍAS, ESPEJOS U OBJETOS SIMILARES. 10.00 10.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4415",
+      "description": "CAJONES, CAJAS, JAULAS, TAMBORES Y ENVASES SIMILARES, DE MADERA; CARRETES PARA CABLES, DE",
+      "subheadings": [
+        {
+          "code": "4415.10.00",
+          "description": "Cajones, cajas, jaulas, tambores y envases similares; carretes para cables"
+        },
+        {
+          "code": "4415.10.00",
+          "description": "Cajones, cajas, jaulas, tambores y envases similares"
+        },
+        {
+          "code": "4415.10.00",
+          "description": "110X Aptos para estar en contacto con alimentos 10.00 10.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4415.10.00",
+          "description": "190Y Los demás 10.00 10.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4415.10.00",
+          "description": "200Z Carretes para cables 10.00 10.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4415.20.00",
+          "description": "Paletas, paletas caja y demás plataformas para carga; collarines para paletas"
+        },
+        {
+          "code": "4415.20.00",
+          "description": "100H Collarines para paletas (Anexo II-1) 10.00 10.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4415.20.00",
+          "description": "900B Las demás 10.00 10.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4416",
+      "description": "BARRILES, CUBAS, TINAS Y DEMÁS MANUFACTURAS DE TONELERÍA Y SUS PARTES, DE MADERA,",
+      "subheadings": [
+        {
+          "code": "4416.00.10",
+          "description": "De roble (Quercus spp)"
+        },
+        {
+          "code": "4416.00.10",
+          "description": "100H Duelas 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4416.00.10",
+          "description": "900B Las demás 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4416.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "4416.00.90",
+          "description": "100L Duelas 10.00 10.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4416.00.90",
+          "description": "900E Las demás 10.00 10.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4417",
+      "description": "HERRAMIENTAS, MONTURAS Y MANGOS DE HERRAMIENTAS, MONTURAS Y MANGOS DE CEPILLOS,",
+      "subheadings": [
+        {
+          "code": "4417.00.10",
+          "description": "Herramientas"
+        },
+        {
+          "code": "4417.00.10",
+          "description": "000W Herramientas 10.00 10.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4417.00.20",
+          "description": "Hormas, ensanchadores y tensores para el calzado"
+        },
+        {
+          "code": "4417.00.20",
+          "description": "000F Hormas, ensanchadores y tensores para el calzado 10.00 10.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4417.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4417.00.90",
+          "description": "000Z Los demás 10.00 10.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4418",
+      "description": "OBRAS Y PIEZAS DE CARPINTERÍA PARA CONSTRUCCIONES, INCLUIDOS LOS TABLEROS CELULARES, LOS",
+      "subheadings": [
+        {
+          "code": "4418.10.00",
+          "description": "Ventanas, puertas vidriera, y sus marcos y contramarcos"
+        },
+        {
+          "code": "4418.10.00",
+          "description": "000U -Ventanas, puertas vidriera, y sus marcos y contramarcos 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4418.20.00",
+          "description": "Puertas y sus marcos, contramarcos y umbrales"
+        },
+        {
+          "code": "4418.20.00",
+          "description": "000H -Puertas y sus marcos, contramarcos y umbrales 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4418.40.00",
+          "description": "Encofrados para hormigón"
+        },
+        {
+          "code": "4418.40.00",
+          "description": "000L -Encofrados para hormigón 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4418.50.00",
+          "description": "Tablillas para cubierta de tejados o fachadas («shingles» y «shakes»)"
+        },
+        {
+          "code": "4418.50.00",
+          "description": "000A -Tablillas para cubierta de tejados o fachadas ('shingles' y 'shakes') 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4418.60.00",
+          "description": "Postes y vigas"
+        },
+        {
+          "code": "4418.60.00",
+          "description": "000P -Postes y vigas 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4418.7",
+          "description": "Tableros ensamblados para revestimiento de suelo:"
+        },
+        {
+          "code": "4418.73.00",
+          "description": "De bambú o que tengan por lo menos la capa superior de bambú"
+        },
+        {
+          "code": "4418.73.00",
+          "description": "000P --De bambú o que tengan por lo menos la capa superior de bambú 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4418.74.00",
+          "description": "Los demás, para suelos en mosaico"
+        },
+        {
+          "code": "4418.74.00",
+          "description": "000B --Los demás, para suelos en mosaico 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4418.75.00",
+          "description": "Los demás, multicapas"
+        },
+        {
+          "code": "4418.75.00",
+          "description": "000N --Los demás, multicapas 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4418.79.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4418.79.00",
+          "description": "000L --Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4418.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "4418.91.00",
+          "description": "De bambú"
+        },
+        {
+          "code": "4418.91.00",
+          "description": "000U --De bambú 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4418.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4418.99.00",
+          "description": "000P --Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4419",
+      "description": "ARTÍCULOS DE MESA O DE COCINA, DE MADERA",
+      "subheadings": [
+        {
+          "code": "4419.1",
+          "description": "De bambú:"
+        },
+        {
+          "code": "4419.11.00",
+          "description": "Tablas para pan, tablas para cortar y artículos similares"
+        },
+        {
+          "code": "4419.11.00",
+          "description": "000Z --Tablas para pan, tablas para cortar y artículos similares 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4419.12.00",
+          "description": "Palillos"
+        },
+        {
+          "code": "4419.12.00",
+          "description": "000L --Palillos 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4419.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4419.19.00",
+          "description": "100A Aptos para estar en contacto con alimentos 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4419.19.00",
+          "description": "900U Los demás 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4419.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4419.90.00",
+          "description": "100F Aptos para estar en contacto con alimentos 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4419.90.00",
+          "description": "900Z Los demás 14.00 14.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4420",
+      "description": "MARQUETERÍA Y TARACEA; COFRECILLOS Y ESTUCHES PARA JOYERÍA U ORFEBRERÍA Y MANUFACTURAS",
+      "subheadings": [
+        {
+          "code": "4420.10.00",
+          "description": "Estatuillas y demás objetos de adorno, de madera"
+        },
+        {
+          "code": "4420.10.00",
+          "description": "100X Productos alcanzados por la Res. 163/2005 SCT 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4420.10.00",
+          "description": "900Q Los demás 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4420.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4420.90.00",
+          "description": "100K Productos alcanzados por la Res. 163/2005 SCT 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4420.90.00",
+          "description": "200Q Aptos para estar en contacto con alimentos 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4420.90.00",
+          "description": "900D Los demás 14.00 14.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4421",
+      "description": "LAS DEMÁS MANUFACTURAS DE MADERA",
+      "subheadings": [
+        {
+          "code": "4421.10.00",
+          "description": "Perchas para prendas de vestir"
+        },
+        {
+          "code": "4421.10.00",
+          "description": "100Q Anatómicas 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4421.10.00",
+          "description": "900J Las demás 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4421.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "4421.91.00",
+          "description": "De bambú"
+        },
+        {
+          "code": "4421.91.00",
+          "description": "000K --De bambú 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4421.99.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4421.99.00",
+          "description": "100L Mondadientes 14.00 35.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4421.99.00",
+          "description": "200R Palitos para helados 14.00 35.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4421.99.00",
+          "description": "300X Productos alcanzados por la Res. 163/2005 SCT 14.00 35.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4421.99.00",
+          "description": "400C Otros palillos para asir alimentos 14.00 35.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4421.99.00",
+          "description": "500H Manufacturas diversas de roble, tostadas, de los tipos utilizados en barriles de fermentación o crianza de vinos 14.00 35.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4421.99.00",
+          "description": "900E Los demás 14.00 35.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 1148
+}

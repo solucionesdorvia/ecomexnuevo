@@ -1,0 +1,140 @@
+{
+  "chapter": "45",
+  "title": "Capítulo 45",
+  "sectionTitle": "CAP. 45 SECCION IX MADERA, CARBON VEGETAL Y MANUFACTURAS DE MADERA; CORCHO Y SUS MANUFACTURAS; MANUFACTURAS DE ESPARTERI",
+  "headings": [
+    {
+      "code": "4501",
+      "description": "CORCHO NATURAL EN BRUTO O SIMPLEMENTE PREPARADO; DESPERDICIOS DE CORCHO; CORCHO",
+      "subheadings": [
+        {
+          "code": "4501.10.00",
+          "description": "Corcho natural en bruto o simplemente preparado"
+        },
+        {
+          "code": "4501.10.00",
+          "description": "000A -Corcho natural en bruto o simplemente preparado 2.00 2.00 3.00 LA 14.50 0.00"
+        },
+        {
+          "code": "4501.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4501.90.00",
+          "description": "000N -Los demás 2.00 2.00 3.00 LA 14.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "4502",
+      "description": "CORCHO NATURAL, DESCORTEZADO O SIMPLEMENTE ESCUADRADO O EN BLOQUES, PLACAS, HOJAS O",
+      "subheadings": [
+        {
+          "code": "4502.00.00",
+          "description": "Corcho natural, descortezado o simplemente escuadrado o en bloques, placas, hojas o tiras, cuadradas o"
+        },
+        {
+          "code": "4502.00.00",
+          "description": "100K Simplemente escuadrado 4.00 4.00 3.00 LA 9.50 0.00"
+        },
+        {
+          "code": "4502.00.00",
+          "description": "200Q En tiras, incluso reforzadas con papel o textil 4.00 4.00 3.00 LA 9.50 0.00"
+        },
+        {
+          "code": "4502.00.00",
+          "description": "900D Los demás 4.00 4.00 3.00 LA 9.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "4503",
+      "description": "MANUFACTURAS DE CORCHO NATURAL",
+      "subheadings": [
+        {
+          "code": "4503.10.00",
+          "description": "Tapones"
+        },
+        {
+          "code": "4503.10.00",
+          "description": "000M -Tapones 10.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "4503.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4503.90.00",
+          "description": "100F Aptas para estar en contacto con alimentos 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "4503.90.00",
+          "description": "200L Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes. 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "4503.90.00",
+          "description": "900Z Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4504",
+      "description": "CORCHO AGLOMERADO (INCLUSO CON AGLUTINANTE) Y MANUFACTURAS DE CORCHO AGLOMERADO",
+      "subheadings": [
+        {
+          "code": "4504.10.00",
+          "description": "Bloques, placas, hojas y tiras; baldosas y revestimientos similares de pared, de cualquier forma; cilindros macizos,"
+        },
+        {
+          "code": "4504.10.00",
+          "description": "100L Con aglomerante 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "4504.10.00",
+          "description": "900E Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "4504.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4504.90.00",
+          "description": "Con aglomerante"
+        },
+        {
+          "code": "4504.90.00",
+          "description": "110C Tapones, incluso con discos de corcho natural 10.00 10.00 3.00 LA 3.00 0.75"
+        },
+        {
+          "code": "4504.90.00",
+          "description": "120F Las demás, aptas para estar en contacto con alimentos 10.00 10.00 3.00 LA 3.00 0.75"
+        },
+        {
+          "code": "4504.90.00",
+          "description": "130J Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes. 10.00 10.00 3.00 LA 3.00 0.75"
+        },
+        {
+          "code": "4504.90.00",
+          "description": "190D Los demás 10.00 10.00 3.00 LA 3.00 0.75"
+        },
+        {
+          "code": "4504.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4504.90.00",
+          "description": "910W Aptos para estar en contacto con alimentos 10.00 10.00 3.00 LA 3.00 0.75"
+        },
+        {
+          "code": "4504.90.00",
+          "description": "920Z Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes. 10.00 10.00 3.00 LA 3.00 0.75"
+        },
+        {
+          "code": "4504.90.00",
+          "description": "990X Los demás 10.00 10.00 3.00 LA 3.00 0.75"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 31
+}

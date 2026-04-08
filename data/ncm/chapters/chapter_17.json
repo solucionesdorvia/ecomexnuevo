@@ -1,0 +1,273 @@
+{
+  "chapter": "17",
+  "title": "Capítulo 17",
+  "sectionTitle": "CAP. 17 SECCION IV PRODUCTOS DE LAS INDUSTRIAS ALIMENTARIAS; BEBIDAS, LIQUIDOS ALCOHOLICOS Y VINAGRE; TABACO Y SUCEDANEO",
+  "headings": [
+    {
+      "code": "1701",
+      "description": "AZÚCAR DE CAÑA O DE REMOLACHA Y SACAROSA QUÍMICAMENTE PURA, EN ESTADO SÓLIDO",
+      "subheadings": [
+        {
+          "code": "1701.1",
+          "description": "Azúcar en bruto sin adición de aromatizante ni colorante:"
+        },
+        {
+          "code": "1701.12.00",
+          "description": "De remolacha"
+        },
+        {
+          "code": "1701.12.00",
+          "description": "000L --De remolacha 16.00 20.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "1701.13.00",
+          "description": "Azúcar de caña mencionado en la Nota 2 de subpartida de este Capítulo"
+        },
+        {
+          "code": "1701.13.00",
+          "description": "000Y --Azúcar de caña mencionado en la Nota 2 de subpartida de este Capítulo 16.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1701.14.00",
+          "description": "Los demás azúcares de caña"
+        },
+        {
+          "code": "1701.14.00",
+          "description": "000K --Los demás azúcares de caña 16.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1701.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "1701.91.00",
+          "description": "Con adición de aromatizante o colorante"
+        },
+        {
+          "code": "1701.91.00",
+          "description": "000M --Con adición de aromatizante o colorante 16.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1701.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1701.99.00",
+          "description": "100N Azucar blanco en los terminos del Art 768 C.A.A. 16.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1701.99.00",
+          "description": "900G Los demas 16.00 20.00 3.00 LA 4.50 2.50"
+        }
+      ]
+    },
+    {
+      "code": "1702",
+      "description": "LOS DEMÁS AZÚCARES, INCLUIDAS LA LACTOSA, MALTOSA, GLUCOSA Y FRUCTOSA (LEVULOSA)",
+      "subheadings": [
+        {
+          "code": "1702.1",
+          "description": "Lactosa y jarabe de lactosa:"
+        },
+        {
+          "code": "1702.11.00",
+          "description": "Con un contenido de lactosa superior o igual al 99 % en peso, expresado en lactosa anhidra, calculado sobre"
+        },
+        {
+          "code": "1702.11.00",
+          "description": "000T --Con un contenido de lactosa superior o igual al 99 % en peso, expresado en lactosa anhidra, calculado sobre"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LA 4.50 1.25",
+      "subheadings": []
+    },
+    {
+      "code": "1703",
+      "description": "MELAZA PROCEDENTE DE LA EXTRACCIÓN O DEL REFINADO DEL AZÚCAR",
+      "subheadings": [
+        {
+          "code": "1703.10.00",
+          "description": "Melaza de caña"
+        },
+        {
+          "code": "1703.10.00",
+          "description": "000Z -Melaza de caña 16.00 16.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "1703.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1703.90.00",
+          "description": "000M -Las demás 16.00 16.00 3.00 LA 4.50 1.00"
+        }
+      ]
+    },
+    {
+      "code": "1704",
+      "description": "ARTÍCULOS DE CONFITERÍA SIN CACAO (INCLUIDO EL CHOCOLATE BLANCO)",
+      "subheadings": [
+        {
+          "code": "1704.10.00",
+          "description": "Chicles y demás gomas de mascar, incluso recubiertos de azúcar"
+        },
+        {
+          "code": "1704.10.00",
+          "description": "000T -Chicles y demás gomas de mascar, incluso recubiertos de azúcar 20.00 20.00 3.00 LNA 4.50 3.50"
+        },
+        {
+          "code": "1704.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1704.90.10",
+          "description": "Chocolate blanco"
+        },
+        {
+          "code": "1704.90.10",
+          "description": "En bloques, tabletas o barras"
+        },
+        {
+          "code": "1704.90.10",
+          "description": "Rellenos"
+        },
+        {
+          "code": "1704.90.10",
+          "description": "111B En envases inmediatos de contenido neto inferior o igual a 50 g 20.00 20.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1704.90.10",
+          "description": "112D En envases inmediatos de contenido neto superior a 50 g pero inferior o igual a 100 g 20.00 20.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1704.90.10",
+          "description": "119U Los demás 20.00 20.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1704.90.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "1704.90.10",
+          "description": "191C En envases inmediatos de contenido neto inferior o igual a 50 g 20.00 20.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1704.90.10",
+          "description": "192E En envases inmediatos de contenido neto superior a 50 g pero inferior o igual a 100 g 20.00 20.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1704.90.10",
+          "description": "199V Los demás 20.00 20.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1704.90.10",
+          "description": "900P Los demás 20.00 20.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "Bombones, caramelos, confites y pastillas"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "Caramelos"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "Duros"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "111L Rellenos 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "119D Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "Blandos y masticables"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "121P Rellenos 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "129G Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "130Q Chupetines 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "190K Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "Confites y grageas"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "210P Confites 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "290Q Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "Pastillas"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "510F Obtenidas por compresion 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "Las demás"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "591J A base de azucar fantasía (tipo malvavisco) 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "599B Las demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "600H Bombones 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.20",
+          "description": "900Z Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1704.90.90",
+          "description": "100Z Turrones 20.00 20.00 3.00 LA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.90",
+          "description": "200E Jaleas y pastas de frutos 20.00 20.00 3.00 LA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.90",
+          "description": "300K Barras de cereal 20.00 20.00 3.00 LA 4.50 3.75"
+        },
+        {
+          "code": "1704.90.90",
+          "description": "900T Los demás 20.00 20.00 3.00 LA 4.50 3.75"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 98
+}

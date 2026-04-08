@@ -1,0 +1,1588 @@
+{
+  "chapter": "91",
+  "title": "Capítulo 91",
+  "sectionTitle": "CAP. 91 SECCION XVIII INSTRUMENTOS Y APARATOS DE OPTICA, FOTOGRAFIA O CINEMATOGRAFIA, DE MEDIDA, CONTROL O PRECISION; IN",
+  "headings": [
+    {
+      "code": "9101",
+      "description": "RELOJES DE PULSERA, BOLSILLO Y SIMILARES (INCLUIDOS LOS CONTADORES DE TIEMPO DE LOS MISMOS",
+      "subheadings": [
+        {
+          "code": "9101.1",
+          "description": "Relojes de pulsera, eléctricos, incluso con contador de tiempo incorporado:"
+        },
+        {
+          "code": "9101.11.00",
+          "description": "Con indicador mecánico solamente"
+        },
+        {
+          "code": "9101.11.00",
+          "description": "000E --Con indicador mecánico solamente 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9101.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9101.19.00",
+          "description": "000A --Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9101.2",
+          "description": "Los demás relojes de pulsera, incluso con contador de tiempo incorporado:"
+        },
+        {
+          "code": "9101.21.00",
+          "description": "Automáticos"
+        },
+        {
+          "code": "9101.21.00",
+          "description": "000U --Automáticos 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9101.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9101.29.00",
+          "description": "000P --Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9101.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "9101.91.00",
+          "description": "Eléctricos"
+        },
+        {
+          "code": "9101.91.00",
+          "description": "000T --Eléctricos 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9101.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9101.99.00",
+          "description": "000N --Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9102",
+      "description": "RELOJES DE PULSERA, BOLSILLO Y SIMILARES (INCLUIDOS LOS CONTADORES DE TIEMPO DE LOS MISMOS",
+      "subheadings": [
+        {
+          "code": "9102.1",
+          "description": "Relojes de pulsera, eléctricos, incluso con contador de tiempo incorporado:"
+        },
+        {
+          "code": "9102.11",
+          "description": "Con indicador mecánico solamente"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "Con caja de metal común"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "De pila o de acumulador (anexo II-9)"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "Con caja de titanio, incluidas sus aleaciones"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "111U Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "119L Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "Con caja de acero, incluso inoxidable"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "121X Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "122Z Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "123B Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "129P Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "Con caja de aluminio, incluidas sus aleaciones"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "131A Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "132C Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "133E Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "139T Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "Con caja de bronce"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "141D Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "142F Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "143H Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "149W Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "Con caja de los demás metales comunes"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "151G Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "152J Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "153L Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "159Z Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "911M Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "919E Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "921Q Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "922T Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "923V Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "929H Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "931U Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "932W Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "933Y Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "939L Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "941X Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "942Z Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "943B Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "949P Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "951A Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "952C Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "953E Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.10",
+          "description": "959T Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "Con caja de metal precioso o chapado de metal precioso y fondo de acero"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "Con caja de metal precioso"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "111X Con pulsera de metal precioso o chapado de metal precioso 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "112Z Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "113B Con pulsera de los demás metales comunes 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "114D Con pulsera de cuero natural 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "119P Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "Con caja chapada de metal precioso"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "121A Con pulsera de metal precioso o chapado de metal precioso 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "122C Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "123E Con pulsera de los demás metales comunes 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "124G Con pulsera de cuero natural 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "129T Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "Con caja de plástico o caucho"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "210A Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "Con pulsera de plástico o caucho"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "221F Productos alcanzados por la Res. 163/2005 SCT 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "229Y Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "230G Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "290B Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "910N Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "920R Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "930V Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.11.90",
+          "description": "990P Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12",
+          "description": "Con indicador optoelectrónico solamente"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "Con caja de metal común"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "Con caja de titanio, incluidas sus aleaciones"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "110D Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "190E Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "Con caja de acero, incluso inoxidable"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "210J Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "220M Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "230Q Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "290K Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "Con caja de aluminio, incluidas sus aleaciones"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "310P Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "320T Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "330W Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "390Q Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "Con caja de bronce"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "410V Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "420Y Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "430B Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "490W Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "Con caja de los demás metales comunes"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "510A Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "520D Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "530G Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.10",
+          "description": "590B Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.20",
+          "description": "Con caja de plástico, excepto las reforzadas con fibra de vidrio"
+        },
+        {
+          "code": "9102.12.20",
+          "description": "100K Productos alcanzados por la Res. 163/2005 SCT 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.20",
+          "description": "900D Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "Con caja de metal precioso o chapado de metal precioso y fondo de acero"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "Con caja de metal precioso"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "111J Con pulsera de metal precioso o chapado de metal precioso 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "112L Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "113N Con pulsera de los demás metales comunes 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "114Q Con pulsera de cuero natural 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "119B Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "Con caja chapada de metal precioso"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "121M Con pulsera de metal precioso o chapado de metal precioso 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "122P Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "123R Con pulsera de los demás metales comunes 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "124U Con pulsera de cuero natural 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "129E Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "Con caja de plástico reforzada con fibra de vidrio o carbono, o con caja de caucho, incluso reforzada con dichas"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "210M Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "220Q Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "230U Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "290N Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "910A Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "920D Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "930G Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.12.90",
+          "description": "990B Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "Con caja de titanio, incluidas sus aleaciones"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "110C Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "190D Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "Con caja de acero, incluso inoxidable"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "210H Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "220L Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "230P Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "290J Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "Con caja de aluminio, incluidas sus aleaciones"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "310N Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "320R Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "330V Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "390P Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "Con caja de bronce"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "410U Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "420X Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "430A Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "490V Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "Con caja de los demás metales comunes"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "510Z Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "520C Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "530F Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "590A Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "Con caja de metal precioso o chapado de metal precioso y fondo de acero"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "Con caja de metal precioso"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "611G Con pulsera de metal precioso o chapado de metal precioso 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "612J Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "613L Con pulsera de los demás metales comunes 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "614N Con pulsera de cuero natural 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "619Z Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "Con caja chapada de metal precioso"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "621K Con pulsera de metal precioso o chapado de metal precioso 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "622M Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "623P Con pulsera de los demás metales comunes 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "624R Con pulsera de cuero natural 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "629C Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "Con caja de plástico o caucho"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "710K Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "Con pulsera de plástico o caucho"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "721Q Productos alcanzados por la Res. 163/2005 SCT 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "729H Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "730R Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "790L Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "910W Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "920Z Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "930C Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.19.00",
+          "description": "990X Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.2",
+          "description": "Los demás relojes de pulsera, incluso con contador de tiempo incorporado:"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "Automáticos"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "Con caja de metal precioso o chapado de metal precioso y fondo de acero"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "Con caja de metal precioso"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "111Y Con pulsera de metal precioso o chapado de metal precioso 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "112A Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "113C Con pulsera de los demás metales comunes 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "114E Con pulsera de cuero natural 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "119Q Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "Con caja chapada de metal precioso"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "121B Con pulsera de metal precioso o chapado de metal precioso 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "122D Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "123F Con pulsera de los demás metales comunes 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "124H Con pulsera de cuero natural 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "129U Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "Con caja de titanio, incluidas sus aleaciones"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "210B Con pulsera de titanio, incluidas sus aleaciones 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "290C Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "Con caja de acero, incluso inoxidable"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "310G Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "320K Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "330N Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "390H Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "Con caja de aluminio, incluidas sus aleaciones"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "410M Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "420Q Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "430U Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "490N Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "Con caja de bronce"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "510T Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "520W Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "530Z Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "590U Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "Con caja de los demás metales comunes"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "610Y Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "620B Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "630E Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "690Z Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "Con caja de plástico o caucho"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "710D Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "720G Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "730K Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "790E Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "910P Con pulsera de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "920T Con pulsera de plástico o caucho 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "930W Con pulsera de cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.21.00",
+          "description": "990Q Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9102.29.00",
+          "description": "100N Con caja de metal precioso o chapado de metal precioso y fondo de acero 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.29.00",
+          "description": "900G Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "9102.91.00",
+          "description": "Eléctricos"
+        },
+        {
+          "code": "9102.91.00",
+          "description": "100R Con caja de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.91.00",
+          "description": "200X Con caja de metal precioso o chapado de metal precioso y fondo de acero 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.91.00",
+          "description": "900K Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9102.99.00",
+          "description": "100M Con caja de metal común 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.99.00",
+          "description": "200T Con caja de metal precioso o chapado de metal precioso y fondo de acero 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9102.99.00",
+          "description": "900F Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9103",
+      "description": "DESPERTADORES Y DEMÁS RELOJES DE PEQUEÑO MECANISMO DE RELOJERÍA",
+      "subheadings": [
+        {
+          "code": "9103.10.00",
+          "description": "Eléctricos"
+        },
+        {
+          "code": "9103.10.00",
+          "description": "100K Con indicación analógica (R.2506/93 ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9103.10.00",
+          "description": "900D Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9103.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9103.90.00",
+          "description": "000T -Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9104",
+      "description": "RELOJES DE TABLERO DE INSTRUMENTOS Y RELOJES SIMILARES, PARA AUTOMÓVILES, AERONAVES,",
+      "subheadings": [
+        {
+          "code": "9104.00.00",
+          "description": "Relojes de tablero de instrumentos y relojes similares, para automóviles, aeronaves, barcos o demás vehículos"
+        },
+        {
+          "code": "9104.00.00",
+          "description": "100P De los tipos utilizados en vehiculos automoviles 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9104.00.00",
+          "description": "900H Los demas 20.00 20.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9105",
+      "description": "LOS DEMÁS RELOJES",
+      "subheadings": [
+        {
+          "code": "9105.1",
+          "description": "Despertadores:"
+        },
+        {
+          "code": "9105.11.00",
+          "description": "Eléctricos"
+        },
+        {
+          "code": "9105.11.00",
+          "description": "De pilas o de acumulador"
+        },
+        {
+          "code": "9105.11.00",
+          "description": "110M Productos alcanzados por la Res. 163/2005 SCT 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9105.11.00",
+          "description": "190N Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9105.11.00",
+          "description": "200P Con conexión a la red eléctrica 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9105.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9105.19.00",
+          "description": "000Z --Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9105.2",
+          "description": "Relojes de pared:"
+        },
+        {
+          "code": "9105.21.00",
+          "description": "Eléctricos"
+        },
+        {
+          "code": "9105.21.00",
+          "description": "100Y De pilas o de acumulador 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9105.21.00",
+          "description": "200D Con conexión a la red eléctrica 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9105.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9105.29.00",
+          "description": "000N --Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9105.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "9105.91.00",
+          "description": "Eléctricos"
+        },
+        {
+          "code": "9105.91.00",
+          "description": "100X De pilas o de acumulador 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9105.91.00",
+          "description": "200C Con conexión a la red eléctrica 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9105.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9105.99.00",
+          "description": "000M --Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9106",
+      "description": "APARATOS DE CONTROL DE TIEMPO Y CONTADORES DE TIEMPO, CON MECANISMO DE RELOJERÍA O",
+      "subheadings": [
+        {
+          "code": "9106.10.00",
+          "description": "Registradores de asistencia; registradores fechadores y registradores contadores"
+        },
+        {
+          "code": "9106.10.00",
+          "description": "Registradores de asistencia"
+        },
+        {
+          "code": "9106.10.00",
+          "description": "110U Electrónicos 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9106.10.00",
+          "description": "190V Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9106.10.00",
+          "description": "200W Fechadores y contadores 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9106.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9106.90.00",
+          "description": "000Y -Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9107",
+      "description": "INTERRUPTORES HORARIOS Y DEMÁS APARATOS QUE PERMITAN ACCIONAR UN DISPOSITIVO EN UN",
+      "subheadings": [
+        {
+          "code": "9107.00.10",
+          "description": "Interruptores horarios"
+        },
+        {
+          "code": "9107.00.10",
+          "description": "100E Con conexión a la red eléctrica 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9107.00.10",
+          "description": "900Y Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9107.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9107.00.90",
+          "description": "000C Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9108",
+      "description": "PEQUEÑOS MECANISMOS DE RELOJERÍA COMPLETOS Y MONTADOS",
+      "subheadings": [
+        {
+          "code": "9108.1",
+          "description": "Eléctricos:"
+        },
+        {
+          "code": "9108.11",
+          "description": "Con indicador mecánico solamente o con dispositivo que permita incorporarlo"
+        },
+        {
+          "code": "9108.11.10",
+          "description": "Para relojes de las partidas 9101 ó 9102"
+        },
+        {
+          "code": "9108.11.10",
+          "description": "000U Para relojes de las partidas 91.01 ó 91.02 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9108.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9108.11.90",
+          "description": "000X Los demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9108.12.00",
+          "description": "Con indicador optoelectrónico solamente"
+        },
+        {
+          "code": "9108.12.00",
+          "description": "000W --Con indicador optoelectrónico solamente 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9108.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9108.19.00",
+          "description": "000E --Los demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9108.20.00",
+          "description": "Automáticos"
+        },
+        {
+          "code": "9108.20.00",
+          "description": "000L -Automáticos 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9108.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9108.90.00",
+          "description": "000K -Los demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9109",
+      "description": "LOS DEMÁS MECANISMOS DE RELOJERÍA COMPLETOS Y MONTADOS",
+      "subheadings": [
+        {
+          "code": "9109.10.00",
+          "description": "Eléctricos"
+        },
+        {
+          "code": "9109.10.00",
+          "description": "100W De despertador 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9109.10.00",
+          "description": "900P Los demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9109.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9109.90.00",
+          "description": "000D -Los demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9110",
+      "description": "MECANISMOS DE RELOJERÍA COMPLETOS, SIN MONTAR O PARCIALMENTE MONTADOS («CHABLONS»);",
+      "subheadings": [
+        {
+          "code": "9110.1",
+          "description": "Pequeños mecanismos:"
+        },
+        {
+          "code": "9110.11",
+          "description": "Mecanismos completos, sin montar o parcialmente montados («chablons»)"
+        },
+        {
+          "code": "9110.11.10",
+          "description": "Para relojes de las partidas 9101 ó 9102"
+        },
+        {
+          "code": "9110.11.10",
+          "description": "000R Para relojes de las partidas 91.01 ó 91.02 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9110.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9110.11.90",
+          "description": "000V Los demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9110.12.00",
+          "description": "Mecanismos incompletos, montados"
+        },
+        {
+          "code": "9110.12.00",
+          "description": "000U --Mecanismos incompletos, montados 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9110.19.00",
+          "description": "Mecanismos «en blanco» («ébauches»)"
+        },
+        {
+          "code": "9110.19.00",
+          "description": "000C --Mecanismos <<en blanco>> (<<ébauches>>) 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9110.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9110.90.00",
+          "description": "000H -Los demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9111",
+      "description": "CAJAS DE LOS RELOJES DE LAS PARTIDAS 9101 Ó 9102, Y SUS PARTES",
+      "subheadings": [
+        {
+          "code": "9111.10.00",
+          "description": "Cajas de metal precioso o chapado de metal precioso (plaqué)"
+        },
+        {
+          "code": "9111.10.00",
+          "description": "000N -Cajas de metal precioso o chapado de metal precioso (plaqué) 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9111.20",
+          "description": "Cajas de metal común, incluso dorado o plateado"
+        },
+        {
+          "code": "9111.20.10",
+          "description": "De latón, en esbozos"
+        },
+        {
+          "code": "9111.20.10",
+          "description": "000M De latón, en esbozos 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9111.20.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "9111.20.90",
+          "description": "000Q Las demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9111.80.00",
+          "description": "Las demás cajas"
+        },
+        {
+          "code": "9111.80.00",
+          "description": "000M -Las demás cajas 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9111.90",
+          "description": "Partes"
+        },
+        {
+          "code": "9111.90.10",
+          "description": "Fondos de metal común"
+        },
+        {
+          "code": "9111.90.10",
+          "description": "000L Fondos de metal común 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9111.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "9111.90.90",
+          "description": "000P Las demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9112",
+      "description": "CAJAS Y ENVOLTURAS SIMILARES PARA LOS DEMÁS APARATOS DE RELOJERÍA, Y SUS PARTES",
+      "subheadings": [
+        {
+          "code": "9112.20.00",
+          "description": "Cajas y envolturas similares"
+        },
+        {
+          "code": "9112.20.00",
+          "description": "000W -Cajas y envolturas similares 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9112.90.00",
+          "description": "Partes"
+        },
+        {
+          "code": "9112.90.00",
+          "description": "000V -Partes 18.00 18.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9113",
+      "description": "PULSERAS PARA RELOJ Y SUS PARTES",
+      "subheadings": [
+        {
+          "code": "9113.10.00",
+          "description": "De metal precioso o chapado de metal precioso (plaqué)"
+        },
+        {
+          "code": "9113.10.00",
+          "description": "000A -De metal precioso o chapado de metal precioso (plaqué) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9113.20.00",
+          "description": "De metal común, incluso dorado o plateado"
+        },
+        {
+          "code": "9113.20.00",
+          "description": "000P -De metal común, incluso dorado o plateado 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "Pulseras para relojes"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "Con partes de metal precioso o chapadas de metal precioso"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "111Z De cuero natural de reptil 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "112B De piel natural de tiburón 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "113D De cuero natural vacuno 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "119R Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "191A De cuero natural de reptil 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "192C De piel natural de tiburón 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "193E De cuero natural vacuno 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "194G De plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "199T Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9113.90.00",
+          "description": "200Z Partes 18.00 18.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9114",
+      "description": "LAS DEMÁS PARTES DE APARATOS DE RELOJERÍA",
+      "subheadings": [
+        {
+          "code": "9114.10.00",
+          "description": "Muelles (resortes), incluidas las espirales"
+        },
+        {
+          "code": "9114.10.00",
+          "description": "000U -Muelles (resortes), incluidas las espirales 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9114.30.00",
+          "description": "Esferas o cuadrantes"
+        },
+        {
+          "code": "9114.30.00",
+          "description": "000X -Esferas o cuadrantes 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9114.40.00",
+          "description": "Platinas y puentes"
+        },
+        {
+          "code": "9114.40.00",
+          "description": "000L -Platinas y puentes 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9114.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "9114.90.10",
+          "description": "Coronas"
+        },
+        {
+          "code": "9114.90.10",
+          "description": "000R Coronas 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9114.90.20",
+          "description": "Agujas"
+        },
+        {
+          "code": "9114.90.20",
+          "description": "000B Agujas 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9114.90.30",
+          "description": "Tijas"
+        },
+        {
+          "code": "9114.90.30",
+          "description": "000L Tijas 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9114.90.40",
+          "description": "Básculas"
+        },
+        {
+          "code": "9114.90.40",
+          "description": "000W Básculas 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9114.90.50",
+          "description": "Ejes y piñones"
+        },
+        {
+          "code": "9114.90.50",
+          "description": "000F Ejes y piñones 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9114.90.60",
+          "description": "Ruedas"
+        },
+        {
+          "code": "9114.90.60",
+          "description": "000Q Ruedas 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9114.90.70",
+          "description": "Rotores"
+        },
+        {
+          "code": "9114.90.70",
+          "description": "000A Rotores 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9114.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "9114.90.90",
+          "description": "000V Las demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 397
+}

@@ -1,6 +1,30 @@
+import { classifyWithAI, type NcmClassification } from "@/lib/ai/ncmClassifier";
 import { openaiJson } from "@/lib/ai/openaiClient";
 import { productFromTextPipeline } from "@/lib/scraper/productFromTextPipeline";
 import type { CaseSnapshot, ChatMessage, NcmCandidateItem, ProductType } from "./types";
+
+/** Respuesta más rápida: últimos turnos y tope de caractereres para el analista. */
+function truncateTranscript(messages: ChatMessage[], maxMessages = 24, maxChars = 12_000): string {
+  const recent = messages.slice(-maxMessages);
+  const parts: string[] = [];
+  let total = 0;
+  for (let i = recent.length - 1; i >= 0; i--) {
+    const m = recent[i]!;
+    const line = `${m.role === "user" ? "Usuario" : "Analista"}: ${m.content}`;
+    if (total + line.length + 2 > maxChars) break;
+    parts.unshift(line);
+    total += line.length + 2;
+  }
+  return parts.join("\n\n");
+}
+
+const ANALYST_TIMEOUT_MS = Number(process.env.NCM_CHAT_ANALYST_TIMEOUT_MS) || 28_000;
+const CLASSIFY_TIMEOUT_MS = Number(process.env.NCM_CHAT_CLASSIFY_TIMEOUT_MS) || 22_000;
+
+function useFullNcmPipeline(): boolean {
+  const v = process.env.NCM_CHAT_FULL_PIPELINE;
+  return v === "1" || v === "true";
+}
 
 function clamp01(n: number) {
   if (!Number.isFinite(n)) return 0;
@@ -167,15 +191,62 @@ function mapPipelineToCandidates(
   return { candidates: cands.slice(0, 12), discardedNotes };
 }
 
+function mapClassifyAIResult(cls: NcmClassification, conf: number): {
+  ncm: string;
+  candidates: NcmCandidateItem[];
+  discardedNotes: string[];
+  rationale?: string;
+} {
+  const discardedNotes: string[] = [];
+  for (const d of cls.discarded ?? []) {
+    discardedNotes.push(`${d.ncm}: ${d.reason}`);
+  }
+
+  const primary = cls.ncm_code;
+  const primaryOk = primary && primary !== "9999.99.99";
+  const candidates: NcmCandidateItem[] = [];
+  const seen = new Set<string>();
+
+  if (primaryOk) {
+    const k = primary.replace(/\D/g, "");
+    seen.add(k);
+    candidates.push({
+      code: primary,
+      description: "Sugerencia principal (IA)",
+      confidence: conf,
+      rationale: cls.rationale,
+    });
+  }
+
+  for (const c of cls.candidates ?? []) {
+    if (!c.ncm_code || c.ncm_code === "9999.99.99") continue;
+    const k = c.ncm_code.replace(/\D/g, "");
+    if (k.length < 6 || seen.has(k)) continue;
+    seen.add(k);
+    candidates.push({
+      code: c.ncm_code,
+      description: "Alternativa",
+      confidence: c.confidence,
+      rationale: c.rationale ?? "",
+    });
+  }
+
+  const ncm = primaryOk ? primary : "";
+  return {
+    ncm,
+    candidates: candidates.slice(0, 12),
+    discardedNotes,
+    rationale: cls.rationale,
+  };
+}
+
 export async function processClasificarTurn(opts: {
   messages: ChatMessage[];
   snapshot: CaseSnapshot;
 }): Promise<{ assistantMessage: string; snapshot: CaseSnapshot }> {
   const { messages, snapshot: prev } = opts;
 
-  const transcript = messages
-    .map((m) => `${m.role === "user" ? "Usuario" : "Analista"}: ${m.content}`)
-    .join("\n\n");
+  const transcript = truncateTranscript(messages);
 
   const stateJson = JSON.stringify(
     {
@@ -200,8 +271,8 @@ export async function processClasificarTurn(opts: {
     analyst = await openaiJson<AnalystJson>({
       system: ANALYST_SYSTEM,
       user: userPayload,
-      model: process.env.OPENAI_MODEL || "gpt-4o-mini",
-      timeoutMs: 60_000,
+      model: process.env.NCM_CHAT_ANALYST_MODEL ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
+      timeoutMs: ANALYST_TIMEOUT_MS,
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Error al analizar.";
@@ -239,24 +310,64 @@ export async function processClasificarTurn(opts: {
   }
 
   try {
-    const pipeline = await productFromTextPipeline(techText);
-    const ncm = typeof pipeline.ncm === "string" ? pipeline.ncm.trim() : "";
-    const meta = pipeline.ncmMeta as Record<string, unknown> | undefined;
-    const rawConf = typeof meta?.confidence === "number" ? meta.confidence : 0.45;
-    const ambiguous = meta?.ambiguous === true;
+    if (useFullNcmPipeline()) {
+      const pipeline = await productFromTextPipeline(techText);
+      const ncm = typeof pipeline.ncm === "string" ? pipeline.ncm.trim() : "";
+      const meta = pipeline.ncmMeta as Record<string, unknown> | undefined;
+      const rawConf = typeof meta?.confidence === "number" ? meta.confidence : 0.45;
+      const ambiguous = meta?.ambiguous === true;
+      const conf = clamp01(ambiguous ? rawConf * 0.85 : rawConf);
+
+      const { candidates, discardedNotes } = mapPipelineToCandidates(ncm || undefined, meta, conf);
+      snap.candidates = candidates.length ? candidates : snap.candidates;
+      snap.discardedNotes = discardedNotes.length ? discardedNotes : snap.discardedNotes;
+      snap.recommendedNcm = ncm || snap.recommendedNcm;
+      snap.confidence = conf;
+      const pcramTitle =
+        pipeline.pcram && typeof pipeline.pcram === "object" && "title" in pipeline.pcram
+          ? String((pipeline.pcram as { title?: string }).title ?? "").trim()
+          : "";
+      snap.classificationRationale =
+        pcramTitle || snap.classificationRationale || analyst.classification_rationale_draft || undefined;
+
+      if (ncm && conf >= 0.7 && !ambiguous) {
+        snap.status = "resolved";
+        snap.pendingQuestions = undefined;
+      } else if (ncm || (candidates?.length ?? 0) > 0) {
+        snap.status = "tentative";
+        snap.pendingQuestions = undefined;
+      } else {
+        snap.status = "needs_info";
+      }
+
+      const extra =
+        ncm && conf < 0.7
+          ? `\n\n**Clasificación tentativa.** Confianza ${Math.round(conf * 100)}% (umbral recomendado ≥70% para dar por cerrado). Podés afinar datos o validar con despachante.`
+          : ambiguous
+            ? `\n\n**Ambigüedad detectada** entre posiciones cercanas; conviene validar documentalmente.`
+            : "";
+
+      return {
+        assistantMessage: assistantMessage + extra,
+        snapshot: snap,
+      };
+    }
+
+    const cls = await classifyWithAI(techText, {
+      timeoutMs: CLASSIFY_TIMEOUT_MS,
+      model: process.env.NCM_CHAT_CLASSIFY_MODEL ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
+    });
+    const rawConf = clamp01(Number(cls.confidence ?? 0));
+    const ambiguous = Boolean(cls.ambiguous);
     const conf = clamp01(ambiguous ? rawConf * 0.85 : rawConf);
 
-    const { candidates, discardedNotes } = mapPipelineToCandidates(ncm || undefined, meta, conf);
+    const { ncm, candidates, discardedNotes, rationale } = mapClassifyAIResult(cls, conf);
     snap.candidates = candidates.length ? candidates : snap.candidates;
     snap.discardedNotes = discardedNotes.length ? discardedNotes : snap.discardedNotes;
     snap.recommendedNcm = ncm || snap.recommendedNcm;
     snap.confidence = conf;
-    const pcramTitle =
-      pipeline.pcram && typeof pipeline.pcram === "object" && "title" in pipeline.pcram
-        ? String((pipeline.pcram as { title?: string }).title ?? "").trim()
-        : "";
     snap.classificationRationale =
-      pcramTitle || snap.classificationRationale || analyst.classification_rationale_draft || undefined;
+      rationale || snap.classificationRationale || analyst.classification_rationale_draft || undefined;
 
     if (ncm && conf >= 0.7 && !ambiguous) {
       snap.status = "resolved";

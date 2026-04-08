@@ -1,0 +1,764 @@
+{
+  "chapter": "01",
+  "title": "Capítulo 01",
+  "sectionTitle": "CAP. 01 SECCION I ANIMALES VIVOS Y PRODUCTOS DEL REINO ANIMAL Notas. 1. En esta Sección, cualquier referencia a un géner",
+  "headings": [
+    {
+      "code": "0101",
+      "description": "CABALLOS, ASNOS, MULOS Y BURDÉGANOS, VIVOS",
+      "subheadings": [
+        {
+          "code": "0101.2",
+          "description": "Caballos:"
+        },
+        {
+          "code": "0101.21.00",
+          "description": "Reproductores de raza pura"
+        },
+        {
+          "code": "0101.21.00",
+          "description": "100W Sangre pura de carrera 0.00 0.00 0.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0101.21.00",
+          "description": "200B Polo argentino 0.00 0.00 0.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0101.21.00",
+          "description": "300G Silla argentino 0.00 0.00 0.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0101.21.00",
+          "description": "400M Criollos 0.00 0.00 0.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0101.21.00",
+          "description": "500T Árabes 0.00 0.00 0.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0101.21.00",
+          "description": "600Y Cuarto de milla 0.00 0.00 0.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0101.21.00",
+          "description": "700D Peruano de paso 0.00 0.00 0.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0101.21.00",
+          "description": "900P Los demás 0.00 0.00 0.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "Raza pura"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "110V Sangre pura de carrera 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "120Y Polo argentino 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "130B Silla argentino 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "140E Criollos 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "150H Árabes 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "160L Cuarto de milla 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "170P Peruano de paso 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "190W Los demás 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "910N Para polo 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "920R Para salto 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "930V Para consumo 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "940Y Para trabajo 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.29.00",
+          "description": "990P Los demás 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0101.30.00",
+          "description": "Asnos"
+        },
+        {
+          "code": "0101.30.00",
+          "description": "000T -Asnos 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0101.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0101.90.00",
+          "description": "000C -Los demas 4.00 4.00 3.00 LA 5.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "0102",
+      "description": "ANIMALES VIVOS DE LA ESPECIE BOVINA",
+      "subheadings": [
+        {
+          "code": "0102.2",
+          "description": "Bovinos domésticos:"
+        },
+        {
+          "code": "0102.21",
+          "description": "Reproductores de raza pura"
+        },
+        {
+          "code": "0102.21.10",
+          "description": "Preñadas o con cría al pie"
+        },
+        {
+          "code": "0102.21.10",
+          "description": "000U Preñadas o con cría al pie 0.00 0.00 0.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0102.21.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0102.21.90",
+          "description": "100C Toros y toritos 0.00 0.00 0.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0102.21.90",
+          "description": "200H Vacas y vaquillonas 0.00 0.00 0.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0102.21.90",
+          "description": "900W Los demás 0.00 0.00 0.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0102.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "0102.29.11",
+          "description": "Preñadas o con cría al pie"
+        },
+        {
+          "code": "0102.29.11",
+          "description": "000X Preñadas o con cría al pie 2.00 2.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0102.29.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "0102.29.19",
+          "description": "100N Toros y toritos 2.00 2.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0102.29.19",
+          "description": "200U Vacas y vaquillonas 2.00 2.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0102.29.19",
+          "description": "900G Los demás 2.00 2.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0102.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0102.29.90",
+          "description": "Para consumo"
+        },
+        {
+          "code": "0102.29.90",
+          "description": "110B Toros y toritos 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0102.29.90",
+          "description": "120E Vacas y vaquillonas 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0102.29.90",
+          "description": "130H Novillos y novillitos 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0102.29.90",
+          "description": "190C Los demás 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0102.29.90",
+          "description": "910V Toros y toritos 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0102.29.90",
+          "description": "920Y Vacas y vaquillonas 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0102.29.90",
+          "description": "930B Terneros y terneritos 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0102.29.90",
+          "description": "990W Los demás 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0102.3",
+          "description": "Búfalos:"
+        },
+        {
+          "code": "0102.31",
+          "description": "Reproductores de raza pura"
+        },
+        {
+          "code": "0102.31.10",
+          "description": "Preñadas o con cría al pie"
+        },
+        {
+          "code": "0102.31.10",
+          "description": "000H Preñadas o con cría al pie 0.00 0.00 0.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0102.31.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0102.31.90",
+          "description": "000L Los demás 0.00 0.00 0.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0102.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "0102.39.11",
+          "description": "Preñadas o con cría al pie"
+        },
+        {
+          "code": "0102.39.11",
+          "description": "000L Preñadas o con cría al pie 2.00 2.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0102.39.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "0102.39.19",
+          "description": "000X Los demás 2.00 2.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0102.39.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0102.39.90",
+          "description": "000G Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0102.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0102.90.00",
+          "description": "000W -Los demás 0.00 0.00 0.00 LA 5.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "0103",
+      "description": "ANIMALES VIVOS DE LA ESPECIE PORCINA",
+      "subheadings": [
+        {
+          "code": "0103.10.00",
+          "description": "Reproductores de raza pura"
+        },
+        {
+          "code": "0103.10.00",
+          "description": "100G Puros por pedrigree, excepto los de quinta generación (R.2507/93 ex-ANA) 0.00 0.00 0.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0103.10.00",
+          "description": "900A Los demás 0.00 0.00 0.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0103.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "0103.91.00",
+          "description": "De peso inferior a 50 kg"
+        },
+        {
+          "code": "0103.91.00",
+          "description": "Puros por cruza (R. 2507/93 ex-ANA)"
+        },
+        {
+          "code": "0103.91.00",
+          "description": "110K Para consumo 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0103.91.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0103.91.00",
+          "description": "191N Para reproducción 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0103.91.00",
+          "description": "199F Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0103.91.00",
+          "description": "910D Para consumo 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0103.91.00",
+          "description": "991G Para reproducción 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0103.91.00",
+          "description": "999Z Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0103.92.00",
+          "description": "De peso superior o igual a 50 kg"
+        },
+        {
+          "code": "0103.92.00",
+          "description": "Puros por cruza (R. 2507/93 ex-ANA)"
+        },
+        {
+          "code": "0103.92.00",
+          "description": "110X Para consumo 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0103.92.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0103.92.00",
+          "description": "191A Para reproducción 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0103.92.00",
+          "description": "199T Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0103.92.00",
+          "description": "910Q Para consumo 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0103.92.00",
+          "description": "991U Para reproducción 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0103.92.00",
+          "description": "999L Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "0104",
+      "description": "ANIMALES VIVOS DE LAS ESPECIES OVINA O CAPRINA",
+      "subheadings": [
+        {
+          "code": "0104.10",
+          "description": "De la especie ovina"
+        },
+        {
+          "code": "0104.10.11",
+          "description": "Preñadas o con cría al pie"
+        },
+        {
+          "code": "0104.10.11",
+          "description": "000M Preñadas o con cría al pie 0.00 0.00 0.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0104.10.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "0104.10.19",
+          "description": "000Y Los demás 0.00 0.00 0.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0104.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0104.10.90",
+          "description": "100N Para consumo 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0104.10.90",
+          "description": "900G Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0104.20",
+          "description": "De la especie caprina"
+        },
+        {
+          "code": "0104.20.10",
+          "description": "Reproductores de raza pura"
+        },
+        {
+          "code": "0104.20.10",
+          "description": "000U Reproductores de raza pura 0.00 0.00 0.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0104.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0104.20.90",
+          "description": "100C Para consumo 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0104.20.90",
+          "description": "900W Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "0105",
+      "description": "GALLOS, GALLINAS, PATOS, GANSOS, PAVOS (GALLIPAVOS) Y PINTADAS, DE LAS ESPECIES DOMÉSTICAS,",
+      "subheadings": [
+        {
+          "code": "0105.1",
+          "description": "De peso inferior o igual a 185 g:"
+        },
+        {
+          "code": "0105.11",
+          "description": "Aves de la especie Gallus domesticus"
+        },
+        {
+          "code": "0105.11.10",
+          "description": "De líneas puras o híbridas, para reproducción"
+        },
+        {
+          "code": "0105.11.10",
+          "description": "000K De líneas puras o híbridas, para reproducción 0.00 0.00 0.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0105.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0105.11.90",
+          "description": "000N Los demás 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0105.12.00",
+          "description": "Pavos (gallipavos)"
+        },
+        {
+          "code": "0105.12.00",
+          "description": "000M --Pavos (gallipavos) 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0105.13.00",
+          "description": "Patos"
+        },
+        {
+          "code": "0105.13.00",
+          "description": "000Z --Patos 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0105.14.00",
+          "description": "Gansos"
+        },
+        {
+          "code": "0105.14.00",
+          "description": "000L --Gansos 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0105.15.00",
+          "description": "Pintadas"
+        },
+        {
+          "code": "0105.15.00",
+          "description": "000Y --Pintadas 2.00 2.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0105.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "0105.94.00",
+          "description": "Aves de la especie Gallus domesticus"
+        },
+        {
+          "code": "0105.94.00",
+          "description": "000Z --Aves de la especie Gallus domesticus 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0105.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0105.99.00",
+          "description": "000J --Los demás 4.00 4.00 3.00 LA 5.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "0106",
+      "description": "LOS DEMÁS ANIMALES VIVOS",
+      "subheadings": [
+        {
+          "code": "0106.1",
+          "description": "Mamíferos:"
+        },
+        {
+          "code": "0106.11.00",
+          "description": "Primates"
+        },
+        {
+          "code": "0106.11.00",
+          "description": "000U --Primates 4.00 4.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0106.12.00",
+          "description": "Ballenas, delfines y marsopas (mamíferos del orden Cetacea); manatíes y dugones o dugongos (mamíferos del"
+        },
+        {
+          "code": "0106.12.00",
+          "description": "000F --Ballenas, delfines y marsopas (mamíferos del orden Cetácea); manatíes y dugones o dugongos (mamíferos del orden"
+        },
+        {
+          "code": "0106.13.00",
+          "description": "Camellos y demás camélidos (Camelidae)"
+        },
+        {
+          "code": "0106.13.00",
+          "description": "000T --Camellos y demás camelidos (Camelidae) 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.14.00",
+          "description": "Conejos y liebres"
+        },
+        {
+          "code": "0106.14.00",
+          "description": "100K Conejos 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.14.00",
+          "description": "200Q Liebres 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "100V Animales de las especies principalmente utilizadas para la alimentación humana 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "Pelíferos"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "210D Chinchillas 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "220G Nutrias 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "230K Visones 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "240N Zorros 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "290E Los demás 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "Ratas (Rattus spp.)"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "310J Rata noruega (Rattus norvegicus) 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "320M Rata negra (Rattus rattus) 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "390K Los demás 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "400L Ratén de laboratorio (Mus musculus) 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "920V Caninos 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "930Y Felinos 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.19.00",
+          "description": "990T Los demás 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.20.00",
+          "description": "Reptiles (incluidas las serpientes y tortugas de mar)"
+        },
+        {
+          "code": "0106.20.00",
+          "description": "100B Ofidios 4.00 4.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0106.20.00",
+          "description": "900V Los demás 4.00 4.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0106.3",
+          "description": "Aves:"
+        },
+        {
+          "code": "0106.31.00",
+          "description": "Aves de rapiña"
+        },
+        {
+          "code": "0106.31.00",
+          "description": "000X --Aves de rapiña 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.32.00",
+          "description": "Psitaciformes (incluidos los loros, guacamayos, cacatúas y demás papagayos)"
+        },
+        {
+          "code": "0106.32.00",
+          "description": "100P Loros 4.00 4.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0106.32.00",
+          "description": "900H Los demás 4.00 4.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0106.33",
+          "description": "Avestruces; emúes (Dromaius novaehollandiae)"
+        },
+        {
+          "code": "0106.33.10",
+          "description": "Avestruces (Struthio camelus), para reproducción"
+        },
+        {
+          "code": "0106.33.10",
+          "description": "000F Avestruces (Struthio camelus), para reproducción (R.359/99 MEOYSP) 0.00 0.00 0.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.33.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0106.33.90",
+          "description": "000J Las demás 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.39.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0106.39.00",
+          "description": "100Y Palomas 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.39.00",
+          "description": "200D Canario (Serinus canaria) 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.39.00",
+          "description": "900R Las demás 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.4",
+          "description": "Insectos:"
+        },
+        {
+          "code": "0106.41.00",
+          "description": "Abejas"
+        },
+        {
+          "code": "0106.41.00",
+          "description": "Reinas"
+        },
+        {
+          "code": "0106.41.00",
+          "description": "110V Raza caucasica 4.00 4.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "0106.41.00",
+          "description": "120Y Raza italiana 4.00 4.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "0106.41.00",
+          "description": "190W Las demás 4.00 4.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "0106.41.00",
+          "description": "900K Los demás 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0106.49.00",
+          "description": "000G --Los demás 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0106.90.00",
+          "description": "100A Rana Toro (Rana catesbeiana) (larvas, postmetamórficos, juveniles y adultos) 4.00 4.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0106.90.00",
+          "description": "900U Los demás 4.00 4.00 3.00 LA 5.00 0.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 193
+}

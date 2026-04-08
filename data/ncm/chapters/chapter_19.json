@@ -1,0 +1,521 @@
+{
+  "chapter": "19",
+  "title": "Capítulo 19",
+  "sectionTitle": "CAP. 19 SECCION IV PRODUCTOS DE LAS INDUSTRIAS ALIMENTARIAS; BEBIDAS, LIQUIDOS ALCOHOLICOS Y VINAGRE; TABACO Y SUCEDANEO",
+  "headings": [
+    {
+      "code": "1901",
+      "description": "EXTRACTO DE MALTA; PREPARACIONES ALIMENTICIAS DE HARINA, GRAÑONES, SÉMOLA, ALMIDÓN,",
+      "subheadings": [
+        {
+          "code": "1901.10",
+          "description": "Preparaciones para la alimentación de lactantes o niños de corta edad, acondicionadas para la venta al por menor"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "Leche modificada"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "Preparaciones alimenticias registradas como alimentos para propósitos médicos específicos de acuerdo con la"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "110U En envases inmediatos de contenido neto inferior o igual a 2 kg (R.257/00 ME) 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "190V Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "Maternizada"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "Elaborada con leche bovina"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "211B En envases inmediatos de contenido neto inferior o igual a 2 kg. 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "219U Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "Las demás"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "291C En envases inmediatos de contenido neto inferior o igual a 2 kg. 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "299V Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "910M En envases inmediatos de contenido neto inferior o igual a 2 kg (R.257/00 ME) 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1901.10.10",
+          "description": "990N Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1901.10.20",
+          "description": "Harina lacteada"
+        },
+        {
+          "code": "1901.10.20",
+          "description": "100A Elaborada con leche bovina 18.00 18.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "1901.10.20",
+          "description": "900U Las demás 18.00 18.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "1901.10.30",
+          "description": "A base de harina, grañones, sémola o almidón"
+        },
+        {
+          "code": "1901.10.30",
+          "description": "000E A base de harina, grañones, sémola o almidón 18.00 18.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1901.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1901.10.90",
+          "description": "100U Elaborada con leche bovina 18.00 18.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1901.10.90",
+          "description": "900M Las demás 18.00 18.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1901.20.00",
+          "description": "Mezclas y pastas para la preparación de productos de panadería, pastelería o galletería, de la partida 1905"
+        },
+        {
+          "code": "1901.20.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg"
+        },
+        {
+          "code": "1901.20.00",
+          "description": "A base de harina de trigo"
+        },
+        {
+          "code": "1901.20.00",
+          "description": "111A Pastas en formas sólidas (Res. Conj. N° 27/2008 29/2008 MP y MEyFP) 14.00 14.00 3.00 LA 4.50 1.50"
+        },
+        {
+          "code": "1901.20.00",
+          "description": "112C Preparaciones para la elaboración de tortas, bizcochuelos y producctos de repostería similares 14.00 14.00 3.00 LA 4.50 1.50"
+        },
+        {
+          "code": "1901.20.00",
+          "description": "119T Las demás 14.00 14.00 3.00 LA 4.50 1.50"
+        },
+        {
+          "code": "1901.20.00",
+          "description": "190Z Los demás 14.00 14.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "1901.20.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1901.20.00",
+          "description": "910R A base de harina de trigo 14.00 14.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "1901.20.00",
+          "description": "990T Las demás 14.00 14.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "1901.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1901.90.10",
+          "description": "Extracto de malta"
+        },
+        {
+          "code": "1901.90.10",
+          "description": "000Y Extracto de malta 14.00 14.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1901.90.20",
+          "description": "Dulce de leche"
+        },
+        {
+          "code": "1901.90.20",
+          "description": "En envases inmediatos de contenido neto inferior o igual 5 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "1901.90.20",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 Kg"
+        },
+        {
+          "code": "1901.90.20",
+          "description": "111U Elaborado con leche bovina 16.00 16.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "1901.90.20",
+          "description": "119L Los demás 16.00 16.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "1901.90.20",
+          "description": "Los demás"
+        },
+        {
+          "code": "1901.90.20",
+          "description": "191V Elaborado con leche bovina 16.00 16.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "1901.90.20",
+          "description": "199M Los demás 16.00 16.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "1901.90.20",
+          "description": "910K Elaborado con leche bovina 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1901.90.20",
+          "description": "990L Los demás 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1901.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1901.90.90",
+          "description": "100G A base de harina de trigo 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1901.90.90",
+          "description": "Leche modificada en polvo (Res. N° 240/07 MEyP)"
+        },
+        {
+          "code": "1901.90.90",
+          "description": "210Q Elaborada con leche de cabra, búfala u ovina 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1901.90.90",
+          "description": "290R Las demás 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1901.90.90",
+          "description": "Preparaciones alimenticias a base de leche, a la que se le ha reemplazado parte de la grasa butírica por grasas o"
+        },
+        {
+          "code": "1901.90.90",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 Kg"
+        },
+        {
+          "code": "1901.90.90",
+          "description": "311Y Elaborada con leche de cabra, búfala u ovina 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1901.90.90",
+          "description": "319Q Las demás 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1901.90.90",
+          "description": "391Z Elaborada con leche de cabra, búfala u ovina 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1901.90.90",
+          "description": "399R Las demás 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1901.90.90",
+          "description": "900A Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        }
+      ]
+    },
+    {
+      "code": "1902",
+      "description": "PASTAS ALIMENTICIAS, INCLUSO COCIDAS O RELLENAS (DE CARNE U OTRAS SUSTANCIAS) O",
+      "subheadings": [
+        {
+          "code": "1902.1",
+          "description": "Pastas alimenticias sin cocer, rellenar ni preparar de otra forma:"
+        },
+        {
+          "code": "1902.11.00",
+          "description": "Que contengan huevo"
+        },
+        {
+          "code": "1902.11.00",
+          "description": "100L En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP) 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1902.11.00",
+          "description": "900E Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1902.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1902.19.00",
+          "description": "100G En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP) 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1902.19.00",
+          "description": "900A Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1902.20.00",
+          "description": "Pastas alimenticias rellenas, incluso cocidas o preparadas de otra forma"
+        },
+        {
+          "code": "1902.20.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "1902.20.00",
+          "description": "Congeladas"
+        },
+        {
+          "code": "1902.20.00",
+          "description": "111U Ravioles 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1902.20.00",
+          "description": "119L Las demás 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1902.20.00",
+          "description": "190T Las demás 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1902.20.00",
+          "description": "900G Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1902.30.00",
+          "description": "Las demás pastas alimenticias"
+        },
+        {
+          "code": "1902.30.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "1902.30.00",
+          "description": "110F Sin rellenar, precocida, acompañada de condimentos en el mismo envase 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1902.30.00",
+          "description": "190G Las demás 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1902.30.00",
+          "description": "900W Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1902.40.00",
+          "description": "Cuscús"
+        },
+        {
+          "code": "1902.40.00",
+          "description": "000L -Cuscús 16.00 16.00 3.00 LA 4.50 2.50"
+        }
+      ]
+    },
+    {
+      "code": "1903",
+      "description": "TAPIOCA Y SUS SUCEDÁNEOS PREPARADOS CON FÉCULA, EN COPOS, GRUMOS, GRANOS PERLADOS,",
+      "subheadings": [
+        {
+          "code": "1903.00.00",
+          "description": "Tapioca y sus sucedáneos preparados con fécula, en copos, grumos, granos perlados, cerniduras o formas similares"
+        },
+        {
+          "code": "1903.00.00",
+          "description": "000Y TAPIOCA Y SUS SUCEDANEOS PREPARADOS CON FECULA, EN COPOS, GRUMOS, GRANOS PERLADOS,"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LA 4.50 2.50",
+      "subheadings": []
+    },
+    {
+      "code": "1904",
+      "description": "PRODUCTOS A BASE DE CEREALES OBTENIDOS POR INFLADO O TOSTADO (POR EJEMPLO: HOJUELAS O",
+      "subheadings": [
+        {
+          "code": "1904.10.00",
+          "description": "Productos a base de cereales obtenidos por inflado o tostado"
+        },
+        {
+          "code": "1904.10.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "1904.10.00",
+          "description": "110P Mezclas 16.00 16.00 3.00 LNA 4.50 1.00"
+        },
+        {
+          "code": "1904.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1904.10.00",
+          "description": "191T A base de maíz 16.00 16.00 3.00 LNA 4.50 1.00"
+        },
+        {
+          "code": "1904.10.00",
+          "description": "192V A base de arroz 16.00 16.00 3.00 LNA 4.50 1.00"
+        },
+        {
+          "code": "1904.10.00",
+          "description": "193X A base de trigo 16.00 16.00 3.00 LNA 4.50 1.00"
+        },
+        {
+          "code": "1904.10.00",
+          "description": "199K Los demás 16.00 16.00 3.00 LNA 4.50 1.00"
+        },
+        {
+          "code": "1904.10.00",
+          "description": "910H A base de trigo 16.00 16.00 3.00 LNA 4.50 0.75"
+        },
+        {
+          "code": "1904.10.00",
+          "description": "990J Los demás 16.00 16.00 3.00 LNA 4.50 0.75"
+        },
+        {
+          "code": "1904.20.00",
+          "description": "Preparaciones alimenticias obtenidas con copos de cereales sin tostar o con mezclas de copos de cereales sin tostar"
+        },
+        {
+          "code": "1904.20.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "1904.20.00",
+          "description": "110D Elaboradas exclusivamente con harina de trigo 16.00 16.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "1904.20.00",
+          "description": "190E Las demás 16.00 16.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "1904.20.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1904.20.00",
+          "description": "910X Elaboradas exclusivamente con harina de trigo 16.00 16.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1904.20.00",
+          "description": "990Y Las demás 16.00 16.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1904.30.00",
+          "description": "Trigo bulgur"
+        },
+        {
+          "code": "1904.30.00",
+          "description": "100P En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP) 16.00 16.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "1904.30.00",
+          "description": "900H Los demás 16.00 16.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1904.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1904.90.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "1904.90.00",
+          "description": "110C Arroz precocido, incluso preparado de otra forma 16.00 16.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "1904.90.00",
+          "description": "190D Los demás 16.00 16.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "1904.90.00",
+          "description": "900T Los demás 16.00 16.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1905",
+      "description": "PRODUCTOS DE PANADERÍA, PASTELERÍA O GALLETERÍA, INCLUSO CON ADICIÓN DE CACAO; HOSTIAS,",
+      "subheadings": [
+        {
+          "code": "1905.10.00",
+          "description": "Pan crujiente llamado «knäckebrot»"
+        },
+        {
+          "code": "1905.10.00",
+          "description": "000Z -Pan crujiente llamado 'knäckebrot' 18.00 18.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "1905.20",
+          "description": "Pan de especias"
+        },
+        {
+          "code": "1905.20.10",
+          "description": "Pan dulce"
+        },
+        {
+          "code": "1905.20.10",
+          "description": "000Y Pan dulce 18.00 18.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "1905.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1905.20.90",
+          "description": "000B Los demás 18.00 18.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "1905.3",
+          "description": "Galletas dulces (con adición de edulcorante); barquillos y obleas, incluso rellenos («gaufrettes», «wafers») y «waffles»"
+        },
+        {
+          "code": "1905.31.00",
+          "description": "Galletas dulces (con adición de edulcorante)"
+        },
+        {
+          "code": "1905.31.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "1905.31.00",
+          "description": "Rellenas, incluso con cacao"
+        },
+        {
+          "code": "1905.31.00",
+          "description": "111A Total o parcialmente recubiertas o revestidas de chocolate o de otras preparaciones que contengan cacao, elaboradas"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LA 4.50 1.25",
+      "subheadings": []
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LNA 4.50 1.25",
+      "subheadings": []
+    }
+  ],
+  "_rowCount": 216
+}

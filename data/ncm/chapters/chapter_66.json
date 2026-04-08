@@ -1,0 +1,102 @@
+{
+  "chapter": "66",
+  "title": "Capítulo 66",
+  "sectionTitle": "CAP. 66 SECCION XII CALZADO, SOMBREROS Y DEMAS TOCADOS, PARAGUAS, QUITASOLES, BASTONES, LATIGOS, FUSTAS, Y SUS PARTES; P",
+  "headings": [
+    {
+      "code": "6601",
+      "description": "PARAGUAS, SOMBRILLAS Y QUITASOLES (INCLUIDOS LOS PARAGUAS BASTÓN, LOS QUITASOLES TOLDO Y",
+      "subheadings": [
+        {
+          "code": "6601.10.00",
+          "description": "Quitasoles toldo y artículos similares"
+        },
+        {
+          "code": "6601.10.00",
+          "description": "000Z -Quitasoles toldo y artículos similares 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6601.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "6601.91",
+          "description": "Con astil o mango telescópico"
+        },
+        {
+          "code": "6601.91.10",
+          "description": "Con cubierta de tejidos de seda o de materia textil sintética o artificial"
+        },
+        {
+          "code": "6601.91.10",
+          "description": "100P Paraguas y sombrillas (R. 2506/93 ex-ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6601.91.10",
+          "description": "900H Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6601.91.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6601.91.90",
+          "description": "100T Paraguas y sombrillas (R.2506/93 ex-ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6601.91.90",
+          "description": "900L Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6601.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6601.99.00",
+          "description": "100A Paraguas y sombrillas (R.2506/93 ex-ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6601.99.00",
+          "description": "900U Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6602",
+      "description": "BASTONES, BASTONES ASIENTO, LÁTIGOS, FUSTAS Y ARTÍCULOS SIMILARES",
+      "subheadings": [
+        {
+          "code": "6602.00.00",
+          "description": "Bastones, bastones asiento, látigos, fustas y artículos similares"
+        },
+        {
+          "code": "6602.00.00",
+          "description": "000D BASTONES, BASTONES ASIENTO, LÁTIGOS, FUSTAS Y ARTÍCULOS SIMILARES. 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6603",
+      "description": "PARTES, GUARNICIONES Y ACCESORIOS PARA LOS ARTÍCULOS DE LAS PARTIDAS 6601 Ó 6602",
+      "subheadings": [
+        {
+          "code": "6603.20.00",
+          "description": "Monturas ensambladas, incluso con el astil o mango, para paraguas, sombrillas o quitasoles"
+        },
+        {
+          "code": "6603.20.00",
+          "description": "000A -Monturas ensambladas, incluso con el astil o mango, para paraguas, sombrillas o quitasoles 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6603.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6603.90.00",
+          "description": "000Z -Los demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 22
+}

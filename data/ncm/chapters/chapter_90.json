@@ -1,0 +1,4106 @@
+{
+  "chapter": "90",
+  "title": "Capítulo 90",
+  "sectionTitle": "CAP. 90 SECCION XVIII INSTRUMENTOS Y APARATOS DE OPTICA, FOTOGRAFIA O CINEMATOGRAFIA, DE MEDIDA, CONTROL O PRECISION; IN",
+  "headings": [
+    {
+      "code": "9001",
+      "description": "FIBRAS ÓPTICAS Y HACES DE FIBRAS ÓPTICAS; CABLES DE FIBRAS ÓPTICAS, EXCEPTO LOS DE LA",
+      "subheadings": [
+        {
+          "code": "9001.10",
+          "description": "Fibras ópticas, haces y cables de fibras ópticas"
+        },
+        {
+          "code": "9001.10.11",
+          "description": "Con diámetro de núcleo inferior a 11 micrómetros"
+        },
+        {
+          "code": "9001.10.11",
+          "description": "000D Con diámetro de núcleo inferior a 11 micrómetros 12.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "9001.10.19",
+          "description": "000P Las demás 12.00 12.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "Haces y cables de fibras ópticas"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "Cables de fibra ópticas, del tipo monomodo estándar o de dispersión desplazada (R.83/97 MEOSP)"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "Con revestimiento de color para individualización de cada fibra (R.15/99 MEOSP)"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "111R De cantidad de fibras ópticas inferior a 24 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "112U De cantidad de fibras ópticas igual a 24 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "113W De cantidad de fibras ópticas superior a 24 pero inferior o igual a 48 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "114Y De cantidad de fibras ópticas superior a 48 pero inferior o igual a 72 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "115A De cantidad de fibras ópticas superior a 72 pero inferior o igual a 128 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "119J Las demás 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "Las demás"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "191T De cantidad de fibras ópticas inferior a 24 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "192V De cantidad de fibras ópticas igual a 24 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "193X De cantidad de fibras ópticas superior a 24 pero inferior o igual a 48 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "194Z De cantidad de fibras ópticas superior a 48 pero inferior o igual a 72 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "195B De cantidad de fibras ópticas superior a 72 pero inferior o igual a 128 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "199K Las demás 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "Los demás"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "Con revestimiento de color para individualización de cada fibra (R.843/99 MEOSP)"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "911K De cantidad de fibras ópticas inferior a 24 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "912M De cantidad de fibras ópticas igual a 24 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "913P De cantidad de fibras ópticas superior a 24 pero inferior o igual a 48 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "914R De cantidad de fibras ópticas superior a 48 pero inferior o igual a 72 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "915U De cantidad de fibras ópticas superior a 72 pero inferior o igual a 128 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "919C Las demás 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "991L De cantidad de fibras ópticas inferior a 24 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "992N De cantidad de fibras ópticas igual a 24 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "993Q De cantidad de fibras ópticas superior a 24 pero inferior o igual a 48 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "994T De cantidad de fibras ópticas superior a 48 pero inferior o igual a 72 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "995V De cantidad de fibras ópticas superior a 72 pero inferior o igual a 128 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.10.20",
+          "description": "999D Las demás 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9001.20.00",
+          "description": "Hojas y placas de materia polarizante"
+        },
+        {
+          "code": "9001.20.00",
+          "description": "000A -Hojas y placas de materia polarizante 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9001.30.00",
+          "description": "Lentes de contacto"
+        },
+        {
+          "code": "9001.30.00",
+          "description": "000P -Lentes de contacto 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9001.40.00",
+          "description": "Lentes de vidrio para gafas (anteojos)"
+        },
+        {
+          "code": "9001.40.00",
+          "description": "Incoloras"
+        },
+        {
+          "code": "9001.40.00",
+          "description": "Monofocales"
+        },
+        {
+          "code": "9001.40.00",
+          "description": "111P De potencia esferica inferior o igual a +/- 2 dioptrías 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9001.40.00",
+          "description": "112R De potencia esferica superior a +/- 2 dioptrías pero inferior o igual a +/- 4 dioptrías 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9001.40.00",
+          "description": "113U De potencia esferica superior a +/- 4 dióptrias 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9001.40.00",
+          "description": "115Y Combinadas, de potencia esferica inferior o igual a +/- 2 dioptrías y potencia cilíndrica inferior o igual a +/- 2 dioptrías 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9001.40.00",
+          "description": "116A Combinadas, de potencia esferica superior a +/- 2 dioptrías pero inferior o igual a +/- 4 dioptrías y potencia cilíndrica"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LNA 3.00 5.50",
+      "subheadings": []
+    },
+    {
+      "code": "9002",
+      "description": "LENTES, PRISMAS, ESPEJOS Y DEMÁS ELEMENTOS DE ÓPTICA DE CUALQUIER MATERIA, MONTADOS,",
+      "subheadings": [
+        {
+          "code": "9002.1",
+          "description": "Objetivos:"
+        },
+        {
+          "code": "9002.11",
+          "description": "Para cámaras, proyectores o aparatos fotográficos o cinematográficos de ampliación o reducción"
+        },
+        {
+          "code": "9002.11.10",
+          "description": "Para cámaras fotográficas, cinematográficas o para proyectores"
+        },
+        {
+          "code": "9002.11.10",
+          "description": "100G Para fotografía 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9002.11.10",
+          "description": "200M Para cinematografía 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9002.11.10",
+          "description": "900A Los demás 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9002.11.20",
+          "description": "De aproximación (lentes «zoom») para cámaras de televisión, de 20 o más aumentos"
+        },
+        {
+          "code": "9002.11.20",
+          "description": "000L De aproximación (lentes «zoom») para cámaras de televisión, de 20 o más aumentos 0.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9002.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9002.11.90",
+          "description": "100K Para fotografía 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9002.11.90",
+          "description": "900D Los demás 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9002.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9002.19.00",
+          "description": "000M --Los demás 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9002.20",
+          "description": "Filtros"
+        },
+        {
+          "code": "9002.20.10",
+          "description": "Polarizantes"
+        },
+        {
+          "code": "9002.20.10",
+          "description": "000D Polarizantes 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9002.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9002.20.90",
+          "description": "000G Los demás 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9002.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9002.90.00",
+          "description": "000T -Los demás 16.00 16.00 3.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "9003",
+      "description": "MONTURAS (ARMAZONES) DE GAFAS (ANTEOJOS) O ARTÍCULOS SIMILARES Y SUS PARTES",
+      "subheadings": [
+        {
+          "code": "9003.1",
+          "description": "Monturas (armazones):"
+        },
+        {
+          "code": "9003.11.00",
+          "description": "De plástico"
+        },
+        {
+          "code": "9003.11.00",
+          "description": "Coloreadas en la masa"
+        },
+        {
+          "code": "9003.11.00",
+          "description": "110U Con bisagra tipo \"flex\" 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.11.00",
+          "description": "190V Las demás 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.11.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "9003.11.00",
+          "description": "910M Con bisagra tipo \"flex\" 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.11.00",
+          "description": "990N Las demas 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.19",
+          "description": "De otras materias"
+        },
+        {
+          "code": "9003.19.10",
+          "description": "De metal común, incluidos los chapados de metal precioso"
+        },
+        {
+          "code": "9003.19.10",
+          "description": "De titanio (incluidas sus aleaciones)"
+        },
+        {
+          "code": "9003.19.10",
+          "description": "110Z Con bisagra tipo \"flex\" 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.19.10",
+          "description": "190A Las demás 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.19.10",
+          "description": "Las demás chapadas de metal precioso"
+        },
+        {
+          "code": "9003.19.10",
+          "description": "210E Con bisagra tipo \"flex\" 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.19.10",
+          "description": "290F Las demás 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.19.10",
+          "description": "Las demás"
+        },
+        {
+          "code": "9003.19.10",
+          "description": "910T Con bisagra tipo \"flex\" 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.19.10",
+          "description": "990U Las demás 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.19.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "9003.19.90",
+          "description": "De metal precioso"
+        },
+        {
+          "code": "9003.19.90",
+          "description": "110C Con bisagra tipo \"flex\" 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.19.90",
+          "description": "190D Las demás 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.19.90",
+          "description": "910W Con bisagra tipo \"flex\" 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.19.90",
+          "description": "990X Las demás 18.00 18.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.90",
+          "description": "Partes"
+        },
+        {
+          "code": "9003.90.10",
+          "description": "Bisagras"
+        },
+        {
+          "code": "9003.90.10",
+          "description": "000W Bisagras 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9003.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "9003.90.90",
+          "description": "000Z Las demás 16.00 16.00 3.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "9004",
+      "description": "GAFAS (ANTEOJOS) CORRECTORAS, PROTECTORAS U OTRAS, Y ARTÍCULOS SIMILARES",
+      "subheadings": [
+        {
+          "code": "9004.10.00",
+          "description": "Gafas (anteojos) de sol"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "Metálicas"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "De titanio (incluidas sus aleaciones)"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "111C Con bisagra tipo \"flex\" 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "119V Las demás 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "De metal precioso o chapadas de metal"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "121F Con bisagra tipo \"flex\" 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "129Y Las demás 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "De bronce"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "131J Con bisagra tipo \"flex\" 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "139B Las demás 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "191D Con bisagra tipo \"flex\" 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "199W Las demás 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "Coloreadas en la masa"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "211H Con bisagra tipo \"flex\" 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "212K Productos alcanzados por la Res. 163/2005 SCT 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "219A Las demás 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "291J Con bisagra tipo \"flex\" 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "292L Productos alcanzados por la Res. 163/2005 SCT 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "299B Las demás 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.10.00",
+          "description": "300H \"Cristales\" 20.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9004.90.10",
+          "description": "Gafas (anteojos) correctoras"
+        },
+        {
+          "code": "9004.90.10",
+          "description": "Monofocales"
+        },
+        {
+          "code": "9004.90.10",
+          "description": "De plástico"
+        },
+        {
+          "code": "9004.90.10",
+          "description": "111A Pregraduadas para la corrección de la presbicia 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90.10",
+          "description": "119T Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90.10",
+          "description": "Las demás"
+        },
+        {
+          "code": "9004.90.10",
+          "description": "191B Pregraduadas para la corrección de la presbicia 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90.10",
+          "description": "199U Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90.10",
+          "description": "911U Pregraduadas para la corrección de la presbicia 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90.10",
+          "description": "919L Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90.10",
+          "description": "991V Pregraduadas para la corrección de la presbicia 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90.10",
+          "description": "999M Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90.20",
+          "description": "Gafas (anteojos) de seguridad"
+        },
+        {
+          "code": "9004.90.20",
+          "description": "100E \"Cristales\" 18.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90.20",
+          "description": "900Y Las demas 18.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9004.90.90",
+          "description": "100Y \"Cristales\" 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90.90",
+          "description": "200D Viseras de seguridad, de los tipos utilizados en ?mbitos hospitalarios 18.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9004.90.90",
+          "description": "900R Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9005",
+      "description": "BINOCULARES (INCLUIDOS LOS PRISMÁTICOS), CATALEJOS, ANTEOJOS ASTRONÓMICOS, TELESCOPIOS",
+      "subheadings": [
+        {
+          "code": "9005.10.00",
+          "description": "Binoculares (incluidos los prismáticos)"
+        },
+        {
+          "code": "9005.10.00",
+          "description": "000K -Binoculares (incluidos los prismáticos) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9005.80.00",
+          "description": "Los demás instrumentos"
+        },
+        {
+          "code": "9005.80.00",
+          "description": "000J -Los demás instrumentos 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9005.90",
+          "description": "Partes y accesorios (incluidas las armazones)"
+        },
+        {
+          "code": "9005.90.10",
+          "description": "De binoculares (incluidos los prismáticos)"
+        },
+        {
+          "code": "9005.90.10",
+          "description": "000H De binoculares (incluidos los prismáticos) 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9005.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9005.90.90",
+          "description": "000L Los demás 14.00 2.00 0.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "9006",
+      "description": "CÁMARAS FOTOGRÁFICAS; APARATOS Y DISPOSITIVOS, INCLUIDOS LAS LÁMPARAS Y TUBOS, PARA LA",
+      "subheadings": [
+        {
+          "code": "9006.30.00",
+          "description": "Cámaras especiales para fotografía submarina o aérea, examen médico de órganos internos o para laboratorios de"
+        },
+        {
+          "code": "9006.30.00",
+          "description": "000G -Cámaras especiales para fotografía submarina o aérea, examen médico de órganos internos o para laboratorios de"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "2.00 0.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "9007",
+      "description": "CÁMARAS Y PROYECTORES CINEMATOGRÁFICOS, INCLUSO CON GRABADOR O REPRODUCTOR DE",
+      "subheadings": [
+        {
+          "code": "9007.10.00",
+          "description": "Cámaras"
+        },
+        {
+          "code": "9007.10.00",
+          "description": "100C Para película cinematográfica (filme) de anchura inferior a 16mm o para doble-8mm 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9007.10.00",
+          "description": "900W Las demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9007.20",
+          "description": "Proyectores"
+        },
+        {
+          "code": "9007.20.20",
+          "description": "Para película cinematográfica (filme) de anchura superior o igual a 35 mm pero inferior o igual a 70 mm"
+        },
+        {
+          "code": "9007.20.20",
+          "description": "000F Para película cinematográfica (filme) de anchura superior o igual a 35 mm pero inferior o igual a 70 mm 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9007.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9007.20.90",
+          "description": "100E Para película cinematográfica (filme) de anchura inferior a 16 mm 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9007.20.90",
+          "description": "900Y Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9007.9",
+          "description": "Partes y accesorios:"
+        },
+        {
+          "code": "9007.91.00",
+          "description": "De cámaras"
+        },
+        {
+          "code": "9007.91.00",
+          "description": "000X --De cámaras 14.00 2.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9007.92.00",
+          "description": "De proyectores"
+        },
+        {
+          "code": "9007.92.00",
+          "description": "000J --De proyectores 14.00 2.00 0.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9008",
+      "description": "PROYECTORES DE IMAGEN FIJA; AMPLIADORAS O REDUCTORAS, FOTOGRÁFICAS",
+      "subheadings": [
+        {
+          "code": "9008.50.00",
+          "description": "Proyectores, ampliadoras o reductoras"
+        },
+        {
+          "code": "9008.50.00",
+          "description": "100C Proyectores de diapositivas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9008.50.00",
+          "description": "Lectores de microfilmes, microfichas u otros microformatos, incluso copiadores"
+        },
+        {
+          "code": "9008.50.00",
+          "description": "210L Lectores de microfilmes 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9008.50.00",
+          "description": "290M Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9008.50.00",
+          "description": "300N Los demás proyectores de imagen fija 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9008.50.00",
+          "description": "400U Ampliadoras o reductoras, fotográficas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9008.90.00",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9008.90.00",
+          "description": "100J Accesorios 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9008.90.00",
+          "description": "900C Partes (R.909/94 MEOSP) 16.00 16.00 3.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "9010",
+      "description": "APARATOS Y MATERIAL PARA LABORATORIOS FOTOGRÁFICOS O CINEMATOGRÁFICOS, NO EXPRESADOS",
+      "subheadings": [
+        {
+          "code": "9010.10",
+          "description": "Aparatos y material para revelado automático de película fotográfica, película cinematográfica (filme) o papel"
+        },
+        {
+          "code": "9010.10.10",
+          "description": "Cubas y cubetas, de operación automática y programables"
+        },
+        {
+          "code": "9010.10.10",
+          "description": "000Y Cubas y cubetas, de operación automática y programables 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9010.10.20",
+          "description": "Ampliadoras-copiadoras automáticas para papel fotográfico, de capacidad superior a 1000 copias por hora"
+        },
+        {
+          "code": "9010.10.20",
+          "description": "000H Ampliadoras-copiadoras automáticas para papel fotográfico, de capacidad superior a 1.000 copias por hora 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9010.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9010.10.90",
+          "description": "000B Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9010.50",
+          "description": "Los demás aparatos y material para laboratorios fotográficos o cinematográficos; negatoscopios"
+        },
+        {
+          "code": "9010.50.10",
+          "description": "Procesadores fotográficos para el tratamiento electrónico de imágenes, incluso con salida digital"
+        },
+        {
+          "code": "9010.50.10",
+          "description": "000E Procesadores fotográficos para el tratamiento electrónico de imágenes, incluso con salida digital 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9010.50.20",
+          "description": "Aparatos para revelado automático de planchas de fotopolímeros con soporte metálico"
+        },
+        {
+          "code": "9010.50.20",
+          "description": "000P Aparatos para revelado automático de planchas de fotopolímeros con soporte metálico 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9010.50.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9010.50.90",
+          "description": "100N Aparato para el revelado automático de planchas de fotopolímeros, de ancho superior o igual a 200 mm, pero inferior o"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "9011",
+      "description": "MICROSCOPIOS ÓPTICOS, INCLUSO PARA FOTOMICROGRAFÍA, CINEFOTOMICROGRAFÍA O",
+      "subheadings": [
+        {
+          "code": "9011.10.00",
+          "description": "Microscopios estereoscópicos"
+        },
+        {
+          "code": "9011.10.00",
+          "description": "000G -Microscopios estereoscópicos 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9011.20",
+          "description": "Los demás microscopios para fotomicrografía, cinefotomicrografía o microproyección"
+        },
+        {
+          "code": "9011.20.10",
+          "description": "Para fotomicrografía"
+        },
+        {
+          "code": "9011.20.10",
+          "description": "000F Para fotomicrografía 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9011.20.20",
+          "description": "Para cinefotomicrografía"
+        },
+        {
+          "code": "9011.20.20",
+          "description": "000Q Para cinefotomicrografía 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9011.20.30",
+          "description": "Para microproyección"
+        },
+        {
+          "code": "9011.20.30",
+          "description": "000A Para microproyección 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9011.80",
+          "description": "Los demás microscopios"
+        },
+        {
+          "code": "9011.80.10",
+          "description": "Binoculares, de platina móvil"
+        },
+        {
+          "code": "9011.80.10",
+          "description": "000Q Binoculares, de platina móvil 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9011.80.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9011.80.90",
+          "description": "000U Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9011.90",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9011.90.10",
+          "description": "De los artículos de la subpartida 901120"
+        },
+        {
+          "code": "9011.90.10",
+          "description": "100K Para uso médico 0.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9011.90.10",
+          "description": "900D Los demás 0.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9011.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9011.90.90",
+          "description": "100N Para uso médico 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9011.90.90",
+          "description": "900G Los demás 14.00 14.00 0.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "9012",
+      "description": "MICROSCOPIOS, EXCEPTO LOS ÓPTICOS; DIFRACTÓGRAFOS",
+      "subheadings": [
+        {
+          "code": "9012.10",
+          "description": "Microscopios, excepto los ópticos; difractógrafos"
+        },
+        {
+          "code": "9012.10.10",
+          "description": "Microscopios electrónicos"
+        },
+        {
+          "code": "9012.10.10",
+          "description": "000K Microscopios electrónicos 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9012.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9012.10.90",
+          "description": "000N Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9012.90",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9012.90.10",
+          "description": "De microscopios electrónicos"
+        },
+        {
+          "code": "9012.90.10",
+          "description": "100D Para uso médico 0.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9012.90.10",
+          "description": "900X Los demás 0.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9012.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9012.90.90",
+          "description": "100G Para uso médico 14.00 2.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9012.90.90",
+          "description": "900A Los demás 14.00 2.00 0.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9013",
+      "description": "DISPOSITIVOS DE CRISTAL LÍQUIDO QUE NO CONSTITUYAN ARTÍCULOS COMPRENDIDOS MÁS",
+      "subheadings": [
+        {
+          "code": "9013.10",
+          "description": "Miras telescópicas para armas; periscopios; visores para máquinas, aparatos o instrumentos de este Capítulo o de la"
+        },
+        {
+          "code": "9013.10.10",
+          "description": "Miras telescópicas para armas"
+        },
+        {
+          "code": "9013.10.10",
+          "description": "100J Infrarrojas (R.3115/94 ANA) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9013.10.10",
+          "description": "900C Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9013.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9013.10.90",
+          "description": "000G Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9013.20.00",
+          "description": "Láseres, excepto los diodos láser"
+        },
+        {
+          "code": "9013.20.00",
+          "description": "100N Dispositivos de puntería láser 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9013.20.00",
+          "description": "200U Punteros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9013.20.00",
+          "description": "900G Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9013.80",
+          "description": "Los demás dispositivos, aparatos e instrumentos"
+        },
+        {
+          "code": "9013.80.10",
+          "description": "Dispositivos de cristal líquido (LCD)"
+        },
+        {
+          "code": "9013.80.10",
+          "description": "000C Dispositivos de cristal líquido (LCD) 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9013.80.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9013.80.90",
+          "description": "100L Lupas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9013.80.90",
+          "description": "200R Visores ópticos de los tipos utilizados en puertas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9013.80.90",
+          "description": "900E Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9013.90.00",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9013.90.00",
+          "description": "100M Accesorios 14.00 2.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9013.90.00",
+          "description": "900F Partes (R.909/94 MEOSP) 14.00 2.00 0.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9014",
+      "description": "BRÚJULAS, INCLUIDOS LOS COMPASES DE NAVEGACIÓN; LOS DEMÁS INSTRUMENTOS Y APARATOS DE",
+      "subheadings": [
+        {
+          "code": "9014.10.00",
+          "description": "Brújulas, incluidos los compases de navegación"
+        },
+        {
+          "code": "9014.10.00",
+          "description": "100T Brújulas 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9014.10.00",
+          "description": "900L Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9014.20",
+          "description": "Instrumentos y aparatos para navegación aérea o espacial (excepto las brújulas)"
+        },
+        {
+          "code": "9014.20.10",
+          "description": "Altímetros"
+        },
+        {
+          "code": "9014.20.10",
+          "description": "000L Altímetros 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9014.20.20",
+          "description": "Pilotos automáticos"
+        },
+        {
+          "code": "9014.20.20",
+          "description": "000W Pilotos automáticos 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9014.20.30",
+          "description": "Inclinómetros"
+        },
+        {
+          "code": "9014.20.30",
+          "description": "000F Inclinómetros 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9014.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9014.20.90",
+          "description": "100V Acelerómetros 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9014.20.90",
+          "description": "200A Variómetros 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9014.20.90",
+          "description": "300F Horizontes artificiales (girohorizontes) 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9014.20.90",
+          "description": "900N Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9014.80",
+          "description": "Los demás instrumentos y aparatos"
+        },
+        {
+          "code": "9014.80.10",
+          "description": "Sondas acústicas (ecobatímetros) o de ultrasonido (sonar y similares)"
+        },
+        {
+          "code": "9014.80.10",
+          "description": "000W Sondas acústicas (ecobatímetros) o de ultrasonido (sonar y similares) 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9014.80.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9014.80.90",
+          "description": "000Z Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9014.90.00",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9014.90.00",
+          "description": "100F Accesorios 14.00 2.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9014.90.00",
+          "description": "900Z Partes (R.909/94 MEOSP) 14.00 2.00 0.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9015",
+      "description": "INSTRUMENTOS Y APARATOS DE GEODESIA, TOPOGRAFÍA, AGRIMENSURA, NIVELACIÓN,",
+      "subheadings": [
+        {
+          "code": "9015.10.00",
+          "description": "Telémetros"
+        },
+        {
+          "code": "9015.10.00",
+          "description": "000F -Telémetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.20",
+          "description": "Teodolitos y taquímetros"
+        },
+        {
+          "code": "9015.20.10",
+          "description": "Con sistema de lectura por medio de prisma o micrómetro óptico y precisión de lectura de 1 segundo"
+        },
+        {
+          "code": "9015.20.10",
+          "description": "000E Con sistema de lectura por medio de prisma o micrómetro óptico y precisión de lectura de 1 segundo 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9015.20.90",
+          "description": "000H Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.30.00",
+          "description": "Niveles"
+        },
+        {
+          "code": "9015.30.00",
+          "description": "100P Optico, mediante rayo láser giratorio, con una o más detectores remotos 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.30.00",
+          "description": "900H Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.40.00",
+          "description": "Instrumentos y aparatos de fotogrametría"
+        },
+        {
+          "code": "9015.40.00",
+          "description": "000Y -Instrumentos y aparatos de fotogrametría 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.80",
+          "description": "Los demás instrumentos y aparatos"
+        },
+        {
+          "code": "9015.80.10",
+          "description": "Molinetes hidrométricos"
+        },
+        {
+          "code": "9015.80.10",
+          "description": "000P Molinetes hidrométricos 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.80.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9015.80.90",
+          "description": "100Y Goniómetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.80.90",
+          "description": "200D Anemómetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.80.90",
+          "description": "300J Indicadores de visibilidad 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.80.90",
+          "description": "400P Pluviómetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.80.90",
+          "description": "500V Para sondeo aerológico (radiosondas) 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.80.90",
+          "description": "600A Sismómetros o sismógrafos 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.80.90",
+          "description": "700F Instrumento para medición de múltiples parámetros de meteorología (central meteorológica) 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.80.90",
+          "description": "900R Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9015.90",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9015.90.10",
+          "description": "De instrumentos o aparatos de la subpartida 901540"
+        },
+        {
+          "code": "9015.90.10",
+          "description": "000D De instrumentos o aparatos de la subpartida 9015.40 0.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9015.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9015.90.90",
+          "description": "100M Accesorios 14.00 2.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9015.90.90",
+          "description": "900F Partes (R.909/94 MEOSP) 14.00 2.00 0.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9016",
+      "description": "BALANZAS SENSIBLES A UN PESO INFERIOR O IGUAL A 5 CG, INCLUSO CON PESAS",
+      "subheadings": [
+        {
+          "code": "9016.00.10",
+          "description": "Sensibles a un peso inferior o igual a 0,2 mg"
+        },
+        {
+          "code": "9016.00.10",
+          "description": "100A Aparatos 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9016.00.10",
+          "description": "900U Partes (R.909/94 MEOSP) 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9016.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "9016.00.90",
+          "description": "100D Aparatos 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9016.00.90",
+          "description": "900X Partes (R.909/94 MEOSP) 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9017",
+      "description": "INSTRUMENTOS DE DIBUJO, TRAZADO O CÁLCULO (POR EJEMPLO: MÁQUINAS DE DIBUJAR,",
+      "subheadings": [
+        {
+          "code": "9017.10",
+          "description": "Mesas y máquinas de dibujar, incluso automáticas"
+        },
+        {
+          "code": "9017.10.10",
+          "description": "Automáticas"
+        },
+        {
+          "code": "9017.10.10",
+          "description": "000C Automáticas 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "9017.10.90",
+          "description": "000F Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "Los demás instrumentos de dibujo, trazado o cálculo"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "Instrumentos de trazado"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "Planos de referencia (mármoles de ajuste)"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "111T Con punta y contrapunta 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "112V Con brazo soporte incorporado para instrumento de medición 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "119K Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "Bloques"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "121W En \"V\" de acero con tornillo y grampa de sujeción 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "122Y En \"V\" de granito con tornillo y grampa de sujeción 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "123A En \"V\" con fijación magnética 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "124C Paralelepípedos rectos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "125E En \"X\" 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "129N Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "Escuadras de comprobación de superficies planas"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "131Z Con ranuras pasantes 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "139R Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "Reglas de comprobación de superficies planas"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "141C Biseladas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "142E Las demás, de acero 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "149V Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "190R Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "Instrumentos de dibujo"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "210W Escuadras sin dividir 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "220Z Transportadores de ángulos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "230C Compases 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "240F Reglas sin dividir, incluidas las tés 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "290X Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.20.00",
+          "description": "900F Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.30",
+          "description": "Micrómetros, pies de rey, calibradores y galgas"
+        },
+        {
+          "code": "9017.30.10",
+          "description": "Micrómetros"
+        },
+        {
+          "code": "9017.30.10",
+          "description": "000F Micrómetros 10.00 10.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.30.20",
+          "description": "Pies de rey"
+        },
+        {
+          "code": "9017.30.20",
+          "description": "000Q Pies de rey 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.30.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9017.30.90",
+          "description": "100P Calibradores, incluso presentados en estuche 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.30.90",
+          "description": "900H Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80",
+          "description": "Los demás instrumentos"
+        },
+        {
+          "code": "9017.80.10",
+          "description": "Metros"
+        },
+        {
+          "code": "9017.80.10",
+          "description": "100G Plegables 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.10",
+          "description": "De cinta"
+        },
+        {
+          "code": "9017.80.10",
+          "description": "210Q De los tipos utilizados en sastrería 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.10",
+          "description": "220U No metálicas, de los tipos utilizados para medidas anatómicas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.10",
+          "description": "290R Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.10",
+          "description": "900A Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9017.80.90",
+          "description": "Reglas divididas"
+        },
+        {
+          "code": "9017.80.90",
+          "description": "110N Dobledecímetro 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.90",
+          "description": "120R Tripledecímetro 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.90",
+          "description": "190P Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.90",
+          "description": "200Q Curvímetros 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.90",
+          "description": "300W Comparadores de cuadrante 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.90",
+          "description": "400B Escuadras divididas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.90",
+          "description": "500G Transportadores divididos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.90",
+          "description": "800Y Juegos de artículos pertenecientes, por lo menos, a dos de las posiciones SIM anteriores 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.80.90",
+          "description": "900D Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9017.90",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9017.90.10",
+          "description": "De mesas o máquinas de dibujar, automáticas"
+        },
+        {
+          "code": "9017.90.10",
+          "description": "100W Accesorios 0.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9017.90.10",
+          "description": "900P Partes (R.909/94 MEOSP) 0.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9017.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9017.90.90",
+          "description": "100Z Accesorios 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9017.90.90",
+          "description": "900T Partes (R.909/94 MEOSP) 16.00 16.00 3.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "9018",
+      "description": "INSTRUMENTOS Y APARATOS DE MEDICINA, CIRUGÍA, ODONTOLOGÍA O VETERINARIA, INCLUIDOS LOS DE",
+      "subheadings": [
+        {
+          "code": "9018.1",
+          "description": "Aparatos de electrodiagnóstico (incluidos los aparatos de exploración funcional o de vigilancia de parámetros"
+        },
+        {
+          "code": "9018.11.00",
+          "description": "Electrocardiógrafos"
+        },
+        {
+          "code": "9018.11.00",
+          "description": "100D Aparatos 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.11.00",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9018.11.00",
+          "description": "910A Electrodos, excepto los descartables 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.11.00",
+          "description": "920D Los demas electrodos 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.11.00",
+          "description": "990B Los demas 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.12",
+          "description": "Aparatos de diagnóstico por exploración ultrasónica"
+        },
+        {
+          "code": "9018.12.10",
+          "description": "Ecógrafos con análisis espectral Doppler"
+        },
+        {
+          "code": "9018.12.10",
+          "description": "100A Aparatos 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.12.10",
+          "description": "900U Partes y accesorios 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.12.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9018.12.90",
+          "description": "100D Aparatos 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.12.90",
+          "description": "900X Partes y accesorios 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.13.00",
+          "description": "Aparatos de diagnóstico de visualización por resonancia magnética"
+        },
+        {
+          "code": "9018.13.00",
+          "description": "100C Aparatos 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.13.00",
+          "description": "900W Partes y accesorios 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.14",
+          "description": "Aparatos de centellografía"
+        },
+        {
+          "code": "9018.14.10",
+          "description": "Explorador tomográfico por emisión de positrones (PET - «Positron Emission Tomography»)"
+        },
+        {
+          "code": "9018.14.10",
+          "description": "100Z Aparatos 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.14.10",
+          "description": "900T Partes 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.14.20",
+          "description": "Cámaras gamma"
+        },
+        {
+          "code": "9018.14.20",
+          "description": "000D Camaras gamma 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.14.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9018.14.90",
+          "description": "100C Aparatos 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.14.90",
+          "description": "900W Partes 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9018.19.10",
+          "description": "Endoscopios"
+        },
+        {
+          "code": "9018.19.10",
+          "description": "000D Endoscopios 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.19.20",
+          "description": "Audiómetros"
+        },
+        {
+          "code": "9018.19.20",
+          "description": "000N Audiometros 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.19.80",
+          "description": "Los demás"
+        },
+        {
+          "code": "9018.19.80",
+          "description": "100C Monitor multiparametrico 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.19.80",
+          "description": "200H Oximetro de pulso. 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.19.80",
+          "description": "900W Los demas 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9018.19.90",
+          "description": "Partes"
+        },
+        {
+          "code": "9018.19.90",
+          "description": "100M De electroencefalografos (excepto electrodos) o de monitores de signos vitales, con certificado de la Subsecretaria de"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "0.00 0.00 LA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "1600",
+      "description": "0.00 0.00 LA 0.00 5.50",
+      "subheadings": []
+    },
+    {
+      "code": "9019",
+      "description": "APARATOS DE MECANOTERAPIA; APARATOS PARA MASAJES; APARATOS DE PSICOTECNIA; APARATOS DE",
+      "subheadings": [
+        {
+          "code": "9019.10.00",
+          "description": "Aparatos de mecanoterapia; aparatos para masajes; aparatos de psicotecnia"
+        },
+        {
+          "code": "9019.10.00",
+          "description": "Para masajes"
+        },
+        {
+          "code": "9019.10.00",
+          "description": "110N Bañeras para hidromasaje 14.00 14.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.10.00",
+          "description": "190P Los demás 14.00 14.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.10.00",
+          "description": "800Y Los demás 14.00 14.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.10.00",
+          "description": "900D Partes (R.909/94 MEOSP) 14.00 14.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.20",
+          "description": "Aparatos de ozonoterapia, oxigenoterapia o aerosolterapia, aparatos respiratorios de reanimación y demás aparatos"
+        },
+        {
+          "code": "9019.20.10",
+          "description": "De oxigenoterapia"
+        },
+        {
+          "code": "9019.20.10",
+          "description": "100J Aparatos 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.20.10",
+          "description": "900C Partes y accesorios 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.20.20",
+          "description": "De aerosolterapia"
+        },
+        {
+          "code": "9019.20.20",
+          "description": "Aparatos"
+        },
+        {
+          "code": "9019.20.20",
+          "description": "110X De potencia inferior o igual a 125W 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.20.20",
+          "description": "190Y Los demas 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.20.20",
+          "description": "900M Partes (R.909/94 MEOSP) 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.20.30",
+          "description": "Respiratorios de reanimación"
+        },
+        {
+          "code": "9019.20.30",
+          "description": "100D Aparatos 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.20.30",
+          "description": "900X Partes y accesorios 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.20.40",
+          "description": "Pulmones de acero"
+        },
+        {
+          "code": "9019.20.40",
+          "description": "100N Aparatos 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.20.40",
+          "description": "900G Partes y accesorios 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9019.20.90",
+          "description": "100M Aparatos 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9019.20.90",
+          "description": "900F Partes (R.909/94 MEOSP) 14.00 0.00 0.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9020",
+      "description": "LOS DEMÁS APARATOS RESPIRATORIOS Y MÁSCARAS ANTIGÁS, EXCEPTO LAS MÁSCARAS DE",
+      "subheadings": [
+        {
+          "code": "9020.00.10",
+          "description": "Máscaras antigás"
+        },
+        {
+          "code": "9020.00.10",
+          "description": "100K Aparatos 16.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9020.00.10",
+          "description": "900D Partes (R.909/94 MEOSP) 16.00 16.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9020.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9020.00.90",
+          "description": "100N Aparatos 16.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9020.00.90",
+          "description": "900G Partes (R.909/94 MEOSP) 16.00 16.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9021",
+      "description": "ARTÍCULOS Y APARATOS DE ORTOPEDIA, INCLUIDAS LAS FAJAS Y VENDAJES MEDICOQUIRÚRGICOS Y LAS",
+      "subheadings": [
+        {
+          "code": "9021.10",
+          "description": "Artículos y aparatos de ortopedia o para fracturas"
+        },
+        {
+          "code": "9021.10.10",
+          "description": "Artículos y aparatos de ortopedia"
+        },
+        {
+          "code": "9021.10.10",
+          "description": "100T Para enderezar el cuello 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.10",
+          "description": "200Y Para enderezar la columna vertebral 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.10",
+          "description": "300D Calzado ortopédico 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.10",
+          "description": "400J Bragueros para hernias 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.10",
+          "description": "500P Muletas y bastones muleta 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.10",
+          "description": "900L Los demás 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.20",
+          "description": "Artículos y aparatos para fracturas"
+        },
+        {
+          "code": "9021.10.20",
+          "description": "100C Placas 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.20",
+          "description": "200H Clavos 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.20",
+          "description": "300N Extensores 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.20",
+          "description": "900W Los demás 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.91",
+          "description": "De artículos y aparatos de ortopedia, articulados"
+        },
+        {
+          "code": "9021.10.91",
+          "description": "100D Accesorios 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.91",
+          "description": "900X Partes (R.909/94 MEOSP) 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "9021.10.99",
+          "description": "100P Accesorios 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.10.99",
+          "description": "900H Partes (R.909/94 MEOSP) 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.2",
+          "description": "Artículos y aparatos de prótesis dental:"
+        },
+        {
+          "code": "9021.21",
+          "description": "Dientes artificiales"
+        },
+        {
+          "code": "9021.21.10",
+          "description": "De acrílico"
+        },
+        {
+          "code": "9021.21.10",
+          "description": "Dientes"
+        },
+        {
+          "code": "9021.21.10",
+          "description": "110X De dos capas 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.21.10",
+          "description": "120A De tres capas 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.21.10",
+          "description": "190Y Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.21.10",
+          "description": "900M Partes (R.909/94 MEOSP) 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.21.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9021.21.90",
+          "description": "100X Dientes 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.21.90",
+          "description": "900Q Partes (R.909/94 MEOSP) 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9021.29.00",
+          "description": "100E Artículos y aparatos 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.29.00",
+          "description": "900Y Partes (R.909/94 MEOSP) 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.3",
+          "description": "Los demás artículos y aparatos de prótesis:"
+        },
+        {
+          "code": "9021.31",
+          "description": "Prótesis articulares"
+        },
+        {
+          "code": "9021.31.10",
+          "description": "Femorales"
+        },
+        {
+          "code": "9021.31.10",
+          "description": "100H Artículos y aparatos 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.31.10",
+          "description": "900B Partes (R.909/94 MEOSP) 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.31.20",
+          "description": "Mioeléctricas"
+        },
+        {
+          "code": "9021.31.20",
+          "description": "100T Artículos y aparatos 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.31.20",
+          "description": "900L Partes (R.909/94 MEOSP) 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.31.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "9021.31.90",
+          "description": "100L Artículos y aparatos 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.31.90",
+          "description": "900E Partes (R.909/94 MEOSP) 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "9021.39.11",
+          "description": "Mecánicas"
+        },
+        {
+          "code": "9021.39.11",
+          "description": "000F Mecánicas 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "9021.39.19",
+          "description": "000R Las demás 14.00 14.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.20",
+          "description": "Lentillas intraoculares"
+        },
+        {
+          "code": "9021.39.20",
+          "description": "000H Lentillas intraoculares 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.30",
+          "description": "Prótesis de arterias vasculares revestidas"
+        },
+        {
+          "code": "9021.39.30",
+          "description": "000T Prótesis de arterias vasculares revestidas 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.40",
+          "description": "Prótesis mamarias no implantables"
+        },
+        {
+          "code": "9021.39.40",
+          "description": "000C Prótesis mamarias no implantables 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.80",
+          "description": "Los demás"
+        },
+        {
+          "code": "9021.39.80",
+          "description": "100X Ojos artificiales 14.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.80",
+          "description": "200C Filtros intravasculares 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.80",
+          "description": "300H Prótesis de arterias vasculares, sin revestir 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.80",
+          "description": "400N Válvulas para neurología o hidrocefalia 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.80",
+          "description": "500U Corazones artificiales 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.80",
+          "description": "600Z Prótesis mamarias implantables 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.80",
+          "description": "900Q Los demás 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.91",
+          "description": "Partes de prótesis modulares que reemplazan miembros superiores o inferiores"
+        },
+        {
+          "code": "9021.39.91",
+          "description": "000J Partes de prótesis modulares que reemplazan miembros superiores o inferiores 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "9021.39.99",
+          "description": "Accesorios"
+        },
+        {
+          "code": "9021.39.99",
+          "description": "110D Para colocación de lentillas intraoculares 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.99",
+          "description": "190E Los demás 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.39.99",
+          "description": "900U Partes (R.909/94 MEOSP) 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.40.00",
+          "description": "Audífonos, excepto sus partes y accesorios"
+        },
+        {
+          "code": "9021.40.00",
+          "description": "100A Del tipo implantable, apto para restaurar la capacidad auditiva (implantes cocleares) 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.40.00",
+          "description": "900U Los demás 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.50.00",
+          "description": "Estimuladores cardíacos, excepto sus partes y accesorios"
+        },
+        {
+          "code": "9021.50.00",
+          "description": "000J -Estimuladores cardíacos (marcapasos), excepto sus partes y accesorios 14.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9021.90.11",
+          "description": "Cardiodesfibriladores automáticos"
+        },
+        {
+          "code": "9021.90.11",
+          "description": "000H Cardiodesfibriladores automaticos 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9021.90.19",
+          "description": "100Z Cardioversores 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.90.19",
+          "description": "900T Los demás 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.90.81",
+          "description": "Implantes expandibles («stents»), incluso montados sobre catéter del tipo balón"
+        },
+        {
+          "code": "9021.90.81",
+          "description": "000B Implantes expandibles, (\"Stents\"), incluso montados sobre catéter del tipo balón 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.90.82",
+          "description": "Oclusores interauriculares constituidos por una malla de alambre de níquel y titanio rellena con tejido de poliéster,"
+        },
+        {
+          "code": "9021.90.82",
+          "description": "000J Oclusores interauriculares constituidos por una malla de alambre de níquel y titanio rellena con tejido de poliéster,"
+        },
+        {
+          "code": "9021.90.89",
+          "description": "Los demás"
+        },
+        {
+          "code": "9021.90.89",
+          "description": "100T Infusor de insulina portable por el paciente, conformado por deposito de insulina, bomba dispensadora y unidad de"
+        },
+        {
+          "code": "9021.90.89",
+          "description": "900L Los demás 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.90.91",
+          "description": "De estimuladores cardíacos (marcapasos)"
+        },
+        {
+          "code": "9021.90.91",
+          "description": "100R Accesorios 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.90.91",
+          "description": "Partes (R.909/94 MEOSP)"
+        },
+        {
+          "code": "9021.90.91",
+          "description": "910N Electrodos 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.90.91",
+          "description": "990P Los demás 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.90.92",
+          "description": "De audífonos"
+        },
+        {
+          "code": "9021.90.92",
+          "description": "100Z Accesorios 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.90.92",
+          "description": "900T Partes (R.909/94 MEOSP) 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.90.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "9021.90.99",
+          "description": "100C Accesorios 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9021.90.99",
+          "description": "900W Partes (R.909/94 MEOSP) 14.00 14.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9022",
+      "description": "APARATOS DE RAYOS X Y APARATOS QUE UTILICEN RADIACIONES ALFA, BETA O GAMMA, INCLUSO PARA",
+      "subheadings": [
+        {
+          "code": "9022.1",
+          "description": "Aparatos de rayos X, incluso para uso médico, quirúrgico, odontológico o veterinario, incluidos los aparatos de"
+        },
+        {
+          "code": "9022.12.00",
+          "description": "Aparatos de tomografía regidos por una máquina automática de tratamiento o procesamiento de datos"
+        },
+        {
+          "code": "9022.12.00",
+          "description": "000V --Aparatos de tomografía computarizada 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.13",
+          "description": "Los demás, para uso odontológico"
+        },
+        {
+          "code": "9022.13.11",
+          "description": "Para tomas maxilares panorámicas"
+        },
+        {
+          "code": "9022.13.11",
+          "description": "000Z Para tomas maxilares panorámicas 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.13.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9022.13.19",
+          "description": "000K Los demás 14.00 14.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.13.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9022.13.90",
+          "description": "000V Los demás 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.14",
+          "description": "Los demás, para uso médico, quirúrgico o veterinario"
+        },
+        {
+          "code": "9022.14.11",
+          "description": "Para mamografía"
+        },
+        {
+          "code": "9022.14.11",
+          "description": "000L Para mamografía 14.00 14.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.14.12",
+          "description": "Para angiografía"
+        },
+        {
+          "code": "9022.14.12",
+          "description": "100Z Biplanares 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.14.12",
+          "description": "900T Los demás 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.14.13",
+          "description": "Para densitometría ósea, computarizado"
+        },
+        {
+          "code": "9022.14.13",
+          "description": "000B Para densitometría ósea, computarizado 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.14.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9022.14.19",
+          "description": "000X Los demás 14.00 14.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.14.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9022.14.90",
+          "description": "100M Aceleradores lineales, reacondicionados por el fabricnte original, con certificación extendida por el mismo 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.14.90",
+          "description": "200T Los demás aceleradores lineales 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.14.90",
+          "description": "900F Los demás 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.19",
+          "description": "Para otros usos"
+        },
+        {
+          "code": "9022.19.10",
+          "description": "Espectrómetros o espectrógrafos de rayos X"
+        },
+        {
+          "code": "9022.19.10",
+          "description": "100U Para análisis de estructuras cristalinas 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.19.10",
+          "description": "200Z Para análisis de composiciones químicas 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.19.10",
+          "description": "900M Los demás 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "9022.19.91",
+          "description": "De los tipos utilizados para inspección de equipaje, con túnel de altura inferior o igual a 0,4 m, ancho inferior o igual a"
+        },
+        {
+          "code": "9022.19.91",
+          "description": "000Z De los tipos utilizados para inspección de equipaje, con tunel de altura inferior o igual a 0,4m, ancho inferior o igual a"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 0.00 LA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "9023",
+      "description": "INSTRUMENTOS, APARATOS Y MODELOS CONCEBIDOS PARA DEMOSTRACIONES (POR EJEMPLO: EN LA",
+      "subheadings": [
+        {
+          "code": "9023.00.00",
+          "description": "Instrumentos, aparatos y modelos concebidos para demostraciones (por ejemplo: en la enseñanza o exposiciones), no"
+        },
+        {
+          "code": "9023.00.00",
+          "description": "100F Instrumentos, aparatos y modelos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9023.00.00",
+          "description": "900Z Partes (R.909/94 MEOSP) 16.00 16.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9024",
+      "description": "MÁQUINAS Y APARATOS PARA ENSAYOS DE DUREZA, TRACCIÓN, COMPRESIÓN, ELASTICIDAD U OTRAS",
+      "subheadings": [
+        {
+          "code": "9024.10",
+          "description": "Máquinas y aparatos para ensayos de metales"
+        },
+        {
+          "code": "9024.10.10",
+          "description": "Para ensayos de tracción o de compresión"
+        },
+        {
+          "code": "9024.10.10",
+          "description": "100Y Para ensayos de elasticidad 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.10.10",
+          "description": "200D Para ensayos de rotura 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.10.10",
+          "description": "900R Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.10.20",
+          "description": "Para ensayos de dureza"
+        },
+        {
+          "code": "9024.10.20",
+          "description": "100H Durómetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.10.20",
+          "description": "900B Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9024.10.90",
+          "description": "100B Para ensayos de fatiga 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.10.90",
+          "description": "200G Para ensayos de plegado 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.10.90",
+          "description": "900V Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.80",
+          "description": "Las demás máquinas y aparatos"
+        },
+        {
+          "code": "9024.80.11",
+          "description": "Automáticos, para hilados"
+        },
+        {
+          "code": "9024.80.11",
+          "description": "000Z Automáticos, para hilados 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.80.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9024.80.19",
+          "description": "100Q Dinamómetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.80.19",
+          "description": "200W Extensímetros (extensiómetros) 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.80.19",
+          "description": "300B Abrasímetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.80.19",
+          "description": "900J Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.80.21",
+          "description": "Máquinas para ensayos de neumáticos"
+        },
+        {
+          "code": "9024.80.21",
+          "description": "000J Máquinas para ensayos de neumáticos 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.80.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "9024.80.29",
+          "description": "100A Dinamómetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.80.29",
+          "description": "200F Abrasímetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.80.29",
+          "description": "300L Elastómetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.80.29",
+          "description": "900U Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.80.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9024.80.90",
+          "description": "000V Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9024.90.00",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9024.90.00",
+          "description": "000W -Partes y accesorios 14.00 2.00 0.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9025",
+      "description": "DENSÍMETROS, AREÓMETROS, PESALÍQUIDOS E INSTRUMENTOS FLOTANTES SIMILARES, TERMÓMETROS,",
+      "subheadings": [
+        {
+          "code": "9025.1",
+          "description": "Termómetros y pirómetros, sin combinar con otros instrumentos:"
+        },
+        {
+          "code": "9025.11",
+          "description": "De líquido, con lectura directa"
+        },
+        {
+          "code": "9025.11.10",
+          "description": "Termómetros clínicos"
+        },
+        {
+          "code": "9025.11.10",
+          "description": "000Y Termometros clinicos 18.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9025.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9025.11.90",
+          "description": "000B Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9025.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9025.19.10",
+          "description": "Pirómetros ópticos"
+        },
+        {
+          "code": "9025.19.10",
+          "description": "000U Pirómetros ópticos 0.00 0.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9025.19.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9025.19.90",
+          "description": "100C Pirómetros eléctricos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9025.19.90",
+          "description": "Termómetros eléctricos"
+        },
+        {
+          "code": "9025.19.90",
+          "description": "De contacto"
+        },
+        {
+          "code": "9025.19.90",
+          "description": "211N De uso clinico 18.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9025.19.90",
+          "description": "219F Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9025.19.90",
+          "description": "291P De uso clinico, incluso los infrarrojos. 18.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9025.19.90",
+          "description": "299G Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9025.19.90",
+          "description": "900W Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9025.80.00",
+          "description": "Los demás instrumentos"
+        },
+        {
+          "code": "9025.80.00",
+          "description": "000A -Los demás instrumentos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9025.90",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9025.90.10",
+          "description": "De termómetros"
+        },
+        {
+          "code": "9025.90.10",
+          "description": "000Z De termómetros 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9025.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9025.90.90",
+          "description": "100H De pirómetros 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9025.90.90",
+          "description": "200N De barómetros 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9025.90.90",
+          "description": "300U De higrómetros 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9025.90.90",
+          "description": "900B Los demás 16.00 16.00 3.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "9026",
+      "description": "INSTRUMENTOS Y APARATOS PARA LA MEDIDA O CONTROL DEL CAUDAL, NIVEL, PRESIÓN U OTRAS",
+      "subheadings": [
+        {
+          "code": "9026.10",
+          "description": "Para medida o control del caudal o nivel de líquidos"
+        },
+        {
+          "code": "9026.10.11",
+          "description": "Medidores-transmisores electrónicos, que funcionen por el principio de inducción electromagnética"
+        },
+        {
+          "code": "9026.10.11",
+          "description": "100T De petróleo o sus derivados u otros líquidos distintos del agua, para un caudal inferior o igual a 140 m3/h 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9026.10.11",
+          "description": "900L Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9026.10.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9026.10.19",
+          "description": "100D De petróleo o sus derivados u otros líquidos distintos del agua, para un caudal inferior o igual a 140 m3/h 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9026.10.19",
+          "description": "900X Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9026.10.21",
+          "description": "De metales, mediante corrientes parásitas"
+        },
+        {
+          "code": "9026.10.21",
+          "description": "000X De metales, mediante corrientes parásitas 2.00 2.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9026.10.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "9026.10.29",
+          "description": "100N De combustible, para tanques de vehículos automóviles 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9026.10.29",
+          "description": "900G Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9026.20",
+          "description": "Para medida o control de presión"
+        },
+        {
+          "code": "9026.20.10",
+          "description": "Manómetros"
+        },
+        {
+          "code": "9026.20.10",
+          "description": "100Z De los tipos utilizados en extintores (Según Norma IRAM 3533) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9026.20.10",
+          "description": "900T Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9026.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9026.20.90",
+          "description": "100C Aparato para monitoreo de presión y temperatura de neumáticos de vehículos automóviles 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9026.20.90",
+          "description": "900W Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9026.80.00",
+          "description": "Los demás instrumentos y aparatos"
+        },
+        {
+          "code": "9026.80.00",
+          "description": "000U -Los demás instrumentos y aparatos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9026.90",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9026.90.10",
+          "description": "De instrumentos y aparatos para medida o control de nivel"
+        },
+        {
+          "code": "9026.90.10",
+          "description": "100Y Sensor de nivel de líquido en circuito de frenos de vehículos automóviles 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9026.90.10",
+          "description": "200D Sensor de nivel de líquido refrigerante, de los tipos utilizados en radiadores de vehículos automóviles 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9026.90.10",
+          "description": "300J Sensor de agua en filtros de combustible de motores de vehículos automóviles 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9026.90.10",
+          "description": "900R Los demás 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9026.90.20",
+          "description": "De manómetros"
+        },
+        {
+          "code": "9026.90.20",
+          "description": "100H Sensor de presión, de los tipos utilizados en circuitos hidráulicos de direcciones asistidas de vehículos automóviles 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9026.90.20",
+          "description": "200N Sensor de presión, de los tipos utilizados en sistemas de turboalimentación de vehículos automóviles 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9026.90.20",
+          "description": "300U Sensor de presión de combustible, de los tipos utilizados en dispositivos de inyección de combustible \"common rail\" 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9026.90.20",
+          "description": "400Z Sensor de presión de combustible, de los tipos utilizados en circuito de inyección de motores de vehículos automóviles 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9026.90.20",
+          "description": "500E Sensor de presión, de los tipos utilizados en la entrada de aire de motores de vehículos automóviles 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9026.90.20",
+          "description": "900B Los demás 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9026.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9026.90.90",
+          "description": "100B Sensores de presión electrónicos 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9026.90.90",
+          "description": "900V Los demás 16.00 16.00 3.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "9027",
+      "description": "INSTRUMENTOS Y APARATOS PARA ANÁLISIS FÍSICOS O QUÍMICOS (POR EJEMPLO: POLARÍMETROS,",
+      "subheadings": [
+        {
+          "code": "9027.10.00",
+          "description": "Analizadores de gases o humos"
+        },
+        {
+          "code": "9027.10.00",
+          "description": "100U Medidores de concentración de alcohol en aire exhalado (Etilómetros) 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.10.00",
+          "description": "200Z Detector de dioxido de carbono (Capnografos) 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.10.00",
+          "description": "900M Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.20",
+          "description": "Cromatógrafos e instrumentos de electroforesis"
+        },
+        {
+          "code": "9027.20.11",
+          "description": "De fase gaseosa"
+        },
+        {
+          "code": "9027.20.11",
+          "description": "000V De fase gaseosa 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.20.12",
+          "description": "De fase líquida"
+        },
+        {
+          "code": "9027.20.12",
+          "description": "000C De fase líquida 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.20.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9027.20.19",
+          "description": "000F Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.20.21",
+          "description": "Secuenciadores automáticos de ADN mediante electroforesis capilar"
+        },
+        {
+          "code": "9027.20.21",
+          "description": "000E Secuenciadores automáticos de ADN mediante electroforesis capilar 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.20.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "9027.20.29",
+          "description": "000Q Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.30",
+          "description": "Espectrómetros, espectrofotómetros y espectrógrafos que utilicen radiaciones ópticas (UV, visibles, IR)"
+        },
+        {
+          "code": "9027.30.11",
+          "description": "De emisión atómica"
+        },
+        {
+          "code": "9027.30.11",
+          "description": "000J De emisión atómica 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.30.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9027.30.19",
+          "description": "000V Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.30.20",
+          "description": "Espectrofotómetros"
+        },
+        {
+          "code": "9027.30.20",
+          "description": "000L Espectrofotómetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.50",
+          "description": "Los demás instrumentos y aparatos que utilicen radiaciones ópticas (UV, visibles, IR)"
+        },
+        {
+          "code": "9027.50.10",
+          "description": "Colorímetros"
+        },
+        {
+          "code": "9027.50.10",
+          "description": "000E Colorímetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.50.20",
+          "description": "Fotómetros"
+        },
+        {
+          "code": "9027.50.20",
+          "description": "000P Fotómetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.50.30",
+          "description": "Refractómetros"
+        },
+        {
+          "code": "9027.50.30",
+          "description": "000Z Refractómetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.50.40",
+          "description": "Sacarímetros"
+        },
+        {
+          "code": "9027.50.40",
+          "description": "000J Sacarímetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.50.50",
+          "description": "Citómetro de flujo"
+        },
+        {
+          "code": "9027.50.50",
+          "description": "000U Citómetros de flujo 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.50.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9027.50.90",
+          "description": "100N Aparatos para autoevaluación de glucemia 14.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.50.90",
+          "description": "900G Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80",
+          "description": "Los demás instrumentos y aparatos"
+        },
+        {
+          "code": "9027.80.11",
+          "description": "Calorímetros"
+        },
+        {
+          "code": "9027.80.11",
+          "description": "000E Calorímetros 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.12",
+          "description": "Viscosímetros"
+        },
+        {
+          "code": "9027.80.12",
+          "description": "000M Viscosímetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.13",
+          "description": "Densitómetros"
+        },
+        {
+          "code": "9027.80.13",
+          "description": "000V Densitómetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.14",
+          "description": "Pehachímetros"
+        },
+        {
+          "code": "9027.80.14",
+          "description": "000C Pehachímetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.20",
+          "description": "Espectrómetros de masa"
+        },
+        {
+          "code": "9027.80.20",
+          "description": "000G Espectrómetros de masa 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.30",
+          "description": "Polarógrafos"
+        },
+        {
+          "code": "9027.80.30",
+          "description": "000R Polarógrafos 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.91",
+          "description": "Exposímetros"
+        },
+        {
+          "code": "9027.80.91",
+          "description": "000H Exposímetros 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "9027.80.99",
+          "description": "100Z Dilatómetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.99",
+          "description": "200E Porosímetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.99",
+          "description": "300K Permeámetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.99",
+          "description": "400Q Osmómetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.99",
+          "description": "500W Erreachímetros (RH) 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.99",
+          "description": "600B Luxómetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.99",
+          "description": "700G Aparato para determinar parámetros hemodinámicos (pCO2, pO2 y PH) (R. 841/99 MEYOSP) 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.80.99",
+          "description": "900T Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.90",
+          "description": "Micrótomos; partes y accesorios"
+        },
+        {
+          "code": "9027.90.10",
+          "description": "Micrótomos"
+        },
+        {
+          "code": "9027.90.10",
+          "description": "000L Micrótomos 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.90.91",
+          "description": "De espectrómetros y espectrógrafos, de emisión atómica"
+        },
+        {
+          "code": "9027.90.91",
+          "description": "000X De espectrómetros y espectrógrafos, de emisión atómica 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.90.93",
+          "description": "De polarógrafos"
+        },
+        {
+          "code": "9027.90.93",
+          "description": "000M De polarógrafos 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9027.90.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "9027.90.99",
+          "description": "100N Para uso médico en los términos de la Resolución conjunta 370/03 y 349/03 ME MS, con certificado de la"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "0.00 0.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "9028",
+      "description": "CONTADORES DE GAS, LÍQUIDO O ELECTRICIDAD, INCLUIDOS LOS DE CALIBRACIÓN",
+      "subheadings": [
+        {
+          "code": "9028.10",
+          "description": "Contadores de gas"
+        },
+        {
+          "code": "9028.10.11",
+          "description": "De los tipos utilizados en estaciones de servicio o garajes"
+        },
+        {
+          "code": "9028.10.11",
+          "description": "000Z De los tipos utilizados en estaciones de servicio o garages 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.10.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9028.10.19",
+          "description": "000K Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9028.10.90",
+          "description": "100A A diafragma, de hasta 6 m3/h (R.1108/97 MEOSP) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.10.90",
+          "description": "900U Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.20",
+          "description": "Contadores de líquido"
+        },
+        {
+          "code": "9028.20.10",
+          "description": "De peso inferior o igual a 50 kg"
+        },
+        {
+          "code": "9028.20.10",
+          "description": "000F De peso inferior o igual a 50 kg 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.20.20",
+          "description": "De peso superior a 50 kg"
+        },
+        {
+          "code": "9028.20.20",
+          "description": "000Q De peso superior a 50 kg 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.30",
+          "description": "Contadores de electricidad"
+        },
+        {
+          "code": "9028.30.11",
+          "description": "Numéricos (digitales)"
+        },
+        {
+          "code": "9028.30.11",
+          "description": "000C Numéricos (digitales) 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.30.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9028.30.19",
+          "description": "000N Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.30.21",
+          "description": "Numéricos (digitales)"
+        },
+        {
+          "code": "9028.30.21",
+          "description": "000M Numéricos (digitales) 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.30.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "9028.30.29",
+          "description": "000Y Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.30.31",
+          "description": "Numéricos (digitales)"
+        },
+        {
+          "code": "9028.30.31",
+          "description": "000X Numéricos (digitales) 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.30.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "9028.30.39",
+          "description": "000H Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.30.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9028.30.90",
+          "description": "000Y Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9028.90",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9028.90.10",
+          "description": "De contadores de electricidad"
+        },
+        {
+          "code": "9028.90.10",
+          "description": "000E De contadores de electricidad 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9028.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9028.90.90",
+          "description": "000H Los demás 16.00 16.00 3.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "9029",
+      "description": "LOS DEMÁS CONTADORES (POR EJEMPLO: CUENTARREVOLUCIONES, CONTADORES DE PRODUCCIÓN,",
+      "subheadings": [
+        {
+          "code": "9029.10",
+          "description": "Cuentarrevoluciones, contadores de producción, taxímetros, cuentakilómetros, podómetros y contadores similares"
+        },
+        {
+          "code": "9029.10.10",
+          "description": "Cuentarrevoluciones, contadores de producción o de horas de trabajo"
+        },
+        {
+          "code": "9029.10.10",
+          "description": "100Q Cuenterrevoluciones 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9029.10.10",
+          "description": "200W Contadores de producción o de horas de trabajo 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "9029.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9029.10.90",
+          "description": "100U Cuentakilómetros 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9029.10.90",
+          "description": "200Z Podómetros 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9029.10.90",
+          "description": "300E Taxímetros 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9029.10.90",
+          "description": "900M Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9029.20",
+          "description": "Velocímetros y tacómetros; estroboscopios"
+        },
+        {
+          "code": "9029.20.10",
+          "description": "Velocímetros y tacómetros"
+        },
+        {
+          "code": "9029.20.10",
+          "description": "100E Velocímetros 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9029.20.10",
+          "description": "200K Tacómetros 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9029.20.20",
+          "description": "Estroboscopios"
+        },
+        {
+          "code": "9029.20.20",
+          "description": "000J Estroboscopios 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9029.90",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9029.90.10",
+          "description": "De velocímetros y tacómetros"
+        },
+        {
+          "code": "9029.90.10",
+          "description": "000Y De velocímetros y tacómetros 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9029.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9029.90.90",
+          "description": "000B Los demás 16.00 16.00 3.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "9030",
+      "description": "OSCILOSCOPIOS, ANALIZADORES DE ESPECTRO Y DEMÁS INSTRUMENTOS Y APARATOS PARA MEDIDA O",
+      "subheadings": [
+        {
+          "code": "9030.10",
+          "description": "Instrumentos y aparatos para medida o detección de radiaciones ionizantes"
+        },
+        {
+          "code": "9030.10.10",
+          "description": "Medidores de radiactividad"
+        },
+        {
+          "code": "9030.10.10",
+          "description": "100V De tubos geiger 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.10.10",
+          "description": "200A De cámara de ionización 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.10.10",
+          "description": "300F Contadores de centelleo 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.10.10",
+          "description": "900N Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9030.10.90",
+          "description": "100Y De los tipos utilizados en medicina u odontología 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.10.90",
+          "description": "900R Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.20",
+          "description": "Osciloscopios y oscilógrafos"
+        },
+        {
+          "code": "9030.20.10",
+          "description": "Osciloscopios numéricos (digitales)"
+        },
+        {
+          "code": "9030.20.10",
+          "description": "100J De frecuencia inferior o igual a 40 MHz 2.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.20.10",
+          "description": "200P De frecuencia superior a 40 MHz pero inferior o igual a 60 MHz 2.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.20.10",
+          "description": "300V De frecuencia superior a 60 MHz pero inferior o igual a 100 MHz 2.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.20.10",
+          "description": "900C Los demás 2.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.20.21",
+          "description": "De frecuencia superior o igual a 60 MHz"
+        },
+        {
+          "code": "9030.20.21",
+          "description": "000W De frecuencia superior o igual a 60 MHz 2.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.20.22",
+          "description": "Vectorscopios"
+        },
+        {
+          "code": "9030.20.22",
+          "description": "000D Vectorscopios 2.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.20.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "9030.20.29",
+          "description": "100M De doble trazo 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.20.29",
+          "description": "200T De frecuencia inferior o igual a 25 MHz 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.20.29",
+          "description": "300Y De frecuencia superior a 25 MHz pero inferior o igual a 40 MHz 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.20.29",
+          "description": "400D De frecuencia superior a 40 MHz pero inferior o igual a 60 MHz 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.20.29",
+          "description": "900F Los demás 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.20.30",
+          "description": "Oscilógrafos"
+        },
+        {
+          "code": "9030.20.30",
+          "description": "000Y Oscilógrafos 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.3",
+          "description": "Los demás instrumentos y aparatos para medida o control de tensión, intensidad, resistencia o potencia:"
+        },
+        {
+          "code": "9030.31.00",
+          "description": "Multímetros, sin dispositivo registrador"
+        },
+        {
+          "code": "9030.31.00",
+          "description": "000V --Multímetros, sin dispositivo registrador 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.32.00",
+          "description": "Multímetros, con dispositivo registrador"
+        },
+        {
+          "code": "9030.32.00",
+          "description": "000G --Multímetros, con dispositivo registrador 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.33",
+          "description": "Los demás, sin dispositivo registrador"
+        },
+        {
+          "code": "9030.33.11",
+          "description": "Numéricos (digitales)"
+        },
+        {
+          "code": "9030.33.11",
+          "description": "000L Numéricos (digitales) 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.33.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9030.33.19",
+          "description": "000X Los demás 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.33.21",
+          "description": "De los tipos utilizados en vehículos automóviles"
+        },
+        {
+          "code": "9030.33.21",
+          "description": "000W De los tipos utilizados en vehículos automóviles 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.33.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "9030.33.29",
+          "description": "000G Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.33.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9030.33.90",
+          "description": "100M Ohmetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.33.90",
+          "description": "200T Vatímetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.33.90",
+          "description": "900F Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.39",
+          "description": "Los demás, con dispositivo registrador"
+        },
+        {
+          "code": "9030.39.10",
+          "description": "Para prueba de continuidad de circuitos impresos"
+        },
+        {
+          "code": "9030.39.10",
+          "description": "000A Para prueba de continuidad de circuitos impresos 12.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.39.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9030.39.90",
+          "description": "000D Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.40",
+          "description": "Los demás instrumentos y aparatos, especialmente concebidos para técnicas de telecomunicación (por ejemplo:"
+        },
+        {
+          "code": "9030.40.10",
+          "description": "Analizadores de protocolo"
+        },
+        {
+          "code": "9030.40.10",
+          "description": "000G Analizadores de protocolo 12.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.40.20",
+          "description": "Analizadores de nivel selectivo"
+        },
+        {
+          "code": "9030.40.20",
+          "description": "000R Analizadores de nivel selectivo 12.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.40.30",
+          "description": "Analizadores numéricos (digitales) de transmisión"
+        },
+        {
+          "code": "9030.40.30",
+          "description": "000B Analizadores numéricos (digitales) de transmisión 12.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.40.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9030.40.90",
+          "description": "000K Los demás 12.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.8",
+          "description": "Los demás instrumentos y aparatos:"
+        },
+        {
+          "code": "9030.82",
+          "description": "Para medida o control de obleas («wafers») o dispositivos, semiconductores"
+        },
+        {
+          "code": "9030.82.10",
+          "description": "Para prueba de circuitos integrados"
+        },
+        {
+          "code": "9030.82.10",
+          "description": "000M Para prueba de circuitos integrados 12.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.82.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9030.82.90",
+          "description": "000Q Los demás 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.84",
+          "description": "Los demás, con dispositivo registrador"
+        },
+        {
+          "code": "9030.84.10",
+          "description": "Para prueba automática de circuitos impresos con sus componentes montados"
+        },
+        {
+          "code": "9030.84.10",
+          "description": "000L Para prueba automática de circuitos impresos con sus componentes montados 2.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.84.20",
+          "description": "Para medida de parámetros característicos de señales de televisión o video"
+        },
+        {
+          "code": "9030.84.20",
+          "description": "000W Para medida de parámetros característicos de señales de televisión o video 2.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.84.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9030.84.90",
+          "description": "000P Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.89",
+          "description": "Los demás"
+        },
+        {
+          "code": "9030.89.10",
+          "description": "Analizadores lógicos de circuitos numéricos (digitales)"
+        },
+        {
+          "code": "9030.89.10",
+          "description": "000W Analizadores lógicos de circuitos numéricos (digitales) 2.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.89.20",
+          "description": "Analizadores de espectro de frecuencia"
+        },
+        {
+          "code": "9030.89.20",
+          "description": "000F Analizadores de espectro de frecuencia 2.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.89.30",
+          "description": "Frecuencímetros"
+        },
+        {
+          "code": "9030.89.30",
+          "description": "000Q Frecuencímetros 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.89.40",
+          "description": "Fasímetros"
+        },
+        {
+          "code": "9030.89.40",
+          "description": "000A Fasímetros 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.89.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9030.89.90",
+          "description": "100E Capacímetros 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.89.90",
+          "description": "900Y Los demás 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9030.90",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9030.90.10",
+          "description": "De instrumentos y aparatos de la subpartida 903010"
+        },
+        {
+          "code": "9030.90.10",
+          "description": "100H De contadores gamma para uso médico 14.00 2.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9030.90.10",
+          "description": "900B Los demás 14.00 2.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9030.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9030.90.90",
+          "description": "000F Los demás 8.00 0.00 0.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9031",
+      "description": "INSTRUMENTOS, APARATOS Y MÁQUINAS DE MEDIDA O CONTROL, NO EXPRESADOS NI COMPRENDIDOS",
+      "subheadings": [
+        {
+          "code": "9031.10.00",
+          "description": "Máquinas para equilibrar piezas mecánicas"
+        },
+        {
+          "code": "9031.10.00",
+          "description": "100D Máquina para medir el desbalanceo de neumáticos, incluso combinada con dispositivo de alimentación automática y"
+        },
+        {
+          "code": "9031.10.00",
+          "description": "900X Las demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9031.20",
+          "description": "Bancos de pruebas"
+        },
+        {
+          "code": "9031.20.10",
+          "description": "Para motores"
+        },
+        {
+          "code": "9031.20.10",
+          "description": "000X Para motores 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9031.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9031.20.90",
+          "description": "100F Equipo para comprobación de fugas, calibración y limpieza de inyectores de combustible 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9031.20.90",
+          "description": "900Z Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9031.4",
+          "description": "Los demás instrumentos y aparatos, ópticos:"
+        },
+        {
+          "code": "9031.41.00",
+          "description": "Para control de obleas («wafers») o dispositivos, semiconductores o para control de máscaras o retículas utilizadas"
+        },
+        {
+          "code": "9031.41.00",
+          "description": "000C --Para control de obleas («wafers») o dispositivos, semiconductores o para control de máscaras o retículas utilizadas en"
+        },
+        {
+          "code": "9031.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "9031.49.10",
+          "description": "Para medida de parámetros dimensionales de fibras de celulosa, mediante rayos láser"
+        },
+        {
+          "code": "9031.49.10",
+          "description": "000H Para medida de parámetros dimensionales de fibras de celulosa, mediante rayos láser 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9031.49.20",
+          "description": "Para medida del espesor de neumáticos de vehículos automóviles, mediante rayos láser"
+        },
+        {
+          "code": "9031.49.20",
+          "description": "000T Para medida del espesor de neumáticos de vehículos automóviles, mediante rayos láser 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9031.49.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9031.49.90",
+          "description": "000L Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9031.80",
+          "description": "Los demás instrumentos, aparatos y máquinas"
+        },
+        {
+          "code": "9031.80.11",
+          "description": "Dinamómetros"
+        },
+        {
+          "code": "9031.80.11",
+          "description": "000P Dinamómetros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9031.80.12",
+          "description": "Rugosímetros"
+        },
+        {
+          "code": "9031.80.12",
+          "description": "000X Rugosímetros 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9031.80.20",
+          "description": "Máquinas para medición tridimensional"
+        },
+        {
+          "code": "9031.80.20",
+          "description": "000R Máquinas para medición tridimensional 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9031.80.30",
+          "description": "Metros patrones"
+        },
+        {
+          "code": "9031.80.30",
+          "description": "000B Metros patrones 10.00 10.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9031.80.40",
+          "description": "Aparatos digitales de los tipos utilizados en vehículos automóviles para medida e indicación de múltiples magnitudes,"
+        },
+        {
+          "code": "9031.80.40",
+          "description": "000L Aparatos digitales de los tipos utilizados en vehículos automóviles para medida e indicación de múltiples magnitudes,"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 0.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "1400",
+      "description": "14.00 0.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "9032",
+      "description": "INSTRUMENTOS Y APARATOS PARA REGULACIÓN O CONTROL AUTOMÁTICOS",
+      "subheadings": [
+        {
+          "code": "9032.10",
+          "description": "Termostatos"
+        },
+        {
+          "code": "9032.10.10",
+          "description": "De expansión de fluidos"
+        },
+        {
+          "code": "9032.10.10",
+          "description": "100G De los tipos utilizados en refrigeradores, congeladores y demás materiales, máquinas y aparatos para producción de"
+        },
+        {
+          "code": "9032.10.10",
+          "description": "900A Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9032.10.90",
+          "description": "000E Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.20.00",
+          "description": "Manóstatos (presóstatos)"
+        },
+        {
+          "code": "9032.20.00",
+          "description": "000F -Manóstatos (presóstatos) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.8",
+          "description": "Los demás instrumentos y aparatos:"
+        },
+        {
+          "code": "9032.81.00",
+          "description": "Hidráulicos o neumáticos"
+        },
+        {
+          "code": "9032.81.00",
+          "description": "000C --Hidráulicos o neumáticos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89",
+          "description": "Los demás"
+        },
+        {
+          "code": "9032.89.11",
+          "description": "Electrónicos"
+        },
+        {
+          "code": "9032.89.11",
+          "description": "De los tipos utilizados en motocicletas, con una corriente de salida inferior o igual a 30 A"
+        },
+        {
+          "code": "9032.89.11",
+          "description": "110Z Con salida de corriente alterna 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.11",
+          "description": "120C Con salida de corriente continua 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.11",
+          "description": "200B De los tipos utilizados en vehículos automóviles 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.11",
+          "description": "900P Los demás 12.00 12.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "9032.89.19",
+          "description": "000B Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.21",
+          "description": "Para sistemas antibloqueo de freno (ABS)"
+        },
+        {
+          "code": "9032.89.21",
+          "description": "000A Para sistemas antibloqueo de freno (ABS) 16.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.22",
+          "description": "Para sistemas de suspensión"
+        },
+        {
+          "code": "9032.89.22",
+          "description": "000H Para sistemas de suspensión 16.00 16.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.23",
+          "description": "Para sistemas de transmisión"
+        },
+        {
+          "code": "9032.89.23",
+          "description": "000Q Para sistemas de transmisión 16.00 16.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.24",
+          "description": "Para sistemas de ignición"
+        },
+        {
+          "code": "9032.89.24",
+          "description": "000Y Para sistemas de ignición 16.00 16.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.25",
+          "description": "Para sistemas de inyección"
+        },
+        {
+          "code": "9032.89.25",
+          "description": "100L Para motores diesel 16.00 16.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.25",
+          "description": "900E Los demás 16.00 16.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "9032.89.29",
+          "description": "100R De sistemas de ignición e inyección 16.00 16.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.29",
+          "description": "900K Los demás 16.00 16.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.30",
+          "description": "Aparatos numéricos (digitales) para control de vehículos ferroviarios"
+        },
+        {
+          "code": "9032.89.30",
+          "description": "000C Aparatos numéricos (digitales) para control de vehículos ferroviarios 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.81",
+          "description": "De presión"
+        },
+        {
+          "code": "9032.89.81",
+          "description": "000J De presión 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.82",
+          "description": "De temperatura"
+        },
+        {
+          "code": "9032.89.82",
+          "description": "000R De temperatura 14.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.83",
+          "description": "De humedad"
+        },
+        {
+          "code": "9032.89.83",
+          "description": "000Z De humedad 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.84",
+          "description": "De velocidad de motores eléctricos por variación de frecuencia"
+        },
+        {
+          "code": "9032.89.84",
+          "description": "000G De velocidad de motores eléctricos por variación de frecuencia 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.89",
+          "description": "Los demás"
+        },
+        {
+          "code": "9032.89.89",
+          "description": "000V Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.89.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9032.89.90",
+          "description": "000L Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9032.90",
+          "description": "Partes y accesorios"
+        },
+        {
+          "code": "9032.90.10",
+          "description": "Circuitos impresos con componentes eléctricos o electrónicos montados"
+        },
+        {
+          "code": "9032.90.10",
+          "description": "000P Circuitos impresos con componentes eléctricos o electrónicos montados 12.00 12.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9032.90.91",
+          "description": "De termostatos"
+        },
+        {
+          "code": "9032.90.91",
+          "description": "000A De termostatos 16.00 16.00 3.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "9032.90.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "9032.90.99",
+          "description": "100R Sensor de caudal y temperatura de aire para sistemas de ignición e inyección 8.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9032.90.99",
+          "description": "200X Sensor de emisiones de escape (NOX - Nitrógeno/Oxígeno) para sistemas de ignición e inyección 8.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9032.90.99",
+          "description": "900K Los demás 8.00 0.00 0.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "9033",
+      "description": "PARTES Y ACCESORIOS, NO EXPRESADOS NI COMPRENDIDOS EN OTRA PARTE DE ESTE CAPÍTULO, PARA",
+      "subheadings": [
+        {
+          "code": "9033.00.00",
+          "description": "Partes y accesorios, no expresados ni comprendidos en otra parte de este Capítulo, para máquinas, aparatos,"
+        },
+        {
+          "code": "9033.00.00",
+          "description": "000W PARTES Y ACCESORIOS, NO EXPRESADOS NI COMPRENDIDOS EN OTRA PARTE DE ESTE CAPÍTULO, PARA"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LNA 3.00 5.50",
+      "subheadings": []
+    }
+  ],
+  "_rowCount": 1562
+}

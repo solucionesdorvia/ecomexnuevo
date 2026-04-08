@@ -1,0 +1,3896 @@
+{
+  "chapter": "72",
+  "title": "Capítulo 71",
+  "sectionTitle": "CAP. 72 SECCION XV METALES COMUNES Y MANUFACTURAS DE ESTOS METALES Notas. 1. Esta Sección no comprende: a. los colores y",
+  "headings": [
+    {
+      "code": "3207",
+      "description": "a 32.10, 32.12, 32.13 ó 32.15);",
+      "subheadings": []
+    },
+    {
+      "code": "7201",
+      "description": "FUNDICIÓN EN BRUTO Y FUNDICIÓN ESPECULAR, EN LINGOTES, BLOQUES O DEMÁS FORMAS PRIMARIAS",
+      "subheadings": [
+        {
+          "code": "7201.10.00",
+          "description": "Fundición en bruto sin alear con un contenido de fósforo inferior o igual al 0,5 % en peso"
+        },
+        {
+          "code": "7201.10.00",
+          "description": "000G -Fundición en bruto sin alear con un contenido de fósforo inferior o igual al 0,5 % en peso 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7201.20.00",
+          "description": "Fundición en bruto sin alear con un contenido de fósforo superior al 0,5 % en peso"
+        },
+        {
+          "code": "7201.20.00",
+          "description": "000W -Fundición en bruto sin alear con un contenido de fósforo superior al 0,5 % en peso 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7201.50.00",
+          "description": "Fundición en bruto aleada; fundición especular"
+        },
+        {
+          "code": "7201.50.00",
+          "description": "000N -Fundición en bruto aleada; fundición especular 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7202",
+      "description": "FERROALEACIONES",
+      "subheadings": [
+        {
+          "code": "7202.1",
+          "description": "Ferromanganeso:"
+        },
+        {
+          "code": "7202.11.00",
+          "description": "Con un contenido de carbono superior al 2 % en peso"
+        },
+        {
+          "code": "7202.11.00",
+          "description": "000M --Con un contenido de carbono superior al 2 % en peso 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7202.19.00",
+          "description": "000H --Los demás 6.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.2",
+          "description": "Ferrosilicio:"
+        },
+        {
+          "code": "7202.21.00",
+          "description": "Con un contenido de silicio superior al 55 % en peso"
+        },
+        {
+          "code": "7202.21.00",
+          "description": "000B --Con un contenido de silicio superior al 55 % en peso 6.00 6.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "7202.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7202.29.00",
+          "description": "100C Con un contenido de magnesio superior o igual al 2,5 % en peso 6.00 6.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "7202.29.00",
+          "description": "900W Los demás 6.00 6.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "7202.30.00",
+          "description": "Ferro-sílico-manganeso"
+        },
+        {
+          "code": "7202.30.00",
+          "description": "000D -Ferro-sílico-manganeso 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.4",
+          "description": "Ferrocromo:"
+        },
+        {
+          "code": "7202.41.00",
+          "description": "Con un contenido de carbono superior al 4 % en peso"
+        },
+        {
+          "code": "7202.41.00",
+          "description": "000E --Con un contenido de carbono superior al 4 % en peso 6.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7202.49.00",
+          "description": "000A --Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.50.00",
+          "description": "Ferro-sílico-cromo"
+        },
+        {
+          "code": "7202.50.00",
+          "description": "000G -Ferro-sílico-cromo 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.60.00",
+          "description": "Ferroníquel"
+        },
+        {
+          "code": "7202.60.00",
+          "description": "000W -Ferroníquel 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.70.00",
+          "description": "Ferromolibdeno"
+        },
+        {
+          "code": "7202.70.00",
+          "description": "000K -Ferromolibdeno 6.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.80.00",
+          "description": "Ferrovolframio y ferro-sílico-volframio"
+        },
+        {
+          "code": "7202.80.00",
+          "description": "000Z -Ferrovolframio y ferro-sílico-volframio 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "7202.91.00",
+          "description": "Ferrotitanio y ferro-sílico-titanio"
+        },
+        {
+          "code": "7202.91.00",
+          "description": "000A --Ferrotitanio y ferro-sílico-titanio 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.92.00",
+          "description": "Ferrovanadio"
+        },
+        {
+          "code": "7202.92.00",
+          "description": "000M --Ferrovanadio 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.93.00",
+          "description": "Ferroniobio"
+        },
+        {
+          "code": "7202.93.00",
+          "description": "000Z --Ferroniobio 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "7202.99.10",
+          "description": "Ferrofósforo"
+        },
+        {
+          "code": "7202.99.10",
+          "description": "000F Ferrofósforo 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7202.99.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7202.99.90",
+          "description": "100P Ferro-sílico-magnesio 6.00 6.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "7202.99.90",
+          "description": "200V Ferro-sílico-calcio 6.00 6.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "7202.99.90",
+          "description": "900H Las demás 6.00 6.00 3.00 LA 4.50 3.50"
+        }
+      ]
+    },
+    {
+      "code": "7203",
+      "description": "PRODUCTOS FÉRREOS OBTENIDOS POR REDUCCIÓN DIRECTA DE MINERALES DE HIERRO Y DEMÁS",
+      "subheadings": [
+        {
+          "code": "7203.10.00",
+          "description": "Productos férreos obtenidos por reducción directa de minerales de hierro"
+        },
+        {
+          "code": "7203.10.00",
+          "description": "000U -Productos férreos obtenidos por reducción directa de minerales de hierro 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7203.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7203.90.00",
+          "description": "000G -Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7204",
+      "description": "DESPERDICIOS Y DESECHOS (CHATARRA), DE FUNDICIÓN, HIERRO O ACERO; LINGOTES DE CHATARRA DE",
+      "subheadings": [
+        {
+          "code": "7204.10.00",
+          "description": "Desperdicios y desechos, de fundición"
+        },
+        {
+          "code": "7204.10.00",
+          "description": "000M -Desperdicios y desechos, de fundición 0.00 0.00 3.00 LA 9.50 0.00"
+        },
+        {
+          "code": "7204.2",
+          "description": "Desperdicios y desechos, de aceros aleados:"
+        },
+        {
+          "code": "7204.21.00",
+          "description": "De acero inoxidable"
+        },
+        {
+          "code": "7204.21.00",
+          "description": "100U Austeniticos (Serie AISI 300 y equivalentes de otras normas) 0.00 0.00 3.00 LA 9.50 0.00"
+        },
+        {
+          "code": "7204.21.00",
+          "description": "900M Los demás 0.00 0.00 3.00 LA 9.50 0.00"
+        },
+        {
+          "code": "7204.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7204.29.00",
+          "description": "100P De acero ràpido 0.00 0.00 3.00 LA 9.50 0.00"
+        },
+        {
+          "code": "7204.29.00",
+          "description": "900H Los demàs 0.00 0.00 3.00 LA 9.50 0.00"
+        },
+        {
+          "code": "7204.30.00",
+          "description": "Desperdicios y desechos, de hierro o acero estañados"
+        },
+        {
+          "code": "7204.30.00",
+          "description": "000Q -Desperdicios y desechos, de hierro o acero estañados 0.00 0.00 3.00 LA 9.50 0.00"
+        },
+        {
+          "code": "7204.4",
+          "description": "Los demás desperdicios y desechos:"
+        },
+        {
+          "code": "7204.41.00",
+          "description": "Torneaduras, virutas, esquirlas, limaduras (de amolado, aserrado, limado) y recortes de estampado o de corte,"
+        },
+        {
+          "code": "7204.41.00",
+          "description": "000R --Torneaduras, virutas, esquirlas, limaduras (de amolado, aserrado, limado) y recortes de estampado o de corte,"
+        },
+        {
+          "code": "7204.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7204.49.00",
+          "description": "000M --Los demás 0.00 0.00 3.00 LA 9.50 0.00"
+        },
+        {
+          "code": "7204.50.00",
+          "description": "Lingotes de chatarra"
+        },
+        {
+          "code": "7204.50.00",
+          "description": "000U -Lingotes de chatarra 0.00 0.00 3.00 LA 9.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7205",
+      "description": "GRANALLAS Y POLVOS, DE FUNDICIÓN EN BRUTO, DE FUNDICIÓN ESPECULAR, DE HIERRO O ACERO",
+      "subheadings": [
+        {
+          "code": "7205.10.00",
+          "description": "Granallas"
+        },
+        {
+          "code": "7205.10.00",
+          "description": "De acero"
+        },
+        {
+          "code": "7205.10.00",
+          "description": "110P Inoxidable 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7205.10.00",
+          "description": "190Q Las demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7205.10.00",
+          "description": "900E Las demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7205.2",
+          "description": "Polvos:"
+        },
+        {
+          "code": "7205.21.00",
+          "description": "De aceros aleados"
+        },
+        {
+          "code": "7205.21.00",
+          "description": "100M De acero inoxidable 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7205.21.00",
+          "description": "900F Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7205.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "7205.29.10",
+          "description": "De hierro esponja, con un contenido de hierro superior o igual al 98 % en peso"
+        },
+        {
+          "code": "7205.29.10",
+          "description": "000M De hierro esponja, con un contenido de hierro superior o igual al 98 % en peso 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7205.29.20",
+          "description": "De hierro revestido con resina termoplástica, con un contenido de hierro superior o igual al 98 % en peso"
+        },
+        {
+          "code": "7205.29.20",
+          "description": "000X De hierro revestido con resina termoplástica, con un contenido de hierro superior o igual al 98 % en peso 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7205.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7205.29.90",
+          "description": "100W De acero 6.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7205.29.90",
+          "description": "900P Los demás 6.00 0.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7206",
+      "description": "HIERRO Y ACERO SIN ALEAR, EN LINGOTES O DEMÁS FORMAS PRIMARIAS, EXCEPTO EL HIERRO DE LA",
+      "subheadings": [
+        {
+          "code": "7206.10.00",
+          "description": "Lingotes"
+        },
+        {
+          "code": "7206.10.00",
+          "description": "000Z -Lingotes 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7206.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7206.90.00",
+          "description": "000M -Las demás 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7207",
+      "description": "PRODUCTOS INTERMEDIOS DE HIERRO O ACERO SIN ALEAR",
+      "subheadings": [
+        {
+          "code": "7207.1",
+          "description": "Con un contenido de carbono inferior al 0,25 % en peso:"
+        },
+        {
+          "code": "7207.11",
+          "description": "De sección transversal cuadrada o rectangular, cuya anchura sea inferior al doble del espesor"
+        },
+        {
+          "code": "7207.11.10",
+          "description": "Palanquilla"
+        },
+        {
+          "code": "7207.11.10",
+          "description": "000P Palanquilla 8.00 8.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7207.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7207.11.90",
+          "description": "000T Los demás 8.00 8.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7207.12.00",
+          "description": "Los demás, de sección transversal rectangular"
+        },
+        {
+          "code": "7207.12.00",
+          "description": "000R --Los demás, de sección transversal rectangular 8.00 8.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7207.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7207.19.00",
+          "description": "000A --Los demás 8.00 8.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7207.20.00",
+          "description": "Con un contenido de carbono superior o igual al 0,25 % en peso"
+        },
+        {
+          "code": "7207.20.00",
+          "description": "100M Palanquilla 8.00 8.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7207.20.00",
+          "description": "900F Los demás 8.00 8.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7208",
+      "description": "PRODUCTOS LAMINADOS PLANOS DE HIERRO O ACERO SIN ALEAR, DE ANCHURA SUPERIOR O IGUAL A",
+      "subheadings": [
+        {
+          "code": "7208.10.00",
+          "description": "Enrollados, simplemente laminados en caliente, con motivos en relieve"
+        },
+        {
+          "code": "7208.10.00",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7208.10.00",
+          "description": "110V Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.10.00",
+          "description": "190W Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.10.00",
+          "description": "900K Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.2",
+          "description": "Los demás, enrollados, simplemente laminados en caliente, decapados:"
+        },
+        {
+          "code": "7208.25.00",
+          "description": "De espesor superior o igual a 4,75 mm"
+        },
+        {
+          "code": "7208.25.00",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7208.25.00",
+          "description": "Desbastes en rollos (coils) para relaminar en frío"
+        },
+        {
+          "code": "7208.25.00",
+          "description": "111W Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.25.00",
+          "description": "119N Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.25.00",
+          "description": "130A En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.25.00",
+          "description": "150G Los demás, con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.25.00",
+          "description": "190V Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.25.00",
+          "description": "900J Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.26",
+          "description": "De espesor superior o igual a 3 mm pero inferior a 4,75 mm"
+        },
+        {
+          "code": "7208.26.10",
+          "description": "Con un límite de elasticidad superior o igual a 355 MPa"
+        },
+        {
+          "code": "7208.26.10",
+          "description": "Desbastes en rollos (coils) para relaminar en frío"
+        },
+        {
+          "code": "7208.26.10",
+          "description": "110Q Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 10.00 10.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.26.10",
+          "description": "190R Los demás 10.00 10.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.26.10",
+          "description": "200T Los demás, con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 10.00 10.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.26.10",
+          "description": "300Y En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 10.00 10.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.26.10",
+          "description": "900F Los demás 10.00 10.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.26.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7208.26.90",
+          "description": "Desbastes en rollos (coils) para relaminar en frío"
+        },
+        {
+          "code": "7208.26.90",
+          "description": "110U Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.26.90",
+          "description": "190V Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.26.90",
+          "description": "200W Los demás, con un contenido de carbono superior igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.26.90",
+          "description": "300B En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.26.90",
+          "description": "900J Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.27",
+          "description": "De espesor inferior a 3 mm"
+        },
+        {
+          "code": "7208.27.10",
+          "description": "Con un límite de elasticidad superior o igual a 275 MPa"
+        },
+        {
+          "code": "7208.27.10",
+          "description": "Desbastes en rollos (coils) para relaminar en frío"
+        },
+        {
+          "code": "7208.27.10",
+          "description": "110C Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 10.00 10.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.27.10",
+          "description": "190D Los demás 10.00 10.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.27.10",
+          "description": "200E Los demás, con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 10.00 10.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.27.10",
+          "description": "900T Los demás 10.00 10.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.27.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7208.27.90",
+          "description": "Desbastes en rollos (coils) para relaminar en frío"
+        },
+        {
+          "code": "7208.27.90",
+          "description": "110F Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.27.90",
+          "description": "190G Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.27.90",
+          "description": "200H Los demás, con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.27.90",
+          "description": "900W Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.3",
+          "description": "Los demás, enrollados, simplemente laminados en caliente:"
+        },
+        {
+          "code": "7208.36",
+          "description": "De espesor superior a 10 mm"
+        },
+        {
+          "code": "7208.36.10",
+          "description": "Con un límite de elasticidad superior o igual a 355 MPa"
+        },
+        {
+          "code": "7208.36.10",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7208.36.10",
+          "description": "110E Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.36.10",
+          "description": "130L En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.36.10",
+          "description": "190F Los demás 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.36.10",
+          "description": "900V Los demás 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.36.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7208.36.90",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7208.36.90",
+          "description": "110H Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.36.90",
+          "description": "130P En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.36.90",
+          "description": "190J Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.36.90",
+          "description": "900Y Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.37.00",
+          "description": "De espesor superior o igual a 4,75 mm pero inferior o igual a 10 mm"
+        },
+        {
+          "code": "7208.37.00",
+          "description": "Desbastes en rollos (coils) para relaminar en frío"
+        },
+        {
+          "code": "7208.37.00",
+          "description": "110G Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.37.00",
+          "description": "190H Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.37.00",
+          "description": "300P En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.37.00",
+          "description": "400V Los demás, con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.37.00",
+          "description": "900X Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.38",
+          "description": "De espesor superior o igual a 3 mm pero inferior a 4,75 mm"
+        },
+        {
+          "code": "7208.38.10",
+          "description": "Con un límite de elasticidad superior o igual a 355 MPa"
+        },
+        {
+          "code": "7208.38.10",
+          "description": "Desbastes en rollos (coils) para relaminar en frío"
+        },
+        {
+          "code": "7208.38.10",
+          "description": "110D Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEYOSP) 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.38.10",
+          "description": "190E Los demás 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.38.10",
+          "description": "200F Los demás, con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEYOSP) 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.38.10",
+          "description": "300L En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.38.10",
+          "description": "900U Los demás 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.38.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7208.38.90",
+          "description": "Desbastes en rollos (coils) para relaminar en frío"
+        },
+        {
+          "code": "7208.38.90",
+          "description": "110G Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEYOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.38.90",
+          "description": "190H Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.38.90",
+          "description": "200J Los demás, con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEYOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.38.90",
+          "description": "300P En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.38.90",
+          "description": "900X Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.39",
+          "description": "De espesor inferior a 3 mm"
+        },
+        {
+          "code": "7208.39.10",
+          "description": "Con un límite de elasticidad superior o igual a 275 MPa"
+        },
+        {
+          "code": "7208.39.10",
+          "description": "Desbastes en rollos (coils) para relaminar en frío"
+        },
+        {
+          "code": "7208.39.10",
+          "description": "110Q Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.39.10",
+          "description": "190R Los demás 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.39.10",
+          "description": "200T Los demás, con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.39.10",
+          "description": "900F Los demás 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.39.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7208.39.90",
+          "description": "Desbastes en rollos (coils) para relaminar en frío"
+        },
+        {
+          "code": "7208.39.90",
+          "description": "110U Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.39.90",
+          "description": "190V Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.39.90",
+          "description": "200W Los demás, con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.39.90",
+          "description": "900J Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.40.00",
+          "description": "Sin enrollar, simplemente laminados en caliente, con motivos en relieve"
+        },
+        {
+          "code": "7208.40.00",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7208.40.00",
+          "description": "110M Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.40.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7208.40.00",
+          "description": "192T De anchura inferior o igual a 1870 mm. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.40.00",
+          "description": "199H Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.40.00",
+          "description": "900C Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.5",
+          "description": "Los demás, sin enrollar, simplemente laminados en caliente:"
+        },
+        {
+          "code": "7208.51.00",
+          "description": "De espesor superior a 10 mm"
+        },
+        {
+          "code": "7208.51.00",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7208.51.00",
+          "description": "110N Con un contenido de carbono superior o igual al 0,6 %, en peso (R.458/99 MEyOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.51.00",
+          "description": "130V En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.51.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7208.51.00",
+          "description": "192U De anchura inferior o igual a 1870 mm. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.51.00",
+          "description": "199J Los demás 12.00 12.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.51.00",
+          "description": "900D Los demás 12.00 12.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.52.00",
+          "description": "De espesor superior o igual a 4,75 mm pero inferior o igual a 10 mm"
+        },
+        {
+          "code": "7208.52.00",
+          "description": "100X Con un contenido de carbono superior o igual al 0,6 % en peso (R.458/99 MEYOSP) 12.00 12.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.52.00",
+          "description": "200C En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 12.00 12.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.52.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7208.52.00",
+          "description": "920X De anchura inferior o igual a 1870 mm. 12.00 12.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.52.00",
+          "description": "990V Los demás 12.00 12.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7208.53.00",
+          "description": "De espesor superior o igual a 3 mm pero inferior a 4,75 mm"
+        },
+        {
+          "code": "7208.53.00",
+          "description": "100J Con un contenido de carbono superior o igual al 0,6 % en peso (R.458/99 MEYOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.53.00",
+          "description": "200P En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.53.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7208.53.00",
+          "description": "920J De anchura inferior o igual a 1870 mm. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.53.00",
+          "description": "990G Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.54.00",
+          "description": "De espesor inferior a 3 mm"
+        },
+        {
+          "code": "7208.54.00",
+          "description": "100W Con un contenido de carbono superior o igual al 0,6 % en peso (R.458/99 MEYOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.54.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7208.54.00",
+          "description": "920W De anchura inferior o igual a 1870 mm. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.54.00",
+          "description": "990U Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "110H Con un contenido de carbono superior o igual al 0,6 % en peso(R.458/99 MEYOSP) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "130P En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "Perforados con agujeros redondos según norma ISO 10630 y equivalentes de otras normas"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "141V De diámetro del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "142X De diámetro del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "149M Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "Perforados con agujeros cuadrados según norma ISO 10630 y equivalentes de otras normas"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "151Y De lado del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "152A De lado del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "159Q Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "180F Los demás, enrollados 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "192N De anchura inferior o igual a 1870 mm. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "199D Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "Perforados con agujeros redondos según norma ISO 10630 y eqivalentes de otras normas"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "911D De diámetro del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "912F De diámetro del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "919W Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "921G De lado del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "922J De lado del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "929Z Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7208.90.00",
+          "description": "990C Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7209",
+      "description": "PRODUCTOS LAMINADOS PLANOS DE HIERRO O ACERO SIN ALEAR, DE ANCHURA SUPERIOR O IGUAL A",
+      "subheadings": [
+        {
+          "code": "7209.1",
+          "description": "Enrollados, simplemente laminados en frío:"
+        },
+        {
+          "code": "7209.15.00",
+          "description": "De espesor superior o igual a 3 mm"
+        },
+        {
+          "code": "7209.15.00",
+          "description": "100V Con una dureza HRB (Hardness Rockwell B) superior a 85 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.15.00",
+          "description": "800H Los demás, con un contenido de carbono superior al 0,25 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.15.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7209.15.00",
+          "description": "910R En las condiciones establecidas en la Disp.1/01 SS.G.C.E. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.15.00",
+          "description": "990T Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.16.00",
+          "description": "De espesor superior a 1 mm pero inferior a 3 mm"
+        },
+        {
+          "code": "7209.16.00",
+          "description": "100G Con una dureza HRB (Hardness Rockwell B) superior a 85 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.16.00",
+          "description": "800V Los demás, con un contenido de carbono superior al 0,25 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.16.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7209.16.00",
+          "description": "910D En las condiciones establecidas en la Disp.1/01 SS.G.C.E. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.16.00",
+          "description": "990E Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.17.00",
+          "description": "De espesor superior o igual a 0,5 mm pero inferior o igual a 1 mm"
+        },
+        {
+          "code": "7209.17.00",
+          "description": "100U Con una dureza HRB (Hardness Rockwell B) superior a 85 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.17.00",
+          "description": "800G Los demás, con un contenido de carbono superior al 0,25 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.17.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7209.17.00",
+          "description": "910Q En las condiciones establecidas en la Disp.1/01 SS.G.C.E. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.17.00",
+          "description": "990R Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.18.00",
+          "description": "De espesor inferior a 0,5 mm"
+        },
+        {
+          "code": "7209.18.00",
+          "description": "De espesor superior o igual a 0,3 mm"
+        },
+        {
+          "code": "7209.18.00",
+          "description": "110J Con una dureza HRB (Hardness Rockwell B) superior a 85 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.18.00",
+          "description": "180G Los demás, con un contenido de carbono superior al 0,25 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.18.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7209.18.00",
+          "description": "191M En las condiciones establecidas en la Disp.1/01 SS.G.C.E. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.18.00",
+          "description": "199E Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.18.00",
+          "description": "900Z Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.2",
+          "description": "Sin enrollar, simplemente laminados en frío:"
+        },
+        {
+          "code": "7209.25.00",
+          "description": "De espesor superior o igual a 3 mm"
+        },
+        {
+          "code": "7209.25.00",
+          "description": "100J Con una dureza HRB (Hardness Rockwell B) superior a 85 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.25.00",
+          "description": "800X Los demás, con un contenido de carbono superior al 0,25 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.25.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7209.25.00",
+          "description": "910F En las condiciones establecidas en la Disp. 1/01 SS.G.C.E. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.25.00",
+          "description": "990G Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.26.00",
+          "description": "De espesor superior a 1 mm pero inferior a 3 mm"
+        },
+        {
+          "code": "7209.26.00",
+          "description": "100W Con una dureza HRB (Hardness Rockwell B) superior a 85 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.26.00",
+          "description": "800J Los demás, con un contenido de carbono superior al 0,25 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.26.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7209.26.00",
+          "description": "910T En las condiciones establecidas en la Disp.1/01 SS.G.C.E. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.26.00",
+          "description": "990U Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.27.00",
+          "description": "De espesor superior o igual a 0,5 mm pero inferior o igual a 1 mm"
+        },
+        {
+          "code": "7209.27.00",
+          "description": "100H Con una dureza HRB (Hardness Rockwell B) superior a 85 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.27.00",
+          "description": "800W Los demás, con un contenido de carbono superior al 0,25 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.27.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7209.27.00",
+          "description": "910E En las condiciones establecidas en la Disp.1/01 SS.G.C.E. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.27.00",
+          "description": "990F Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.28.00",
+          "description": "De espesor inferior a 0,5 mm"
+        },
+        {
+          "code": "7209.28.00",
+          "description": "De espesor superior o igual al 0,3 mm"
+        },
+        {
+          "code": "7209.28.00",
+          "description": "110Y Con una dureza HRB (Hardness Rockwell B) superior a 85 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.28.00",
+          "description": "180W Los demás, con un contenido de carbono superior al 0,25 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.28.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7209.28.00",
+          "description": "191B En las condiciones establecidas en la Disp.1/01 SS.G.C.E. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.28.00",
+          "description": "199U Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.28.00",
+          "description": "900N Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "De espesor superior o igual a 0,3 mm"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "110B Con una dureza HRB (Hardness Rockwell B) superior a 85 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "Perforados con agujeros redondos según norma ISO 10630 y equivalentes de otras normas"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "121G De diámetro del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "122J De diámetro del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "129Z Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "Perforados con agujeros cuadrados según norma ISO 10630 y equivalentes de otras normas"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "131K De lado del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "132M De lado del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "139C Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "180Z Los demás, con un contenido de carbono superior al 0,25 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "191E En las condiciones establecidas en la Disp.1/01 SS.G.C.E. 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "199X Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7209.90.00",
+          "description": "900R Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7210",
+      "description": "PRODUCTOS LAMINADOS PLANOS DE HIERRO O ACERO SIN ALEAR, DE ANCHURA SUPERIOR O IGUAL A",
+      "subheadings": [
+        {
+          "code": "7210.1",
+          "description": "Estañados:"
+        },
+        {
+          "code": "7210.11.00",
+          "description": "De espesor superior o igual a 0,5 mm"
+        },
+        {
+          "code": "7210.11.00",
+          "description": "000W --De espesor superior o igual a 0,5 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.12.00",
+          "description": "De espesor inferior a 0,5 mm"
+        },
+        {
+          "code": "7210.12.00",
+          "description": "De espesor inferior a 0,24 mm"
+        },
+        {
+          "code": "7210.12.00",
+          "description": "110R De espesor inferior a 0,16 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.12.00",
+          "description": "120V De espesor superior o igual a 0,16 mm pero inferior a 0,18 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.12.00",
+          "description": "130Y De espesor superior o igual a 0,18 mm pero inferior a 0,20 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.12.00",
+          "description": "140B De espesor superior o igual a 0,20 mm pero inferior a 0,22 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.12.00",
+          "description": "150E De espesor superior o igual a 0,22 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.12.00",
+          "description": "De espesor superior o igual a 0,24 mm"
+        },
+        {
+          "code": "7210.12.00",
+          "description": "210X De espesor inferior a 0,26 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.12.00",
+          "description": "220A De espesor superior o igual a 0,26 mm pero inferior a 0,28 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.12.00",
+          "description": "230D De espesor superior o igual a 0,28 mm pero inferior o igual a 0,30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.12.00",
+          "description": "290Y Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.20.00",
+          "description": "Emplomados, incluidos los revestidos con una aleación de plomo y estaño"
+        },
+        {
+          "code": "7210.20.00",
+          "description": "000Y -Emplomados, incluidos los revestidos con una aleación de plomo y estaño 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.30",
+          "description": "Cincados electrolíticamente"
+        },
+        {
+          "code": "7210.30.10",
+          "description": "De espesor inferior a 4,75 mm"
+        },
+        {
+          "code": "7210.30.10",
+          "description": "Perforados con agujeros redondos según norma ISO 10630 y equivalentes de otras normas"
+        },
+        {
+          "code": "7210.30.10",
+          "description": "110F De diámetro del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.30.10",
+          "description": "120J De diámetro del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.30.10",
+          "description": "190G Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.30.10",
+          "description": "Perforados con agujeros cuadrados según norma ISO 10630 y equivalentes de otras normas"
+        },
+        {
+          "code": "7210.30.10",
+          "description": "210L De lado del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.30.10",
+          "description": "220P De lado del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.30.10",
+          "description": "290M Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.30.10",
+          "description": "900W Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.30.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7210.30.90",
+          "description": "000A Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.4",
+          "description": "Cincados de otro modo:"
+        },
+        {
+          "code": "7210.41",
+          "description": "Ondulados"
+        },
+        {
+          "code": "7210.41.10",
+          "description": "De espesor inferior a 4,75 mm"
+        },
+        {
+          "code": "7210.41.10",
+          "description": "100D De espesor inferior a 0,37 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.41.10",
+          "description": "200J De espesor superior o igual a 0,37 mm pero inferior a 0,51 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.41.10",
+          "description": "300P De espesor superior o igual a 0,51 mm pero inferior a 0,66 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.41.10",
+          "description": "400V De espesor superior o igual a 0,66 mm pero inferior a 1,20 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.41.10",
+          "description": "500A De espesor superior o igual a 1,20 mm pero inferior a 1,81 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.41.10",
+          "description": "900X Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.41.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7210.41.90",
+          "description": "000B Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "De espesor inferior a 4,75 mm"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "De espesor inferior a 0,37 mm"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "110C De espesor superior o igual a 0,30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "190D Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "De espesor superior o igual a 0,37 mm pero inferior a 0,51 mm"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "Perforados con agujeros redondos según norma ISO 10630 y equivalentes de otras normas"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "211K De diámetro del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "212M De diámetro del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "219C Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "Perforados con agujeros cuadrados según norma ISO 10630 y equivalentes de otras normas"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "221N De lado del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "222Q De lado del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "229F Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "290J Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "De espesor superior o igual a 0,51 mm pero inferior a 0,66 mm"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "311Q De diámetro del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "312T De diámetro del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "319H Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "321U De lado del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "322W De lado del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "329L Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "390P Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "De espesor superior o igual a 0,66 mm pero inferior a 1,20 mm"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "Perforados con agujeros redondos según norma ISO 10630"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "411W De diámetro del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "412Y De diámetro del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "419N Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "421Z De lado del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "422B De lado del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "429R Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "490V Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "De espesor superior o igual a 1,20 mm pero inferior a 1,81 mm"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "511B De diámetro del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "512D De diámetro del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "519U Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "521E De lado del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "522G De lado del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "529X Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "590A Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "911Y De diámetro del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "912A De diámetro del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "919Q Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "921B De lado del agujero inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "922D De lado del agujero superior a 10 mm pero inferior o igual a 30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "929U Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.10",
+          "description": "990X Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.49.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7210.49.90",
+          "description": "000X Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.50.00",
+          "description": "Revestidos de óxidos de cromo o de cromo y óxidos de cromo"
+        },
+        {
+          "code": "7210.50.00",
+          "description": "De espesor inferior a 0,24 mm"
+        },
+        {
+          "code": "7210.50.00",
+          "description": "110Z De espesor inferior a 0,16 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.50.00",
+          "description": "120C De espesor superior o igual a 0,16 mm pero inferior a 0,18 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.50.00",
+          "description": "130F De espesor superior o igual a 0,18 mm pero inferior a 0,20 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.50.00",
+          "description": "140J De espesor superior o igual a 0,20 mm pero inferior a 0,22 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.50.00",
+          "description": "150M De espesor superior o igual a 0,22 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.50.00",
+          "description": "De espesor superior o igual a 0,24 mm"
+        },
+        {
+          "code": "7210.50.00",
+          "description": "210E De espesor inferior a 0,26 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.50.00",
+          "description": "220H De espesor superior o igual a 0,26 mm pero inferior a 0,28 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.50.00",
+          "description": "230L De espesor superior o igual a 0,28 mm pero inferior a 0,30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.50.00",
+          "description": "290F Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.6",
+          "description": "Revestidos de aluminio:"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "Revestidos de aleaciones de aluminio y cinc"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "De espesor inferior a 0,38 mm"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "De espesor superior o igual a 0,30 mm"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "111C Lisos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "119V Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "190B Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "De espesor superior o igual a 0,38 mm pero inferior a 0,51 mm"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "210F Lisos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "290G Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "De espesor superior o igual a 0,51 mm pero inferior a 0,66 mm"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "310L Lisos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "390M Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "De espesor superior o igual a 0,66 mm pero inferior a 0,83 mm"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "410R Lisos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "490T Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "De espesor superior o igual a 0,83 mm pero inferior a 1,02 mm"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "510X Lisos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "590Y Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "910U Lisos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.61.00",
+          "description": "990V Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.69",
+          "description": "Los demás"
+        },
+        {
+          "code": "7210.69.11",
+          "description": "Con peso superior o igual a 120 g/m2 y un contenido de silicio superior o igual al 5 % pero inferior o igual al 11 %, en"
+        },
+        {
+          "code": "7210.69.11",
+          "description": "000E Con peso superior o igual a 120 g/m2 y un contenido de silicio superior o igual al 5 % pero inferior o igual al 11 %, en"
+        },
+        {
+          "code": "7210.69.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "7210.69.19",
+          "description": "000Q Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.69.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7210.69.90",
+          "description": "000A Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.70",
+          "description": "Pintados, barnizados o revestidos de plástico"
+        },
+        {
+          "code": "7210.70.10",
+          "description": "Pintados o barnizados"
+        },
+        {
+          "code": "7210.70.10",
+          "description": "100J De espesor inferior a 0,47 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.70.10",
+          "description": "200P De espesor superior o igual a 0,47 mm pero inferior a 0,55 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.70.10",
+          "description": "300V De espesor superior o igual a 0,55 mm pero inferior a 0,70 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.70.10",
+          "description": "400A De espesor superior o igual a 0,70 mm pero inferior a 0,87 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.70.10",
+          "description": "500F De espesor superior o igual a 0,87 mm pero inferior a 1,06 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.70.10",
+          "description": "900C Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.70.20",
+          "description": "Revestidos de plástico"
+        },
+        {
+          "code": "7210.70.20",
+          "description": "000N Revestidos de plástico 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7210.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7210.90.00",
+          "description": "000X -Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7211",
+      "description": "PRODUCTOS LAMINADOS PLANOS DE HIERRO O ACERO SIN ALEAR, DE ANCHURA INFERIOR A 600 MM, SIN",
+      "subheadings": [
+        {
+          "code": "7211.1",
+          "description": "Simplemente laminados en caliente:"
+        },
+        {
+          "code": "7211.13.00",
+          "description": "Laminados en las cuatro caras o en acanaladuras cerradas, de anchura superior a 150 mm y espesor superior o"
+        },
+        {
+          "code": "7211.13.00",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7211.13.00",
+          "description": "110X Con un contenido de carbono superior o igual a 0,6 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.13.00",
+          "description": "190Y Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.13.00",
+          "description": "900M Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.14.00",
+          "description": "Los demás, de espesor superior o igual a 4,75 mm"
+        },
+        {
+          "code": "7211.14.00",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7211.14.00",
+          "description": "110J Desbastes en rollos (coils) para relaminar en frío 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.14.00",
+          "description": "120M En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.14.00",
+          "description": "130Q Los demás, con un contenido de carbono superior o igual al 0,6 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.14.00",
+          "description": "190K Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.14.00",
+          "description": "900Z Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7211.19.00",
+          "description": "100Q Desbastes en rollos (coils) para relaminar en frío 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.19.00",
+          "description": "200W En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.19.00",
+          "description": "300B Los demás, con un contenido de carbono superior o igual al 0,6 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.19.00",
+          "description": "900J Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.2",
+          "description": "Simplemente laminados en frío:"
+        },
+        {
+          "code": "7211.23.00",
+          "description": "Con un contenido de carbono inferior al 0,25 % en peso"
+        },
+        {
+          "code": "7211.23.00",
+          "description": "De espesor superior o igual a 0,3 mm"
+        },
+        {
+          "code": "7211.23.00",
+          "description": "110L Con una dureza HRB (Hardness Rockwell B) superior a 85 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.23.00",
+          "description": "190M Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.23.00",
+          "description": "900B Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "7211.29.10",
+          "description": "Con un contenido de carbono superior o igual al 0,25 % pero inferior al 0,6 %, en peso"
+        },
+        {
+          "code": "7211.29.10",
+          "description": "De espesor superior o igual a 0,3 mm"
+        },
+        {
+          "code": "7211.29.10",
+          "description": "110T Con una dureza HRB (Hardness Rockwell B) superior a 85 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.29.10",
+          "description": "190U Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.29.10",
+          "description": "900H Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.29.20",
+          "description": "Con un contenido de carbono superior o igual al 0,6 % en peso"
+        },
+        {
+          "code": "7211.29.20",
+          "description": "De espesor superior o igual a 0,3 mm"
+        },
+        {
+          "code": "7211.29.20",
+          "description": "110C Con una dureza HRB (Hardness Rockwell B) superior a 85 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.29.20",
+          "description": "190D Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.29.20",
+          "description": "900T Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7211.90.10",
+          "description": "Con un contenido de carbono superior o igual al 0,6 % en peso"
+        },
+        {
+          "code": "7211.90.10",
+          "description": "000A Con un contenido de carbono superior o igual al 0,6 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7211.90.90",
+          "description": "Laminados en caliente"
+        },
+        {
+          "code": "7211.90.90",
+          "description": "110M De espesor inferior o igual a 12,7 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.90.90",
+          "description": "190N Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7211.90.90",
+          "description": "900C Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7212",
+      "description": "PRODUCTOS LAMINADOS PLANOS DE HIERRO O ACERO SIN ALEAR, DE ANCHURA INFERIOR A 600 MM,",
+      "subheadings": [
+        {
+          "code": "7212.10.00",
+          "description": "Estañados"
+        },
+        {
+          "code": "7212.10.00",
+          "description": "De espesor inferior a 0,24 mm"
+        },
+        {
+          "code": "7212.10.00",
+          "description": "110E De espesor inferior a 0,16 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.10.00",
+          "description": "120H De espesor superior o igual a 0,16 mm pero inferior a 0,18 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.10.00",
+          "description": "130L De espesor superior o igual a 0,18 mm pero inferior a 0,20 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.10.00",
+          "description": "140P De espesor superior o igual a 0,20 mm pero inferior a 0,22 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.10.00",
+          "description": "150T De espesor superior o igual a 0,22 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.10.00",
+          "description": "De espesor superior o igual a 0,24 mm"
+        },
+        {
+          "code": "7212.10.00",
+          "description": "210K De espesor inferior a 0,26 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.10.00",
+          "description": "220N De espesor superior o igual a 0,26 mm pero inferior a 0,28 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.10.00",
+          "description": "230R De espesor superior o igual a 0,28 mm pero inferior a 0,30 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.10.00",
+          "description": "290L Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.20",
+          "description": "Cincados electrolíticamente"
+        },
+        {
+          "code": "7212.20.10",
+          "description": "De espesor inferior a 4,75 mm"
+        },
+        {
+          "code": "7212.20.10",
+          "description": "000V De espesor inferior a 4,75 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7212.20.90",
+          "description": "000Y Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.30.00",
+          "description": "Cincados de otro modo"
+        },
+        {
+          "code": "7212.30.00",
+          "description": "De espesor superior o igual a 0,30 mm"
+        },
+        {
+          "code": "7212.30.00",
+          "description": "110H Lisos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.30.00",
+          "description": "190J Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.30.00",
+          "description": "900Y Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7212.40",
+          "description": "Pintados, barnizados o revestidos de plástico"
+        },
+        {
+          "code": "7212.40.10",
+          "description": "Pintados o barnizados"
+        },
+        {
+          "code": "7212.40.10",
+          "description": "De espesor inferior a 0,47 mm"
+        },
+        {
+          "code": "7212.40.10",
+          "description": "110G Estañados por proceso electrolítico y barnizados en ambas caras, aptos para la fabricación de casquillos para válvulas"
+        }
+      ]
+    },
+    {
+      "code": "1200",
+      "description": "2.00 3.00 LA 3.00 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "7213",
+      "description": "ALAMBRÓN DE HIERRO O ACERO SIN ALEAR",
+      "subheadings": [
+        {
+          "code": "7213.10.00",
+          "description": "Con muescas, cordones, surcos o relieves, producidos en el laminado"
+        },
+        {
+          "code": "7213.10.00",
+          "description": "000P -Con muescas, cordones, surcos o relieves, producidos en el laminado 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7213.20.00",
+          "description": "Los demás, de acero de fácil mecanización"
+        },
+        {
+          "code": "7213.20.00",
+          "description": "000D -Los demás, de acero de fácil mecanización 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7213.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "7213.91",
+          "description": "De sección circular con diámetro inferior a 14 mm"
+        },
+        {
+          "code": "7213.91.10",
+          "description": "Con un contenido de carbono superior o igual al 0,6 % en peso"
+        },
+        {
+          "code": "7213.91.10",
+          "description": "000Z Con un contenido de carbono superior o igual al 0,6 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7213.91.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7213.91.90",
+          "description": "100H Con un contenido de carbono inferior al 0,25 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7213.91.90",
+          "description": "900B Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7213.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "7213.99.10",
+          "description": "Con un contenido de carbono superior o igual al 0,6 % en peso"
+        },
+        {
+          "code": "7213.99.10",
+          "description": "000V Con un contenido de carbono superior o igual al 0,6 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7213.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7213.99.90",
+          "description": "000Y Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7214",
+      "description": "BARRAS DE HIERRO O ACERO SIN ALEAR, SIMPLEMENTE FORJADAS, LAMINADAS O EXTRUDIDAS, EN",
+      "subheadings": [
+        {
+          "code": "7214.10",
+          "description": "Forjadas"
+        },
+        {
+          "code": "7214.10.10",
+          "description": "Con un contenido de carbono inferior o igual al 0,6 % en peso"
+        },
+        {
+          "code": "7214.10.10",
+          "description": "000T Con un contenido de carbono inferior o igual al 0,6 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7214.10.90",
+          "description": "000W Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.20.00",
+          "description": "Con muescas, cordones, surcos o relieves, producidos en el laminado o sometidas a torsión después del laminado"
+        },
+        {
+          "code": "7214.20.00",
+          "description": "000X -Con muescas, cordones, surcos o relieves, producidos en el laminado o sometidas a torsión después del laminado 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.30.00",
+          "description": "Las demás, de acero de fácil mecanización"
+        },
+        {
+          "code": "7214.30.00",
+          "description": "000L -Las demás, de acero de fácil mecanización 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "7214.91.00",
+          "description": "De sección transversal rectangular"
+        },
+        {
+          "code": "7214.91.00",
+          "description": "100N De espesor inferior o igual a 3,2 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.91.00",
+          "description": "De espesor superior a 3,2 mm"
+        },
+        {
+          "code": "7214.91.00",
+          "description": "210X De anchura inferior o igual a 76,2 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.91.00",
+          "description": "290Y Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "7214.99.10",
+          "description": "De sección circular"
+        },
+        {
+          "code": "7214.99.10",
+          "description": "100U De diámetro inferior o igual a 11,2 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.99.10",
+          "description": "200Z De diámetro superior a 11,2 mm pero inferior o igual a 19,1 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.99.10",
+          "description": "900M Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.99.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7214.99.90",
+          "description": "De sección transversal cuadrada"
+        },
+        {
+          "code": "7214.99.90",
+          "description": "110A De lado inferior o igual a 11,2 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.99.90",
+          "description": "120D De lado superior a 11,2 mm pero inferior o igual a 22,3 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.99.90",
+          "description": "190B Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7214.99.90",
+          "description": "900Q Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7215",
+      "description": "LAS DEMÁS BARRAS DE HIERRO O ACERO SIN ALEAR",
+      "subheadings": [
+        {
+          "code": "7215.10.00",
+          "description": "De acero de fácil mecanización, simplemente obtenidas o acabadas en frío"
+        },
+        {
+          "code": "7215.10.00",
+          "description": "000B -De acero de fácil mecanización, simplemente obtenidas o acabadas en frío 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.50.00",
+          "description": "Las demás, simplemente obtenidas o acabadas en frío"
+        },
+        {
+          "code": "7215.50.00",
+          "description": "000H -Las demás, simplemente obtenidas o acabadas en frío 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7215.90.10",
+          "description": "Con un contenido de carbono inferior o igual al 0,6 % en peso"
+        },
+        {
+          "code": "7215.90.10",
+          "description": "De sección circular"
+        },
+        {
+          "code": "7215.90.10",
+          "description": "Revestidas de cobre"
+        },
+        {
+          "code": "7215.90.10",
+          "description": "111K De diámetro inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.10",
+          "description": "112M De diámetro superior a 10 mm pero inferior o igual a 13 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.10",
+          "description": "113P De diámetro superior a 13 mm pero inferior o igual a 15 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.10",
+          "description": "114R De diámetro superior a 15 mm pero inferior o igual a 16 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.10",
+          "description": "119C Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.10",
+          "description": "190J Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.10",
+          "description": "900Y Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7215.90.90",
+          "description": "100H De sección rectangular, chapadas en ambas caras (triples) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.90",
+          "description": "De sección circular"
+        },
+        {
+          "code": "7215.90.90",
+          "description": "Revestidas de cobre"
+        },
+        {
+          "code": "7215.90.90",
+          "description": "211U De diámetro inferior o igual a 10 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.90",
+          "description": "212W De diámetro superior a 10 mm pero inferior o igual a 13 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.90",
+          "description": "213Y De diámetro superior a 13 mm pero inferior o igual a 15 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.90",
+          "description": "214A De diámetro superior a 15 mm pero inferior o igual a 16 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.90",
+          "description": "219L Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.90",
+          "description": "290T Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7215.90.90",
+          "description": "900B Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7216",
+      "description": "PERFILES DE HIERRO O ACERO SIN ALEAR",
+      "subheadings": [
+        {
+          "code": "7216.10.00",
+          "description": "Perfiles en U, en I o en H, simplemente laminados o extrudidos en caliente, de altura inferior a 80 mm"
+        },
+        {
+          "code": "7216.10.00",
+          "description": "000V -Perfiles en U, en I o en H, simplemente laminados o extrudidos en caliente, de altura inferior a 80 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.2",
+          "description": "Perfiles en L o en T, simplemente laminados o extrudidos en caliente, de altura inferior a 80 mm:"
+        },
+        {
+          "code": "7216.21.00",
+          "description": "Perfiles en L"
+        },
+        {
+          "code": "7216.21.00",
+          "description": "De espesor inferior o igual a 3,2 mm"
+        },
+        {
+          "code": "7216.21.00",
+          "description": "110E De lados iguales (Res. 336/00 SICYM) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.21.00",
+          "description": "190F Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.21.00",
+          "description": "De espesor superior a 3,2 mm"
+        },
+        {
+          "code": "7216.21.00",
+          "description": "De altura inferior o igual a 63,5 mm"
+        },
+        {
+          "code": "7216.21.00",
+          "description": "211M De lados iguales (R.336/00 SICyM) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.21.00",
+          "description": "219E Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.21.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7216.21.00",
+          "description": "291N De lados iguales (R.336/00 SICyM) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.21.00",
+          "description": "299F Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.22.00",
+          "description": "Perfiles en T"
+        },
+        {
+          "code": "7216.22.00",
+          "description": "000H --Perfiles en T 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.3",
+          "description": "Perfiles en U, en I o en H, simplemente laminados o extrudidos en caliente, de altura superior o igual a 80 mm:"
+        },
+        {
+          "code": "7216.31.00",
+          "description": "Perfiles en U"
+        },
+        {
+          "code": "7216.31.00",
+          "description": "100Q De altura inferior o igual a 120 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.31.00",
+          "description": "900J Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.32.00",
+          "description": "Perfiles en I"
+        },
+        {
+          "code": "7216.32.00",
+          "description": "100C De altura inferior o igual a 100 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.32.00",
+          "description": "900W Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.33.00",
+          "description": "Perfiles en H"
+        },
+        {
+          "code": "7216.33.00",
+          "description": "100P De altura inferior o igual a 100 mm 12.00 6.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.33.00",
+          "description": "900H Los demás 12.00 6.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.40",
+          "description": "Perfiles en L o en T, simplemente laminados o extrudidos en caliente, de altura superior o igual a 80 mm"
+        },
+        {
+          "code": "7216.40.10",
+          "description": "De altura inferior o igual a 200 mm"
+        },
+        {
+          "code": "7216.40.10",
+          "description": "000X De altura inferior o igual a 200 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.40.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7216.40.90",
+          "description": "000A Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.50.00",
+          "description": "Los demás perfiles, simplemente laminados o extrudidos en caliente"
+        },
+        {
+          "code": "7216.50.00",
+          "description": "De altura superior a 80 mm"
+        },
+        {
+          "code": "7216.50.00",
+          "description": "110K Planos o en ángulos, con bulbo 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.50.00",
+          "description": "190L Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.50.00",
+          "description": "200M Planos o en ángulos, con bulbo, de altura inferior o igual a 80 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.50.00",
+          "description": "900A Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.6",
+          "description": "Perfiles simplemente obtenidos o acabados en frío:"
+        },
+        {
+          "code": "7216.61",
+          "description": "Obtenidos a partir de productos laminados planos"
+        },
+        {
+          "code": "7216.61.10",
+          "description": "De altura inferior a 80 mm"
+        },
+        {
+          "code": "7216.61.10",
+          "description": "000M De altura inferior a 80 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.61.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7216.61.90",
+          "description": "Perfiles en C"
+        },
+        {
+          "code": "7216.61.90",
+          "description": "110Z De altura inferior o igual a 220 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.61.90",
+          "description": "190A Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.61.90",
+          "description": "Perfiles en U"
+        },
+        {
+          "code": "7216.61.90",
+          "description": "210E De altura inferior o igual a 220 mm 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.61.90",
+          "description": "290F Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.61.90",
+          "description": "300G Perfiles en I 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.61.90",
+          "description": "400M Perfiles en H 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.61.90",
+          "description": "500T Perfiles en T 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.61.90",
+          "description": "600Y Perfiles en L 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.61.90",
+          "description": "900P Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.69",
+          "description": "Los demás"
+        },
+        {
+          "code": "7216.69.10",
+          "description": "De altura inferior a 80 mm"
+        },
+        {
+          "code": "7216.69.10",
+          "description": "100N Perfiles en U 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.69.10",
+          "description": "200U Perfiles en I 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.69.10",
+          "description": "300Z Perfiles en H 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.69.10",
+          "description": "400E Perfiles en T 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.69.10",
+          "description": "500K Perfiles en L 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.69.10",
+          "description": "900G Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.69.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7216.69.90",
+          "description": "100R Perfiles en U 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.69.90",
+          "description": "200X Perfiles en I 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.69.90",
+          "description": "300C Perfiles en H 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.69.90",
+          "description": "400H Perfiles en T 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.69.90",
+          "description": "500N Perfiles en L 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.69.90",
+          "description": "900K Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "7216.91.00",
+          "description": "Obtenidos o acabados en frío, a partir de productos laminados planos"
+        },
+        {
+          "code": "7216.91.00",
+          "description": "000V --Obtenidos o acabados en frío, a partir de productos laminados planos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7216.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7216.99.00",
+          "description": "000Q --Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7217",
+      "description": "ALAMBRE DE HIERRO O ACERO SIN ALEAR",
+      "subheadings": [
+        {
+          "code": "7217.10",
+          "description": "Sin revestir, incluso pulido"
+        },
+        {
+          "code": "7217.10.11",
+          "description": "Con un contenido de fósforo inferior al 0,035 % en peso y de azufre inferior al 0,035 % en peso, templado y revenido,"
+        },
+        {
+          "code": "7217.10.11",
+          "description": "000F Con un contenido de fósforo inferior al 0,035 % en peso y de azufre inferior al 0,035 % en peso, templado y revenido,"
+        },
+        {
+          "code": "7217.10.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "7217.10.19",
+          "description": "000R Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7217.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7217.10.90",
+          "description": "De sección transversal superior o igual a 3 mm, en su mayor dimensión"
+        },
+        {
+          "code": "7217.10.90",
+          "description": "110K Con un contenido de carbono inferior o igual al 0,25 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7217.10.90",
+          "description": "190L Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7217.10.90",
+          "description": "910D Con un contenido de carbono inferior o igual al 0,25 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7217.10.90",
+          "description": "990E Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7217.20",
+          "description": "Cincado"
+        },
+        {
+          "code": "7217.20.10",
+          "description": "Con un contenido de carbono superior o igual al 0,6 % en peso"
+        },
+        {
+          "code": "7217.20.10",
+          "description": "000M Con un contenido de carbono superior o igual al 0,6 % en peso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7217.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7217.20.90",
+          "description": "100W De sección transversal superior a 10 mm en su mayor dimensión 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7217.20.90",
+          "description": "200B En diámetros de 0,80 mm, 0,82 mm y 1,16 mm, con tolerancia de 0,01 mm en más o en menos, resistencia a la"
+        }
+      ]
+    },
+    {
+      "code": "1200",
+      "description": "12.00 3.00 LA 3.00 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "1200",
+      "description": "0.00 3.00 LA 3.00 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "7218",
+      "description": "ACERO INOXIDABLE EN LINGOTES O DEMÁS FORMAS PRIMARIAS; PRODUCTOS INTERMEDIOS DE ACERO",
+      "subheadings": [
+        {
+          "code": "7218.10.00",
+          "description": "Lingotes o demás formas primarias"
+        },
+        {
+          "code": "7218.10.00",
+          "description": "000G -Lingotes o demás formas primarias 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7218.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "7218.91.00",
+          "description": "De sección transversal rectangular"
+        },
+        {
+          "code": "7218.91.00",
+          "description": "000G --De sección transversal rectangular 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7218.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7218.99.00",
+          "description": "000C --Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7219",
+      "description": "PRODUCTOS LAMINADOS PLANOS DE ACERO INOXIDABLE, DE ANCHURA SUPERIOR O IGUAL A 600 MM",
+      "subheadings": [
+        {
+          "code": "7219.1",
+          "description": "Simplemente laminados en caliente, enrollados:"
+        },
+        {
+          "code": "7219.11.00",
+          "description": "De espesor superior a 10 mm"
+        },
+        {
+          "code": "7219.11.00",
+          "description": "000M --De espesor superior a 10 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.12.00",
+          "description": "De espesor superior o igual a 4,75 mm pero inferior o igual a 10 mm"
+        },
+        {
+          "code": "7219.12.00",
+          "description": "000Z --De espesor superior o igual a 4,75 mm pero inferior o igual a 10 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.13.00",
+          "description": "De espesor superior o igual a 3 mm pero inferior a 4,75 mm"
+        },
+        {
+          "code": "7219.13.00",
+          "description": "000L --De espesor superior o igual a 3 mm pero inferior a 4,75 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.14.00",
+          "description": "De espesor inferior a 3 mm"
+        },
+        {
+          "code": "7219.14.00",
+          "description": "000Y --De espesor inferior a 3 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.2",
+          "description": "Simplemente laminados en caliente, sin enrollar:"
+        },
+        {
+          "code": "7219.21.00",
+          "description": "De espesor superior a 10 mm"
+        },
+        {
+          "code": "7219.21.00",
+          "description": "000B --De espesor superior a 10 mm 14.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.22.00",
+          "description": "De espesor superior o igual a 4,75 mm pero inferior o igual a 10 mm"
+        },
+        {
+          "code": "7219.22.00",
+          "description": "000N --De espesor superior o igual a 4,75 mm pero inferior o igual a 10 mm 14.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.23.00",
+          "description": "De espesor superior o igual a 3 mm pero inferior a 4,75 mm"
+        },
+        {
+          "code": "7219.23.00",
+          "description": "000A --De espesor superior o igual a 3 mm pero inferior a 4,75 mm 14.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.24.00",
+          "description": "De espesor inferior a 3 mm"
+        },
+        {
+          "code": "7219.24.00",
+          "description": "000M --De espesor inferior a 3 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.3",
+          "description": "Simplemente laminados en frío:"
+        },
+        {
+          "code": "7219.31.00",
+          "description": "De espesor superior o igual a 4,75 mm"
+        },
+        {
+          "code": "7219.31.00",
+          "description": "000Q --De espesor superior o igual a 4,75 mm 14.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.32.00",
+          "description": "De espesor superior o igual a 3 mm pero inferior a 4,75 mm"
+        },
+        {
+          "code": "7219.32.00",
+          "description": "000C --De espesor superior o igual a 3 mm pero inferior a 4,75 mm 14.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.33.00",
+          "description": "De espesor superior a 1 mm pero inferior a 3 mm"
+        },
+        {
+          "code": "7219.33.00",
+          "description": "000P --De espesor superior a 1 mm pero inferior a 3 mm 14.00 0.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.34.00",
+          "description": "De espesor superior o igual a 0,5 mm pero inferior o igual a 1 mm"
+        },
+        {
+          "code": "7219.34.00",
+          "description": "000B --De espesor superior o igual a 0,5 mm pero inferior o igual a 1 mm 14.00 0.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.35.00",
+          "description": "De espesor inferior a 0,5 mm"
+        },
+        {
+          "code": "7219.35.00",
+          "description": "000N --De espesor inferior a 0,5 mm 14.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7219.90.10",
+          "description": "De espesor inferior a 4,75 mm y dureza superior o igual a 42 HRC"
+        },
+        {
+          "code": "7219.90.10",
+          "description": "000Y De espesor inferior a 4,75 mm y dureza superior o igual a 42 HRC 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7219.90.90",
+          "description": "Perforados con agujeros redondos según norma ISO 10630 y equivalentes de otras normas"
+        },
+        {
+          "code": "7219.90.90",
+          "description": "110K De diámetro del agujero inferior o igual a 10 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.90.90",
+          "description": "120N De diámetro del agujero superior a 10 mm pero inferior o igual a 30 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.90.90",
+          "description": "190L Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.90.90",
+          "description": "Perforados con agujeros cuadrados según norma ISO 10630 y equivalentes de otras normas"
+        },
+        {
+          "code": "7219.90.90",
+          "description": "210Q De lado del agujero inferior o igual a 10 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.90.90",
+          "description": "220U De lado del agujero superior a 10 mm pero inferior o igual a 30 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.90.90",
+          "description": "290R Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7219.90.90",
+          "description": "900A Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7220",
+      "description": "PRODUCTOS LAMINADOS PLANOS DE ACERO INOXIDABLE, DE ANCHURA INFERIOR A 600 MM",
+      "subheadings": [
+        {
+          "code": "7220.1",
+          "description": "Simplemente laminados en caliente:"
+        },
+        {
+          "code": "7220.11.00",
+          "description": "De espesor superior o igual a 4,75 mm"
+        },
+        {
+          "code": "7220.11.00",
+          "description": "000R --De espesor superior o igual a 4,75 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7220.12",
+          "description": "De espesor inferior a 4,75 mm"
+        },
+        {
+          "code": "7220.12.10",
+          "description": "De espesor inferior o igual a 1,5 mm"
+        },
+        {
+          "code": "7220.12.10",
+          "description": "000N De espesor inferior o igual a 1,5 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7220.12.20",
+          "description": "De espesor superior a 1,5 mm pero inferior o igual a 3 mm"
+        },
+        {
+          "code": "7220.12.20",
+          "description": "000Y De espesor superior a 1,5 mm pero inferior o igual a 3 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7220.12.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7220.12.90",
+          "description": "000R Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7220.20",
+          "description": "Simplemente laminados en frío"
+        },
+        {
+          "code": "7220.20.10",
+          "description": "De anchura inferior o igual a 23 mm y espesor inferior o igual a 0,1 mm"
+        },
+        {
+          "code": "7220.20.10",
+          "description": "000D De anchura inferior o igual a 23 mm y espesor inferior o igual a 0,1 mm 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7220.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7220.20.90",
+          "description": "000G Los demás 14.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7220.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7220.90.00",
+          "description": "000T -Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7221",
+      "description": "ALAMBRÓN DE ACERO INOXIDABLE",
+      "subheadings": [
+        {
+          "code": "7221.00.00",
+          "description": "Alambrón de acero inoxidable"
+        },
+        {
+          "code": "7221.00.00",
+          "description": "000J ALAMBRÓN DE ACERO INOXIDABLE. 14.00 14.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7222",
+      "description": "BARRAS Y PERFILES, DE ACERO INOXIDABLE",
+      "subheadings": [
+        {
+          "code": "7222.1",
+          "description": "Barras simplemente laminadas o extrudidas en caliente:"
+        },
+        {
+          "code": "7222.11.00",
+          "description": "De sección circular"
+        },
+        {
+          "code": "7222.11.00",
+          "description": "100J Según Norma AISI-Serie 200 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.11.00",
+          "description": "200P Según Norma AISI-Serie 300 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.11.00",
+          "description": "300V Según Norma AISI-Serie 400 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.11.00",
+          "description": "900C Las demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "7222.19.10",
+          "description": "De sección transversal rectangular"
+        },
+        {
+          "code": "7222.19.10",
+          "description": "100P Según Norma AISI-Serie 200 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.19.10",
+          "description": "200V Según Norma AISI-Serie 300 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.19.10",
+          "description": "300A Según Norma AISI-Serie 400 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.19.10",
+          "description": "900H Las demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.19.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7222.19.90",
+          "description": "100T Según Norma AISI-Serie 200 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.19.90",
+          "description": "200Y Según Norma AISI-Serie 300 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.19.90",
+          "description": "300D Según Norma AISI-Serie 400 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.19.90",
+          "description": "900L Las demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.20.00",
+          "description": "Barras simplemente obtenidas o acabadas en frío"
+        },
+        {
+          "code": "7222.20.00",
+          "description": "Según Norma IRAM-IAS U 500-604, con discrepancias h9, h11 o h12"
+        },
+        {
+          "code": "7222.20.00",
+          "description": "110P Según Norma AISI-Serie 200 y equivalentes de otras normas 14.00 0.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.20.00",
+          "description": "120T Según Norma AISI-Serie 300 y equivalentes de otras normas 14.00 0.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.20.00",
+          "description": "130W Según Norma AISI-Serie 400 y equivalentes de otras normas 14.00 0.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.20.00",
+          "description": "140Z Según Norma AISI EV8,EV12 y equivalentes de otras normas 14.00 0.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.20.00",
+          "description": "150C Según Norma DIN 1-4882 y equivalentes de otras normas 14.00 0.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.20.00",
+          "description": "190Q Las demás 14.00 0.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.20.00",
+          "description": "900E Las demás 14.00 0.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.30.00",
+          "description": "Las demás barras"
+        },
+        {
+          "code": "7222.30.00",
+          "description": "100A Según Norma AISI-Serie 200 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.30.00",
+          "description": "200F Según Norma AISI-Serie 300 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.30.00",
+          "description": "300L Según Norma AISI-Serie 400 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.30.00",
+          "description": "400R Según Norma AISI EV8, EV12 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.30.00",
+          "description": "500X Según Norma DIN 1-4882 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.30.00",
+          "description": "900U Las demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.40",
+          "description": "Perfiles"
+        },
+        {
+          "code": "7222.40.10",
+          "description": "De altura superior o igual a 80 mm"
+        },
+        {
+          "code": "7222.40.10",
+          "description": "000U De altura superior o igual a 80 mm 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7222.40.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7222.40.90",
+          "description": "000X Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7223",
+      "description": "ALAMBRE DE ACERO INOXIDABLE",
+      "subheadings": [
+        {
+          "code": "7223.00.00",
+          "description": "Alambre de acero inoxidable"
+        },
+        {
+          "code": "7223.00.00",
+          "description": "100B Según Norma AISI-Serie 200 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7223.00.00",
+          "description": "200G Según Norma AISI-Serie 300 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7223.00.00",
+          "description": "300M Según Norma AISI-Serie 400 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7223.00.00",
+          "description": "900V Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7224",
+      "description": "LOS DEMÁS ACEROS ALEADOS EN LINGOTES O DEMÁS FORMAS PRIMARIAS; PRODUCTOS INTERMEDIOS",
+      "subheadings": [
+        {
+          "code": "7224.10.00",
+          "description": "Lingotes o demás formas primarias"
+        },
+        {
+          "code": "7224.10.00",
+          "description": "000D -Lingotes o demás formas primarias 8.00 8.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7224.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7224.90.00",
+          "description": "Palanquilla"
+        },
+        {
+          "code": "7224.90.00",
+          "description": "110A Según Normas SAE 51XX y equivalentes de otras normas 8.00 8.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7224.90.00",
+          "description": "120D Según Normas SAE 41XX y equivalentes de otras normas 8.00 8.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7224.90.00",
+          "description": "130G Según Normas SAE 86XX y equivalentes de otras normas 8.00 8.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7224.90.00",
+          "description": "140K Según Normas SAE 43XX y equivalentes de otras normas 8.00 8.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7224.90.00",
+          "description": "190B Las demás 8.00 8.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7224.90.00",
+          "description": "900Q Los demás 8.00 8.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7225",
+      "description": "PRODUCTOS LAMINADOS PLANOS DE LOS DEMÁS ACEROS ALEADOS, DE ANCHURA SUPERIOR O IGUAL A",
+      "subheadings": [
+        {
+          "code": "7225.1",
+          "description": "De acero al silicio llamado «magnético» (acero magnético al silicio)*:"
+        },
+        {
+          "code": "7225.11.00",
+          "description": "De grano orientado"
+        },
+        {
+          "code": "7225.11.00",
+          "description": "000J --De grano orientado 14.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7225.19.00",
+          "description": "000E --Los demás 14.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.30.00",
+          "description": "Los demás, simplemente laminados en caliente, enrollados"
+        },
+        {
+          "code": "7225.30.00",
+          "description": "100F De acero rápido 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.30.00",
+          "description": "Los demás, de espesor inferior o igual a 12,7 mm."
+        },
+        {
+          "code": "7225.30.00",
+          "description": "210P Desbastes en rollos (coils) para relaminar en frío 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.30.00",
+          "description": "220T En calidades para fabricar caños soldados bajo normas del American Petroluem Institute 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.30.00",
+          "description": "230W Los demás, con un contenido de carbono superior o igual al 0,6 % en peso 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.30.00",
+          "description": "290Q Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.30.00",
+          "description": "900Z Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.40",
+          "description": "Los demás, simplemente laminados en caliente, sin enrollar"
+        },
+        {
+          "code": "7225.40.10",
+          "description": "De acero, según normas AISI D2, D3 o D6, de espesor inferior o igual a 7 mm"
+        },
+        {
+          "code": "7225.40.10",
+          "description": "000Z De acero, según normas AISI D2, D3 o D6, de espesor inferior o igual a 7 mm 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.40.20",
+          "description": "De acero rápido"
+        },
+        {
+          "code": "7225.40.20",
+          "description": "000J De acero rápido 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.40.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7225.40.90",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7225.40.90",
+          "description": "110L En calidades para fabricar caños soldados bajo normas del American Petroleum Institute 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.40.90",
+          "description": "120P Los demás, con un contenido de carbono superior o igual al 0,6 % en peso 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.40.90",
+          "description": "190M Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.40.90",
+          "description": "900B Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.50",
+          "description": "Los demás, simplemente laminados en frío"
+        },
+        {
+          "code": "7225.50.10",
+          "description": "De acero rápido"
+        },
+        {
+          "code": "7225.50.10",
+          "description": "000N De acero rápido 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.50.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7225.50.90",
+          "description": "De espesor superior o igual a 0,3 mm"
+        },
+        {
+          "code": "7225.50.90",
+          "description": "110A Con una dureza HRB (Hardness Rockwell B) superior a 85 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.50.90",
+          "description": "180Y Los demás, con un contenido de carbono superior al 0,25 % en peso 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.50.90",
+          "description": "191D En las condiciones establecidas en la Disp.1/01 SS.G.CE. 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.50.90",
+          "description": "199W Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.50.90",
+          "description": "900Q Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "7225.91.00",
+          "description": "Cincados electrolíticamente"
+        },
+        {
+          "code": "7225.91.00",
+          "description": "000X --Cincados electrolíticamente 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.92.00",
+          "description": "Cincados de otro modo"
+        },
+        {
+          "code": "7225.92.00",
+          "description": "De espesor superior o igual a 0,30 mm"
+        },
+        {
+          "code": "7225.92.00",
+          "description": "110T Lisos 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.92.00",
+          "description": "190U Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.92.00",
+          "description": "900H Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "7225.99.10",
+          "description": "De acero rápido"
+        },
+        {
+          "code": "7225.99.10",
+          "description": "000C De acero rápido 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7225.99.90",
+          "description": "Laminados en caliente"
+        },
+        {
+          "code": "7225.99.90",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7225.99.90",
+          "description": "111R Con un contenido de carbono superior o igual al 0,6 % en peso 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.99.90",
+          "description": "119J Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.99.90",
+          "description": "190Q Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.99.90",
+          "description": "Revestidos de aluminio y cinc"
+        },
+        {
+          "code": "7225.99.90",
+          "description": "Lisos"
+        },
+        {
+          "code": "7225.99.90",
+          "description": "211X De espesor superior o igual a 0,30 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.99.90",
+          "description": "219P Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.99.90",
+          "description": "290W Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7225.99.90",
+          "description": "900E Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7226",
+      "description": "PRODUCTOS LAMINADOS PLANOS DE LOS DEMÁS ACEROS ALEADOS, DE ANCHURA INFERIOR A 600 MM",
+      "subheadings": [
+        {
+          "code": "7226.1",
+          "description": "De acero al silicio llamado «magnético» (acero magnético al silicio)*:"
+        },
+        {
+          "code": "7226.11.00",
+          "description": "De grano orientado"
+        },
+        {
+          "code": "7226.11.00",
+          "description": "000C --De grano orientado 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7226.19.00",
+          "description": "000Y --Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.20",
+          "description": "De acero rápido"
+        },
+        {
+          "code": "7226.20.10",
+          "description": "De espesor superior o igual a 1 mm pero inferior o igual a 4 mm"
+        },
+        {
+          "code": "7226.20.10",
+          "description": "000P De espesor superior o igual a 1 mm pero inferior o igual a 4 mm 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7226.20.90",
+          "description": "000T Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "7226.91.00",
+          "description": "Simplemente laminados en caliente"
+        },
+        {
+          "code": "7226.91.00",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7226.91.00",
+          "description": "110Z Desbastes en rollos (coils) para relaminar en frío 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.91.00",
+          "description": "120C En calidades para fabricar caños soldado bajo normas del American Petroleum Institute 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.91.00",
+          "description": "130F Los demás, con un contenido de carbono superior o igual al 0,6 % en peso 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.91.00",
+          "description": "190A Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.91.00",
+          "description": "900P Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.92.00",
+          "description": "Simplemente laminados en frío"
+        },
+        {
+          "code": "7226.92.00",
+          "description": "De espesor superior o igual a 0,3 mm"
+        },
+        {
+          "code": "7226.92.00",
+          "description": "110L Con una dureza HRB (Hardness Rockwell B) superior a 85 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.92.00",
+          "description": "190M Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.92.00",
+          "description": "900B Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "Laminados en caliente"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "De espesor inferior o igual a 12,7 mm"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "111X Con un contenido de carbono superior o igual al 0,6 % en peso 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "119P Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "190W Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "Revestidos de aluminio y cinc"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "Lisos"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "211C De espesor superior o igual a 0,30 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "219V Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "290B Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "Revestidos de cinc por inmersión en caliente (R.281/03 MP)"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "De espesor superior o igual a 0,3 mm"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "311H Lisos 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "319A Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "390G Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7226.99.00",
+          "description": "910N De acero bimetal, de 12,5/12,7 mm de ancho y 0,6 mm de espesor, en rollos, de los tipos utilizados en la fabricación de"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "0.00 3.00 LA 3.00 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "7227",
+      "description": "ALAMBRÓN DE LOS DEMÁS ACEROS ALEADOS",
+      "subheadings": [
+        {
+          "code": "7227.10.00",
+          "description": "De acero rápido"
+        },
+        {
+          "code": "7227.10.00",
+          "description": "000J -De acero rápido 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7227.20.00",
+          "description": "De acero silicomanganeso"
+        },
+        {
+          "code": "7227.20.00",
+          "description": "000Y -De acero silicomanganeso 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7227.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7227.90.00",
+          "description": "000X -Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7228",
+      "description": "BARRAS Y PERFILES, DE LOS DEMÁS ACEROS ALEADOS; BARRAS HUECAS PARA PERFORACIÓN, DE",
+      "subheadings": [
+        {
+          "code": "7228.10",
+          "description": "Barras de acero rápido"
+        },
+        {
+          "code": "7228.10.10",
+          "description": "Simplemente laminadas o extrudidas en caliente"
+        },
+        {
+          "code": "7228.10.10",
+          "description": "100T Barras de acero rápido al molibdeno, de la siguiente composición química: C (0,75 % a 0,95 %); Cr (3,5 % a 4,5 %); Mo"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LA 3.00 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "7229",
+      "description": "ALAMBRE DE LOS DEMÁS ACEROS ALEADOS",
+      "subheadings": [
+        {
+          "code": "7229.20.00",
+          "description": "De acero silicomanganeso"
+        },
+        {
+          "code": "7229.20.00",
+          "description": "000K -De acero silicomanganeso 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7229.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7229.90.00",
+          "description": "000J -Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 1115
+}

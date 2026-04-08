@@ -1,0 +1,474 @@
+{
+  "chapter": "31",
+  "title": "Capítulo 31",
+  "sectionTitle": "CAP. 31 SECCION VI PRODUCTOS DE LAS INDUSTRIAS QUIMICAS O DE LAS INDUSTRIAS CONEXAS Notas. A. Cualquier producto que res",
+  "headings": [
+    {
+      "code": "3101",
+      "description": "ABONOS DE ORIGEN ANIMAL O VEGETAL, INCLUSO MEZCLADOS ENTRE SÍ O TRATADOS QUÍMICAMENTE;",
+      "subheadings": [
+        {
+          "code": "3101.00.00",
+          "description": "Abonos de origen animal o vegetal, incluso mezclados entre sí o tratados químicamente; abonos procedentes de la"
+        },
+        {
+          "code": "3101.00.00",
+          "description": "000B ABONOS DE ORIGEN ANIMAL O VEGETAL, INCLUSO MEZCLADOS ENTRESÍ O TRATADOS QUÍMICAMENTE;"
+        }
+      ]
+    },
+    {
+      "code": "3102",
+      "description": "ABONOS MINERALES O QUÍMICOS NITROGENADOS",
+      "subheadings": [
+        {
+          "code": "3102.10",
+          "description": "Urea, incluso en disolución acuosa"
+        },
+        {
+          "code": "3102.10.10",
+          "description": "Con un contenido de nitrógeno, calculado sobre producto anhidro seco, superior al 45 % en peso"
+        },
+        {
+          "code": "3102.10.10",
+          "description": "000U Con un contenido de nitrógeno, calculado sobre producto anhidro seco, superior al 45 % en peso 6.00 6.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "3102.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3102.10.90",
+          "description": "100C En disolución acuosa 6.00 6.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "3102.10.90",
+          "description": "900W Las demás 6.00 6.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "3102.2",
+          "description": "Sulfato de amonio; sales dobles y mezclas entre sí de sulfato de amonio y nitrato de amonio:"
+        },
+        {
+          "code": "3102.21.00",
+          "description": "Sulfato de amonio"
+        },
+        {
+          "code": "3102.21.00",
+          "description": "000K --Sulfato de amonio 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "3102.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3102.29.10",
+          "description": "Sulfonitrato de amonio"
+        },
+        {
+          "code": "3102.29.10",
+          "description": "000Q Sulfonitrato de amonio 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3102.29.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3102.29.90",
+          "description": "000U Las demás 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3102.30.00",
+          "description": "Nitrato de amonio, incluso en disolución acuosa"
+        },
+        {
+          "code": "3102.30.00",
+          "description": "100T Seco,con una cantidad inferior o igual a 0,2 % de sustancias orgánicas 0.00 0.00 3.00 LNA 4.50 0.00"
+        },
+        {
+          "code": "3102.30.00",
+          "description": "200Y En disolución acuosa 0.00 0.00 3.00 LNA 4.50 0.00"
+        },
+        {
+          "code": "3102.30.00",
+          "description": "900L Los demás 0.00 0.00 3.00 LNA 4.50 0.00"
+        },
+        {
+          "code": "3102.40.00",
+          "description": "Mezclas de nitrato de amonio con carbonato de calcio u otras materias inorgánicas sin poder fertilizante"
+        },
+        {
+          "code": "3102.40.00",
+          "description": "100G Mezclas fertilizantes que contengan nitrato de amonio 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3102.40.00",
+          "description": "900A Las demás 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3102.50",
+          "description": "Nitrato de sodio"
+        },
+        {
+          "code": "3102.50.11",
+          "description": "Con un contenido de nitrógeno inferior o igual al 16,3 % en peso"
+        },
+        {
+          "code": "3102.50.11",
+          "description": "000H Con un contenido de nitrógeno inferior o igual al 16,3 % en peso 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3102.50.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3102.50.19",
+          "description": "000U Los demás 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3102.50.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3102.50.90",
+          "description": "000D Los demás 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3102.60.00",
+          "description": "Sales dobles y mezclas entre sí de nitrato de calcio y nitrato de amonio"
+        },
+        {
+          "code": "3102.60.00",
+          "description": "100K Mezclas fertilizantes que contengan nitrato de amonio 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3102.60.00",
+          "description": "900D Las demás 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3102.80.00",
+          "description": "Mezclas de urea con nitrato de amonio en disolución acuosa o amoniacal"
+        },
+        {
+          "code": "3102.80.00",
+          "description": "Mezclas fertilizantes que contengan nitrato de amonio"
+        },
+        {
+          "code": "3102.80.00",
+          "description": "110R En disolución acuosa 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "3102.80.00",
+          "description": "190T Las demás 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "3102.80.00",
+          "description": "900G Las demás 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "3102.90.00",
+          "description": "Los demás, incluidas las mezclas no comprendidas en las subpartidas precedentes"
+        },
+        {
+          "code": "3102.90.00",
+          "description": "100C Cianamida cílcica 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3102.90.00",
+          "description": "200H Mezclas fertilizantes que contengan nitrato de amonio 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3102.90.00",
+          "description": "900W Los demás 0.00 0.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3103",
+      "description": "ABONOS MINERALES O QUÍMICOS FOSFATADOS",
+      "subheadings": [
+        {
+          "code": "3103.1",
+          "description": "Superfosfatos:"
+        },
+        {
+          "code": "3103.11.00",
+          "description": "Con un contenido de pentóxido de difósforo (P2O5) superior o igual al 35 % en peso"
+        },
+        {
+          "code": "3103.11.00",
+          "description": "000P --Con contenido de pentóxido de difósforo (P2O5) superior o igual al 35% en peso 6.00 6.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "3103.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3103.19.00",
+          "description": "000K --Los demás 6.00 6.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "3103.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3103.90.11",
+          "description": "Con un contenido de pentóxido de difósforo (P2O5) inferior o igual al 46 % en peso"
+        },
+        {
+          "code": "3103.90.11",
+          "description": "000H Con un contenido de pentóxido de fósforo (P2O5) inferior o igual al 46 % en peso 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3103.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3103.90.19",
+          "description": "000U Los demás 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3103.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3103.90.90",
+          "description": "000D Los demás 0.00 0.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3104",
+      "description": "ABONOS MINERALES O QUÍMICOS POTÁSICOS",
+      "subheadings": [
+        {
+          "code": "3104.20",
+          "description": "Cloruro de potasio"
+        },
+        {
+          "code": "3104.20.10",
+          "description": "Con un contenido de óxido de potasio (K2O) inferior o igual al 60 % en peso"
+        },
+        {
+          "code": "3104.20.10",
+          "description": "000V Con un contenido de óxido de potasio (K20) inferior o igual al 60 % en peso 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3104.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3104.20.90",
+          "description": "000Y Los demás 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3104.30",
+          "description": "Sulfato de potasio"
+        },
+        {
+          "code": "3104.30.10",
+          "description": "Con un contenido de óxido de potasio (K2O) inferior o igual al 52 % en peso"
+        },
+        {
+          "code": "3104.30.10",
+          "description": "000J Con un contenido de óxido de potasio (K20) inferior o igual al 52 % en peso 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3104.30.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3104.30.90",
+          "description": "000M Los demás 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3104.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3104.90.10",
+          "description": "Sulfato doble de potasio y magnesio, con un contenido de óxido de potasio (K2O) superior al 30 % en peso"
+        },
+        {
+          "code": "3104.90.10",
+          "description": "000U Sulfato doble de potasio y magnesio, con un contenido de óxido de potasio (K20) superior al 30 % en peso 6.00 6.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "3104.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3104.90.90",
+          "description": "100C Sulfato doble de potasio y magnesio 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3104.90.90",
+          "description": "900W Los demás 0.00 0.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3105",
+      "description": "ABONOS MINERALES O QUÍMICOS, CON DOS O TRES DE LOS ELEMENTOS FERTILIZANTES: NITRÓGENO,",
+      "subheadings": [
+        {
+          "code": "3105.10.00",
+          "description": "Productos de este Capítulo en tabletas o formas similares o en envases de un peso bruto inferior o igual a 10 kg"
+        },
+        {
+          "code": "3105.10.00",
+          "description": "De abonos nitrogenados"
+        },
+        {
+          "code": "3105.10.00",
+          "description": "110Y Que contengan nitrato de amonio 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3105.10.00",
+          "description": "190Z Los demás 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3105.10.00",
+          "description": "200A De abonos fosfatados 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3105.10.00",
+          "description": "300F De abonos potásicos 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3105.10.00",
+          "description": "De abonos que contengan dos elementos fertilizantes"
+        },
+        {
+          "code": "3105.10.00",
+          "description": "410P Mezclas fertilizantes que contengan nitrato de amonio 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3105.10.00",
+          "description": "490Q Los demás 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3105.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3105.10.00",
+          "description": "910R Mezclas fertilizantes que contengan nitrato de amonio 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3105.10.00",
+          "description": "990T Los demás 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3105.20.00",
+          "description": "Abonos minerales o químicos con los tres elementos fertilizantes: nitrógeno, fósforo y potasio"
+        },
+        {
+          "code": "3105.20.00",
+          "description": "100J Mezclas fertilizantes que contengan nitrato de amonio 6.00 6.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "3105.20.00",
+          "description": "900C Los demás 6.00 6.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "3105.30.00",
+          "description": "Hidrogenoortofosfato de diamonio (fosfato diamónico)"
+        },
+        {
+          "code": "3105.30.00",
+          "description": "000T -Hidrogenoortofosfato de diamonio (fosfato diamónico) 6.00 0.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "3105.40.00",
+          "description": "Dihidrogenoortofosfato de amonio (fosfato monoamónico), incluso mezclado con hidrogenoortofosfato de diamonio"
+        },
+        {
+          "code": "3105.40.00",
+          "description": "Fosfato monoamónico"
+        },
+        {
+          "code": "3105.40.00",
+          "description": "110Q Puro (R.2808/80 ex-ANA) 6.00 0.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "3105.40.00",
+          "description": "190R Los demás 6.00 0.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "3105.40.00",
+          "description": "200T Fosfato monoamónico mezclado con fosfato diamónico 6.00 0.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "3105.5",
+          "description": "Los demás abonos minerales o químicos con los dos elementos fertilizantes: nitrógeno y fósforo:"
+        },
+        {
+          "code": "3105.51.00",
+          "description": "Que contengan nitratos y fosfatos"
+        },
+        {
+          "code": "3105.51.00",
+          "description": "100N Mezclas fertilizantes que contengan nitrato de amonio 4.00 4.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "3105.51.00",
+          "description": "900G Los demás 4.00 4.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "3105.59.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3105.59.00",
+          "description": "100J Mezclas fertilizantes que contengan nitrato de amonio 4.00 4.00 3.00 LNA 3.00 0.50"
+        },
+        {
+          "code": "3105.59.00",
+          "description": "900C Los demás 4.00 4.00 3.00 LNA 3.00 0.50"
+        },
+        {
+          "code": "3105.60.00",
+          "description": "Abonos minerales o químicos con los dos elementos fertilizantes: fósforo y potasio"
+        },
+        {
+          "code": "3105.60.00",
+          "description": "000K -Abonos minerales o químicos con los dos elementos fertilizantes: fósforo y potasio 4.00 4.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "3105.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3105.90.11",
+          "description": "Con un contenido de nitrógeno inferior o igual al 15 % en peso y de óxido de potasio (K2O) inferior o igual al 15 % en"
+        },
+        {
+          "code": "3105.90.11",
+          "description": "000V Con un contenido de nitrógeno inferior o igual al 15 % en peso y de óxido de potasio (K2O) inferior o igual al 15 % en"
+        },
+        {
+          "code": "3105.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3105.90.19",
+          "description": "000F Los demás 0.00 0.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3105.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3105.90.90",
+          "description": "100W Mezclas fertilizantes que contengan nitrato de amonio 4.00 4.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "3105.90.90",
+          "description": "900P Los demás 4.00 4.00 3.00 LA 3.00 0.50"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 114
+}

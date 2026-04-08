@@ -1,0 +1,3833 @@
+{
+  "chapter": "64",
+  "title": "Capítulo 64",
+  "sectionTitle": "CAP. 64 SECCION XII CALZADO, SOMBREROS Y DEMAS TOCADOS, PARAGUAS, QUITASOLES, BASTONES, LATIGOS, FUSTAS, Y SUS PARTES; P",
+  "headings": [
+    {
+      "code": "6401",
+      "description": "CALZADO IMPERMEABLE CON SUELA Y PARTE SUPERIOR DE CAUCHO O PLÁSTICO, CUYA PARTE",
+      "subheadings": [
+        {
+          "code": "6401.10.00",
+          "description": "Calzado con puntera metálica de protección"
+        },
+        {
+          "code": "6401.10.00",
+          "description": "100R De caucho 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.10.00",
+          "description": "200X De plàstico 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.9",
+          "description": "Los demás calzados:"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "Que cubran el tobillo sin cubrir la rodilla"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "De caucho"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "110G Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "120K Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "130N Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "140R Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "190H Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "De plástico"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "210M Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "220Q Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "230U Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "240X Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.92.00",
+          "description": "290N Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "6401.99.10",
+          "description": "Que cubran la rodilla"
+        },
+        {
+          "code": "6401.99.10",
+          "description": "De caucho"
+        },
+        {
+          "code": "6401.99.10",
+          "description": "110A Que cubran los muslos 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.10",
+          "description": "190B Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.10",
+          "description": "De plástico"
+        },
+        {
+          "code": "6401.99.10",
+          "description": "210F Que cubran los muslos 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.10",
+          "description": "290G Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "De caucho"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "110D Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "120G Superior al número 24 e inferior o igual al nùmero 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "130K Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "140N Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "190E Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "De plástico"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "210J Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "220M Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "230Q Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "240U Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6401.99.90",
+          "description": "290K Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        }
+      ]
+    },
+    {
+      "code": "6402",
+      "description": "LOS DEMÁS CALZADOS CON SUELA Y PARTE SUPERIOR DE CAUCHO O PLÁSTICO",
+      "subheadings": [
+        {
+          "code": "6402.1",
+          "description": "Calzado de deporte:"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "Calzado de esquí y calzado para la práctica de «snowboard» (tabla para nieve)"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "De esquí"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "Con parte superior de poliuretano"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "111P Inferior o igual al número 34, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "112R Superior al número 34 e inferior o igual al nùmero 40, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "113U Superior al número 40 e inferior o igual al número 45, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "119G Los demás 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "Con parte superior de PVC"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "121T Inferior o igual al número 34, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "122V Superior al número 34 e inferior o igual al nùmero 40, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "123X Superior al número 40 e inferior o igual al número 45, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "129K Los demás 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "191Q Inferior o igual al número 34, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "192T Superior al número 34 e inferior o igual al nùmero 40, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "193V Superior al número 40 e inferior o igual al número 45, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "199H Los demás 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "Para la práctica de <<snowboard>> (tabla para nieve)"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "211V Inferior o igual al número 34, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "212X Superior al número 34 e inferior o igual al nùmero 40, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "213Z Superior al número 40 e inferior o igual al número 45, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "219M Los demás 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "221Y Inferior o igual al número 34, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "222A Superior al número 34 e inferior o igual al nùmero 40, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "223C Superior al número 40 e inferior o igual al número 45, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "229Q Los demás 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "291W Inferior o igual al número 34, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "292Y Superior al número 34 e inferior o igual al nùmero 40, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "293A Superior al número 40 e inferior o igual al número 45, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.12.00",
+          "description": "299N Los demás 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "Para lucha o boxeo"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "110W Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "190X Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "Para ciclismo"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "210B Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "280Z Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "290C Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "Para golf"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "Con clavos"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "311J Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "318Z Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "319B Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "Con tapones"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "321M Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "328C Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "329E Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "Para atletismo"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "411P Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "418E Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "419G Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "421T Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "428H Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "429K Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "Para fùtbol"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "Con tapones intercambiables"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "511V Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "518K Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "519M Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "591W Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "598L Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "599N Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "Con clavos o tapones"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "911R Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "918G Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "919J Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "991T Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "998H Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.19.00",
+          "description": "999K Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "Calzado con la parte superior de tiras o bridas fijas a la suela por tetones (espigas)"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "Inferior o igual al número 24, o sus equivalentes"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "110C Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "120F Los demàs 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "Superior al número 24 e inferior o igual al número 34, o sus equivalentes"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "210H Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "220L Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "Superior al número 34 e inferior o igual al número 40, o sus equivalentes"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "310N Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "320R Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "Superior al número 40 e inferior o igual al número 45, o sus equivalentes"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "410U Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "420X Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "910W Presentados desmontados o sin montar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.20.00",
+          "description": "920Z Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.9",
+          "description": "Los demás calzados:"
+        },
+        {
+          "code": "6402.91",
+          "description": "Que cubran el tobillo"
+        },
+        {
+          "code": "6402.91.10",
+          "description": "Con puntera metálica para protección"
+        },
+        {
+          "code": "6402.91.10",
+          "description": "100V Inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.10",
+          "description": "200A Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.10",
+          "description": "300F Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.10",
+          "description": "900N Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "Caña corta"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "Calzado para tenis, baloncesto, gimnasia, entrenamiento y calzados similares"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "111D Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "118U Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "119W Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "Los demás, presentados desmontados o sin montar todavía"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "181B Inferior o igual al número 24, o sus equivalencias 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "182D Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "183F Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "184H Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "189U Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "191E Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "192G Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "193J Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "194L Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "199X Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "Media caña"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "Inferior o igual al número 24, o sus equivalentes"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "211J Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "212L Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "Superior al número 24 e inferior o igual al número 34, o sus equivalentes"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "221M Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "222P Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "Superior al número 34 e inferior o igual al número 40, o sus equivalentes"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "231Q Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "232T Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "Superior al número 40 e inferior o igual al número 45, o sus equivalentes"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "241U Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "242W Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "291K Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "292M Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "Que cubran hasta la rodilla solamente"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "310M Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "320Q Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "330U Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "340X Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "390N Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "910V Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "920Y Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "930B Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "940E Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.91.90",
+          "description": "990W Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "6402.99.10",
+          "description": "Con puntera metálica para protección"
+        },
+        {
+          "code": "6402.99.10",
+          "description": "100Q Inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.10",
+          "description": "200W Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.10",
+          "description": "300B Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.10",
+          "description": "900J Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "Pantuflas, chinelas y sandalias tipo ojotas"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "Inferior o igual al número 24, o sus equivalentes"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "111Z Presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "112B Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "Superior al número 24 e inferior o igual al número 34, o sus equivalentes"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "121C Presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "122E Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "Superior al número 34 e inferior o igual al número 40, o sus equivalentes"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "131F Presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "132H Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "Superior al número 40 e inferior o igual al número 45, o sus equivalentes"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "141J Presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "142L Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "191A Presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "192C Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "Calzado para tenis, baloncesto, gimnasia, entrenamiento y calzados similares"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "210C Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "280A Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "290D Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "Los demás, con taco (tacón) incluso moldeado formando una sola pieza con la suela"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "Con taco (tacón) cosido, pegado o clavado"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "311K Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "312M Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "313P Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "314R Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6402.99.90",
+          "description": "318A Superior al número 34 e inferior o igual al número 40, o sus equivalentes, presentados desmontados o sin montar"
+        }
+      ]
+    },
+    {
+      "code": "3500",
+      "description": "35.00 3.00 LNA 0.00 7.50",
+      "subheadings": []
+    },
+    {
+      "code": "6403",
+      "description": "CALZADO CON SUELA DE CAUCHO, PLÁSTICO, CUERO NATURAL O REGENERADO Y PARTE SUPERIOR DE",
+      "subheadings": [
+        {
+          "code": "6403.1",
+          "description": "Calzado de deporte:"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "Calzado de esquí y calzado para la práctica de «snowboard» (tabla para nieve)"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "De esquí"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "Con parte superior de cuero vacuno"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "111H Inferior o igual al número 34, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "112K Superior al número 34 e inferior o igual al número 40, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "113M Superior al número 40 e inferior o igual al número 45, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "119A Los demás 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "Con parte superior de cuero porcino"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "121L Inferior o igual al número 34, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "122N Superior al número 34 e inferior o igual al número 40, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "123Q Superior al número 40 e inferior o igual al número 45, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "129D Los demás 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "191J Inferior o igual al número 34, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "192L Superior al número 34 e inferior o igual al número 40, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "193N Superior al número 40 e inferior o igual al número 45, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "199B Los demás 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "Para la práctica de <<snowboard>> (tabla para nieve)"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "211N Inferior o igual al número 34, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "212Q Superior al número 34 e inferior o igual al número 40, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "213T Superior al número 40 e inferior o igual al número 45, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "219F Los demás 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "221R Inferior o igual al número 34, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "222U Superior al número 34 e inferior o igual al número 40, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "223W Superior al número 40 e inferior o igual al número 45, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "229J Los demás 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "291P Inferior o igual al número 34, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "292R Superior al número 34 e inferior o igual al número 40, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "293U Superior al número 40 e inferior o igual al número 45, o sus equivalentes 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.12.00",
+          "description": "299G Los demás 20.00 20.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "Para lucha o boxeo"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "110P Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "190Q Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "Para ciclismo"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "210V Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "280T Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "290W Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "Para golf"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "Con clavos"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "311C Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "318T Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "319V Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "Con tapones"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "321F Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "328W Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "329Y Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "Para atletismo"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "411H Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "418Y Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "419A Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "421L Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "428B Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "429D Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "Para futbol"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "Con tapones intercambiables"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "511N Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "518D Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "519F Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "591P Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "598E Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "599G Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "Con clavos o tapones"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "911K Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "919C Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "991L Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.19.00",
+          "description": "999D Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.20.00",
+          "description": "Calzado con suela de cuero natural y parte superior de tiras de cuero natural que pasan por el empeine y rodean el"
+        },
+        {
+          "code": "6403.20.00",
+          "description": "100T Con parte superior de cuero vacuno 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.20.00",
+          "description": "200Y Con parte superior de cuero de reptil 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.20.00",
+          "description": "300D Con parte superior de cuero caprino 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.20.00",
+          "description": "900L Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "Los demás calzados, con puntera metálica de protección"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "De seguridad"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "Con parte superior de cuero vacuno"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "111B Inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "112D Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "113F Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "119U Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "Con parte superior de cuero porcino"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "121E Inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "122G Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "123J Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "129X Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "191C Inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "192E Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "193G Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "199V Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "911V Inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "912X Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "913Z Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "919M Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "921Y Inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "922A Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "923C Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "929Q Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "Con parte superior de cuero de reptil"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "931B Inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "932D Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "933F Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "939U Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "991W Inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "992Y Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "993A Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.40.00",
+          "description": "999N Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.5",
+          "description": "Los demás calzados, con suela de cuero natural:"
+        },
+        {
+          "code": "6403.51",
+          "description": "Que cubran el tobillo"
+        },
+        {
+          "code": "6403.51.10",
+          "description": "Calzado con palmilla o plataforma de madera, sin plantillas"
+        },
+        {
+          "code": "6403.51.10",
+          "description": "100G Con parte superior de cuero vacuno 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.10",
+          "description": "200M Con parte superior de cuero de reptil 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.10",
+          "description": "300T Con parte superior de cuero caprino 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.10",
+          "description": "900A Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "Con parte superior de cuero vacuno"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "110N Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "120R Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "130V Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "140Y Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "190P Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "Con parte superior de cuero de reptil"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "210U Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "220X Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "230A Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "240D Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "290V Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "Con parte superior de cuero caprino"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "310Z Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "320C Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "330F Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "340J Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "390A Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "910G Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "920K Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "930N Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "940R Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.51.90",
+          "description": "990H Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59",
+          "description": "Los demás"
+        },
+        {
+          "code": "6403.59.10",
+          "description": "Calzado con palmilla o plataforma de madera, sin plantillas"
+        },
+        {
+          "code": "6403.59.10",
+          "description": "100C Con parte superior de cuero vacuno 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.10",
+          "description": "200H Con parte superior de cuero de reptil 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.10",
+          "description": "300N Con parte superior de cuero caprino 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.10",
+          "description": "900W Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "Pantuflas, chinelas y sandalias tipo ojotas"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "Con parte superior de cuero vacuno"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "111L Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "112N Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "113Q Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "114T Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "119D Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "Con parte superior de cuero de reptil"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "121P Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "122R Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "123U Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "124W Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "129G Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "Con parte superior de cuero caprino"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "131T Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "132V Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "133X Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "134Z Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "139K Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "191M Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "192P Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "193R Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "194U Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "199E Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "911E Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "912G Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "913J Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "914L Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "919X Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "921H Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "922K Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "923M Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "924P Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "929A Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "931L Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "932N Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "933Q Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "934T Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "939D Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "991F Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "992H Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "993K Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "994M Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.59.90",
+          "description": "999Y Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.9",
+          "description": "Los demás calzados:"
+        },
+        {
+          "code": "6403.91",
+          "description": "Que cubran el tobillo"
+        },
+        {
+          "code": "6403.91.10",
+          "description": "Calzado con palmilla o plataforma de madera, sin plantillas"
+        },
+        {
+          "code": "6403.91.10",
+          "description": "100N Con parte superior de cuero vacuno 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.10",
+          "description": "200U Con parte superior de cuero de reptil 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.10",
+          "description": "300Z Con parte superior de cuero caprino 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.10",
+          "description": "900G Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "Calzado para tenis, baloncesto, gimnasia, entrenamiento y calzados similares"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "Con parte superior de cuero vacuno"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "111X Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "118M Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "119P Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "Con parte superior de cuero porcino"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "121A Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "128Q Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "129T Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "191Y Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "198N Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "199Q Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "Los demás, con taco (tacón) incluso moldeado formando una sola pieza con la suela."
+        },
+        {
+          "code": "6403.91.90",
+          "description": "211C Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "212E Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "213G Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "214J Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "219V Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "Con parte superior de cuero de reptil"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "221F Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "222H Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "223K Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "224M Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "229Y Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "Con parte superior de cuero caprino"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "231J Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "232L Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "233N Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "234Q Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "239B Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "291D Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "292F Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "293H Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "294K Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "299W Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "Los demás, presentados desmontados o sin montar todavía"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "811K Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "812M Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "813P Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "814R Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "819C Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "831R Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "832U Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "833W Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "834Y Superior al número 40 inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "839J Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "890J Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "911Q Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "912T Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "913V Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "914X Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "919H Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "921U Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "922W Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "923Y Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "924A Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "929L Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "931X Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "932Z Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "933B Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "934D Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "939P Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "991R Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "992U Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "993W Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "994Y Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.91.90",
+          "description": "999J Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "6403.99.10",
+          "description": "Calzado con palmilla o plataforma de madera, sin plantillas"
+        },
+        {
+          "code": "6403.99.10",
+          "description": "100J Con parte superior de cuero vacuno 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.10",
+          "description": "200P Con parte superior de cuero de reptil 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.10",
+          "description": "300V Con parte superior de cuero caprino 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.10",
+          "description": "900C Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Pantuflas, chinelas y sandalias tipo ojotas"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Con parte superior de cuero vacuno, excepto presentadas desmontadas o sin montar todavía"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "111T Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "112V Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "113X Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "114Z Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "119K Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Con parte superior de cuero de reptil"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "121W Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "122Y Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "123A Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "124C Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "129N Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Con parte superior de cuero caprino, excepto presentadas desmontadas o sin montar todavía"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "131Z Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "132B Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "133D Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "134F Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "139R Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Con parte superior de cuero vacuno, presentados desmontados o sin montar todavía"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "141C Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "142E Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "143G Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "144J Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "149V Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Con parte superior de cuero caprino, presentados desmontados o sin montar todavía"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "161J Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "162L Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "163N Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "164Q Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "169B Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "191U Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "192W Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "193Y Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "194A Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "199L Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Calzado para tenis, baloncesto, gimnasia, entrenamiento y calzados similares"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Con parte superior de cuero vacuno"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "211Y Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "218N Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "219Q Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Con parte superior de cuero porcino"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "221B Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "228R Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "229U Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "291Z Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "298P Los demás, presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "299R Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Los demás, con taco (tacón) incluso moldeado formando una sola pieza con la suela"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "311D Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "312F Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "313H Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "314K Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "319W Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "321G Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "322J Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "323L Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "324N Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "329Z Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Con parte superior de cuero caprino"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "331K Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "332M Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "333P Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "334R Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "339C Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "391E Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "392G Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "393J Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "394L Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "399X Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "Los demás, presentados desmontados o sin montar todavía"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "811F Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "812H Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "813K Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "814M Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "819Y Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "831M Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "832P Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "833R Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "834U Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "839E Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "891G Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "892J Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "893L Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "894N Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "899Z Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "911L Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "912N Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "913Q Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "914T Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "919D Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "921P Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "922R Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "923U Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "924W Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "929G Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "931T Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "932V Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "933X Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "934Z Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "939K Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "991M Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "992P Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "993R Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "994U Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6403.99.90",
+          "description": "999E Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        }
+      ]
+    },
+    {
+      "code": "6404",
+      "description": "CALZADO CON SUELA DE CAUCHO, PLÁSTICO, CUERO NATURAL O REGENERADO Y PARTE SUPERIOR DE",
+      "subheadings": [
+        {
+          "code": "6404.1",
+          "description": "Calzado con suela de caucho o plástico:"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "Calzado de deporte; calzado de tenis, baloncesto, gimnasia, entrenamiento y calzados similares"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "Calzado de deporte"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "Para lucha o boxeo"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "111P Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "119G Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "Para ciclismo"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "121T Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "128H Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "129K Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "Para atletismo"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "131W Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "138L Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "139N Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "191Q Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "198F Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "199H Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "Calzado para tenis, baloncesto, gimnasia, entrenamiento y calzados similares"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "210T Con suela de PVC o caucho mezclado sin vulcanizar 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "280Q Los demás, presentados desmontados o sin montar todavía 35.00 15.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.11.00",
+          "description": "290U Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "Pantuflas, chinelas y sandalias tipo ojotas"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "Sandalias tipo ojotas, excepto presentadas desmontadas o sin montar todavía"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "111K Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "112M Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "113P Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "114R Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "119C Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "Pantuflas y chinelas, excepto presentadas desmontadas o sin montar todavía"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "121N Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "122Q Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "123T Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "124V Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "129F Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "Sandalias tipo ojotas, presentadas desmontadas o sin montar todavía"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "131R Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "132U Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "133W Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "134Y Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "139J Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "Pantuflas y chinelas, presentadas desmontadas o sin montar todavía"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "141V Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "142X Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "143Z Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "144B Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "149M Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "Los demás, con taco (tacón) incluso moldeado formando una sola pieza con la suela"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "Con taco (tacón) cosido, clavado o pegado"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "211Q Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "212T Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "213V Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "214X Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "219H Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "291R Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "292U Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "293W Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "294Y Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "299J Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "Inferior o igual al número 24, o sus equivalentes"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "911D Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "912F Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "Superior al número 24 e inferior o igual al número 34, o sus equivalentes"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "921G Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "922J Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "Superior al número 34 e inferior o igual al número 40, o sus equivalentes"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "931K Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "932M Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "Superior al número 40 e inferior o igual al número 45, o sus equivalentes"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "941N Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "942Q Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "991E Presentados desmontados o sin montar todavía 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.19.00",
+          "description": "992G Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "Calzado con suela de cuero natural o regenerado"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "Pantuflas, chinelas y sandalias tipo ojotas."
+        },
+        {
+          "code": "6404.20.00",
+          "description": "Sandalias tipo ojotas"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "111R Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "112U Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "113W Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "114Y Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "119J Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "Pantuflas y chinelas"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "121V Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "122X Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "123Z Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "124B Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "129M Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "Los demás, con taco (tacón) incluso moldeado formando una sola pieza con la suela"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "Con taco (tacón) cosido, clavado o pegado"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "211X Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "212Z Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "213B Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "214D Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "219P Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "291Y Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "292A Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "293C Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "294E Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "299Q Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "910H Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "920L Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "930P Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "940T Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6404.20.00",
+          "description": "990J Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        }
+      ]
+    },
+    {
+      "code": "6405",
+      "description": "LOS DEMÁS CALZADOS",
+      "subheadings": [
+        {
+          "code": "6405.10",
+          "description": "Con la parte superior de cuero natural o regenerado"
+        },
+        {
+          "code": "6405.10.10",
+          "description": "Con suela de caucho o plástico y parte superior de cuero regenerado"
+        },
+        {
+          "code": "6405.10.10",
+          "description": "100A Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.10",
+          "description": "200F Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.10",
+          "description": "300L Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.10",
+          "description": "400R Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.10",
+          "description": "900U Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.20",
+          "description": "Con suela de cuero natural o regenerado y parte superior de cuero regenerado"
+        },
+        {
+          "code": "6405.10.20",
+          "description": "100K Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.20",
+          "description": "200Q Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.20",
+          "description": "300W Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.20",
+          "description": "400B Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.20",
+          "description": "900D Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "Con suela de madera"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "Con parte superior de cuero vacuno"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "111J Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "112L Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "113N Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "114Q Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "119B Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "Con parte superior de cuero de reptil"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "121M Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "122P Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "123R Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "124U Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "129E Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "Con parte superior de cuero caprino"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "131Q Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "132T Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "133V Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "134X Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "139H Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "191K Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "192M Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "193P Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "194R Superior al nùmero 40 e inferior o igual al nùmero 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "199C Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "Con suela de fibras textiles vegetales del Capítulo 53"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "211P Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "212R Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "213U Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "214W Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "219G Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "221T Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "222V Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "223X Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "224Z Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "229K Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "231W Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "232Y Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "233A Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "234C Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "239N Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "291Q Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "292T Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "293V Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "294X Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "299H Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "Con suela de fibra de vidrio"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "Para ciclismo"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "311V Inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "312X Superior al número 34 e inferior o igual al 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "313Z Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "319M Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "391W Inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "392Y Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "393A Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "399N Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "911C Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "912E Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "913G Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "914J Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "919V Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "921F Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "922H Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "923K Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "924M Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "929Y Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "Con parte superior de cuero de caprino"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "931J Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "932L Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "933N Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "934Q Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "939B Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "991D Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "992F Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "993H Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "994K Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.10.90",
+          "description": "999W Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "Con la parte superior de materia textil"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "Con suela y parte superior de fieltro de lana (R. 226/97 MEyOSP)"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "110H Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "120L Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "130P Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "140T Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "190J Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "Con suela de madera"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "210N Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "220R Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "230V Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "240Y Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "290P Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "Con suela de materias textiles del capítulo 53"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "310U Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "320X Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "330A Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "340D Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "390V Los demàs 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "Con suela de las demás materias textiles"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "Pantuflas y chinelas"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "411B Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "412D Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "413F Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "414H Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "419U Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "491C Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "492E Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "493G Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "494J Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "499V Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "910B Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "920E Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "930H Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "940L Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.20.00",
+          "description": "990C Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "Con suela de fieltro y parte superior de caucho o plástico"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "Para pesca"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "111J Inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "112L Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "113N Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "119B Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "191K Inferior o igual al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "192M Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "193P Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "194R Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "199C Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "Con parte superior de peletería"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "911C Inferior al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "912E Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "913G Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "914J Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "919V Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "991D Inferior al número 24, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "992F Superior al número 24 e inferior o igual al número 34, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "993H Superior al número 34 e inferior o igual al número 40, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "994K Superior al número 40 e inferior o igual al número 45, o sus equivalentes 35.00 35.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "6405.90.00",
+          "description": "999W Los demás 35.00 35.00 3.00 LNA 0.00 7.50"
+        }
+      ]
+    },
+    {
+      "code": "6406",
+      "description": "PARTES DE CALZADO (INCLUIDAS LAS PARTES SUPERIORES FIJADAS A LAS PALMILLAS DISTINTAS DE LA",
+      "subheadings": [
+        {
+          "code": "6406.10.00",
+          "description": "Partes superiores de calzado y sus partes, excepto los contrafuertes y punteras duras"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "Partes superiores"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "De cuero vacuno"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "111P Inferior o igual al número 24, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "112R Superior al número 24 e inferior o igual al número 34, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "113U Superior al número 34 e inferior o igual al número 40, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "114W Superior al número 40 e inferior o igual al número 45, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "119G Los demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "De cuero de reptil"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "121T Inferior o igual al número 24, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "122V Superior al número 24 e inferior o igual al número 34, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "123X Superior al número 34 e inferior o igual al número 40, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "124Z Superior al número 40 e inferior o igual al número 45, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "129K Los demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "De cuero caprino"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "131W Inferior o igual al número 24, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "132Y Superior al número 24 e inferior o igual al número 34, o sus equivalenes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "133A Superior al número 34 e inferior o igual al número 40, o sus equivalenes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "134C Superior al número 40 e inferior o igual al número 45, o sus equivalenes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "139N Los demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "De cuero de las demás especies"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "141Z Inferior o igual al número 24, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "142B Superior al número 24 e inferior o igual al número 34, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "143D Superior al número 34 e inferior o igual al número 40, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "144F Superior al número 40 e inferior o igual al número 45, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "149R Los demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "De caucho o plástico"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "151C Inferior o igual al número 24, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "152E Superior al número 24 e inferior o igual al número 34, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "153G Superior al número 34 e inferior o igual al número 40, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "154J Superior al número 40 e inferior o igual al número 45, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "159V Los demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "De materias textiles"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "161F Inferior o igual al número 24, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "162H Superior al número 24 e inferior o igual al número 34, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "163K Superior al número 34 e inferior o igual al número 40, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "164M Superior al número 40 e inferior o igual al número 45, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "169Y Los demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "De las demás materias"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "191Q Inferior o igual al número 24, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "192T Superior al número 24 e inferior o igual al número 34, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "193V Superior al número 34 e inferior o igual al número 40, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "194X Superior al número 40 e inferior o igual al número 45, o sus equivalentes 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "199H Los demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "Partes de partes superiores"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "211V Cañas 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "212X Palas o empeines 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "213Z Punteras 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "219M Las demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "221Y Cañas 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "222A Palas o empeines 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "223C Punteras 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "229Q Las demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "231B Cañas 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "232D Palas o empeines 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "233F Punteras 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "239U Las demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "241E Cañas 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "242G Palas o empeines 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "243J Punteras 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "249X Las demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "De caucho o de plàstico"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "251H Cañas 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "252K Palas o empeines 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "253M Punteras 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "259A Las demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "261L Cañas 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "262N Palas o empeines 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "263Q Punteras 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "269D Las demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "291W Cañas 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "292Y Palas o empeines 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "293A Punteras 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.10.00",
+          "description": "299N Las demás 18.00 28.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.20.00",
+          "description": "Suelas y tacos (tacones)*, de caucho o plástico"
+        },
+        {
+          "code": "6406.20.00",
+          "description": "Suelas"
+        },
+        {
+          "code": "6406.20.00",
+          "description": "110B Enteras 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.20.00",
+          "description": "190C Las demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.20.00",
+          "description": "200D Tacos (tacones) 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.20.00",
+          "description": "900R Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6406.90.10",
+          "description": "Suelas y tacos (tacones)*, de cuero natural o regenerado"
+        },
+        {
+          "code": "6406.90.10",
+          "description": "Suelas"
+        },
+        {
+          "code": "6406.90.10",
+          "description": "110K Enteras 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6406.90.10",
+          "description": "190L Las demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6406.90.10",
+          "description": "200M Tacos (tacones) 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6406.90.10",
+          "description": "900A Los demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6406.90.20",
+          "description": "Plantillas"
+        },
+        {
+          "code": "6406.90.20",
+          "description": "100R De cuero natural o regenerado (R.134/96 ex-ANA) 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90.20",
+          "description": "900K Las demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "De cuero natural o regenerado (R.134/96 ex-ANA)"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "De cuero natural"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "111Q Polainas 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "112T Palmillas 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "113V Acoplamientos de partes que incluyan la suela 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "119H Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "De cuero regenerado"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "121U Acoplamientos de partes que incluyan la suela 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "129L Los demás 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "200Q De madera 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "910G Contrafuertes 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "920K Punteras duras 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "930N Polainas 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "940R Acoplamientos de partes que incluyan la suela 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6406.90.90",
+          "description": "990H Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 1056
+}

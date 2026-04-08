@@ -1,0 +1,235 @@
+{
+  "chapter": "89",
+  "title": "Capítulo 39",
+  "sectionTitle": "CAP. 89 SECCION XVII MATERIAL DE TRANSPORTE Notas. 1. Esta Sección no comprende los artículos de las partidas 95.03 ó 95",
+  "headings": [
+    {
+      "code": "8901",
+      "description": "TRANSATLÁNTICOS, BARCOS PARA EXCURSIONES (DE CRUCEROS), TRANSBORDADORES, CARGUEROS,",
+      "subheadings": [
+        {
+          "code": "8901.10.00",
+          "description": "Transatlánticos, barcos para excursiones (de cruceros) y barcos similares concebidos principalmente para el"
+        },
+        {
+          "code": "8901.10.00",
+          "description": "000L -Transatlánticos, barcos para excursiones (de cruceros) y barcos similares concebidos principalmente para el"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 0.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "8902",
+      "description": "BARCOS DE PESCA; BARCOS FACTORÍA Y DEMÁS BARCOS PARA LA PREPARACIÓN O LA CONSERVACIÓN",
+      "subheadings": [
+        {
+          "code": "8902.00.10",
+          "description": "Con eslora superior o igual a 35 m"
+        },
+        {
+          "code": "8902.00.10",
+          "description": "100F De eslora inferior o igual a 48 m 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8902.00.10",
+          "description": "900Z Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8902.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8902.00.90",
+          "description": "000D Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8903",
+      "description": "YATES Y DEMÁS BARCOS Y EMBARCACIONES DE RECREO O DEPORTE; BARCAS (BOTES) DE REMO Y",
+      "subheadings": [
+        {
+          "code": "8903.10.00",
+          "description": "Embarcaciones inflables"
+        },
+        {
+          "code": "8903.10.00",
+          "description": "Semirígidas, incluso con motor interno"
+        },
+        {
+          "code": "8903.10.00",
+          "description": "110G De plástico reforzado con material textil 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8903.10.00",
+          "description": "120K De caucho reforzado con materria textil 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8903.10.00",
+          "description": "190H Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8903.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8903.10.00",
+          "description": "910A De plástico reforzado con materia textil 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8903.10.00",
+          "description": "920D De caucho reforzado con materia textil 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8903.10.00",
+          "description": "990B Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8903.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "8903.91.00",
+          "description": "Barcos de vela, incluso con motor auxiliar"
+        },
+        {
+          "code": "8903.91.00",
+          "description": "100D Con motor auxiliar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8903.91.00",
+          "description": "300P Embarcaciones destinadas a la practica deportiva olimpica, paraolimpica, panamericana y parapanamericana, con"
+        }
+      ]
+    },
+    {
+      "code": "2000",
+      "description": "20.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "2000",
+      "description": "35.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "8904",
+      "description": "REMOLCADORES Y BARCOS EMPUJADORES",
+      "subheadings": [
+        {
+          "code": "8904.00.00",
+          "description": "Remolcadores y barcos empujadores"
+        },
+        {
+          "code": "8904.00.00",
+          "description": "000C REMOLCADORES Y BARCOS EMPUJADORES. 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8905",
+      "description": "BARCOS FARO, BARCOS BOMBA, DRAGAS, PONTONES GRÚA Y DEMÁS BARCOS EN LOS QUE LA",
+      "subheadings": [
+        {
+          "code": "8905.10.00",
+          "description": "Dragas"
+        },
+        {
+          "code": "8905.10.00",
+          "description": "000K -Dragas 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8905.20.00",
+          "description": "Plataformas de perforación o explotación, flotantes o sumergibles"
+        },
+        {
+          "code": "8905.20.00",
+          "description": "000Z -Plataformas para perforación o explotación, flotantes o sumergibles 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8905.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8905.90.00",
+          "description": "000Y -Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8906",
+      "description": "LOS DEMÁS BARCOS, INCLUIDOS LOS NAVÍOS DE GUERRA Y BARCOS DE SALVAMENTO EXCEPTO LOS DE",
+      "subheadings": [
+        {
+          "code": "8906.10.00",
+          "description": "Navíos de guerra"
+        },
+        {
+          "code": "8906.10.00",
+          "description": "000D -Navios de guerra 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8906.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8906.90.00",
+          "description": "100X Botes de salvamento 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8906.90.00",
+          "description": "900Q Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8907",
+      "description": "LOS DEMÁS ARTEFACTOS FLOTANTES (POR EJEMPLO: BALSAS, DEPÓSITOS, CAJONES, INCLUSO DE",
+      "subheadings": [
+        {
+          "code": "8907.10.00",
+          "description": "Balsas inflables"
+        },
+        {
+          "code": "8907.10.00",
+          "description": "100C Salvavidas (R.G. 1748/04 AFIP) 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8907.10.00",
+          "description": "900W Las demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8907.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8907.90.00",
+          "description": "000K -Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8908",
+      "description": "BARCOS Y DEMÁS ARTEFACTOS FLOTANTES PARA DESGUACE",
+      "subheadings": [
+        {
+          "code": "8908.00.00",
+          "description": "Barcos y demás artefactos flotantes para desguace"
+        },
+        {
+          "code": "8908.00.00",
+          "description": "100G Barcos 2.00 2.00 3.00 LNA 4.50 0.00"
+        },
+        {
+          "code": "8908.00.00",
+          "description": "900A Las demás 2.00 2.00 3.00 LNA 4.50 0.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 80
+}

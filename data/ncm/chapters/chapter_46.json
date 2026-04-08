@@ -1,0 +1,120 @@
+{
+  "chapter": "46",
+  "title": "Capítulo 46",
+  "sectionTitle": "CAP. 46 SECCION IX MADERA, CARBON VEGETAL Y MANUFACTURAS DE MADERA; CORCHO Y SUS MANUFACTURAS; MANUFACTURAS DE ESPARTERI",
+  "headings": [
+    {
+      "code": "4601",
+      "description": "TRENZAS Y ARTÍCULOS SIMILARES, DE MATERIA TRENZABLE, INCLUSO ENSAMBLADOS EN TIRAS; MATERIA",
+      "subheadings": [
+        {
+          "code": "4601.2",
+          "description": "Esterillas, esteras y cañizos, de materia vegetal:"
+        },
+        {
+          "code": "4601.21.00",
+          "description": "De bambú"
+        },
+        {
+          "code": "4601.21.00",
+          "description": "000H --De bambú 12.00 12.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "4601.22.00",
+          "description": "De roten (ratán)*"
+        },
+        {
+          "code": "4601.22.00",
+          "description": "000V --De roten (ratán)* 12.00 12.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "4601.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4601.29.00",
+          "description": "000D --Los demás 12.00 12.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "4601.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "4601.92.00",
+          "description": "De bambú"
+        },
+        {
+          "code": "4601.92.00",
+          "description": "000U --De bambú 12.00 12.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "4601.93.00",
+          "description": "De roten (ratán)*"
+        },
+        {
+          "code": "4601.93.00",
+          "description": "000F --De roten (ratán)* 12.00 12.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "4601.94.00",
+          "description": "De las demás materias vegetales"
+        },
+        {
+          "code": "4601.94.00",
+          "description": "000T --De las demás materias vegetales 12.00 12.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "4601.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4601.99.00",
+          "description": "000C --Los demás 12.00 12.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4602",
+      "description": "ARTÍCULOS DE CESTERÍA OBTENIDOS DIRECTAMENTE EN SU FORMA CON MATERIA TRENZABLE O",
+      "subheadings": [
+        {
+          "code": "4602.1",
+          "description": "De materia vegetal:"
+        },
+        {
+          "code": "4602.11.00",
+          "description": "De bambú"
+        },
+        {
+          "code": "4602.11.00",
+          "description": "000M --De bambú 12.00 12.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "4602.12.00",
+          "description": "De roten (ratán)*"
+        },
+        {
+          "code": "4602.12.00",
+          "description": "000Z --De roten (ratán) 12.00 12.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "4602.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4602.19.00",
+          "description": "000H --Los demás 12.00 12.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "4602.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4602.90.00",
+          "description": "000N -Los demás 12.00 12.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 27
+}

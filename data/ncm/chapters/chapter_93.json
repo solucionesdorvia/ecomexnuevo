@@ -1,0 +1,335 @@
+{
+  "chapter": "93",
+  "title": "Capítulo 93",
+  "sectionTitle": "CAP. 93 SECCION XIX ARMAS, MUNICIONES, Y SUS PARTES Y ACCESORIOS 2023 | Diciembre La información contenida en esta publi",
+  "headings": [
+    {
+      "code": "9301",
+      "description": "ARMAS DE GUERRA, EXCEPTO LOS REVÓLVERES, PISTOLAS Y ARMAS BLANCAS",
+      "subheadings": [
+        {
+          "code": "9301.10.00",
+          "description": "Piezas de artillería (por ejemplo: cañones, obuses y morteros)"
+        },
+        {
+          "code": "9301.10.00",
+          "description": "100L Autopropulsadas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9301.10.00",
+          "description": "900E Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9301.20.00",
+          "description": "Lanzacohetes; lanzallamas; lanzagranadas; lanzatorpedos y lanzadores similares"
+        },
+        {
+          "code": "9301.20.00",
+          "description": "000V -Lanzacohetes; lanzallamas; lanzagranadas; lanzatorpedos y lanzadores similares 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9301.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "9301.90.00",
+          "description": "000U -Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9302",
+      "description": "REVÓLVERES Y PISTOLAS, EXCEPTO LOS DE LAS PARTIDAS 9303 Ó 9304",
+      "subheadings": [
+        {
+          "code": "9302.00.00",
+          "description": "Revólveres y pistolas, excepto los de las partidas 9303 ó 9304"
+        },
+        {
+          "code": "9302.00.00",
+          "description": "000K REVÓLVERES Y PISTOLAS, EXCEPTO LOS DE LAS PARTIDAS 93.03 Ó 93.04. 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9303",
+      "description": "LAS DEMÁS ARMAS DE FUEGO Y ARTEFACTOS SIMILARES QUE UTILICEN LA DEFLAGRACIÓN DE PÓLVORA",
+      "subheadings": [
+        {
+          "code": "9303.10.00",
+          "description": "Armas de avancarga"
+        },
+        {
+          "code": "9303.10.00",
+          "description": "000T -Armas de avancarga 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9303.20.00",
+          "description": "Las demás armas largas de caza o tiro deportivo que tengan, por lo menos, un cañón de ánima lisa"
+        },
+        {
+          "code": "9303.20.00",
+          "description": "000G -Las demás armas largas de caza o tiro deportivo que tengan, por lo menos, un cañón de ánima lisa 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9303.30.00",
+          "description": "Las demás armas largas de caza o tiro deportivo"
+        },
+        {
+          "code": "9303.30.00",
+          "description": "000W -Las demás armas largas de caza o tiro deportivo 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9303.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "9303.90.00",
+          "description": "100L Dispositivos portátiles, no portátiles y fijos destinados al lanzamiento de arpones, guías, cartuchos de iluminación o"
+        }
+      ]
+    },
+    {
+      "code": "2000",
+      "description": "20.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "9304",
+      "description": "LAS DEMÁS ARMAS (POR EJEMPLO: ARMAS LARGAS Y PISTOLAS DE MUELLE (RESORTE), AIRE",
+      "subheadings": [
+        {
+          "code": "9304.00.00",
+          "description": "Las demás armas (por ejemplo: armas largas y pistolas de muelle (resorte), aire comprimido o gas, porras), excepto las"
+        },
+        {
+          "code": "9304.00.00",
+          "description": "100C Agresivos químicos contenidos en rociadores, espolvoreadores, gasificadores o análogos, que solo producen efectos"
+        },
+        {
+          "code": "9304.00.00",
+          "description": "Revólveres o pistolas."
+        },
+        {
+          "code": "9304.00.00",
+          "description": "310R De muelle (resorte) o aire comprimido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9304.00.00",
+          "description": "390T Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9304.00.00",
+          "description": "Armas largas."
+        },
+        {
+          "code": "9304.00.00",
+          "description": "410X De muelle (resorte) o aire comprimido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9304.00.00",
+          "description": "490Y Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9304.00.00",
+          "description": "500Z Armas electrónicas, que sólo produzcan efectos pasajeros en el organismo humano y sin llegar a provocar la perdida"
+        },
+        {
+          "code": "9304.00.00",
+          "description": "900W Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9305",
+      "description": "PARTES Y ACCESORIOS DE LOS ARTÍCULOS DE LAS PARTIDAS 9301 A 9304",
+      "subheadings": [
+        {
+          "code": "9305.10.00",
+          "description": "De revólveres o pistolas"
+        },
+        {
+          "code": "9305.10.00",
+          "description": "100K Cañones, tambores, correderas, armaduras, cierres, básculas y juegos (KIT) de conversión (R.3115/94 ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9305.10.00",
+          "description": "900D Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9305.20.00",
+          "description": "De armas largas de la partida 9303"
+        },
+        {
+          "code": "9305.20.00",
+          "description": "100Z Cañones de ánima lisa 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9305.20.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9305.20.00",
+          "description": "910W Cañones, correderas, cierres, cerrojos, básculas y acciones o cajones de mecanismos (R.3115/94 ANA) 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9305.20.00",
+          "description": "990X Los demás 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9305.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "9305.91.00",
+          "description": "De armas de guerra de la partida 9301"
+        },
+        {
+          "code": "9305.91.00",
+          "description": "100K Cargadores, recuperadores, cachas y agujas percutoras (R.3115/94 ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9305.91.00",
+          "description": "900D Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9305.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9305.99.00",
+          "description": "100F Partes y accesorios de los dispositivos portátiles, no portátiles y fijos destinados al lanzamiento de arpones, guías,"
+        },
+        {
+          "code": "9305.99.00",
+          "description": "200L Partes y accesorios de armas de aire comprimido (R.3115/94 ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9305.99.00",
+          "description": "900Z Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9306",
+      "description": "BOMBAS, GRANADAS, TORPEDOS, MINAS, MISILES, CARTUCHOS Y DEMÁS MUNICIONES Y PROYECTILES, Y",
+      "subheadings": [
+        {
+          "code": "9306.2",
+          "description": "Cartuchos para armas largas con cañón de ánima lisa y sus partes; balines para armas de aire comprimido:"
+        },
+        {
+          "code": "9306.21.00",
+          "description": "Cartuchos"
+        },
+        {
+          "code": "9306.21.00",
+          "description": "100E Que contengan agresivos químicos con fines irritantes 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9306.21.00",
+          "description": "900Y Los demás 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9306.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9306.29.00",
+          "description": "100A Cartuchos vacíos con fulminante, \"primer\", pistón, iniciador o cebo (R.3115/94 ANA) 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9306.29.00",
+          "description": "200F Postas, \"brennekes\", \"slugs\" y \"sabot\" (R.3115/94 ANA) 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9306.29.00",
+          "description": "300L Perdigones 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9306.29.00",
+          "description": "400R Vainas de munición desprovistas de cápsulas fulminantes y carga propelente 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9306.29.00",
+          "description": "900U Los demás 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9306.30.00",
+          "description": "Los demás cartuchos y sus partes"
+        },
+        {
+          "code": "9306.30.00",
+          "description": "100G Cartuchos de iluminación o señalamiento (R.3115/94 ANA) 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9306.30.00",
+          "description": "200M Cartuchos para \"pistolas\" de remachar o usos similares, para pistolas de matarife, y sus partes 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9306.30.00",
+          "description": "300T Vainas de munición desprovstas de cápsulas fulminantes y carga propelente 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9306.30.00",
+          "description": "900A Los demás 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9306.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9306.90.00",
+          "description": "100R Munición no explosiva para armas de calibre mayor de 20 mm., con o sin proyectil (R.3115/94 ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9306.90.00",
+          "description": "200X Municiones explosivas, incendiarias o fumígenas para armas de fuego (R.3115/94 ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9306.90.00",
+          "description": "300C Municiones que contienen agresivos químicos con fines irritantes (R.3115/94 ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9306.90.00",
+          "description": "400H Proyectiles autopropulsados (R.3115/94 ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9306.90.00",
+          "description": "Minas, torpedos, granadas, bombas de aviación y bombas de profundidad (R.3115/94 ANA)"
+        },
+        {
+          "code": "9306.90.00",
+          "description": "510R Minas antipersonales (Dto. 435/95) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9306.90.00",
+          "description": "590T Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9306.90.00",
+          "description": "600U Arpones (R. 3115/94 ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9306.90.00",
+          "description": "900K Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9307",
+      "description": "SABLES, ESPADAS, BAYONETAS, LANZAS Y DEMÁS ARMAS BLANCAS, SUS PARTES Y FUNDAS",
+      "subheadings": [
+        {
+          "code": "9307.00.00",
+          "description": "Sables, espadas, bayonetas, lanzas y demás armas blancas, sus partes y fundas"
+        },
+        {
+          "code": "9307.00.00",
+          "description": "000C SABLES, ESPADAS, BAYONETAS, LANZAS Y DEMÁS ARMAS BLANCAS, SUS PARTES Y FUNDAS. 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 85
+}

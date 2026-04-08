@@ -1,0 +1,2510 @@
+{
+  "chapter": "82",
+  "title": "Capítulo 71",
+  "sectionTitle": "CAP. 82 SECCION XV METALES COMUNES Y MANUFACTURAS DE ESTOS METALES Notas. 1. Esta Sección no comprende: a. los colores y",
+  "headings": [
+    {
+      "code": "3207",
+      "description": "a 32.10, 32.12, 32.13 ó 32.15);",
+      "subheadings": []
+    },
+    {
+      "code": "8201",
+      "description": "LAYAS, PALAS, AZADAS, PICOS, BINADERAS, HORCAS DE LABRANZA, RASTRILLOS Y RAEDERAS; HACHAS,",
+      "subheadings": [
+        {
+          "code": "8201.10.00",
+          "description": "Layas y palas"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "Con mango de madera"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "110Z De largo total inferior o igual a 300 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "120C De largo total superior a 300 mm pero inferior o igual a 1000 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "130F De largo total superior a 1000 mm pero inferior o igual a 1500 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "190A Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "Con mango de plástico"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "210E De largo total inferior o igual a 300 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "220H De largo total superior a 300 mm pero inferior o igual a 1000 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "230L De largo total superior a 1000 mm pero inferior o igual a 1500 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "290F Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "Con mango de metal"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "310K De largo total inferior o igual a 300 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "320N De largo total superior a 300 mm pero inferior o igual a 1000 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "330R De largo total superior a 1000 mm pero inferior o igual a 1500 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "390L Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "400M Sin mango 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.10.00",
+          "description": "900P Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "Azadas, picos, binaderas, rastrillos y raederas"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "Azadas"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "Con mango"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "111E De madera 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "112G De plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "119X Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "190D Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "Picos"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "211K De madera 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "212M De plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "219C Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "290J Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "Rastrillos"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "De tipo escoba"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "311Q Regulable 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "319H Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "391R Con rienda 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "399J Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "Escardillos"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "411W De madera 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "412Y De plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "419N Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "490V Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.30.00",
+          "description": "900T Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "Hachas, hocinos y herramientas similares con filo"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "Hachas"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "De peso inferior o igual a 500 g"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "111U Con mango 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "119L Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "De peso superior a 500 g pero inferior o igual a 800 g"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "121X Con mango 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "129P Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "De peso superior a 800 g pero inferior o igual a 1200 g"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "131A Con mango 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "139T Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "190T Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "200U Machetes 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8201.40.00",
+          "description": "900G Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8201.50.00",
+          "description": "Tijeras de podar (incluidas las de trinchar aves) para usar con una sola mano"
+        },
+        {
+          "code": "8201.50.00",
+          "description": "Forjadas"
+        },
+        {
+          "code": "8201.50.00",
+          "description": "110F Con empuñadura de plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.50.00",
+          "description": "190G Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.50.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "8201.50.00",
+          "description": "910Z Con empuñadura de plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.50.00",
+          "description": "990A Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "Cizallas para setos, tijeras de podar y herramientas similares, para usar con las dos manos"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "Cuyo largo de hoja sea inferior o igual a 200 mm"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "110V Con mango de madera 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "120Y Con mango de plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "190W Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "Cuyo largo de hoja sea superior a 200 mm pero inferior o igual a 255 mm"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "210A Con mango de madera 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "220D Con mango de plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "290B Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "Cuyo largo de hoja sea superior a 255 mm pero inferior o igual a 305 mm"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "310F Con mango de madera 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "320J Con mango de plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "390G Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.60.00",
+          "description": "900K Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8201.90.00",
+          "description": "Las demás herramientas de mano, agrícolas, hortícolas o forestales"
+        },
+        {
+          "code": "8201.90.00",
+          "description": "100J Horcas de labranza 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8201.90.00",
+          "description": "900C Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8202",
+      "description": "SIERRAS DE MANO; HOJAS DE SIERRA DE CUALQUIER CLASE (INCLUIDAS LAS FRESAS SIERRA Y LAS",
+      "subheadings": [
+        {
+          "code": "8202.10.00",
+          "description": "Sierras de mano"
+        },
+        {
+          "code": "8202.10.00",
+          "description": "De arco"
+        },
+        {
+          "code": "8202.10.00",
+          "description": "110T Para hojas de 155 mm de largo 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8202.10.00",
+          "description": "120W Para hojas de 300 mm de largo 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8202.10.00",
+          "description": "190U Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8202.10.00",
+          "description": "Serruchos"
+        },
+        {
+          "code": "8202.10.00",
+          "description": "210Y Cuyo largo de hoja sea inferior o igual a 150 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8202.10.00",
+          "description": "220B Cuyo largo de hoja sea superior a 150 mm pero inferior o igual a 300 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8202.10.00",
+          "description": "230E Cuyo largo de hoja sea superior a 300 mm pero inferior o igual a 450 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8202.10.00",
+          "description": "240H Cuyo largo de hoja sea superior a 450 mm pero inferior o igual a 600 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8202.10.00",
+          "description": "290Z Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8202.10.00",
+          "description": "900H Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8202.20.00",
+          "description": "Hojas de sierra de cinta"
+        },
+        {
+          "code": "8202.20.00",
+          "description": "000Y -Hojas de sierra de cinta 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.3",
+          "description": "Hojas de sierra circulares (incluidas las fresas sierra):"
+        },
+        {
+          "code": "8202.31.00",
+          "description": "Con parte operante de acero"
+        },
+        {
+          "code": "8202.31.00",
+          "description": "100E Con sectores postizos 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.31.00",
+          "description": "900Y Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.39.00",
+          "description": "Las demás, incluidas las partes"
+        },
+        {
+          "code": "8202.39.00",
+          "description": "100A Partes 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.39.00",
+          "description": "900U Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.40.00",
+          "description": "Cadenas cortantes"
+        },
+        {
+          "code": "8202.40.00",
+          "description": "000B -Cadenas cortantes 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.9",
+          "description": "Las demás hojas de sierra:"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "Hojas de sierra rectas para trabajar metal"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "De acero rápido"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "110T Manuales (R. 520/97 MEOSP) 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "Para serrucho mecánico cuyo largo de hoja sea inferior o igual a 500 mm"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "121Y De 300 mm de largo x 25 mm de ancho x 1,25 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "122A De 350 mm de largo x 25 mm de ancho x 1,25 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "123C De 350 mm de largo x 32 mm de ancho x 1,5 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "124E De 400 mm de largo x 32 mm de ancho x 1,5 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "125G De 425 mm de largo x 32 mm de ancho x 1,5 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "126J De 450 mm de largo x 32 mm de ancho x 1,5 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "127L De 450 mm de largo x 38 mm de ancho x 2 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "129Q Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "Para serrucho mecánico cuyo largo de hoja sea superior a 500 mm"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "131B De 525 mm de largo x 38 mm de ancho x 2 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "132D De 600 mm de largo x 45 mm de ancho x 2,5 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "133F De 600 mm de largo x 50 mm de ancho x 2,5 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "134H De 650 mm de largo x 50 mm de ancho x 2,5 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "135K De 700 mm de largo x 55 mm de ancho x 2,5 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "136M De 750 mm de largo x 63 mm de ancho x 2,5 mm de espesor 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "139U Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "De acero bimetal"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "210Y Manuales 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "290Z Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8202.91.00",
+          "description": "300A De acero aleado, manuales, con un contenido total de molibdeno, volframio (tungsteno) y vanadio, considerados en"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "8203",
+      "description": "LIMAS, ESCOFINAS, ALICATES (INCLUSO CORTANTES), TENAZAS, PINZAS, CIZALLAS PARA METALES,",
+      "subheadings": [
+        {
+          "code": "8203.10",
+          "description": "Limas, escofinas y herramientas similares"
+        },
+        {
+          "code": "8203.10.10",
+          "description": "Limas y escofinas"
+        },
+        {
+          "code": "8203.10.10",
+          "description": "100T Limas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8203.10.10",
+          "description": "200Y Escofinas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8203.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "8203.10.90",
+          "description": "000Q Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8203.20",
+          "description": "Alicates (incluso cortantes), tenazas, pinzas y herramientas similares"
+        },
+        {
+          "code": "8203.20.10",
+          "description": "Alicates (incluso cortantes)"
+        },
+        {
+          "code": "8203.20.10",
+          "description": "Pinza universal"
+        },
+        {
+          "code": "8203.20.10",
+          "description": "110K De 160 mm de longitud 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8203.20.10",
+          "description": "120N De 180 mm de longitud 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8203.20.10",
+          "description": "190L Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8203.20.10",
+          "description": "200M Pinza articulada de 2 posiciones 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8203.20.10",
+          "description": "Cortantes"
+        },
+        {
+          "code": "8203.20.10",
+          "description": "310W De 130 mm de longitud 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8203.20.10",
+          "description": "320Z De 160 mm de longitud 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8203.20.10",
+          "description": "330C De 180 mm de longitud 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8203.20.10",
+          "description": "390X Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8203.20.10",
+          "description": "900A Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8203.20.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "8203.20.90",
+          "description": "100K Tenazas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8203.20.90",
+          "description": "400B Pinzas de depilar 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8203.20.90",
+          "description": "900D Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8203.30.00",
+          "description": "Cizallas para metales y herramientas similares"
+        },
+        {
+          "code": "8203.30.00",
+          "description": "000F -Cizallas para metales y herramientas similares 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8203.40.00",
+          "description": "Cortatubos, cortapernos, sacabocados y herramientas similares"
+        },
+        {
+          "code": "8203.40.00",
+          "description": "100A Cortatubos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8203.40.00",
+          "description": "200F Cortapernos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8203.40.00",
+          "description": "300L Sacabocados 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8203.40.00",
+          "description": "900U Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8204",
+      "description": "LLAVES DE AJUSTE DE MANO (INCLUIDAS LAS LLAVES DINAMOMÉTRICAS); CUBOS (VASOS)* DE AJUSTE",
+      "subheadings": [
+        {
+          "code": "8204.1",
+          "description": "Llaves de ajuste de mano:"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "No ajustables"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "Dinamométrica (torquímetro)"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "De aguja"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "111U Con rango de medición 0-120 Nm ( 0-12 kgm ) 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "112W Con rango de medicion 0-250 Nm (0-25 kgm) 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "113Y Con rango de medición 0-500 Nm (0-50 kgm) 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "119L Las demás 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "De nonio"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "121X Con rango de medición 10-50 Nm (1-5 kgm) 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "122Z Con rango de medición 10-100 Nm (1-10 kgm) 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "123B Con rango de medición 20-200 Nm (2-20 kgm) 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "124D Con rango de medición 100-400 Nm (10-40 kgm) 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "125F Con rango de medición 250-700 Nm (25-70 kgm) 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "126H Con rango de medición 400-1200 Nm (40-120 kgm) 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "129P Las demás 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "190T Las demás 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "200U Llaves combinadas con trinquetes en uno de sus extremos 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "300Z Llaves de impacto 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "Acondicionadas para la venta al por menor que contengan dos o más artículos del desarrollo de primer nivel"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "810E De hasta 6 unidades inclusive 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "820H De 7 y hasta 12 unidades inclusive 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "890F Los demás 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "910K Cuyo largo sea inferior o igual a 130 mm, excepto: llaves de pipa, llaves de tubo y llaves de cubo (vaso) 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8204.11.00",
+          "description": "920N Cuyo largo sea superior a 130 mmm pero inferior o igual a 240 mm, excepto: llaves de pipa, llaves de tubo y llaves de"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "35.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "8205",
+      "description": "HERRAMIENTAS DE MANO (INCLUIDOS LOS DIAMANTES DE VIDRIERO) NO EXPRESADAS NI",
+      "subheadings": [
+        {
+          "code": "8205.10.00",
+          "description": "Herramientas de taladrar o roscar (incluidas las terrajas)"
+        },
+        {
+          "code": "8205.10.00",
+          "description": "100V Berbiquíes 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.10.00",
+          "description": "200A Terrajas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.10.00",
+          "description": "900N Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.20.00",
+          "description": "Martillos y mazas"
+        },
+        {
+          "code": "8205.20.00",
+          "description": "100J Martillos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.20.00",
+          "description": "200P Mazas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.30.00",
+          "description": "Cepillos, formones, gubias y herramientas cortantes similares para trabajar madera"
+        },
+        {
+          "code": "8205.30.00",
+          "description": "100Y Cepillos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.30.00",
+          "description": "200D Formones 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.30.00",
+          "description": "300J Gubias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.30.00",
+          "description": "900R Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "Destornilladores"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "Acondicionados para la venta al por menor conteniendo dos o más artículos"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "Unicamente con punta tipo Torx"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "111T De hasta 4 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "112V De 5 y hasta 6 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "119K Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "Únicamente de los tipos utilizados para tornillos de cabeza con hueco hexagonal, tipo \"Allen\""
+        },
+        {
+          "code": "8205.40.00",
+          "description": "121W De hasta 6 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "122Y De 7 y hasta 12 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "129N Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "Únicamente de los tipos utilizados para tornillos de cabeza con hueco hexagonal, con mango en T"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "131Z De hasta 6 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "132B De 7 y hasta 12 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "139R Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "191U De hasta 4 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "192W De 5 y hasta 6 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "193Y De 7 y hasta 10 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "194A De 11 y hasta 15 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "199L Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "200T Con buscapolo 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "300Y Con punta tipo Torx 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "De los tipos utilizados para tornillos de cabeza con hueco hexagonal"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "410G Tipo \"Allen\" 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "420K Con mango en T 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "430N De punta esférica 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "490H Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "Con varilla de diámetro inferior o igual a 4 mm"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "911L De largo de varilla inferior o igual a 125 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "919D Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "920M Con varilla de diámetro superior a 4 mm pero inferior o igual a 5 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "930Q Con varilla de diámetro superior a 5 mm pero inferior o igual a 6 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "940U Con varilla de diámetro superior a 6 mm pero inferior o igual a 8 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "950X Con varilla de diámetro superior a 8 mm pero inferior o igual a 10 mm 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.40.00",
+          "description": "990K Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8205.5",
+          "description": "Las demás herramientas de mano (incluidos los diamantes de vidriero):"
+        },
+        {
+          "code": "8205.51.00",
+          "description": "De uso doméstico"
+        },
+        {
+          "code": "8205.51.00",
+          "description": "100N Chairas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.51.00",
+          "description": "200U Abrelatas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.51.00",
+          "description": "300Z Ralladores 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.51.00",
+          "description": "400E Sacacorchos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.51.00",
+          "description": "900G Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.59.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "8205.59.00",
+          "description": "100J Cucharas de albañil 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.59.00",
+          "description": "900C Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.60.00",
+          "description": "Lámparas de soldar y similares"
+        },
+        {
+          "code": "8205.60.00",
+          "description": "000K -Lámparas de soldar y similares 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.70.00",
+          "description": "Tornillos de banco, prensas de carpintero y similares"
+        },
+        {
+          "code": "8205.70.00",
+          "description": "100E Tornillos de banco 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.70.00",
+          "description": "900Y Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.90.00",
+          "description": "Los demás, incluidos los juegos de artículos de dos o más de las subpartidas anteriores"
+        },
+        {
+          "code": "8205.90.00",
+          "description": "Juegos de artículos de dos o más de las subpartidas anteriores"
+        },
+        {
+          "code": "8205.90.00",
+          "description": "110L De hasta 3 unidades inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.90.00",
+          "description": "120P De 4 y hasta 7 unidades inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.90.00",
+          "description": "130T De 8 y hasta 12 unidades inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.90.00",
+          "description": "190M Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.90.00",
+          "description": "400Z Yunques 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.90.00",
+          "description": "500E Fraguas portátiles 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8205.90.00",
+          "description": "900B Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8206",
+      "description": "HERRAMIENTAS DE DOS O MÁS DE LAS PARTIDAS 8202 A 8205, ACONDICIONADAS EN JUEGOS PARA LA",
+      "subheadings": [
+        {
+          "code": "8206.00.00",
+          "description": "Herramientas de dos o más de las partidas 8202 a 8205, acondicionadas en juegos para la venta al por menor"
+        },
+        {
+          "code": "8206.00.00",
+          "description": "100Z De hasta 3 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8206.00.00",
+          "description": "200E De 4 y hasta 7 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8206.00.00",
+          "description": "300K De 8 y hasta 12 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8206.00.00",
+          "description": "400Q De 13 y hasta 24 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8206.00.00",
+          "description": "500W De 25 y hasta 50 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8206.00.00",
+          "description": "600B De 51 y hasta 75 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8206.00.00",
+          "description": "700G De 76 y hasta 100 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8206.00.00",
+          "description": "800M De 101 y hasta 200 unidades inclusive 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8206.00.00",
+          "description": "900T Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8207",
+      "description": "ÚTILES INTERCAMBIABLES PARA HERRAMIENTAS DE MANO, INCLUSO MECÁNICAS, O PARA MÁQUINAS",
+      "subheadings": [
+        {
+          "code": "8207.1",
+          "description": "Útiles de perforación o sondeo:"
+        },
+        {
+          "code": "8207.13.00",
+          "description": "Con parte operante de cermet"
+        },
+        {
+          "code": "8207.13.00",
+          "description": "100T Trépanos 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.13.00",
+          "description": "200Y Barrenas 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.13.00",
+          "description": "300D Coronas 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.13.00",
+          "description": "900L Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.19.00",
+          "description": "Los demás, incluidas las partes"
+        },
+        {
+          "code": "8207.19.00",
+          "description": "100P Trépanos 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.19.00",
+          "description": "200V Barrenas 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.19.00",
+          "description": "300A Coronas 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.19.00",
+          "description": "900H Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.20.00",
+          "description": "Hileras de extrudir o de trefilar (estirar)* metal"
+        },
+        {
+          "code": "8207.20.00",
+          "description": "100W Hileras de extrudir 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8207.20.00",
+          "description": "900P Las demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8207.30.00",
+          "description": "Útiles de embutir, estampar o punzonar"
+        },
+        {
+          "code": "8207.30.00",
+          "description": "100K De estampar en caliente (\"Hot Stamping\"), con dispositivos de refrigeración 14.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.30.00",
+          "description": "900D Los demás 14.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40",
+          "description": "Útiles de roscar (incluso aterrajar)"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "De roscar internamente"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "Machos de roscar de acero rápido"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "110M De diámetros de la zona roscada de 2,0 a 2,6 mm (1/16\" y 3/32\") 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "120Q De diámetros de la zona roscada de 2,7 a 6,9 mm (1/8\", 5/32\", 3/16\", 7/32\", 1/4\") 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "130U De diámetros de la zona roscada de 7 a 8,9 mm (5/16\") 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "140X De diámetro de la zona roscada de 9,0 a 13,9 mm (3/8\", 7/16\" y 1/2\") 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "150A De diámetros de la zona roscada de 14,0 a 17,9 mm (9/16\", 5/8\", y 11/16\") 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "160D De diámetros de la zona roscada de 18,0 a 23,9 mm (3/4\" y 7/8\") 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "170G De diámetros de la zona roscada de 24,0 a 29,9 mm (1\" y 1 1/8\") 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "180K De diámetros de la zona roscada de 30 mm y mayores (1 1/4\" y mayores) 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "190N Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "Machos de roscar de acero sin alear"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "210T De diámetros de la zona roscada de 3,0 a 5,9 mm (1/8\", 5/32\", 3/16\" y 7/32\") 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "220W De diámetros de la zona roscada de 6,0 a 8,9 mm (1/4\" y 5/16\") 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "230Z De diámetros de la zona roscada de 9,0 a 15,9 mm (3/8\", 7/16\" y 5/8\") 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "240C De diámetros de la zona roscada de 16,0 a 21,9 mm (11/16\", 3/4\"y 13/16\") 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "250F De diámetros de la zona roscada de 22,0 a 23,9 mm (7/8\") 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "260J De diámetros de la zona roscada de 24,0 mm y mayores ( 1\" y mayores) 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "290U Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.10",
+          "description": "900C Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.40.20",
+          "description": "De roscar externamente"
+        },
+        {
+          "code": "8207.40.20",
+          "description": "000N De roscar externamente 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50",
+          "description": "Útiles de taladrar"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "Helicoidales, de diámetro inferior o igual a 52 mm"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "Con vástago cono morse normal, según Norma DIN 345 (R.1111/98 MEOSP)"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "De acero rápido, tipo AISI M2, M7 o de similar composición química, de diámetros inferiores a 23,25 mm (Res. 19/00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "111L De diámetros inferiores a 10 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "112N De diámetros superiores o iguales a 10 mm pero inferiores o iguales a 13 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "113Q De diámetros superiores a 13 mm pero inferiores a 14,25 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "114T De diámetros superiores o iguales a 14,25 mm pero inferiores o iguales a 16 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "115V De diámetros superiores a 16 mm pero inferiores o iguales a 21 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "116X De diámetros superiores a 21 mm pero inferiores o iguales a 22 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "117Z De diámetros superiores a 22 mm pero inferiores o iguales a 23 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "118B De diámetros superiores a 23 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "De acero rápido tipo AISI M2, M7 o de similar composición química, de diámetros superiores o iguales a 23,25 mm"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "121P De diámetros inferiores o iguales a 26 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "122R De diámetros superiores a 26 mm pero inferiores o iguales a 29 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "123U De diámetros superiores a 29 mm pero inferiores o iguales a 31 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "124W De diámetros superiores a 31 mm pero inferiores a 32 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "125Y De diámetros superiores o iguales a 32 mm pero inferiores o iguales a 33 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "126A De diámetros superiores a 33 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "De acero rápido tipo AISI M2, M7 o de similar composición química, de diámetros superiores a 36 mm (Res. 19/00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "131T De diámetros inferiores o iguales a 39 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "132V De diámetros superiores a 39 mm pero inferiores o iguales a 45 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "133X De diámetros superiores a 45 mm pero inferiores o iguales a 50 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "134Z De diámetros superiores a 50 mm pero inferiores o iguales a 51 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "135B De diámetros superiores a 51 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "Las demás"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "191M De diámetros superiores o iguales a 10 mm pero inferiores a 14,25 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "192P De diámetros superiores o iguales a 14,25 mm pero inferiores a 23,25 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "193R De diámetros superiores o iguales a 23,25 mm pero inferiores a 32 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "194U De diámetros superiores o iguales a 32 mm pero inferiores o iguales a 50 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "199E Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "Con vástago cilíndrico según Norma DIN 338 de acero rápido tipo AISI M2, M7 o de similar composición química (Res."
+        },
+        {
+          "code": "8207.50.11",
+          "description": "Laminadas, sin revestir"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "211R De diámetros inferiores o iguales a 3 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "212U De diámetros superiores a 3 mm pero inferiores o iguales a 5 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "213W De diámetros superiores a 5 mm pero inferiores o iguales a 7 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "214Y De diámetros superiores a 7 mm pero inferiores o iguales a 9 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "215A De diámetros superiores a 9 mm pero inferiores o iguales a 11 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "219J Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "Rectificadas, sin revestir"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "221V De diámetros inferiores o iguales a 3 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "222X De diámetros superiores a 3 mm pero inferiores o iguales a 5 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "223Z De diámetros superiores a 5 mm pero inferiores o iguales a 7 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "224B De diámetros superiores a 7 mm pero inferiores o iguales a 9 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "225D De diámetros superiores 9 mm pero inferiores o iguales a 11 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "229M Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "Revestidas con titanio"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "231Y De diámetros inferiores o iguales a 3 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "232A De diámetros superiores a 3 mm pero inferiores o iguales a 5 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "233C De diámetros superiores a 5 mm pero inferiores o iguales a 7 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "234E De diámetros superiores a 7 mm pero inferiores o iguales a 9 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "235G De diámetros superiores a 9 mm pero inferiores o iguales a 11 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "239Q Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "291T De diámetros inferiores o iguales a 3 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "292V De diámetros superiores a 3 mm pero inferiores o iguales a 5 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "293X De diámetros superiores a 5 mm pero inferiores o iguales a 7 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "294Z De diámetros superiores a 7 mm pero inferiores o iguales a 9 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "295B De diámetros superiores a 9 mm pero inferiores o iguales a 11 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "299K Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "Con vástago cilíndrico, con inserto de metal duro, según Norma DIN 8039, conocidas como para muros, mampostería y"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "310V De diámetro inferior a 3 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "320Y De diámetro superior o igual a 3 mm pero inferior a 5 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "330B De diámetro superior o igual a 5 mm pero inferior a 6 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "340E De diámetro superior o igual a 6 mm pero inferior a 8 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "350H De diámetro superior o igual a 8 mm pero inferior a 14 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "390W Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "Las demás, con vástago cilíndrico"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "410A Integramente de carburo metálico 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "420D Con parte operante diamantada 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "De acero rápido, tipo AISI M 30 a M 48 o de similar composición química, sin revestir"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "431J De diámetro inferior a 2,5 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "432L De diámetro superior o igual a 2,5 mm pero inferior a 5 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "433N De diámetro superior o igual a 5 mm pero inferior a 7 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "434Q De diámetro superior o igual a 7 mm pero inferior a 9 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "435T De diámetro superior o igual a 9 mm pero inferior a 11 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "436V De diámetro superior o igual a 11 mm pero inferior a 13 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "437X De diámetro superior o igual a 13 mm pero inferior a 16 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "438Z De diámetro superior o igual a 16 mm pero inferior a 20 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "439B Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "De acero rápido, tipo AISI M 30 a M 48 o de similar composición química, con revestimiento"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "441M De diámetro inferior a 2,5 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "442P De diámetro superior o igual a 2,5 mm pero inferior a 5 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "443R De diámetro superior o igual a 5 mm pero inferior a 7 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "444U De diámetro superior o igual a 7 mm pero inferior a 9 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "445W De diámetro superior o igual a 9 mm pero inferior a 11 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "446Y De diámetro superior o igual a 11 mm pero inferior 13 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "447A De diámetro superior o igual a 13 mm pero inferior a 16 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "448C De diámetro superior o igual a 16 mm pero inferior a 20 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "449E Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "490B Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "500C Para madera 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "Acondicionadas para la venta al por menor conteniendo dos o más artículos de las posiciones SIM anteriores"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "Que contengan 2 ó más artículos de los desarrollos de segundo nivel 8207.50.11.11, 8207.50.11.12, 8207.50.11.13,"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "811Z De hasta 5 unidades inclusive 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "812B De 6 y hasta 13 unidades inclusive 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "813D De 14 y hasta 19 unidades inclusive 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "819R Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "891A De hasta 5 unidades inclusive 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "892C De 6 y hasta 13 unidades inclusive 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "893E De 14 y hasta 19 unidades inclusive 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "899T Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.11",
+          "description": "900Z Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "8207.50.19",
+          "description": "Helicoidales con vástago cono morse normal, segùn norma DIN 345 (R. 19/00 MEOSP)"
+        },
+        {
+          "code": "8207.50.19",
+          "description": "110V De acero rápido tipo AISI M2, M7 o de similar composición química 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.19",
+          "description": "190W Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.19",
+          "description": "200X De centrar 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.19",
+          "description": "900K Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.50.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8207.50.90",
+          "description": "000W Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.60.00",
+          "description": "Útiles de escariar o brochar"
+        },
+        {
+          "code": "8207.60.00",
+          "description": "000X -Útiles de escariar o brochar 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70",
+          "description": "Útiles de fresar"
+        },
+        {
+          "code": "8207.70.10",
+          "description": "Frontales"
+        },
+        {
+          "code": "8207.70.10",
+          "description": "000W Frontales 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "De tallar engranajes"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "Fresas-tornillo (Creadores)"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "110P De módulo inferior o igual a 3 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "120T De módulo superior a 3 pero inferior o igual a 5 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "130W De módulo superior a 5 pero inferior o igual a 8 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "190Q Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "Afeitadores"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "De espesor inferior o igual a 24 mm"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "211X De diámetro inferior a 210 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "212Z De diámetro superior o igual a 210 mm pero inferior o igual a 250 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "219P Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "De espesor superior a 24 mm pero inferior o igual a 32 mm"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "221A De diámetro inferior a 210 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "222C De diámetro superior o igual a 210 mm pero inferior o igual a 250 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "229T Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "De espesor superior a 32 mm pero inferior o igual a 45 mm"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "231D De diámetro inferior a 210 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "232F De diámetro superior o igual a 210 mm pero inferior o igual a 250 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "239W Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "Los demás"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "291Y De diámetro inferior a 210 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "292A De diámetro superior o igual a 210 mm pero inferior o igual a 250 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "299Q Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "Chaflanadores"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "310A De espesor inferior a 7 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "De espesor superior o igual a 7 mm pero inferior o igual a 10 mm"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "321F De diámetro inferior a 145 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "322H De diámetro superior o igual a 145 mm pero inferior o igual a 165 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "329Y Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "390B Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.20",
+          "description": "900E Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.70.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8207.70.90",
+          "description": "000Z Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.80.00",
+          "description": "Útiles de tornear"
+        },
+        {
+          "code": "8207.80.00",
+          "description": "000A -Útiles de tornear 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.90.00",
+          "description": "Los demás útiles intercambiables"
+        },
+        {
+          "code": "8207.90.00",
+          "description": "Moletas roladoras de engranajes"
+        },
+        {
+          "code": "8207.90.00",
+          "description": "110Y De espesor inferior a 15 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.90.00",
+          "description": "De espesor superior o igual a 15 mm pero inferior o igual a 25 mm"
+        },
+        {
+          "code": "8207.90.00",
+          "description": "121D De diámetro inferior a 45 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.90.00",
+          "description": "122F De diámetro superior o igual a 45 mm pero inferior o igual a 60 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.90.00",
+          "description": "129W Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.90.00",
+          "description": "190Z Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.90.00",
+          "description": "200A Vástagos de destornilladores 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8207.90.00",
+          "description": "900N Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "8208",
+      "description": "CUCHILLAS Y HOJAS CORTANTES, PARA MÁQUINAS O APARATOS MECÁNICOS",
+      "subheadings": [
+        {
+          "code": "8208.10.00",
+          "description": "Para trabajar metal"
+        },
+        {
+          "code": "8208.10.00",
+          "description": "Cuchillas para fresas dentadoras presentadas en juegos"
+        },
+        {
+          "code": "8208.10.00",
+          "description": "110D De hasta 8 unidades inclusive 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8208.10.00",
+          "description": "120G De 9 y hasta 19 unidades inclusive 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8208.10.00",
+          "description": "130K De 20 y hasta 32 unidades inclusive 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8208.10.00",
+          "description": "140N De 33 y hasta 40 unidades inclusive 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8208.10.00",
+          "description": "190E Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8208.10.00",
+          "description": "900U Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8208.20.00",
+          "description": "Para trabajar madera"
+        },
+        {
+          "code": "8208.20.00",
+          "description": "000J -Para trabajar madera 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8208.30.00",
+          "description": "Para aparatos de cocina o máquinas de la industria alimentaria"
+        },
+        {
+          "code": "8208.30.00",
+          "description": "000Y -Para aparatos de cocina o máquinas de la industria alimentaria 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8208.40.00",
+          "description": "Para máquinas agrícolas, hortícolas o forestales"
+        },
+        {
+          "code": "8208.40.00",
+          "description": "100T Para maquinas Agricolas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8208.40.00",
+          "description": "900L Los demas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8208.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "8208.90.00",
+          "description": "000H -Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "8209",
+      "description": "PLAQUITAS, VARILLAS, PUNTAS Y ARTÍCULOS SIMILARES PARA ÚTILES, SIN MONTAR, DE CERMET",
+      "subheadings": [
+        {
+          "code": "8209.00.11",
+          "description": "Intercambiables"
+        },
+        {
+          "code": "8209.00.11",
+          "description": "000R Intercambiables 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8209.00.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "8209.00.19",
+          "description": "000C Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8209.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8209.00.90",
+          "description": "000M Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "8210",
+      "description": "APARATOS MECÁNICOS ACCIONADOS A MANO, DE PESO INFERIOR O IGUAL A 10 KG, UTILIZADOS PARA",
+      "subheadings": [
+        {
+          "code": "8210.00.10",
+          "description": "Molinos"
+        },
+        {
+          "code": "8210.00.10",
+          "description": "000N Molinos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8210.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8210.00.90",
+          "description": "100X Para picar carne 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8210.00.90",
+          "description": "200C Para rallar 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8210.00.90",
+          "description": "300H Para fabricar pastas alimenticias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8210.00.90",
+          "description": "400N Abrelatas mecánicos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8210.00.90",
+          "description": "500U Exprimidor de cítricos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8210.00.90",
+          "description": "900Q Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8211",
+      "description": "CUCHILLOS CON HOJA CORTANTE O DENTADA, INCLUIDAS LAS NAVAJAS DE PODAR, Y SUS HOJAS",
+      "subheadings": [
+        {
+          "code": "8211.10.00",
+          "description": "Surtidos"
+        },
+        {
+          "code": "8211.10.00",
+          "description": "100R De cubiertos integramente de acero inoxidable distinto de los de cocina y de servir (R.180/98 MEOSP) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.10.00",
+          "description": "200X De cuchillos de mesa de hoja fija, de acero inoxidable, con mango de madera o de plástico (Res. SC N° 316-E/16) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.10.00",
+          "description": "900K Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "Cuchillos de mesa de hoja fija"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "De acero inoxidable"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "110V Monobloque para plato principal (R.180/98 MEOSP) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "120Y Monobloque para postre (R.180/98 MEOSP) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "130B De mango hueco para plato principal integramente de acero inoxidable (R.180/98 MEOSP) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "140E De mango hueco para postre integramente de acero inoxidable (R.180/98 MEOSP) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "191Y Con mango de madera 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "192A Con mango de plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "199Q Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "910N Con mango de madera 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "920R Con mango de plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.91.00",
+          "description": "990P Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.92",
+          "description": "Los demás cuchillos de hoja fija"
+        },
+        {
+          "code": "8211.92.10",
+          "description": "Para cocina y carnicería"
+        },
+        {
+          "code": "8211.92.10",
+          "description": "De acero inoxidable"
+        },
+        {
+          "code": "8211.92.10",
+          "description": "110R Con mango de madera 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.10",
+          "description": "120V Con mango de plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.10",
+          "description": "190T Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "8211.92.10",
+          "description": "910K Con mango de madera 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.10",
+          "description": "920N Con mango de plástico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.10",
+          "description": "990L Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.20",
+          "description": "Para caza"
+        },
+        {
+          "code": "8211.92.20",
+          "description": "De acero inoxidable"
+        },
+        {
+          "code": "8211.92.20",
+          "description": "110B Con mango de madera 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.20",
+          "description": "120E Con mango de plástico 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.20",
+          "description": "190C Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.20",
+          "description": "Los demás"
+        },
+        {
+          "code": "8211.92.20",
+          "description": "910V Con mango de madera 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.20",
+          "description": "920Y Con mango de plástico 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.20",
+          "description": "990W Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8211.92.90",
+          "description": "De acero inoxidable"
+        },
+        {
+          "code": "8211.92.90",
+          "description": "110V Con mango de madera 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.90",
+          "description": "120Y Con mango de plástico 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.90",
+          "description": "190W Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.90",
+          "description": "910N Con mango de madera 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.90",
+          "description": "920R Con mango de plástico 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.92.90",
+          "description": "990P Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.93",
+          "description": "Cuchillos, excepto los de hoja fija, incluidas las navajas de podar"
+        },
+        {
+          "code": "8211.93.10",
+          "description": "Navajas de podar y sus partes"
+        },
+        {
+          "code": "8211.93.10",
+          "description": "000V Navajas de podar y sus partes 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.93.20",
+          "description": "Cortaplumas, con una o varias hojas u otras piezas"
+        },
+        {
+          "code": "8211.93.20",
+          "description": "100K Con menos de 4 elementos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.93.20",
+          "description": "200Q Con 4 y hasta 8 elementos inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.93.20",
+          "description": "300W Con 9 y hasta 15 elementos inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.93.20",
+          "description": "900D Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.93.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8211.93.90",
+          "description": "000Y Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8211.94.00",
+          "description": "Hojas"
+        },
+        {
+          "code": "8211.94.00",
+          "description": "000X --Hojas 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8211.95.00",
+          "description": "Mangos de metal común"
+        },
+        {
+          "code": "8211.95.00",
+          "description": "000J --Mangos de metal común 18.00 18.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "8212",
+      "description": "NAVAJAS Y MÁQUINAS DE AFEITAR Y SUS HOJAS (INCLUIDOS LOS ESBOZOS EN FLEJE)",
+      "subheadings": [
+        {
+          "code": "8212.10",
+          "description": "Navajas y máquinas de afeitar"
+        },
+        {
+          "code": "8212.10.10",
+          "description": "Navajas"
+        },
+        {
+          "code": "8212.10.10",
+          "description": "000P Navajas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8212.10.20",
+          "description": "Máquinas y maquinillas"
+        },
+        {
+          "code": "8212.10.20",
+          "description": "Descartables"
+        },
+        {
+          "code": "8212.10.20",
+          "description": "De cabezal fijo"
+        },
+        {
+          "code": "8212.10.20",
+          "description": "111K Con parte operante de acero sin alear 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8212.10.20",
+          "description": "112M Con parte operante de acero inoxidable 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8212.10.20",
+          "description": "119C Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8212.10.20",
+          "description": "190J Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8212.10.20",
+          "description": "900Y Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8212.20",
+          "description": "Hojas para maquinillas de afeitar, incluidos los esbozos en fleje"
+        },
+        {
+          "code": "8212.20.10",
+          "description": "Hojas"
+        },
+        {
+          "code": "8212.20.10",
+          "description": "000D Hojas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8212.20.20",
+          "description": "Esbozos en fleje"
+        },
+        {
+          "code": "8212.20.20",
+          "description": "000N Esbozos en fleje 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8212.90.00",
+          "description": "Las demás partes"
+        },
+        {
+          "code": "8212.90.00",
+          "description": "000T -Las demás partes 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8213",
+      "description": "TIJERAS Y SUS HOJAS",
+      "subheadings": [
+        {
+          "code": "8213.00.00",
+          "description": "Tijeras y sus hojas"
+        },
+        {
+          "code": "8213.00.00",
+          "description": "100P Aptas para ser usadas en alimentos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8213.00.00",
+          "description": "900H Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8214",
+      "description": "LOS DEMÁS ARTÍCULOS DE CUCHILLERÍA (POR EJEMPLO: MÁQUINAS DE CORTAR EL PELO O DE ESQUILAR,",
+      "subheadings": [
+        {
+          "code": "8214.10.00",
+          "description": "Cortapapeles, abrecartas, raspadores, sacapuntas y sus cuchillas"
+        },
+        {
+          "code": "8214.10.00",
+          "description": "100X Sacapuntas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8214.10.00",
+          "description": "900Q Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8214.20.00",
+          "description": "Herramientas y juegos de herramientas de manicura o de pedicuro (incluidas las limas para uñas)"
+        },
+        {
+          "code": "8214.20.00",
+          "description": "Juegos"
+        },
+        {
+          "code": "8214.20.00",
+          "description": "110P De manicura 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8214.20.00",
+          "description": "190Q Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8214.20.00",
+          "description": "200R Limas para uñas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8214.20.00",
+          "description": "300X Alicates para uñas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8214.20.00",
+          "description": "900E Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8214.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8214.90.10",
+          "description": "Máquinas de esquilar y sus partes"
+        },
+        {
+          "code": "8214.90.10",
+          "description": "000P Máquinas de esquilar y sus partes 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8214.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8214.90.90",
+          "description": "100Y Aptos para ser usados en alimentos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8214.90.90",
+          "description": "900R Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8215",
+      "description": "CUCHARAS, TENEDORES, CUCHARONES, ESPUMADERAS, PALAS PARA TARTA, CUCHILLOS PARA",
+      "subheadings": [
+        {
+          "code": "8215.10.00",
+          "description": "Surtidos que contengan por lo menos un objeto plateado, dorado o platinado"
+        },
+        {
+          "code": "8215.10.00",
+          "description": "000K -Surtidos que contengan por lo menos un objeto plateado, dorado o platinado 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "8215.20.00",
+          "description": "Los demás surtidos"
+        },
+        {
+          "code": "8215.20.00",
+          "description": "100E De cubiertos integramente de acero inoxidable, distinto de los de cocina y de servir, que incluyen cuchillos de acero"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    }
+  ],
+  "_rowCount": 695
+}

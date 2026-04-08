@@ -1,0 +1,956 @@
+{
+  "chapter": "71",
+  "title": "Capítulo 71",
+  "sectionTitle": "CAP. 71 SECCION XIV PERLAS NATURALES O CULTIVADAS, PIEDRAS PRECIOSAS O SEMIPRECIOSAS, METALES PRECIOSOS, CHAPADOS DE MET",
+  "headings": [
+    {
+      "code": "7101",
+      "description": "PERLAS NATURALES (FINAS)* O CULTIVADAS, INCLUSO TRABAJADAS O CLASIFICADAS, PERO SIN",
+      "subheadings": [
+        {
+          "code": "7101.10.00",
+          "description": "Perlas naturales (finas)*"
+        },
+        {
+          "code": "7101.10.00",
+          "description": "100F En bruto 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7101.10.00",
+          "description": "Trabajadas"
+        },
+        {
+          "code": "7101.10.00",
+          "description": "210P Presentadas en tamaños uniformes 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7101.10.00",
+          "description": "290Q Las demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7101.2",
+          "description": "Perlas cultivadas:"
+        },
+        {
+          "code": "7101.21.00",
+          "description": "En bruto"
+        },
+        {
+          "code": "7101.21.00",
+          "description": "000B --En bruto 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7101.22.00",
+          "description": "Trabajadas"
+        },
+        {
+          "code": "7101.22.00",
+          "description": "100U Presentadas en tamaños uniformes 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7101.22.00",
+          "description": "900M Las demás 10.00 10.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7102",
+      "description": "DIAMANTES, INCLUSO TRABAJADOS, SIN MONTAR NI ENGARZAR",
+      "subheadings": [
+        {
+          "code": "7102.10.00",
+          "description": "Sin clasificar"
+        },
+        {
+          "code": "7102.10.00",
+          "description": "000U -Sin clasificar 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7102.2",
+          "description": "Industriales:"
+        },
+        {
+          "code": "7102.21.00",
+          "description": "En bruto o simplemente aserrados, exfoliados o desbastados"
+        },
+        {
+          "code": "7102.21.00",
+          "description": "000V --En bruto o simplemente aserrados, exfoliados o desbastados 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7102.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7102.29.00",
+          "description": "100W Presentados en lotes 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7102.29.00",
+          "description": "900P Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7102.3",
+          "description": "No industriales:"
+        },
+        {
+          "code": "7102.31.00",
+          "description": "En bruto o simplemente aserrados, exfoliados o desbastados"
+        },
+        {
+          "code": "7102.31.00",
+          "description": "000J --En bruto o simplemente aserrados, exfoliados o desbastados 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7102.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7102.39.00",
+          "description": "000E --Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7103",
+      "description": "PIEDRAS PRECIOSAS (EXCEPTO LOS DIAMANTES) O SEMIPRECIOSAS, NATURALES, INCLUSO TRABAJADAS",
+      "subheadings": [
+        {
+          "code": "7103.10.00",
+          "description": "En bruto o simplemente aserradas o desbastadas"
+        },
+        {
+          "code": "7103.10.00",
+          "description": "100T Marcasita (R.2289/92 ex-ANA) 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7103.10.00",
+          "description": "900L Las demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7103.9",
+          "description": "Trabajadas de otro modo:"
+        },
+        {
+          "code": "7103.91.00",
+          "description": "Rubíes, zafiros y esmeraldas"
+        },
+        {
+          "code": "7103.91.00",
+          "description": "000M --Rubíes, zafiros y esmeraldas 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7103.99.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7103.99.00",
+          "description": "100N Marcasita (R.2289/92 ANA) 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7103.99.00",
+          "description": "900G Las demás 10.00 10.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7104",
+      "description": "PIEDRAS PRECIOSAS O SEMIPRECIOSAS, SINTÉTICAS O RECONSTITUIDAS, INCLUSO TRABAJADAS O",
+      "subheadings": [
+        {
+          "code": "7104.10.00",
+          "description": "Cuarzo piezoeléctrico"
+        },
+        {
+          "code": "7104.10.00",
+          "description": "000F -Cuarzo piezoelectrico 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7104.20",
+          "description": "Las demás, en bruto o simplemente aserradas o desbastadas"
+        },
+        {
+          "code": "7104.20.10",
+          "description": "Diamantes"
+        },
+        {
+          "code": "7104.20.10",
+          "description": "000E Diamantes 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7104.20.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7104.20.90",
+          "description": "000H Las demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7104.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7104.90.00",
+          "description": "000U -Las demás 10.00 10.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7105",
+      "description": "POLVO DE PIEDRAS PRECIOSAS O SEMIPRECIOSAS, NATURALES O SINTÉTICAS",
+      "subheadings": [
+        {
+          "code": "7105.10.00",
+          "description": "De diamante"
+        },
+        {
+          "code": "7105.10.00",
+          "description": "000Z -De diamante 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7105.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7105.90.00",
+          "description": "000M -Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7106",
+      "description": "PLATA (INCLUIDA LA PLATA DORADA Y LA PLATINADA) EN BRUTO, SEMILABRADA O EN POLVO",
+      "subheadings": [
+        {
+          "code": "7106.10.00",
+          "description": "Polvo"
+        },
+        {
+          "code": "7106.10.00",
+          "description": "000T -Polvo 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7106.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "7106.91.00",
+          "description": "En bruto"
+        },
+        {
+          "code": "7106.91.00",
+          "description": "000T --En bruto 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7106.92",
+          "description": "Semilabrada"
+        },
+        {
+          "code": "7106.92.10",
+          "description": "Barras, alambre y perfiles de sección maciza"
+        },
+        {
+          "code": "7106.92.10",
+          "description": "000P Barras, alambre y perfiles de sección maciza 12.00 12.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7106.92.20",
+          "description": "Chapas, láminas, hojas y tiras"
+        },
+        {
+          "code": "7106.92.20",
+          "description": "000Z Chapas, láminas, hojas y tiras 12.00 12.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7106.92.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7106.92.90",
+          "description": "000T Las demás 12.00 12.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7107",
+      "description": "CHAPADO (PLAQUÉ) DE PLATA SOBRE METAL COMÚN, EN BRUTO O SEMILABRADO",
+      "subheadings": [
+        {
+          "code": "7107.00.00",
+          "description": "Chapado (plaqué) de plata sobre metal común, en bruto o semilabrado"
+        },
+        {
+          "code": "7107.00.00",
+          "description": "000X CHAPADO (PLAQUE) DE PLATA SOBRE METAL COMÚN, EN BRUTO O SEMILABRADO. 12.00 12.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7108",
+      "description": "ORO (INCLUIDO EL ORO PLATINADO) EN BRUTO, SEMILABRADO O EN POLVO",
+      "subheadings": [
+        {
+          "code": "7108.1",
+          "description": "Para uso no monetario:"
+        },
+        {
+          "code": "7108.11.00",
+          "description": "Polvo"
+        },
+        {
+          "code": "7108.11.00",
+          "description": "000R --Polvo 0.00 0.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "7108.12",
+          "description": "Las demás formas en bruto"
+        },
+        {
+          "code": "7108.12.10",
+          "description": "Aleación dorada o bullón dorado"
+        },
+        {
+          "code": "7108.12.10",
+          "description": "000N Aleación dorada o bullón dorado 0.00 0.00 3.00 LA 8.00 0.00"
+        },
+        {
+          "code": "7108.12.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7108.12.90",
+          "description": "000R Las demás 0.00 0.00 3.00 LA 8.00 0.00"
+        },
+        {
+          "code": "7108.13",
+          "description": "Las demás formas semilabradas"
+        },
+        {
+          "code": "7108.13.10",
+          "description": "Barras, alambre y perfiles de sección maciza"
+        },
+        {
+          "code": "7108.13.10",
+          "description": "000A Barras, alambre y perfiles de sección maciza 12.00 12.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "7108.13.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7108.13.90",
+          "description": "000D Las demás 12.00 12.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "7108.20.00",
+          "description": "Para uso monetario"
+        },
+        {
+          "code": "7108.20.00",
+          "description": "000U -Para uso monetario 0.00 0.00 3.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7109",
+      "description": "CHAPADO (PLAQUÉ) DE ORO SOBRE METAL COMÚN O SOBRE PLATA, EN BRUTO O SEMILABRADO",
+      "subheadings": [
+        {
+          "code": "7109.00.00",
+          "description": "Chapado (plaqué) de oro sobre metal común o sobre plata, en bruto o semilabrado"
+        },
+        {
+          "code": "7109.00.00",
+          "description": "000J CHAPADO (PLAQUE) DE ORO SOBRE METAL COMÚN O SOBRE PLATA, EN BRUTO O SEMILABRADO. 12.00 12.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7110",
+      "description": "PLATINO EN BRUTO, SEMILABRADO O EN POLVO",
+      "subheadings": [
+        {
+          "code": "7110.1",
+          "description": "Platino:"
+        },
+        {
+          "code": "7110.11.00",
+          "description": "En bruto o en polvo"
+        },
+        {
+          "code": "7110.11.00",
+          "description": "100V Que contenga plata 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7110.11.00",
+          "description": "900N Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7110.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "7110.19.10",
+          "description": "Barras, alambre y perfiles de sección maciza"
+        },
+        {
+          "code": "7110.19.10",
+          "description": "000V Barras, alambre y perfiles de sección maciza 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7110.19.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7110.19.90",
+          "description": "000Y Los demás 12.00 12.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7110.2",
+          "description": "Paladio:"
+        },
+        {
+          "code": "7110.21.00",
+          "description": "En bruto o en polvo"
+        },
+        {
+          "code": "7110.21.00",
+          "description": "000D --En bruto o en polvo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7110.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7110.29.00",
+          "description": "000Z --Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7110.3",
+          "description": "Rodio:"
+        },
+        {
+          "code": "7110.31.00",
+          "description": "En bruto o en polvo"
+        },
+        {
+          "code": "7110.31.00",
+          "description": "000T --En bruto o en polvo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7110.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7110.39.00",
+          "description": "000N --Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7110.4",
+          "description": "Iridio, osmio y rutenio:"
+        },
+        {
+          "code": "7110.41.00",
+          "description": "En bruto o en polvo"
+        },
+        {
+          "code": "7110.41.00",
+          "description": "000G --En bruto o en polvo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7110.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7110.49.00",
+          "description": "000C --Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7111",
+      "description": "CHAPADO (PLAQUÉ) DE PLATINO SOBRE METAL COMÚN, PLATA U ORO, EN BRUTO O SEMILABRADO",
+      "subheadings": [
+        {
+          "code": "7111.00.00",
+          "description": "Chapado (plaqué) de platino sobre metal común, plata u oro, en bruto o semilabrado"
+        },
+        {
+          "code": "7111.00.00",
+          "description": "000G CHAPADO (PLAQUE) DE PLATINO SOBRE METAL COMÚN, PLATA U ORO, EN BRUTO O SEMILABRADO. 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7112",
+      "description": "DESPERDICIOS Y DESECHOS, DE METAL PRECIOSO O DE CHAPADO DE METAL PRECIOSO (PLAQUÉ);",
+      "subheadings": [
+        {
+          "code": "7112.30",
+          "description": "Cenizas que contengan metal precioso o compuestos de metal precioso"
+        },
+        {
+          "code": "7112.30.10",
+          "description": "Que contengan oro, sin otro metal precioso"
+        },
+        {
+          "code": "7112.30.10",
+          "description": "000C Que contengan oro, sin otro metal precioso 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7112.30.20",
+          "description": "Que contengan platino, sin otro metal precioso"
+        },
+        {
+          "code": "7112.30.20",
+          "description": "000M Que contengan platino, sin otro metal precioso 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7112.30.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7112.30.90",
+          "description": "100L Que contengan plata, sin otro metal precioso 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7112.30.90",
+          "description": "900E Las demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7112.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "7112.91.00",
+          "description": "De oro o de chapado (plaqué) de oro, excepto las barreduras que contengan otro metal precioso"
+        },
+        {
+          "code": "7112.91.00",
+          "description": "000P --De oro o de chapado (plaque) de oro, excepto las barreduras que contengan otro metal precioso 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7112.92.00",
+          "description": "De platino o de chapado (plaqué) de platino, excepto las barreduras que contengan otro metal precioso"
+        },
+        {
+          "code": "7112.92.00",
+          "description": "000B --De platino o de chapado (plaque) de platino, excepto las barreduras que contengan otro metal precioso 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7112.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7112.99.00",
+          "description": "100Q De plata o de chapado (plaque) de plata, excepto las barreduras que contengan otro metal precioso 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7112.99.00",
+          "description": "900J Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7113",
+      "description": "ARTÍCULOS DE JOYERÍA Y SUS PARTES, DE METAL PRECIOSO O DE CHAPADO DE METAL PRECIOSO",
+      "subheadings": [
+        {
+          "code": "7113.1",
+          "description": "De metal precioso, incluso revestido o chapado de metal precioso (plaqué):"
+        },
+        {
+          "code": "7113.11.00",
+          "description": "De plata, incluso revestida o chapada de otro metal precioso (plaqué)"
+        },
+        {
+          "code": "7113.11.00",
+          "description": "De plata"
+        },
+        {
+          "code": "7113.11.00",
+          "description": "110D Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.11.00",
+          "description": "190E Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.11.00",
+          "description": "Revestida o chapada con oro"
+        },
+        {
+          "code": "7113.11.00",
+          "description": "210J Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.11.00",
+          "description": "290K Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.11.00",
+          "description": "Revestida o chapada con platino"
+        },
+        {
+          "code": "7113.11.00",
+          "description": "310P Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.11.00",
+          "description": "390Q Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.19.00",
+          "description": "De los demás metales preciosos, incluso revestidos o chapados de metal precioso (plaqué)"
+        },
+        {
+          "code": "7113.19.00",
+          "description": "De oro"
+        },
+        {
+          "code": "7113.19.00",
+          "description": "110Z Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.19.00",
+          "description": "190A Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.19.00",
+          "description": "Revestida o chapada con platino"
+        },
+        {
+          "code": "7113.19.00",
+          "description": "210E Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.19.00",
+          "description": "290F Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.19.00",
+          "description": "De platino"
+        },
+        {
+          "code": "7113.19.00",
+          "description": "310K Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.19.00",
+          "description": "390L Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.20.00",
+          "description": "De chapado de metal precioso (plaqué) sobre metal común"
+        },
+        {
+          "code": "7113.20.00",
+          "description": "De chapado (plaque) de plata"
+        },
+        {
+          "code": "7113.20.00",
+          "description": "110F Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.20.00",
+          "description": "190G Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.20.00",
+          "description": "De chapado (plaque) de oro"
+        },
+        {
+          "code": "7113.20.00",
+          "description": "210L Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.20.00",
+          "description": "290M Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.20.00",
+          "description": "De chapado (plaque) de platino"
+        },
+        {
+          "code": "7113.20.00",
+          "description": "310R Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7113.20.00",
+          "description": "390T Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7114",
+      "description": "ARTÍCULOS DE ORFEBRERÍA Y SUS PARTES, DE METAL PRECIOSO O DE CHAPADO DE METAL PRECIOSO",
+      "subheadings": [
+        {
+          "code": "7114.1",
+          "description": "De metal precioso, incluso revestido o chapado de metal precioso (plaqué):"
+        },
+        {
+          "code": "7114.11.00",
+          "description": "De plata, incluso revestida o chapada de otro metal precioso (plaqué)"
+        },
+        {
+          "code": "7114.11.00",
+          "description": "De plata"
+        },
+        {
+          "code": "7114.11.00",
+          "description": "110X Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.11.00",
+          "description": "190Y Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.11.00",
+          "description": "Revestida o chapada con oro"
+        },
+        {
+          "code": "7114.11.00",
+          "description": "210C Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.11.00",
+          "description": "290D Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.11.00",
+          "description": "Revestida o chapada con platino"
+        },
+        {
+          "code": "7114.11.00",
+          "description": "310H Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.11.00",
+          "description": "390J Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.19.00",
+          "description": "De los demás metales preciosos, incluso revestidos o chapados de metal precioso (plaqué)"
+        },
+        {
+          "code": "7114.19.00",
+          "description": "De oro"
+        },
+        {
+          "code": "7114.19.00",
+          "description": "110T Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.19.00",
+          "description": "190U Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.19.00",
+          "description": "Revestida o chapada con platino"
+        },
+        {
+          "code": "7114.19.00",
+          "description": "210Y Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.19.00",
+          "description": "290Z Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.19.00",
+          "description": "De platino"
+        },
+        {
+          "code": "7114.19.00",
+          "description": "310D Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.19.00",
+          "description": "390E Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.20.00",
+          "description": "De chapado de metal precioso (plaqué) sobre metal común"
+        },
+        {
+          "code": "7114.20.00",
+          "description": "De chapado (plaque) de plata"
+        },
+        {
+          "code": "7114.20.00",
+          "description": "110Z Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.20.00",
+          "description": "190A Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.20.00",
+          "description": "De chapado (plaque) de oro"
+        },
+        {
+          "code": "7114.20.00",
+          "description": "210E Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.20.00",
+          "description": "290F Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.20.00",
+          "description": "De chapado (plaque) de platino"
+        },
+        {
+          "code": "7114.20.00",
+          "description": "310K Sin combinar con otras materias 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7114.20.00",
+          "description": "390L Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7115",
+      "description": "LAS DEMÁS MANUFACTURAS DE METAL PRECIOSO O DE CHAPADO DE METAL PRECIOSO (PLAQUÉ)",
+      "subheadings": [
+        {
+          "code": "7115.10.00",
+          "description": "Catalizadores de platino en forma de tela o enrejado"
+        },
+        {
+          "code": "7115.10.00",
+          "description": "000V -Catalizadores de platino en forma de tela o enrejado 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7115.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7115.90.00",
+          "description": "100N Para uso tecnico o de laboratorio 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7115.90.00",
+          "description": "900G Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7116",
+      "description": "MANUFACTURAS DE PERLAS NATURALES (FINAS)* O CULTIVADAS, DE PIEDRAS PRECIOSAS O",
+      "subheadings": [
+        {
+          "code": "7116.10.00",
+          "description": "De perlas naturales (finas)* o cultivadas"
+        },
+        {
+          "code": "7116.10.00",
+          "description": "000N -De perlas finas (naturales)* o cultivadas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7116.20",
+          "description": "De piedras preciosas o semipreciosas (naturales, sintéticas o reconstituidas)"
+        },
+        {
+          "code": "7116.20.10",
+          "description": "De diamantes sintéticos"
+        },
+        {
+          "code": "7116.20.10",
+          "description": "000M De diamantes sinteticos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7116.20.20",
+          "description": "Guías de agujas, de rubí, para cabezales de impresión"
+        },
+        {
+          "code": "7116.20.20",
+          "description": "000X Guías de agujas, de rubí, para cabezales de impresión 0.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7116.20.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7116.20.90",
+          "description": "100W De piedras preciosas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7116.20.90",
+          "description": "200B De piedras semipreciosas 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7117",
+      "description": "BISUTERÍA",
+      "subheadings": [
+        {
+          "code": "7117.1",
+          "description": "De metal común, incluso plateado, dorado o platinado:"
+        },
+        {
+          "code": "7117.11.00",
+          "description": "Gemelos y pasadores similares"
+        },
+        {
+          "code": "7117.11.00",
+          "description": "000U --Gemelos y pasadores similares 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7117.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7117.19.00",
+          "description": "000P --Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7117.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7117.90.00",
+          "description": "000V -Las demás 18.00 35.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7118",
+      "description": "MONEDAS",
+      "subheadings": [
+        {
+          "code": "7118.10",
+          "description": "Monedas sin curso legal, excepto las de oro"
+        },
+        {
+          "code": "7118.10.10",
+          "description": "Destinadas a tener curso legal en el país importador"
+        },
+        {
+          "code": "7118.10.10",
+          "description": "000K Destinadas a tener curso legal en el país importador 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7118.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7118.10.90",
+          "description": "000N Las demás 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7118.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7118.90.00",
+          "description": "000N -Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 228
+}

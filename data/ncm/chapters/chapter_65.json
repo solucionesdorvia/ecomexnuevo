@@ -1,0 +1,845 @@
+{
+  "chapter": "65",
+  "title": "Capítulo 65",
+  "sectionTitle": "CAP. 65 SECCION XII CALZADO, SOMBREROS Y DEMAS TOCADOS, PARAGUAS, QUITASOLES, BASTONES, LATIGOS, FUSTAS, Y SUS PARTES; P",
+  "headings": [
+    {
+      "code": "6501",
+      "description": "CASCOS SIN AHORMADO NI PERFILADO DEL ALA, PLATOS (DISCOS) Y CILINDROS AUNQUE ESTÉN",
+      "subheadings": [
+        {
+          "code": "6501.00.00",
+          "description": "Cascos sin ahormado ni perfilado del ala, platos (discos) y cilindros aunque estén cortados en el sentido de la altura,"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "Cascos"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "De lana"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "111P Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "119G Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "De pelo fino"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "121T Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "129K Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "De las demás materias"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "191Q Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "199H Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "Platos (discos)"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "211V Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "219M Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "221Y Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "229Q Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "291W Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "299N Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "Cilindros"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "311A Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "319T Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "321D Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "329W Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "391B Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6501.00.00",
+          "description": "399U Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        }
+      ]
+    },
+    {
+      "code": "6502",
+      "description": "CASCOS PARA SOMBREROS, TRENZADOS O FABRICADOS POR UNIÓN DE TIRAS DE CUALQUIER MATERIA,",
+      "subheadings": [
+        {
+          "code": "6502.00.10",
+          "description": "De paja fina (manila, panamá y similares)"
+        },
+        {
+          "code": "6502.00.10",
+          "description": "Teñidos"
+        },
+        {
+          "code": "6502.00.10",
+          "description": "110Q De Toquilla o Mocora 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.10",
+          "description": "190R Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "6502.00.10",
+          "description": "910J De Toquilla o Mocora 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.10",
+          "description": "990K Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "Trenzados"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "De cuero natural"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "111W Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "119N Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "De junco"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "121Z Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "129R Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "De rafia"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "131C Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "139V Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "De ramio"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "141F Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "149Y Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "De cañamo"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "151J Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "159B Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "De sisal"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "161M Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "169E Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "De las demás materias"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "191X Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "199P Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "Fabricados por unión de tiras"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "De materias textiles"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "211B Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "219U Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "291C Teñidos 18.00 18.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "6502.00.90",
+          "description": "299V Los demás 18.00 18.00 3.00 LNA 3.00 6.50"
+        }
+      ]
+    },
+    {
+      "code": "6504",
+      "description": "SOMBREROS Y DEMÁS TOCADOS, TRENZADOS O FABRICADOS POR UNIÓN DE TIRAS DE CUALQUIER",
+      "subheadings": [
+        {
+          "code": "6504.00.10",
+          "description": "De paja fina (manila, panamá y similares)"
+        },
+        {
+          "code": "6504.00.10",
+          "description": "Sombreros"
+        },
+        {
+          "code": "6504.00.10",
+          "description": "Sin ornamentar"
+        },
+        {
+          "code": "6504.00.10",
+          "description": "111E Teñidos 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.10",
+          "description": "119X Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "6504.00.10",
+          "description": "121H Teñidos 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.10",
+          "description": "129A Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.10",
+          "description": "Los demás tocados"
+        },
+        {
+          "code": "6504.00.10",
+          "description": "211K Teñidos 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.10",
+          "description": "219C Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.10",
+          "description": "221N Teñidos 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.10",
+          "description": "229F Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "Trenzados"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "De cuero natural"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "111H Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "119A Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "De junco"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "121L Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "129D Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "De rafia"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "131P Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "139G Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "De ramio"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "141T Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "149K Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "De cañamo"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "151W Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "159N Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "De sisal"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "161Z Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "169R Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "De las demás materias"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "191J Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "199B Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "Fabricados por unión de tiras"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "De materias textiles"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "211N Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "219F Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "291P Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6504.00.90",
+          "description": "299G Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6505",
+      "description": "SOMBREROS Y DEMÁS TOCADOS, DE PUNTO O CONFECCIONADOS CON ENCAJE, FIELTRO U OTRO",
+      "subheadings": [
+        {
+          "code": "6505.00.11",
+          "description": "De algodón"
+        },
+        {
+          "code": "6505.00.11",
+          "description": "100A Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.11",
+          "description": "200F Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.12",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6505.00.12",
+          "description": "100H Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.12",
+          "description": "200N Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.19",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6505.00.19",
+          "description": "100L Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.19",
+          "description": "200R Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.21",
+          "description": "De algodón"
+        },
+        {
+          "code": "6505.00.21",
+          "description": "100K Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.21",
+          "description": "200Q Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.22",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6505.00.22",
+          "description": "100T Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.22",
+          "description": "Sin ornamentar"
+        },
+        {
+          "code": "6505.00.22",
+          "description": "210B Descartables 20.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.22",
+          "description": "290C Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.29",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6505.00.29",
+          "description": "100W Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.29",
+          "description": "200B Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.31",
+          "description": "De algodón"
+        },
+        {
+          "code": "6505.00.31",
+          "description": "100V Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.31",
+          "description": "200A Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.32",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6505.00.32",
+          "description": "100C Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.32",
+          "description": "200H Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.39",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6505.00.39",
+          "description": "100F Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.39",
+          "description": "200L Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "Redecillas para el cabello"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "110Z De poliamidas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "120C De cabello 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "190A Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "Boinas y similares"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "De algodón"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "211G Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "212J Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "De fibras sinteticas o artificiales"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "221K Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "222M Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "291H Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "292K Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "911V Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "912X Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "De fibras sinteticas o artificiales, excepto descartables."
+        },
+        {
+          "code": "6505.00.90",
+          "description": "921Y Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "922A Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "930Z Los demas, de fibras sinteticas o artificiales, descartables. 20.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "991W Ornamentados 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6505.00.90",
+          "description": "992Y Sin ornamentar 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6506",
+      "description": "LOS DEMÁS SOMBREROS Y TOCADOS, INCLUSO GUARNECIDOS",
+      "subheadings": [
+        {
+          "code": "6506.10.00",
+          "description": "Cascos de seguridad"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "100Q Cascos a prueba de bala (R.3115/94 ex-ANA) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "Para automovilismo o motociclismo, abiertos"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "De plástico"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "211B Reforzado con fibras de vidrio 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "212D Reforzado con fibras de carbono 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "219U Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "290A De las demás materias 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "Para automovilismo o motociclismo, cerrados"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "311G Reforzado con fibras de vidrio 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "312J Reforzado con fibras de carbono 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "319Z Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "390F De las demás materias 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "Para automovilismo o motociclismo, mixtos"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "411M Reforzado con fibras de vidrio 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "412P Reforzado con fibras de carbono 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "419E Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "490L De las demás materias 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "Para ciclismo"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "511T Reforzado con fibras de vidrio 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "512V Reforzado con fibras de carbono 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "519K Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "590R De las demás materias 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "Para la práctica de otros deportes"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "611Y Reforzado con fibras de vidrio 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "612A Reforzado con fibras de carbono 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "619Q Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "690X De las demás materias 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "910M De plástico 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.10.00",
+          "description": "990N De las demás materias 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "6506.91.00",
+          "description": "De caucho o plástico"
+        },
+        {
+          "code": "6506.91.00",
+          "description": "De caucho"
+        },
+        {
+          "code": "6506.91.00",
+          "description": "110U Gorros de baño 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.91.00",
+          "description": "190V Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.91.00",
+          "description": "De plástico"
+        },
+        {
+          "code": "6506.91.00",
+          "description": "210Z Gorros de baño 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.91.00",
+          "description": "290A Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.99.00",
+          "description": "De las demás materias"
+        },
+        {
+          "code": "6506.99.00",
+          "description": "100L Sombreros 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6506.99.00",
+          "description": "900E Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6507",
+      "description": "DESUDADORES, FORROS, FUNDAS, ARMADURAS, VISERAS Y BARBOQUEJOS (BARBIJOS), PARA",
+      "subheadings": [
+        {
+          "code": "6507.00.00",
+          "description": "Desudadores, forros, fundas, armaduras, viseras y barboquejos (barbijos), para sombreros y demás tocados"
+        },
+        {
+          "code": "6507.00.00",
+          "description": "000P DESUDADORES, FORROS, FUNDAS, ARMADURAS, VISERAS Y BARBOQUEJOS (BARBIJOS), PARA"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LNA 3.00 5.00",
+      "subheadings": []
+    }
+  ],
+  "_rowCount": 223
+}

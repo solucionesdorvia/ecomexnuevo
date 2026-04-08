@@ -1,0 +1,585 @@
+{
+  "chapter": "22",
+  "title": "Capítulo 22",
+  "sectionTitle": "CAP. 22 SECCION IV PRODUCTOS DE LAS INDUSTRIAS ALIMENTARIAS; BEBIDAS, LIQUIDOS ALCOHOLICOS Y VINAGRE; TABACO Y SUCEDANEO",
+  "headings": [
+    {
+      "code": "2201",
+      "description": "AGUA, INCLUIDAS EL AGUA MINERAL NATURAL O ARTIFICIAL Y LA GASEADA, SIN ADICIÓN DE AZÚCAR U",
+      "subheadings": [
+        {
+          "code": "2201.10.00",
+          "description": "Agua mineral y agua gaseada"
+        },
+        {
+          "code": "2201.10.00",
+          "description": "Agua mineral, incluso gaseada (R.2289/92 ex-ANA)"
+        },
+        {
+          "code": "2201.10.00",
+          "description": "110X En envases inmediatos de contenido inferior o igual a 0,5 l 20.00 20.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "2201.10.00",
+          "description": "120A En envases inmediatos de contenido superior a 0,5 l pero inferior o igual a 2 l 20.00 20.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "2201.10.00",
+          "description": "190Y Las demás 20.00 20.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "2201.10.00",
+          "description": "900M Las demás 20.00 20.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "2201.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2201.90.00",
+          "description": "000B -Los demás 20.00 20.00 3.00 LA 4.50 1.00"
+        }
+      ]
+    },
+    {
+      "code": "2202",
+      "description": "AGUA, INCLUIDAS EL AGUA MINERAL Y LA GASEADA, CON ADICIÓN DE AZÚCAR U OTRO EDULCORANTE O",
+      "subheadings": [
+        {
+          "code": "2202.10.00",
+          "description": "Agua, incluidas el agua mineral y la gaseada, con adición de azúcar u otro edulcorante o aromatizada"
+        },
+        {
+          "code": "2202.10.00",
+          "description": "Con un 10 % como mínimo de jugos o zumos de frutas -filtrados o no- o su equivalente en jugos concentrados o con un"
+        },
+        {
+          "code": "2202.10.00",
+          "description": "110Q En latas de contenido inferior o igual a 0,5 l 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2202.10.00",
+          "description": "190R Las demás 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2202.10.00",
+          "description": "200T Agua mineral aromatizada o saborizada, incluso gaseada, en los terminos del art. 944 bis del C.A.A.(R.2289/92 ex-"
+        }
+      ]
+    },
+    {
+      "code": "2000",
+      "description": "20.00 3.00 LA 4.50 2.50",
+      "subheadings": []
+    },
+    {
+      "code": "2000",
+      "description": "35.00 3.00 LNA 4.50 2.50",
+      "subheadings": []
+    },
+    {
+      "code": "2203",
+      "description": "CERVEZA DE MALTA",
+      "subheadings": [
+        {
+          "code": "2203.00.00",
+          "description": "Cerveza de malta"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "Cerveza clara (blanca), de grado alcahólico volumetrico superior a 1.2 % vol"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "110V A granel 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "En latas"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "121A De contenido superior o igual a 350 cm3 pero inferior o igual a 360 cm3 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "122C De contenido superior o igual a 470 cm3 pero inferior o igual a 480 cm3 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "129T Las demás 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "En botellas"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "131D De contenido superior o igual a 350 cm3 pero inferior o igual a 360 cm3 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "132F De contenido superior o igual a 600 cm3 pero inferior o igual a 650 cm3 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "133H De contenido superior o igual a 950 cm3 pero inferior o igual a 1000 cm3 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "139W Las demás 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "En barriles"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "141G De contenido inferior o igual a 5 l 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "142J De contenido superior a 5 l pero inferior o igual a 20 l 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "143L De contenido superior a 20 l pero inferior o igual a 30 l 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "144N De contenido superior a 30 l pero inferior o igual a 50 l 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "149Z Las demás 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "Los demás, de grado alcohólico volumetrico superior a 1.2 % vol"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "210A En latas 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "220D En botellas 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "290B Las demás 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "910N En latas 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "920R En botellas 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "2203.00.00",
+          "description": "990P Las demás 20.00 20.00 3.00 LNA 4.50 3.25"
+        }
+      ]
+    },
+    {
+      "code": "2204",
+      "description": "VINO DE UVAS FRESCAS, INCLUSO ENCABEZADO; MOSTO DE UVA, EXCEPTO EL DE LA PARTIDA 2009",
+      "subheadings": [
+        {
+          "code": "2204.10",
+          "description": "Vino espumoso"
+        },
+        {
+          "code": "2204.10.10",
+          "description": "Tipo champaña (champagne)"
+        },
+        {
+          "code": "2204.10.10",
+          "description": "000D Tipo champaña (champagne) 20.00 35.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "2204.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2204.10.90",
+          "description": "100M Gaseados (gasificados según Res N° C.1-03 (INV) 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.10.90",
+          "description": "900F Los demás 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.2",
+          "description": "Los demás vinos; mosto de uva en el que la fermentación se ha impedido o cortado añadiendo alcohol:"
+        },
+        {
+          "code": "2204.21.00",
+          "description": "En recipientes con capacidad inferior o igual a 2 l"
+        },
+        {
+          "code": "2204.21.00",
+          "description": "100A Mistelas de grado alcoholico volumetrico igual a 16,7 % vol (18 % vol medidos a 15°C) (R.192 AFIP) 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.21.00",
+          "description": "200F Vino varietal (vino fino) o vino calidad preferente (R.C19/04 INV) 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.21.00",
+          "description": "900U Los demás 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.22",
+          "description": "En recipientes con capacidad superior a 2 l pero inferior o igual a 10 l"
+        },
+        {
+          "code": "2204.22.11",
+          "description": "En recipientes con capacidad inferior o igual a 5 l"
+        },
+        {
+          "code": "2204.22.11",
+          "description": "100E Vino varietal (vino fino) o vino calidad preferente (R.C. 19/04 INV) 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.22.11",
+          "description": "900Y Los demás 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.22.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "2204.22.19",
+          "description": "100Q Vino varietal (vino fino) o vino calidad preferente (R.C. 19/04 INV) 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.22.19",
+          "description": "900J Los demas 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.22.20",
+          "description": "Mostos"
+        },
+        {
+          "code": "2204.22.20",
+          "description": "100G Mistelas de grado alcoholico volumetrico igual a 16,7 % vol (18% vol medidos a 15° C) (R. 192 AFIP) 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.22.20",
+          "description": "900A Los demas 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "2204.29.10",
+          "description": "Vinos"
+        },
+        {
+          "code": "2204.29.10",
+          "description": "100F Vino varietal (vino fino) o vino calidad preferente (R.C. 19/04 INV) 20.00 20.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "2204.29.10",
+          "description": "900Z Los demas 20.00 20.00 3.00 LNA 4.50 7.00"
+        },
+        {
+          "code": "2204.29.20",
+          "description": "Mostos"
+        },
+        {
+          "code": "2204.29.20",
+          "description": "100Q Mistelas de grado alcoholico volumetrico igual a 16,7 % vol (18 % vol medidos a 15°C) (R. 192 AFIP) 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.29.20",
+          "description": "900J Los demás 20.00 20.00 3.00 LA 4.50 7.00"
+        },
+        {
+          "code": "2204.30.00",
+          "description": "Los demás mostos de uva"
+        },
+        {
+          "code": "2204.30.00",
+          "description": "000X -Los demás mostos de uva 20.00 20.00 3.00 LA 4.50 5.00"
+        }
+      ]
+    },
+    {
+      "code": "2205",
+      "description": "VERMUT Y DEMÁS VINOS DE UVAS FRESCAS PREPARADOS CON PLANTAS O SUSTANCIAS AROMÁTICAS",
+      "subheadings": [
+        {
+          "code": "2205.10.00",
+          "description": "En recipientes con capacidad inferior o igual a 2 l"
+        },
+        {
+          "code": "2205.10.00",
+          "description": "100T Espumoso frutado natural según Res N° C.1-03 (INV) 20.00 20.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "2205.10.00",
+          "description": "900L Los demás 20.00 20.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "2205.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2205.90.00",
+          "description": "100F Espumoso frutado natural según Res N° C.1-03 (INV) 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2205.90.00",
+          "description": "900Z Los demás 20.00 20.00 3.00 LA 4.50 2.50"
+        }
+      ]
+    },
+    {
+      "code": "2206",
+      "description": "LAS DEMÁS BEBIDAS FERMENTADAS (POR EJEMPLO: SIDRA, PERADA, AGUAMIEL, SAKE); MEZCLAS DE",
+      "subheadings": [
+        {
+          "code": "2206.00.10",
+          "description": "Sidra"
+        },
+        {
+          "code": "2206.00.10",
+          "description": "000B Sidra 20.00 20.00 3.00 LA 4.50 4.75"
+        },
+        {
+          "code": "2206.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "2206.00.90",
+          "description": "100K Espumoso frutado natural según Res N° C.1-03 (INV) 20.00 20.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "2206.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2206.00.90",
+          "description": "910G Bebidas de grado alcoholico volumetrico inferior a 9,3 % vol (10 % vol medidos a 15° C) pero superior a 3,4 % vol (4 %"
+        }
+      ]
+    },
+    {
+      "code": "2000",
+      "description": "20.00 3.00 LA 4.50 3.00",
+      "subheadings": []
+    },
+    {
+      "code": "2207",
+      "description": "ALCOHOL ETÍLICO SIN DESNATURALIZAR CON GRADO ALCOHÓLICO VOLUMÉTRICO SUPERIOR O IGUAL AL",
+      "subheadings": [
+        {
+          "code": "2207.10",
+          "description": "Alcohol etílico sin desnaturalizar con grado alcohólico volumétrico superior o igual al 80 % vol"
+        },
+        {
+          "code": "2207.10.10",
+          "description": "Con un contenido de agua inferior o igual a 1 % vol"
+        },
+        {
+          "code": "2207.10.10",
+          "description": "000J Con un contenido de agua inferior o igual a 1 % vol. 20.00 0.00 0.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2207.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2207.10.90",
+          "description": "000M Los demas 20.00 0.00 0.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2207.20",
+          "description": "Alcohol etílico y aguardiente desnaturalizados, de cualquier graduación"
+        },
+        {
+          "code": "2207.20.11",
+          "description": "Con un contenido de agua inferior o igual a 1 % vol"
+        },
+        {
+          "code": "2207.20.11",
+          "description": "000F Con un contenido de agua inferior o igual a 1 % vol. 20.00 20.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2207.20.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "2207.20.19",
+          "description": "000R Los demas 20.00 0.00 0.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2207.20.20",
+          "description": "Aguardiente"
+        },
+        {
+          "code": "2207.20.20",
+          "description": "000H Aguardiente 20.00 20.00 3.00 LA 4.50 1.25"
+        }
+      ]
+    },
+    {
+      "code": "2208",
+      "description": "ALCOHOL ETÍLICO SIN DESNATURALIZAR CON GRADO ALCOHÓLICO VOLUMÉTRICO INFERIOR AL 80 % VOL;",
+      "subheadings": [
+        {
+          "code": "2208.20.00",
+          "description": "Aguardiente de vino o de orujo de uvas"
+        },
+        {
+          "code": "2208.20.00",
+          "description": "100M Brandi, cognac y pisco (R.2289/92 ex-ANA) 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2208.20.00",
+          "description": "900F Los demás (Segunda clase) (R.2289/92 ex-ANA) 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2208.30",
+          "description": "Whisky"
+        },
+        {
+          "code": "2208.30.10",
+          "description": "Con grado alcohólico volumétrico superior al 50 % vol, en recipientes con capacidad superior o igual a 50 l"
+        },
+        {
+          "code": "2208.30.10",
+          "description": "000F Con grado alcohólico volumetrico superior al 50 % vol, en recipientes con capacidad superior o igual a 50 l 12.00 6.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2208.30.20",
+          "description": "En recipientes con capacidad inferior o igual a 2 l"
+        },
+        {
+          "code": "2208.30.20",
+          "description": "000Q En recipientes con capacidad inferior o igual a 2 l 20.00 20.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "2208.30.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2208.30.90",
+          "description": "000J Los demás 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2208.40.00",
+          "description": "Ron y demás aguardientes procedentes de la destilación, previa fermentación, de productos de la caña de azúcar"
+        },
+        {
+          "code": "2208.40.00",
+          "description": "Ron"
+        },
+        {
+          "code": "2208.40.00",
+          "description": "110U De grado alcohólico volumetrico superior a 54 % vol (aguardiente concentrado), en recipientes con capacidad superior"
+        },
+        {
+          "code": "2208.40.00",
+          "description": "190V Los demás 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2208.40.00",
+          "description": "200W Los demás aguardientes procedentes de la destilación, previa fermentación, de productos de la caña de azúcar 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2208.50.00",
+          "description": "Gin y ginebra"
+        },
+        {
+          "code": "2208.50.00",
+          "description": "000Z -Gin y ginebra 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2208.60.00",
+          "description": "Vodka"
+        },
+        {
+          "code": "2208.60.00",
+          "description": "000N -Vodka 20.00 20.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2208.70.00",
+          "description": "Licores"
+        },
+        {
+          "code": "2208.70.00",
+          "description": "100H De grado alcohólico volumetrico superior o igual a 28 % vol (30 % vol medidos a 15° C), (Segunda clase). (R.2289/92"
+        },
+        {
+          "code": "2208.70.00",
+          "description": "200N De grado alcohólico volumetrico superior o igual a 9,3 % vol (10 % vol medidos a 15° C) pero inferior a 28 % vol (30 %"
+        },
+        {
+          "code": "2208.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2208.90.00",
+          "description": "Tequila (R.2289/92 ex-ANA)"
+        },
+        {
+          "code": "2208.90.00",
+          "description": "110P De grado alcohólico volumetrico superior a 54 % vol (aguardiente concentrado), en recipientes con capacidad superior"
+        },
+        {
+          "code": "2208.90.00",
+          "description": "190Q Los demás 20.00 20.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "2208.90.00",
+          "description": "200R Las demás bebidas de grado alcohólico volumetrico superior o igual a 28 % vol (30 % vol medidos a 15° C), (segunda"
+        },
+        {
+          "code": "2208.90.00",
+          "description": "300X Las demás bebidas de grado alcohólico volumetrico superior o igual a 9,3 % vol (10 % vol medidos 15° C) pero inferior"
+        },
+        {
+          "code": "2208.90.00",
+          "description": "400C Las demás bebidas de grado alcohólico volumetrico inferior o igual a 3,4 % vol (4 % vol medidos a 15° C) (R.2289/92"
+        },
+        {
+          "code": "2208.90.00",
+          "description": "910H Alcohol etílico sin desnaturalizar con grado alcohólico volumetrico inferior a 80 % vol 20.00 20.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "2208.90.00",
+          "description": "920L Soluciones acuosas de alcohol etílico de cualquier origen, que no presenten cantidades detectables de extractos de"
+        },
+        {
+          "code": "2208.90.00",
+          "description": "990J Los demás 20.00 20.00 3.00 LA 4.50 3.00"
+        }
+      ]
+    },
+    {
+      "code": "2209",
+      "description": "VINAGRE Y SUCEDÁNEOS DEL VINAGRE OBTENIDOS A PARTIR DEL ÁCIDO ACÉTICO",
+      "subheadings": [
+        {
+          "code": "2209.00.00",
+          "description": "Vinagre y sucedáneos del vinagre obtenidos a partir del ácido acético"
+        },
+        {
+          "code": "2209.00.00",
+          "description": "000X VINAGRE Y SUCEDANEOS DEL VINAGRE OBTENIDOS A PARTIR DEL ACIDO ACETICO. 20.00 20.00 3.00 LA 4.50 3.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 172
+}

@@ -1,0 +1,354 @@
+{
+  "chapter": "47",
+  "title": "Capítulo 47",
+  "sectionTitle": "CAP. 47 SECCION X PASTA DE MADERA O DE LAS DEMAS MATERIAS FIBROSAS CELULOSICAS; PAPEL O CARTON PARA RECICLAR (DESPERDICI",
+  "headings": [
+    {
+      "code": "4701",
+      "description": "PASTA MECÁNICA DE MADERA",
+      "subheadings": [
+        {
+          "code": "4701.00.00",
+          "description": "Pasta mecánica de madera"
+        },
+        {
+          "code": "4701.00.00",
+          "description": "100E De pino 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4701.00.00",
+          "description": "200K De abeto 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4701.00.00",
+          "description": "300Q De abedul 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4701.00.00",
+          "description": "900Y Las demás 4.00 4.00 3.00 LA 4.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "4702",
+      "description": "PASTA QUÍMICA DE MADERA PARA DISOLVER",
+      "subheadings": [
+        {
+          "code": "4702.00.00",
+          "description": "Pasta química de madera para disolver"
+        },
+        {
+          "code": "4702.00.00",
+          "description": "100Y De pino 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4702.00.00",
+          "description": "200D De abeto 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4702.00.00",
+          "description": "300J De eucalipto 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4702.00.00",
+          "description": "900R Las demás 4.00 4.00 3.00 LA 4.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "4703",
+      "description": "PASTA QUÍMICA DE MADERA A LA SOSA (SODA) O AL SULFATO, EXCEPTO LA PASTA PARA DISOLVER",
+      "subheadings": [
+        {
+          "code": "4703.1",
+          "description": "Cruda:"
+        },
+        {
+          "code": "4703.11.00",
+          "description": "De coníferas"
+        },
+        {
+          "code": "4703.11.00",
+          "description": "100T De pino 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4703.11.00",
+          "description": "200Y De abeto 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4703.11.00",
+          "description": "300D De abedul 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4703.11.00",
+          "description": "900L Las demás 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4703.19.00",
+          "description": "Distinta de la de coníferas"
+        },
+        {
+          "code": "4703.19.00",
+          "description": "100N De álamo 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4703.19.00",
+          "description": "200U De eucalipto 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4703.19.00",
+          "description": "900G Las demás 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4703.2",
+          "description": "Semiblanqueada o blanqueada:"
+        },
+        {
+          "code": "4703.21.00",
+          "description": "De coníferas"
+        },
+        {
+          "code": "4703.21.00",
+          "description": "100G De pino 4.00 4.00 3.00 LNA 4.00 0.50"
+        },
+        {
+          "code": "4703.21.00",
+          "description": "200M De abeto 4.00 4.00 3.00 LNA 4.00 0.50"
+        },
+        {
+          "code": "4703.21.00",
+          "description": "300T De abedul 4.00 4.00 3.00 LNA 4.00 0.50"
+        },
+        {
+          "code": "4703.21.00",
+          "description": "900A Las demás 4.00 4.00 3.00 LNA 4.00 0.50"
+        },
+        {
+          "code": "4703.29.00",
+          "description": "Distinta de la de coníferas"
+        },
+        {
+          "code": "4703.29.00",
+          "description": "100C De álamo 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4703.29.00",
+          "description": "200H De eucalipto 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4703.29.00",
+          "description": "900W Las demás 4.00 4.00 3.00 LA 4.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "4704",
+      "description": "PASTA QUÍMICA DE MADERA AL SULFITO, EXCEPTO LA PASTA PARA DISOLVER",
+      "subheadings": [
+        {
+          "code": "4704.1",
+          "description": "Cruda:"
+        },
+        {
+          "code": "4704.11.00",
+          "description": "De coníferas"
+        },
+        {
+          "code": "4704.11.00",
+          "description": "100L De pino 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.11.00",
+          "description": "200R De abeto 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.11.00",
+          "description": "300X De abedul 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.11.00",
+          "description": "900E Las demás 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.19.00",
+          "description": "Distinta de la de coníferas"
+        },
+        {
+          "code": "4704.19.00",
+          "description": "100G De álamo 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.19.00",
+          "description": "200M De eucalipto 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.19.00",
+          "description": "900A Las demás 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.2",
+          "description": "Semiblanqueada o blanqueada:"
+        },
+        {
+          "code": "4704.21.00",
+          "description": "De coníferas"
+        },
+        {
+          "code": "4704.21.00",
+          "description": "100A De pino 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.21.00",
+          "description": "200F De abeto 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.21.00",
+          "description": "300L De abedul 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.21.00",
+          "description": "900U Las demás 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.29.00",
+          "description": "Distinta de la de coníferas"
+        },
+        {
+          "code": "4704.29.00",
+          "description": "100W De álamo 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.29.00",
+          "description": "200B De eucalipto 4.00 4.00 3.00 LA 4.00 0.50"
+        },
+        {
+          "code": "4704.29.00",
+          "description": "900P Las demás 4.00 4.00 3.00 LA 4.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "4705",
+      "description": "PASTA DE MADERA OBTENIDA POR LA COMBINACIÓN DE PROCEDIMIENTOS MECÁNICO Y QUÍMICO",
+      "subheadings": [
+        {
+          "code": "4705.00.00",
+          "description": "Pasta de madera obtenida por la combinación de procedimientos mecánico y químico"
+        },
+        {
+          "code": "4705.00.00",
+          "description": "000Y PASTA DE MADERA OBTENIDA POR LA COMBINACIÓN DE TRATAMIENTOS MECÁNICO Y QUÍMICO. 4.00 4.00 3.00 LA 4.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "4706",
+      "description": "PASTA DE FIBRAS OBTENIDAS DE PAPEL O CARTÓN RECICLADO (DESPERDICIOS Y DESECHOS) O DE LAS",
+      "subheadings": [
+        {
+          "code": "4706.10.00",
+          "description": "Pasta de línter de algodón"
+        },
+        {
+          "code": "4706.10.00",
+          "description": "000F -Pasta de línter de algodón 4.00 4.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "4706.20.00",
+          "description": "Pasta de fibras obtenidas de papel o cartón reciclado (desperdicios y desechos)"
+        },
+        {
+          "code": "4706.20.00",
+          "description": "000V -Pasta de fibras obtenidas de papel o cartón reciclado (desperdicios y desechos) 4.00 4.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "4706.30.00",
+          "description": "Las demás, de bambú"
+        },
+        {
+          "code": "4706.30.00",
+          "description": "000J -Las demás, de bambú 4.00 4.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "4706.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "4706.91.00",
+          "description": "Mecánicas"
+        },
+        {
+          "code": "4706.91.00",
+          "description": "100L De bagazo de caña de azúcar 4.00 4.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "4706.91.00",
+          "description": "200R De paja 4.00 4.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "4706.91.00",
+          "description": "900E Las demás 4.00 4.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "4706.92.00",
+          "description": "Químicas"
+        },
+        {
+          "code": "4706.92.00",
+          "description": "100Y De trapos de algodón 4.00 4.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "4706.92.00",
+          "description": "900R Las demás 4.00 4.00 3.00 LA 3.00 0.50"
+        },
+        {
+          "code": "4706.93.00",
+          "description": "Obtenidas por la combinación de procedimientos mecánico y químico"
+        },
+        {
+          "code": "4706.93.00",
+          "description": "000E --Obtenidas por la combinación de procedimientos mecánico y químico 4.00 4.00 3.00 LA 3.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "4707",
+      "description": "PAPEL O CARTÓN PARA RECICLAR (DESPERDICIOS Y DESECHOS)",
+      "subheadings": [
+        {
+          "code": "4707.10.00",
+          "description": "Papel o cartón Kraft crudo o papel o cartón corrugado"
+        },
+        {
+          "code": "4707.10.00",
+          "description": "000Z -Papel o cartón Kraft crudo o papel o cartón corrugado 2.00 2.00 3.00 LA 24.50 0.00"
+        },
+        {
+          "code": "4707.20.00",
+          "description": "Los demás papeles o cartones obtenidos principalmente a partir de pasta química blanqueada sin colorear en la masa"
+        },
+        {
+          "code": "4707.20.00",
+          "description": "000N -Los demás papeles o cartones obtenidos principalmente a partir de pasta química blanqueada sin colorear en la masa 2.00 2.00 3.00 LA 24.50 0.00"
+        },
+        {
+          "code": "4707.30.00",
+          "description": "Papel o cartón obtenido principalmente a partir de pasta mecánica (por ejemplo: diarios, periódicos e impresos"
+        },
+        {
+          "code": "4707.30.00",
+          "description": "000C -Papel o cartón obtenido principalmente a partir de pasta mecánica (por ejemplo: diarios, periódicos e impresos"
+        },
+        {
+          "code": "4707.90.00",
+          "description": "Los demás, incluidos los desperdicios y desechos sin clasificar"
+        },
+        {
+          "code": "4707.90.00",
+          "description": "000M -Los demás, incluidos los desperdicios y desechos sin clasificar 2.00 2.00 3.00 LA 24.50 0.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 83
+}

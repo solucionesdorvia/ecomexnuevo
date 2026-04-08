@@ -1,0 +1,687 @@
+{
+  "chapter": "21",
+  "title": "Capítulo 21",
+  "sectionTitle": "CAP. 21 SECCION IV PRODUCTOS DE LAS INDUSTRIAS ALIMENTARIAS; BEBIDAS, LIQUIDOS ALCOHOLICOS Y VINAGRE; TABACO Y SUCEDANEO",
+  "headings": [
+    {
+      "code": "2101",
+      "description": "EXTRACTOS, ESENCIAS Y CONCENTRADOS DE CAFÉ, TÉ O YERBA MATE Y PREPARACIONES A BASE DE",
+      "subheadings": [
+        {
+          "code": "2101.1",
+          "description": "Extractos, esencias y concentrados de café y preparaciones a base de estos extractos, esencias o concentrados o a"
+        },
+        {
+          "code": "2101.11",
+          "description": "Extractos, esencias y concentrados"
+        },
+        {
+          "code": "2101.11.10",
+          "description": "Café soluble, incluso descafeinado"
+        },
+        {
+          "code": "2101.11.10",
+          "description": "Sin descafeinar"
+        },
+        {
+          "code": "2101.11.10",
+          "description": "110M En envases inmediatos de contenido inferior o igual a 2 kg 16.00 16.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "2101.11.10",
+          "description": "190N Los demás 16.00 16.00 3.00 LNA 4.50 1.75"
+        },
+        {
+          "code": "2101.11.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "2101.11.10",
+          "description": "910F En envases inmediatos de contenido inferior o igual a 1 kg 16.00 16.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "2101.11.10",
+          "description": "990G Los demás 16.00 16.00 3.00 LNA 4.50 1.75"
+        },
+        {
+          "code": "2101.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2101.11.90",
+          "description": "100M En envases inmediatos de contenido inferior o igual a 2 kg 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2101.11.90",
+          "description": "900F Los demás 16.00 16.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "2101.12.00",
+          "description": "Preparaciones a base de extractos, esencias o concentrados o a base de café"
+        },
+        {
+          "code": "2101.12.00",
+          "description": "Cafe torrado"
+        },
+        {
+          "code": "2101.12.00",
+          "description": "En grano"
+        },
+        {
+          "code": "2101.12.00",
+          "description": "111R En envases inmediatos de contenido inferior o igual a 2 kg 16.00 16.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "2101.12.00",
+          "description": "119J Los demás 16.00 16.00 3.00 LNA 4.50 1.75"
+        },
+        {
+          "code": "2101.12.00",
+          "description": "Molido"
+        },
+        {
+          "code": "2101.12.00",
+          "description": "121V En envases inmediatos de contenido inferior o igual a 2 kg 16.00 16.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "2101.12.00",
+          "description": "129M Los demás 16.00 16.00 3.00 LNA 4.50 1.75"
+        },
+        {
+          "code": "2101.12.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "2101.12.00",
+          "description": "910H En envases inmediatos de contenido inferior o igual a 1 kg 16.00 16.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "2101.12.00",
+          "description": "920L En envases de contenido superior a 1 kg e inferior o igual a 2 kg 16.00 16.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "2101.12.00",
+          "description": "990J Las demás 16.00 16.00 3.00 LNA 4.50 1.75"
+        },
+        {
+          "code": "2101.20",
+          "description": "Extractos, esencias y concentrados de té o de yerba mate y preparaciones a base de estos extractos, esencias o"
+        },
+        {
+          "code": "2101.20.10",
+          "description": "De té"
+        },
+        {
+          "code": "2101.20.10",
+          "description": "En envases inmediatos de contenido inferior o igual a 1 kg"
+        },
+        {
+          "code": "2101.20.10",
+          "description": "110P Te soluble 16.00 16.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "2101.20.10",
+          "description": "190Q Los demás 16.00 16.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "2101.20.10",
+          "description": "Los demás."
+        },
+        {
+          "code": "2101.20.10",
+          "description": "910H Te soluble 16.00 16.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "2101.20.10",
+          "description": "990J Los demás 16.00 16.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "2101.20.20",
+          "description": "De yerba mate"
+        },
+        {
+          "code": "2101.20.20",
+          "description": "100W En envases inmediatos de contenido inferior o igual a 1 kg 16.00 16.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "2101.20.20",
+          "description": "900P Los demás. 16.00 16.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "2101.30.00",
+          "description": "Achicoria tostada y demás sucedáneos del café tostados y sus extractos, esencias y concentrados"
+        },
+        {
+          "code": "2101.30.00",
+          "description": "Achicoria tostada"
+        },
+        {
+          "code": "2101.30.00",
+          "description": "110U En envases inmediatos de contenido inferior o igual a 1 kg 14.00 14.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2101.30.00",
+          "description": "190V Los demás 14.00 14.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "2101.30.00",
+          "description": "Extractos, esencias y concentrados de achicoria tostada y de otros sucedáneos del cafe, tostados"
+        },
+        {
+          "code": "2101.30.00",
+          "description": "En envases inmediatos de contenido inferior o igual a 1 kg"
+        },
+        {
+          "code": "2101.30.00",
+          "description": "211B Malta tostada soluble 14.00 14.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2101.30.00",
+          "description": "219U Los demás 14.00 14.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2101.30.00",
+          "description": "290A Los demás 14.00 14.00 3.00 LA 4.50 2.50"
+        }
+      ]
+    },
+    {
+      "code": "2102",
+      "description": "LEVADURAS (VIVAS O MUERTAS); LOS DEMÁS MICROORGANISMOS MONOCELULARES MUERTOS",
+      "subheadings": [
+        {
+          "code": "2102.10",
+          "description": "Levaduras vivas"
+        },
+        {
+          "code": "2102.10.10",
+          "description": "Saccharomyces boulardii"
+        },
+        {
+          "code": "2102.10.10",
+          "description": "000K Saccharomyces boulardii 2.00 2.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2102.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "2102.10.90",
+          "description": "100U Levaduras madres seleccionadas (levaduras de cultivo) 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2102.10.90",
+          "description": "Levaduras para panificación"
+        },
+        {
+          "code": "2102.10.90",
+          "description": "Secas"
+        },
+        {
+          "code": "2102.10.90",
+          "description": "211E En envases inmediatos de contenido inferior o igual a 100 g 14.00 14.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "2102.10.90",
+          "description": "219X Las demás 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2102.10.90",
+          "description": "291F En envases inmediatos de contenido inferior o igual a 100 g 14.00 14.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "2102.10.90",
+          "description": "299Y Las demás 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2102.10.90",
+          "description": "900M Las demás 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2102.20.00",
+          "description": "Levaduras muertas; los demás microorganismos monocelulares muertos"
+        },
+        {
+          "code": "2102.20.00",
+          "description": "Levaduras muertas"
+        },
+        {
+          "code": "2102.20.00",
+          "description": "110Y En envases inmediatos de contenido inferior o igual a 1 kg 14.00 14.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "2102.20.00",
+          "description": "190Z Las demás 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2102.20.00",
+          "description": "900N Los demás 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "2102.30.00",
+          "description": "Polvos preparados para esponjar masas"
+        },
+        {
+          "code": "2102.30.00",
+          "description": "100J En envases inmediatos de contenido inferior o igual a 500 g 14.00 14.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "2102.30.00",
+          "description": "900C Los demás 14.00 14.00 3.00 LA 4.50 1.25"
+        }
+      ]
+    },
+    {
+      "code": "2103",
+      "description": "PREPARACIONES PARA SALSAS Y SALSAS PREPARADAS; CONDIMENTOS Y SAZONADORES, COMPUESTOS;",
+      "subheadings": [
+        {
+          "code": "2103.10",
+          "description": "Salsa de soja (soya)"
+        },
+        {
+          "code": "2103.10.10",
+          "description": "En envases inmediatos de contenido inferior o igual a 1 kg"
+        },
+        {
+          "code": "2103.10.10",
+          "description": "000D En envases inmediatos de contenido inferior o igual a 1 kg 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2103.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "2103.10.90",
+          "description": "000G Las demás 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2103.20",
+          "description": "Kétchup y demás salsas de tomate"
+        },
+        {
+          "code": "2103.20.10",
+          "description": "En envases inmediatos de contenido inferior o igual a 1 kg"
+        },
+        {
+          "code": "2103.20.10",
+          "description": "Kétchup"
+        },
+        {
+          "code": "2103.20.10",
+          "description": "110B En envases inmediatos de contenido inferior o igual a 20 g 18.00 18.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2103.20.10",
+          "description": "120E En envases inmediatos de contenido superior a 20 g pero inferior o igual a 500 g 18.00 18.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2103.20.10",
+          "description": "190C Las demás 18.00 18.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2103.20.10",
+          "description": "Pomarola"
+        },
+        {
+          "code": "2103.20.10",
+          "description": "210G En envases inmediatos de contenido inferior o igual a 500 g 18.00 18.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2103.20.10",
+          "description": "290H Las demás 18.00 18.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2103.20.10",
+          "description": "Las demás"
+        },
+        {
+          "code": "2103.20.10",
+          "description": "910V En envases inmediatos de contenido inferior o igual a 500 g 18.00 18.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2103.20.10",
+          "description": "990W Las demás 18.00 18.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2103.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2103.20.90",
+          "description": "000W Los demás 16.00 16.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2103.30",
+          "description": "Harina de mostaza y mostaza preparada"
+        },
+        {
+          "code": "2103.30.10",
+          "description": "Harina de mostaza"
+        },
+        {
+          "code": "2103.30.10",
+          "description": "000G Harina de mostaza 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2103.30.21",
+          "description": "En envases inmediatos de contenido inferior o igual a 1 kg"
+        },
+        {
+          "code": "2103.30.21",
+          "description": "100E En envases inmediatos de contenido inferior o igual a 20 g 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2103.30.21",
+          "description": "200K En envases inmediatos de contenido superior a 20 g pero inferior o igual a 500 g 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2103.30.21",
+          "description": "900Y Las demás 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2103.30.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "2103.30.29",
+          "description": "000K Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2103.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2103.90.11",
+          "description": "En envases inmediatos de contenido inferior o igual a 1 kg"
+        },
+        {
+          "code": "2103.90.11",
+          "description": "100E En envases inmediatos de contenido inferior o igual a 20 g 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2103.90.11",
+          "description": "200K En envases inmediatos de contenido superior a 20 g pero inferior o igual a 500 g 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2103.90.11",
+          "description": "900Y Las demás 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2103.90.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "2103.90.19",
+          "description": "000K Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2103.90.21",
+          "description": "En envases inmediatos de contenido inferior o igual a 1 kg"
+        },
+        {
+          "code": "2103.90.21",
+          "description": "000J En envases inmediatos de contenido inferior o igual a 1 kg 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2103.90.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "2103.90.29",
+          "description": "000V Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "2103.90.91",
+          "description": "En envases inmediatos de contenido inferior o igual a 1 kg"
+        },
+        {
+          "code": "2103.90.91",
+          "description": "100H En envases inmediatos de contenido inferior o igual a 20 g 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2103.90.91",
+          "description": "200N En envases inmediatos de contenido superior a 20 g pero inferior o igual a 500 g 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2103.90.91",
+          "description": "900B Las demás 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2103.90.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "2103.90.99",
+          "description": "000N Los demás 16.00 16.00 3.00 LA 4.50 3.00"
+        }
+      ]
+    },
+    {
+      "code": "2104",
+      "description": "PREPARACIONES PARA SOPAS, POTAJES O CALDOS; SOPAS, POTAJES O CALDOS, PREPARADOS;",
+      "subheadings": [
+        {
+          "code": "2104.10",
+          "description": "Preparaciones para sopas, potajes o caldos; sopas, potajes o caldos, preparados"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "En envases inmediatos de contenido inferior o igual a 1 kg"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "Secas o desecadas"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "110N De gallina, únicamente 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "120R De hortalizas, únicamente 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "De carne, únicamente"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "131X De la especie bovina 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "139P Las demás 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "Las demás"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "191R De la especie bovina 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "199J Las demás 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "910G De gallina, únicamente 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "920K De hortalizas, únicamente 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "931Q De la especie bovina 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "939H Las demás 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "991K De la especie bovina 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2104.10.11",
+          "description": "999C Las demás 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2104.10.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "2104.10.19",
+          "description": "100W De gallina 16.00 16.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "2104.10.19",
+          "description": "200B De hortalizas 16.00 16.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "2104.10.19",
+          "description": "De carne"
+        },
+        {
+          "code": "2104.10.19",
+          "description": "310K De la especie bovina 16.00 16.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "2104.10.19",
+          "description": "390L Las demás 16.00 16.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "2104.10.19",
+          "description": "900P Los demás 16.00 16.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "2104.10.21",
+          "description": "En envases inmediatos de contenido inferior o igual a 1 kg"
+        },
+        {
+          "code": "2104.10.21",
+          "description": "De carne"
+        },
+        {
+          "code": "2104.10.21",
+          "description": "110Y De la especie bovina 18.00 18.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2104.10.21",
+          "description": "190Z Las demás 18.00 18.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2104.10.21",
+          "description": "900N Los demás 18.00 18.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2104.10.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "2104.10.29",
+          "description": "De carne"
+        },
+        {
+          "code": "2104.10.29",
+          "description": "110J De la especie bovina 16.00 16.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2104.10.29",
+          "description": "190K Las demás 16.00 16.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2104.10.29",
+          "description": "900Z Los demás 16.00 16.00 3.00 LA 4.50 3.50"
+        },
+        {
+          "code": "2104.20.00",
+          "description": "Preparaciones alimenticias compuestas homogeneizadas"
+        },
+        {
+          "code": "2104.20.00",
+          "description": "000B -Preparaciones alimenticias compuestas homogeneizadas 16.00 16.00 3.00 LA 4.50 2.50"
+        }
+      ]
+    },
+    {
+      "code": "2105",
+      "description": "HELADOS, INCLUSO CON CACAO",
+      "subheadings": [
+        {
+          "code": "2105.00.10",
+          "description": "En envases inmediatos de contenido inferior o igual a 2 kg"
+        },
+        {
+          "code": "2105.00.10",
+          "description": "100G Elaborado con leche bovina 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2105.00.10",
+          "description": "900A Los demás 18.00 18.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "2105.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2105.00.90",
+          "description": "100K Elaborado con leche bovina 16.00 16.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "2105.00.90",
+          "description": "900D Los demás 16.00 16.00 3.00 LA 4.50 3.00"
+        }
+      ]
+    },
+    {
+      "code": "2106",
+      "description": "PREPARACIONES ALIMENTICIAS NO EXPRESADAS NI COMPRENDIDAS EN OTRA PARTE",
+      "subheadings": [
+        {
+          "code": "2106.10.00",
+          "description": "Concentrados de proteínas y sustancias proteicas texturadas"
+        },
+        {
+          "code": "2106.10.00",
+          "description": "000Z -Concentrados de proteínas y sustancias proteicas texturadas 14.00 14.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "2106.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "2106.90.10",
+          "description": "Preparaciones de los tipos utilizados para la elaboración de bebidas"
+        },
+        {
+          "code": "2106.90.10",
+          "description": "Analcohólicas"
+        },
+        {
+          "code": "2106.90.10",
+          "description": "110F Elaboradas con un 20 % como mínimo de jugos o zumos de fruta, sus equivalentes en jugos concentrados o"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "22.00 3.00 LA 4.50 3.00",
+      "subheadings": []
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LA 4.50 2.50",
+      "subheadings": []
+    },
+    {
+      "code": "1600",
+      "description": "0.00 0.00 LA 4.50 2.50",
+      "subheadings": []
+    }
+  ],
+  "_rowCount": 198
+}

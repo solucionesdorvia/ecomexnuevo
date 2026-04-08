@@ -1,0 +1,1236 @@
+{
+  "chapter": "41",
+  "title": "Capítulo 41",
+  "sectionTitle": "CAP. 41 SECCION VIII PIELES, CUEROS, PELETERIA Y MANUFACTURAS DE ESTAS MATERIAS; ARTICULOS DE TALABARTERIA O GUARNICIONE",
+  "headings": [
+    {
+      "code": "4101",
+      "description": "CUEROS Y PIELES EN BRUTO, DE BOVINO (INCLUIDO EL BÚFALO) O DE EQUINO (FRESCOS O SALADOS,",
+      "subheadings": [
+        {
+          "code": "4101.20.00",
+          "description": "Cueros y pieles enteros, sin dividir, de peso unitario inferior o igual a 8 kg para los secos, a 10 kg para los salados"
+        },
+        {
+          "code": "4101.20.00",
+          "description": "Cueros y pieles enteros de bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4101.20.00",
+          "description": "110X Secos, sin vestigio de tratamiento con sales (Anexo VII-Decreto 2275/94) 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.20.00",
+          "description": "120A Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.20.00",
+          "description": "130D Salados secos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.20.00",
+          "description": "190Y Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.20.00",
+          "description": "Cueros y pieles de equino"
+        },
+        {
+          "code": "4101.20.00",
+          "description": "210C Secos, sin vestigios de tratamientos con sales 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.20.00",
+          "description": "220F Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.20.00",
+          "description": "290D Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.50",
+          "description": "Cueros y pieles enteros, de peso unitario superior a 16 kg"
+        },
+        {
+          "code": "4101.50.10",
+          "description": "Sin dividir"
+        },
+        {
+          "code": "4101.50.10",
+          "description": "Cueros y pieles enteros de bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4101.50.10",
+          "description": "110Z Secos, sin vestigio de tratamiento con sales (Anexo VII-Decreto 2275/94) 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.50.10",
+          "description": "120C Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.50.10",
+          "description": "130F Salados secos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.50.10",
+          "description": "190A Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.50.10",
+          "description": "Cueros y pieles de equino"
+        },
+        {
+          "code": "4101.50.10",
+          "description": "210E Secos, sin vestigios de tratamientos con sales 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.50.10",
+          "description": "220H Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.50.10",
+          "description": "290F Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.50.20",
+          "description": "Divididos con la flor"
+        },
+        {
+          "code": "4101.50.20",
+          "description": "Cueros y pieles enteros de bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4101.50.20",
+          "description": "120M Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.50.20",
+          "description": "130Q Salados secos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.50.20",
+          "description": "190K Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.50.20",
+          "description": "200L Cueros y pieles de equino 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.50.30",
+          "description": "Divididos sin la flor"
+        },
+        {
+          "code": "4101.50.30",
+          "description": "Cueros y pieles enteros de bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4101.50.30",
+          "description": "120X Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.50.30",
+          "description": "130A Salados secos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.50.30",
+          "description": "140D Piquelados (Anexo VII-Decreto 2275/94) 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.50.30",
+          "description": "190V Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.50.30",
+          "description": "Cueros y pieles de equino"
+        },
+        {
+          "code": "4101.50.30",
+          "description": "210Z Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.50.30",
+          "description": "290A Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90",
+          "description": "Los demás, incluidos los crupones, medios crupones y faldas"
+        },
+        {
+          "code": "4101.90.10",
+          "description": "Sin dividir"
+        },
+        {
+          "code": "4101.90.10",
+          "description": "Cueros y pieles de bovino (incluido el bufalo)"
+        },
+        {
+          "code": "4101.90.10",
+          "description": "110F Secos, sin vestigio de tratamiento con sales 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.90.10",
+          "description": "120J Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.10",
+          "description": "190G Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.10",
+          "description": "Cueros y pieles de equino"
+        },
+        {
+          "code": "4101.90.10",
+          "description": "210L Secos, sin vestigios de tratamientos con sales 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.90.10",
+          "description": "220P Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.90.10",
+          "description": "290M Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "Divididos con la flor"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "Cueros y pieles de bovino (incluido el bufalo)"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "Enteros"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "311D Secos, sin vestigio de tratamiento con sales (Anexo VII-Decreto 2275/94) 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "312F Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "313H Salados secos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "319W Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "Los demás"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "391E Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "392G Secos, sin vestigios de tratamientos con sales 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "399X Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "Cueros y pieles de equino"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "411J Secos, sin vestigios de tratamientos con sales 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "419B Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "491K Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "492M Secos, sin vestigios de tratamientos con sales 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.20",
+          "description": "499C Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "Divididos sin la flor"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "Cueros y pieles de bovino (incluido el bufalo)"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "Enteros"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "311N Secos, sin vestigio de tratamiento con sales (Anexo VII-Decreto 2275/94) 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "312Q Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "313T Salados secos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "319F Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "Los demás"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "391P Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "392R Piquelados (Anexo VII-Decreto 2275/94) 2.00 2.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "393U Secos, sin vestigios de tratamientos con sales 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "399G Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "Cueros y pieles de equino"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "411U Secos, sin vestigios de tratamientos con sales 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "419L Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "491V Frescos o salados verdes (húmedos) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "492X Secos, sin vestigios de tratamientos con sales 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4101.90.30",
+          "description": "499M Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "4102",
+      "description": "CUEROS Y PIELES EN BRUTO, DE OVINO (FRESCOS O SALADOS, SECOS, ENCALADOS, PIQUELADOS O",
+      "subheadings": [
+        {
+          "code": "4102.10.00",
+          "description": "Con lana"
+        },
+        {
+          "code": "4102.10.00",
+          "description": "400P Secos al sol 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4102.10.00",
+          "description": "500V Salados secos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4102.10.00",
+          "description": "900R Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4102.2",
+          "description": "Sin lana (depilados):"
+        },
+        {
+          "code": "4102.21.00",
+          "description": "Piquelados"
+        },
+        {
+          "code": "4102.21.00",
+          "description": "100Z Lanares 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4102.21.00",
+          "description": "200E Borregos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4102.21.00",
+          "description": "300K Corderitos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4102.21.00",
+          "description": "900T Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4102.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4102.29.00",
+          "description": "400L Secos al sol 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4102.29.00",
+          "description": "500R Salados secos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4102.29.00",
+          "description": "900N Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "4103",
+      "description": "LOS DEMÁS CUEROS Y PIELES EN BRUTO (FRESCOS O SALADOS, SECOS, ENCALADOS, PIQUELADOS O",
+      "subheadings": [
+        {
+          "code": "4103.20.00",
+          "description": "De reptil"
+        },
+        {
+          "code": "4103.20.00",
+          "description": "100F Lagartos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4103.20.00",
+          "description": "200L Yacarés 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4103.20.00",
+          "description": "900Z Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4103.30.00",
+          "description": "De porcino"
+        },
+        {
+          "code": "4103.30.00",
+          "description": "100V Pecaríes 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4103.30.00",
+          "description": "900N Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4103.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4103.90.00",
+          "description": "200K Carpinchos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4103.90.00",
+          "description": "300Q Caprinos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4103.90.00",
+          "description": "De pescado"
+        },
+        {
+          "code": "4103.90.00",
+          "description": "410Z Surubí (Pseudoplatysoma coruscanus), Salmón de mar (Pinguipes ssp.), Carpa (Cyprinus carpio), Raya (Raja"
+        },
+        {
+          "code": "4103.90.00",
+          "description": "490A Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4103.90.00",
+          "description": "900Y Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "4104",
+      "description": "CUEROS Y PIELES CURTIDOS O «CRUST», DE BOVINO (INCLUIDO EL BÚFALO) O DE EQUINO, DEPILADOS,",
+      "subheadings": [
+        {
+          "code": "4104.1",
+          "description": "En estado húmedo (incluido el «wet-blue»):"
+        },
+        {
+          "code": "4104.11",
+          "description": "Plena flor sin dividir; divididos con la flor"
+        },
+        {
+          "code": "4104.11.11",
+          "description": "Cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2,"
+        },
+        {
+          "code": "4104.11.11",
+          "description": "000J Cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2,"
+        },
+        {
+          "code": "4104.11.12",
+          "description": "Los demás cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2"
+        },
+        {
+          "code": "4104.11.12",
+          "description": "000R Los demás cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.11.13",
+          "description": "Los demás cueros y pieles de bovino (incluido el búfalo), con precurtido vegetal"
+        },
+        {
+          "code": "4104.11.13",
+          "description": "100E Enteros o medios 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.11.13",
+          "description": "900Y Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.11.14",
+          "description": "Los demás cueros y pieles de bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4104.11.14",
+          "description": "100M Enteros o medios 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.11.14",
+          "description": "900F Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.11.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "4104.11.19",
+          "description": "000V Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.11.21",
+          "description": "Cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2,"
+        },
+        {
+          "code": "4104.11.21",
+          "description": "000U Cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2,"
+        },
+        {
+          "code": "4104.11.22",
+          "description": "Los demás cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2"
+        },
+        {
+          "code": "4104.11.22",
+          "description": "000B Los demás cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.11.23",
+          "description": "Los demás cueros y pieles de bovino (incluido el búfalo), con precurtido vegetal"
+        },
+        {
+          "code": "4104.11.23",
+          "description": "100P Enteros o medios 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.11.23",
+          "description": "900H Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.11.24",
+          "description": "Los demás cueros y pieles de bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4104.11.24",
+          "description": "100X Enteros o medios 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.11.24",
+          "description": "900Q Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.11.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "4104.11.29",
+          "description": "000E Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "4104.19.10",
+          "description": "Cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2,"
+        },
+        {
+          "code": "4104.19.10",
+          "description": "100C Descarnes de cueros vacunos 4.00 4.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4104.19.10",
+          "description": "900W Los demás 4.00 4.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4104.19.20",
+          "description": "Los demás cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2"
+        },
+        {
+          "code": "4104.19.20",
+          "description": "000G Los demás cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.19.30",
+          "description": "Los demás cueros y pieles de bovino (incluido el búfalo), con precurtido vegetal"
+        },
+        {
+          "code": "4104.19.30",
+          "description": "000R Los demás cueros y pieles de bovino (incluido el búfalo), con precurtido vegetal 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.19.40",
+          "description": "Los demás cueros y pieles de bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4104.19.40",
+          "description": "Enteros o medios"
+        },
+        {
+          "code": "4104.19.40",
+          "description": "110K Divididos sin la flor (descarnes), simplemente curtidos al cromo («wet-blue») 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4104.19.40",
+          "description": "190L Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.19.40",
+          "description": "Los demás"
+        },
+        {
+          "code": "4104.19.40",
+          "description": "Divididos sin la flor (descarnes)"
+        },
+        {
+          "code": "4104.19.40",
+          "description": "911F Simplemente curtidos al cromo («wet-blue») 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "4104.19.40",
+          "description": "919Y Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.19.40",
+          "description": "990E Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.19.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4104.19.90",
+          "description": "000A Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.4",
+          "description": "En estado seco («crust»):"
+        },
+        {
+          "code": "4104.41",
+          "description": "Plena flor sin dividir; divididos con la flor"
+        },
+        {
+          "code": "4104.41.10",
+          "description": "Cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2"
+        },
+        {
+          "code": "4104.41.10",
+          "description": "200E Recurtidos y engrasados, blanqueados o coloreados en baño previo al secado 8.00 8.00 3.00 LA 0.00 1.50"
+        },
+        {
+          "code": "4104.41.10",
+          "description": "900T Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.41.20",
+          "description": "Los demás cueros y pieles de bovino (incluido el búfalo) curtidos al vegetal para suelas"
+        },
+        {
+          "code": "4104.41.20",
+          "description": "000D Los demás cueros y pieles de bovino (incluido el búfalo) curtidos al vegetal para suelas 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.41.30",
+          "description": "Los demás cueros y pieles de bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4104.41.30",
+          "description": "100U Recurtidos y engrasados, blanqueados o coloreados en baño previo al secado 10.00 10.00 3.00 LA 0.00 3.00"
+        },
+        {
+          "code": "4104.41.30",
+          "description": "900M Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.41.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4104.41.90",
+          "description": "000X Los demás 10.00 10.00 3.00 LA 4.50 1.50"
+        },
+        {
+          "code": "4104.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "4104.49.10",
+          "description": "Cueros y pieles enteros de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2"
+        },
+        {
+          "code": "4104.49.10",
+          "description": "100V Curtidos al cromo, en estado seco ('box-calf') 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.49.10",
+          "description": "200A Divididos sin la flor (descarnes) 8.00 8.00 3.00 LA 0.00 1.50"
+        },
+        {
+          "code": "4104.49.10",
+          "description": "300F Los demás, recurtidos y engrasados, blanqueados o coloreados en baño previo al secado 8.00 8.00 3.00 LA 0.00 1.50"
+        },
+        {
+          "code": "4104.49.10",
+          "description": "900N Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.49.20",
+          "description": "Los demás cueros y pieles de bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4104.49.20",
+          "description": "100E Divididos sin la flor (descarnes) 10.00 10.00 3.00 LA 0.00 3.00"
+        },
+        {
+          "code": "4104.49.20",
+          "description": "200K Los demás, recurtidos y engrasados, blanqueados o coloreados en baño previo al secado 10.00 10.00 3.00 LA 0.00 3.00"
+        },
+        {
+          "code": "4104.49.20",
+          "description": "900Y Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4104.49.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4104.49.90",
+          "description": "000T Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "4105",
+      "description": "PIELES CURTIDAS O «CRUST», DE OVINO, DEPILADAS, INCLUSO DIVIDIDAS PERO SIN OTRA PREPARACIÓN",
+      "subheadings": [
+        {
+          "code": "4105.10",
+          "description": "En estado húmedo (incluido el «wet-blue»)"
+        },
+        {
+          "code": "4105.10.10",
+          "description": "Con precurtido vegetal"
+        },
+        {
+          "code": "4105.10.10",
+          "description": "000H Con precurtido vegetal 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4105.10.21",
+          "description": "Al cromo («wet-blue»)"
+        },
+        {
+          "code": "4105.10.21",
+          "description": "000A Al cromo ('wet-blue') 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4105.10.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "4105.10.29",
+          "description": "000L Las demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4105.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "4105.10.90",
+          "description": "100R Curtidas al cromo 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4105.10.90",
+          "description": "900K Las demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4105.30.00",
+          "description": "En estado seco («crust»)"
+        },
+        {
+          "code": "4105.30.00",
+          "description": "000B -En estado seco ('crust') 10.00 10.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "4106",
+      "description": "CUEROS Y PIELES DEPILADOS DE LOS DEMÁS ANIMALES Y PIELES DE ANIMALES SIN PELO, CURTIDOS O",
+      "subheadings": [
+        {
+          "code": "4106.2",
+          "description": "De caprino:"
+        },
+        {
+          "code": "4106.21",
+          "description": "En estado húmedo (incluido el «wet-blue»)"
+        },
+        {
+          "code": "4106.21.10",
+          "description": "Con precurtido vegetal"
+        },
+        {
+          "code": "4106.21.10",
+          "description": "000C Con precurtido vegetal 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.21.21",
+          "description": "Al cromo («wet-blue»)"
+        },
+        {
+          "code": "4106.21.21",
+          "description": "000V Al cromo ('wet-blue') 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.21.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "4106.21.29",
+          "description": "000F Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.21.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4106.21.90",
+          "description": "000F Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.22.00",
+          "description": "En estado seco («crust»)"
+        },
+        {
+          "code": "4106.22.00",
+          "description": "000E --En estado seco ( 'crust') 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.3",
+          "description": "De porcino:"
+        },
+        {
+          "code": "4106.31",
+          "description": "En estado húmedo (incluido el «wet-blue»)"
+        },
+        {
+          "code": "4106.31.10",
+          "description": "Al cromo («wet-blue»)"
+        },
+        {
+          "code": "4106.31.10",
+          "description": "000R Al cromo ('wet-blue') 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.31.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4106.31.90",
+          "description": "000V Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.32.00",
+          "description": "En estado seco («crust»)"
+        },
+        {
+          "code": "4106.32.00",
+          "description": "000U --En estado seco ('crust') 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.40.00",
+          "description": "De reptil"
+        },
+        {
+          "code": "4106.40.00",
+          "description": "Lagartos"
+        },
+        {
+          "code": "4106.40.00",
+          "description": "110T Con precurtido vegetal 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.40.00",
+          "description": "190U Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.40.00",
+          "description": "Yacares"
+        },
+        {
+          "code": "4106.40.00",
+          "description": "210Y Con precurtido vegetal 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.40.00",
+          "description": "290Z Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.40.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4106.40.00",
+          "description": "910L Con precurtido vegetal 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.40.00",
+          "description": "990M Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4106.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "4106.91.00",
+          "description": "En estado húmedo (incluido el «wet-blue»)"
+        },
+        {
+          "code": "4106.91.00",
+          "description": "De pescado"
+        },
+        {
+          "code": "4106.91.00",
+          "description": "110A Surubí (Pseudoplatysoma coruscanus), Salmón de mar (Pinguipes ssp.), Carpa (Cyprinus carpio), Raya (Raja"
+        }
+      ]
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 4.50 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "4107",
+      "description": "CUEROS PREPARADOS DESPUÉS DEL CURTIDO O DEL SECADO Y CUEROS Y PIELES APERGAMINADOS, DE",
+      "subheadings": [
+        {
+          "code": "4107.1",
+          "description": "Cueros y pieles enteros:"
+        },
+        {
+          "code": "4107.11",
+          "description": "Plena flor sin dividir"
+        },
+        {
+          "code": "4107.11.10",
+          "description": "Cueros y pieles de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2"
+        },
+        {
+          "code": "4107.11.10",
+          "description": "000G Cueros y pieles de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4107.11.20",
+          "description": "Los demás cueros y pieles de bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4107.11.20",
+          "description": "000R Los demás cueros y pieles de bovino (incluido el búfalo) 10.00 10.00 3.00 LA 4.50 1.50"
+        },
+        {
+          "code": "4107.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4107.11.90",
+          "description": "000K Los demás 10.00 10.00 3.00 LA 4.50 1.50"
+        },
+        {
+          "code": "4107.12",
+          "description": "Divididos con la flor"
+        },
+        {
+          "code": "4107.12.10",
+          "description": "Cueros y pieles de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2"
+        },
+        {
+          "code": "4107.12.10",
+          "description": "000U Cueros y pieles de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4107.12.20",
+          "description": "Los demás cueros y pieles de bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4107.12.20",
+          "description": "000D Los demás cueros y pieles de bovino (incluido el búfalo) 10.00 10.00 3.00 LA 4.50 1.50"
+        },
+        {
+          "code": "4107.12.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4107.12.90",
+          "description": "000X Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4107.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "4107.19.10",
+          "description": "Cueros y pieles de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2"
+        },
+        {
+          "code": "4107.19.10",
+          "description": "000C Cueros y pieles de bovino (incluido el búfalo), con una superficie por unidad inferior o igual a 2,6 m2 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4107.19.20",
+          "description": "Los demás cueros y pieles de bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4107.19.20",
+          "description": "000M Los demás cueros y pieles de bovino (incluido el búfalo) 10.00 10.00 3.00 LA 4.50 1.50"
+        },
+        {
+          "code": "4107.19.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4107.19.90",
+          "description": "000F Los demás 10.00 10.00 3.00 LA 4.50 1.50"
+        },
+        {
+          "code": "4107.9",
+          "description": "Los demás, incluidas las hojas:"
+        },
+        {
+          "code": "4107.91",
+          "description": "Plena flor sin dividir"
+        },
+        {
+          "code": "4107.91.10",
+          "description": "De bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4107.91.10",
+          "description": "000V De bovino (incluido el búfalo) 10.00 10.00 3.00 LA 4.50 1.50"
+        },
+        {
+          "code": "4107.91.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4107.91.90",
+          "description": "000Y Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4107.92",
+          "description": "Divididos con la flor"
+        },
+        {
+          "code": "4107.92.10",
+          "description": "De bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4107.92.10",
+          "description": "000G De bovino (incluido el búfalo) 10.00 10.00 3.00 LA 4.50 1.50"
+        },
+        {
+          "code": "4107.92.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4107.92.90",
+          "description": "000K Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4107.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "4107.99.10",
+          "description": "De bovino (incluido el búfalo)"
+        },
+        {
+          "code": "4107.99.10",
+          "description": "000Q De bovino (incluido el búfalo) 10.00 10.00 3.00 LA 4.50 1.50"
+        },
+        {
+          "code": "4107.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4107.99.90",
+          "description": "000U Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "4112",
+      "description": "CUEROS PREPARADOS DESPUÉS DEL CURTIDO O SECADO Y CUEROS Y PIELES APERGAMINADOS, DE",
+      "subheadings": [
+        {
+          "code": "4112.00.00",
+          "description": "Cueros preparados después del curtido o secado y cueros y pieles apergaminados, de ovino, depilados, incluso"
+        },
+        {
+          "code": "4112.00.00",
+          "description": "000Z CUEROS PREPARADOS DESPUES DEL CURTIDO O SECADO Y CUEROS Y PIELES APERGAMINADOS, DE"
+        }
+      ]
+    },
+    {
+      "code": "4113",
+      "description": "CUEROS PREPARADOS DESPUÉS DEL CURTIDO O SECADO Y CUEROS Y PIELES APERGAMINADOS, DE LOS",
+      "subheadings": [
+        {
+          "code": "4113.10",
+          "description": "De caprino"
+        },
+        {
+          "code": "4113.10.10",
+          "description": "Curtidos al cromo, acabados"
+        },
+        {
+          "code": "4113.10.10",
+          "description": "000R Curtidos al cromo, acabados 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "4113.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4113.10.90",
+          "description": "000V Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4113.20.00",
+          "description": "De porcino"
+        },
+        {
+          "code": "4113.20.00",
+          "description": "000W -De porcino 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4113.30.00",
+          "description": "De reptil"
+        },
+        {
+          "code": "4113.30.00",
+          "description": "000K -De reptil 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4113.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4113.90.00",
+          "description": "De pescado"
+        },
+        {
+          "code": "4113.90.00",
+          "description": "110D Surubí (Pseudoplatysoma coruscanus), Salmón de mar (Pinguipes ssp.), Carpa (Cyprinus carpio), Raya (Raja"
+        },
+        {
+          "code": "4113.90.00",
+          "description": "190E Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4113.90.00",
+          "description": "900U Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "4114",
+      "description": "CUEROS Y PIELES AGAMUZADOS (INCLUIDO EL AGAMUZADO COMBINADO AL ACEITE); CUEROS Y PIELES",
+      "subheadings": [
+        {
+          "code": "4114.10.00",
+          "description": "Cueros y pieles agamuzados (incluido el agamuzado combinado al aceite)"
+        },
+        {
+          "code": "4114.10.00",
+          "description": "De pescado"
+        },
+        {
+          "code": "4114.10.00",
+          "description": "110J Surubí (Pseudoplatysoma coruscanus), Salmón de mar (Pinguipes ssp.), Carpa (Cyprinus carpio), Raya (Raja"
+        }
+      ]
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "4115",
+      "description": "CUERO REGENERADO A BASE DE CUERO O FIBRAS DE CUERO, EN PLACAS, HOJAS O TIRAS, INCLUSO",
+      "subheadings": [
+        {
+          "code": "4115.10.00",
+          "description": "Cuero regenerado a base de cuero o fibras de cuero, en placas, hojas o tiras, incluso enrolladas"
+        },
+        {
+          "code": "4115.10.00",
+          "description": "000U -Cuero regenerado a base de cuero o fibras de cuero, en placas, hojas o tiras, incluso enrolladas 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4115.20.00",
+          "description": "Recortes y demás desperdicios de cuero o piel, preparados, o de cuero regenerado, no utilizables para la fabricación"
+        },
+        {
+          "code": "4115.20.00",
+          "description": "De pescado"
+        },
+        {
+          "code": "4115.20.00",
+          "description": "110R Surubí (Pseudoplatysoma coruscanus), Salmón de mar (Pinguipes ssp.), Carpa (Cyprinus carpio), Raya (Raja"
+        },
+        {
+          "code": "4115.20.00",
+          "description": "190T Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "4115.20.00",
+          "description": "900G Los demás 10.00 10.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 323
+}

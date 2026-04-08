@@ -1,0 +1,332 @@
+{
+  "chapter": "13",
+  "title": "Capítulo 13",
+  "sectionTitle": "CAP. 13 SECCION II PRODUCTOS DEL REINO VEGETAL Notas. 1. En esta Sección, el término \"pellets\" designa los productos en",
+  "headings": [
+    {
+      "code": "1301",
+      "description": "GOMA LACA; GOMAS, RESINAS, GOMORRESINAS Y OLEORRESINAS (POR EJEMPLO, BÁLSAMOS),",
+      "subheadings": [
+        {
+          "code": "1301.20.00",
+          "description": "Goma arábiga"
+        },
+        {
+          "code": "1301.20.00",
+          "description": "000A -Goma arábiga 4.00 4.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1301.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1301.90.10",
+          "description": "Goma laca"
+        },
+        {
+          "code": "1301.90.10",
+          "description": "000J Goma laca 4.00 4.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "Estupefacientes (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "110W Cannabis (Marihuana), Resinas (Haschisch) 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "190X Los demás 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "200Y Goma Tragacanto 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "300D Goma Karaya 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "400J Las demás gomorresinas y resinas 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "Los demás bálsamos y oleorresinas"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "510T Balsamo del Perú 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "520W Balsamo de Tolú 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "530Z Benjui 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "590U Los demás 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1301.90.90",
+          "description": "900L Las demás gomas 8.00 8.00 3.00 LA 0.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1302",
+      "description": "JUGOS Y EXTRACTOS VEGETALES; MATERIAS PÉCTICAS, PECTINATOS Y PECTATOS; AGAR-AGAR Y DEMÁS",
+      "subheadings": [
+        {
+          "code": "1302.1",
+          "description": "Jugos y extractos vegetales:"
+        },
+        {
+          "code": "1302.11",
+          "description": "Opio"
+        },
+        {
+          "code": "1302.11.10",
+          "description": "Concentrados de paja de adormidera"
+        },
+        {
+          "code": "1302.11.10",
+          "description": "000B Concentrados de paja de adormidera 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1302.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1302.11.90",
+          "description": "000E Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1302.12.00",
+          "description": "De regaliz"
+        },
+        {
+          "code": "1302.12.00",
+          "description": "000D --De regaliz 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.13.00",
+          "description": "De lúpulo"
+        },
+        {
+          "code": "1302.13.00",
+          "description": "000Q --De lúpulo 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.14.00",
+          "description": "De efedra"
+        },
+        {
+          "code": "1302.14.00",
+          "description": "000C --De efedra 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1302.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "1302.19.10",
+          "description": "De papaya (Carica papaya), seco"
+        },
+        {
+          "code": "1302.19.10",
+          "description": "000X De papaya (Carica papaya), seco 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.20",
+          "description": "De semilla de toronja o pomelo"
+        },
+        {
+          "code": "1302.19.20",
+          "description": "000G De semilla de toronja o pomelo 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.30",
+          "description": "De Ginkgo biloba, seco"
+        },
+        {
+          "code": "1302.19.30",
+          "description": "000R De Ginkgo biloba, seco 2.00 2.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.40",
+          "description": "Valepotriatos"
+        },
+        {
+          "code": "1302.19.40",
+          "description": "000B Valepotriatos 2.00 2.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.50",
+          "description": "De ginseng"
+        },
+        {
+          "code": "1302.19.50",
+          "description": "000L De 'ginseng' 2.00 2.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.60",
+          "description": "Silimarina"
+        },
+        {
+          "code": "1302.19.60",
+          "description": "000W Silimarina 14.00 14.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.91",
+          "description": "De piretro (pelitre)* o de raíces que contengan rotenona"
+        },
+        {
+          "code": "1302.19.91",
+          "description": "100N De piretro (pelitre) 2.00 2.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.91",
+          "description": "900G Las demás 2.00 2.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "1302.19.99",
+          "description": "Estupefacientes"
+        },
+        {
+          "code": "1302.19.99",
+          "description": "Estupefacientes Lista 4 (R. 2017/93 ex-ANA)"
+        },
+        {
+          "code": "1302.19.99",
+          "description": "111E Cannabis (Marihuana), extracto y tintura 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.99",
+          "description": "112G Cannabis (Marihuana), sus aceites 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.99",
+          "description": "119X Los demás 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.99",
+          "description": "190D Los demás 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.99",
+          "description": "910W De Gingko biloba 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.99",
+          "description": "920Z De aloe 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.99",
+          "description": "930C De beyadona 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.99",
+          "description": "940F De cola 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.19.99",
+          "description": "990X Los demás 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.20",
+          "description": "Materias pécticas, pectinatos y pectatos"
+        },
+        {
+          "code": "1302.20.10",
+          "description": "Materias pécticas (pectinas)"
+        },
+        {
+          "code": "1302.20.10",
+          "description": "000D Materias pécticas (pectinas) 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1302.20.90",
+          "description": "000G Los demás 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.3",
+          "description": "Mucílagos y espesativos derivados de los vegetales, incluso modificados:"
+        },
+        {
+          "code": "1302.31.00",
+          "description": "Agar-agar"
+        },
+        {
+          "code": "1302.31.00",
+          "description": "000V --Agar-agar 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1302.32",
+          "description": "Mucílagos y espesativos de la algarroba o de su semilla o de las semillas de guar, incluso modificados"
+        },
+        {
+          "code": "1302.32.11",
+          "description": "Harina de endosperma"
+        },
+        {
+          "code": "1302.32.11",
+          "description": "000Z Harina de endosperma 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.32.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "1302.32.19",
+          "description": "000K Los demás 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.32.20",
+          "description": "De semillas de guar"
+        },
+        {
+          "code": "1302.32.20",
+          "description": "000B De semillas de guar 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1302.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "1302.39.10",
+          "description": "Carraghenina (musgo de Irlanda)"
+        },
+        {
+          "code": "1302.39.10",
+          "description": "000A Carraghenina (musgo de Irlanda) 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1302.39.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1302.39.90",
+          "description": "000D Los demás 8.00 8.00 3.00 LA 0.00 0.50"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 81
+}

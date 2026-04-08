@@ -1,0 +1,1194 @@
+{
+  "chapter": "25",
+  "title": "Capítulo 25",
+  "sectionTitle": "CAP. 25 SECCION V PRODUCTOS MINERALES 2023 | Diciembre La información contenida en esta publicación debe ser ratificada",
+  "headings": [
+    {
+      "code": "2501",
+      "description": "SAL (INCLUIDAS LA DE MESA Y LA DESNATURALIZADA) Y CLORURO DE SODIO PURO, INCLUSO EN",
+      "subheadings": [
+        {
+          "code": "2501.00.11",
+          "description": "Sal marina"
+        },
+        {
+          "code": "2501.00.11",
+          "description": "000L Sal marina 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2501.00.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "2501.00.19",
+          "description": "000X Las demás 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2501.00.20",
+          "description": "Sal de mesa"
+        },
+        {
+          "code": "2501.00.20",
+          "description": "000N Sal de mesa 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2501.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2501.00.90",
+          "description": "100M Cloruro de sodio puro (R.2808/80 ex-ANA) 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2501.00.90",
+          "description": "900F Los demás 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2502",
+      "description": "PIRITAS DE HIERRO SIN TOSTAR",
+      "subheadings": [
+        {
+          "code": "2502.00.00",
+          "description": "Piritas de hierro sin tostar"
+        },
+        {
+          "code": "2502.00.00",
+          "description": "000M PIRITAS DE HIERRO SIN TOSTAR. 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2503",
+      "description": "AZUFRE DE CUALQUIER CLASE, EXCEPTO EL SUBLIMADO, EL PRECIPITADO Y EL COLOIDAL",
+      "subheadings": [
+        {
+          "code": "2503.00.10",
+          "description": "A granel"
+        },
+        {
+          "code": "2503.00.10",
+          "description": "000Q A granel 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2503.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2503.00.90",
+          "description": "000U Los demás 0.00 0.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2504",
+      "description": "GRAFITO NATURAL",
+      "subheadings": [
+        {
+          "code": "2504.10.00",
+          "description": "En polvo o en escamas"
+        },
+        {
+          "code": "2504.10.00",
+          "description": "100U En polvo 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2504.10.00",
+          "description": "200Z En escamas 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2504.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2504.90.00",
+          "description": "000B -Los demás 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2505",
+      "description": "ARENAS NATURALES DE CUALQUIER CLASE, INCLUSO COLOREADAS, EXCEPTO LAS ARENAS",
+      "subheadings": [
+        {
+          "code": "2505.10.00",
+          "description": "Arenas silíceas y arenas cuarzosas"
+        },
+        {
+          "code": "2505.10.00",
+          "description": "100M Arenas siliceas 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2505.10.00",
+          "description": "200T Arenas cuarzosas 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2505.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "2505.90.00",
+          "description": "100A Arenas arcillosas 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2505.90.00",
+          "description": "200F Arenas caolínicas 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2505.90.00",
+          "description": "300L Arenas feldespáticas 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2505.90.00",
+          "description": "900U Las demás 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2506",
+      "description": "CUARZO (EXCEPTO LAS ARENAS NATURALES); CUARCITA, INCLUSO DESBASTADA O SIMPLEMENTE",
+      "subheadings": [
+        {
+          "code": "2506.10.00",
+          "description": "Cuarzo"
+        },
+        {
+          "code": "2506.10.00",
+          "description": "000A -Cuarzo 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2506.20.00",
+          "description": "Cuarcita"
+        },
+        {
+          "code": "2506.20.00",
+          "description": "000P -Cuarcita 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2507",
+      "description": "CAOLÍN Y DEMÁS ARCILLAS CAOLÍNICAS, INCLUSO CALCINADOS",
+      "subheadings": [
+        {
+          "code": "2507.00.10",
+          "description": "Caolín"
+        },
+        {
+          "code": "2507.00.10",
+          "description": "000P Caolin 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2507.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "2507.00.90",
+          "description": "000T Las demás 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2508",
+      "description": "LAS DEMÁS ARCILLAS (EXCEPTO LAS ARCILLAS DILATADAS DE LA PARTIDA 6806), ANDALUCITA, CIANITA Y",
+      "subheadings": [
+        {
+          "code": "2508.10.00",
+          "description": "Bentonita"
+        },
+        {
+          "code": "2508.10.00",
+          "description": "000M -Bentonita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2508.30.00",
+          "description": "Arcillas refractarias"
+        },
+        {
+          "code": "2508.30.00",
+          "description": "000Q -Arcillas refractarias 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2508.40",
+          "description": "Las demás arcillas"
+        },
+        {
+          "code": "2508.40.10",
+          "description": "Plásticas, con un contenido de Fe2O3 inferior al 1,5 % en peso y con pérdida por calcinación superior al 12 % en peso"
+        },
+        {
+          "code": "2508.40.10",
+          "description": "000P Plásticas, con un contenido de Fe2O3 inferior al 1,5 % en peso y con pérdida por calcinación superior al 12 % en peso 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2508.40.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "2508.40.90",
+          "description": "000T Las demás 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2508.50.00",
+          "description": "Andalucita, cianita y silimanita"
+        },
+        {
+          "code": "2508.50.00",
+          "description": "100Z Andalucita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2508.50.00",
+          "description": "200E Cianita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2508.50.00",
+          "description": "300K Silimanita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2508.60.00",
+          "description": "Mullita"
+        },
+        {
+          "code": "2508.60.00",
+          "description": "000H -Mullita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2508.70.00",
+          "description": "Tierras de chamota o de dinas"
+        },
+        {
+          "code": "2508.70.00",
+          "description": "100C Tierras de chamota 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2508.70.00",
+          "description": "200H Tierras de dinas 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2509",
+      "description": "CRETA",
+      "subheadings": [
+        {
+          "code": "2509.00.00",
+          "description": "Creta"
+        },
+        {
+          "code": "2509.00.00",
+          "description": "000R CRETA. 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2510",
+      "description": "FOSFATOS DE CALCIO NATURALES, FOSFATOS ALUMINOCÁLCICOS NATURALES Y CRETAS FOSFATADAS",
+      "subheadings": [
+        {
+          "code": "2510.10",
+          "description": "Sin moler"
+        },
+        {
+          "code": "2510.10.10",
+          "description": "Fosfatos de calcio naturales"
+        },
+        {
+          "code": "2510.10.10",
+          "description": "000V Fosfatos de calcio naturales 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2510.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2510.10.90",
+          "description": "100D Fosfatos aluminocálcicos naturales 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2510.10.90",
+          "description": "200J Cretas fosfatadas 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2510.20",
+          "description": "Molidos"
+        },
+        {
+          "code": "2510.20.10",
+          "description": "Fosfatos de calcio naturales"
+        },
+        {
+          "code": "2510.20.10",
+          "description": "000J Fosfatos de calcio naturales 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2510.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2510.20.90",
+          "description": "100T Fosfatos aluminocálcicos naturales 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2510.20.90",
+          "description": "200Y Cretas fosfatadas 0.00 0.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2511",
+      "description": "SULFATO DE BARIO NATURAL (BARITINA); CARBONATO DE BARIO NATURAL (WITHERITA), INCLUSO",
+      "subheadings": [
+        {
+          "code": "2511.10.00",
+          "description": "Sulfato de bario natural (baritina)"
+        },
+        {
+          "code": "2511.10.00",
+          "description": "000D -Sulfato de bario natural (baritina) 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2511.20.00",
+          "description": "Carbonato de bario natural (witherita)"
+        },
+        {
+          "code": "2511.20.00",
+          "description": "000T -Carbonato de bario natural (witherita) 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2512",
+      "description": "HARINAS SILÍCEAS FÓSILES (POR EJEMPLO: «KIESELGUHR», TRIPOLITA, DIATOMITA) Y DEMÁS TIERRAS",
+      "subheadings": [
+        {
+          "code": "2512.00.00",
+          "description": "Harinas silíceas fósiles (por ejemplo: «kieselguhr», tripolita, diatomita) y demás tierras silíceas análogas, de densidad"
+        },
+        {
+          "code": "2512.00.00",
+          "description": "100N Kieselguhr 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2512.00.00",
+          "description": "200U Tripolita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2512.00.00",
+          "description": "300Z Diatomita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2512.00.00",
+          "description": "900G Las demás 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2513",
+      "description": "PIEDRA PÓMEZ; ESMERIL; CORINDÓN NATURAL, GRANATE NATURAL Y DEMÁS ABRASIVOS NATURALES,",
+      "subheadings": [
+        {
+          "code": "2513.10.00",
+          "description": "Piedra pómez"
+        },
+        {
+          "code": "2513.10.00",
+          "description": "000Q -Piedra pómez 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2513.20.00",
+          "description": "Esmeril, corindón natural, granate natural y demás abrasivos naturales"
+        },
+        {
+          "code": "2513.20.00",
+          "description": "100K Esmeril 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2513.20.00",
+          "description": "200Q Corindon natural 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2513.20.00",
+          "description": "300W Granate natural 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2513.20.00",
+          "description": "900D Los demás abrasivos naturales 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2514",
+      "description": "PIZARRA, INCLUSO DESBASTADA O SIMPLEMENTE TROCEADA, POR ASERRADO O DE OTRO MODO, EN",
+      "subheadings": [
+        {
+          "code": "2514.00.00",
+          "description": "Pizarra, incluso desbastada o simplemente troceada, por aserrado o de otro modo, en bloques o en placas cuadradas"
+        },
+        {
+          "code": "2514.00.00",
+          "description": "100A Desbastada o en bruto 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2514.00.00",
+          "description": "200F En bloques o placas 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2514.00.00",
+          "description": "300L Polvo o desperdicios 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2515",
+      "description": "MÁRMOL, TRAVERTINOS, «ECAUSSINES» Y DEMÁS PIEDRAS CALIZAS DE TALLA O DE CONSTRUCCIÓN DE",
+      "subheadings": [
+        {
+          "code": "2515.1",
+          "description": "Mármol y travertinos:"
+        },
+        {
+          "code": "2515.11.00",
+          "description": "En bruto o desbastados"
+        },
+        {
+          "code": "2515.11.00",
+          "description": "100V Marmol en bruto 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2515.11.00",
+          "description": "900N Los demás 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2515.12",
+          "description": "Simplemente troceados, por aserrado o de otro modo, en bloques o en placas cuadradas o rectangulares"
+        },
+        {
+          "code": "2515.12.10",
+          "description": "Mármol"
+        },
+        {
+          "code": "2515.12.10",
+          "description": "000L Mármol 6.00 6.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2515.12.20",
+          "description": "Travertinos"
+        },
+        {
+          "code": "2515.12.20",
+          "description": "000W Travertinos 6.00 6.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2515.20.00",
+          "description": "«Ecaussines» y demás piedras calizas de talla o de construcción; alabastro"
+        },
+        {
+          "code": "2515.20.00",
+          "description": "000R -\"Ecaussines\" y demás piedras calizas de talla o de construcción; alabastro 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2516",
+      "description": "GRANITO, PÓRFIDO, BASALTO, ARENISCA Y DEMÁS PIEDRAS DE TALLA O DE CONSTRUCCIÓN, INCLUSO",
+      "subheadings": [
+        {
+          "code": "2516.1",
+          "description": "Granito:"
+        },
+        {
+          "code": "2516.11.00",
+          "description": "En bruto o desbastado"
+        },
+        {
+          "code": "2516.11.00",
+          "description": "000H --En bruto o desbastado 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2516.12.00",
+          "description": "Simplemente troceado, por aserrado o de otro modo, en bloques o en placas cuadradas o rectangulares"
+        },
+        {
+          "code": "2516.12.00",
+          "description": "000V --Simplemente troceado, por aserrado o de otro modo, en bloques o en placas cuadradas o rectangulares 6.00 6.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2516.20.00",
+          "description": "Arenisca"
+        },
+        {
+          "code": "2516.20.00",
+          "description": "100Q En bruto o desbastada 4.00 4.00 3.00 LA 4.50 0.25"
+        },
+        {
+          "code": "2516.20.00",
+          "description": "900J Las demás 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2516.90.00",
+          "description": "Las demás piedras de talla o de construcción"
+        },
+        {
+          "code": "2516.90.00",
+          "description": "Porfido"
+        },
+        {
+          "code": "2516.90.00",
+          "description": "110T En bruto o desbastado 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2516.90.00",
+          "description": "120W En bloques o placas 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2516.90.00",
+          "description": "Basalto"
+        },
+        {
+          "code": "2516.90.00",
+          "description": "210Y En bruto o desbastado 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2516.90.00",
+          "description": "220B En bloques o placas 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2516.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "2516.90.00",
+          "description": "910L Sienita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2516.90.00",
+          "description": "920P Gneis 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2516.90.00",
+          "description": "990M Las demás 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2517",
+      "description": "CANTOS, GRAVA, PIEDRAS MACHACADAS, DE LOS TIPOS GENERALMENTE UTILIZADOS PARA HACER",
+      "subheadings": [
+        {
+          "code": "2517.10.00",
+          "description": "Cantos, grava, piedras machacadas, de los tipos generalmente utilizados para hacer hormigón, o para firmes de"
+        },
+        {
+          "code": "2517.10.00",
+          "description": "000P -Cantos, grava, piedras machacadas, de los tipos generalmente utilizados para hacer hormigón, o para firmes de"
+        },
+        {
+          "code": "2517.20.00",
+          "description": "Macadán de escorias o de desechos industriales similares, incluso con materiales citados en la subpartida 251710"
+        },
+        {
+          "code": "2517.20.00",
+          "description": "000D -Macadán de escorias o de desechos industriales similares, incluso con materiales citados en la subpartida 2517.10 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2517.30.00",
+          "description": "Macadán alquitranado"
+        },
+        {
+          "code": "2517.30.00",
+          "description": "000T -Macadán alquitranado 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2517.4",
+          "description": "Gránulos, tasquiles (fragmentos) y polvo de piedras de las partidas 2515 ó 2516, incluso tratados térmicamente:"
+        },
+        {
+          "code": "2517.41.00",
+          "description": "De mármol"
+        },
+        {
+          "code": "2517.41.00",
+          "description": "000U --De mármol 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2517.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2517.49.00",
+          "description": "000P --Los demás 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2518",
+      "description": "DOLOMITA, INCLUSO SINTERIZADA O CALCINADA, INCLUIDA LA DOLOMITA DESBASTADA O SIMPLEMENTE",
+      "subheadings": [
+        {
+          "code": "2518.10.00",
+          "description": "Dolomita sin calcinar ni sinterizar, llamada «cruda»"
+        },
+        {
+          "code": "2518.10.00",
+          "description": "000H -Dolomita sin calcinar ni sinterizar, llamada \"cruda\" 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2518.20.00",
+          "description": "Dolomita calcinada o sinterizada"
+        },
+        {
+          "code": "2518.20.00",
+          "description": "000X -Dolomita calcinada o sinterizada 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2518.30.00",
+          "description": "Aglomerado de dolomita"
+        },
+        {
+          "code": "2518.30.00",
+          "description": "000L -Aglomerado de dolomita 4.00 4.00 3.00 LA 4.50 0.50"
+        }
+      ]
+    },
+    {
+      "code": "2519",
+      "description": "CARBONATO DE MAGNESIO NATURAL (MAGNESITA); MAGNESIA ELECTROFUNDIDA; MAGNESIA CALCINADA",
+      "subheadings": [
+        {
+          "code": "2519.10.00",
+          "description": "Carbonato de magnesio natural (magnesita)"
+        },
+        {
+          "code": "2519.10.00",
+          "description": "000B -Carbonato de magnesio natural (magnesita) 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2519.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2519.90.10",
+          "description": "Magnesia electrofundida"
+        },
+        {
+          "code": "2519.90.10",
+          "description": "000Z Magnesia electrofundida 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2519.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2519.90.90",
+          "description": "100H Magnesia sinterizada, incluso con pequeñas cantidades de otros oxidos añadidos antes de la sinterización 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2519.90.90",
+          "description": "200N Magnesia cáustica 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2519.90.90",
+          "description": "Oxido de magnesio"
+        },
+        {
+          "code": "2519.90.90",
+          "description": "310X Puro (R.2808/80 ANA) 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2519.90.90",
+          "description": "390Y Los demás 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2520",
+      "description": "YESO NATURAL; ANHIDRITA; YESO FRAGUABLE (CONSISTENTE EN YESO NATURAL CALCINADO O EN",
+      "subheadings": [
+        {
+          "code": "2520.10",
+          "description": "Yeso natural; anhidrita"
+        },
+        {
+          "code": "2520.10.11",
+          "description": "En trozos irregulares (piedras)"
+        },
+        {
+          "code": "2520.10.11",
+          "description": "000Y En trozos irregulares (piedras) 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2520.10.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "2520.10.19",
+          "description": "000J Los demás 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2520.10.20",
+          "description": "Anhidrita"
+        },
+        {
+          "code": "2520.10.20",
+          "description": "000A Anhidrita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2520.20",
+          "description": "Yeso fraguable"
+        },
+        {
+          "code": "2520.20.10",
+          "description": "Molidos, aptos para uso odontológico"
+        },
+        {
+          "code": "2520.20.10",
+          "description": "000E Molidos, aptos para uso odontológico 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2520.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2520.20.90",
+          "description": "000H Los demás 4.00 4.00 3.00 LA 4.50 0.50"
+        }
+      ]
+    },
+    {
+      "code": "2521",
+      "description": "CASTINAS; PIEDRAS PARA LA FABRICACIÓN DE CAL O DE CEMENTO",
+      "subheadings": [
+        {
+          "code": "2521.00.00",
+          "description": "Castinas; piedras para la fabricación de cal o de cemento"
+        },
+        {
+          "code": "2521.00.00",
+          "description": "000K CASTINAS; PIEDRAS PARA LA FABRICACIÓN DE CAL O DE CEMENTO. 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2522",
+      "description": "CAL VIVA, CAL APAGADA Y CAL HIDRÁULICA, EXCEPTO EL ÓXIDO Y EL HIDRÓXIDO DE CALCIO DE LA",
+      "subheadings": [
+        {
+          "code": "2522.10.00",
+          "description": "Cal viva"
+        },
+        {
+          "code": "2522.10.00",
+          "description": "000T -Cal viva 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2522.20.00",
+          "description": "Cal apagada"
+        },
+        {
+          "code": "2522.20.00",
+          "description": "000G -Cal apagada 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2522.30.00",
+          "description": "Cal hidráulica"
+        },
+        {
+          "code": "2522.30.00",
+          "description": "000W -Cal hidráulica 4.00 4.00 3.00 LA 4.50 0.50"
+        }
+      ]
+    },
+    {
+      "code": "2523",
+      "description": "CEMENTOS HIDRÁULICOS (COMPRENDIDOS LOS CEMENTOS SIN PULVERIZAR O CLÍNKER), INCLUSO",
+      "subheadings": [
+        {
+          "code": "2523.10.00",
+          "description": "Cementos sin pulverizar o clínker"
+        },
+        {
+          "code": "2523.10.00",
+          "description": "000L -Cementos sin pulverizar o clinker 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2523.2",
+          "description": "Cemento Pórtland:"
+        },
+        {
+          "code": "2523.21.00",
+          "description": "Cemento blanco, incluso coloreado artificialmente"
+        },
+        {
+          "code": "2523.21.00",
+          "description": "000M --Cemento blanco, incluso coloreado artificialmente 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2523.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "2523.29.10",
+          "description": "Cemento normal"
+        },
+        {
+          "code": "2523.29.10",
+          "description": "000T Cemento normal 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2523.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2523.29.90",
+          "description": "100B Cemento para pozos petroleros según Norma API, STD 10A y SPEC 10A, clases A a H 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2523.29.90",
+          "description": "900V Los demás 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2523.30.00",
+          "description": "Cementos aluminosos"
+        },
+        {
+          "code": "2523.30.00",
+          "description": "000P -Cementos aluminosos 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2523.90.00",
+          "description": "Los demás cementos hidráulicos"
+        },
+        {
+          "code": "2523.90.00",
+          "description": "100E Cemento de albañilería según Norma IRAM 1685 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2523.90.00",
+          "description": "200K Cemento de alto horno (CAH) según Norma IRAM 5000 4.00 4.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "2523.90.00",
+          "description": "900Y Los demás 4.00 4.00 3.00 LA 4.50 0.50"
+        }
+      ]
+    },
+    {
+      "code": "2524",
+      "description": "AMIANTO (ASBESTO)",
+      "subheadings": [
+        {
+          "code": "2524.10.00",
+          "description": "Crocidolita"
+        },
+        {
+          "code": "2524.10.00",
+          "description": "000E -Crocidolita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2524.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2524.90.00",
+          "description": "100Y En fibras 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2524.90.00",
+          "description": "900R Los demás 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2525",
+      "description": "MICA, INCLUIDA LA EXFOLIADA EN LAMINILLAS IRREGULARES («SPLITTINGS»); DESPERDICIOS DE MICA",
+      "subheadings": [
+        {
+          "code": "2525.10.00",
+          "description": "Mica en bruto o exfoliada en hojas o en laminillas irregulares («splittings»)"
+        },
+        {
+          "code": "2525.10.00",
+          "description": "000Y -Mica en bruto o exfoliada en hojas o en laminillas irregulares (\"splittings\") 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2525.20.00",
+          "description": "Mica en polvo"
+        },
+        {
+          "code": "2525.20.00",
+          "description": "000M -Mica en polvo 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2525.30.00",
+          "description": "Desperdicios de mica"
+        },
+        {
+          "code": "2525.30.00",
+          "description": "000B -Desperdicios de mica 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2526",
+      "description": "ESTEATITA NATURAL, INCLUSO DESBASTADA O SIMPLEMENTE TROCEADA, POR ASERRADO O DE OTRO",
+      "subheadings": [
+        {
+          "code": "2526.10.00",
+          "description": "Sin triturar ni pulverizar"
+        },
+        {
+          "code": "2526.10.00",
+          "description": "Esteatita natural"
+        },
+        {
+          "code": "2526.10.00",
+          "description": "110A En bruto 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2526.10.00",
+          "description": "120D Desbastada 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2526.10.00",
+          "description": "130G Simplemente troceada 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2526.10.00",
+          "description": "200C Talco 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2526.20.00",
+          "description": "Triturados o pulverizados"
+        },
+        {
+          "code": "2526.20.00",
+          "description": "100L Esteatita natural 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2526.20.00",
+          "description": "200R Talco 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2528",
+      "description": "BORATOS NATURALES Y SUS CONCENTRADOS (INCLUSO CALCINADOS), EXCEPTO LOS BORATOS",
+      "subheadings": [
+        {
+          "code": "2528.00.00",
+          "description": "Boratos naturales y sus concentrados (incluso calcinados), excepto los boratos extraídos de las salmueras naturales;"
+        },
+        {
+          "code": "2528.00.00",
+          "description": "Boratos de sodio naturales y sus concentrados (incluso calcinados)"
+        },
+        {
+          "code": "2528.00.00",
+          "description": "110Y Boratos de sodio naturales 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2528.00.00",
+          "description": "120B Concentrados de boratos de sodio naturales 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2528.00.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "2528.00.00",
+          "description": "910R ácido bórico natural con un contenido de H3BO3 inferior o igual a 85% en peso 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2528.00.00",
+          "description": "Boratos de calcio y sus concentrados"
+        },
+        {
+          "code": "2528.00.00",
+          "description": "921X Calcinados 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2528.00.00",
+          "description": "929P Los demás 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2528.00.00",
+          "description": "990T Los demás 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2529",
+      "description": "FELDESPATO; LEUCITA; NEFELINA Y NEFELINA SIENITA; ESPATO FLÚOR",
+      "subheadings": [
+        {
+          "code": "2529.10.00",
+          "description": "Feldespato"
+        },
+        {
+          "code": "2529.10.00",
+          "description": "000X -Feldespato 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2529.2",
+          "description": "Espato flúor:"
+        },
+        {
+          "code": "2529.21.00",
+          "description": "Con un contenido de fluoruro de calcio inferior o igual al 97 % en peso"
+        },
+        {
+          "code": "2529.21.00",
+          "description": "000Y --Con un contenido de fluoruro de calcio inferior o igual al 97 % en peso 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2529.22.00",
+          "description": "Con un contenido de fluoruro de calcio superior al 97 % en peso"
+        },
+        {
+          "code": "2529.22.00",
+          "description": "000K --Con un contenido de fluoruro de calcio superior al 97 % en peso 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2529.30.00",
+          "description": "Leucita; nefelina y nefelina sienita"
+        },
+        {
+          "code": "2529.30.00",
+          "description": "100F Leucita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2529.30.00",
+          "description": "200L Nefelina y nefelina sienita 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "2530",
+      "description": "MATERIAS MINERALES NO EXPRESADAS NI COMPRENDIDAS EN OTRA PARTE",
+      "subheadings": [
+        {
+          "code": "2530.10",
+          "description": "Vermiculita, perlita y cloritas, sin dilatar"
+        },
+        {
+          "code": "2530.10.10",
+          "description": "Perlita"
+        },
+        {
+          "code": "2530.10.10",
+          "description": "000L Perlita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "2530.10.90",
+          "description": "100V Vermiculita 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.10.90",
+          "description": "200A Cloritas 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.20.00",
+          "description": "Kieserita, epsomita (sulfatos de magnesio naturales)"
+        },
+        {
+          "code": "2530.20.00",
+          "description": "000Q -Kieserita, epsomita (sulfatos de magnesio naturales) 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "2530.90.10",
+          "description": "Espodumeno"
+        },
+        {
+          "code": "2530.90.10",
+          "description": "000Z Espodumeno 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.20",
+          "description": "Arena de circonio micronizada, apta para la preparación de esmaltes cerámicos"
+        },
+        {
+          "code": "2530.90.20",
+          "description": "000J Arena de circonio micronizada, apta para la preparación de esmaltes cerámicos 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.30",
+          "description": "Minerales de metales de las tierras raras"
+        },
+        {
+          "code": "2530.90.30",
+          "description": "000U Minerales de metales de las tierras raras 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.40",
+          "description": "Tierras colorantes"
+        },
+        {
+          "code": "2530.90.40",
+          "description": "100J Tierra de siena 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.40",
+          "description": "200P Mezclas entre si de tierras colorantes 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.40",
+          "description": "900C Las demás 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "2530.90.90",
+          "description": "100H Minerales de estroncio, incluso calcinados 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.90",
+          "description": "200N Molibdenita enriquecida para uso con fines no metalurgicos 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.90",
+          "description": "300U Nsutita, para uso con fines no metalúrgicos 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.90",
+          "description": "400Z Sulfuros de arsénico naturales 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "2530.90.90",
+          "description": "910E Criolita natural 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.90",
+          "description": "920H Quiolita natural 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.90",
+          "description": "930L Óxidos de hierro micáceos naturales 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.90",
+          "description": "940P Zeolitas 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "2530.90.90",
+          "description": "990F Los demás 4.00 4.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 282
+}

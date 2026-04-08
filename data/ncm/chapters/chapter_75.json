@@ -1,0 +1,305 @@
+{
+  "chapter": "75",
+  "title": "Capítulo 71",
+  "sectionTitle": "CAP. 75 SECCION XV METALES COMUNES Y MANUFACTURAS DE ESTOS METALES Notas. 1. Esta Sección no comprende: a. los colores y",
+  "headings": [
+    {
+      "code": "3207",
+      "description": "a 32.10, 32.12, 32.13 ó 32.15);",
+      "subheadings": []
+    },
+    {
+      "code": "7501",
+      "description": "MATAS DE NÍQUEL, «SINTERS» DE ÓXIDOS DE NÍQUEL Y DEMÁS PRODUCTOS INTERMEDIOS DE LA",
+      "subheadings": [
+        {
+          "code": "7501.10.00",
+          "description": "Matas de níquel"
+        },
+        {
+          "code": "7501.10.00",
+          "description": "000B -Matas de níquel 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7501.20.00",
+          "description": "«Sinters» de óxidos de níquel y demás productos intermedios de la metalurgia del níquel"
+        },
+        {
+          "code": "7501.20.00",
+          "description": "000Q -\"Sinters\" de Óxidos de níquel y demás productos intermedios de la metalurgia del níquel 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7502",
+      "description": "NÍQUEL EN BRUTO",
+      "subheadings": [
+        {
+          "code": "7502.10",
+          "description": "Níquel sin alear"
+        },
+        {
+          "code": "7502.10.10",
+          "description": "Cátodos"
+        },
+        {
+          "code": "7502.10.10",
+          "description": "000E Cátodos 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7502.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7502.10.90",
+          "description": "000H Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7502.20.00",
+          "description": "Aleaciones de níquel"
+        },
+        {
+          "code": "7502.20.00",
+          "description": "000J -Aleaciones de níquel 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7503",
+      "description": "DESPERDICIOS Y DESECHOS, DE NÍQUEL",
+      "subheadings": [
+        {
+          "code": "7503.00.00",
+          "description": "Desperdicios y desechos, de níquel"
+        },
+        {
+          "code": "7503.00.00",
+          "description": "000Z DESPERDICIOS Y DESECHOS, DE NÍQUEL. 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7504",
+      "description": "POLVO Y ESCAMILLAS, DE NÍQUEL",
+      "subheadings": [
+        {
+          "code": "7504.00.10",
+          "description": "Sin alear"
+        },
+        {
+          "code": "7504.00.10",
+          "description": "000C Sin alear 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7504.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7504.00.90",
+          "description": "000F Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7505",
+      "description": "BARRAS, PERFILES Y ALAMBRE, DE NÍQUEL",
+      "subheadings": [
+        {
+          "code": "7505.1",
+          "description": "Barras y perfiles:"
+        },
+        {
+          "code": "7505.11",
+          "description": "De níquel sin alear"
+        },
+        {
+          "code": "7505.11.10",
+          "description": "Barras"
+        },
+        {
+          "code": "7505.11.10",
+          "description": "000X Barras 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7505.11.21",
+          "description": "Huecos"
+        },
+        {
+          "code": "7505.11.21",
+          "description": "000P Huecos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7505.11.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "7505.11.29",
+          "description": "000A Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7505.12",
+          "description": "De aleaciones de níquel"
+        },
+        {
+          "code": "7505.12.10",
+          "description": "Barras"
+        },
+        {
+          "code": "7505.12.10",
+          "description": "000J Barras 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7505.12.21",
+          "description": "Huecos"
+        },
+        {
+          "code": "7505.12.21",
+          "description": "000B Huecos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7505.12.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "7505.12.29",
+          "description": "000M Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7505.2",
+          "description": "Alambre:"
+        },
+        {
+          "code": "7505.21.00",
+          "description": "De níquel sin alear"
+        },
+        {
+          "code": "7505.21.00",
+          "description": "000B --De níquel sin alear 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7505.22.00",
+          "description": "De aleaciones de níquel"
+        },
+        {
+          "code": "7505.22.00",
+          "description": "000N --De aleaciones de níquel 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7506",
+      "description": "CHAPAS, HOJAS Y TIRAS, DE NÍQUEL",
+      "subheadings": [
+        {
+          "code": "7506.10.00",
+          "description": "De níquel sin alear"
+        },
+        {
+          "code": "7506.10.00",
+          "description": "000U -De níquel sin alear 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7506.20.00",
+          "description": "De aleaciones de níquel"
+        },
+        {
+          "code": "7506.20.00",
+          "description": "000H -De aleaciones de níquel 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7507",
+      "description": "TUBOS Y ACCESORIOS DE TUBERÍA (POR EJEMPLO: EMPALMES (RACORES), CODOS, MANGUITOS), DE",
+      "subheadings": [
+        {
+          "code": "7507.1",
+          "description": "Tubos:"
+        },
+        {
+          "code": "7507.11.00",
+          "description": "De níquel sin alear"
+        },
+        {
+          "code": "7507.11.00",
+          "description": "000Z --De níquel sin alear 14.00 14.00 3.00 LA 3.00 4.00"
+        },
+        {
+          "code": "7507.12.00",
+          "description": "De aleaciones de níquel"
+        },
+        {
+          "code": "7507.12.00",
+          "description": "100R Cortados en dimensiones finales para uso automotriz 14.00 14.00 3.00 LA 3.00 4.00"
+        },
+        {
+          "code": "7507.12.00",
+          "description": "900K Las demas 14.00 14.00 3.00 LA 3.00 4.00"
+        },
+        {
+          "code": "7507.20.00",
+          "description": "Accesorios de tubería"
+        },
+        {
+          "code": "7507.20.00",
+          "description": "000B -Accesorios de tubería 14.00 14.00 3.00 LA 3.00 4.00"
+        }
+      ]
+    },
+    {
+      "code": "7508",
+      "description": "LAS DEMÁS MANUFACTURAS DE NÍQUEL",
+      "subheadings": [
+        {
+          "code": "7508.10.00",
+          "description": "Telas metálicas, redes y rejas, de alambre de níquel"
+        },
+        {
+          "code": "7508.10.00",
+          "description": "000F -Telas metálicas, redes y rejas, de alambre de níquel 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7508.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7508.90.10",
+          "description": "Cilindros huecos de sección variable, obtenidos por centrifugación, de los tipos utilizados en reformadores"
+        },
+        {
+          "code": "7508.90.10",
+          "description": "000D Cilindros huecos de sección variable, obtenidos por centrifugación, de los tipos utilizados en reformadores"
+        },
+        {
+          "code": "7508.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7508.90.90",
+          "description": "100M Tornillos; pernos y tuercas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7508.90.90",
+          "description": "200T ánodos de los tipos utilizados para niquelar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7508.90.90",
+          "description": "Depósitos, barriles, cubas y recipientes similares, y sus partes"
+        },
+        {
+          "code": "7508.90.90",
+          "description": "310B Aptos para contener alimentos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7508.90.90",
+          "description": "390C Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7508.90.90",
+          "description": "900F Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 70
+}

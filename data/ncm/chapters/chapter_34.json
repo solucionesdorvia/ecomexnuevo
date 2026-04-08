@@ -1,0 +1,723 @@
+{
+  "chapter": "34",
+  "title": "Capítulo 34",
+  "sectionTitle": "CAP. 34 SECCION VI PRODUCTOS DE LAS INDUSTRIAS QUIMICAS O DE LAS INDUSTRIAS CONEXAS Notas. A. Cualquier producto que res",
+  "headings": [
+    {
+      "code": "3401",
+      "description": "JABÓN; PRODUCTOS Y PREPARACIONES ORGÁNICOS TENSOACTIVOS USADOS COMO JABÓN, EN BARRAS,",
+      "subheadings": [
+        {
+          "code": "3401.1",
+          "description": "Jabón, productos y preparaciones orgánicos tensoactivos, en barras, panes, trozos o piezas troqueladas o"
+        },
+        {
+          "code": "3401.11",
+          "description": "De tocador (incluso los medicinales)"
+        },
+        {
+          "code": "3401.11.10",
+          "description": "Jabones medicinales"
+        },
+        {
+          "code": "3401.11.10",
+          "description": "000G Jabones medicinales 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3401.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3401.11.90",
+          "description": "100Q Papel, guata, fieltro y tela sin tejer, impregnados, recubiertos o revestidos de jabón o de detergentes 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3401.11.90",
+          "description": "900J Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3401.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3401.19.00",
+          "description": "100Y Papel, guata, fieltro y tela sin tejer, impregnados, recubiertos o revestidos de jabón o de detergentes 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3401.19.00",
+          "description": "900R Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3401.20",
+          "description": "Jabón en otras formas"
+        },
+        {
+          "code": "3401.20.10",
+          "description": "De tocador"
+        },
+        {
+          "code": "3401.20.10",
+          "description": "000J De tocador 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3401.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3401.20.90",
+          "description": "100T De uso doméstico (R.30/97 AFIP) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3401.20.90",
+          "description": "900L Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3401.30.00",
+          "description": "Productos y preparaciones orgánicos tensoactivos para el lavado de la piel, líquidos o en crema, acondicionados para"
+        },
+        {
+          "code": "3401.30.00",
+          "description": "000N -Productos y preparaciones orgánicos tensoactivos para el lavado de la piel, líquidos o en crema, acondicionados para"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "3402",
+      "description": "AGENTES DE SUPERFICIE ORGÁNICOS (EXCEPTO EL JABÓN); PREPARACIONES TENSOACTIVAS,",
+      "subheadings": [
+        {
+          "code": "3402.1",
+          "description": "Agentes de superficie orgánicos, incluso acondicionados para la venta al por menor:"
+        },
+        {
+          "code": "3402.11",
+          "description": "Aniónicos"
+        },
+        {
+          "code": "3402.11.10",
+          "description": "Dibutilnaftalensulfato de sodio"
+        },
+        {
+          "code": "3402.11.10",
+          "description": "000A Dibutilnaftalensulfato de sodio 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.11.20",
+          "description": "N-Metil-N-oleoiltaurato de sodio"
+        },
+        {
+          "code": "3402.11.20",
+          "description": "000K N-Metil-N-oleoiltaurato de sodio 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.11.30",
+          "description": "Alquilsulfonato de sodio, secundario"
+        },
+        {
+          "code": "3402.11.30",
+          "description": "000V Alquilsulfonato de sodio, secundario 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.11.40",
+          "description": "Mezcla de ácidos alquilbencenosulfónicos"
+        },
+        {
+          "code": "3402.11.40",
+          "description": "000E Mezcla de ácidos alquilbencenosulfónicos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.11.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3402.11.90",
+          "description": "100J Alquil-Alquilfenilétersulfonatos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.11.90",
+          "description": "200P Alquilsulfatos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.11.90",
+          "description": "300V Alquilarilsulfonatos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.11.90",
+          "description": "400A Otros alquilsulfonatos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.11.90",
+          "description": "900C Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.12",
+          "description": "Catiónicos"
+        },
+        {
+          "code": "3402.12.10",
+          "description": "Acetato de oleilamina"
+        },
+        {
+          "code": "3402.12.10",
+          "description": "000M Acetato de oleilamina 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.12.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3402.12.90",
+          "description": "000Q Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.13.00",
+          "description": "No iónicos"
+        },
+        {
+          "code": "3402.13.00",
+          "description": "100V Condensados de alcoholes grasos, con óxido de etileno 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.13.00",
+          "description": "200A Condensados de ácidos grasos, con óxido de etileno 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.13.00",
+          "description": "300F Alquilfenoles etoxilados 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.13.00",
+          "description": "400L Amidas etoxiladas de ácidos grasos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.13.00",
+          "description": "500R Polietilenimina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.13.00",
+          "description": "600X Agentes tensoactivos tipo \"Tween\" 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.13.00",
+          "description": "700C Aceite vegetal etoxilado 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.13.00",
+          "description": "800H Aminas alifaticas de C8 a C22 etoxiladas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.13.00",
+          "description": "900N Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3402.19.00",
+          "description": "100R Proteínas alquilbetaínicas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.19.00",
+          "description": "900K Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.20.00",
+          "description": "Preparaciones acondicionadas para la venta al por menor"
+        },
+        {
+          "code": "3402.20.00",
+          "description": "100Y Productos domisanitarios definidos en la Resolución 709/98 ex MSyAS. 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3402.20.00",
+          "description": "900R Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3402.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3402.90.11",
+          "description": "Conteniendo exclusivamente productos no iónicos"
+        },
+        {
+          "code": "3402.90.11",
+          "description": "000J Conteniendo exclusivamente productos no iónicos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3402.90.19",
+          "description": "000V Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.21",
+          "description": "Soluciones o emulsiones hidroalcohólicas de (1-perfluoroalquil-2-acetoxi)propil betaína"
+        },
+        {
+          "code": "3402.90.21",
+          "description": "000U Soluciones o emulsiones hidroalcohólicas de (1-perfluoroalquil-2-acetoxi)propil betaína (R.1497/98 MEOSP) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.22",
+          "description": "A base de nonanoiloxibencenosulfonato de sodio"
+        },
+        {
+          "code": "3402.90.22",
+          "description": "000B A base de nonanoiloxibencenosulfonato de sodio 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.23",
+          "description": "Soluciones o emulsiones hidroalcohólicas de sulfonatos de perfluoroalquiltrimetilamonio y de perfluoroalquilacrilamida"
+        },
+        {
+          "code": "3402.90.23",
+          "description": "000J Soluciones o emulsiones hidroalcohólicas de sulfonatos de perfluoroalquiltrimetilamonio y de perfluoroalquilacrilamida 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3402.90.29",
+          "description": "100K De tensoactivos aniónicos 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.29",
+          "description": "200Q De tensoactivos catiónicos 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.29",
+          "description": "300W De tensoactivos no iónicos 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.29",
+          "description": "900D Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.31",
+          "description": "A base de nonilfenol etoxilado"
+        },
+        {
+          "code": "3402.90.31",
+          "description": "000D A base de nonilfenol etoxilado 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.39",
+          "description": "Las demás"
+        },
+        {
+          "code": "3402.90.39",
+          "description": "100V A base de tensoactivos aniónicos 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.39",
+          "description": "200A A base de tensoactivos catiónicos 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.39",
+          "description": "300F A base de tensoactivos no iónicos 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.39",
+          "description": "900N Los demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3402.90.90",
+          "description": "100K A base de sustancias alcalinas 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.90",
+          "description": "200Q A base de disolventes 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3402.90.90",
+          "description": "900D Los demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3403",
+      "description": "PREPARACIONES LUBRICANTES (INCLUIDOS LOS ACEITES DE CORTE, LAS PREPARACIONES PARA",
+      "subheadings": [
+        {
+          "code": "3403.1",
+          "description": "Que contengan aceites de petróleo o de mineral bituminoso:"
+        },
+        {
+          "code": "3403.11",
+          "description": "Preparaciones para el tratamiento de materias textiles, cueros y pieles, peletería u otras materias"
+        },
+        {
+          "code": "3403.11.10",
+          "description": "Para el tratamiento de materias textiles"
+        },
+        {
+          "code": "3403.11.10",
+          "description": "000U Para el tratamiento de materias textiles 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.11.20",
+          "description": "Para el tratamiento de cueros y pieles"
+        },
+        {
+          "code": "3403.11.20",
+          "description": "000D Para el tratamiento de cueros y pieles 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.11.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3403.11.90",
+          "description": "000X Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3403.19.00",
+          "description": "100K Preparaciones de aflojar tuercas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.19.00",
+          "description": "200Q Preparaciones antiherrumbre o anticorrosión, excepto las de los tipos utilizados en los vehículos del Capítulo 87 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.19.00",
+          "description": "300W Preparaciones para el desmoldeo 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.19.00",
+          "description": "400B Aceites para corte 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.19.00",
+          "description": "500G Preparaciones lubricantes de los tipos utilizados en los vehículos mencionados en el capítulo 87 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.19.00",
+          "description": "900D Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "3403.91",
+          "description": "Preparaciones para el tratamiento de materias textiles, cueros y pieles, peletería u otras materias"
+        },
+        {
+          "code": "3403.91.10",
+          "description": "Para el tratamiento de materias textiles"
+        },
+        {
+          "code": "3403.91.10",
+          "description": "000G Para el tratamiento de materias textiles 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.91.20",
+          "description": "Para el tratamiento de cueros y pieles"
+        },
+        {
+          "code": "3403.91.20",
+          "description": "000R Para el tratamiento de cueros y pieles 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.91.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3403.91.90",
+          "description": "000K Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.99.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3403.99.00",
+          "description": "100Y Preparaciones de aflojar tuercas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.99.00",
+          "description": "200D Preparaciones antiherrumbre o anticorrosión, excepto las de los tipos utilizados en los vehículos del Capítulo 87 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.99.00",
+          "description": "300J Preparaciones para el desmoldeo 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.99.00",
+          "description": "400P Aceites para corte 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.99.00",
+          "description": "500V Preparaciones lubricantes de los tipos utilizados en los vehículos mencionados en el Capítulo 87 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3403.99.00",
+          "description": "900R Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3404",
+      "description": "CERAS ARTIFICIALES Y CERAS PREPARADAS",
+      "subheadings": [
+        {
+          "code": "3404.20",
+          "description": "De poli(oxietileno) (polietilenglicol)"
+        },
+        {
+          "code": "3404.20.10",
+          "description": "Ceras artificiales"
+        },
+        {
+          "code": "3404.20.10",
+          "description": "000P Ceras artificiales 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.20.20",
+          "description": "Ceras preparadas"
+        },
+        {
+          "code": "3404.20.20",
+          "description": "000Z Ceras preparadas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3404.90.11",
+          "description": "De polietileno, emulsionables"
+        },
+        {
+          "code": "3404.90.11",
+          "description": "000W De polietileno, emulsionables 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90.12",
+          "description": "Otras, de polietileno"
+        },
+        {
+          "code": "3404.90.12",
+          "description": "000D Otras, de polietileno 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90.13",
+          "description": "De polipropilenglicoles"
+        },
+        {
+          "code": "3404.90.13",
+          "description": "000L De polipropilenglicoles 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90.14",
+          "description": "De dímero de alquilceteno con dos grupos alternados n-alquilo de C12, C14 y C16, en gránulos"
+        },
+        {
+          "code": "3404.90.14",
+          "description": "000U De dimero de alquilceteno con dos grupos alternados n-alquilo de C12, C14 y C16, en gránulos 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3404.90.19",
+          "description": "100M A base de mono o diestearato de glicerilo 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90.19",
+          "description": "200T Parafinas cloradas; naftalenos policlorados 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90.19",
+          "description": "300Y Difenilos policlorados (PCB) (R.G. 2146/06 AFIP) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90.19",
+          "description": "400D De dimero de alquilceteno 14.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90.19",
+          "description": "900F Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90.21",
+          "description": "A base de vaselina y alcoholes de lanolina (eucerina anhidra)"
+        },
+        {
+          "code": "3404.90.21",
+          "description": "000F A base de vaselina y alcoholes de lanolina (eucerina anhidra) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90.22",
+          "description": "A base de hidroxiestearil cetil éter"
+        },
+        {
+          "code": "3404.90.22",
+          "description": "000N A base de hidroxiestearil cetil eter 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3404.90.29",
+          "description": "100X Mezclas de dos o más ceras diferentes 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3404.90.29",
+          "description": "900Q Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3405",
+      "description": "BETUNES Y CREMAS PARA EL CALZADO, ENCÁUSTICOS, ABRILLANTADORES (LUSTRES) PARA",
+      "subheadings": [
+        {
+          "code": "3405.10.00",
+          "description": "Betunes, cremas y preparaciones similares para el calzado o para cueros y pieles"
+        },
+        {
+          "code": "3405.10.00",
+          "description": "100P Productos domisanitarios definidos en la Resolución 709/98 ex MSyAS 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3405.10.00",
+          "description": "900H Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3405.20.00",
+          "description": "Encáusticos y preparaciones similares para la conservación de muebles de madera, parqués u otras manufacturas de"
+        },
+        {
+          "code": "3405.20.00",
+          "description": "100D Productos domisanitarios definidos en la Resolución 709/98 ex MSyAS 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3405.20.00",
+          "description": "900X Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3405.30.00",
+          "description": "Abrillantadores (lustres) y preparaciones similares para carrocerías, excepto las preparaciones para lustrar metal"
+        },
+        {
+          "code": "3405.30.00",
+          "description": "100T Productos domisanitarios definidos en la Resolución 709/98 ex MSyAS 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3405.30.00",
+          "description": "900L Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3405.40.00",
+          "description": "Pastas, polvos y demás preparaciones para fregar"
+        },
+        {
+          "code": "3405.40.00",
+          "description": "100G Productos domisanitarios definidos en la Resolución 709/98 ex MSyAS 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3405.40.00",
+          "description": "900A Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3405.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3405.90.00",
+          "description": "Ceras mezcladas, dispersas o disueltas en un medio líquido"
+        },
+        {
+          "code": "3405.90.00",
+          "description": "110F Productos domisanitarios definidos en la Resolución 709/98 ex MSyAS 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3405.90.00",
+          "description": "190G Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3405.90.00",
+          "description": "910Z Productos domisanitarios definidos en la Resolución 709/98 ex MSyAS 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3405.90.00",
+          "description": "990A Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "3406",
+      "description": "VELAS, CIRIOS Y ARTÍCULOS SIMILARES",
+      "subheadings": [
+        {
+          "code": "3406.00.00",
+          "description": "Velas, cirios y artículos similares"
+        },
+        {
+          "code": "3406.00.00",
+          "description": "100U Productos domisanitarios perfumados o aromatizados definidos en la Resolución 709/98 ex MSyAS 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3406.00.00",
+          "description": "900M Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "3407",
+      "description": "PASTAS PARA MODELAR, INCLUIDAS LAS PRESENTADAS PARA ENTRETENIMIENTO DE LOS NIÑOS;",
+      "subheadings": [
+        {
+          "code": "3407.00.10",
+          "description": "Pastas para modelar"
+        },
+        {
+          "code": "3407.00.10",
+          "description": "100X Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3407.00.10",
+          "description": "900Q Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3407.00.20",
+          "description": "Preparaciones llamadas «ceras para odontología» o «compuestos para impresión dental»"
+        },
+        {
+          "code": "3407.00.20",
+          "description": "000B Preparaciones llamadas \"ceras para odontología\" o \"compuestos para impresión dental\" 16.00 16.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3407.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3407.00.90",
+          "description": "000V Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 176
+}

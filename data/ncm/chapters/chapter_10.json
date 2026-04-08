@@ -1,0 +1,916 @@
+{
+  "chapter": "10",
+  "title": "Capítulo 10",
+  "sectionTitle": "CAP. 10 SECCION II PRODUCTOS DEL REINO VEGETAL Notas. 1. En esta Sección, el término \"pellets\" designa los productos en",
+  "headings": [
+    {
+      "code": "1001",
+      "description": "TRIGO Y MORCAJO (TRANQUILLÓN)",
+      "subheadings": [
+        {
+          "code": "1001.1",
+          "description": "Trigo duro:"
+        },
+        {
+          "code": "1001.11.00",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1001.11.00",
+          "description": "000D --Para siembra 0.00 0.00 0.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "Candeal"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "110H A granel, con hasta 15 % de embolsado (Ley 21.453) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "Más del 15 % de embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "121N En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res Nº 835/2005 SAGPyA) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "129F Los demás 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "Tagan Rock"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "210N A granel, con hasta 15 % de embolsado (Ley 21.453) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "221U En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res Nº 835/2005 SAGPyA) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "229L Los demás 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "910B A granel, con hasta 15 % de embolsado (Ley 21.453) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "921G En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res Nº 835/2005 SAGPyA) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1001.19.00",
+          "description": "929Z Los demás 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1001.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "1001.91.00",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1001.91.00",
+          "description": "000R --Para siembra 0.00 0.00 0.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1001.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1001.99.00",
+          "description": "Trigo Pan"
+        },
+        {
+          "code": "1001.99.00",
+          "description": "110W A granel, con hasta 15 % de embolsado (Ley 21.453) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1001.99.00",
+          "description": "Más del 15 % de embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1001.99.00",
+          "description": "121B En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res Nº 835/2005 SAGPyA) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1001.99.00",
+          "description": "129U Los demás 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1001.99.00",
+          "description": "900L Los demás 10.00 10.00 3.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1002",
+      "description": "CENTENO",
+      "subheadings": [
+        {
+          "code": "1002.10.00",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1002.10.00",
+          "description": "000K -Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1002.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1002.90.00",
+          "description": "100D A granel, con hasta 15% de embolsado. 8.00 8.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1002.90.00",
+          "description": "Mas del 15% de embolsado"
+        },
+        {
+          "code": "1002.90.00",
+          "description": "210M En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1002.90.00",
+          "description": "290N Los demás 8.00 8.00 3.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1003",
+      "description": "CEBADA",
+      "subheadings": [
+        {
+          "code": "1003.10.00",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1003.10.00",
+          "description": "000D -Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1003.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1003.90.10",
+          "description": "Cervecera"
+        },
+        {
+          "code": "1003.90.10",
+          "description": "100G A granel, con hasta 15 % de embolsado (Ley 21.453) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1003.90.10",
+          "description": "Más del 15 % de embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1003.90.10",
+          "description": "210Q En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res Nº 835/2005 SAGPyA) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1003.90.10",
+          "description": "290R Los demás 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1003.90.80",
+          "description": "Otras, en grano"
+        },
+        {
+          "code": "1003.90.80",
+          "description": "100A A granel, con hasta 15 % de embolsado (Ley 21.453) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1003.90.80",
+          "description": "Más del 15 % de embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1003.90.80",
+          "description": "210J En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res Nº 835/2005 SAGPyA) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1003.90.80",
+          "description": "290K Los demás 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1003.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1003.90.90",
+          "description": "100K A granel, con hasta 15 % de embolsado (Ley 21.453) 10.00 10.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1003.90.90",
+          "description": "900D Los demas 10.00 10.00 3.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1004",
+      "description": "AVENA",
+      "subheadings": [
+        {
+          "code": "1004.10.00",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1004.10.00",
+          "description": "000X -Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1004.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1004.90.00",
+          "description": "100Q A granel, con hasta 15% de embolsado. 8.00 8.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1004.90.00",
+          "description": "Mas del 15% de embolsado."
+        },
+        {
+          "code": "1004.90.00",
+          "description": "210Z En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1004.90.00",
+          "description": "290A Los demás 8.00 8.00 3.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1005",
+      "description": "MAÍZ",
+      "subheadings": [
+        {
+          "code": "1005.10.00",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1005.10.00",
+          "description": "000Q -Para siembra 0.00 0.00 0.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1005.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "En grano"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "A granel, con hasta 15 % de embolsado (Ley 21453)"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "110X Pisingallo 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "120A Flint o Plata 8.00 8.00 3.00 LA 7.00 0.00"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "190Y Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "Más del 15 % de embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "Pisingallo"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "211E En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "219X Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "Flint o Plata"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "221H En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 8.00 8.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "229A Los demás 8.00 8.00 3.00 LA 7.00 0.00"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "291F En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 8.00 8.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1005.90.10",
+          "description": "299Y Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1005.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1005.90.90",
+          "description": "100X Fresco (R.2507/93 ex-ANA) 8.00 8.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1005.90.90",
+          "description": "900Q Los demás 8.00 8.00 3.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1006",
+      "description": "ARROZ",
+      "subheadings": [
+        {
+          "code": "1006.10",
+          "description": "Arroz con cáscara (arroz «paddy»)"
+        },
+        {
+          "code": "1006.10.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1006.10.10",
+          "description": "000U Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1006.10.91",
+          "description": "Parboilizado"
+        },
+        {
+          "code": "1006.10.91",
+          "description": "000E Parboilizado 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.10.92",
+          "description": "No parboilizado"
+        },
+        {
+          "code": "1006.10.92",
+          "description": "100T En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.10.92",
+          "description": "900L Los demas (Ley 21.435). 10.00 10.00 3.00 LA 6.00 0.00"
+        },
+        {
+          "code": "1006.20",
+          "description": "Arroz descascarillado (arroz cargo o arroz pardo)"
+        },
+        {
+          "code": "1006.20.10",
+          "description": "Parboilizado"
+        },
+        {
+          "code": "1006.20.10",
+          "description": "100N En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP) (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "1006.20.10",
+          "description": "200U En envases de contenido neto superior a 2 kg e inferior o igual a 60 kg (R.102/01 ME) 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.20.10",
+          "description": "900G Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.20.20",
+          "description": "No parboilizado"
+        },
+        {
+          "code": "1006.20.20",
+          "description": "100Y En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP) (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "1006.20.20",
+          "description": "200D En envases de contenido neto superior a 2 kg e inferior o igual a 60 kg (R.102/01ME) (Ley 21453). 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.20.20",
+          "description": "900R Los demas (Ley 21.435). 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.30",
+          "description": "Arroz semiblanqueado o blanqueado, incluso pulido o glaseado"
+        },
+        {
+          "code": "1006.30.11",
+          "description": "Pulido o glaseado"
+        },
+        {
+          "code": "1006.30.11",
+          "description": "Con un contenido de grano quebrado inferior o igual al 10 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.30.11",
+          "description": "110N En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP) (Res. 835/05 SAGPyA) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "1006.30.11",
+          "description": "120R En envases de contenido neto superior a 2 kg e inferior o igual a 60 kg (R.102/01 ME) 12.00 12.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.30.11",
+          "description": "190P Los demás 12.00 12.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.30.11",
+          "description": "Con un contenido de grano quebrado superior al 10 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.30.11",
+          "description": "210U En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP) (Res. 835/05 SAGPyA) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "1006.30.11",
+          "description": "220X En envases de contenido neto superior a 2 kg e inferior o igual a 60 kg (R.102/01 ME) 12.00 12.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.30.11",
+          "description": "290V Los demás 12.00 12.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.30.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "1006.30.19",
+          "description": "Con un contenido de grano quebrado inferior o igual al 10 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.30.19",
+          "description": "110Z En envases inmediatos de contenido neto inferior o igual a 2 kg (Res.835/05 SAGPyA) 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "1006.30.19",
+          "description": "190A Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.30.19",
+          "description": "Con un contenido de grano quebrado superior al 10 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.30.19",
+          "description": "210E En envases inmediatos de contenido neto inferior o igual a 2 kg (Res.835/05 SAGPyA) 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "1006.30.19",
+          "description": "290F Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.30.21",
+          "description": "Pulido o glaseado"
+        },
+        {
+          "code": "1006.30.21",
+          "description": "Con un contenido de grano quebrado inferior o igual al 10 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.30.21",
+          "description": "110Y En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP) (Res. 835/05 SAGPyA) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "1006.30.21",
+          "description": "120B En envases de contenido neto superior a 2 kg e inferior o igual a 60 kg (R.102/01 ME) 12.00 12.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.30.21",
+          "description": "190Z Los demás 12.00 12.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.30.21",
+          "description": "Con un contenido de grano quebrado superior al 10 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.30.21",
+          "description": "210D En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP) (Res. 835/05 SAGPyA) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "1006.30.21",
+          "description": "220G En envases de contenido neto superior a 2 kg e inferior o igual a 60 kg (R.102/01 ME) 12.00 12.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.30.21",
+          "description": "290E Los demás 12.00 12.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.30.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "1006.30.29",
+          "description": "Con un contenido de grano quebrado inferior o igual al 10 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.30.29",
+          "description": "110J En envases inmediatos de contenido neto inferior o igual a 2 kg (Res.835/05 SAGPyA) 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "1006.30.29",
+          "description": "190K Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.30.29",
+          "description": "Con un contenido de grano quebrado superior al 10 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.30.29",
+          "description": "210P En envases inmediatos de contenido neto inferior o igual a 2 kg (Res.835/05 SAGPyA) 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "1006.30.29",
+          "description": "290Q Los demas 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "Arroz partido"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "Medio grano (Ley 21.453)"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "110K En envases inmediatos de contenido neto inferior o igual a 2 kg (Res.835/05 SAGPyA) 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "190L Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "Medio grano y cuarto grano (Ley 21.453)"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "210Q En envases inmediatos de contenido neto inferior o igual a 2 kg (Res.835/05 SAGPyA) 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "290R Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "Cuarto grano, con un contenido de cuerpos extraños inferior o igual al 1 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "310W En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "390X Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "Cuarto grano, con un contenido de cuerpos extraños superior al 1 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "410B En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "490C Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "Arrocín, con un contenido de cuerpos extraños inferior o igual al 1 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "510G En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res.835/05 SAGPyA) 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "590H Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "Arrocín, con un contenido de cuerpos extraños superior al 1 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "610M En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "690N Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "Cuarto grano y arrocín, con un contenido de cuerpos extraños inferior o igual al 1 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "710T En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "790U Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "Cuarto grano y arrocín, con un contenido de cuerpos extraños superior al 1 % (Ley 21.453)"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "810Y En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "890Z Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "910D En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA). 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1006.40.00",
+          "description": "990E Los demas. 10.00 10.00 3.00 LA 5.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1007",
+      "description": "SORGO DE GRANO (GRANÍFERO)",
+      "subheadings": [
+        {
+          "code": "1007.10.00",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1007.10.00",
+          "description": "000C -Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1007.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1007.90.00",
+          "description": "100W A granel, con hasta el 15 % embolsado (Ley 21.453) 8.00 8.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "1007.90.00",
+          "description": "Más del 15 % embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1007.90.00",
+          "description": "210E En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1007.90.00",
+          "description": "290F Los demás 8.00 8.00 3.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1008",
+      "description": "ALFORFÓN, MIJO Y ALPISTE; LOS DEMÁS CEREALES",
+      "subheadings": [
+        {
+          "code": "1008.10",
+          "description": "Alforfón"
+        },
+        {
+          "code": "1008.10.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1008.10.10",
+          "description": "100L En envases inmediatos de contenido neto inferior o igual a 2 Kg 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1008.10.10",
+          "description": "900E Los demas 0.00 0.00 0.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1008.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1008.10.90",
+          "description": "000J Los demás 8.00 8.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1008.2",
+          "description": "Mijo:"
+        },
+        {
+          "code": "1008.21",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1008.21.10",
+          "description": "Mijo perla (Pennisetum glaucum)"
+        },
+        {
+          "code": "1008.21.10",
+          "description": "100M En envases inmediatos de contenido neto inferior o igual a 2 Kg 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1008.21.10",
+          "description": "900F Los demas. 0.00 0.00 0.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1008.21.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1008.21.90",
+          "description": "100Q En envases inmediatos de contenido neto inferior o igual a 2 Kg 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1008.21.90",
+          "description": "900J Los demas. 0.00 0.00 0.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1008.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "1008.29.10",
+          "description": "Mijo perla (Pennisetum glaucum)"
+        },
+        {
+          "code": "1008.29.10",
+          "description": "100H A granel, con hasta el 15 % embolsado 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1008.29.10",
+          "description": "Más del 15 % embolsado"
+        },
+        {
+          "code": "1008.29.10",
+          "description": "210R En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res. 835/05 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1008.29.10",
+          "description": "290T Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1008.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1008.29.90",
+          "description": "100L A granel, con hasta el 15% embolsado. 8.00 8.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1008.29.90",
+          "description": "Mas del 15% embolsado."
+        },
+        {
+          "code": "1008.29.90",
+          "description": "210V En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1008.29.90",
+          "description": "290W Los demás 8.00 8.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1008.30",
+          "description": "Alpiste"
+        },
+        {
+          "code": "1008.30.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1008.30.10",
+          "description": "000J Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1008.30.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1008.30.90",
+          "description": "100T A granel, con hasta el 15 % embolsado (Ley 21.453) 8.00 8.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1008.30.90",
+          "description": "Más del 15 % embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1008.30.90",
+          "description": "210B En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res. 835/05 SAGPyA) 8.00 8.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1008.30.90",
+          "description": "290C Los demás 8.00 8.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1008.40",
+          "description": "Fonio (Digitaria spp)"
+        },
+        {
+          "code": "1008.40.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1008.40.10",
+          "description": "000Y Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1008.40.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1008.40.90",
+          "description": "000B Los demás 8.00 8.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1008.50",
+          "description": "Quinoa (quinua)* (Chenopodium quinoa)"
+        },
+        {
+          "code": "1008.50.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1008.50.10",
+          "description": "000M Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1008.50.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1008.50.90",
+          "description": "000Q Las demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1008.60",
+          "description": "Triticale"
+        },
+        {
+          "code": "1008.60.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1008.60.10",
+          "description": "000B Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1008.60.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1008.60.90",
+          "description": "000E Los demás 8.00 8.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "1008.90",
+          "description": "Los demás cereales"
+        },
+        {
+          "code": "1008.90.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1008.90.10",
+          "description": "000U Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1008.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1008.90.90",
+          "description": "000X Los demás 8.00 8.00 3.00 LA 5.00 0.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 226
+}

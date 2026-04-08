@@ -1,0 +1,1286 @@
+{
+  "chapter": "15",
+  "title": "Capítulo 15",
+  "sectionTitle": "CAP. 15 SECCION III GRASAS Y ACEITES ANIMALES O VEGETALES; PRODUCTOS DE SU DESDOBLAMIENTO; GRASAS ALIMENTICIAS ELABORADA",
+  "headings": [
+    {
+      "code": "1501",
+      "description": "GRASA DE CERDO (INCLUIDA LA MANTECA DE CERDO) Y GRASA DE AVE, EXCEPTO LAS DE LAS PARTIDAS",
+      "subheadings": [
+        {
+          "code": "1501.10.00",
+          "description": "Manteca de cerdo"
+        },
+        {
+          "code": "1501.10.00",
+          "description": "000Z -Manteca de cerdo 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1501.20.00",
+          "description": "Las demás grasas de cerdo"
+        },
+        {
+          "code": "1501.20.00",
+          "description": "000N -Las demás grasas de cerdo 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1501.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1501.90.00",
+          "description": "000M -Las demás 8.00 8.00 3.00 LA 5.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1502",
+      "description": "GRASA DE ANIMALES DE LAS ESPECIES BOVINA, OVINA O CAPRINA, EXCEPTO LAS DE LA PARTIDA 1503",
+      "subheadings": [
+        {
+          "code": "1502.10",
+          "description": "Sebo"
+        },
+        {
+          "code": "1502.10.11",
+          "description": "En bruto"
+        },
+        {
+          "code": "1502.10.11",
+          "description": "000K En bruto 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1502.10.12",
+          "description": "Fundido (incluido el «primer jugo»)"
+        },
+        {
+          "code": "1502.10.12",
+          "description": "000T Fundido (incluido el 'primer jugo') 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1502.10.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "1502.10.19",
+          "description": "000W Los demás 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1502.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1502.10.90",
+          "description": "000F Los demás 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1502.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1502.90.00",
+          "description": "100L Grasa ovina 6.00 6.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1502.90.00",
+          "description": "200R Grasa caprina 6.00 6.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1502.90.00",
+          "description": "Grasa bovina"
+        },
+        {
+          "code": "1502.90.00",
+          "description": "310A De corazón, de cabeza, de pulmón, de molleja de corazón, de cogote, de mondongo, de roseta, de pancreas, de tapa,"
+        },
+        {
+          "code": "1502.90.00",
+          "description": "390B Las demás 6.00 6.00 3.00 LA 5.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1503",
+      "description": "ESTEARINA SOLAR, ACEITE DE MANTECA DE CERDO, OLEOESTEARINA, OLEOMARGARINA Y ACEITE DE",
+      "subheadings": [
+        {
+          "code": "1503.00.00",
+          "description": "Estearina solar, aceite de manteca de cerdo, oleoestearina, oleomargarina y aceite de sebo, sin emulsionar, mezclar ni"
+        },
+        {
+          "code": "1503.00.00",
+          "description": "100C Oleoestearina 8.00 8.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1503.00.00",
+          "description": "200H Oleomargarina 8.00 8.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1503.00.00",
+          "description": "300N Aceite de sebo 8.00 8.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1503.00.00",
+          "description": "400U Estearina solar 8.00 8.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1503.00.00",
+          "description": "500Z Aceite de manteca de cerdo 8.00 8.00 3.00 LA 5.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1504",
+      "description": "GRASAS Y ACEITES, Y SUS FRACCIONES, DE PESCADO O DE MAMÍFEROS MARINOS, INCLUSO REFINADOS,",
+      "subheadings": [
+        {
+          "code": "1504.10",
+          "description": "Aceites de hígado de pescado y sus fracciones"
+        },
+        {
+          "code": "1504.10.11",
+          "description": "Aceite en bruto"
+        },
+        {
+          "code": "1504.10.11",
+          "description": "000X Aceite en bruto 4.00 4.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "1504.10.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "1504.10.19",
+          "description": "000H Los demás 4.00 4.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "1504.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1504.10.90",
+          "description": "000T Los demás 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1504.20.00",
+          "description": "Grasas y aceites de pescado y sus fracciones, excepto los aceites de hígado"
+        },
+        {
+          "code": "1504.20.00",
+          "description": "000U -Grasas y aceites de pescado y sus fracciones, excepto los aceites de hígado 10.00 10.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "1504.30.00",
+          "description": "Grasas y aceites de mamíferos marinos y sus fracciones"
+        },
+        {
+          "code": "1504.30.00",
+          "description": "000H -Grasas y aceites de mamíferos marinos y sus fracciones 10.00 10.00 3.00 LA 5.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1505",
+      "description": "GRASA DE LANA Y SUSTANCIAS GRASAS DERIVADAS, INCLUIDA LA LANOLINA",
+      "subheadings": [
+        {
+          "code": "1505.00.10",
+          "description": "Lanolina"
+        },
+        {
+          "code": "1505.00.10",
+          "description": "000U Lanolina 8.00 8.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "1505.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1505.00.90",
+          "description": "000X Las demás 6.00 6.00 3.00 LA 5.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1506",
+      "description": "LAS DEMÁS GRASAS Y ACEITES ANIMALES, Y SUS FRACCIONES, INCLUSO REFINADOS, PERO SIN",
+      "subheadings": [
+        {
+          "code": "1506.00.00",
+          "description": "Las demás grasas y aceites animales, y sus fracciones, incluso refinados, pero sin modificar químicamente"
+        },
+        {
+          "code": "1506.00.00",
+          "description": "100H De pie de buey 6.00 6.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1506.00.00",
+          "description": "900B Los demás 6.00 6.00 3.00 LA 5.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1507",
+      "description": "ACEITE DE SOJA (SOYA) Y SUS FRACCIONES, INCLUSO REFINADO, PERO SIN MODIFICAR QUÍMICAMENTE",
+      "subheadings": [
+        {
+          "code": "1507.10.00",
+          "description": "Aceite en bruto, incluso desgomado"
+        },
+        {
+          "code": "1507.10.00",
+          "description": "100Q A granel (Ley 21.453) 10.00 10.00 3.00 LA 31.00 0.00"
+        },
+        {
+          "code": "1507.10.00",
+          "description": "200W En envases de 10 kg arriba unicamente. 10.00 10.00 3.00 LA 31.00 0.00"
+        },
+        {
+          "code": "1507.10.00",
+          "description": "900J Los demás 10.00 10.00 3.00 LA 31.00 0.00"
+        },
+        {
+          "code": "1507.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1507.90.11",
+          "description": "En envases con capacidad inferior o igual a 5 l"
+        },
+        {
+          "code": "1507.90.11",
+          "description": "000Q En envases con capacidad inferior o igual a 5 l (Res.359/99 MEYOSP) 12.00 12.00 3.00 LA 25.00 0.00"
+        },
+        {
+          "code": "1507.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "1507.90.19",
+          "description": "100G A granel (Ley 21.453) 12.00 12.00 3.00 LA 30.00 0.00"
+        },
+        {
+          "code": "1507.90.19",
+          "description": "Los demás, en envases de 10 kg arriba únicamente (Ley 21.453)"
+        },
+        {
+          "code": "1507.90.19",
+          "description": "210Q En tambores con capacidad superior a 200 l (Ley 21.453) 12.00 12.00 3.00 LA 30.00 0.00"
+        },
+        {
+          "code": "1507.90.19",
+          "description": "290R Los demás 12.00 12.00 3.00 LA 30.00 0.00"
+        },
+        {
+          "code": "1507.90.19",
+          "description": "900A Los demás 12.00 12.00 3.00 LA 30.00 0.00"
+        },
+        {
+          "code": "1507.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1507.90.90",
+          "description": "000L Los demás 10.00 10.00 3.00 LA 31.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1508",
+      "description": "ACEITE DE MANÍ (CACAHUATE, CACAHUETE)* Y SUS FRACCIONES, INCLUSO REFINADO, PERO SIN",
+      "subheadings": [
+        {
+          "code": "1508.10.00",
+          "description": "Aceite en bruto"
+        },
+        {
+          "code": "1508.10.00",
+          "description": "100J A granel (Ley 21.453) 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1508.10.00",
+          "description": "200P En envases de 10 kg arriba unicamente. 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1508.10.00",
+          "description": "900C Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1508.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1508.90.00",
+          "description": "Refinado"
+        },
+        {
+          "code": "1508.90.00",
+          "description": "110A A granel 12.00 12.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1508.90.00",
+          "description": "120D En envases de contenido neto inferior o igual a 5 l (Res.747/95 MEyOSP) 12.00 12.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1508.90.00",
+          "description": "130G Los demás, en envases de 10 kg arriba únicamente (Ley 21.453) 12.00 12.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1508.90.00",
+          "description": "190B Los demás 12.00 12.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1508.90.00",
+          "description": "900Q Los demás 12.00 12.00 3.00 LA 0.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1509",
+      "description": "ACEITE DE OLIVA Y SUS FRACCIONES, INCLUSO REFINADO, PERO SIN MODIFICAR QUÍMICAMENTE",
+      "subheadings": [
+        {
+          "code": "1509.10.00",
+          "description": "Virgen"
+        },
+        {
+          "code": "1509.10.00",
+          "description": "100C En envases inmediatos de contenido neto inferior o igual a 5 l (R.747/95 MEYOSP) 10.00 31.50 3.00 LA 0.00 1.50"
+        },
+        {
+          "code": "1509.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1509.10.00",
+          "description": "910Z En otros envases (R.772/98 MEYOSP) 10.00 31.50 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1509.10.00",
+          "description": "990A Los demás 10.00 31.50 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1509.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1509.90.10",
+          "description": "Refinado"
+        },
+        {
+          "code": "1509.90.10",
+          "description": "100A En envases inmediatos de contenido neto inferior o igual a 5 l (R.747/95 MEYOSP) 10.00 31.50 3.00 LA 0.00 1.50"
+        },
+        {
+          "code": "1509.90.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "1509.90.10",
+          "description": "910X En otros envases (R.772/98 MEYOSP) 10.00 31.50 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1509.90.10",
+          "description": "990Y Los demás 10.00 31.50 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1509.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1509.90.90",
+          "description": "Mezclas"
+        },
+        {
+          "code": "1509.90.90",
+          "description": "Envasadas (R.772/98 MEYOSP)"
+        },
+        {
+          "code": "1509.90.90",
+          "description": "311V En envases inmediatos de contenido neto inferior o igual a 5 kg (R.967/99 MEYOSP) 10.00 31.50 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1509.90.90",
+          "description": "319M Las demás 10.00 31.50 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1509.90.90",
+          "description": "390U Las demás 10.00 31.50 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1509.90.90",
+          "description": "Fracciones"
+        },
+        {
+          "code": "1509.90.90",
+          "description": "410Y En envases de contenido neto inferior o igual a 5 kg (R.967/99 MEYOSP) 10.00 31.50 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1509.90.90",
+          "description": "490Z Las demás 10.00 31.50 3.00 LA 0.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1510",
+      "description": "LOS DEMÁS ACEITES Y SUS FRACCIONES OBTENIDOS EXCLUSIVAMENTE DE ACEITUNA, INCLUSO",
+      "subheadings": [
+        {
+          "code": "1510.00.00",
+          "description": "Los demás aceites y sus fracciones obtenidos exclusivamente de aceituna, incluso refinados, pero sin modificar"
+        },
+        {
+          "code": "1510.00.00",
+          "description": "100T Exclusivamente de aceituna 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1510.00.00",
+          "description": "200Y Mezclas con los aceites o fracciones de la partida 15.09 10.00 10.00 3.00 LA 0.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1511",
+      "description": "ACEITE DE PALMA Y SUS FRACCIONES, INCLUSO REFINADO, PERO SIN MODIFICAR QUÍMICAMENTE",
+      "subheadings": [
+        {
+          "code": "1511.10.00",
+          "description": "Aceite en bruto"
+        },
+        {
+          "code": "1511.10.00",
+          "description": "000V -Aceite en bruto 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1511.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1511.90.00",
+          "description": "000H -Los demás 10.00 10.00 3.00 LA 0.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1512",
+      "description": "ACEITES DE GIRASOL, CÁRTAMO O ALGODÓN, Y SUS FRACCIONES, INCLUSO REFINADOS, PERO SIN",
+      "subheadings": [
+        {
+          "code": "1512.1",
+          "description": "Aceites de girasol o cártamo, y sus fracciones:"
+        },
+        {
+          "code": "1512.11",
+          "description": "Aceites en bruto"
+        },
+        {
+          "code": "1512.11.10",
+          "description": "De girasol"
+        },
+        {
+          "code": "1512.11.10",
+          "description": "Virgen (según Artículo 528 del Código Alimentario Argentino)"
+        },
+        {
+          "code": "1512.11.10",
+          "description": "310E A granel (Ley 21.453) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "1512.11.10",
+          "description": "320H En envases de 10 kg arriba unicamente. 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "1512.11.10",
+          "description": "390F Las demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "1512.11.10",
+          "description": "Las demás"
+        },
+        {
+          "code": "1512.11.10",
+          "description": "A granel (Ley 21.453)"
+        },
+        {
+          "code": "1512.11.10",
+          "description": "911P Con un contenido de ácido oleico superior o igual al 75% sobre el total de ácidos grasos (alto oleico) 10.00 10.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "1512.11.10",
+          "description": "919G Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "1512.11.10",
+          "description": "920Q En envases de 10 kg arriba unicamente. 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "1512.11.10",
+          "description": "990N Las demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "1512.11.20",
+          "description": "De cártamo"
+        },
+        {
+          "code": "1512.11.20",
+          "description": "100A Con un contenido de ácido oleico superior o igual al 75% sobre el total de ácidos grasos (alto oleico) 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1512.11.20",
+          "description": "900U Los demás 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1512.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "1512.19.11",
+          "description": "Refinado, en envases con capacidad inferior o igual a 5 l"
+        },
+        {
+          "code": "1512.19.11",
+          "description": "000N Refinado, en envases con capacidad inferior o igual a 5 l (R.359/99 MEYOSP) 12.00 12.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1512.19.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "1512.19.19",
+          "description": "Refinado"
+        },
+        {
+          "code": "1512.19.19",
+          "description": "110H A granel (Ley 21.453) 12.00 12.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1512.19.19",
+          "description": "Los demás, en envases de 10 kg arriba únicamente (Ley 21.453)"
+        },
+        {
+          "code": "1512.19.19",
+          "description": "121N En tambores con capacidad superior a 200 l (Ley 21.453) 12.00 12.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1512.19.19",
+          "description": "129F Los demás 12.00 12.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1512.19.19",
+          "description": "190J Los demás 12.00 12.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1512.19.19",
+          "description": "900Y Los demás 12.00 12.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1512.19.20",
+          "description": "De cártamo"
+        },
+        {
+          "code": "1512.19.20",
+          "description": "000Q De cártamo 10.00 10.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1512.2",
+          "description": "Aceite de algodón y sus fracciones:"
+        },
+        {
+          "code": "1512.21.00",
+          "description": "Aceite en bruto, incluso sin gosipol"
+        },
+        {
+          "code": "1512.21.00",
+          "description": "100V A granel (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1512.21.00",
+          "description": "900N Las demás 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1512.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "1512.29.10",
+          "description": "Refinado"
+        },
+        {
+          "code": "1512.29.10",
+          "description": "000V Refinado 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1512.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1512.29.90",
+          "description": "000Y Los demas (Ley 21.453). 10.00 10.00 3.00 LA 0.00 1.00"
+        }
+      ]
+    },
+    {
+      "code": "1513",
+      "description": "ACEITES DE COCO (DE COPRA), DE ALMENDRA DE PALMA O DE BABASÚ, Y SUS FRACCIONES, INCLUSO",
+      "subheadings": [
+        {
+          "code": "1513.1",
+          "description": "Aceite de coco (de copra) y sus fracciones:"
+        },
+        {
+          "code": "1513.11.00",
+          "description": "Aceite en bruto"
+        },
+        {
+          "code": "1513.11.00",
+          "description": "000U --Aceite en bruto 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1513.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1513.19.00",
+          "description": "000P --Los demás 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1513.2",
+          "description": "Aceites de almendra de palma o de babasú, y sus fracciones:"
+        },
+        {
+          "code": "1513.21",
+          "description": "Aceites en bruto"
+        },
+        {
+          "code": "1513.21.10",
+          "description": "De almendra de palma"
+        },
+        {
+          "code": "1513.21.10",
+          "description": "000T De almendra de palma 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1513.21.20",
+          "description": "De babasú"
+        },
+        {
+          "code": "1513.21.20",
+          "description": "000C De babasú 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1513.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "1513.29.10",
+          "description": "De almendra de palma"
+        },
+        {
+          "code": "1513.29.10",
+          "description": "000N De almendra de palma 10.00 2.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1513.29.20",
+          "description": "De babasú"
+        },
+        {
+          "code": "1513.29.20",
+          "description": "000Y De babasú 10.00 10.00 3.00 LA 0.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1514",
+      "description": "ACEITES DE NABO (DE NABINA), COLZA O MOSTAZA, Y SUS FRACCIONES, INCLUSO REFINADOS, PERO SIN",
+      "subheadings": [
+        {
+          "code": "1514.1",
+          "description": "Aceites de nabo (de nabina) o de colza con bajo contenido de ácido erúcico y sus fracciones:"
+        },
+        {
+          "code": "1514.11.00",
+          "description": "Aceites en bruto"
+        },
+        {
+          "code": "1514.11.00",
+          "description": "100T A granel 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1514.11.00",
+          "description": "900L Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1514.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "1514.19.10",
+          "description": "Refinados"
+        },
+        {
+          "code": "1514.19.10",
+          "description": "000T Refinados 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1514.19.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1514.19.90",
+          "description": "000W Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1514.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "1514.91.00",
+          "description": "Aceites en bruto"
+        },
+        {
+          "code": "1514.91.00",
+          "description": "100F A granel (Ley 21.453) 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1514.91.00",
+          "description": "900Z Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1514.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "1514.99.10",
+          "description": "Refinados"
+        },
+        {
+          "code": "1514.99.10",
+          "description": "000F . Refinados (Ley 21.453). 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1514.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1514.99.90",
+          "description": "000J Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1515",
+      "description": "LAS DEMÁS GRASAS Y ACEITES VEGETALES FIJOS (INCLUIDO EL ACEITE DE JOJOBA), Y SUS FRACCIONES,",
+      "subheadings": [
+        {
+          "code": "1515.1",
+          "description": "Aceite de lino (de linaza) y sus fracciones:"
+        },
+        {
+          "code": "1515.11.00",
+          "description": "Aceite en bruto"
+        },
+        {
+          "code": "1515.11.00",
+          "description": "100L A granel. 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1515.11.00",
+          "description": "900E Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1515.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1515.19.00",
+          "description": "Refinado."
+        },
+        {
+          "code": "1515.19.00",
+          "description": "110K A granel. 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1515.19.00",
+          "description": "120N En tambores de contenido neto superior a 200 l. 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1515.19.00",
+          "description": "190L Los demás 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1515.19.00",
+          "description": "900A Los demás 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1515.2",
+          "description": "Aceite de maíz y sus fracciones:"
+        },
+        {
+          "code": "1515.21.00",
+          "description": "Aceite en bruto"
+        },
+        {
+          "code": "1515.21.00",
+          "description": "100A A granel (Ley 21.453) 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1515.21.00",
+          "description": "200F En envases de 10 kg arriba unicamente. 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1515.21.00",
+          "description": "900U Los demás 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1515.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "1515.29.10",
+          "description": "Refinado, en envases con capacidad inferior o igual a 5 l"
+        },
+        {
+          "code": "1515.29.10",
+          "description": "000A Refinado, en envases con capacidad inferior o igual a 5 l (R.359/99 MEYOSP) 10.00 10.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1515.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1515.29.90",
+          "description": "100J A granel (Ley 21.453) 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1515.29.90",
+          "description": "Los demás, en envases de 10 kg arriba únicamente (Ley 21.453)"
+        },
+        {
+          "code": "1515.29.90",
+          "description": "210T En tambores con capacidad superior a 200 l (Ley 21.453) 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1515.29.90",
+          "description": "290U Los demás 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1515.29.90",
+          "description": "900C Los demás 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1515.30.00",
+          "description": "Aceite de ricino y sus fracciones"
+        },
+        {
+          "code": "1515.30.00",
+          "description": "000X -Aceite de ricino y sus fracciones 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1515.50.00",
+          "description": "Aceite de sésamo (ajonjolí) y sus fracciones"
+        },
+        {
+          "code": "1515.50.00",
+          "description": "000A -Aceite de sésamo (ajonjolí) y sus fracciones 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1515.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1515.90.10",
+          "description": "Aceite de jojoba y sus fracciones"
+        },
+        {
+          "code": "1515.90.10",
+          "description": "000R Aceite de jojoba y sus fracciones 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1515.90.21",
+          "description": "En bruto"
+        },
+        {
+          "code": "1515.90.21",
+          "description": "100P A granel (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1515.90.21",
+          "description": "900H Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1515.90.22",
+          "description": "Refinado"
+        },
+        {
+          "code": "1515.90.22",
+          "description": "100X A granel. 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "1515.90.22",
+          "description": "200C En tambores de contenido neto superior a 200 l. 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "1515.90.22",
+          "description": "900Q Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "1515.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1515.90.90",
+          "description": "Aceite de uva"
+        },
+        {
+          "code": "1515.90.90",
+          "description": "A granel"
+        },
+        {
+          "code": "1515.90.90",
+          "description": "111F Refinado 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1515.90.90",
+          "description": "119Y Los demás 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1515.90.90",
+          "description": "Los demás, en envases de 10 kg arriba unicamente"
+        },
+        {
+          "code": "1515.90.90",
+          "description": "121J En tambores con capacidad superior a 200 l 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1515.90.90",
+          "description": "129B Los demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1515.90.90",
+          "description": "130K Refinado, en envases inmediatos de contenido neto inferior o igual a 5 l (R.747/95 MEYOSP) 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1515.90.90",
+          "description": "190E Los demás 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1515.90.90",
+          "description": "910X En envases de contenido neto inferior o igual a 5 l (R.08/01 ME) 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1515.90.90",
+          "description": "990Y Los demás 10.00 10.00 3.00 LA 0.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1516",
+      "description": "GRASAS Y ACEITES, ANIMALES O VEGETALES, Y SUS FRACCIONES, PARCIAL O TOTALMENTE",
+      "subheadings": [
+        {
+          "code": "1516.10.00",
+          "description": "Grasas y aceites, animales, y sus fracciones"
+        },
+        {
+          "code": "1516.10.00",
+          "description": "100T Parcial o totalmente hidrogenados 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1516.10.00",
+          "description": "200Y Interesterificados, reesterificados ó elaidinizados 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1516.10.00",
+          "description": "900L Los demás 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1516.20.00",
+          "description": "Grasas y aceites, vegetales, y sus fracciones"
+        },
+        {
+          "code": "1516.20.00",
+          "description": "Parcial o totalmente hidrogenados"
+        },
+        {
+          "code": "1516.20.00",
+          "description": "110K De palma y palmiste 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1516.20.00",
+          "description": "190L Los demás 10.00 35.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1516.20.00",
+          "description": "200M Interesterificados, reesterificados ó elaidinizados 10.00 35.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1516.20.00",
+          "description": "900A Los demás 10.00 35.00 3.00 LA 5.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1517",
+      "description": "MARGARINA; MEZCLAS O PREPARACIONES ALIMENTICIAS DE GRASAS O ACEITES, ANIMALES O",
+      "subheadings": [
+        {
+          "code": "1517.10.00",
+          "description": "Margarina, excepto la margarina líquida"
+        },
+        {
+          "code": "1517.10.00",
+          "description": "100L En envases inmediatos de contenido neto inferior o igual a 1 kg (R.967/99 MEYOSP) 12.00 12.00 3.00 LA 5.00 3.25"
+        },
+        {
+          "code": "1517.10.00",
+          "description": "900E Las demás 12.00 12.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "1517.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1517.90.10",
+          "description": "Mezclas de aceites refinados, en envases con capacidad inferior o igual a 5 l"
+        },
+        {
+          "code": "1517.90.10",
+          "description": "Que contengan aceite de soja"
+        },
+        {
+          "code": "1517.90.10",
+          "description": "110M Que contengan aceite de girasol 12.00 12.00 3.00 LA 25.00 0.75"
+        },
+        {
+          "code": "1517.90.10",
+          "description": "190N Las demás 12.00 12.00 3.00 LA 25.00 0.75"
+        },
+        {
+          "code": "1517.90.10",
+          "description": "900C Las demás 12.00 12.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "100M De origen animal exclusivamente (R.2012/93 ex-ANA) 12.00 35.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "Las demás, que contengan aceite de soja"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "A granel"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "211Y Que contengan aceite de girasol 12.00 35.00 3.00 LA 31.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "219Q Las demás 12.00 35.00 3.00 LA 31.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "Los demás, que contengan aceite de girasol, en envases de 10 Kg arriba únicamente"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "231E En tambores con capacidad superior a 200 l 12.00 35.00 3.00 LA 31.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "239X Los demás 12.00 35.00 3.00 LA 31.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "Los demás, en envases de 10 Kg arriba unicamente"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "241H En tambores con capacidad superior a 200 l (Ley 21.453) 12.00 35.00 3.00 LA 31.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "249A Los demás 12.00 35.00 3.00 LA 31.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "291Z Que contengan aceite de girasol 12.00 35.00 3.00 LA 31.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "299R Las demás 12.00 35.00 3.00 LA 31.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "910J A granel 12.00 35.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "Los demás, en envases de 10 kg arriba únicamente"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "921P En tambores con capacidad superior a 200 l 12.00 35.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "922R De palma y palmiste, en envases de capacidad superior o igual a 20 kg pero inferior o igual a 25 kg 12.00 12.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "929G Los demás 12.00 35.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "1517.90.90",
+          "description": "990K Las demás 12.00 35.00 3.00 LA 9.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1518",
+      "description": "GRASAS Y ACEITES, ANIMALES O VEGETALES, Y SUS FRACCIONES, COCIDOS, OXIDADOS,",
+      "subheadings": [
+        {
+          "code": "1518.00.10",
+          "description": "Aceite vegetal epoxidado"
+        },
+        {
+          "code": "1518.00.10",
+          "description": "000V Aceite vegetal epoxidado 10.00 10.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1518.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1518.00.90",
+          "description": "100D Grasas y aceites, animales o vegetales y sus fracciones 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "1518.00.90",
+          "description": "Mezclas o preparaciones no alimenticias"
+        },
+        {
+          "code": "1518.00.90",
+          "description": "De origen vegetal"
+        },
+        {
+          "code": "1518.00.90",
+          "description": "211P Que contengan soja 10.00 10.00 3.00 LA 31.00 0.75"
+        },
+        {
+          "code": "1518.00.90",
+          "description": "219G Los demas 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "1518.00.90",
+          "description": "290N Las demás 10.00 10.00 3.00 LA 9.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1520",
+      "description": "GLICEROL EN BRUTO; AGUAS Y LEJÍAS GLICERINOSAS",
+      "subheadings": [
+        {
+          "code": "1520.00.10",
+          "description": "Glicerol en bruto"
+        },
+        {
+          "code": "1520.00.10",
+          "description": "000T Glicerol en bruto 8.00 8.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "1520.00.20",
+          "description": "Aguas y lejías glicerinosas"
+        },
+        {
+          "code": "1520.00.20",
+          "description": "000C Aguas y lejías glicerinosas 10.00 10.00 3.00 LA 9.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1521",
+      "description": "CERAS VEGETALES (EXCEPTO LOS TRIGLICÉRIDOS), CERA DE ABEJAS O DE OTROS INSECTOS Y ESPERMA",
+      "subheadings": [
+        {
+          "code": "1521.10.00",
+          "description": "Ceras vegetales"
+        },
+        {
+          "code": "1521.10.00",
+          "description": "000Q -Ceras vegetales 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1521.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1521.90.11",
+          "description": "En bruto"
+        },
+        {
+          "code": "1521.90.11",
+          "description": "000W En bruto 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1521.90.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "1521.90.19",
+          "description": "000G Las demás 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1521.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1521.90.90",
+          "description": "100X Esperma de ballena o de otros cetáceos (espermaceti) 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1521.90.90",
+          "description": "900Q Las demás 10.00 10.00 3.00 LA 0.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1522",
+      "description": "DEGRÁS; RESIDUOS PROCEDENTES DEL TRATAMIENTO DE GRASAS O CERAS, ANIMALES O VEGETALES",
+      "subheadings": [
+        {
+          "code": "1522.00.00",
+          "description": "Degrás; residuos procedentes del tratamiento de grasas o ceras, animales o vegetales"
+        },
+        {
+          "code": "1522.00.00",
+          "description": "100A Degrás 10.00 10.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1522.00.00",
+          "description": "Residuos procedentes del tratamiento de grasas o ceras animales o vegetales"
+        },
+        {
+          "code": "1522.00.00",
+          "description": "210J Pasta de neutralización 10.00 10.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1522.00.00",
+          "description": "290K Los demás 10.00 10.00 3.00 LA 4.50 0.75"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 311
+}

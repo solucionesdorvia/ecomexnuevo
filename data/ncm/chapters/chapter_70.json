@@ -1,0 +1,1664 @@
+{
+  "chapter": "70",
+  "title": "Capítulo 70",
+  "sectionTitle": "CAP. 70 SECCION XIII MANUFACTURAS DE PIEDRA, YESO FRAGUABLE, CEMENTO, AMIANTO (ASBESTO), MICA O MATERIAS ANALOGAS; PRODU",
+  "headings": [
+    {
+      "code": "7001",
+      "description": "DESPERDICIOS Y DESECHOS DE VIDRIO; VIDRIO EN MASA",
+      "subheadings": [
+        {
+          "code": "7001.00.00",
+          "description": "Desperdicios y desechos de vidrio; vidrio en masa"
+        },
+        {
+          "code": "7001.00.00",
+          "description": "100K Desperdicios y desechos de vidrio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7001.00.00",
+          "description": "200Q Vidrio en masa 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7002",
+      "description": "VIDRIO EN BOLAS (EXCEPTO LAS MICROESFERAS DE LA PARTIDA 7018), BARRAS, VARILLAS O TUBOS, SIN",
+      "subheadings": [
+        {
+          "code": "7002.10.00",
+          "description": "Bolas"
+        },
+        {
+          "code": "7002.10.00",
+          "description": "000M -Bolas 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7002.20.00",
+          "description": "Barras o varillas"
+        },
+        {
+          "code": "7002.20.00",
+          "description": "000B -Barras o varillas 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7002.3",
+          "description": "Tubos:"
+        },
+        {
+          "code": "7002.31.00",
+          "description": "De cuarzo o demás sílices fundidos"
+        },
+        {
+          "code": "7002.31.00",
+          "description": "000C --De cuarzo o demás sílices fundidos 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7002.32.00",
+          "description": "De otro vidrio con un coeficiente de dilatación lineal inferior o igual a 5 x 10-6 por Kelvin, entre 0 °C y 300 °C"
+        },
+        {
+          "code": "7002.32.00",
+          "description": "100V De borosilicato con un contenido de óxido de boro superior al 7 % pero inferior o igual al 15 %, en peso, y un límite de"
+        },
+        {
+          "code": "7002.32.00",
+          "description": "900N Los demás 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7002.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7002.39.00",
+          "description": "100D De borosilicato con un contenido de óxido de boro superior al 7 % pero inferior o igual al 15 %, en peso, y un límite de"
+        },
+        {
+          "code": "7002.39.00",
+          "description": "900X Los demás 4.00 4.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7003",
+      "description": "VIDRIO COLADO O LAMINADO, EN PLACAS, HOJAS O PERFILES, INCLUSO CON CAPA ABSORBENTE,",
+      "subheadings": [
+        {
+          "code": "7003.1",
+          "description": "Placas y hojas, sin armar:"
+        },
+        {
+          "code": "7003.12.00",
+          "description": "Coloreadas en la masa, opacificadas, chapadas o con capa absorbente, reflectante o antirreflectante"
+        },
+        {
+          "code": "7003.12.00",
+          "description": "100K De espesor inferior o igual a 2 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.12.00",
+          "description": "200Q De espesor superior a 2 mm pero inferior o igual 4 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.12.00",
+          "description": "300W De espesor superior a 4 mm pero inferior o igual 6 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.12.00",
+          "description": "400B De espesor superior a 6 mm pero inferior o igual 8 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.12.00",
+          "description": "500G De espesor superior a 8 mm pero inferior o igual 10 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.12.00",
+          "description": "900D Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7003.19.00",
+          "description": "100U De espesor inferior o igual a 2 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.19.00",
+          "description": "200Z De espesor superior a 2 mm pero inferior o igual 4 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.19.00",
+          "description": "300E De espesor superior a 4 mm pero inferior o igual 6 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.19.00",
+          "description": "400K De espesor superior a 6 mm pero inferior o igual 8 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.19.00",
+          "description": "500Q De espesor superior a 8 mm pero inferior o igual 10 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.19.00",
+          "description": "900M Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.20.00",
+          "description": "Placas y hojas, armadas"
+        },
+        {
+          "code": "7003.20.00",
+          "description": "100A De espesor inferior o igual a 2 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.20.00",
+          "description": "200F De espesor superior a 2 mm pero inferior o igual 4 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.20.00",
+          "description": "300L De espesor superior a 4 mm pero inferior o igual 6 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.20.00",
+          "description": "400R De espesor superior a 6 mm pero inferior o igual 8 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.20.00",
+          "description": "500X De espesor superior a 8 mm pero inferior o igual 10 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.20.00",
+          "description": "900U Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7003.30.00",
+          "description": "Perfiles"
+        },
+        {
+          "code": "7003.30.00",
+          "description": "000J -Perfiles 10.00 10.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7004",
+      "description": "VIDRIO ESTIRADO O SOPLADO, EN HOJAS, INCLUSO CON CAPA ABSORBENTE, REFLECTANTE O",
+      "subheadings": [
+        {
+          "code": "7004.20.00",
+          "description": "Vidrio coloreado en la masa, opacificado, chapado o con capa absorbente, reflectante o antirreflectante"
+        },
+        {
+          "code": "7004.20.00",
+          "description": "100U De espesor inferior o igual a 2 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7004.20.00",
+          "description": "200Z De espesor superior a 2 mm pero inferior o igual 4 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7004.20.00",
+          "description": "300E De espesor superior a 4 mm pero inferior o igual 6 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7004.20.00",
+          "description": "400K De espesor superior a 6 mm pero inferior o igual 8 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7004.20.00",
+          "description": "500Q De espesor superior a 8 mm pero inferior o igual 10 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7004.20.00",
+          "description": "900M Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7004.90.00",
+          "description": "Los demás vidrios"
+        },
+        {
+          "code": "7004.90.00",
+          "description": "100T De espesor inferior o igual a 2 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7004.90.00",
+          "description": "200Y De espesor superior a 2 mm pero inferior o igual 4 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7004.90.00",
+          "description": "300D De espesor superior a 4 mm pero inferior o igual 6 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7004.90.00",
+          "description": "400J De espesor superior a 6 mm pero inferior o igual 8 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7004.90.00",
+          "description": "500P De espesor superior a 8 mm pero inferior o igual 10 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7004.90.00",
+          "description": "900L Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7005",
+      "description": "VIDRIO FLOTADO Y VIDRIO DESBASTADO O PULIDO POR UNA O LAS DOS CARAS, EN PLACAS U HOJAS,",
+      "subheadings": [
+        {
+          "code": "7005.10.00",
+          "description": "Vidrio sin armar con capa absorbente, reflectante o antirreflectante"
+        },
+        {
+          "code": "7005.10.00",
+          "description": "100Y De espesor inferior o igual a 2 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.10.00",
+          "description": "200D De espesor superior a 2 mm pero inferior o igual 4 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.10.00",
+          "description": "300J De espesor superior a 4 mm pero inferior o igual 6 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.10.00",
+          "description": "400P De espesor superior a 6 mm pero inferior o igual 8 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.10.00",
+          "description": "500V De espesor superior a 8 mm pero inferior o igual 10 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.10.00",
+          "description": "900R Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.2",
+          "description": "Los demás vidrios sin armar:"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "Coloreados en la masa, opacificados, chapados o simplemente desbastados"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "Flotado coloreado"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "De espesor inferior a 8 mm"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "111E De espesor inferior a 2 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "112G De espesor superior o igual a 2 mm pero inferior a 3 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "113J De espesor superior o igual a 3 mm pero inferior a 4 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "114L De espesor superior o igual a 4 mm pero inferior a 5 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "115N De espesor superior o igual a 5 mm pero inferior a 6 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "119X Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "De espesor superior o igual a 8 mm"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "121H De espesor inferior a 10 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "122K De espesor superior o igual a 10 mm pero inferior a 12 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "123M De espesor superior o igual a 12 mm pero inferior a 15 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "124P De espesor superior o igual a 15 mm pero inferior a 19 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "125R De espesor superior o igual a 19 mm pero inferior a 20 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "129A Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.21.00",
+          "description": "900T Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "Flotado"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "De espesor inferior a 8 mm"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "111A De espesor inferior a 2 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "112C De espesor superior o igual a 2 mm pero inferior a 3 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "113E De espesor superior o igual a 3 mm pero inferior a 4 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "114G De espesor superior o igual a 4 mm pero inferior a 5 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "115J De espesor superior o igual a 5 mm pero inferior a 6 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "119T Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "De espesor superior o igual a 8 mm"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "121D De espesor inferior a 10 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "122F De espesor superior o igual a 10 mm pero inferior a 12 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "123H De espesor superior o igual a 12 mm pero inferior a 15 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "124K De espesor superior o igual a 15 mm pero inferior a 19 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "125M De espesor superior o igual a 19 mm pero inferior a 20 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "129W Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.29.00",
+          "description": "900N Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.30.00",
+          "description": "Vidrio armado"
+        },
+        {
+          "code": "7005.30.00",
+          "description": "100B De espesor inferior o igual a 2 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.30.00",
+          "description": "200G De espesor superior a 2 mm pero inferior o igual 4 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.30.00",
+          "description": "300M De espesor superior a 4 mm pero inferior o igual 6 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.30.00",
+          "description": "400T De espesor superior a 6 mm pero inferior o igual 8 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.30.00",
+          "description": "500Y De espesor superior a 8 mm pero inferior o igual 10 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7005.30.00",
+          "description": "900V Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7006",
+      "description": "VIDRIO DE LAS PARTIDAS 7003, 7004 Ó 7005, CURVADO, BISELADO, GRABADO, TALADRADO, ESMALTADO O",
+      "subheadings": [
+        {
+          "code": "7006.00.00",
+          "description": "Vidrio de las partidas 7003, 7004 ó 7005, curvado, biselado, grabado, taladrado, esmaltado o trabajado de otro modo,"
+        },
+        {
+          "code": "7006.00.00",
+          "description": "000X VIDRIO DE LAS PARTIDAS 70.03, 70.04 ó 70.05, CURVADO, BISELADO, GRABADO, TALADRADO, ESMALTADO"
+        }
+      ]
+    },
+    {
+      "code": "1200",
+      "description": "12.00 3.00 LA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "7007",
+      "description": "VIDRIO DE SEGURIDAD CONSTITUIDO POR VIDRIO TEMPLADO O CONTRACHAPADO",
+      "subheadings": [
+        {
+          "code": "7007.1",
+          "description": "Vidrio templado:"
+        },
+        {
+          "code": "7007.11.00",
+          "description": "De dimensiones y formatos que permitan su empleo en automóviles, aeronaves, barcos u otros vehículos"
+        },
+        {
+          "code": "7007.11.00",
+          "description": "De los tipos utilizados en automóviles"
+        },
+        {
+          "code": "7007.11.00",
+          "description": "110A Parabrisas 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7007.11.00",
+          "description": "120D Lunetas 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7007.11.00",
+          "description": "190B Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7007.11.00",
+          "description": "200C De los tipos utilizados en aeronaves 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7007.11.00",
+          "description": "300H De los tipos utilizados en barcos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7007.11.00",
+          "description": "900Q Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7007.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7007.19.00",
+          "description": "000M --Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7007.2",
+          "description": "Vidrio contrachapado:"
+        },
+        {
+          "code": "7007.21.00",
+          "description": "De dimensiones y formatos que permitan su empleo en automóviles, aeronaves, barcos u otros vehículos"
+        },
+        {
+          "code": "7007.21.00",
+          "description": "De los tipos utilizados en automóviles"
+        },
+        {
+          "code": "7007.21.00",
+          "description": "110P Vidrios de seguridad a prueba de balas (R. 3115/94 ex-ANA) 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7007.21.00",
+          "description": "190Q Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7007.21.00",
+          "description": "200R Los demás, vidrios de seguridad a prueba de balas (R. 3115/94 ex-ANA) 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7007.21.00",
+          "description": "900E Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7007.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7007.29.00",
+          "description": "100G Vidrio de seguridad a prueba de balas (R. 3115/94 ex-ANA) 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7007.29.00",
+          "description": "Coloreado"
+        },
+        {
+          "code": "7007.29.00",
+          "description": "210Q De espesor superior o igual a 6 mm pero inferior a 8 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7007.29.00",
+          "description": "220U De espesor superior o igual a 8 mm pero inferior a 10 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7007.29.00",
+          "description": "230X De espesor superior o igual a 10 mm pero inferior a 12 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7007.29.00",
+          "description": "290R Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7007.29.00",
+          "description": "910D De espesor superior o igual a 6 mm pero inferior a 8 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7007.29.00",
+          "description": "920G De espesor superior o igual a 8 mm pero inferior a 10 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7007.29.00",
+          "description": "930K De espesor superior o igual a 10 mm pero inferior a 12 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7007.29.00",
+          "description": "990E Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7008",
+      "description": "VIDRIERAS AISLANTES DE PAREDES MÚLTIPLES",
+      "subheadings": [
+        {
+          "code": "7008.00.00",
+          "description": "Vidrieras aislantes de paredes múltiples"
+        },
+        {
+          "code": "7008.00.00",
+          "description": "000J VIDRIERAS AISLANTES DE PAREDES MÚLTIPLES. 12.00 12.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7009",
+      "description": "ESPEJOS DE VIDRIO, ENMARCADOS O NO, INCLUIDOS LOS ESPEJOS RETROVISORES",
+      "subheadings": [
+        {
+          "code": "7009.10.00",
+          "description": "Espejos retrovisores para vehículos"
+        },
+        {
+          "code": "7009.10.00",
+          "description": "De los tipos utilizados en motocicletas o bicicletas"
+        },
+        {
+          "code": "7009.10.00",
+          "description": "110A De los tipos utilizados en bicicletas 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7009.10.00",
+          "description": "190B Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7009.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7009.10.00",
+          "description": "Solamente cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes."
+        },
+        {
+          "code": "7009.10.00",
+          "description": "911W De los tipos utilizados en retrovisores exteriores de vehiculos automoviles 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7009.10.00",
+          "description": "912Y De los tipos utilizados en retrovisores interiores de vehiculos automoviles. 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7009.10.00",
+          "description": "919N Los demas 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7009.10.00",
+          "description": "Los demas espejos retrovisores para vehiculos automoviles"
+        },
+        {
+          "code": "7009.10.00",
+          "description": "921Z Exteriores 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7009.10.00",
+          "description": "922B Interiores 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7009.10.00",
+          "description": "990V Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7009.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "Sin enmarcar"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "Coloreados"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "110A De espesor inferior a 2 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "120D De espesor superior o igual a 2 mm pero inferior a 3 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "130G De espesor superior o igual a 3 mm pero inferior a 4 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "140K De espesor superior o igual a 4 mm pero inferior a 5 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "150N De espesor superior o igual a 5 mm pero inferior a 6 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "190B Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "910U De espesor inferior a 2 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "920X De espesor superior o igual a 2 mm pero inferior a 3 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "930A De espesor superior o igual a 3 mm pero inferior a 4 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "940D De espesor superior o igual a 4 mm pero inferior a 5 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "950G De espesor superior o igual a 5 mm pero inferior a 6 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7009.91.00",
+          "description": "990V Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7009.92.00",
+          "description": "Enmarcados"
+        },
+        {
+          "code": "7009.92.00",
+          "description": "000D --Enmarcados 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7010",
+      "description": "BOMBONAS (DAMAJUANAS), BOTELLAS, FRASCOS, BOCALES, TARROS, ENVASES TUBULARES, AMPOLLAS",
+      "subheadings": [
+        {
+          "code": "7010.10.00",
+          "description": "Ampollas"
+        },
+        {
+          "code": "7010.10.00",
+          "description": "100B Aptos para estar en contacto con alimentos 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.10.00",
+          "description": "900V Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.20.00",
+          "description": "Tapones, tapas y demás dispositivos de cierre"
+        },
+        {
+          "code": "7010.20.00",
+          "description": "100Q Aptos para estar en contacto con alimentos 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.20.00",
+          "description": "900J Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7010.90.11",
+          "description": "Bombonas (damajuanas) y botellas"
+        },
+        {
+          "code": "7010.90.11",
+          "description": "100G Aptas para estar en contacto con alimentos 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.90.11",
+          "description": "900A Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.90.12",
+          "description": "Frascos, bocales, potes, envases tubulares y demás recipientes para el transporte o envasado; bocales para"
+        },
+        {
+          "code": "7010.90.12",
+          "description": "100P Aptos para estar en contacto con alimentos 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.90.12",
+          "description": "900H Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.90.21",
+          "description": "Bombonas (damajuanas) y botellas"
+        },
+        {
+          "code": "7010.90.21",
+          "description": "100R Aptas para estar en contacto con alimentos 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.90.21",
+          "description": "900K Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.90.22",
+          "description": "Frascos, bocales, potes, envases tubulares y demás recipientes para el transporte o envasado; bocales para"
+        },
+        {
+          "code": "7010.90.22",
+          "description": "100Z Aptos para estar en contacto con alimentos 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.90.22",
+          "description": "900T Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7010.90.90",
+          "description": "De capacidad inferior o igual a 0.1 l."
+        },
+        {
+          "code": "7010.90.90",
+          "description": "110F Bombonas (damajuanas) y botellas 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.90.90",
+          "description": "190G Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7010.90.90",
+          "description": "900W Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7011",
+      "description": "AMPOLLAS Y ENVOLTURAS TUBULARES, ABIERTAS, Y SUS PARTES, DE VIDRIO, SIN GUARNICIONES, PARA",
+      "subheadings": [
+        {
+          "code": "7011.10",
+          "description": "Para alumbrado eléctrico"
+        },
+        {
+          "code": "7011.10.10",
+          "description": "Para lámparas o tubos de descarga, incluidos los de luz relámpago"
+        },
+        {
+          "code": "7011.10.10",
+          "description": "000Z Para lámparas o tubos de descarga, incluidos los de luz relámpago 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7011.10.21",
+          "description": "Bulbos de diámetro inferior o igual a 90 mm"
+        },
+        {
+          "code": "7011.10.21",
+          "description": "000R Bulbos de diámetro inferior o igual a 90 mm 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7011.10.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "7011.10.29",
+          "description": "000C Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7011.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7011.10.90",
+          "description": "000C Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7011.20.00",
+          "description": "Para tubos catódicos"
+        },
+        {
+          "code": "7011.20.00",
+          "description": "000D -Para tubos catódicos 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7011.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7011.90.00",
+          "description": "000C -Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7013",
+      "description": "ARTÍCULOS DE VIDRIO PARA SERVICIO DE MESA, COCINA, TOCADOR, BAÑO, OFICINA, ADORNO DE",
+      "subheadings": [
+        {
+          "code": "7013.10.00",
+          "description": "Artículos de vitrocerámica"
+        },
+        {
+          "code": "7013.10.00",
+          "description": "100G Vajilla, utensilios y artículos similares para el servicio de mesa o cocina 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.10.00",
+          "description": "900A Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.2",
+          "description": "Recipientes con pie para beber, excepto los de vitrocerámica:"
+        },
+        {
+          "code": "7013.22.00",
+          "description": "De cristal al plomo"
+        },
+        {
+          "code": "7013.22.00",
+          "description": "000P --De cristal al plomo 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.28.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7013.28.00",
+          "description": "100R De pie alto, con una altura medida desde la base del pie a la base del recipiente, superior o igual a 5 cm 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.28.00",
+          "description": "900K Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.3",
+          "description": "Los demás recipientes para beber, excepto los de vitrocerámica:"
+        },
+        {
+          "code": "7013.33.00",
+          "description": "De cristal al plomo"
+        },
+        {
+          "code": "7013.33.00",
+          "description": "000Q --De cristal al plomo 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.37.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7013.37.00",
+          "description": "Biberones"
+        },
+        {
+          "code": "7013.37.00",
+          "description": "110X Presentados con la correspondiente tetina 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.37.00",
+          "description": "190Y Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.37.00",
+          "description": "Vasos y jarros"
+        },
+        {
+          "code": "7013.37.00",
+          "description": "210C Vasos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.37.00",
+          "description": "220F Jarros 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.37.00",
+          "description": "900M Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.4",
+          "description": "Artículos para servicio de mesa (excluidos los recipientes para beber) o cocina, excepto los de vitrocerámica:"
+        },
+        {
+          "code": "7013.41.00",
+          "description": "De cristal al plomo"
+        },
+        {
+          "code": "7013.41.00",
+          "description": "000F --De cristal al plomo 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.42",
+          "description": "De vidrio con un coeficiente de dilatación lineal inferior o igual a 5 x 10-6 por Kelvin, entre 0 °C y 300 °C"
+        },
+        {
+          "code": "7013.42.10",
+          "description": "Cafeteras y teteras"
+        },
+        {
+          "code": "7013.42.10",
+          "description": "000C Cafeteras y teteras 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.42.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7013.42.90",
+          "description": "Presentados en juegos"
+        },
+        {
+          "code": "7013.42.90",
+          "description": "110P De hasta 3 piezas inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.42.90",
+          "description": "120T De 4 hasta 7 piezas inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.42.90",
+          "description": "130W De 8 hasta 12 piezas inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.42.90",
+          "description": "140Z De 13 hasta 20 piezas inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.42.90",
+          "description": "190Q Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.42.90",
+          "description": "900E Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7013.49.00",
+          "description": "Presentados en juegos"
+        },
+        {
+          "code": "7013.49.00",
+          "description": "110K De hasta 3 piezas inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.49.00",
+          "description": "120N De 4 hasta 7 piezas inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.49.00",
+          "description": "130R De 8 hasta 12 piezas inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.49.00",
+          "description": "140V De 13 hasta 20 piezas inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.49.00",
+          "description": "190L Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.49.00",
+          "description": "900A Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.9",
+          "description": "Los demás artículos:"
+        },
+        {
+          "code": "7013.91",
+          "description": "De cristal al plomo"
+        },
+        {
+          "code": "7013.91.10",
+          "description": "Para adorno de interiores"
+        },
+        {
+          "code": "7013.91.10",
+          "description": "000L Para adorno de interiores 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.91.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7013.91.90",
+          "description": "000P Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7013.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7013.99.00",
+          "description": "000X --Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7014",
+      "description": "VIDRIO PARA SEÑALIZACIÓN Y ELEMENTOS DE ÓPTICA DE VIDRIO (EXCEPTO LOS DE LA PARTIDA 7015),",
+      "subheadings": [
+        {
+          "code": "7014.00.00",
+          "description": "Vidrio para señalización y elementos de óptica de vidrio (excepto los de la partida 7015), sin trabajar ópticamente"
+        },
+        {
+          "code": "7014.00.00",
+          "description": "000F VIDRIO PARA SEÑALIZACIÓN Y ELEMENTOS DE ÓPTICA DE VIDRIO (EXCEPTO LOS DE LA PARTIDA 70.15),"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "7015",
+      "description": "CRISTALES PARA RELOJES Y CRISTALES ANÁLOGOS, CRISTALES PARA GAFAS (ANTEOJOS), INCLUSO",
+      "subheadings": [
+        {
+          "code": "7015.10",
+          "description": "Cristales correctores para gafas (anteojos)"
+        },
+        {
+          "code": "7015.10.10",
+          "description": "Fotocromáticos"
+        },
+        {
+          "code": "7015.10.10",
+          "description": "000Y Fotocromáticos 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7015.10.91",
+          "description": "Blancos"
+        },
+        {
+          "code": "7015.10.91",
+          "description": "000J Blancos 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7015.10.92",
+          "description": "Coloreados"
+        },
+        {
+          "code": "7015.10.92",
+          "description": "000R Coloreados 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7015.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7015.90.10",
+          "description": "Cristales para relojes"
+        },
+        {
+          "code": "7015.90.10",
+          "description": "000L Cristales para relojes 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7015.90.20",
+          "description": "Cristales para caretas, gafas (anteojos) o antiparras, protectoras"
+        },
+        {
+          "code": "7015.90.20",
+          "description": "000W Cristales para caretas, gafas (anteojos) o antiparras, protectoras 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7015.90.30",
+          "description": "Cristales para las demás gafas (anteojos)"
+        },
+        {
+          "code": "7015.90.30",
+          "description": "000F Cristales para las demás gafas (anteojos) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7015.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7015.90.90",
+          "description": "000P Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7016",
+      "description": "ADOQUINES, BALDOSAS, LADRILLOS, PLACAS, TEJAS Y DEMÁS ARTÍCULOS, DE VIDRIO PRENSADO O",
+      "subheadings": [
+        {
+          "code": "7016.10.00",
+          "description": "Cubos, dados y demás artículos similares, de vidrio, incluso con soporte, para mosaicos o decoraciones similares"
+        },
+        {
+          "code": "7016.10.00",
+          "description": "100M Plaquitas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7016.10.00",
+          "description": "900F Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7016.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7016.90.00",
+          "description": "100A Guardas y listeles 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7016.90.00",
+          "description": "900U Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7017",
+      "description": "ARTÍCULOS DE VIDRIO PARA LABORATORIO, HIGIENE O FARMACIA, INCLUSO GRADUADOS O CALIBRADOS",
+      "subheadings": [
+        {
+          "code": "7017.10.00",
+          "description": "De cuarzo o demás sílices fundidos"
+        },
+        {
+          "code": "7017.10.00",
+          "description": "000A -De cuarzo o demás sílices fundidos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7017.20.00",
+          "description": "De otro vidrio con un coeficiente de dilatación lineal inferior o igual a 5 x 10-6 por Kelvin, entre 0 °C y 300 °C"
+        },
+        {
+          "code": "7017.20.00",
+          "description": "000P -De otro vidrio con un coeficiente de dilatación lineal inferior o igual a 5x10-6 por Kelvin, entre 0 °C y 300 °C 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7017.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7017.90.00",
+          "description": "100U Tubos de vidrio de los tipos utilizados para toma de muestras de sangre (R.30/97 AFIP) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7017.90.00",
+          "description": "900M Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7018",
+      "description": "CUENTAS DE VIDRIO, IMITACIONES DE PERLAS, DE PIEDRAS PRECIOSAS O SEMIPRECIOSAS Y ARTÍCULOS",
+      "subheadings": [
+        {
+          "code": "7018.10",
+          "description": "Cuentas de vidrio, imitaciones de perlas, de piedras preciosas o semipreciosas y artículos similares de abalorio"
+        },
+        {
+          "code": "7018.10.10",
+          "description": "Cuentas de vidrio"
+        },
+        {
+          "code": "7018.10.10",
+          "description": "000D Cuentas de vidrio 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7018.10.20",
+          "description": "Imitaciones de perlas, de piedras preciosas o semipreciosas"
+        },
+        {
+          "code": "7018.10.20",
+          "description": "000N Imitaciones de perlas, de piedras preciosas o semipreciosas 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7018.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7018.10.90",
+          "description": "000G Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7018.20.00",
+          "description": "Microesferas de vidrio con un diámetro inferior o igual a 1 mm"
+        },
+        {
+          "code": "7018.20.00",
+          "description": "000H -Microesferas de vidrio con un diámetro inferior o igual a 1 mm 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7018.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7018.90.00",
+          "description": "000G -Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7019",
+      "description": "FIBRA DE VIDRIO (INCLUIDA LA LANA DE VIDRIO) Y MANUFACTURAS DE ESTA MATERIA (POR EJEMPLO:",
+      "subheadings": [
+        {
+          "code": "7019.1",
+          "description": "Mechas, «rovings» e hilados, aunque estén cortados:"
+        },
+        {
+          "code": "7019.11.00",
+          "description": "Hilados cortados («chopped strands»), de longitud inferior o igual a 50 mm"
+        },
+        {
+          "code": "7019.11.00",
+          "description": "000Z --Hilados cortados (\"chopped strands\"), de longitud inferior o igual a 50 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.12",
+          "description": "«Rovings»"
+        },
+        {
+          "code": "7019.12.10",
+          "description": "Impregnados o recubiertos con resina poliuretánica o caucho estireno-butadieno"
+        },
+        {
+          "code": "7019.12.10",
+          "description": "000W Impregnados o recubiertos con resina poliuretánica o caucho estireno-butadieno 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.12.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7019.12.90",
+          "description": "000Z Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7019.19.00",
+          "description": "100A Mechas 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.19.00",
+          "description": "900U Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.3",
+          "description": "Velos, napas, «mats», colchones, paneles y productos similares sin tejer:"
+        },
+        {
+          "code": "7019.31.00",
+          "description": "«Mats»"
+        },
+        {
+          "code": "7019.31.00",
+          "description": "000C --\"Mats\" 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.32.00",
+          "description": "Velos"
+        },
+        {
+          "code": "7019.32.00",
+          "description": "000P --Velos 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "Napas"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "Aglomeradas con resinas fenólicas termoendurecibles"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "111J Sin revestimiento 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "119B Las demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "190H Las demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "Colchones"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "Aglomerados con resinas fenólicas termoendurecibles, sin revestimiento"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "211P De espesor inferior a 27 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "212R De espesor superior o igual a 27 mm pero inferior a 36 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "213U De espesor superior o igual a 36 mm pero inferior a 46 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "214W De espesor superior o igual a 46 mm pero inferior a 67 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "219G Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "Aglomerados con resinas fenólicas termoendurecibles, con revestimiento de aluminio"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "221T De espesor inferior a 27 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "222V De espesor superior o igual a 27 mm pero inferior a 36 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "223X De espesor superior o igual a 36 mm pero inferior a 46 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "224Z De espesor superior o igual a 46 mm pero inferior a 67 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "229K Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "Aglomerados con resinas fenólicas termoendurecibles, con revestimiento de polipropileno"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "231W De espesor inferior a 27 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "232Y De espesor superior o igual a 27 mm pero inferior a 36 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "233A De espesor superior o igual a 36 mm pero inferior a 46 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "234C De espesor superior o igual a 46 mm pero inferior a 67 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "239N Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "Aglomerados con resinas fenólicas termoendurecibles, con revestimiento de papel kraft"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "241Z De espesor inferior a 27 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "242B De espesor superior o igual a 27 mm pero inferior a 36 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "243D De espesor superior o igual a 36 mm pero inferior a 46 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "244F De espesor superior o igual a 46 mm pero inferior a 67 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "249R Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "291Q Aglomerados con resinas fenólicas termoendurecibles 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "299H Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "Paneles"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "Aglomerados con resinas fenólicas termoendurecibles, con revestimiento"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "311V De espesor inferior a 27 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "312X De espesor superior o igual a 27 mm pero inferior a 36 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "313Z De espesor superior o igual a 36 mm pero inferior a 46 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "314B De espesor superior o igual a 46 mm pero inferior a 67 mm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "319M Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "391W Aglomerados con resinas fenólicas termoendurecibles 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "399N Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "Aglomerados con resinas fenólicas termoendurecibles"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "911C Sin revestimiento 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "919V Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.39.00",
+          "description": "990B Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.40.00",
+          "description": "Tejidos de «rovings»"
+        },
+        {
+          "code": "7019.40.00",
+          "description": "000E -Tejidos de \"rovings\" 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.5",
+          "description": "Los demás tejidos:"
+        },
+        {
+          "code": "7019.51.00",
+          "description": "De anchura inferior o igual a 30 cm"
+        },
+        {
+          "code": "7019.51.00",
+          "description": "000F --De anchura inferior o igual a 30 cm 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.52",
+          "description": "De anchura superior a 30 cm, de ligamento tafetán, con peso inferior a 250 g/m2, de filamentos de título inferior o"
+        },
+        {
+          "code": "7019.52.10",
+          "description": "Con un contenido de materia orgánica superior o igual al 0,075 % pero inferior o igual al 0,3 %, en peso, según Norma"
+        },
+        {
+          "code": "7019.52.10",
+          "description": "000C Con un contenido de materia orgánica superior o igual al 0,075 % pero inferior o igual al 0,3 %, en peso, según norma"
+        },
+        {
+          "code": "7019.52.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7019.52.90",
+          "description": "000F Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.59.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7019.59.00",
+          "description": "100G Discos, de diámetro inferior o igual a 900 mm, impregnados con resina fenólica 12.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.59.00",
+          "description": "900A Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7019.90.10",
+          "description": "Red constituida por hilados paralelizados y superpuestos entre sí en ángulo de 90°, impregnados y soldados en sus"
+        },
+        {
+          "code": "7019.90.10",
+          "description": "000K Red constituida por hilados paralelizados y superpuestos entresí en ángulo de 90°, impregnados y soldados en sus"
+        },
+        {
+          "code": "7019.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7019.90.90",
+          "description": "100U Lana de vidrio a granel 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.90.90",
+          "description": "200Z Laminas a base de fibra de vidrio, de los tipos utilizados para la fabricacion de tiras para diagnostico de COVID-19 12.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7019.90.90",
+          "description": "900M Las demás 12.00 12.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7020",
+      "description": "LAS DEMÁS MANUFACTURAS DE VIDRIO",
+      "subheadings": [
+        {
+          "code": "7020.00.10",
+          "description": "Ampollas de vidrio para termos o demás recipientes isotérmicos aislados por vacío"
+        },
+        {
+          "code": "7020.00.10",
+          "description": "100T De capacidad superior a 0,5 l pero inferior o igual a 1,5 l 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7020.00.10",
+          "description": "900L Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7020.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7020.00.90",
+          "description": "000Q Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 408
+}

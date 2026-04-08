@@ -1,0 +1,3443 @@
+{
+  "chapter": "38",
+  "title": "Capítulo 38",
+  "sectionTitle": "CAP. 38 SECCION VI PRODUCTOS DE LAS INDUSTRIAS QUIMICAS O DE LAS INDUSTRIAS CONEXAS Notas. A. Cualquier producto que res",
+  "headings": [
+    {
+      "code": "3801",
+      "description": "GRAFITO ARTIFICIAL; GRAFITO COLOIDAL O SEMICOLOIDAL; PREPARACIONES A BASE DE GRAFITO U",
+      "subheadings": [
+        {
+          "code": "3801.10.00",
+          "description": "Grafito artificial"
+        },
+        {
+          "code": "3801.10.00",
+          "description": "000L -Grafito artificial 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3801.20",
+          "description": "Grafito coloidal o semicoloidal"
+        },
+        {
+          "code": "3801.20.10",
+          "description": "Suspensión semicoloidal en aceites minerales"
+        },
+        {
+          "code": "3801.20.10",
+          "description": "000K Suspensión semicoloidal en aceites minerales 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3801.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3801.20.90",
+          "description": "100U Grafito coloidal 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3801.20.90",
+          "description": "200Z Grafito semicoloidal 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3801.30",
+          "description": "Pastas carbonosas para electrodos y pastas similares para el revestimiento interior de hornos"
+        },
+        {
+          "code": "3801.30.10",
+          "description": "Pastas carbonosas para electrodos"
+        },
+        {
+          "code": "3801.30.10",
+          "description": "000Z Pastas carbonosas para electrodos 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3801.30.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3801.30.90",
+          "description": "000C Las demás 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3801.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3801.90.00",
+          "description": "100E Preparaciones a base de grafito 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3801.90.00",
+          "description": "900Y Los demás 10.00 10.00 3.00 LA 3.00 2.00"
+        }
+      ]
+    },
+    {
+      "code": "3802",
+      "description": "CARBÓN ACTIVADO; MATERIAS MINERALES NATURALES ACTIVADAS; NEGRO DE ORIGEN ANIMAL,",
+      "subheadings": [
+        {
+          "code": "3802.10.00",
+          "description": "Carbón activado"
+        },
+        {
+          "code": "3802.10.00",
+          "description": "000E -Carbón activado 12.00 12.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3802.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3802.90.10",
+          "description": "Harinas silíceas fósiles"
+        },
+        {
+          "code": "3802.90.10",
+          "description": "100H Kieselguhr 12.00 12.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3802.90.10",
+          "description": "900B Las demás 12.00 12.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3802.90.20",
+          "description": "Bentonita"
+        },
+        {
+          "code": "3802.90.20",
+          "description": "000M Bentonita 12.00 12.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3802.90.30",
+          "description": "Atapulgita"
+        },
+        {
+          "code": "3802.90.30",
+          "description": "000X Atapulgita 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3802.90.40",
+          "description": "Otras arcillas y tierras"
+        },
+        {
+          "code": "3802.90.40",
+          "description": "100M Tierras de batán (tierras de Fuller) 12.00 12.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3802.90.40",
+          "description": "900F Las demás 12.00 12.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3802.90.50",
+          "description": "Bauxita"
+        },
+        {
+          "code": "3802.90.50",
+          "description": "000R Bauxita 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3802.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3802.90.90",
+          "description": "100L Negro de origen animal 12.00 12.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3802.90.90",
+          "description": "900E Los demás 12.00 12.00 3.00 LA 3.00 2.00"
+        }
+      ]
+    },
+    {
+      "code": "3803",
+      "description": "«TALL OIL», INCLUSO REFINADO.",
+      "subheadings": [
+        {
+          "code": "3803.00.10",
+          "description": "En bruto"
+        },
+        {
+          "code": "3803.00.10",
+          "description": "000U En bruto 2.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3803.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3803.00.90",
+          "description": "000X Los demás 12.00 12.00 3.00 LA 3.00 2.00"
+        }
+      ]
+    },
+    {
+      "code": "3804",
+      "description": "LEJÍAS RESIDUALES DE LA FABRICACIÓN DE PASTAS DE CELULOSA, AUNQUE ESTÉN CONCENTRADAS,",
+      "subheadings": [
+        {
+          "code": "3804.00.11",
+          "description": "Al sulfito"
+        },
+        {
+          "code": "3804.00.11",
+          "description": "000V Al sulfito 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3804.00.12",
+          "description": "A la sosa o al sulfato"
+        },
+        {
+          "code": "3804.00.12",
+          "description": "000C A la sosa o al sulfato 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3804.00.20",
+          "description": "Lignosulfonatos"
+        },
+        {
+          "code": "3804.00.20",
+          "description": "100C De calcio 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3804.00.20",
+          "description": "200H De sodio 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3804.00.20",
+          "description": "300N De calcio y magnesio; de amonio, exento de hierro activo 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3804.00.20",
+          "description": "900W Los demás 10.00 10.00 3.00 LA 3.00 2.00"
+        }
+      ]
+    },
+    {
+      "code": "3805",
+      "description": "ESENCIAS DE TREMENTINA, DE MADERA DE PINO O DE PASTA CELULÓSICA AL SULFATO (SULFATO DE",
+      "subheadings": [
+        {
+          "code": "3805.10.00",
+          "description": "Esencias de trementina, de madera de pino o de pasta celulósica al sulfato (sulfato de trementina)"
+        },
+        {
+          "code": "3805.10.00",
+          "description": "100Q Esencia de trementina 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3805.10.00",
+          "description": "200W Esencia de madera de pino 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3805.10.00",
+          "description": "300B Esencia de pasta celulósica al sulfato(sulfato de trementina) 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3805.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3805.90.10",
+          "description": "Aceite de pino"
+        },
+        {
+          "code": "3805.90.10",
+          "description": "000H Aceite de pino 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3805.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3805.90.90",
+          "description": "100R Dipenteno en bruto 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3805.90.90",
+          "description": "200X p-Cimenos en bruto 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3805.90.90",
+          "description": "900K Los demás 14.00 14.00 3.00 LA 3.00 3.00"
+        }
+      ]
+    },
+    {
+      "code": "3806",
+      "description": "COLOFONIAS Y ÁCIDOS RESÍNICOS, Y SUS DERIVADOS; ESENCIA Y ACEITES DE COLOFONIA; GOMAS",
+      "subheadings": [
+        {
+          "code": "3806.10.00",
+          "description": "Colofonias y ácidos resínicos"
+        },
+        {
+          "code": "3806.10.00",
+          "description": "100J Colofonias 12.00 12.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "3806.10.00",
+          "description": "200P ácidos resínicos 12.00 12.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "3806.20.00",
+          "description": "Sales de colofonias, de ácidos resínicos o de derivados de colofonias o de ácidos resínicos, excepto las sales de"
+        },
+        {
+          "code": "3806.20.00",
+          "description": "100Y Sales de colofonias 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.20.00",
+          "description": "200D Sales de ácidos resínicos 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.20.00",
+          "description": "900R Las demás 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.30.00",
+          "description": "Gomas éster"
+        },
+        {
+          "code": "3806.30.00",
+          "description": "000G -Gomas éster 14.00 14.00 3.00 LA 3.00 4.00"
+        },
+        {
+          "code": "3806.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3806.90.11",
+          "description": "Colofonias oxidadas, hidrogenadas, desproporcionadas (deshidrogenadas), polimerizadas o modificadas con ácidos"
+        },
+        {
+          "code": "3806.90.11",
+          "description": "100P Oxidadas 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.90.11",
+          "description": "200V Hidrogenadas 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.90.11",
+          "description": "300A Desproporcionadas (deshidrogenadas) 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.90.11",
+          "description": "900H Las demás 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.90.12",
+          "description": "Abietatos de metilo o bencilo; hidroabietato de metilo"
+        },
+        {
+          "code": "3806.90.12",
+          "description": "100X Abieatos de metilo 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.90.12",
+          "description": "200C Abieatos de bencilo 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.90.12",
+          "description": "300H Hidroabieato de metilo 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3806.90.19",
+          "description": "100A ácidos resínicos oxidados 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.90.19",
+          "description": "200F ácidos resínicos deshidrogenados 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.90.19",
+          "description": "900U Los demás 14.00 14.00 3.00 LA 3.00 3.00"
+        },
+        {
+          "code": "3806.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3806.90.90",
+          "description": "000E Los demás 14.00 14.00 3.00 LA 3.00 3.00"
+        }
+      ]
+    },
+    {
+      "code": "3807",
+      "description": "ALQUITRANES DE MADERA; ACEITES DE ALQUITRÁN DE MADERA; CREOSOTA DE MADERA; METILENO",
+      "subheadings": [
+        {
+          "code": "3807.00.00",
+          "description": "Alquitranes de madera; aceites de alquitrán de madera; creosota de madera; metileno (nafta de madera); pez vegetal;"
+        },
+        {
+          "code": "3807.00.00",
+          "description": "100N Alquitranes de madera 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3807.00.00",
+          "description": "900G Los demás 14.00 14.00 3.00 LA 3.00 2.00"
+        }
+      ]
+    },
+    {
+      "code": "3808",
+      "description": "INSECTICIDAS, RATICIDAS Y DEMÁS ANTIRROEDORES, FUNGICIDAS, HERBICIDAS, INHIBIDORES DE",
+      "subheadings": [
+        {
+          "code": "3808.5",
+          "description": "Productos mencionados en la Nota 1 de subpartida de este Capítulo:"
+        },
+        {
+          "code": "3808.52.00",
+          "description": "DDT (ISO) (clofenotano (DCI)), acondicionado en envases con un contenido en peso neto inferior o igual a 300 g"
+        },
+        {
+          "code": "3808.52.00",
+          "description": "000W --DDT (ISO) (clofenotano (DCI)), acondicionado en envases con un contenido en peso neto inferior o igual a 300 g 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.59.10",
+          "description": "Presentados en formas o envases exclusivamente de uso directo en aplicaciones domisanitarias"
+        },
+        {
+          "code": "3808.59.10",
+          "description": "100V Paratión (etil paratión) o paratión-metilo (metil paratión) (R.G. 2146/06 AFIP) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.10",
+          "description": "200A Monocrotofós (R.G. 2146/06 AFIP) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.10",
+          "description": "300F Fosfamidón 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.10",
+          "description": "900N Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.21",
+          "description": "A base de metamidofos (ISO) o monocrotofós (ISO)"
+        },
+        {
+          "code": "3808.59.21",
+          "description": "100M A base de metamidofos (ISO) (R.G. 2146/06 AFIP) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.21",
+          "description": "200T A base de monocrotofós (ISO) (R.G. 2146/06 AFIP) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.22",
+          "description": "A base de endosulfán (ISO)"
+        },
+        {
+          "code": "3808.59.22",
+          "description": "000P A base de endosulfán (ISO) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.23",
+          "description": "A base de alaclor (ISO)"
+        },
+        {
+          "code": "3808.59.23",
+          "description": "000X A base de alaclor (ISO) 14.00 35.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "100Y Destinados a medicina humana (R. 2014/93 ex ANA) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "A base de aldicarb, aldrina, azinfos metil, canfecloro (toxafeno), clordano, DDT, dibromuro de etileno, dieldrina, lindano,"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "210G A base de aldicarb, aldrina, azinfos metil, canfecloro (toxafeno), clordano, DDT, dibromuro de etileno, lindano, paratión"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "220K A base dieldrina o hexaclorociclohexano (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "230N A base de heptacloro (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "A base de acetato de fenilmercurio, captafol, clorobencilato, ester butílico del 2,4,5-T, hexaclorobenceno,"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "310M A base de acetato de fenilmercurio o ester butílico del 2,4,5-T (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "320Q A base de captafol o hexaclorobenceno (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "330U A base de pentaclorofenol,sus sales o sus esteres (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "340X A base de clorobencilato (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "A base de binapacril, clordimeformo, compuestos de mercurio (excepto acetato de fenilmercurio),compuestos de"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "410T Oxirano 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "420W Preparaciones presentadas en polvo conteniendo una mezcla de benomilo, carbofurano y thiram (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "490U Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.59.29",
+          "description": "900R Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.6",
+          "description": "Productos mencionados en la Nota 2 de subpartida de este Capítulo:"
+        },
+        {
+          "code": "3808.61.00",
+          "description": "Acondicionados en envases con un contenido en peso neto inferior o igual a 300 g"
+        },
+        {
+          "code": "3808.61.00",
+          "description": "000Y --Acondicionados en envases con un contenido en peso neto inferior o igual a 300 g 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.62",
+          "description": "Acondicionados en envases con un contenido en peso neto superior a 300 g pero inferior o igual a 7,5 kg"
+        },
+        {
+          "code": "3808.62.10",
+          "description": "A base de alfa-cipermetrina (ISO)"
+        },
+        {
+          "code": "3808.62.10",
+          "description": "000V A base de alfa-cipermetrina (ISO) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.62.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.62.90",
+          "description": "100D A base de fenitotrión 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.62.90",
+          "description": "200J A base de pirimifós metil 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.62.90",
+          "description": "900X Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.69",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.69.10",
+          "description": "A base de alfa-cipermetrina (ISO)"
+        },
+        {
+          "code": "3808.69.10",
+          "description": "000D A base de alfa-cipermetrina (ISO) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.69.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.69.90",
+          "description": "000G Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "3808.91",
+          "description": "Insecticidas"
+        },
+        {
+          "code": "3808.91.11",
+          "description": "Que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.91.11",
+          "description": "000H Que contengan bromometano (bromuro de metilo) o bromoclorometano 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.91.19",
+          "description": "000U Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.20",
+          "description": "Presentados de otro modo, que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.91.20",
+          "description": "A base de cipermetrinas o permetrina"
+        },
+        {
+          "code": "3808.91.20",
+          "description": "110U A base de cipermetrina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.20",
+          "description": "120X A base de permetrina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.20",
+          "description": "190V Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.20",
+          "description": "300B A base de fosfuro de aluminio 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.20",
+          "description": "400G A base de aceite mineral 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.20",
+          "description": "500M A base de tiometón 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.20",
+          "description": "900J Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.91",
+          "description": "A base de acefato o de Bacillus thuringiensis"
+        },
+        {
+          "code": "3808.91.91",
+          "description": "100R A base de acefato 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.91",
+          "description": "200X A base de Bacillus thuringiensis 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.92",
+          "description": "A base de cipermetrinas o permetrina"
+        },
+        {
+          "code": "3808.91.92",
+          "description": "Destinados a medicina humana (R. 2014/93 ex ANA)"
+        },
+        {
+          "code": "3808.91.92",
+          "description": "110C A base de cipermetrina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.92",
+          "description": "120F A base de permetrina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.92",
+          "description": "190D Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.92",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.91.92",
+          "description": "910W A base de cipermetrina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.92",
+          "description": "920Z A base de permetrina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.92",
+          "description": "990X Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.93",
+          "description": "A base de dicrotofós"
+        },
+        {
+          "code": "3808.91.93",
+          "description": "000B A base de dicrotofós 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.94",
+          "description": "A base de disulfotón"
+        },
+        {
+          "code": "3808.91.94",
+          "description": "000J A base de disulfotón 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.95",
+          "description": "A base de fosfuro de aluminio"
+        },
+        {
+          "code": "3808.91.95",
+          "description": "000R A base de fosfuro de aluminio 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.96",
+          "description": "A base de diclorvós o triclorfón"
+        },
+        {
+          "code": "3808.91.96",
+          "description": "100E A base de diclorvós 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.96",
+          "description": "200K A base de triclorfón 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.97",
+          "description": "A base de aceite mineral o tiometón"
+        },
+        {
+          "code": "3808.91.97",
+          "description": "100M A base de aceite mineral 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.97",
+          "description": "200T A base de tiometón 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.98",
+          "description": "A base de sulfluramida"
+        },
+        {
+          "code": "3808.91.98",
+          "description": "000P A base de sulfluramida 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "100C Destinados a medicina humana (R. 2014/93 ex ANA) 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "200H A base de arseniato de plomo, arsenico, carbofurano (excepto productos en granulos definidos en la Res. 263/18"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "300N A base de carbaril 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "400U A base de clorpirifós o sus derivados 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "500Z A base de dimetoato 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "A base de compuesto órgano-clorados"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "911B A base de acetamiprid 8.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "912D A base de imidacloprid 8.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "913F A base de lufenurón 8.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "914H A base de teflubenzurón 8.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "915K A base de tiametoxam 8.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "916M A base de triflumurón 8.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "917P A base de fipronil, formulados como Suspension Concentrada (SC) y Granulos Dispersables (WG) (Res. 425/21"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "919U Los demás 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "920C A base de compuestos órgano-fosforados 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "930F A base de carbamatos 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "A base de abamectina, azadiractina, codlemone, E,E-8,10 dodecadienol, Z/E-8 dodecenilacetato, metoxifenocide,"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "941L A base de abamectina 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "942N A base de azadiractina 8.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "943Q A base de codlemone 8.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "944T A base de E,E-8,10 dodecadienol 8.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "945V A base de Z/E-8 dodecenilacetato 8.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "946X A base de metoxifenocide 8.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "947Z A base de orfamone 8.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "948B A base de ryania 8.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "949D A base de spinosad 8.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "950M A base de Cydia pomonella (virus de la granulosis) 8.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "960Q A base de E/Z-7,9 dodecadienilacetato 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.91.99",
+          "description": "990A Los demás 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.92",
+          "description": "Fungicidas"
+        },
+        {
+          "code": "3808.92.11",
+          "description": "Que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.92.11",
+          "description": "000V Que contengan bromometano (bromuro de metilo) o bromoclorometano 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.92.19",
+          "description": "000F Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.20",
+          "description": "Presentados de otro modo, que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.92.20",
+          "description": "100C A base de azufre 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.20",
+          "description": "200H A base de mancozeb 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.20",
+          "description": "300N A base de maneb 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.20",
+          "description": "900W Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.91",
+          "description": "A base de hidróxido de cobre, oxicloruro de cobre u óxido cuproso"
+        },
+        {
+          "code": "3808.92.91",
+          "description": "100D A base de hidróxido de cobre 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.91",
+          "description": "200J A base de oxicloruro de cobre 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.91",
+          "description": "300P A base de óxido cuproso 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.92",
+          "description": "A base de azufre o ziram"
+        },
+        {
+          "code": "3808.92.92",
+          "description": "100L A base de azufre 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.92",
+          "description": "200R A base de ziram 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.93",
+          "description": "A base de mancozeb o maneb"
+        },
+        {
+          "code": "3808.92.93",
+          "description": "100U A base de mancozeb 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.93",
+          "description": "200Z A base de maneb 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.94",
+          "description": "A base de sulfiram"
+        },
+        {
+          "code": "3808.92.94",
+          "description": "000W A base de sulfiram 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.95",
+          "description": "A base de compuestos de arsénico, cobre o cromo, excepto los productos del ítem 38089291"
+        },
+        {
+          "code": "3808.92.95",
+          "description": "100J Que contengan arseniato de plomo (R.G. 2146/06 AFIP) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.95",
+          "description": "200P Que contengan sales u Óxidos de cromo, arsénico y cobre simultáneamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.95",
+          "description": "900C Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.96",
+          "description": "A base de thiram"
+        },
+        {
+          "code": "3808.92.96",
+          "description": "000L A base de thiram 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.97",
+          "description": "A base de propiconazol"
+        },
+        {
+          "code": "3808.92.97",
+          "description": "000U A base de propiconazol 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.92.99",
+          "description": "100P A base de arseniato de plomo, arsenico o dinocap (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.99",
+          "description": "200V A base de zineb 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.99",
+          "description": "300A A base de carbendazin 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.99",
+          "description": "400F A base de fosetil aluminio 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.99",
+          "description": "500L A base de folpet 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.99",
+          "description": "600R A base de captan 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.99",
+          "description": "700X A base de compuestos de estaño 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.99",
+          "description": "910L A base de carbamatos 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.99",
+          "description": "920P A base de fenarimol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.99",
+          "description": "940W A base de kresoxim-metil 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.92.99",
+          "description": "990M Los demás 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93",
+          "description": "Herbicidas, inhibidores de germinación y reguladores del crecimiento de las plantas"
+        },
+        {
+          "code": "3808.93.11",
+          "description": "Que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.93.11",
+          "description": "000G Que contengan bromometano (bromuro de metilo) o bromoclorometano 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.93.19",
+          "description": "000T Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.21",
+          "description": "Que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.93.21",
+          "description": "200C A base de diurón 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.21",
+          "description": "300H A base de lactofen 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.21",
+          "description": "400N A base de dicloruro de paraquat 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.21",
+          "description": "500U A base de propanil 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.21",
+          "description": "600Z A base de trifluralina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.21",
+          "description": "A base de ametrina o atrazina"
+        },
+        {
+          "code": "3808.93.21",
+          "description": "710H A base de ametrina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.21",
+          "description": "720L A base de atrazina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.21",
+          "description": "900Q Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.22",
+          "description": "Los demás, a base de ácido 2,4-diclorofenoxiacético (2,4-D), ácido 4-(2,4-diclorofenoxi)butírico (2,4-DB), ácido"
+        },
+        {
+          "code": "3808.93.22",
+          "description": "100E A base de 2,4-D o sus derivados 14.00 35.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.22",
+          "description": "200K A base de 2,4-DB o sus derivados 14.00 35.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.22",
+          "description": "300Q A base de MCPA 14.00 35.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.23",
+          "description": "Los demás, a base de atrazina o diurón"
+        },
+        {
+          "code": "3808.93.23",
+          "description": "300Y A base de atrazina 14.00 35.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.23",
+          "description": "400D A base de diurón 14.00 35.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.24",
+          "description": "Los demás, a base de glifosato o de sus sales, imazaquín o lactofén"
+        },
+        {
+          "code": "3808.93.24",
+          "description": "100V A base de glifosato o de sus sales 14.00 35.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.24",
+          "description": "200A A base de imazaquín 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.24",
+          "description": "300F A base de lactofen 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.25",
+          "description": "Los demás, a base de dicloruro de paraquat, propanil o simazina"
+        },
+        {
+          "code": "3808.93.25",
+          "description": "100C A base de dicloruro de paraquat 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.25",
+          "description": "200H A base de propanil 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.25",
+          "description": "300N A base de simazina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.26",
+          "description": "Los demás, a base de trifluralina"
+        },
+        {
+          "code": "3808.93.26",
+          "description": "000E Los demás, a base de trifluralina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.27",
+          "description": "Los demás, a base de imazetapir"
+        },
+        {
+          "code": "3808.93.27",
+          "description": "000M Los demás, a base de imazetapir 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.28",
+          "description": "Los demás, a base de ametrina o hexazinona"
+        },
+        {
+          "code": "3808.93.28",
+          "description": "100A A base de ametrina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.28",
+          "description": "200F A base de hexazinona. 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "300U A base de haloxifop metil 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "400Z A base de acetoclor 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "500E A base de bromacil 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "600K A base de fomesafen 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "700Q A base de metsulfuron metil 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "800W A base de quizalofop o sus derivados 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "A base de derivados de la piridina"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "911G A base de fluroxipir 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "912J A base de picloram 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "919Z Los demás 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "930L A base de tebutiurón 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "940P A base de derivados del glifosato 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.29",
+          "description": "990F Los demás 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.31",
+          "description": "Que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.93.31",
+          "description": "000B Que contengan bromometano (bromuro de metilo) o bromoclorometano 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.32",
+          "description": "Los demás, presentados en formas o envases exclusivamente de uso directo en aplicaciones domisanitarias"
+        },
+        {
+          "code": "3808.93.32",
+          "description": "000J Los demás, presentados en formas o envases exclusivamente de uso directo en aplicaciones domisanitarias 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.33",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.93.33",
+          "description": "000R Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.41",
+          "description": "Que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.93.41",
+          "description": "000L Que contengan bromometano (bromuro de metilo) o bromoclorometano 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.93.49",
+          "description": "000X Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.51",
+          "description": "Que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.93.51",
+          "description": "000W Que contengan bromometano (bromuro de metilo) o bromoclorometano 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.52",
+          "description": "Los demás, a base de hidrazida maleica"
+        },
+        {
+          "code": "3808.93.52",
+          "description": "000D Los demás, a base de hidrazida maleica 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.59",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.93.59",
+          "description": "200T A base de alcoholes grasos 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.59",
+          "description": "300Y A base de giberelinas 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.59",
+          "description": "400D A base de cloromecuato 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.59",
+          "description": "500J A base de flumetralin 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.93.59",
+          "description": "900F Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.94",
+          "description": "Desinfectantes"
+        },
+        {
+          "code": "3808.94.11",
+          "description": "Que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.94.11",
+          "description": "000U Que contengan bromometano (bromuro de metilo) o bromoclorometano 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.94.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.94.19",
+          "description": "100K Desinfectante de superficies para equipos medicos y pisos 14.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.94.19",
+          "description": "900D Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.94.21",
+          "description": "Que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.94.21",
+          "description": "100J A base de 2- (tiocianometiltio) benzotiazol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.94.21",
+          "description": "900C Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.94.22",
+          "description": "Los demás, a base de 2-(tiocianometiltio)benzotiazol"
+        },
+        {
+          "code": "3808.94.22",
+          "description": "000L Los demás, a base de 2-(tiocianometiltio)benzotiazol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.94.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.94.29",
+          "description": "200A A base de ácido tricloroisocianúrico (TCCA), ácido dicloroisocianúrico (DCCA) o de sus derivados (R.G.30/97 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.94.29",
+          "description": "300F Desinfectantes de superficie para equipos medicos y pisos; alcohol en gel y demas preparaciones desinfectantes a"
+        },
+        {
+          "code": "3808.94.29",
+          "description": "900N Los demás 8.00 20.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.99.11",
+          "description": "Que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.99.11",
+          "description": "000D Que contengan bromometano (bromuro de metilo) o bromoclorometano 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.99.19",
+          "description": "100V Raticidas a base de sulfato de talio (R.G.2146/06 AFIP) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.19",
+          "description": "900N Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.20",
+          "description": "Presentados de otro modo, que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3808.99.20",
+          "description": "Acaricidas a base de amitraz, clorfenvinfós o propargite"
+        },
+        {
+          "code": "3808.99.20",
+          "description": "110P A base de amitraz 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.20",
+          "description": "120T A base de clorfenvinfós 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.20",
+          "description": "130W A base de propargite 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.20",
+          "description": "Acaricidas a base de cihexatín o de óxido de fembutatín (óxido de <<fenbutatin>>)"
+        },
+        {
+          "code": "3808.99.20",
+          "description": "210V A base de cihexatín 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.20",
+          "description": "220Y A base de fembutatín (óxido de \"fenbutatin\") 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.20",
+          "description": "900E Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.91",
+          "description": "Acaricidas a base de amitraz, clorfenvinfós o propargite"
+        },
+        {
+          "code": "3808.99.91",
+          "description": "100M A base de amitraz 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.91",
+          "description": "200T A base de clorfenvinfós 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.91",
+          "description": "300Y A base de propargite 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.92",
+          "description": "Acaricidas a base de cihexatín o de óxido de fembutatín (óxido de «fenbutatin»)"
+        },
+        {
+          "code": "3808.99.92",
+          "description": "100V A base de cihexatín 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.92",
+          "description": "200A A base de fembutatin (óxido de \"fenbutatin\") 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.93",
+          "description": "Otros acaricidas"
+        },
+        {
+          "code": "3808.99.93",
+          "description": "100C A base de dicofol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.93",
+          "description": "200H A base de flufenoxurón 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.93",
+          "description": "900W Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.94",
+          "description": "Nematicidas a base de metam sodio"
+        },
+        {
+          "code": "3808.99.94",
+          "description": "000E Nematicidas a base de metam sodio 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.95",
+          "description": "Otros nematicidas"
+        },
+        {
+          "code": "3808.99.95",
+          "description": "100T A base de fenamifós 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.95",
+          "description": "A base de 1,2-dibromo-3-cloropropano (DBCP) ó 4-nitrodifenilo (PNB)"
+        },
+        {
+          "code": "3808.99.95",
+          "description": "210B A base de 1,2-dibromo-3-cloropropano (DBCP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.95",
+          "description": "220E A base de 4-nitrodifenilo (PNB) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.95",
+          "description": "900L Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.96",
+          "description": "Raticidas"
+        },
+        {
+          "code": "3808.99.96",
+          "description": "100A A base de sulfato de estricnina o sulfato de talio (R.G.2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.96",
+          "description": "200F A base de brodifacoum 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.96",
+          "description": "300L A base de bromadiolone 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.96",
+          "description": "900U Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3808.99.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3808.99.99",
+          "description": "000T Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3809",
+      "description": "APRESTOS Y PRODUCTOS DE ACABADO, ACELERADORES DE TINTURA O DE FIJACIÓN DE MATERIAS",
+      "subheadings": [
+        {
+          "code": "3809.10",
+          "description": "A base de materias amiláceas"
+        },
+        {
+          "code": "3809.10.10",
+          "description": "De los tipos utilizados en la industria textil"
+        },
+        {
+          "code": "3809.10.10",
+          "description": "100Z Productos domisanitarios definidos en la Resolución 709/98 ex MSyAS 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.10.10",
+          "description": "900T Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3809.10.90",
+          "description": "000X Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "3809.91",
+          "description": "De los tipos utilizados en la industria textil o industrias similares"
+        },
+        {
+          "code": "3809.91.10",
+          "description": "Aprestos"
+        },
+        {
+          "code": "3809.91.10",
+          "description": "100Z Productos domisanitarios definidos en la Resolución 709/98 ex MSyAS 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.91.10",
+          "description": "900T Los demás 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "3809.91.20",
+          "description": "Mordientes"
+        },
+        {
+          "code": "3809.91.20",
+          "description": "000D Mordientes 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.91.30",
+          "description": "Productos ignífugos"
+        },
+        {
+          "code": "3809.91.30",
+          "description": "000N Productos ignífugos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.91.41",
+          "description": "A base de parafina o derivados de ácidos grasos"
+        },
+        {
+          "code": "3809.91.41",
+          "description": "000F A base de parafina o derivados de ácidos grasos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.91.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "3809.91.49",
+          "description": "000R Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.91.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3809.91.90",
+          "description": "000X Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.92",
+          "description": "De los tipos utilizados en la industria del papel o industrias similares"
+        },
+        {
+          "code": "3809.92.11",
+          "description": "A base de parafina o derivados de ácidos grasos"
+        },
+        {
+          "code": "3809.92.11",
+          "description": "000N A base de parafina o derivados de ácidos grasos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.92.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3809.92.19",
+          "description": "000Z Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.92.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3809.92.90",
+          "description": "100P Aglutinantes 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.92.90",
+          "description": "Productos o adyuvantes de encolado"
+        },
+        {
+          "code": "3809.92.90",
+          "description": "210Y A base de dimero de alquilceteno 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.92.90",
+          "description": "220B A base de resina de colofonia modificada. 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.92.90",
+          "description": "290Z Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.92.90",
+          "description": "900H Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.93",
+          "description": "De los tipos utilizados en la industria del cuero o industrias similares"
+        },
+        {
+          "code": "3809.93.11",
+          "description": "A base de parafina o derivados de ácidos grasos"
+        },
+        {
+          "code": "3809.93.11",
+          "description": "000A A base de parafina o derivados de ácidos grasos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.93.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3809.93.19",
+          "description": "000L Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.93.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3809.93.90",
+          "description": "100B Ligantes 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.93.90",
+          "description": "200G Agentes de relleno superficial 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3809.93.90",
+          "description": "900V Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3810",
+      "description": "PREPARACIONES PARA EL DECAPADO DE METAL; FLUJOS Y DEMÁS PREPARACIONES AUXILIARES PARA",
+      "subheadings": [
+        {
+          "code": "3810.10",
+          "description": "Preparaciones para el decapado de metal; pastas y polvos para soldar, constituidos por metal y otros productos"
+        },
+        {
+          "code": "3810.10.10",
+          "description": "Preparaciones para el decapado de metal"
+        },
+        {
+          "code": "3810.10.10",
+          "description": "000Y Preparaciones para el decapado de metal 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3810.10.20",
+          "description": "Pastas y polvos de soldar"
+        },
+        {
+          "code": "3810.10.20",
+          "description": "000H Pastas y polvos de soldar 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3810.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3810.90.00",
+          "description": "100G Flujos y demás preparaciones auxiliares de soldar metal 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3810.90.00",
+          "description": "200M Preparaciones de los tipos utilizados para recubrir o rellenar electrodos o varillas de soldadura 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3811",
+      "description": "PREPARACIONES ANTIDETONANTES, INHIBIDORES DE OXIDACIÓN, ADITIVOS PEPTIZANTES,",
+      "subheadings": [
+        {
+          "code": "3811.1",
+          "description": "Preparaciones antidetonantes:"
+        },
+        {
+          "code": "3811.11.00",
+          "description": "A base de compuestos de plomo"
+        },
+        {
+          "code": "3811.11.00",
+          "description": "000U --A base de compuestos de plomo 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3811.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3811.19.00",
+          "description": "000P --Las demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3811.2",
+          "description": "Aditivos para aceites lubricantes:"
+        },
+        {
+          "code": "3811.21",
+          "description": "Que contengan aceites de petróleo o de mineral bituminoso"
+        },
+        {
+          "code": "3811.21.10",
+          "description": "Mejoradores de índice de viscosidad"
+        },
+        {
+          "code": "3811.21.10",
+          "description": "000T Mejoradores de índice de viscosidad 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3811.21.20",
+          "description": "Antidesgaste, anticorrosivos o antioxidantes, que contengan dialquilditiofosfato de cinc o diarilditiofosfato de cinc"
+        },
+        {
+          "code": "3811.21.20",
+          "description": "000C Antidesgaste, anticorrosivos o antioxidantes, que contengan dialquilditiofosfato de cinc o diarilditiofosfato de cinc 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3811.21.30",
+          "description": "Dispersantes sin cenizas"
+        },
+        {
+          "code": "3811.21.30",
+          "description": "000M Dispersantes sin cenizas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3811.21.40",
+          "description": "Detergentes metálicos"
+        },
+        {
+          "code": "3811.21.40",
+          "description": "000X Detergentes metálicos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3811.21.50",
+          "description": "Otras preparaciones que contengan por lo menos uno de los productos comprendidos en los ítem 38112110,"
+        },
+        {
+          "code": "3811.21.50",
+          "description": "000G Otras preparaciones que contengan por lo menos uno de los productos comprendidos en los ítem 3811.21.10,"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "3812",
+      "description": "ACELERADORES DE VULCANIZACIÓN PREPARADOS; PLASTIFICANTES COMPUESTOS PARA CAUCHO O",
+      "subheadings": [
+        {
+          "code": "3812.10.00",
+          "description": "Aceleradores de vulcanización preparados"
+        },
+        {
+          "code": "3812.10.00",
+          "description": "100F A base de difenilguanidina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3812.10.00",
+          "description": "200L A base de ditiocarbamatos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3812.10.00",
+          "description": "300R A base de tiouramas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3812.10.00",
+          "description": "400X A base de sulfuros 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3812.10.00",
+          "description": "900Z Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3812.20.00",
+          "description": "Plastificantes compuestos para caucho o plástico"
+        },
+        {
+          "code": "3812.20.00",
+          "description": "100V Para caucho 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3812.20.00",
+          "description": "200A Para plástico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3812.3",
+          "description": "Preparaciones antioxidantes y demás estabilizantes compuestos para caucho o plástico:"
+        },
+        {
+          "code": "3812.31.00",
+          "description": "Mezclas de oligómeros de 2,2,4-trimetil-1,2-dihidroquinoleína (TMQ)"
+        },
+        {
+          "code": "3812.31.00",
+          "description": "000Q --Mezclas de oligómeros de 2, 2, 4 - trimetil - 1, 2 - dihidroquinoleína (TMQ) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3812.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3812.39.11",
+          "description": "Que contengan derivados N-sustituidos de la p-fenilendiamina"
+        },
+        {
+          "code": "3812.39.11",
+          "description": "000D Que contengan derivados N-sustituidos de la p-fenilendiamina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3812.39.12",
+          "description": "Que contengan fosfitos de alquilo, arilo o alquilarilo"
+        },
+        {
+          "code": "3812.39.12",
+          "description": "000L Que contengan fosfitos de alquilo, arilo o alquilarilo 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3812.39.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3812.39.19",
+          "description": "000P Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3812.39.21",
+          "description": "Que contengan derivados N-sustituidos de la p-fenilendiamina"
+        },
+        {
+          "code": "3812.39.21",
+          "description": "000N Que contengan derivados N-sustituidos de la p-fenilendiamina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3812.39.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3812.39.29",
+          "description": "100E Que contengan estearato de calcio y estearato de cinc 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3812.39.29",
+          "description": "910B Comprendidos en la Ley N° 25.174 (Malla antigranizo-materia prima), sus normas modificatorias y complementarias 14.00 0.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3812.39.29",
+          "description": "990C Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3813",
+      "description": "PREPARACIONES Y CARGAS PARA APARATOS EXTINTORES; GRANADAS Y BOMBAS EXTINTORAS",
+      "subheadings": [
+        {
+          "code": "3813.00.10",
+          "description": "Que contengan bromoclorodifluorometano, bromotrifluorometano o dibromotetrafluoroetanos"
+        },
+        {
+          "code": "3813.00.10",
+          "description": "100V Preparaciones y cargas para aparatos extintores 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.10",
+          "description": "200A Granadas y bombas extintoras 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.20",
+          "description": "Que contengan hidrobromofluorocarburos (HBFC) del metano, del etano o del propano"
+        },
+        {
+          "code": "3813.00.20",
+          "description": "100E Preparaciones y cargas para aparatos extintores 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.20",
+          "description": "200K Granadas y bombas extintoras 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.30",
+          "description": "Que contengan hidroclorofluorocarburos (HCFC) del metano, del etano o del propano"
+        },
+        {
+          "code": "3813.00.30",
+          "description": "Preparaciones y cargas para aparatos extintores"
+        },
+        {
+          "code": "3813.00.30",
+          "description": "110T Que contengan diclorotrifluoroetano (HCFC-123), tetrafluorometano (C14) y argón (Mezcla B o Halotron I) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.30",
+          "description": "120W Que contengan diclorotrifluoroetano (HCFC-123), pentafluoroetano (HCFC-125) e hidrocarburos terpenicos (Mezcla E"
+        },
+        {
+          "code": "3813.00.30",
+          "description": "130Z Que contengan clorodifluorometano (HCFC-22), diclorotrifluoroetano (HCFC-123), clorotetrafluoroetano (HCFC-124) e"
+        },
+        {
+          "code": "3813.00.30",
+          "description": "190U Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.30",
+          "description": "200V Granadas y bombas extintoras 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.40",
+          "description": "Que contengan bromoclorometano"
+        },
+        {
+          "code": "3813.00.40",
+          "description": "100Z Preparaciones y cargas para aparatos extintores 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.40",
+          "description": "200E Granadas y bombas extintoras 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3813.00.90",
+          "description": "Preparaciones y cargas para aparatos extintores"
+        },
+        {
+          "code": "3813.00.90",
+          "description": "110B A base de mezclas de bicarbonatos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.90",
+          "description": "120E A base de mezclas de dihidrogenoortofosfato de amonio(fosfato monoamónico) y sulfato de amonio 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.90",
+          "description": "130H Las demás, que contengan tetrafluoroetano (HCF-134), pentafluoroetano (HFC-125) y anhídrido carbónico (CO2)"
+        },
+        {
+          "code": "3813.00.90",
+          "description": "140L Las demás, que contengan sustancias comprendidas en el Dto. 1.609/2004 y modificatorios. 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.90",
+          "description": "190C Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.90",
+          "description": "Granadas y bombas extintoras"
+        },
+        {
+          "code": "3813.00.90",
+          "description": "210G Que contengan sustancias comprendidas en el Dto. 1.609/2004 y modificatorios. 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3813.00.90",
+          "description": "290H Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3814",
+      "description": "DISOLVENTES Y DILUYENTES ORGÁNICOS COMPUESTOS, NO EXPRESADOS NI COMPRENDIDOS EN OTRA",
+      "subheadings": [
+        {
+          "code": "3814.00.10",
+          "description": "Que contengan clorofluorocarburos (CFC) del metano, del etano o del propano, incluso los que contengan"
+        },
+        {
+          "code": "3814.00.10",
+          "description": "000H Que contengan clorofluorocarburos del metano, del etano o del propano (CFC), incluso los que contengan"
+        },
+        {
+          "code": "3814.00.20",
+          "description": "Que contengan hidroclorofluorocarburos (HCFC) del metano, del etano o del propano, pero que no contengan"
+        },
+        {
+          "code": "3814.00.20",
+          "description": "000T Que contengan hidroclorofluorocarburos del metano, del etano o del propano (HCFC), pero que no contengan"
+        },
+        {
+          "code": "3814.00.30",
+          "description": "Que contengan tetracloruro de carbono, bromoclorometano ó 1,1,1-tricloroetano (metilcloroformo)"
+        },
+        {
+          "code": "3814.00.30",
+          "description": "000C Que contengan tetracloruro de carbono, bromoclorometano o 1,1,1-tricloroetano (metilcloroformo) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3814.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3814.00.90",
+          "description": "100R Que contengan sustancias comprendidas en el Dto. 1.609/2004 y modificatorios. 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3814.00.90",
+          "description": "910N Disolventes y diluyentes orgánicos compuestos que se correspondan con las definiciones de la Ley N° 23.966, Título"
+        },
+        {
+          "code": "3814.00.90",
+          "description": "990P Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3815",
+      "description": "INICIADORES Y ACELERADORES DE REACCIÓN Y PREPARACIONES CATALÍTICAS, NO EXPRESADOS NI",
+      "subheadings": [
+        {
+          "code": "3815.1",
+          "description": "Catalizadores sobre soporte:"
+        },
+        {
+          "code": "3815.11.00",
+          "description": "Con níquel o sus compuestos como sustancia activa"
+        },
+        {
+          "code": "3815.11.00",
+          "description": "000T --Con níquel o sus compuestos como sustancia activa 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.12",
+          "description": "Con metal precioso o sus compuestos como sustancia activa"
+        },
+        {
+          "code": "3815.12.10",
+          "description": "En colmena cerámica o metálica para conversión catalítica de gases de escape de vehículos"
+        },
+        {
+          "code": "3815.12.10",
+          "description": "100V Con platino o sus compuestos como sustancia activa 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.12.10",
+          "description": "200A Con paladio o sus compuestos como sustancia activa 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.12.10",
+          "description": "900N Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.12.20",
+          "description": "Con tamaño de partícula inferior a 500 micrómetros"
+        },
+        {
+          "code": "3815.12.20",
+          "description": "100E Con platino o sus compuestos como sustancia activa 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.12.20",
+          "description": "200K Con paladio o sus compuestos como sustancia activa 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.12.20",
+          "description": "900Y Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.12.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3815.12.90",
+          "description": "100Y Con platino o sus compuestos como sustancia activa 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.12.90",
+          "description": "200D Con paladio o sus compuestos como sustancia activa 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.12.90",
+          "description": "900R Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3815.19.00",
+          "description": "000N --Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3815.90.10",
+          "description": "Para craqueo de petróleo"
+        },
+        {
+          "code": "3815.90.10",
+          "description": "000D Para craqueo de petróleo 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.90.91",
+          "description": "Con isoprenilaluminio (IPRA) como sustancia activa"
+        },
+        {
+          "code": "3815.90.91",
+          "description": "000P Con isoprenilaluminio (IPRA) como sustancia activa 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.90.92",
+          "description": "Con óxido de cinc como sustancia activa"
+        },
+        {
+          "code": "3815.90.92",
+          "description": "000X Con óxido de cinc como sustancia activa 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.90.93",
+          "description": "Con óxidos de tierras raras como sustancia activa"
+        },
+        {
+          "code": "3815.90.93",
+          "description": "000E Con oxidos de tierras raras como sustancia activa 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.90.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3815.90.99",
+          "description": "100F Catalizador de radicales 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.90.99",
+          "description": "200L Catalizadores ionicos 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.90.99",
+          "description": "300R Catalizador para las reacciones de policondensación 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3815.90.99",
+          "description": "900Z Los demás 4.00 4.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3816",
+      "description": "CEMENTOS, MORTEROS, HORMIGONES Y PREPARACIONES SIMILARES, REFRACTARIOS, EXCEPTO LOS",
+      "subheadings": [
+        {
+          "code": "3816.00.11",
+          "description": "A base de magnesita calcinada"
+        },
+        {
+          "code": "3816.00.11",
+          "description": "000C A base de magnesita calcinada 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3816.00.12",
+          "description": "A base de silimanita"
+        },
+        {
+          "code": "3816.00.12",
+          "description": "000K A base de silimanita 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3816.00.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3816.00.19",
+          "description": "000N Los demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3816.00.21",
+          "description": "Con grafito y un contenido de corindón superior o igual al 50 % en peso"
+        },
+        {
+          "code": "3816.00.21",
+          "description": "000M Con grafito y un contenido de corindón superior o igual al 50 % en peso 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3816.00.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3816.00.29",
+          "description": "000Y Las demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3816.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3816.00.90",
+          "description": "000Y Los demás 14.00 14.00 3.00 LA 3.00 2.00"
+        }
+      ]
+    },
+    {
+      "code": "3817",
+      "description": "MEZCLAS DE ALQUILBENCENOS Y MEZCLAS DE ALQUILNAFTALENOS, EXCEPTO LAS DE LAS PARTIDAS",
+      "subheadings": [
+        {
+          "code": "3817.00.10",
+          "description": "Mezclas de alquilbencenos"
+        },
+        {
+          "code": "3817.00.10",
+          "description": "Dodecilbencenos"
+        },
+        {
+          "code": "3817.00.10",
+          "description": "110X Mezclas que se correspondan con las definiciones de la Ley N° 23.966, Título III, sus normas modificatorias y"
+        }
+      ]
+    },
+    {
+      "code": "1200",
+      "description": "12.00 3.00 LA 3.00 2.00",
+      "subheadings": []
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LA 3.00 2.00",
+      "subheadings": []
+    },
+    {
+      "code": "3818",
+      "description": "ELEMENTOS QUÍMICOS DOPADOS PARA USO EN ELECTRÓNICA, EN DISCOS, OBLEAS («WAFERS») O",
+      "subheadings": [
+        {
+          "code": "3818.00.10",
+          "description": "De silicio"
+        },
+        {
+          "code": "3818.00.10",
+          "description": "000G De silicio 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3818.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3818.00.90",
+          "description": "000K Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3819",
+      "description": "LÍQUIDOS PARA FRENOS HIDRÁULICOS Y DEMÁS LÍQUIDOS PREPARADOS PARA TRANSMISIONES",
+      "subheadings": [
+        {
+          "code": "3819.00.00",
+          "description": "Líquidos para frenos hidráulicos y demás líquidos preparados para transmisiones hidráulicas, sin aceites de petróleo ni"
+        },
+        {
+          "code": "3819.00.00",
+          "description": "100W Para frenos hidráulicos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3819.00.00",
+          "description": "900P Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3820",
+      "description": "PREPARACIONES ANTICONGELANTES Y LÍQUIDOS PREPARADOS PARA DESCONGELAR",
+      "subheadings": [
+        {
+          "code": "3820.00.00",
+          "description": "Preparaciones anticongelantes y líquidos preparados para descongelar"
+        },
+        {
+          "code": "3820.00.00",
+          "description": "000V PREPARACIONES ANTICONGELANTES Y LÍQUIDOS PREPARADOS PARA DESCONGELAR. 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3821",
+      "description": "MEDIOS DE CULTIVO PREPARADOS PARA EL DESARROLLO O MANTENIMIENTO DE MICROORGANISMOS",
+      "subheadings": [
+        {
+          "code": "3821.00.00",
+          "description": "Medios de cultivo preparados para el desarrollo o mantenimiento de microorganismos (incluidos los virus y organismos"
+        },
+        {
+          "code": "3821.00.00",
+          "description": "100U Que contengan agar-agar 14.00 14.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3821.00.00",
+          "description": "200Z Que contengan extractos de carne 14.00 14.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3821.00.00",
+          "description": "900M Los demás 14.00 14.00 3.00 LA 0.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3822",
+      "description": "REACTIVOS DE DIAGNÓSTICO O DE LABORATORIO SOBRE CUALQUIER SOPORTE Y REACTIVOS DE",
+      "subheadings": [
+        {
+          "code": "3822.00.10",
+          "description": "Reactivos para la determinación de componentes de la sangre u orina sobre soporte de papel, en rollos, sin soporte"
+        },
+        {
+          "code": "3822.00.10",
+          "description": "000R Reactivos para la determinación de componentes de la sangre u orina sobre soporte de papel, en rollos, sin soporte"
+        },
+        {
+          "code": "3822.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3822.00.90",
+          "description": "Reactivos para diagnóstico"
+        },
+        {
+          "code": "3822.00.90",
+          "description": "De uso in vitro para uso humano (R.30/97 AFIP)"
+        },
+        {
+          "code": "3822.00.90",
+          "description": "111F Comprendidos en la Ley 25.590, sus normas modificatorias y complementarias 14.00 0.00 0.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3822.00.90",
+          "description": "112H Para la deteccion de COVID-19 14.00 0.00 0.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3822.00.90",
+          "description": "119Y Los demás 14.00 14.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3822.00.90",
+          "description": "190E Los demás 14.00 14.00 0.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3822.00.90",
+          "description": "200F Reactivos para laboratorio 14.00 14.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3822.00.90",
+          "description": "300L Materiales de referencia certificados 14.00 14.00 3.00 LA 0.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3823",
+      "description": "ÁCIDOS GRASOS MONOCARBOXÍLICOS INDUSTRIALES; ACEITES ÁCIDOS DEL REFINADO; ALCOHOLES",
+      "subheadings": [
+        {
+          "code": "3823.1",
+          "description": "Ácidos grasos monocarboxílicos industriales; aceites ácidos del refinado:"
+        },
+        {
+          "code": "3823.11.00",
+          "description": "Ácido esteárico"
+        },
+        {
+          "code": "3823.11.00",
+          "description": "000B --ácido esteárico 6.00 6.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3823.12.00",
+          "description": "Ácido oleico"
+        },
+        {
+          "code": "3823.12.00",
+          "description": "000N --ácido oleico 6.00 6.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3823.13.00",
+          "description": "Ácidos grasos del «tall oil»"
+        },
+        {
+          "code": "3823.13.00",
+          "description": "000A --ácidos grasos del \"tall oil\" 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3823.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3823.19.10",
+          "description": "Ácido caprílico"
+        },
+        {
+          "code": "3823.19.10",
+          "description": "000G Acido caprilico 14.00 0.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3823.19.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3823.19.90",
+          "description": "000K Los demas 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3823.70",
+          "description": "Alcoholes grasos industriales"
+        },
+        {
+          "code": "3823.70.10",
+          "description": "Estearílico"
+        },
+        {
+          "code": "3823.70.10",
+          "description": "000J Estearílico 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3823.70.20",
+          "description": "Laurílico"
+        },
+        {
+          "code": "3823.70.20",
+          "description": "000U Laurílico 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3823.70.40",
+          "description": "Cetílico"
+        },
+        {
+          "code": "3823.70.40",
+          "description": "000N Cetilico 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3823.70.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3823.70.90",
+          "description": "100T Oleilico 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3823.70.90",
+          "description": "900L Los demás 2.00 2.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3824",
+      "description": "PREPARACIONES AGLUTINANTES PARA MOLDES O NÚCLEOS DE FUNDICIÓN; PRODUCTOS QUÍMICOS Y",
+      "subheadings": [
+        {
+          "code": "3824.10.00",
+          "description": "Preparaciones aglutinantes para moldes o núcleos de fundición"
+        },
+        {
+          "code": "3824.10.00",
+          "description": "000H -Preparaciones aglutinantes para moldes o núcleos de fundición 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.30.00",
+          "description": "Carburos metálicos sin aglomerar mezclados entre sí o con aglutinantes metálicos"
+        },
+        {
+          "code": "3824.30.00",
+          "description": "100R Sin aglomerar mezclados entresí 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.30.00",
+          "description": "200X Con aglutinantes metálicos 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.40.00",
+          "description": "Aditivos preparados para cementos, morteros u hormigones"
+        },
+        {
+          "code": "3824.40.00",
+          "description": "000A -Aditivos preparados para cementos, morteros u hormigones 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.50.00",
+          "description": "Morteros y hormigones, no refractarios"
+        },
+        {
+          "code": "3824.50.00",
+          "description": "000P -Morteros y hormigones, no refractarios 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.60.00",
+          "description": "Sorbitol, excepto el de la subpartida 290544"
+        },
+        {
+          "code": "3824.60.00",
+          "description": "000D -Sorbitol, excepto el de la subpartida 2905.44 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.7",
+          "description": "Mezclas que contengan derivados halogenados de metano, etano o propano:"
+        },
+        {
+          "code": "3824.71",
+          "description": "Que contengan clorofluorocarburos (CFC), incluso con hidroclorofluorocarburos (HCFC), perfluorocarburos (PFC) o"
+        },
+        {
+          "code": "3824.71.10",
+          "description": "Que contengan triclorotrifluoroetanos"
+        },
+        {
+          "code": "3824.71.10",
+          "description": "000P Que contengan triclorotrifluoretanos 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.71.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3824.71.90",
+          "description": "000T Las demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.72.00",
+          "description": "Que contengan bromoclorodifluorometano, bromotrifluorometano o dibromotetrafluoroetanos"
+        },
+        {
+          "code": "3824.72.00",
+          "description": "000R --Que contengan bromoclorodifluorometano, bromotrifluorometano o dibromotetrafluoroetanos 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.73.00",
+          "description": "Que contengan hidrobromofluorocarburos (HBFC)"
+        },
+        {
+          "code": "3824.73.00",
+          "description": "000D --Que contengan hidrobromofluorocarburos (HBFC) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.74",
+          "description": "Que contengan hidroclorofluorocarburos (HCFC), incluso con perfluorocarburos (PFC) o hidrofluorocarburos (HFC),"
+        },
+        {
+          "code": "3824.74.10",
+          "description": "Que contengan clorodifluorometano y pentafluoroetano"
+        },
+        {
+          "code": "3824.74.10",
+          "description": "000A Que contengan clorodifluorometano y pentafluoroetano 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.74.20",
+          "description": "Que contengan clorodifluorometano y clorotetrafluoroetano"
+        },
+        {
+          "code": "3824.74.20",
+          "description": "000K Que contengan clorodifluorometano y clorotetrafluoroetano 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.74.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3824.74.90",
+          "description": "000D Las demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.75.00",
+          "description": "Que contengan tetracloruro de carbono"
+        },
+        {
+          "code": "3824.75.00",
+          "description": "000C --Que contengan tetracloruro de carbono 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.76.00",
+          "description": "Que contengan 1,1,1-tricloroetano (metilcloroformo)"
+        },
+        {
+          "code": "3824.76.00",
+          "description": "000P --Que contengan 1,1,1-tricloroetano (metilcloroformo) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.77.00",
+          "description": "Que contengan bromometano (bromuro de metilo) o bromoclorometano"
+        },
+        {
+          "code": "3824.77.00",
+          "description": "000B --Que contengan bromometano (bromuro de metilo) o bromoclorometano 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.78",
+          "description": "Que contengan perfluorocarburos (PFC) o hidrofluorocarburos (HFC), pero que no contengan clorofluorocarburos"
+        },
+        {
+          "code": "3824.78.10",
+          "description": "Que contengan tetrafluoroetano y pentafluroetano"
+        },
+        {
+          "code": "3824.78.10",
+          "description": "000Y Que contengan tetrafluoroetano y pentafluroetano 2.00 2.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "3824.78.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3824.78.90",
+          "description": "100G Que contengan difluorometano y pentafluoroetano 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.78.90",
+          "description": "200M Las demás, que contengan sustancias comprendidas en el Dto. 1.609/2004 y modificatorios. 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.78.90",
+          "description": "900A Las demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.79.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3824.79.00",
+          "description": "000A --Las demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.8",
+          "description": "Productos mencionados en la Nota 3 de subpartida de este Capítulo:"
+        },
+        {
+          "code": "3824.81",
+          "description": "Que contengan oxirano (óxido de etileno)"
+        },
+        {
+          "code": "3824.81.10",
+          "description": "Mezcla de óxido de propileno con un contenido de óxido de etileno inferior o igual al 30 % en peso"
+        },
+        {
+          "code": "3824.81.10",
+          "description": "000D Mezcla de óxido de propileno con un contenido de óxido de etileno inferior o igual al 30 % en peso 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.81.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3824.81.90",
+          "description": "000G Las demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.82.00",
+          "description": "Que contengan bifenilos polibromados (PBB), bifenilos policlorados (PCB) o terfenilos policlorados (PCT)"
+        },
+        {
+          "code": "3824.82.00",
+          "description": "000F --Que contengan bifenilos polibromados (PBB), bifenilos policlorados (PCB) o terfenilos policlorados (PCT) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.83.00",
+          "description": "Que contengan fosfato de tris(2,3-dibromopropilo)"
+        },
+        {
+          "code": "3824.83.00",
+          "description": "000T --Que contengan fosfato de tris(2,3- dibromopropilo) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.84.00",
+          "description": "Que contengan aldrina (ISO), canfecloro (ISO) (toxafeno), clordano (ISO), clordecona (ISO), DDT (ISO) (clofenotano"
+        },
+        {
+          "code": "3824.84.00",
+          "description": "000E --Que contengan aldrina (ISO), canfecloro (ISO) (toxafeno), clordano(ISO), clordecona (ISO), DDT (ISO) (clofenotano"
+        },
+        {
+          "code": "3824.85.00",
+          "description": "Que contengan 1,2,3,4,5,6-hexaclorociclohexano (HCH (ISO)), incluido el lindano (ISO, DCI)"
+        },
+        {
+          "code": "3824.85.00",
+          "description": "000R --Que contengan 1, 2, 3, 4, 5, 6 - hexaclorociclohexano (HCH (ISO)), incluido el lindano (ISO, DCI) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.86.00",
+          "description": "Que contengan pentaclorobenceno (ISO) o hexaclorobenceno (ISO)"
+        },
+        {
+          "code": "3824.86.00",
+          "description": "000D --Que contengan pentaclorobenceno (ISO) o hexaclorobenceno (ISO) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.87.00",
+          "description": "Que contengan ácido perfluorooctano sulfónico o sus sales, perfluorooctano sulfonamidas o fluoruro de"
+        },
+        {
+          "code": "3824.87.00",
+          "description": "000Q --Que contengan ácido perfluorooctano sulfónico o sus sales, perfluorooctano sulfonamidas o fluoruro de"
+        },
+        {
+          "code": "3824.88.00",
+          "description": "Que contengan éteres tetra-, penta-, hexa-, hepta- u octabromodifenílicos"
+        },
+        {
+          "code": "3824.88.00",
+          "description": "000C --Que contengan eteres tetra-, penta-, hexa-, hepta- u octabromodifenílicos 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "3824.91.00",
+          "description": "Mezclas y preparaciones constituidas esencialmente de metilfosfonato de"
+        },
+        {
+          "code": "3824.91.00",
+          "description": "000H --Mezclas y preparaciones constituidas esencialmente de metilfosfonato de (5-etil-2-metil-2-óxido-1, 3,"
+        },
+        {
+          "code": "3824.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3824.99.11",
+          "description": "Salinomicina micelial"
+        },
+        {
+          "code": "3824.99.11",
+          "description": "000W Salinomicina micelial 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.12",
+          "description": "Con un contenido de cianocobalamina inferior o igual al 55 % en peso"
+        },
+        {
+          "code": "3824.99.12",
+          "description": "000D Con un contenido de cianocobalamina inferior o igual al 55 % en peso 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.13",
+          "description": "De la fabricación de primicina amónica"
+        },
+        {
+          "code": "3824.99.13",
+          "description": "000L De la fabricación de primicina amónica 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.14",
+          "description": "Senduramicina sódica, de la fabricación de senduramicina"
+        },
+        {
+          "code": "3824.99.14",
+          "description": "000U Senduramicina sódica, de la fabricación de senduramicina 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.15",
+          "description": "Maduramicina amónica, en solución alcohólica, de la fabricación de maduramicina"
+        },
+        {
+          "code": "3824.99.15",
+          "description": "000B Maduramicina amónica, en solución alcohólica, de la fabricación de maduramicina 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3824.99.19",
+          "description": "000G Los demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.21",
+          "description": "Ácidos grasos dimerizados; preparaciones que contengan ácidos grasos dimerizados"
+        },
+        {
+          "code": "3824.99.21",
+          "description": "100L ácidos grasos dimerizados 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.21",
+          "description": "200R Preparaciones que contengan ácidos grasos dimerizados 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.22",
+          "description": "Preparaciones que contengan estearoilbenzoilmetano y palmitoilbenzoilmetano; preparaciones que contengan caprilato"
+        },
+        {
+          "code": "3824.99.22",
+          "description": "100U Preparaciones que contengan estearoilbenzoilmetano y palmitoilbenzoilmetano 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.22",
+          "description": "200Z Preparaciones que contengan caprilato y caprato de propilenglicol 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.23",
+          "description": "Preparaciones que contengan triglicéridos de los ácidos caprílico y cáprico"
+        },
+        {
+          "code": "3824.99.23",
+          "description": "000W Preparaciones que contengan trigliceridos de los ácidos caprílico y cúprico 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.24",
+          "description": "Ésteres de alcoholes grasos de C12 a C20 del ácido metacrílico y sus mezclas; ésteres de ácidos monocarboxílicos de"
+        },
+        {
+          "code": "3824.99.24",
+          "description": "100J Esteres de alcoholes grasos de C12 a C20 del ácido metacrílico y sus mezclas 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.24",
+          "description": "200P Esteres de ácidos monocarboxílicos de C10 ramificados con glicerol 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.25",
+          "description": "Mezclas de ésteres dimetílicos de los ácidos adípico, glutárico y succínico; mezclas de ácidos dibásicos de C11 y C12;"
+        },
+        {
+          "code": "3824.99.25",
+          "description": "100R Mezclas de esteres dimetílicos de los ácidos adípico, glutárico y succínico 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.25",
+          "description": "200X Mezclas de ácidos dibásicos de C11 y C12 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.25",
+          "description": "300C Acidos naftenicos, sus sales insolubles en agua y sus esteres 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3824.99.29",
+          "description": "100X Alcohol laurílico condensado con dos moles de óxido de etileno (R.244/07 MEyP) 14.00 2.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.29",
+          "description": "200C Gamabutirolactona desnaturalizada con benzoato de denatonio en etanol 14.00 2.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.29",
+          "description": "900Q Los demás 14.00 2.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.31",
+          "description": "Que contengan isocianatos de hexametileno u otros isocianatos"
+        },
+        {
+          "code": "3824.99.31",
+          "description": "100W Que contengan isocianatos de hexametileno 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.31",
+          "description": "200B Que contengan isocianatos de difenilmetano 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.31",
+          "description": "300G Que contengan isocianatos de tolueno 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.31",
+          "description": "900P Los demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.32",
+          "description": "Que contengan aminas grasas de C8 a C22"
+        },
+        {
+          "code": "3824.99.32",
+          "description": "000Y Que contengan aminas grasas de C8 a C22 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.33",
+          "description": "Que contengan polietilenaminas y dietilentriaminas, aptas para la coagulación de látex"
+        },
+        {
+          "code": "3824.99.33",
+          "description": "000F Que contengan polietilenaminas y dietilentriaminas, aptas para la coagulación de látex 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.34",
+          "description": "Otras, que contengan polietilenaminas"
+        },
+        {
+          "code": "3824.99.34",
+          "description": "000N Otras, que contengan polietilenaminas 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.35",
+          "description": "Mezclas de mono-, di- y triisopropanolaminas"
+        },
+        {
+          "code": "3824.99.35",
+          "description": "000W Mezclas de mono-, di- y triisopropanolaminas 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.36",
+          "description": "Reticulantes para siliconas"
+        },
+        {
+          "code": "3824.99.36",
+          "description": "000D Reticulantes para siliconas 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.39",
+          "description": "Las demás"
+        },
+        {
+          "code": "3824.99.39",
+          "description": "100G Reticulantes para resinas epoxi 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.39",
+          "description": "200M Poliglicolester del ácido metilfosfónico 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.39",
+          "description": "900A Los demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.41",
+          "description": "Preparaciones desincrustantes, anticorrosivas o antioxidantes"
+        },
+        {
+          "code": "3824.99.41",
+          "description": "000A Preparaciones desincrustantes, anticorrosivas o antioxidantes 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.42",
+          "description": "Mezcla eutéctica de difenilo y óxido de difenilo"
+        },
+        {
+          "code": "3824.99.42",
+          "description": "000H Mezcla eutéctica de difenilo y óxido de difenilo 8.00 8.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.43",
+          "description": "A base de trimetil-3,9-dietildecano"
+        },
+        {
+          "code": "3824.99.43",
+          "description": "000Q A base de trimetil-3,9-dietildecano 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "3824.99.49",
+          "description": "000L Los demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.51",
+          "description": "Antiespumantes que contengan fosfato de tributilo en solución de alcohol isopropílico"
+        },
+        {
+          "code": "3824.99.51",
+          "description": "000K Antiespumantes que contengan fosfato de tributilo en solución de alcohol isopropílico 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.52",
+          "description": "Mezclas de polietilenglicoles"
+        },
+        {
+          "code": "3824.99.52",
+          "description": "000T Mezclas de polietilenglicoles 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.53",
+          "description": "Polipropilenglicol líquido"
+        },
+        {
+          "code": "3824.99.53",
+          "description": "000A Polipropilenglicol líquido 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.54",
+          "description": "Retardantes de llama que contengan mezclas de fosfatos de trifenilo isopropilados"
+        },
+        {
+          "code": "3824.99.54",
+          "description": "000H Retardantes de llama que contengan mezclas de fosfatos de trifenilo isopropilados 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.59",
+          "description": "Los demás"
+        },
+        {
+          "code": "3824.99.59",
+          "description": "000W Los demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.71",
+          "description": "Cal sodada; carbonato de calcio hidrófugo"
+        },
+        {
+          "code": "3824.99.71",
+          "description": "000E Cal sodada; carbonato de calcio hidrófugo 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.72",
+          "description": "Preparaciones a base de sílice en suspensión coloidal; nitruro de boro de estructura cristalina cúbica, compactado con"
+        },
+        {
+          "code": "3824.99.72",
+          "description": "000M Preparaciones a base de sílice en suspensión coloidal; nitruro de boro de estructura cristalina cÚbica, compactado con"
+        },
+        {
+          "code": "3824.99.73",
+          "description": "Preparación a base de carburo de volframio (tungsteno) con níquel como aglomerante; bromuro de hidrógeno en"
+        },
+        {
+          "code": "3824.99.73",
+          "description": "000V Preparación a base de carburo de volframio (tungsteno) con níquel como aglomerante; bromuro de hidrógeno en"
+        },
+        {
+          "code": "3824.99.74",
+          "description": "Preparaciones a base de hidróxido de níquel o cadmio, de óxido de cadmio u óxido ferroso férrico, aptas para la"
+        },
+        {
+          "code": "3824.99.74",
+          "description": "000C Preparaciones a base de hidróxido de níquel o cadmio, de óxido de cadmio u óxido ferroso férrico, aptas para la"
+        },
+        {
+          "code": "3824.99.75",
+          "description": "Preparaciones utilizadas en la elaboración de medios de cultivo; intercambiadores de iones para el tratamiento de"
+        },
+        {
+          "code": "3824.99.75",
+          "description": "100Q Preparaciones utilizadas en la elaboración de medios de cultivo 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.75",
+          "description": "200W Intercambiadores de iones para el tratamiento de aguas 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.75",
+          "description": "300B Preparaciones a base de zeolitas artificiales 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.76",
+          "description": "Compuestos absorbentes a base de metal para perfeccionar el vacío en los tubos o válvulas eléctricas"
+        },
+        {
+          "code": "3824.99.76",
+          "description": "000T Compuestos absorbentes a base de metal para perfeccionar el vacío en los tubos o válvulas electricas 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.77",
+          "description": "Abonos foliares que contengan cinc o manganeso"
+        },
+        {
+          "code": "3824.99.77",
+          "description": "000A Abonos foliares que contengan cinc o manganeso 0.00 0.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.78",
+          "description": "Preparaciones a base de óxido de aluminio y óxido de circonio, con un contenido de óxido de circonio superior o igual"
+        },
+        {
+          "code": "3824.99.78",
+          "description": "000H Preparaciones a base de oxido de aluminio y oxido de circonio, con un contenido de oxido de circonio superior o igual"
+        },
+        {
+          "code": "3824.99.79",
+          "description": "Los demás"
+        },
+        {
+          "code": "3824.99.79",
+          "description": "100W Productos domisanitarios definidos en la Resolución 709/98 ex MSyAS 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.79",
+          "description": "200B Fertilizantes químicos para uso agrícola (Ley 26.050) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.79",
+          "description": "900P Los demás 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.81",
+          "description": "Preparaciones a base de anhídrido poliisobutenilsuccínico, en aceite mineral"
+        },
+        {
+          "code": "3824.99.81",
+          "description": "000P Preparaciones a base de anhídrido poliisobutenilsuccínico, en aceite mineral 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.82",
+          "description": "Halquinol; tetraclorohidroxiglicina de aluminio y zirconio"
+        },
+        {
+          "code": "3824.99.82",
+          "description": "100C Halquinol 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.82",
+          "description": "200H Tetraclorohidroxiglicina de aluminio y circonio 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.83",
+          "description": "Triisocianato de tiofosfato de fenilo o de trifenilmetano, en solución de cloruro de metileno o de acetato de etilo;"
+        },
+        {
+          "code": "3824.99.83",
+          "description": "100K Triisocianato de tiofosfato de fenilo o de trifenilmetano, en solución de cloruro de metileno o de acetato de etilo 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.83",
+          "description": "200Q Preparaciones a base de tetraacetiletilendiamina (TAED), en gránulos 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.85",
+          "description": "Metilato de sodio en metanol"
+        },
+        {
+          "code": "3824.99.85",
+          "description": "000V Metilato de sodio en metanol 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.86",
+          "description": "Maneb; mancozeb; cloruro de benzalconio"
+        },
+        {
+          "code": "3824.99.86",
+          "description": "100H Maneb (R.2013/93 ex-ANA) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.86",
+          "description": "200N Mancozeb 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.86",
+          "description": "300U Cloruro de benzalconio 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.87",
+          "description": "Dispersión acuosa de microcápsulas de poliuretano o de melamina-formaldehído que contienen un precursor de"
+        },
+        {
+          "code": "3824.99.87",
+          "description": "000K Dispersión acuosa de microcápsulas de poliuretano o de melamina-formaldehído que contienen un precursor de"
+        },
+        {
+          "code": "3824.99.88",
+          "description": "Mezclas constituidas esencialmente por los compuestos siguientes: alquilfosfonofluoridatos de O-alquilo (de hasta C10,"
+        },
+        {
+          "code": "3824.99.88",
+          "description": "100Y Mezclas constituidas principalmente de metilfosfonato de dimetilo, de oxirano y de pentóxido de difósforo 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.88",
+          "description": "900R Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "Los demás"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "100F Comabiset (R.2013/93 ex-ANA) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "200L Metiran (R.2013/93 ex-ANA) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "300R Propineb (R.2013/93 ex-ANA) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "400X Zineb (R.2013/93 ex-ANA) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "500C Antídotos de herbicidas (R.2013/93 ex-ANA) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "700N Que contengan monometildiclorodifenilmetano, monometiltetraclorodifenilmetano o monometildibromodifenilmetano"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "Nicotina, de administración por vía transdermica; cartuchos que contengan nicotina, de los tipos utilizados en sistemas"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "911E Nicotina, de administración por vía transdermica 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "912G Cartuchos que contengan nicotina, de los tipos utilizados en sistemas electrónicos de administración de nicotina"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "920F Mezclas que contengan sustancias que agotan la capa de ozono (Dto 1609/2004) 14.00 14.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "930J Glicerina etoxilada de peso molecular superior o igual a 601 pero inferior o igual a 647, con numero de hidroxilos"
+        },
+        {
+          "code": "3824.99.89",
+          "description": "990D Los demás 14.00 14.00 3.00 LA 3.00 2.00"
+        }
+      ]
+    },
+    {
+      "code": "3825",
+      "description": "PRODUCTOS RESIDUALES DE LA INDUSTRIA QUÍMICA O DE LAS INDUSTRIAS CONEXAS, NO EXPRESADOS",
+      "subheadings": [
+        {
+          "code": "3825.10.00",
+          "description": "Desechos y desperdicios municipales"
+        },
+        {
+          "code": "3825.10.00",
+          "description": "000B -Desechos y desperdicios municipales 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3825.20.00",
+          "description": "Lodos de depuración"
+        },
+        {
+          "code": "3825.20.00",
+          "description": "000Q -Lodos de depuracón 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3825.30.00",
+          "description": "Desechos clínicos"
+        },
+        {
+          "code": "3825.30.00",
+          "description": "000E -Desechos clínicos 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3825.4",
+          "description": "Desechos de disolventes orgánicos:"
+        },
+        {
+          "code": "3825.41.00",
+          "description": "Halogenados"
+        },
+        {
+          "code": "3825.41.00",
+          "description": "000F --Halogenados 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3825.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3825.49.00",
+          "description": "000B --Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3825.50.00",
+          "description": "Desechos de soluciones decapantes, fluidos hidráulicos, líquidos para frenos y líquidos anticongelantes"
+        },
+        {
+          "code": "3825.50.00",
+          "description": "000H -Desechos de soluciones decapantes, fluidos hidráulicos, líquidos para frenos y líquidos anticongelantes 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3825.6",
+          "description": "Los demás desechos de la industria química o de las industrias conexas:"
+        },
+        {
+          "code": "3825.61.00",
+          "description": "Que contengan principalmente componentes orgánicos"
+        },
+        {
+          "code": "3825.61.00",
+          "description": "100P Materiales recuperados de pañales descartables (fibras de celulosa y poliacrilato de sodio, incluso con otras materias) 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3825.61.00",
+          "description": "900H Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3825.69.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3825.69.00",
+          "description": "000E --Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3825.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3825.90.00",
+          "description": "100V Crudo amoniacal (R.2013/93 ex ANA) 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3825.90.00",
+          "description": "900N Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3826",
+      "description": "BIODIÉSEL Y SUS MEZCLAS, SIN ACEITES DE PETRÓLEO O DE MINERAL BITUMINOSO O CON UN",
+      "subheadings": [
+        {
+          "code": "3826.00.00",
+          "description": "Biodiésel y sus mezclas, sin aceites de petróleo o de mineral bituminoso o con un contenido inferior al 70 % en peso de"
+        },
+        {
+          "code": "3826.00.00",
+          "description": "Biodiesel"
+        },
+        {
+          "code": "3826.00.00",
+          "description": "110P Obtenido del aceite de soja 14.00 14.00 3.00 LA 29.00 0.00"
+        },
+        {
+          "code": "3826.00.00",
+          "description": "190Q Los demas 14.00 14.00 3.00 LA 29.00 0.00"
+        },
+        {
+          "code": "3826.00.00",
+          "description": "Mezclas de biodiesel obtenido del aceite de soja"
+        },
+        {
+          "code": "3826.00.00",
+          "description": "310A Mezclas con gas oil u otros productos gravados como componentes 14.00 14.00 3.00 LA 29.00 0.00"
+        },
+        {
+          "code": "3826.00.00",
+          "description": "390B Las demas 14.00 14.00 3.00 LA 29.00 0.00"
+        },
+        {
+          "code": "3826.00.00",
+          "description": "Las demas mezclas con gas oil u otros productos gravados como componentes"
+        },
+        {
+          "code": "3826.00.00",
+          "description": "410F Mezclas con gas oil 14.00 14.00 3.00 LA 29.00 0.00"
+        },
+        {
+          "code": "3826.00.00",
+          "description": "490G Las demás 14.00 14.00 3.00 LA 29.00 0.00"
+        },
+        {
+          "code": "3826.00.00",
+          "description": "900E Las demás 14.00 14.00 3.00 LA 29.00 0.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 903
+}

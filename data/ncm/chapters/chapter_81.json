@@ -1,0 +1,779 @@
+{
+  "chapter": "81",
+  "title": "Capítulo 71",
+  "sectionTitle": "CAP. 81 SECCION XV METALES COMUNES Y MANUFACTURAS DE ESTOS METALES Notas. 1. Esta Sección no comprende: a. los colores y",
+  "headings": [
+    {
+      "code": "3207",
+      "description": "a 32.10, 32.12, 32.13 ó 32.15);",
+      "subheadings": []
+    },
+    {
+      "code": "8101",
+      "description": "VOLFRAMIO (TUNGSTENO) Y SUS MANUFACTURAS, INCLUIDOS LOS DESPERDICIOS Y DESECHOS",
+      "subheadings": [
+        {
+          "code": "8101.10.00",
+          "description": "Polvo"
+        },
+        {
+          "code": "8101.10.00",
+          "description": "100P De pureza superior o igual al 97% en peso y diámetro de partícula inferior o igual a 500 micrómetros 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8101.10.00",
+          "description": "900H Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8101.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "8101.94.00",
+          "description": "Volframio (tungsteno) en bruto, incluidas las barras simplemente obtenidas por sinterizado"
+        },
+        {
+          "code": "8101.94.00",
+          "description": "000V --Volframio (tungsteno) en bruto, incluidas las barras simplemente obtenidas por sinterizado 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8101.96.00",
+          "description": "Alambre"
+        },
+        {
+          "code": "8101.96.00",
+          "description": "000U --Alambre 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8101.97.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8101.97.00",
+          "description": "000F --Desperdicios y desechos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8101.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "8101.99.10",
+          "description": "De los tipos utilizados para la fabricación de contactos eléctricos"
+        },
+        {
+          "code": "8101.99.10",
+          "description": "000P De los tipos utilizados para la fabricación de contactos electricos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8101.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8101.99.90",
+          "description": "000T Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8102",
+      "description": "MOLIBDENO Y SUS MANUFACTURAS, INCLUIDOS LOS DESPERDICIOS Y DESECHOS",
+      "subheadings": [
+        {
+          "code": "8102.10.00",
+          "description": "Polvo"
+        },
+        {
+          "code": "8102.10.00",
+          "description": "100H De pureza superior o igual al 97% en peso y diámetro de partícula inferior o igual a 500 micrómetros 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8102.10.00",
+          "description": "900B Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8102.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "8102.94.00",
+          "description": "Molibdeno en bruto, incluidas las barras simplemente obtenidas por sinterizado"
+        },
+        {
+          "code": "8102.94.00",
+          "description": "000N --Molibdeno en bruto, incluidas las barras simplemente obtenidas por sinterizado 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8102.95.00",
+          "description": "Barras, excepto las simplemente obtenidas por sinterizado, perfiles, chapas, hojas y tiras"
+        },
+        {
+          "code": "8102.95.00",
+          "description": "000A --Barras, excepto las simplemente obtenidas por sinterizado, perfiles, chapas, hojas y tiras 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8102.96.00",
+          "description": "Alambre"
+        },
+        {
+          "code": "8102.96.00",
+          "description": "000M --Alambre 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8102.97.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8102.97.00",
+          "description": "000Z --Desperdicios y desechos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8102.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8102.99.00",
+          "description": "000Y --Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8103",
+      "description": "TANTALIO Y SUS MANUFACTURAS, INCLUIDOS LOS DESPERDICIOS Y DESECHOS",
+      "subheadings": [
+        {
+          "code": "8103.20.00",
+          "description": "Tantalio en bruto, incluidas las barras simplemente obtenidas por sinterizado; polvo"
+        },
+        {
+          "code": "8103.20.00",
+          "description": "000K -Tantalio en bruto, incluidas las barras simplemente obtenidas por sinterizado; polvo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8103.30.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8103.30.00",
+          "description": "000Z -Desperdicios y desechos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8103.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8103.90.00",
+          "description": "000J -Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8104",
+      "description": "MAGNESIO Y SUS MANUFACTURAS, INCLUIDOS LOS DESPERDICIOS Y DESECHOS",
+      "subheadings": [
+        {
+          "code": "8104.1",
+          "description": "Magnesio en bruto:"
+        },
+        {
+          "code": "8104.11.00",
+          "description": "Con un contenido de magnesio superior o igual al 99,8 % en peso"
+        },
+        {
+          "code": "8104.11.00",
+          "description": "100G Lingotes 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8104.11.00",
+          "description": "900A Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8104.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8104.19.00",
+          "description": "100C Lingotes 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8104.19.00",
+          "description": "900W Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8104.20.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8104.20.00",
+          "description": "000D -Desperdicios y desechos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8104.30.00",
+          "description": "Virutas, torneaduras y gránulos calibrados; polvo"
+        },
+        {
+          "code": "8104.30.00",
+          "description": "100Y Polvo 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8104.30.00",
+          "description": "900R Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8104.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8104.90.00",
+          "description": "100H Barras con alma de alambre de acero 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8104.90.00",
+          "description": "910E ánodos galvánicos para protección catódica 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8104.90.00",
+          "description": "990F Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8105",
+      "description": "MATAS DE COBALTO Y DEMÁS PRODUCTOS INTERMEDIOS DE LA METALURGIA DEL COBALTO; COBALTO Y",
+      "subheadings": [
+        {
+          "code": "8105.20",
+          "description": "Matas de cobalto y demás productos intermedios de la metalurgia del cobalto; cobalto en bruto; polvo"
+        },
+        {
+          "code": "8105.20.10",
+          "description": "En bruto"
+        },
+        {
+          "code": "8105.20.10",
+          "description": "100M Lingotes 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8105.20.10",
+          "description": "900F Los demás 4.00 4.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8105.20.21",
+          "description": "De aleaciones a base de cobalto-cromo-volframio (tungsteno) (estelitas)"
+        },
+        {
+          "code": "8105.20.21",
+          "description": "000Z De aleaciones a base de cobalto-cromo-volframio (tungsteno) (estelitas) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8105.20.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "8105.20.29",
+          "description": "000K Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8105.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8105.20.90",
+          "description": "000K Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8105.30.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8105.30.00",
+          "description": "000L -Desperdicios y desechos 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8105.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8105.90.10",
+          "description": "Chapas, hojas, tiras, alambre, varillas, pastillas y plaquetas"
+        },
+        {
+          "code": "8105.90.10",
+          "description": "100L Alambre 6.00 6.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "8105.90.10",
+          "description": "900E Los demás 6.00 6.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "8105.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8105.90.90",
+          "description": "000J Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8106",
+      "description": "BISMUTO Y SUS MANUFACTURAS, INCLUIDOS LOS DESPERDICIOS Y DESECHOS",
+      "subheadings": [
+        {
+          "code": "8106.00.10",
+          "description": "En bruto"
+        },
+        {
+          "code": "8106.00.10",
+          "description": "000X En bruto 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8106.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8106.00.90",
+          "description": "100F Desperdicios y desechos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8106.00.90",
+          "description": "900Z Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8107",
+      "description": "CADMIO Y SUS MANUFACTURAS, INCLUIDOS LOS DESPERDICIOS Y DESECHOS",
+      "subheadings": [
+        {
+          "code": "8107.20",
+          "description": "Cadmio en bruto; polvo"
+        },
+        {
+          "code": "8107.20.10",
+          "description": "En bruto"
+        },
+        {
+          "code": "8107.20.10",
+          "description": "000U En bruto 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8107.20.20",
+          "description": "Polvo"
+        },
+        {
+          "code": "8107.20.20",
+          "description": "000D Polvo 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8107.30.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8107.30.00",
+          "description": "000Y -Desperdicios y desechos 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8107.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8107.90.00",
+          "description": "000H -Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8108",
+      "description": "TITANIO Y SUS MANUFACTURAS, INCLUIDOS LOS DESPERDICIOS Y DESECHOS",
+      "subheadings": [
+        {
+          "code": "8108.20.00",
+          "description": "Titanio en bruto; polvo"
+        },
+        {
+          "code": "8108.20.00",
+          "description": "000C -Titanio en bruto; polvo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8108.30.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8108.30.00",
+          "description": "000R -Desperdicios y desechos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8108.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8108.90.00",
+          "description": "100G Barras 2.00 2.00 3.00 LA 4.50 4.00"
+        },
+        {
+          "code": "8108.90.00",
+          "description": "200M Alambre 2.00 2.00 3.00 LA 4.50 4.00"
+        },
+        {
+          "code": "8108.90.00",
+          "description": "900A Los demás 2.00 2.00 3.00 LA 4.50 4.00"
+        }
+      ]
+    },
+    {
+      "code": "8109",
+      "description": "CIRCONIO Y SUS MANUFACTURAS, INCLUIDOS LOS DESPERDICIOS Y DESECHOS",
+      "subheadings": [
+        {
+          "code": "8109.20.00",
+          "description": "Circonio en bruto; polvo"
+        },
+        {
+          "code": "8109.20.00",
+          "description": "000W -Circonio en bruto; polvo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8109.30.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8109.30.00",
+          "description": "000K -Desperdicios y desechos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8109.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8109.90.00",
+          "description": "100A Tubos 2.00 2.00 3.00 LA 4.50 4.00"
+        },
+        {
+          "code": "8109.90.00",
+          "description": "200F Barras 2.00 2.00 3.00 LA 4.50 4.00"
+        },
+        {
+          "code": "8109.90.00",
+          "description": "900U Los demás 2.00 2.00 3.00 LA 4.50 4.00"
+        }
+      ]
+    },
+    {
+      "code": "8110",
+      "description": "ANTIMONIO Y SUS MANUFACTURAS, INCLUIDOS LOS DESPERDICIOS Y DESECHOS",
+      "subheadings": [
+        {
+          "code": "8110.10",
+          "description": "Antimonio en bruto; polvo"
+        },
+        {
+          "code": "8110.10.10",
+          "description": "En bruto"
+        },
+        {
+          "code": "8110.10.10",
+          "description": "000W En bruto 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8110.10.20",
+          "description": "Polvo"
+        },
+        {
+          "code": "8110.10.20",
+          "description": "000F Polvo 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8110.20.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8110.20.00",
+          "description": "000A -Desperdicios y desechos 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8110.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8110.90.00",
+          "description": "000Z -Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8111",
+      "description": "MANGANESO Y SUS MANUFACTURAS, INCLUIDOS LOS DESPERDICIOS Y DESECHOS",
+      "subheadings": [
+        {
+          "code": "8111.00.10",
+          "description": "En bruto"
+        },
+        {
+          "code": "8111.00.10",
+          "description": "000A En bruto 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8111.00.20",
+          "description": "Chapas, hojas, tiras, alambre, varillas, pastillas y plaquetas"
+        },
+        {
+          "code": "8111.00.20",
+          "description": "000K Chapas, hojas, tiras, alambre, varillas, pastillas y plaquetas 6.00 6.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "8111.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8111.00.90",
+          "description": "100J Desperdicios y desechos 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8111.00.90",
+          "description": "200P Polvo 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8111.00.90",
+          "description": "900C Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8112",
+      "description": "BERILIO, CROMO, GERMANIO, VANADIO, GALIO, HAFNIO (CELTIO), INDIO, NIOBIO (COLOMBIO), RENIO Y",
+      "subheadings": [
+        {
+          "code": "8112.1",
+          "description": "Berilio:"
+        },
+        {
+          "code": "8112.12.00",
+          "description": "En bruto; polvo"
+        },
+        {
+          "code": "8112.12.00",
+          "description": "000X --En bruto; polvo 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.13.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8112.13.00",
+          "description": "000J --Desperdicios y desechos 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8112.19.00",
+          "description": "000F --Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.2",
+          "description": "Cromo:"
+        },
+        {
+          "code": "8112.21",
+          "description": "En bruto; polvo"
+        },
+        {
+          "code": "8112.21.10",
+          "description": "En bruto"
+        },
+        {
+          "code": "8112.21.10",
+          "description": "000J En bruto 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.21.20",
+          "description": "Polvo"
+        },
+        {
+          "code": "8112.21.20",
+          "description": "000U Polvo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.22.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8112.22.00",
+          "description": "000L --Desperdicios y desechos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8112.29.00",
+          "description": "000V --Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.5",
+          "description": "Talio:"
+        },
+        {
+          "code": "8112.51.00",
+          "description": "En bruto; polvo"
+        },
+        {
+          "code": "8112.51.00",
+          "description": "000R --En bruto; polvo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.52.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8112.52.00",
+          "description": "000D --Desperdicios y desechos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.59.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8112.59.00",
+          "description": "000M --Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "En bruto; desperdicios y desechos; polvo"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "Desperdicios y desechos"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "110U Galio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "120X Hafnio (celtio) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "130A Indio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "140D Niobio (colombio) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "150G Renio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "160K Germanio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "170N Vanadio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "200W Polvo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "910M Galio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "920Q Hafnio (celtio) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "930U Indio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "940X Niobio (colombio) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "950A Renio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "960D Germanio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.92.00",
+          "description": "970G Vanadio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8112.99.00",
+          "description": "100Z Galio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.99.00",
+          "description": "200E Hafnio (celtio) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.99.00",
+          "description": "300K Indio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.99.00",
+          "description": "400Q Niobio (colombio) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.99.00",
+          "description": "500W Renio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.99.00",
+          "description": "600B Germanio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8112.99.00",
+          "description": "700G Vanadio 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8113",
+      "description": "CERMET Y SUS MANUFACTURAS, INCLUIDOS LOS DESPERDICIOS Y DESECHOS",
+      "subheadings": [
+        {
+          "code": "8113.00.10",
+          "description": "Chapas, hojas, tiras, alambre, varillas, pastillas y plaquetas"
+        },
+        {
+          "code": "8113.00.10",
+          "description": "000M Chapas, hojas, tiras, alambre, varillas, pastillas y plaquetas 6.00 6.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "8113.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8113.00.90",
+          "description": "100W Desperdicios y desechos 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8113.00.90",
+          "description": "900P Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 187
+}

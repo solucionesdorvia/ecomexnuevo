@@ -1,0 +1,564 @@
+{
+  "chapter": "57",
+  "title": "Capítulo 14",
+  "sectionTitle": "CAP. 57 SECCION XI MATERIAS TEXTILES Y SUS MANUFACTURAS Notas. 1. Esta Sección no comprende: a. los pelos y cerdas para",
+  "headings": [
+    {
+      "code": "4303",
+      "description": "o 43.04;",
+      "subheadings": []
+    },
+    {
+      "code": "5701",
+      "description": "ALFOMBRAS DE NUDO DE MATERIA TEXTIL, INCLUSO CONFECCIONADAS",
+      "subheadings": [
+        {
+          "code": "5701.10",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "5701.10.11",
+          "description": "Hechas a mano"
+        },
+        {
+          "code": "5701.10.11",
+          "description": "Confeccionadas"
+        },
+        {
+          "code": "5701.10.11",
+          "description": "110Y Cuadradas o rectangulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5701.10.11",
+          "description": "120B Circulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5701.10.11",
+          "description": "190Z Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5701.10.11",
+          "description": "200A Sin confeccionar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5701.10.12",
+          "description": "Hechas a máquina"
+        },
+        {
+          "code": "5701.10.12",
+          "description": "Confeccionadas"
+        },
+        {
+          "code": "5701.10.12",
+          "description": "110F Cuadradas o rectangulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5701.10.12",
+          "description": "120J Circulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5701.10.12",
+          "description": "190G Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5701.10.12",
+          "description": "200H Sin confeccionar 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5701.10.20",
+          "description": "De pelo fino"
+        },
+        {
+          "code": "5701.10.20",
+          "description": "000R De pelo fino 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5701.90.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "5701.90.00",
+          "description": "Confeccionadas"
+        },
+        {
+          "code": "5701.90.00",
+          "description": "110U Cuadradas o rectangulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5701.90.00",
+          "description": "120X Circulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5701.90.00",
+          "description": "190V Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5701.90.00",
+          "description": "200W Sin confeccionar 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "5702",
+      "description": "ALFOMBRAS Y DEMÁS REVESTIMIENTOS PARA EL SUELO, DE MATERIA TEXTIL, TEJIDOS, EXCEPTO LOS DE",
+      "subheadings": [
+        {
+          "code": "5702.10.00",
+          "description": "Alfombras llamadas «Kelim» o «Kilim», «Schumacks» o «Soumak», «Karamanie» y alfombras similares tejidas a mano"
+        },
+        {
+          "code": "5702.10.00",
+          "description": "000Q -Alfombras llamadas «Kelim» o «Kilim», «Schumacks» o «Soumak», «Karamanie» y alfombras similares tejidas a mano 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.20.00",
+          "description": "Revestimientos para el suelo de fibras de coco"
+        },
+        {
+          "code": "5702.20.00",
+          "description": "000E -Revestimientos para el suelo de fibras de coco 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.3",
+          "description": "Los demás, aterciopelados, sin confeccionar:"
+        },
+        {
+          "code": "5702.31.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "5702.31.00",
+          "description": "000F --De lana o pelo fino 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.32.00",
+          "description": "De materia textil sintética o artificial"
+        },
+        {
+          "code": "5702.32.00",
+          "description": "000T --De materia textil sintética o artificial 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.39.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "5702.39.00",
+          "description": "000B --De las demás materias textiles 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.4",
+          "description": "Los demás, aterciopelados, confeccionados:"
+        },
+        {
+          "code": "5702.41.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "5702.41.00",
+          "description": "Cuadrados o rectangulares"
+        },
+        {
+          "code": "5702.41.00",
+          "description": "110D Con pelo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.41.00",
+          "description": "120G Con bucle 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.41.00",
+          "description": "Circulares"
+        },
+        {
+          "code": "5702.41.00",
+          "description": "210J Con pelo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.41.00",
+          "description": "220M Con bucle 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.41.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5702.41.00",
+          "description": "910X Con pelo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.41.00",
+          "description": "920A Con bucle 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.42.00",
+          "description": "De materia textil sintética o artificial"
+        },
+        {
+          "code": "5702.42.00",
+          "description": "Cuadrados o rectangulares"
+        },
+        {
+          "code": "5702.42.00",
+          "description": "110Q Con pelo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.42.00",
+          "description": "120U Con bucle 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.42.00",
+          "description": "Circulares"
+        },
+        {
+          "code": "5702.42.00",
+          "description": "210W Con pelo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.42.00",
+          "description": "220Z Con bucle 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.42.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5702.42.00",
+          "description": "910J Con pelo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.42.00",
+          "description": "920M Con bucle 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.49.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "5702.49.00",
+          "description": "Cuadrados o rectangulares"
+        },
+        {
+          "code": "5702.49.00",
+          "description": "110Z Con pelo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.49.00",
+          "description": "120C Con bucle 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.49.00",
+          "description": "Circulares"
+        },
+        {
+          "code": "5702.49.00",
+          "description": "210E Con pelo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.49.00",
+          "description": "220H Con bucle 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5702.49.00",
+          "description": "910T Con pelo 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.49.00",
+          "description": "920W Con bucle 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.50",
+          "description": "Los demás, sin aterciopelar ni confeccionar"
+        },
+        {
+          "code": "5702.50.10",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "5702.50.10",
+          "description": "000G De lana o pelo fino 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.50.20",
+          "description": "De materia textil sintética o artificial"
+        },
+        {
+          "code": "5702.50.20",
+          "description": "000R De materia textil sintetica o artificial 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.50.90",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "5702.50.90",
+          "description": "000K De las demás materias textiles 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.9",
+          "description": "Los demás, sin aterciopelar, confeccionados:"
+        },
+        {
+          "code": "5702.91.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "5702.91.00",
+          "description": "100W Cuadrados o rectangulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.91.00",
+          "description": "200B Circulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.91.00",
+          "description": "900P Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.92.00",
+          "description": "De materia textil sintética o artificial"
+        },
+        {
+          "code": "5702.92.00",
+          "description": "100H Cuadrados o rectangulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.92.00",
+          "description": "200N Circulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.92.00",
+          "description": "900B Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.99.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "5702.99.00",
+          "description": "100R Cuadrados o rectangulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.99.00",
+          "description": "200X Circulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5702.99.00",
+          "description": "900K Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "5703",
+      "description": "ALFOMBRAS Y DEMÁS REVESTIMIENTOS PARA EL SUELO, DE MATERIA TEXTIL, CON MECHÓN INSERTADO,",
+      "subheadings": [
+        {
+          "code": "5703.10.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "5703.10.00",
+          "description": "Confeccionados"
+        },
+        {
+          "code": "5703.10.00",
+          "description": "110T Cuadrados o rectangulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5703.10.00",
+          "description": "120W Circulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5703.10.00",
+          "description": "190U Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5703.10.00",
+          "description": "Sin confeccionar"
+        },
+        {
+          "code": "5703.10.00",
+          "description": "210Y De peso inferior a 4 kg/m2 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5703.10.00",
+          "description": "De peso superior o igual a 4 kg/m2"
+        },
+        {
+          "code": "5703.10.00",
+          "description": "221D De forma cuadrada con base de PVC, caucho o betunes, con una superficie superior o igual a 0,16 m2 pero inferior o"
+        }
+      ]
+    },
+    {
+      "code": "3500",
+      "description": "35.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "5704",
+      "description": "ALFOMBRAS Y DEMÁS REVESTIMIENTOS PARA EL SUELO, DE FIELTRO, EXCEPTO LOS DE MECHÓN",
+      "subheadings": [
+        {
+          "code": "5704.10.00",
+          "description": "Losetas de superficie inferior o igual a 0,3 m2"
+        },
+        {
+          "code": "5704.10.00",
+          "description": "Confeccionados."
+        },
+        {
+          "code": "5704.10.00",
+          "description": "110L Cuadrados o rectángulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5704.10.00",
+          "description": "120P Circulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5704.10.00",
+          "description": "190M Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5704.10.00",
+          "description": "Sin confeccionar"
+        },
+        {
+          "code": "5704.10.00",
+          "description": "De forma cuadrada con base de PVC, caucho o betunes"
+        },
+        {
+          "code": "5704.10.00",
+          "description": "211U De peso inferior a 3,5 kg/m2 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5704.10.00",
+          "description": "219L Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5704.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5704.10.00",
+          "description": "291V De peso inferior a 3,5 kg/m2 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5704.10.00",
+          "description": "299M Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5704.20.00",
+          "description": "Losetas de superficie superior a 0,3 m2 pero inferior o igual a 1 m2"
+        },
+        {
+          "code": "5704.20.00",
+          "description": "000R -Losetas de superficie superior a 0,3 m2 pero inferior o igual a 1 m2 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5704.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5704.90.00",
+          "description": "Confeccionados"
+        },
+        {
+          "code": "5704.90.00",
+          "description": "110Z Cuadrados o rectangulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5704.90.00",
+          "description": "120C Circulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5704.90.00",
+          "description": "130F Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5704.90.00",
+          "description": "190A Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5704.90.00",
+          "description": "200B Sin confeccionar 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "5705",
+      "description": "LAS DEMÁS ALFOMBRAS Y REVESTIMIENTOS PARA EL SUELO, DE MATERIA TEXTIL, INCLUSO",
+      "subheadings": [
+        {
+          "code": "5705.00.00",
+          "description": "Las demás alfombras y revestimientos para el suelo, de materia textil, incluso confeccionados"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "Confeccionados"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "Flocados"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "111T Cuadrados o rectangulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "112V Circulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "119K Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "120U De punto 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "191U Cuadrados o rectangulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "192W Circulares 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "199L Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "Sin confeccionar"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "210W Flocados 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "220Z De punto 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "291Z Con contenido de pelo de llama superior o igual al 80% en peso, con base de yute y de peso inferior o igual a 4 kg/m2 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "5705.00.00",
+          "description": "299R Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 255
+}

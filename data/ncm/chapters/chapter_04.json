@@ -1,0 +1,1196 @@
+{
+  "chapter": "04",
+  "title": "Capítulo 04",
+  "sectionTitle": "CAP. 04 SECCION I ANIMALES VIVOS Y PRODUCTOS DEL REINO ANIMAL Notas. 1. En esta Sección, cualquier referencia a un géner",
+  "headings": [
+    {
+      "code": "0401",
+      "description": "LECHE Y NATA (CREMA), SIN CONCENTRAR, SIN ADICIÓN DE AZÚCAR NI OTRO EDULCORANTE",
+      "subheadings": [
+        {
+          "code": "0401.10",
+          "description": "Con un contenido de materias grasas inferior o igual al 1 % en peso"
+        },
+        {
+          "code": "0401.10.10",
+          "description": "Leche UHT («Ultra High Temperature»)"
+        },
+        {
+          "code": "0401.10.10",
+          "description": "100Z En envases inmediatos de contenido neto inferior o igual a 2 l (R.420/99 MEYOSP) 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "0401.10.10",
+          "description": "900T Las demás 14.00 14.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0401.10.90",
+          "description": "000X Las demás 12.00 12.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.20",
+          "description": "Con un contenido de materias grasas superior al 1 % pero inferior o igual al 6 %, en peso"
+        },
+        {
+          "code": "0401.20.10",
+          "description": "Leche UHT («Ultra High Temperature»)"
+        },
+        {
+          "code": "0401.20.10",
+          "description": "100N En envases inmediatos de contenido neto inferior o igual a 2 l (R.420/99 MEYOSP) 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "0401.20.10",
+          "description": "900G Las demás 14.00 14.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.20.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0401.20.90",
+          "description": "000L Las demás 12.00 12.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.40",
+          "description": "Con un contenido de materias grasas superior al 6 % pero inferior o igual al 10 %, en peso"
+        },
+        {
+          "code": "0401.40.10",
+          "description": "Leche"
+        },
+        {
+          "code": "0401.40.10",
+          "description": "000L Leche 12.00 12.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.40.21",
+          "description": "UHT («Ultra High Temperature»)"
+        },
+        {
+          "code": "0401.40.21",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 l (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0401.40.21",
+          "description": "110M Elaborada con leche de cabra, búfala u ovina 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "0401.40.21",
+          "description": "190N Las demás 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "0401.40.21",
+          "description": "Las demás"
+        },
+        {
+          "code": "0401.40.21",
+          "description": "910F Elaborada con leche de cabra, búfala u ovina 14.00 14.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.40.21",
+          "description": "990G Las demás 14.00 14.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.40.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "0401.40.29",
+          "description": "100V Elaborada con leche de cabra, búfala u ovina 12.00 12.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.40.29",
+          "description": "900N Las demás 12.00 12.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.50",
+          "description": "Con un contenido de materias grasas superior al 10 % en peso"
+        },
+        {
+          "code": "0401.50.10",
+          "description": "Leche"
+        },
+        {
+          "code": "0401.50.10",
+          "description": "000A Leche 12.00 12.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.50.21",
+          "description": "UHT («Ultra High Temperature»)"
+        },
+        {
+          "code": "0401.50.21",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 l (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0401.50.21",
+          "description": "110B Elaborada con leche de cabra, búfala u ovina 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "0401.50.21",
+          "description": "190C Las demás 14.00 14.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "0401.50.21",
+          "description": "Las demás"
+        },
+        {
+          "code": "0401.50.21",
+          "description": "910V Elaborada con leche de cabra, búfala u ovina 14.00 14.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.50.21",
+          "description": "990W Las demás 14.00 14.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.50.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "0401.50.29",
+          "description": "100J Elaborada con leche de cabra, búfala u ovina 12.00 12.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0401.50.29",
+          "description": "900C Las demás 12.00 12.00 3.00 LA 4.50 0.75"
+        }
+      ]
+    },
+    {
+      "code": "0402",
+      "description": "LECHE Y NATA (CREMA), CONCENTRADAS O CON ADICIÓN DE AZÚCAR U OTRO EDULCORANTE",
+      "subheadings": [
+        {
+          "code": "0402.10",
+          "description": "En polvo, gránulos o demás formas sólidas, con un contenido de materias grasas inferior o igual al 1,5 % en peso"
+        },
+        {
+          "code": "0402.10.10",
+          "description": "Con un contenido de arsénico, plomo o cobre, considerados aisladamente, inferior a 5 ppm"
+        },
+        {
+          "code": "0402.10.10",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0402.10.10",
+          "description": "110W Enlatadas 16.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.10.10",
+          "description": "190X Las demás 16.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.10.10",
+          "description": "900L Las demás 16.00 28.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0402.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0402.10.90",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0402.10.90",
+          "description": "110Z Enlatadas 16.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.10.90",
+          "description": "190A Las demás 16.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.10.90",
+          "description": "900P Las demás 16.00 28.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0402.2",
+          "description": "En polvo, gránulos o demás formas sólidas, con un contenido de materias grasas superior al 1,5 % en peso:"
+        },
+        {
+          "code": "0402.21",
+          "description": "Sin adición de azúcar ni otro edulcorante"
+        },
+        {
+          "code": "0402.21.10",
+          "description": "Leche entera"
+        },
+        {
+          "code": "0402.21.10",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0402.21.10",
+          "description": "110X Enlatadas 16.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.21.10",
+          "description": "190Y Las demás 16.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.21.10",
+          "description": "900M Las demás 16.00 28.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0402.21.20",
+          "description": "Leche parcialmente descremada"
+        },
+        {
+          "code": "0402.21.20",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0402.21.20",
+          "description": "110G Enlatadas 16.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.21.20",
+          "description": "190H Las demás 16.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.21.20",
+          "description": "900X Las demás 16.00 28.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0402.21.30",
+          "description": "Nata (crema)"
+        },
+        {
+          "code": "0402.21.30",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0402.21.30",
+          "description": "Enlatadas"
+        },
+        {
+          "code": "0402.21.30",
+          "description": "111U Elaborada con leche de cabra, búfala u A ovina 16.00 16.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.21.30",
+          "description": "119L Las demás 16.00 16.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.21.30",
+          "description": "Las demás"
+        },
+        {
+          "code": "0402.21.30",
+          "description": "191V Elaborada con leche de cabra, búfala u ovina 16.00 16.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.21.30",
+          "description": "199M Las demás 16.00 16.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.21.30",
+          "description": "910K Elaborada con leche de cabra, búfala u ovina 16.00 16.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0402.21.30",
+          "description": "990L Las demás 16.00 16.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0402.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "0402.29.10",
+          "description": "Leche entera"
+        },
+        {
+          "code": "0402.29.10",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg (R.967/99 MEYOSP)"
+        },
+        {
+          "code": "0402.29.10",
+          "description": "110T Enlatadas 16.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.29.10",
+          "description": "190U Las demás 16.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.29.10",
+          "description": "900H Las demás 16.00 28.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0402.29.20",
+          "description": "Leche parcialmente descremada"
+        },
+        {
+          "code": "0402.29.20",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg (R.967/99 MEYOSP)"
+        },
+        {
+          "code": "0402.29.20",
+          "description": "110C Enlatadas 16.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.29.20",
+          "description": "190D Las demás 16.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.29.20",
+          "description": "900T Las demás 16.00 28.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0402.29.30",
+          "description": "Nata (crema)"
+        },
+        {
+          "code": "0402.29.30",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg (R.967/99 MEYOSP)"
+        },
+        {
+          "code": "0402.29.30",
+          "description": "Enlatadas"
+        },
+        {
+          "code": "0402.29.30",
+          "description": "111P Elaborada con leche de cabra, búfala u ovina 16.00 16.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.29.30",
+          "description": "119G Las demás 16.00 16.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.29.30",
+          "description": "Las demás"
+        },
+        {
+          "code": "0402.29.30",
+          "description": "191Q Elaborada con leche de cabra, búfala u ovina 16.00 16.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.29.30",
+          "description": "199H Las demás 16.00 16.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.29.30",
+          "description": "910F Elaborada con leche de cabra, búfala u ovina 16.00 16.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0402.29.30",
+          "description": "990G Las demás 16.00 16.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0402.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "0402.91.00",
+          "description": "Sin adición de azúcar ni otro edulcorante"
+        },
+        {
+          "code": "0402.91.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg"
+        },
+        {
+          "code": "0402.91.00",
+          "description": "110L Enlatadas 14.00 14.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.91.00",
+          "description": "190M Las demás 14.00 14.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.91.00",
+          "description": "900B Los demás 14.00 14.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0402.99.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0402.99.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg"
+        },
+        {
+          "code": "0402.99.00",
+          "description": "110G Enlatadas 14.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.99.00",
+          "description": "190H Las demás 14.00 28.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0402.99.00",
+          "description": "900X Los demás 14.00 28.00 3.00 LA 9.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "0403",
+      "description": "SUERO DE MANTECA (DE MANTEQUILLA)*, LECHE Y NATA (CREMA) CUAJADAS, YOGUR, KÉFIR Y DEMÁS",
+      "subheadings": [
+        {
+          "code": "0403.10.00",
+          "description": "Yogur"
+        },
+        {
+          "code": "0403.10.00",
+          "description": "Enteros"
+        },
+        {
+          "code": "0403.10.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 l (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0403.10.00",
+          "description": "111G Elaborado con leche bovina 16.00 16.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "0403.10.00",
+          "description": "119Z Los demás 16.00 16.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "0403.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0403.10.00",
+          "description": "191H Elaborado con leche bovina 16.00 16.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0403.10.00",
+          "description": "199A Los demás 16.00 16.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0403.10.00",
+          "description": "911A Elaborado con leche bovina 16.00 16.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "0403.10.00",
+          "description": "919T Los demás 16.00 16.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "0403.10.00",
+          "description": "991B Elaborado con leche bovina 16.00 16.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0403.10.00",
+          "description": "999U Los demás 16.00 16.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0403.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0403.90.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 l (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0403.90.00",
+          "description": "110T Elaborado con leche bovina 16.00 16.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "0403.90.00",
+          "description": "190U Los demás 16.00 16.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "0403.90.00",
+          "description": "910L Elaborado con leche bovina 16.00 16.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "0403.90.00",
+          "description": "990M Los demás 16.00 16.00 3.00 LA 4.50 0.75"
+        }
+      ]
+    },
+    {
+      "code": "0404",
+      "description": "LACTOSUERO, INCLUSO CONCENTRADO O CON ADICIÓN DE AZÚCAR U OTRO EDULCORANTE;",
+      "subheadings": [
+        {
+          "code": "0404.10.00",
+          "description": "Lactosuero, aunque esté modificado, incluso concentrado o con adición de azúcar u otro edulcorante"
+        },
+        {
+          "code": "0404.10.00",
+          "description": "000P -Lactosuero, aunque esté modificado, incluso concentrado o con adición de azúcar u otro edulcorante 14.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0404.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0404.90.00",
+          "description": "000C -Los demás 14.00 14.00 3.00 LA 4.50 1.00"
+        }
+      ]
+    },
+    {
+      "code": "0405",
+      "description": "MANTECA (MANTEQUILLA)* Y DEMÁS MATERIAS GRASAS DE LA LECHE; PASTAS LÁCTEAS PARA UNTAR",
+      "subheadings": [
+        {
+          "code": "0405.10.00",
+          "description": "Manteca (mantequilla)*"
+        },
+        {
+          "code": "0405.10.00",
+          "description": "100N En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP) 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "0405.10.00",
+          "description": "900G Las demás 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "0405.20.00",
+          "description": "Pastas lácteas para untar"
+        },
+        {
+          "code": "0405.20.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0405.20.00",
+          "description": "110F Elaborada con leche bovina 16.00 16.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "0405.20.00",
+          "description": "190G Las demás 16.00 16.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "0405.20.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0405.20.00",
+          "description": "910Z Elaborada con leche bovina 16.00 16.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "0405.20.00",
+          "description": "990A Las demás 16.00 16.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "0405.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0405.90.10",
+          "description": "Aceite butírico («butter oil»)"
+        },
+        {
+          "code": "0405.90.10",
+          "description": "000F Aceite butírico (<<butter oil>>) 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "0405.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0405.90.90",
+          "description": "100P Elaborada con leche bovina 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "0405.90.90",
+          "description": "900H Las demás 16.00 16.00 3.00 LA 4.50 0.50"
+        }
+      ]
+    },
+    {
+      "code": "0406",
+      "description": "QUESOS Y REQUESÓN",
+      "subheadings": [
+        {
+          "code": "0406.10",
+          "description": "Queso fresco (sin madurar), incluido el del lactosuero, y requesón"
+        },
+        {
+          "code": "0406.10.10",
+          "description": "Mozzarella"
+        },
+        {
+          "code": "0406.10.10",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 5 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0406.10.10",
+          "description": "En hormas o en envases inmediatos de contenido neto inferior o igual a 1 Kg (Res.386/07)"
+        },
+        {
+          "code": "0406.10.10",
+          "description": "111X Elaborada con leche de cabra, oveja o búfala 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.10",
+          "description": "119P Los demás 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.10",
+          "description": "Las demás"
+        },
+        {
+          "code": "0406.10.10",
+          "description": "191Y Elaborada con leche de cabra, oveja o búfala 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.10",
+          "description": "199Q Los demás 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.10",
+          "description": "910N Elaborada con leche de cabra, oveja o búfala 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.10",
+          "description": "990P Las demás 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "Ricota"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "111A Elaborada con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "119T Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "191B Elaborada con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "199U Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "Queso crema"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "211F Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "219Y Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "291G Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "299Z Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "911U Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "919L Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "991V Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.10.90",
+          "description": "999M Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.20.00",
+          "description": "Queso de cualquier tipo, rallado o en polvo"
+        },
+        {
+          "code": "0406.20.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0406.20.00",
+          "description": "110Z Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "0406.20.00",
+          "description": "190A Los demás 16.00 16.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "0406.20.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0406.20.00",
+          "description": "910T Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "0406.20.00",
+          "description": "990U Los demás 16.00 16.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "Queso fundido, excepto el rallado o en polvo"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "En hormas o en envases inmediatos de contenido neto inferior o igual a 1 kg (Res.386/07 MEP) (Res.420/99"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "En fetas"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "111Q Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "119H Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "191R Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "199J Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "En envases inmediatos de contenido neto superior a 1 Kg pero inferior o igual a 2 Kg (Res. 420/99)"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "211W Elaborada con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "219N Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "291X Elaborada con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "299P Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "911J Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "919B Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "991K Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.30.00",
+          "description": "999C Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.40.00",
+          "description": "Queso de pasta azul y demás quesos que presenten vetas producidas por Penicillium roqueforti"
+        },
+        {
+          "code": "0406.40.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0406.40.00",
+          "description": "110C Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.40.00",
+          "description": "190D Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.40.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0406.40.00",
+          "description": "910W Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.40.00",
+          "description": "990X Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90",
+          "description": "Los demás quesos"
+        },
+        {
+          "code": "0406.90.10",
+          "description": "Con un contenido de humedad inferior al 36,0 % en peso (pasta dura)"
+        },
+        {
+          "code": "0406.90.10",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 8 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "0406.90.10",
+          "description": "110H Elaborado con leche de cabra, oveja o búfala 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.10",
+          "description": "190J Los demás 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "0406.90.10",
+          "description": "910B Elaborado con leche de cabra, oveja o búfala 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.10",
+          "description": "990C Los demás 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "Con un contenido de humedad superior o igual al 36,0 % pero inferior al 46,0 %, en peso (pasta semidura)"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "En hormas o en envases inmediatos de contenido neto inferior o igual a 1 kg (Res.386/07 MEP) (Res.420/99MEYOSP)"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "Tipo Cheddar"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "111V Elaborado con leche de cabra, oveja o búfala 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "119M Los demás 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "Los demás"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "191W Elaborado con leche de cabra, oveja o búfala 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "199N Los demás 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "En envases inmediatos de contenido neto superior a 1 Kg pero inferior o igual a 8 Kg (Res. 420/99)"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "211A Elaborada con leche de cabra, oveja o búfala 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "219T Los demás 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "291B Elaborada con leche de cabra, oveja o búfala 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "299U Los demás 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "911N Elaborado con leche de cabra, oveja o búfala 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "919F Los demás 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "991P Elaborado con leche de cabra, oveja o búfala 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.20",
+          "description": "999G Los demás 16.00 28.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.30",
+          "description": "Con un contenido de humedad superior o igual al 46,0 % pero inferior al 55,0 %, en peso (pasta blanda)"
+        },
+        {
+          "code": "0406.90.30",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 5 kg (R.967/99 MEYOSP)"
+        },
+        {
+          "code": "0406.90.30",
+          "description": "110C Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.30",
+          "description": "190D Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.30",
+          "description": "Los demás"
+        },
+        {
+          "code": "0406.90.30",
+          "description": "910W Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.30",
+          "description": "990X Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0406.90.90",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 5 kg (R.967/99 MEYOSP)"
+        },
+        {
+          "code": "0406.90.90",
+          "description": "110L Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.90",
+          "description": "190M Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.90",
+          "description": "910E Elaborado con leche de cabra, oveja o búfala 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0406.90.90",
+          "description": "990F Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        }
+      ]
+    },
+    {
+      "code": "0407",
+      "description": "HUEVOS DE AVE CON CÁSCARA (CASCARÓN), FRESCOS, CONSERVADOS O COCIDOS",
+      "subheadings": [
+        {
+          "code": "0407.1",
+          "description": "Huevos fecundados para incubación:"
+        },
+        {
+          "code": "0407.11.00",
+          "description": "De gallina de la especie Gallus domesticus"
+        },
+        {
+          "code": "0407.11.00",
+          "description": "000G --De gallina de la especie Gallus domesticus 0.00 0.00 0.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0407.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0407.19.00",
+          "description": "000C --Los demás 0.00 0.00 0.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0407.2",
+          "description": "Los demás huevos frescos:"
+        },
+        {
+          "code": "0407.21.00",
+          "description": "De gallina de la especie Gallus domesticus"
+        },
+        {
+          "code": "0407.21.00",
+          "description": "000W --De gallina de la especie Gallus domesticus 8.00 8.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0407.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0407.29.00",
+          "description": "000R --Los demás 8.00 8.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0407.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0407.90.00",
+          "description": "000H -Los demás 8.00 8.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0408",
+      "description": "HUEVOS DE AVE SIN CÁSCARA (CASCARÓN) Y YEMAS DE HUEVO, FRESCOS, SECOS, COCIDOS EN AGUA O",
+      "subheadings": [
+        {
+          "code": "0408.1",
+          "description": "Yemas de huevo:"
+        },
+        {
+          "code": "0408.11.00",
+          "description": "Secas"
+        },
+        {
+          "code": "0408.11.00",
+          "description": "000A --Secas 10.00 10.00 3.00 LNA 0.00 2.50"
+        },
+        {
+          "code": "0408.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0408.19.00",
+          "description": "000W --Las demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0408.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "0408.91.00",
+          "description": "Secos"
+        },
+        {
+          "code": "0408.91.00",
+          "description": "000N --Secos 10.00 10.00 3.00 LNA 0.00 2.50"
+        },
+        {
+          "code": "0408.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0408.99.00",
+          "description": "000J --Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        }
+      ]
+    },
+    {
+      "code": "0409",
+      "description": "MIEL NATURAL",
+      "subheadings": [
+        {
+          "code": "0409.00.00",
+          "description": "Miel natural"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2,5 kg (R.874/97 MEYOSP)"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "110B De citrus 16.00 16.00 3.00 LA 0.00 1.50"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "120E De eucalipto 16.00 16.00 3.00 LA 0.00 1.50"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "130H De tréboles 16.00 16.00 3.00 LA 0.00 1.50"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "140L De alfalfa 16.00 16.00 3.00 LA 0.00 1.50"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "190C Las demás, incluidas las mezclas 16.00 16.00 3.00 LA 0.00 1.50"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "A granel (Ley 25.525)(en envases de capacidad superior o igual a 300 kg)"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "911X De abejas 16.00 16.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "919P Las demás 16.00 16.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "991Y De citrus 16.00 16.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "992A De eucalipto 16.00 16.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "993C De tréboles 16.00 16.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "994E De alfalfa 16.00 16.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0409.00.00",
+          "description": "999Q Las demás, incluidas las mezclas 16.00 16.00 3.00 LA 0.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "0410",
+      "description": "PRODUCTOS COMESTIBLES DE ORIGEN ANIMAL NO EXPRESADOS NI COMPRENDIDOS EN OTRA PARTE",
+      "subheadings": [
+        {
+          "code": "0410.00.00",
+          "description": "Productos comestibles de origen animal no expresados ni comprendidos en otra parte"
+        },
+        {
+          "code": "0410.00.00",
+          "description": "Jalea real"
+        },
+        {
+          "code": "0410.00.00",
+          "description": "110F En envases de contenido neto inferior o igual a 2,5 kg 14.00 14.00 3.00 LA 0.00 1.50"
+        },
+        {
+          "code": "0410.00.00",
+          "description": "190G Las demás 14.00 14.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0410.00.00",
+          "description": "200H Propóleos 14.00 14.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0410.00.00",
+          "description": "900W Los demás 14.00 14.00 3.00 LA 0.00 1.75"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 316
+}

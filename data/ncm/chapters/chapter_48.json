@@ -1,0 +1,2497 @@
+{
+  "chapter": "48",
+  "title": "Capítulo 48",
+  "sectionTitle": "CAP. 48 SECCION X PASTA DE MADERA O DE LAS DEMAS MATERIAS FIBROSAS CELULOSICAS; PAPEL O CARTON PARA RECICLAR (DESPERDICI",
+  "headings": [
+    {
+      "code": "4801",
+      "description": "PAPEL PRENSA EN BOBINAS (ROLLOS) O EN HOJAS",
+      "subheadings": [
+        {
+          "code": "4801.00.20",
+          "description": "En hojas, en las que ningún lado sea superior a 360 mm, medidos sin plegar"
+        },
+        {
+          "code": "4801.00.20",
+          "description": "000A En hojas, en las que ningún lado sea superior a 360 mm, medidos sin plegar 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4801.00.30",
+          "description": "Otros, de peso inferior o igual a 57 g/m2, con un contenido de fibras de madera obtenidas por procedimiento mecánico"
+        },
+        {
+          "code": "4801.00.30",
+          "description": "000K Otros, de peso inferior o igual a 57 g/m2, con un contenido de fibras de madera obtenidas por procedimiento mecánico"
+        },
+        {
+          "code": "4801.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4801.00.90",
+          "description": "000U Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4802",
+      "description": "PAPEL Y CARTÓN, SIN ESTUCAR NI RECUBRIR, DE LOS TIPOS UTILIZADOS PARA ESCRIBIR, IMPRIMIR U",
+      "subheadings": [
+        {
+          "code": "4802.10.00",
+          "description": "Papel y cartón hechos a mano (hoja a hoja)"
+        },
+        {
+          "code": "4802.10.00",
+          "description": "000N -Papel y cartón hechos a mano (hoja a hoja) 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.20",
+          "description": "Papel y cartón soporte para papel o cartón fotosensible, termosensible o electrosensible"
+        },
+        {
+          "code": "4802.20.10",
+          "description": "En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360"
+        },
+        {
+          "code": "4802.20.10",
+          "description": "100T Acondicionadas para la venta al por menor 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.20.10",
+          "description": "900L Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4802.20.90",
+          "description": "000Q Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.40",
+          "description": "Papel soporte para papeles de decorar paredes"
+        },
+        {
+          "code": "4802.40.10",
+          "description": "En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm"
+        },
+        {
+          "code": "4802.40.10",
+          "description": "Acondicionadas para la venta al por menor"
+        },
+        {
+          "code": "4802.40.10",
+          "description": "110Z De peso inferior o igual a 70 g/m2 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.40.10",
+          "description": "190A Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.40.10",
+          "description": "900P Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.40.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4802.40.90",
+          "description": "100Z De peso inferior o igual a 70 g/m2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.40.90",
+          "description": "900T Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.5",
+          "description": "Los demás papeles y cartones, sin fibras obtenidas por procedimiento mecánico o químico-mecánico o con un"
+        },
+        {
+          "code": "4802.54",
+          "description": "De peso inferior a 40 g/m2"
+        },
+        {
+          "code": "4802.54.10",
+          "description": "En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360"
+        },
+        {
+          "code": "4802.54.10",
+          "description": "Acondicionadas para la venta al por menor (Res.798/99 SICyM)"
+        },
+        {
+          "code": "4802.54.10",
+          "description": "110L Resmas tamaño A 4 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.54.10",
+          "description": "120P Resmas tamaño oficio 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.54.10",
+          "description": "130T Resmas tamaño carta 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.54.10",
+          "description": "190M Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.54.10",
+          "description": "900B Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.54.91",
+          "description": "Fabricado principalmente con pasta blanqueada o con pasta obtenida por procedimiento mecánico, de peso inferior a"
+        },
+        {
+          "code": "4802.54.91",
+          "description": "000N Fabricado principalmente con pasta blanqueada o con pasta obtenida por procedimiento mecánico, de peso inferior a"
+        },
+        {
+          "code": "4802.54.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "4802.54.99",
+          "description": "000Z Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.55",
+          "description": "De peso superior o igual a 40 g/m2 pero inferior o igual a 150 g/m2, en bobinas (rollos)"
+        },
+        {
+          "code": "4802.55.10",
+          "description": "De anchura inferior o igual a 15 cm"
+        },
+        {
+          "code": "4802.55.10",
+          "description": "Acondicionadas para la venta al por menor (Res.798/99 SICyM)"
+        },
+        {
+          "code": "4802.55.10",
+          "description": "110Y Papeles de peso superior a 40 g/m2 pero inferior a 50 g/m2 (Res.567/97 MEOSP) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.55.10",
+          "description": "190Z Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.55.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "4802.55.10",
+          "description": "910R Papeles de peso superior a 40 g/m2 pero inferior a 50 g/m2 (Res.567/97 MEOSP) 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.55.10",
+          "description": "990T Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.55.91",
+          "description": "De dibujo"
+        },
+        {
+          "code": "4802.55.91",
+          "description": "100F Acondicionadas para la venta al por menor 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.55.91",
+          "description": "900Z Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4802.55.92",
+          "description": "Kraft"
+        },
+        {
+          "code": "4802.55.92",
+          "description": "Acondicionadas para la venta al por menor (Res.798/99 SICyM)"
+        },
+        {
+          "code": "4802.55.92",
+          "description": "110R Papeles de peso superior a 40 g/m2 pero inferior a 50 g/m2, excepto el papel de obra de peso inferior o igual a 50g/m2"
+        }
+      ]
+    },
+    {
+      "code": "1200",
+      "description": "12.00 3.00 LNA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "1200",
+      "description": "12.00 3.00 LA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "4803",
+      "description": "PAPEL DEL TIPO UTILIZADO PARA PAPEL HIGIÉNICO, TOALLITAS PARA DESMAQUILLAR, TOALLAS,",
+      "subheadings": [
+        {
+          "code": "4803.00.10",
+          "description": "Guata de celulosa y napa de fibras de celulosa"
+        },
+        {
+          "code": "4803.00.10",
+          "description": "000C Guata de celulosa y napa de fibras de celulosa 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4803.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4803.00.90",
+          "description": "100L Papel para toallas 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4803.00.90",
+          "description": "200R Papel para servilletas 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4803.00.90",
+          "description": "300X Papel higiénico 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4803.00.90",
+          "description": "900E Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4804",
+      "description": "PAPEL Y CARTÓN KRAFT, SIN ESTUCAR NI RECUBRIR, EN BOBINAS (ROLLOS) O EN HOJAS, EXCEPTO EL DE",
+      "subheadings": [
+        {
+          "code": "4804.1",
+          "description": "Papel y cartón para caras (cubiertas) («Kraftliner»):"
+        },
+        {
+          "code": "4804.11.00",
+          "description": "Crudos"
+        },
+        {
+          "code": "4804.11.00",
+          "description": "000M --Crudos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4804.19.00",
+          "description": "000H --Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.2",
+          "description": "Papel Kraft para sacos (bolsas):"
+        },
+        {
+          "code": "4804.21.00",
+          "description": "Crudo"
+        },
+        {
+          "code": "4804.21.00",
+          "description": "000B --Crudo 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4804.29.00",
+          "description": "000X --Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.3",
+          "description": "Los demás papeles y cartones Kraft, de peso inferior o igual a 150 g/m2:"
+        },
+        {
+          "code": "4804.31",
+          "description": "Crudos"
+        },
+        {
+          "code": "4804.31.10",
+          "description": "De rigidez dieléctrica superior o igual a 600 V (método ASTM D 202 o equivalente)"
+        },
+        {
+          "code": "4804.31.10",
+          "description": "000A De rigidez dielectrica superior o igual a 600 V (metodo ASTM D 202 o equivalente) 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.31.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4804.31.90",
+          "description": "000D Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "4804.39.10",
+          "description": "De rigidez dieléctrica superior o igual a 600 V (método ASTM D 202 o equivalente)"
+        },
+        {
+          "code": "4804.39.10",
+          "description": "000W De rigidez dielectrica superior o igual a 600 V (metodo ASTM D202 o equivalente) 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.39.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4804.39.90",
+          "description": "100E Extensibles, aptos para la fabricación de sacos (bolsas) 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.39.90",
+          "description": "900Y Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.4",
+          "description": "Los demás papeles y cartones Kraft, de peso superior a 150 g/m2 pero inferior a 225 g/m2:"
+        },
+        {
+          "code": "4804.41.00",
+          "description": "Crudos"
+        },
+        {
+          "code": "4804.41.00",
+          "description": "000E --Crudos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.42.00",
+          "description": "Blanqueados uniformemente en la masa y con un contenido de fibras de madera obtenidas por procedimiento"
+        },
+        {
+          "code": "4804.42.00",
+          "description": "000R --Blanqueados uniformemente en la masa y con un contenido de fibras de madera obtenidas por procedimiento"
+        },
+        {
+          "code": "4804.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4804.49.00",
+          "description": "000A --Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.5",
+          "description": "Los demás papeles y cartones Kraft, de peso superior o igual a 225 g/m2:"
+        },
+        {
+          "code": "4804.51.00",
+          "description": "Crudos"
+        },
+        {
+          "code": "4804.51.00",
+          "description": "000U --Crudos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.52.00",
+          "description": "Blanqueados uniformemente en la masa y con un contenido de fibras de madera obtenidas por procedimiento"
+        },
+        {
+          "code": "4804.52.00",
+          "description": "000F --Blanqueados uniformemente en la masa y con un contenido de fibras de madera obtenidas por procedimiento"
+        },
+        {
+          "code": "4804.59",
+          "description": "Los demás"
+        },
+        {
+          "code": "4804.59.10",
+          "description": "Semiblanqueados, con un contenido de fibras de madera obtenidas por procedimiento químico del 100 % en peso"
+        },
+        {
+          "code": "4804.59.10",
+          "description": "000Z Semiblanqueados, con un contenido de fibras de madera obtenidas por procedimiento químico del 100 % en peso 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4804.59.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4804.59.90",
+          "description": "000C Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4805",
+      "description": "LOS DEMÁS PAPELES Y CARTONES, SIN ESTUCAR NI RECUBRIR, EN BOBINAS (ROLLOS) O EN HOJAS, QUE",
+      "subheadings": [
+        {
+          "code": "4805.1",
+          "description": "Papel para acanalar:"
+        },
+        {
+          "code": "4805.11.00",
+          "description": "Papel semiquímico para acanalar"
+        },
+        {
+          "code": "4805.11.00",
+          "description": "000F --Papel semiquímico para acanalar 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.12.00",
+          "description": "Papel paja para acanalar"
+        },
+        {
+          "code": "4805.12.00",
+          "description": "Papel y cartón, multicapas"
+        },
+        {
+          "code": "4805.12.00",
+          "description": "110B De peso inferior o igual a 150 g/m2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.12.00",
+          "description": "190C Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.12.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4805.12.00",
+          "description": "910V De peso inferior o igual a 150 g/m2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.12.00",
+          "description": "990W Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4805.19.00",
+          "description": "Papel y cartón, multicapas"
+        },
+        {
+          "code": "4805.19.00",
+          "description": "110K De peso inferior o igual a 150 g/m2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.19.00",
+          "description": "190L Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.19.00",
+          "description": "910D De peso inferior o igual a 150 g/m2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.19.00",
+          "description": "990E Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.2",
+          "description": "«Testliner» (de fibras recicladas):"
+        },
+        {
+          "code": "4805.24.00",
+          "description": "De peso inferior o igual a 150 g/m2"
+        },
+        {
+          "code": "4805.24.00",
+          "description": "100L Con todas las capas blanqueadas 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.24.00",
+          "description": "200R Con solo una capa exterior blanqueada 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.24.00",
+          "description": "300X Con tres o más capas blanqueadas solamente 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.24.00",
+          "description": "900E Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.25.00",
+          "description": "De peso superior a 150 g/m2"
+        },
+        {
+          "code": "4805.25.00",
+          "description": "100Y Con todas las capas blanqueadas 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.25.00",
+          "description": "200D Con solo una capa exterior blanqueada 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.25.00",
+          "description": "300J Con tres o más capas blanqueadas solamente 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.25.00",
+          "description": "900R Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.30.00",
+          "description": "Papel sulfito para envolver"
+        },
+        {
+          "code": "4805.30.00",
+          "description": "000X -Papel sulfito para envolver 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.40",
+          "description": "Papel y cartón filtro"
+        },
+        {
+          "code": "4805.40.10",
+          "description": "De peso superior a 15 g/m2 pero inferior o igual a 25 g/m2 y con un contenido de fibras sintéticas termosoldables"
+        },
+        {
+          "code": "4805.40.10",
+          "description": "000W De peso superior a 15 g/m2 pero inferior o igual a 25 g/m2 y con un contenido de fibras sinteticas termosoldables"
+        },
+        {
+          "code": "4805.40.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4805.40.90",
+          "description": "100E Papel para saquitos de té 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.40.90",
+          "description": "200K De laboratorio 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.40.90",
+          "description": "300Q Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes. 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.40.90",
+          "description": "900Y Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.50.00",
+          "description": "Papel y cartón fieltro, papel y cartón lana"
+        },
+        {
+          "code": "4805.50.00",
+          "description": "000A -Papel y cartón fieltro; papel y cartón lana 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "4805.91.00",
+          "description": "De peso inferior o igual a 150 g/m2"
+        },
+        {
+          "code": "4805.91.00",
+          "description": "100Z Con todas las capas blanqueadas 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.91.00",
+          "description": "200E Con solo una capa exterior blanqueada 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.91.00",
+          "description": "300K Con tres o más capas blanqueadas solamente 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.91.00",
+          "description": "900T Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.92",
+          "description": "De peso superior a 150 g/m2 pero inferior a 225 g/m2"
+        },
+        {
+          "code": "4805.92.10",
+          "description": "Con fibras de vidrio"
+        },
+        {
+          "code": "4805.92.10",
+          "description": "000Q Con fibras de vidrio 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.92.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4805.92.90",
+          "description": "100Z Con todas las capas blanqueadas 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.92.90",
+          "description": "200E Con solo una capa exterior blanqueada 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.92.90",
+          "description": "300K Con tres o más capas blanqueadas solamente 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.92.90",
+          "description": "900T Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.93.00",
+          "description": "De peso superior o igual a 225 g/m2"
+        },
+        {
+          "code": "4805.93.00",
+          "description": "100Y Con todas las capas blanqueadas 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.93.00",
+          "description": "200D Con solo una capa exterior blanqueada 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.93.00",
+          "description": "300J Con tres o más capas blanqueadas solamente 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4805.93.00",
+          "description": "900R Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4806",
+      "description": "PAPEL Y CARTÓN SULFURIZADOS, PAPEL RESISTENTE A LAS GRASAS, PAPEL VEGETAL, PAPEL CRISTAL Y",
+      "subheadings": [
+        {
+          "code": "4806.10.00",
+          "description": "Papel y cartón sulfurizados (pergamino vegetal)"
+        },
+        {
+          "code": "4806.10.00",
+          "description": "000M -Papel y cartón sulfurizados (pergamino vegetal) 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4806.20.00",
+          "description": "Papel resistente a las grasas («greaseproof»)"
+        },
+        {
+          "code": "4806.20.00",
+          "description": "000B -Papel resistente a las grasas ('greaseproof') 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4806.30.00",
+          "description": "Papel vegetal (papel calco)"
+        },
+        {
+          "code": "4806.30.00",
+          "description": "000Q -Papel vegetal (papel calco) 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4806.40.00",
+          "description": "Papel cristal y demás papeles calandrados transparentes o traslúcidos"
+        },
+        {
+          "code": "4806.40.00",
+          "description": "100K De gramaje superior o igual a 30g/m2 e inferior o igual 100g/m2 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4806.40.00",
+          "description": "900D Los demás. 12.00 12.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4807",
+      "description": "PAPEL Y CARTÓN OBTENIDOS POR PEGADO DE HOJAS PLANAS, SIN ESTUCAR NI RECUBRIR EN LA",
+      "subheadings": [
+        {
+          "code": "4807.00.00",
+          "description": "Papel y cartón obtenidos por pegado de hojas planas, sin estucar ni recubrir en la superficie y sin impregnar, incluso"
+        },
+        {
+          "code": "4807.00.00",
+          "description": "000R PAPEL Y CARTÓN OBTENIDOS POR PEGADO DE HOJAS PLANAS, SIN ESTUCAR NI RECUBRIR EN LA"
+        }
+      ]
+    },
+    {
+      "code": "4808",
+      "description": "PAPEL Y CARTÓN CORRUGADOS (INCLUSO REVESTIDOS POR ENCOLADO), RIZADOS («CREPÉS»),",
+      "subheadings": [
+        {
+          "code": "4808.10.00",
+          "description": "Papel y cartón corrugados, incluso perforados"
+        },
+        {
+          "code": "4808.10.00",
+          "description": "000Z -Papel y cartón corrugados, incluso perforados 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4808.40.00",
+          "description": "Papel Kraft rizado («crepé») o plisado, incluso gofrado, estampado o perforado"
+        },
+        {
+          "code": "4808.40.00",
+          "description": "000R -Papel Kraft rizado ('crepe') o plisado, incluso gofrado, estampado o perforado 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4808.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4808.90.00",
+          "description": "000M -Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4809",
+      "description": "PAPEL CARBÓN (CARBÓNICO), PAPEL AUTOCOPIA Y DEMÁS PAPELES PARA COPIAR O TRANSFERIR",
+      "subheadings": [
+        {
+          "code": "4809.20.00",
+          "description": "Papel autocopia"
+        },
+        {
+          "code": "4809.20.00",
+          "description": "000G -Papel autocopia 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4809.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4809.90.00",
+          "description": "000F -Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4810",
+      "description": "PAPEL Y CARTÓN ESTUCADOS POR UNA O LAS DOS CARAS CON CAOLÍN U OTRAS SUSTANCIAS",
+      "subheadings": [
+        {
+          "code": "4810.1",
+          "description": "Papel y cartón de los tipos utilizados para escribir, imprimir u otros fines gráficos, sin fibras obtenidas por"
+        },
+        {
+          "code": "4810.13",
+          "description": "En bobinas (rollos)"
+        },
+        {
+          "code": "4810.13.10",
+          "description": "De anchura inferior o igual a 15 cm"
+        },
+        {
+          "code": "4810.13.10",
+          "description": "100Y Acondicionadas para la venta al por menor 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4810.13.10",
+          "description": "900R Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4810.13.81",
+          "description": "Metalizados"
+        },
+        {
+          "code": "4810.13.81",
+          "description": "000U Metalizados 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4810.13.82",
+          "description": "Baritados (estucados con óxido o sulfato de bario)"
+        },
+        {
+          "code": "4810.13.82",
+          "description": "000B Baritados (estucados con óxido o sulfato de bario) 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4810.13.89",
+          "description": "Los demás"
+        },
+        {
+          "code": "4810.13.89",
+          "description": "Destinados a la impresión de libros y revistas cuando sean importados por empresas editoras o importadoras que"
+        },
+        {
+          "code": "4810.13.89",
+          "description": "110N De peso superior a 200 g/m2 (Res.662/98 MEOSP) 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4810.13.89",
+          "description": "190P Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4810.13.89",
+          "description": "De gramaje superior a 200 g/m2, con grado de blancura superior al 60%, espesor comprendido entre las 225 y 508"
+        },
+        {
+          "code": "4810.13.89",
+          "description": "210U Tipo duplex (Res.214/99 MEOSP).(Res.978/00 ME) 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4810.13.89",
+          "description": "290V Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4810.13.89",
+          "description": "910G De peso superior a 200 g/m2 (Res.662/98 MEOSP) 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4810.13.89",
+          "description": "990H Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4810.13.91",
+          "description": "Papel estucado o recubierto en una cara, del tipo «wet strength», resistente a la humedad y al álcali"
+        },
+        {
+          "code": "4810.13.91",
+          "description": "000D Papel estucado o recubierto en una cara, del tipo «wet strength», resistente a la humedad y al álcali 2.00 2.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "4810.13.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "4810.13.99",
+          "description": "100V Estucados por una cara, en los que el 10 %, en peso, del contenido total de fibra esté constituido por fibras obtenidas"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LNA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LNA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "4811",
+      "description": "PAPEL, CARTÓN, GUATA DE CELULOSA Y NAPA DE FIBRAS DE CELULOSA, ESTUCADOS, RECUBIERTOS,",
+      "subheadings": [
+        {
+          "code": "4811.10",
+          "description": "Papel y cartón alquitranados, embetunados o asfaltados"
+        },
+        {
+          "code": "4811.10.10",
+          "description": "En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360"
+        },
+        {
+          "code": "4811.10.10",
+          "description": "000A En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360"
+        },
+        {
+          "code": "4811.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4811.10.90",
+          "description": "100J Alquitranados 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.10.90",
+          "description": "900C Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.4",
+          "description": "Papel y cartón engomados o adhesivos:"
+        },
+        {
+          "code": "4811.41",
+          "description": "Autoadhesivos"
+        },
+        {
+          "code": "4811.41.10",
+          "description": "En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360"
+        },
+        {
+          "code": "4811.41.10",
+          "description": "En bobinas"
+        },
+        {
+          "code": "4811.41.10",
+          "description": "110N Papel o cartón de la partida 48.02 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.41.10",
+          "description": "120R Papel o cartón de la partida 48.10 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.41.10",
+          "description": "130V Papel termosensible 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.41.10",
+          "description": "190P Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.41.10",
+          "description": "En hojas cuadradas o rectangulares"
+        },
+        {
+          "code": "4811.41.10",
+          "description": "210U Papel o cartón de la partida 48.02 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.41.10",
+          "description": "220X Papel o cartón de la partida 48.10 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.41.10",
+          "description": "230A Papel termosensible 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.41.10",
+          "description": "290V Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.41.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4811.41.90",
+          "description": "000H Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "4811.49.10",
+          "description": "En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360"
+        },
+        {
+          "code": "4811.49.10",
+          "description": "000A En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360"
+        },
+        {
+          "code": "4811.49.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4811.49.90",
+          "description": "000D Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.5",
+          "description": "Papel y cartón recubiertos, impregnados o revestidos de plástico (excepto los adhesivos):"
+        },
+        {
+          "code": "4811.51",
+          "description": "Blanqueados, de peso superior a 150 g/m2"
+        },
+        {
+          "code": "4811.51.10",
+          "description": "En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360"
+        },
+        {
+          "code": "4811.51.10",
+          "description": "100Z Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.51.10",
+          "description": "900T Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.51.21",
+          "description": "De silicona, excepto gofrados en la cara recubierta o revestida"
+        },
+        {
+          "code": "4811.51.21",
+          "description": "000L De silicona 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.51.22",
+          "description": "De polietileno, estratificado con aluminio, impreso"
+        },
+        {
+          "code": "4811.51.22",
+          "description": "100Z Aptos para estar en contacto con alimentos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.51.22",
+          "description": "900T Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.51.23",
+          "description": "De polietileno o polipropileno, en ambas caras, base para papel fotográfico"
+        },
+        {
+          "code": "4811.51.23",
+          "description": "000B De polietileno o polipropileno, en ambas caras, base para papel fotográfico 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.51.28",
+          "description": "Los demás gofrados en la cara recubierta o revestida"
+        },
+        {
+          "code": "4811.51.28",
+          "description": "000P Los demás gofrados en la cara recubierta o a revestida 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.51.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "4811.51.29",
+          "description": "100C Aptos para estar en contacto con alimentos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.51.29",
+          "description": "900W Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.51.30",
+          "description": "Los demás, impregnados"
+        },
+        {
+          "code": "4811.51.30",
+          "description": "100U Aptos para estar en contacto con alimentos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.51.30",
+          "description": "900M Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59",
+          "description": "Los demás"
+        },
+        {
+          "code": "4811.59.10",
+          "description": "En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360"
+        },
+        {
+          "code": "4811.59.10",
+          "description": "100V Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.10",
+          "description": "900N Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.21",
+          "description": "De polietileno o polipropileno, en ambas caras, base para papel fotográfico"
+        },
+        {
+          "code": "4811.59.21",
+          "description": "000G De polietileno o polipropileno, en ambas caras, base para papel fotográfico 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.22",
+          "description": "De silicona"
+        },
+        {
+          "code": "4811.59.22",
+          "description": "000P De silicona 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.23",
+          "description": "De polietileno, estratificado con aluminio, impreso"
+        },
+        {
+          "code": "4811.59.23",
+          "description": "100C Aptos para estar en contacto con alimentos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.23",
+          "description": "900W Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "4811.59.29",
+          "description": "De polietileno biaxialmente orientado, en una cara, exclusivamente"
+        },
+        {
+          "code": "4811.59.29",
+          "description": "110B Aptos para estar en contacto con alimentos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.29",
+          "description": "190C Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.29",
+          "description": "De polietileno, en una cara, exclusivamente"
+        },
+        {
+          "code": "4811.59.29",
+          "description": "210G Aptos para estar en contacto con alimentos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.29",
+          "description": "290H Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.29",
+          "description": "De celulosa regenerada, en una cara, exclusivamente"
+        },
+        {
+          "code": "4811.59.29",
+          "description": "310M Aptos para estar en contacto con alimentos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.29",
+          "description": "390N Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.29",
+          "description": "910V Aptos para estar en contacto con alimentos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.29",
+          "description": "990W Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.30",
+          "description": "Los demás, impregnados"
+        },
+        {
+          "code": "4811.59.30",
+          "description": "100P Aptos para estar en contacto con alimentos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.59.30",
+          "description": "900H Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.60",
+          "description": "Papel y cartón recubiertos, impregnados o revestidos de cera, parafina, estearina, aceite o glicerol"
+        },
+        {
+          "code": "4811.60.10",
+          "description": "En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360"
+        },
+        {
+          "code": "4811.60.10",
+          "description": "000W En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.60.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4811.60.90",
+          "description": "100E De cera 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.60.90",
+          "description": "200K De parafina 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.60.90",
+          "description": "300Q De estearina 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.60.90",
+          "description": "900Y Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.90",
+          "description": "Los demás papeles, cartones, guata de celulosa y napa de fibras de celulosa"
+        },
+        {
+          "code": "4811.90.10",
+          "description": "En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360"
+        },
+        {
+          "code": "4811.90.10",
+          "description": "000N En tiras o en bobinas (rollos) de anchura inferior o igual a 15 cm o en hojas en las que ningún lado sea superior a 360"
+        },
+        {
+          "code": "4811.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4811.90.90",
+          "description": "100X Papel termosensible del tipo de los utilizados en telefax 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.90.90",
+          "description": "Papel de regalo"
+        },
+        {
+          "code": "4811.90.90",
+          "description": "210F Impreso 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.90.90",
+          "description": "290G Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.90.90",
+          "description": "300H Kraft crudo impregnado con sales orgánicas que inhiben la corrosión, revestido en una de sus caras con una lámina de"
+        },
+        {
+          "code": "4811.90.90",
+          "description": "910U Los demás papeles termosensibles 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4811.90.90",
+          "description": "990V Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4812",
+      "description": "BLOQUES Y PLACAS, FILTRANTES, DE PASTA DE PAPEL",
+      "subheadings": [
+        {
+          "code": "4812.00.00",
+          "description": "Bloques y placas, filtrantes, de pasta de papel"
+        },
+        {
+          "code": "4812.00.00",
+          "description": "100A Aptos para estar en contacto con alimentos 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4812.00.00",
+          "description": "900U Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4813",
+      "description": "PAPEL DE FUMAR, INCLUSO CORTADO AL TAMAÑO ADECUADO, EN LIBRILLOS O EN TUBOS",
+      "subheadings": [
+        {
+          "code": "4813.10.00",
+          "description": "En librillos o en tubos"
+        },
+        {
+          "code": "4813.10.00",
+          "description": "100H En librillos 12.00 12.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4813.10.00",
+          "description": "200N En tubos 12.00 12.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4813.20.00",
+          "description": "En bobinas (rollos) de anchura inferior o igual a 5 cm"
+        },
+        {
+          "code": "4813.20.00",
+          "description": "000R -En bobinas (rollos) de anchura inferior o igual a 5 cm 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4813.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4813.90.00",
+          "description": "000Q -Los demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4814",
+      "description": "PAPEL PARA DECORAR Y REVESTIMIENTOS SIMILARES DE PAREDES; PAPEL PARA VIDRIERAS",
+      "subheadings": [
+        {
+          "code": "4814.20.00",
+          "description": "Papel para decorar y revestimientos similares de paredes, constituidos por papel recubierto o revestido, en la cara"
+        },
+        {
+          "code": "4814.20.00",
+          "description": "100Q Cenefas y frizos 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4814.20.00",
+          "description": "900J Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "Papel lincustra"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "110T Impresos 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "190U Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "Cenefas y frizos"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "210Y Impresos 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "290Z Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "Para vidrieras"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "310D Impresos 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "390E Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "Papel granito (\"ingrain\")"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "410J Impresos 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "490K Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "910L Impresos 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4814.90.00",
+          "description": "990M Los demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4816",
+      "description": "PAPEL CARBÓN (CARBÓNICO), PAPEL AUTOCOPIA Y DEMÁS PAPELES PARA COPIAR O TRANSFERIR",
+      "subheadings": [
+        {
+          "code": "4816.20.00",
+          "description": "Papel autocopia"
+        },
+        {
+          "code": "4816.20.00",
+          "description": "000X -Papel autocopia 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4816.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4816.90.10",
+          "description": "Papel carbón (carbónico) y papeles similares"
+        },
+        {
+          "code": "4816.90.10",
+          "description": "000F Papel carbón (carbónico) y papeles similares 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4816.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4816.90.90",
+          "description": "000J Los demás 14.00 14.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4817",
+      "description": "SOBRES, SOBRES CARTA, TARJETAS POSTALES SIN ILUSTRAR Y TARJETAS PARA CORRESPONDENCIA, DE",
+      "subheadings": [
+        {
+          "code": "4817.10.00",
+          "description": "Sobres"
+        },
+        {
+          "code": "4817.10.00",
+          "description": "Impresos"
+        },
+        {
+          "code": "4817.10.00",
+          "description": "110K Solamente la parte exterior 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4817.10.00",
+          "description": "120N Solamente la parte interior 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4817.10.00",
+          "description": "190L Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4817.10.00",
+          "description": "900A Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4817.20.00",
+          "description": "Sobres carta, tarjetas postales sin ilustrar y tarjetas para correspondencia"
+        },
+        {
+          "code": "4817.20.00",
+          "description": "100W Sobres carta 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4817.20.00",
+          "description": "200B Tarjetas postales sin ilustrar 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4817.20.00",
+          "description": "300G Tarjetas para correspondencia 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4817.30.00",
+          "description": "Cajas, bolsas y presentaciones similares, de papel o cartón, con un surtido de artículos de correspondencia"
+        },
+        {
+          "code": "4817.30.00",
+          "description": "100K Cajas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4817.30.00",
+          "description": "200Q Bolsas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4817.30.00",
+          "description": "900D Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4818",
+      "description": "PAPEL DEL TIPO UTILIZADO PARA PAPEL HIGIÉNICO Y PAPELES SIMILARES, GUATA DE CELULOSA O NAPA",
+      "subheadings": [
+        {
+          "code": "4818.10.00",
+          "description": "Papel higiénico"
+        },
+        {
+          "code": "4818.10.00",
+          "description": "100A Doble hoja 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.10.00",
+          "description": "900U Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.20.00",
+          "description": "Pañuelos, toallitas de desmaquillar y toallas"
+        },
+        {
+          "code": "4818.20.00",
+          "description": "100P Pañuelos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.20.00",
+          "description": "200V Toallitas de desmaquillar 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.20.00",
+          "description": "300A Toallas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.30.00",
+          "description": "Manteles y servilletas"
+        },
+        {
+          "code": "4818.30.00",
+          "description": "Manteles"
+        },
+        {
+          "code": "4818.30.00",
+          "description": "110G Cuadrados 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.30.00",
+          "description": "120K Rectangulares 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.30.00",
+          "description": "130N Redondos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.30.00",
+          "description": "190H Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.30.00",
+          "description": "200J Servilletas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.50.00",
+          "description": "Prendas y complementos (accesorios), de vestir"
+        },
+        {
+          "code": "4818.50.00",
+          "description": "100G Prendas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.50.00",
+          "description": "200M Complementos (accesorios) 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4818.90.10",
+          "description": "Almohadillas absorbentes de los tipos utilizados en el envasado de productos alimenticios"
+        },
+        {
+          "code": "4818.90.10",
+          "description": "000T Almohadillas absorbentes de los tipos utilizados en el envasado de productos alimenticios 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4818.90.90",
+          "description": "100B Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4818.90.90",
+          "description": "900V Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4819",
+      "description": "CAJAS, SACOS (BOLSAS), BOLSITAS, CUCURUCHOS Y DEMÁS ENVASES DE PAPEL, CARTÓN, GUATA DE",
+      "subheadings": [
+        {
+          "code": "4819.10.00",
+          "description": "Cajas de papel o cartón corrugado"
+        },
+        {
+          "code": "4819.10.00",
+          "description": "Del tipo de las utilizadas en el envasado de frutas"
+        },
+        {
+          "code": "4819.10.00",
+          "description": "110X De doble pared 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.10.00",
+          "description": "120A De triple pared 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.10.00",
+          "description": "190Y Las demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.10.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4819.10.00",
+          "description": "910Q De doble pared 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.10.00",
+          "description": "920U De triple pared 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.10.00",
+          "description": "990R Las demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.20.00",
+          "description": "Cajas y cartonajes, plegables, de papel o cartón, sin corrugar"
+        },
+        {
+          "code": "4819.20.00",
+          "description": "Cajas"
+        },
+        {
+          "code": "4819.20.00",
+          "description": "Impresas"
+        },
+        {
+          "code": "4819.20.00",
+          "description": "111N De papel Kraft, laminado con aluminio y plástico 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.20.00",
+          "description": "119F Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.20.00",
+          "description": "190M Las demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.20.00",
+          "description": "Cartonajes"
+        },
+        {
+          "code": "4819.20.00",
+          "description": "Impresos"
+        },
+        {
+          "code": "4819.20.00",
+          "description": "211U De papel Kraft, laminado con aluminio y plástico 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.20.00",
+          "description": "219L Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.20.00",
+          "description": "290T Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "Sacos (bolsas) con una anchura en la base superior o igual a 40 cm"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "100X Para cemento (R.564/97 MEOSP) 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "Los demás, impresos"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "Recubiertos o revestidos"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "811Q De polipropileno biaxialmente orientado, en la cara interna, exclusivamente 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "812T De polipropileno biaxialmente orientado, en la cara externa, exclusivamente 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "813V De celulosa regenerada, en la cara externa, exclusivamente 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "819H Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "890P Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "911W De polipropileno biaxialmente orientado, en la cara interna, exclusivamente 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "912Y De polipropileno biaxialmente orientado, en la cara externa, exclusivamente 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "913A De celulosa regenerada, en la cara externa, exclusivamente 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "919N Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.30.00",
+          "description": "990V Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "Los demás sacos (bolsas); bolsitas y cucuruchos"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "100L Cucuruchos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "Los demás, impresos"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "Recubiertos o revestidos"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "811E De polipropileno biaxialmente orientado, en la cara interna, exclusivamente 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "812G De polipropileno biaxialmente orientado, en la cara externa, exclusivamente 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "813J De celulosa regenerada, en la cara externa, exclusivamente 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "819X Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "890D Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "911K De polipropileno biaxialmente orientado, en la cara interna, exclusivamente 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "912M De polipropileno biaxialmente orientado, en la cara externa, exclusivamente 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "913P De celulosa regenerada, en la cara externa, exclusivamente 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "919C Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.40.00",
+          "description": "990J Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.50.00",
+          "description": "Los demás envases, incluidas las fundas para discos"
+        },
+        {
+          "code": "4819.50.00",
+          "description": "100A Impresos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.50.00",
+          "description": "900U Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.60.00",
+          "description": "Cartonajes de oficina, tienda o similares"
+        },
+        {
+          "code": "4819.60.00",
+          "description": "100P Clasificadores de cartas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.60.00",
+          "description": "200V Cajas de correo 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.60.00",
+          "description": "300A Cajas de fichas de clasificación 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.60.00",
+          "description": "400F Bandejas de oficina 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4819.60.00",
+          "description": "900H Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4820",
+      "description": "LIBROS REGISTRO, LIBROS DE CONTABILIDAD, TALONARIOS (DE NOTAS, PEDIDOS O RECIBOS), AGENDAS,",
+      "subheadings": [
+        {
+          "code": "4820.10.00",
+          "description": "Libros registro, libros de contabilidad, talonarios (de notas, pedidos o recibos), bloques memorandos, bloques de"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "100Y Libros registro 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "200D Libros de contabilidad 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "300J Talonarios (de notas, pedidos o recibos) 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "400P Bloques memorandos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "500V Bloques de papel carta 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "Agendas"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "Con tapas de hojas de plastico o materia textil o recubiertas con estas materias"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "611F Cosidas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "612H Abrochadas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "613K Espiraladas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "614M Con mecanismo 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "619Y Las demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "Con tapas de cuero regenerado o recubiertas con esta materia"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "621J Cosidas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "622L Abrochadas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "623N Espiraladas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "624Q Con mecanismo 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "629B Las demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "Con tapas de cuero natural bovino"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "631M Cosidas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "632P Abrochadas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "633R Espiraladas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "634U Con mecanismo 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "639E Las demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "691G Cosidas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "692J Abrochadas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "693L Espiraladas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "694N Con mecanismo 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "699Z Las demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.10.00",
+          "description": "900R Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "Cuadernos"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "De tapas flexibles"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "Abrochados"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "111T Con cantidad de hojas inferior o igual a 50 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "112V Con cantidad de hojas superior a 50 pero inferior o igual a 100 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "113X Con cantidad de hojas superior a 100 pero inferior o igual a 150 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "119K Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "Espiralados"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "121W Con cantidad de hojas inferior o igual a 50 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "122Y Con cantidad de hojas superior a 50 pero inferior o igual a 100 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "123A Con cantidad de hojas superior a 100 pero inferior o igual a 150 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "129N Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "191U Con cantidad de hojas inferior o igual a 50 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "192W Con cantidad de hojas superior a 50 pero inferior o igual a 100 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "193Y Con cantidad de hojas superior a 100 pero inferior o igual a 150 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "199L Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "De tapas duras, sin forrar"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "Cosidas"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "211Y Con cantidad de hojas inferior o igual a 50 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "212A Con cantidad de hojas superior a 50 pero inferior o igual a 100 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "213C Con cantidad de hojas superior a 100 pero inferior o igual a 150 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "219Q Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "221B Con cantidad de hojas inferior o igual a 50 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "222D Con cantidad de hojas superior a 50 pero inferior o igual a 100 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "223F Con cantidad de hojas superior a 100 pero inferior o igual a 150 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "229U Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "291Z Con cantidad de hojas inferior o igual a 50 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "292B Con cantidad de hojas superior a 50 pero inferior o igual a 100 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "293D Con cantidad de hojas superior a 100 pero inferior o igual a 150 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "299R Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "Cosidos"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "911L Con cantidad de hojas inferior o igual a 50 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "912N Con cantidad de hojas superior a 50 pero inferior o igual a 100 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "913Q Con cantidad de hojas superior a 100 pero inferior o igual a 150 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "919D Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "921P Con cantidad de hojas inferior o igual a 50 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "922R Con cantidad de hojas superior a 50 pero inferior o igual a 100 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "923U Con cantidad de hojas superior a 100 pero inferior o igual a 150 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "929G Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "991M Con cantidad de hojas inferior o igual a 50 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "992P Con cantidad de hojas superior a 50 pero inferior o igual a 100 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "993R Con cantidad de hojas superior a 100 pero inferior o igual a 150 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.20.00",
+          "description": "999E Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.30.00",
+          "description": "Clasificadores, encuadernaciones (excepto las cubiertas para libros), carpetas y cubiertas para documentos"
+        },
+        {
+          "code": "4820.30.00",
+          "description": "100B Clasificadores 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.30.00",
+          "description": "200G Encuadernaciones (excepto las cubiertas para libros) 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.30.00",
+          "description": "300M Carpetas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.30.00",
+          "description": "400T Cubiertas para documentos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.40.00",
+          "description": "Formularios en paquetes o plegados («manifold»), aunque lleven papel carbón (carbónico)"
+        },
+        {
+          "code": "4820.40.00",
+          "description": "100Q Con hojas de papel carbón (carbónico) 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.40.00",
+          "description": "200W Con papel autocopia 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.40.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4820.40.00",
+          "description": "910M Carta de porte aéreo 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.40.00",
+          "description": "920Q De informe sobre daños e irregularidades de equipaje aéreo 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.40.00",
+          "description": "990N Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.50.00",
+          "description": "Álbumes para muestras o para colecciones"
+        },
+        {
+          "code": "4820.50.00",
+          "description": "100E Para figuritas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.50.00",
+          "description": "200K Para fotografías 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.50.00",
+          "description": "300Q Para sellos postales 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.50.00",
+          "description": "900Y Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4820.90.00",
+          "description": "100L Tapas para libros 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4820.90.00",
+          "description": "900E Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4821",
+      "description": "ETIQUETAS DE TODAS CLASES, DE PAPEL O CARTÓN, INCLUSO IMPRESAS",
+      "subheadings": [
+        {
+          "code": "4821.10.00",
+          "description": "Impresas"
+        },
+        {
+          "code": "4821.10.00",
+          "description": "Autoadhesivas"
+        },
+        {
+          "code": "4821.10.00",
+          "description": "110V De identificación de equipaje aéreo 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4821.10.00",
+          "description": "120Y De identificación de mercaderías de transporte aéreo 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4821.10.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4821.10.00",
+          "description": "191Y Aptas para estar en contacto con alimentos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4821.10.00",
+          "description": "199Q Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4821.10.00",
+          "description": "910N De identificación de equipaje aéreo 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4821.10.00",
+          "description": "920R Aptas para estar en contacto con alimentos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4821.10.00",
+          "description": "991R De gramaje superior o igual a 65 g/m2 pero inferior o igual a 75 g/m2, resistentes (ruptura máxima en dos partes) a la"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "4822",
+      "description": "CARRETES, BOBINAS, CANILLAS Y SOPORTES SIMILARES, DE PASTA DE PAPEL, PAPEL O CARTÓN,",
+      "subheadings": [
+        {
+          "code": "4822.10.00",
+          "description": "De los tipos utilizados para el bobinado de hilados textiles"
+        },
+        {
+          "code": "4822.10.00",
+          "description": "000E -De los tipos utilizados para el bobinado de hilados textiles 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4822.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4822.90.00",
+          "description": "000T -Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4823",
+      "description": "LOS DEMÁS PAPELES, CARTONES, GUATA DE CELULOSA Y NAPA DE FIBRAS DE CELULOSA, CORTADOS EN",
+      "subheadings": [
+        {
+          "code": "4823.20",
+          "description": "Papel y cartón filtro"
+        },
+        {
+          "code": "4823.20.10",
+          "description": "De peso superior a 15 g/m2 pero inferior o igual a 25 g/m2 y con un contenido de fibras sintéticas termosoldables"
+        },
+        {
+          "code": "4823.20.10",
+          "description": "100C Aptos para estar en contacto con alimentos 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.20.10",
+          "description": "900W Los demás 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.20.91",
+          "description": "En tiras o en bobinas (rollos) de anchura superior a 15 cm pero inferior o igual a 36 cm"
+        },
+        {
+          "code": "4823.20.91",
+          "description": "000H En tiras o en bobinas (rollos) de anchura superior a 15 cm pero inferior o igual a 36 cm 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.20.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "4823.20.99",
+          "description": "100Z Papel para saquitos de té 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.20.99",
+          "description": "200E De laboratorio 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.20.99",
+          "description": "910W Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.20.99",
+          "description": "920Z Papel filtrante, de los tipos utilizados en la fabricacion de filtros de vehiculos automoviles 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.20.99",
+          "description": "990X Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.40.00",
+          "description": "Papel diagrama para aparatos registradores, en bobinas (rollos), hojas o discos"
+        },
+        {
+          "code": "4823.40.00",
+          "description": "000Q -Papel diagrama para aparatos registradores, en bobinas (rollos), hojas o discos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.6",
+          "description": "Bandejas, fuentes, platos, tazas, vasos y artículos similares, de papel o cartón:"
+        },
+        {
+          "code": "4823.61.00",
+          "description": "De bambú"
+        },
+        {
+          "code": "4823.61.00",
+          "description": "100L Bandejas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4823.61.00",
+          "description": "200R Fuentes 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4823.61.00",
+          "description": "300X Platos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4823.61.00",
+          "description": "400C Tazas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4823.61.00",
+          "description": "500H Vasos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4823.61.00",
+          "description": "900E Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4823.69.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4823.69.00",
+          "description": "100G Bandejas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4823.69.00",
+          "description": "200M Fuentes 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4823.69.00",
+          "description": "300T Platos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4823.69.00",
+          "description": "400Y Tazas 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4823.69.00",
+          "description": "500D Vasos 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4823.69.00",
+          "description": "900A Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4823.70.00",
+          "description": "Artículos moldeados o prensados, de pasta de papel"
+        },
+        {
+          "code": "4823.70.00",
+          "description": "100N Cajas del tipo de las utilizadas para envasar huevos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.70.00",
+          "description": "200U Bandejas para huevos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.70.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4823.70.00",
+          "description": "910K Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.70.00",
+          "description": "990L Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4823.90.10",
+          "description": "Cartones perforados para mecanismos Jacquard"
+        },
+        {
+          "code": "4823.90.10",
+          "description": "000W Cartones perforados para mecanismos Jacquard 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90.20",
+          "description": "De rigidez dieléctrica superior o igual a 600 V (método ASTM D 202 o equivalente) y peso inferior o igual a 60 g/m2"
+        },
+        {
+          "code": "4823.90.20",
+          "description": "000F De rigidez dieléctrica superior o igual a 600 V (Método ASTM D 202 o equivalente) y peso inferior o igual a 60 g/m2 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90.91",
+          "description": "En tiras o en bobinas (rollos) de anchura superior a 15 cm pero inferior o igual a 36 cm"
+        },
+        {
+          "code": "4823.90.91",
+          "description": "000G En tiras o en bobinas (rollos) de anchura superior a 15 cm pero inferior o igual a 36 cm 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "4823.90.99",
+          "description": "Acondicionadas para la venta al por menor"
+        },
+        {
+          "code": "4823.90.99",
+          "description": "110B Para embalaje de caramelos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90.99",
+          "description": "120E Para embalaje de frutas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90.99",
+          "description": "191E Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90.99",
+          "description": "199X Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90.99",
+          "description": "910V Abanicos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90.99",
+          "description": "920Y Esquineros 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90.99",
+          "description": "930B Juntas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90.99",
+          "description": "940E Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90.99",
+          "description": "991Y Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4823.90.99",
+          "description": "999Q Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 897
+}

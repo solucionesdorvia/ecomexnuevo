@@ -1,0 +1,137 @@
+{
+  "chapter": "80",
+  "title": "Capítulo 71",
+  "sectionTitle": "CAP. 80 SECCION XV METALES COMUNES Y MANUFACTURAS DE ESTOS METALES Notas. 1. Esta Sección no comprende: a. los colores y",
+  "headings": [
+    {
+      "code": "3207",
+      "description": "a 32.10, 32.12, 32.13 ó 32.15);",
+      "subheadings": []
+    },
+    {
+      "code": "8001",
+      "description": "ESTAÑO EN BRUTO",
+      "subheadings": [
+        {
+          "code": "8001.10.00",
+          "description": "Estaño sin alear"
+        },
+        {
+          "code": "8001.10.00",
+          "description": "100H En lingotes 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8001.10.00",
+          "description": "900B Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8001.20.00",
+          "description": "Aleaciones de estaño"
+        },
+        {
+          "code": "8001.20.00",
+          "description": "100X En lingotes 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "8001.20.00",
+          "description": "900Q Los demás 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8002",
+      "description": "DESPERDICIOS Y DESECHOS, DE ESTAÑO",
+      "subheadings": [
+        {
+          "code": "8002.00.00",
+          "description": "Desperdicios y desechos, de estaño"
+        },
+        {
+          "code": "8002.00.00",
+          "description": "000G DESPERDICIOS Y DESECHOS, DE ESTAÑO. 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8003",
+      "description": "BARRAS, PERFILES Y ALAMBRE, DE ESTAÑO",
+      "subheadings": [
+        {
+          "code": "8003.00.00",
+          "description": "Barras, perfiles y alambre, de estaño"
+        },
+        {
+          "code": "8003.00.00",
+          "description": "100F Barras 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "8003.00.00",
+          "description": "200L Perfiles 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "8003.00.00",
+          "description": "300R Alambre 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "8007",
+      "description": "LAS DEMÁS MANUFACTURAS DE ESTAÑO",
+      "subheadings": [
+        {
+          "code": "8007.00.10",
+          "description": "Chapas, hojas y tiras"
+        },
+        {
+          "code": "8007.00.10",
+          "description": "000J Chapas, hojas y tiras 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8007.00.20",
+          "description": "Polvo y escamillas"
+        },
+        {
+          "code": "8007.00.20",
+          "description": "000U Polvo y escamillas 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8007.00.30",
+          "description": "Tubos y accesorios de tubería"
+        },
+        {
+          "code": "8007.00.30",
+          "description": "000D Tubos y accesorios de tubería 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8007.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "8007.00.90",
+          "description": "Envases tubulares"
+        },
+        {
+          "code": "8007.00.90",
+          "description": "110W Aptas para estar en contacto con alimentos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8007.00.90",
+          "description": "190X Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8007.00.90",
+          "description": "200Y ánodos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8007.00.90",
+          "description": "910P Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "8007.00.90",
+          "description": "990Q Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 31
+}

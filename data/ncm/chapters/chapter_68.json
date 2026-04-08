@@ -1,0 +1,1095 @@
+{
+  "chapter": "68",
+  "title": "Capítulo 68",
+  "sectionTitle": "CAP. 68 SECCION XIII MANUFACTURAS DE PIEDRA, YESO FRAGUABLE, CEMENTO, AMIANTO (ASBESTO), MICA O MATERIAS ANALOGAS; PRODU",
+  "headings": [
+    {
+      "code": "6801",
+      "description": "ADOQUINES, ENCINTADOS (BORDILLOS)* Y LOSAS PARA PAVIMENTOS, DE PIEDRA NATURAL (EXCEPTO LA",
+      "subheadings": [
+        {
+          "code": "6801.00.00",
+          "description": "Adoquines, encintados (bordillos)* y losas para pavimentos, de piedra natural (excepto la pizarra)"
+        },
+        {
+          "code": "6801.00.00",
+          "description": "000Y ADOQUINES, ENCINTADOS (BORDILLOS)* Y LOSAS PARA PAVIMENTOS, DE PIEDRA NATURAL (EXCEPTO LA"
+        }
+      ]
+    },
+    {
+      "code": "6802",
+      "description": "PIEDRAS DE TALLA O DE CONSTRUCCIÓN TRABAJADAS (EXCLUIDA LA PIZARRA) Y SUS MANUFACTURAS,",
+      "subheadings": [
+        {
+          "code": "6802.10.00",
+          "description": "Losetas, cubos, dados y artículos similares, incluso de forma distinta a la cuadrada o rectangular, en los que la"
+        },
+        {
+          "code": "6802.10.00",
+          "description": "100L Gránulos, tasquiles (fragmentos) y polvo, coloreados artificialmente 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6802.10.00",
+          "description": "Plaquitas"
+        },
+        {
+          "code": "6802.10.00",
+          "description": "911K De mármol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.10.00",
+          "description": "912M De travertinos 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.10.00",
+          "description": "919C Las demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.10.00",
+          "description": "990J Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.2",
+          "description": "Las demás piedras de talla o de construcción y sus manufacturas, simplemente talladas o aserradas, con superficie"
+        },
+        {
+          "code": "6802.21.00",
+          "description": "Mármol, travertinos y alabastro"
+        },
+        {
+          "code": "6802.21.00",
+          "description": "100M Mármol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.21.00",
+          "description": "200T Travertinos 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.21.00",
+          "description": "300Y Alabastro 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.23.00",
+          "description": "Granito"
+        },
+        {
+          "code": "6802.23.00",
+          "description": "000F --Granito 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.29.00",
+          "description": "Las demás piedras"
+        },
+        {
+          "code": "6802.29.00",
+          "description": "000C --Las demás piedras 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "Mármol, travertinos y alabastro"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "Mármol"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "110P Planchas, losas o formas similares 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "120T Objetos de adorno 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "130W Guardas y listeles 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "190Q Los demás 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "Travertinos"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "210V Planchas, losas o formas similares 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "220Y Objetos de adorno 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "230B Guardas y listeles 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "290W Los demás 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "Alabastro"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "310A Planchas, losas o formas similares 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "320D Objetos de adorno 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.91.00",
+          "description": "390B Los demás 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.92.00",
+          "description": "Las demás piedras calizas"
+        },
+        {
+          "code": "6802.92.00",
+          "description": "100Y Planchas, losas o formas similares 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.92.00",
+          "description": "200D Objetos de adorno 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.92.00",
+          "description": "900R Las demás 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.93",
+          "description": "Granito"
+        },
+        {
+          "code": "6802.93.10",
+          "description": "Bolas para molinos"
+        },
+        {
+          "code": "6802.93.10",
+          "description": "000P Bolas para molinos 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.93.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6802.93.90",
+          "description": "100Y Planchas, losas o formas similares 6.00 35.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.93.90",
+          "description": "200D Objetos de adorno 6.00 35.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.93.90",
+          "description": "900R Los demás 6.00 35.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.99",
+          "description": "Las demás piedras"
+        },
+        {
+          "code": "6802.99.10",
+          "description": "Bolas para molinos"
+        },
+        {
+          "code": "6802.99.10",
+          "description": "000L Bolas para molinos 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.99.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "6802.99.90",
+          "description": "100V Planchas, losas o formas similares 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.99.90",
+          "description": "200A Objetos de adorno 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6802.99.90",
+          "description": "900N Las demás 6.00 6.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "6803",
+      "description": "PIZARRA NATURAL TRABAJADA Y MANUFACTURAS DE PIZARRA NATURAL O AGLOMERADA",
+      "subheadings": [
+        {
+          "code": "6803.00.00",
+          "description": "Pizarra natural trabajada y manufacturas de pizarra natural o aglomerada"
+        },
+        {
+          "code": "6803.00.00",
+          "description": "000K PIZARRA NATURAL TRABAJADA Y MANUFACTURAS DE PIZARRA NATURAL O AGLOMERADA. 6.00 6.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "6804",
+      "description": "MUELAS Y ARTÍCULOS SIMILARES, SIN BASTIDOR, PARA MOLER, DESFIBRAR, TRITURAR, AFILAR, PULIR,",
+      "subheadings": [
+        {
+          "code": "6804.10.00",
+          "description": "Muelas para moler o desfibrar"
+        },
+        {
+          "code": "6804.10.00",
+          "description": "000T -Muelas para moler o desfibrar 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6804.2",
+          "description": "Las demás muelas y artículos similares:"
+        },
+        {
+          "code": "6804.21",
+          "description": "De diamante natural o sintético, aglomerado"
+        },
+        {
+          "code": "6804.21.11",
+          "description": "Aglomerados con resina"
+        },
+        {
+          "code": "6804.21.11",
+          "description": "000L Aglomerados con resina 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6804.21.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "6804.21.19",
+          "description": "000X Los demás 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6804.21.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6804.21.90",
+          "description": "000G Los demás 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6804.22",
+          "description": "De los demás abrasivos aglomerados o de cerámica"
+        },
+        {
+          "code": "6804.22.11",
+          "description": "Aglomerados con resina"
+        },
+        {
+          "code": "6804.22.11",
+          "description": "000Y Aglomerados con resina 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6804.22.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "6804.22.19",
+          "description": "000J Los demás 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6804.22.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6804.22.90",
+          "description": "000U Los demás 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6804.23.00",
+          "description": "De piedras naturales"
+        },
+        {
+          "code": "6804.23.00",
+          "description": "000T --De piedras naturales 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6804.30.00",
+          "description": "Piedras de afilar o pulir a mano"
+        },
+        {
+          "code": "6804.30.00",
+          "description": "000W -Piedras de afilar o pulir a mano 6.00 6.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "6805",
+      "description": "ABRASIVOS NATURALES O ARTIFICIALES EN POLVO O GRÁNULOS CON SOPORTE DE MATERIA TEXTIL,",
+      "subheadings": [
+        {
+          "code": "6805.10.00",
+          "description": "Con soporte constituido solamente por tejido de materia textil"
+        },
+        {
+          "code": "6805.10.00",
+          "description": "Tela esmeril (R.386/99 SICYM)"
+        },
+        {
+          "code": "6805.10.00",
+          "description": "En hojas de 225x275 mm"
+        },
+        {
+          "code": "6805.10.00",
+          "description": "111X De grano 36 a 320 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.10.00",
+          "description": "119P Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.10.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6805.10.00",
+          "description": "191Y De grano 36 a 320 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.10.00",
+          "description": "199Q Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.10.00",
+          "description": "900K Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "Con soporte constituido solamente por papel o cartón"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "Lija antiempastante"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "En hojas de 225x275 mm"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "111L De grano 80 a 180 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "112N De grano 220 a 600 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "119D Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "191M De grano 80 a 180 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "192P De grano 220 a 600 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "199E Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "Lija al agua (impermeable) (R.386/99 SICYM)"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "En hojas de 230x280 mm"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "211R De grano 60 a 180 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "212U De grano 220 a 600 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "219J Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "221V De grano 60 a 180 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "222X De grano 220 a 600 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "229M Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "291T De grano 60 a 180 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "292V De grano 220 a 600 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "299K Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "Con soporte de papel o cartón de gramaje superior a 200 gr/m2 (R.386/99 SICYM)"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "310V De grano 40 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "320Y De grano 50 a 80 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "330B De grano 100 a 320 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "390W Las demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "911E De grano 36 a 50 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "912G De grano 60 a 80 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "913J De grano 100 a 240 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "919X Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "991F De grano 36 a 50 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "992H De grano 60 a 80 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "993K De grano 100 a 240 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.20.00",
+          "description": "999Y Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30",
+          "description": "Con soporte de otras materias"
+        },
+        {
+          "code": "6805.30.10",
+          "description": "Con soporte de papel o cartón combinado con materias textiles"
+        },
+        {
+          "code": "6805.30.10",
+          "description": "000Z Con soporte de papel o cartón combinados con materias textiles 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "Discos de fibra vulcanizada recubiertos con óxido de aluminio o carburo de silicio"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "De diámetro superior o igual a 178 mm pero inferior o igual 180 mm (R.386/99 SICYM)"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "110T De grano 14 a 16 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "120W De grano 24 a 36 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "130Z De grano 50 a 60 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "140C De grano 80 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "150F De grano 100 a 120 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "190U Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "Los demás (R.386/99 SICYM)"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "910L De grano 14 a 16 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "920P De grano 24 a 36 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "930T De grano 50 a 60 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "940W De grano 80 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "950Z De grano 100 a 120 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.20",
+          "description": "990M Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6805.30.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6805.30.90",
+          "description": "000C Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "6806",
+      "description": "LANA DE ESCORIA, DE ROCA Y LANAS MINERALES SIMILARES; VERMICULITA DILATADA, ARCILLA DILATADA,",
+      "subheadings": [
+        {
+          "code": "6806.10.00",
+          "description": "Lana de escoria, de roca y lanas minerales similares, incluso mezcladas entre sí, en masa, hojas o enrolladas"
+        },
+        {
+          "code": "6806.10.00",
+          "description": "000E -Lana de escoria, de roca y lanas minerales similares, incluso mezcladas entresí, en masa, hojas o enrolladas 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6806.20.00",
+          "description": "Vermiculita dilatada, arcilla dilatada, espuma de escoria y productos minerales similares dilatados, incluso mezclados"
+        },
+        {
+          "code": "6806.20.00",
+          "description": "000U -Vermiculita dilatada, arcilla dilatada, espuma de escoria y productos minerales similares dilatados, incluso mezclados"
+        },
+        {
+          "code": "6806.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6806.90.10",
+          "description": "Aluminosos o sílicoaluminosos"
+        },
+        {
+          "code": "6806.90.10",
+          "description": "000C Aluminosos o sílicoaluminosos 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6806.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6806.90.90",
+          "description": "000F Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "6807",
+      "description": "MANUFACTURAS DE ASFALTO O DE PRODUCTOS SIMILARES (POR EJEMPLO: PEZ DE PETRÓLEO, BREA)",
+      "subheadings": [
+        {
+          "code": "6807.10.00",
+          "description": "En rollos"
+        },
+        {
+          "code": "6807.10.00",
+          "description": "000Y -En rollos 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6807.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6807.90.00",
+          "description": "000L -Las demás 8.00 8.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "6808",
+      "description": "PANELES, PLACAS, LOSETAS, BLOQUES Y ARTÍCULOS SIMILARES, DE FIBRA VEGETAL, PAJA O VIRUTA, DE",
+      "subheadings": [
+        {
+          "code": "6808.00.00",
+          "description": "Paneles, placas, losetas, bloques y artículos similares, de fibra vegetal, paja o viruta, de plaquitas o partículas, o de"
+        },
+        {
+          "code": "6808.00.00",
+          "description": "000C PANELES, PLACAS, LOSETAS, BLOQUES Y ARTÍCULOS SIMILARES, DE FIBRA VEGETAL, PAJA O VIRUTA, DE"
+        }
+      ]
+    },
+    {
+      "code": "6809",
+      "description": "MANUFACTURAS DE YESO FRAGUABLE O DE PREPARACIONES A BASE DE YESO FRAGUABLE",
+      "subheadings": [
+        {
+          "code": "6809.1",
+          "description": "Placas, hojas, paneles, losetas y artículos similares, sin adornos:"
+        },
+        {
+          "code": "6809.11.00",
+          "description": "Revestidos o reforzados exclusivamente con papel o cartón"
+        },
+        {
+          "code": "6809.11.00",
+          "description": "000X --Revestidos o reforzados exclusivamente con papel o cartón 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6809.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6809.19.00",
+          "description": "000T --Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6809.90.00",
+          "description": "Las demás manufacturas"
+        },
+        {
+          "code": "6809.90.00",
+          "description": "000Y -Las demás manufacturas 8.00 8.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "6810",
+      "description": "MANUFACTURAS DE CEMENTO, HORMIGÓN O PIEDRA ARTIFICIAL, INCLUSO ARMADAS",
+      "subheadings": [
+        {
+          "code": "6810.1",
+          "description": "Tejas, losetas, losas, ladrillos y artículos similares:"
+        },
+        {
+          "code": "6810.11.00",
+          "description": "Bloques y ladrillos para la construcción"
+        },
+        {
+          "code": "6810.11.00",
+          "description": "000B --Bloques y ladrillos para la construcción 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6810.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6810.19.00",
+          "description": "000X --Los demás 8.00 8.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6810.9",
+          "description": "Las demás manufacturas:"
+        },
+        {
+          "code": "6810.91.00",
+          "description": "Elementos prefabricados para la construcción o ingeniería civil"
+        },
+        {
+          "code": "6810.91.00",
+          "description": "000P --Elementos prefabricados para la construcción o ingeniería civil 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6810.99.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6810.99.00",
+          "description": "000K --Las demás 8.00 8.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "6811",
+      "description": "MANUFACTURAS DE AMIANTOCEMENTO, CELULOSACEMENTO O SIMILARES",
+      "subheadings": [
+        {
+          "code": "6811.40.00",
+          "description": "Que contengan amianto (asbesto)"
+        },
+        {
+          "code": "6811.40.00",
+          "description": "000A -Que contengan amianto (asbesto) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6811.8",
+          "description": "Que no contengan amianto (asbesto):"
+        },
+        {
+          "code": "6811.81.00",
+          "description": "Placas onduladas"
+        },
+        {
+          "code": "6811.81.00",
+          "description": "000U --Placas onduladas 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6811.82.00",
+          "description": "Las demás placas, paneles, losetas, tejas y artículos similares"
+        },
+        {
+          "code": "6811.82.00",
+          "description": "000F --Las demás placas, paneles, losetas, tejas y artículos similares 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6811.89.00",
+          "description": "Las demás manufacturas"
+        },
+        {
+          "code": "6811.89.00",
+          "description": "000P --Las demás manufacturas 8.00 8.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "6812",
+      "description": "AMIANTO (ASBESTO) EN FIBRAS TRABAJADO; MEZCLAS A BASE DE AMIANTO O A BASE DE AMIANTO Y",
+      "subheadings": [
+        {
+          "code": "6812.80.00",
+          "description": "De crocidolita"
+        },
+        {
+          "code": "6812.80.00",
+          "description": "000A -De crocidolita 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6812.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "6812.91.00",
+          "description": "Prendas y complementos (accesorios), de vestir, calzado, sombreros y demás tocados"
+        },
+        {
+          "code": "6812.91.00",
+          "description": "000B --Prendas y complementos (accesorios), de vestir, calzado, sombreros y demás tocados 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6812.92.00",
+          "description": "Papel, cartón y fieltro"
+        },
+        {
+          "code": "6812.92.00",
+          "description": "000N --Papel, cartón y fieltro 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6812.93.00",
+          "description": "Amianto (asbesto) y elastómeros comprimidos, para juntas o empaquetaduras, en hojas o rollos"
+        },
+        {
+          "code": "6812.93.00",
+          "description": "000A --Amianto (asbesto) y elastómeros comprimidos, para juntas o empaquetaduras, en hojas o rollos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6812.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "6812.99.10",
+          "description": "Juntas y demás elementos con función similar de estanqueidad"
+        },
+        {
+          "code": "6812.99.10",
+          "description": "000G Juntas y demás elementos con función similar de estanqueidad 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6812.99.20",
+          "description": "Amianto en fibras trabajado"
+        },
+        {
+          "code": "6812.99.20",
+          "description": "100X Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6812.99.20",
+          "description": "900Q Los demas. 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6812.99.30",
+          "description": "Mezclas a base de amianto o a base de amianto y carbonato de magnesio"
+        },
+        {
+          "code": "6812.99.30",
+          "description": "100G Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6812.99.30",
+          "description": "900A Los demas. 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6812.99.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "6812.99.90",
+          "description": "000K Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "6813",
+      "description": "GUARNICIONES DE FRICCIÓN (POR EJEMPLO: HOJAS, ROLLOS, TIRAS, SEGMENTOS, DISCOS, ARANDELAS,",
+      "subheadings": [
+        {
+          "code": "6813.20.00",
+          "description": "Que contengan amianto (asbesto)"
+        },
+        {
+          "code": "6813.20.00",
+          "description": "100P Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6813.20.00",
+          "description": "900H Los demas. 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6813.8",
+          "description": "Que no contengan amianto (asbesto):"
+        },
+        {
+          "code": "6813.81",
+          "description": "Guarniciones para frenos"
+        },
+        {
+          "code": "6813.81.10",
+          "description": "Pastillas"
+        },
+        {
+          "code": "6813.81.10",
+          "description": "100W De los tipos utilizados en vehículos automóviles 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6813.81.10",
+          "description": "200B De los tipos utilizados en motocicletas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6813.81.10",
+          "description": "900P Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6813.81.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "6813.81.90",
+          "description": "Cintas de freno, de los tipos utilizados en vehículos automóviles"
+        },
+        {
+          "code": "6813.81.90",
+          "description": "110C De peso, por unidad, superior a 300 g 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6813.81.90",
+          "description": "190D Las demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6813.81.90",
+          "description": "910W En bruto (tejas de fricción) cuyo espesor mayor sea superior o igual a 18 mm, de los tipos utilizados para la fabricación"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LNA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "6814",
+      "description": "MICA TRABAJADA Y MANUFACTURAS DE MICA, INCLUIDA LA AGLOMERADA O RECONSTITUIDA, INCLUSO",
+      "subheadings": [
+        {
+          "code": "6814.10.00",
+          "description": "Placas, hojas y tiras de mica aglomerada o reconstituida, incluso con soporte"
+        },
+        {
+          "code": "6814.10.00",
+          "description": "000N -Placas, hojas y tiras de mica aglomerada o reconstituida, incluso con soporte 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6814.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "6814.90.00",
+          "description": "000B -Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "6815",
+      "description": "MANUFACTURAS DE PIEDRA O DEMÁS MATERIAS MINERALES (INCLUIDAS LAS FIBRAS DE CARBONO Y SUS",
+      "subheadings": [
+        {
+          "code": "6815.10",
+          "description": "Manufacturas de grafito o de otros carbonos, para usos distintos de los eléctricos"
+        },
+        {
+          "code": "6815.10.10",
+          "description": "Fibras de carbono"
+        },
+        {
+          "code": "6815.10.10",
+          "description": "000R Fibras de carbono 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6815.10.20",
+          "description": "Tejidos de fibras de carbono"
+        },
+        {
+          "code": "6815.10.20",
+          "description": "000B Tejidos de fibras de carbono 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6815.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "6815.10.90",
+          "description": "100A Partes de inyección electrónica, de motores de los tipos utilizados en vehículos automóviles 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6815.10.90",
+          "description": "900U Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6815.20.00",
+          "description": "Manufacturas de turba"
+        },
+        {
+          "code": "6815.20.00",
+          "description": "000W -Manufacturas de turba 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6815.9",
+          "description": "Las demás manufacturas:"
+        },
+        {
+          "code": "6815.91",
+          "description": "Que contengan magnesita, dolomita o cromita"
+        },
+        {
+          "code": "6815.91.10",
+          "description": "Aglomeradas con aglutinante químico, sin cocer"
+        },
+        {
+          "code": "6815.91.10",
+          "description": "000R Aglomeradas con aglutinante químico, sin cocer 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6815.91.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "6815.91.90",
+          "description": "000V Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6815.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "6815.99.11",
+          "description": "Con un contenido de alúmina (Al2O3) superior o igual al 90 % en peso"
+        },
+        {
+          "code": "6815.99.11",
+          "description": "000V Con un contenido de alúmina (Al2O3) superior o igual al 90 % en peso 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6815.99.12",
+          "description": "Con un contenido de sílice (SiO2) superior o igual al 90 % en peso"
+        },
+        {
+          "code": "6815.99.12",
+          "description": "000C Con un contenido de sílice (SiO2) superior o igual al 90 % en peso 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6815.99.13",
+          "description": "Con un contenido de óxido de circonio (ZrO2) superior o igual al 50 % en peso, incluso con un contenido de alúmina"
+        },
+        {
+          "code": "6815.99.13",
+          "description": "000K Con un contenido de óxido de circonio (ZrO2) superior o igual al 50 % en peso, incluso con un contenido de alúmina"
+        },
+        {
+          "code": "6815.99.14",
+          "description": "Constituidas por una mezcla o combinación de alúmina (Al2O3), sílice (SiO2) y óxido de circonio (ZrO2) con un"
+        },
+        {
+          "code": "6815.99.14",
+          "description": "000T Constituidas por una mezcla o combinación de alúmina (Al2O3), sílice (SiO2) y óxido de circonio (ZrO2) con un"
+        },
+        {
+          "code": "6815.99.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "6815.99.19",
+          "description": "000F Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "6815.99.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "6815.99.90",
+          "description": "000Q Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 278
+}

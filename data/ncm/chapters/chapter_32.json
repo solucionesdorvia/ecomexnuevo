@@ -1,0 +1,1570 @@
+{
+  "chapter": "32",
+  "title": "Capítulo 32",
+  "sectionTitle": "CAP. 32 SECCION VI PRODUCTOS DE LAS INDUSTRIAS QUIMICAS O DE LAS INDUSTRIAS CONEXAS Notas. A. Cualquier producto que res",
+  "headings": [
+    {
+      "code": "3201",
+      "description": "EXTRACTOS CURTIENTES DE ORIGEN VEGETAL; TANINOS Y SUS SALES, ÉTERES, ÉSTERES Y DEMÁS",
+      "subheadings": [
+        {
+          "code": "3201.10.00",
+          "description": "Extracto de quebracho"
+        },
+        {
+          "code": "3201.10.00",
+          "description": "000X -Extracto de quebracho 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3201.20.00",
+          "description": "Extracto de mimosa (acacia)"
+        },
+        {
+          "code": "3201.20.00",
+          "description": "000L -Extracto de mimosa(acacia) 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3201.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3201.90.11",
+          "description": "De gambir"
+        },
+        {
+          "code": "3201.90.11",
+          "description": "000C De gambir 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3201.90.12",
+          "description": "De roble o castaño"
+        },
+        {
+          "code": "3201.90.12",
+          "description": "000K De roble o castaño 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3201.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3201.90.19",
+          "description": "000N Los demás 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3201.90.20",
+          "description": "Taninos"
+        },
+        {
+          "code": "3201.90.20",
+          "description": "000E Taninos 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3201.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3201.90.90",
+          "description": "100D Sales, éteres y ésteres de taninos 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3201.90.90",
+          "description": "200J Los demás derivados de taninos 10.00 10.00 3.00 LA 3.00 2.00"
+        }
+      ]
+    },
+    {
+      "code": "3202",
+      "description": "PRODUCTOS CURTIENTES ORGÁNICOS SINTÉTICOS; PRODUCTOS CURTIENTES INORGÁNICOS;",
+      "subheadings": [
+        {
+          "code": "3202.10.00",
+          "description": "Productos curtientes orgánicos sintéticos"
+        },
+        {
+          "code": "3202.10.00",
+          "description": "Productos curtientes sintéticos aromáticos"
+        },
+        {
+          "code": "3202.10.00",
+          "description": "110Z A base de bifenil sulfonato de amonio 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3202.10.00",
+          "description": "190A Los demás 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3202.10.00",
+          "description": "200B A base de alquilsulfocloruros 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3202.10.00",
+          "description": "300G Productos curtientes resínicos total o casi totalmente hidrosolubles 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3202.10.00",
+          "description": "900P Los demás 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3202.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3202.90.11",
+          "description": "A base de sales de cromo"
+        },
+        {
+          "code": "3202.90.11",
+          "description": "000W A base de sales de cromo 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3202.90.12",
+          "description": "A base de sales de titanio"
+        },
+        {
+          "code": "3202.90.12",
+          "description": "000D A base de sales de titanio 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3202.90.13",
+          "description": "A base de sales de circonio"
+        },
+        {
+          "code": "3202.90.13",
+          "description": "000L A base de sales de circonio 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3202.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3202.90.19",
+          "description": "100M A base de sales de aluminio 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3202.90.19",
+          "description": "200T A base de sales de hierro 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3202.90.19",
+          "description": "900F Los demás 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3202.90.21",
+          "description": "A base de compuestos de cromo"
+        },
+        {
+          "code": "3202.90.21",
+          "description": "000F A base de compuestos de cromo 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3202.90.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3202.90.29",
+          "description": "100X Rindentes artificiales para curtición 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3202.90.29",
+          "description": "900Q Las demás 10.00 10.00 3.00 LA 3.00 2.00"
+        },
+        {
+          "code": "3202.90.30",
+          "description": "Preparaciones enzimáticas para precurtido"
+        },
+        {
+          "code": "3202.90.30",
+          "description": "000H Preparaciones enzimáticas para precurtido 10.00 10.00 3.00 LA 3.00 2.00"
+        }
+      ]
+    },
+    {
+      "code": "3203",
+      "description": "MATERIAS COLORANTES DE ORIGEN VEGETAL O ANIMAL (INCLUIDOS LOS EXTRACTOS TINTÓREOS,",
+      "subheadings": [
+        {
+          "code": "3203.00.11",
+          "description": "Hemateína"
+        },
+        {
+          "code": "3203.00.11",
+          "description": "000M Hemateína 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3203.00.12",
+          "description": "Fisetina"
+        },
+        {
+          "code": "3203.00.12",
+          "description": "000V Fisetina 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3203.00.13",
+          "description": "Morina"
+        },
+        {
+          "code": "3203.00.13",
+          "description": "000C Morina 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3203.00.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3203.00.19",
+          "description": "100D Enocianina 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3203.00.19",
+          "description": "200J Clorofila 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3203.00.19",
+          "description": "300P Xantófila 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3203.00.19",
+          "description": "400V Anís natural 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3203.00.19",
+          "description": "500A Bixina (achiote) 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3203.00.19",
+          "description": "900X Las demás 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3203.00.21",
+          "description": "Carmín de cochinilla"
+        },
+        {
+          "code": "3203.00.21",
+          "description": "000X Carmín de cochinilla 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3203.00.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3203.00.29",
+          "description": "000H Las demás 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3203.00.30",
+          "description": "Preparaciones a que se refiere la Nota 3 de este Capítulo, a base de materias colorantes de origen vegetal o animal"
+        },
+        {
+          "code": "3203.00.30",
+          "description": "100E A base de materias colorantes vegetales 10.00 10.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3203.00.30",
+          "description": "200K A base de materias colorantes animales 10.00 10.00 3.00 LA 3.00 2.50"
+        }
+      ]
+    },
+    {
+      "code": "3204",
+      "description": "MATERIAS COLORANTES ORGÁNICAS SINTÉTICAS, AUNQUE SEAN DE CONSTITUCIÓN QUÍMICA DEFINIDA;",
+      "subheadings": [
+        {
+          "code": "3204.1",
+          "description": "Materias colorantes orgánicas sintéticas y preparaciones a que se refiere la Nota 3 de este Capítulo a base de dichas"
+        },
+        {
+          "code": "3204.11.00",
+          "description": "Colorantes dispersos y preparaciones a base de estos colorantes"
+        },
+        {
+          "code": "3204.11.00",
+          "description": "Colorantes dispersos sin mezclar"
+        },
+        {
+          "code": "3204.11.00",
+          "description": "110Y Amarillos 12.00 0.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.11.00",
+          "description": "120B Naranjas 12.00 0.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.11.00",
+          "description": "130E Rojos 12.00 0.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.11.00",
+          "description": "140H Violetas 12.00 0.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.11.00",
+          "description": "150L Azules 12.00 0.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.11.00",
+          "description": "160P Verdes 12.00 0.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.11.00",
+          "description": "170T Marrones 12.00 0.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.11.00",
+          "description": "180W Negros 12.00 0.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.11.00",
+          "description": "200A Colorantes dispersos mezclados entresí, exclusivamente 12.00 0.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.11.00",
+          "description": "900N Los demás 12.00 0.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12",
+          "description": "Colorantes ácidos, incluso metalizados, y preparaciones a base de estos colorantes; colorantes para mordientes y"
+        },
+        {
+          "code": "3204.12.10",
+          "description": "Colorantes ácidos, incluso metalizados, y preparaciones a base de estos colorantes"
+        },
+        {
+          "code": "3204.12.10",
+          "description": "Colorantes ácidos, incluso metalizados, sin mezclar"
+        },
+        {
+          "code": "3204.12.10",
+          "description": "110V Amarillos 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.10",
+          "description": "120Y Naranjas 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.10",
+          "description": "130B Rojos 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.10",
+          "description": "140E Violetas 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.10",
+          "description": "150H Azules 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.10",
+          "description": "160L Verdes 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.10",
+          "description": "170P Marrones 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.10",
+          "description": "180T Negros 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.10",
+          "description": "200X Colorantes ácidos, incluso metalizados, mezclados entresí, exclusivamente 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.10",
+          "description": "900K Los demás 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.20",
+          "description": "Colorantes para mordientes y preparaciones a base de estos colorantes"
+        },
+        {
+          "code": "3204.12.20",
+          "description": "Colorantes para mordientes sin mezclar"
+        },
+        {
+          "code": "3204.12.20",
+          "description": "110E Amarillos 12.00 12.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.20",
+          "description": "120H Naranjas 12.00 12.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.20",
+          "description": "130L Rojos 12.00 12.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.20",
+          "description": "140P Violetas 12.00 12.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.20",
+          "description": "150T Azules 12.00 12.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.20",
+          "description": "160W Verdes 12.00 12.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.20",
+          "description": "170Z Marrones 12.00 12.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.20",
+          "description": "180C Negros 12.00 12.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.20",
+          "description": "200G Colorantes para mordientes mezclados entre sí, exclusivamente 12.00 12.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.12.20",
+          "description": "900V Los demás 12.00 12.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.13.00",
+          "description": "Colorantes básicos y preparaciones a base de estos colorantes"
+        },
+        {
+          "code": "3204.13.00",
+          "description": "Colorantes básicos sin mezclar"
+        },
+        {
+          "code": "3204.13.00",
+          "description": "110X Amarillos 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.13.00",
+          "description": "120A Naranjas 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.13.00",
+          "description": "130D Rojos 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.13.00",
+          "description": "140G Violetas 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.13.00",
+          "description": "150K Azules 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.13.00",
+          "description": "160N Verdes 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.13.00",
+          "description": "170R Marrones 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.13.00",
+          "description": "180V Negros 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.13.00",
+          "description": "200Z Colorantes básicos mezclados entresí, exclusivamente 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.13.00",
+          "description": "900M Los demás 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.14.00",
+          "description": "Colorantes directos y preparaciones a base de estos colorantes"
+        },
+        {
+          "code": "3204.14.00",
+          "description": "Colorantes directos sin mezclar"
+        },
+        {
+          "code": "3204.14.00",
+          "description": "110J Amarillos 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.14.00",
+          "description": "120M Naranjas 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.14.00",
+          "description": "130Q Rojos 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.14.00",
+          "description": "140U Violetas 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.14.00",
+          "description": "150X Azules 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.14.00",
+          "description": "160A Verdes 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.14.00",
+          "description": "170D Marrones 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.14.00",
+          "description": "180G Negros 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.14.00",
+          "description": "200L Colorantes directos mezclados entresí, exclusivamente 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.14.00",
+          "description": "900Z Los demás 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.15",
+          "description": "Colorantes a la tina o a la cuba (incluidos los utilizables directamente como colorantes pigmentarios) y"
+        },
+        {
+          "code": "3204.15.10",
+          "description": "«Índigo blue» según Colour Index 73000"
+        },
+        {
+          "code": "3204.15.10",
+          "description": "000X 'índigo blue' según Colour Index 73000 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.15.20",
+          "description": "Dibenzantrona"
+        },
+        {
+          "code": "3204.15.20",
+          "description": "000G Dibenzantrona 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3204.15.30",
+          "description": "12,12-Dimetoxidibenzantrona"
+        },
+        {
+          "code": "3204.15.30",
+          "description": "000R 12,12-Dimetoxidibenzantrona 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "3204.15.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3204.15.90",
+          "description": "Colorantes a la tina o a la cuba (incluidos los utilizados directamente como colorantes pigmentarios) sin mezclar"
+        },
+        {
+          "code": "3204.15.90",
+          "description": "110J Amarillos 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.15.90",
+          "description": "120M Naranjas 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.15.90",
+          "description": "130Q Rojos 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.15.90",
+          "description": "140U Violetas 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.15.90",
+          "description": "150X Azules 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.15.90",
+          "description": "160A Verdes 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.15.90",
+          "description": "170D Marrones 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.15.90",
+          "description": "180G Negros 14.00 14.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3204.15.90",
+          "description": "200L Colorantes a la tina o a la cuba (incluidos los utilizados directamente como colorantes pigmentarios) mezclados entresí,"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LA 3.00 2.50",
+      "subheadings": []
+    },
+    {
+      "code": "3205",
+      "description": "LACAS COLORANTES; PREPARACIONES A QUE SE REFIERE LA NOTA 3 DE ESTE CAPÍTULO A BASE DE",
+      "subheadings": [
+        {
+          "code": "3205.00.00",
+          "description": "Lacas colorantes; preparaciones a que se refiere la Nota 3 de este Capítulo a base de lacas colorantes"
+        },
+        {
+          "code": "3205.00.00",
+          "description": "100M Lacas colorantes 12.00 12.00 3.00 LA 3.00 2.50"
+        },
+        {
+          "code": "3205.00.00",
+          "description": "200T Preparaciones 12.00 12.00 3.00 LA 3.00 2.50"
+        }
+      ]
+    },
+    {
+      "code": "3206",
+      "description": "LAS DEMÁS MATERIAS COLORANTES; PREPARACIONES A QUE SE REFIERE LA NOTA 3 DE ESTE CAPÍTULO,",
+      "subheadings": [
+        {
+          "code": "3206.1",
+          "description": "Pigmentos y preparaciones a base de dióxido de titanio:"
+        },
+        {
+          "code": "3206.11",
+          "description": "Con un contenido de dióxido de titanio superior o igual al 80 % en peso, calculado sobre materia seca"
+        },
+        {
+          "code": "3206.11.10",
+          "description": "Pigmentos tipo rutilo"
+        },
+        {
+          "code": "3206.11.10",
+          "description": "100R Con tamaño promedio de particula superior o igual a 0,6 micrometros, con adicion de modificadores 12.00 8.00 3.00 LA 3.00 1.50"
+        },
+        {
+          "code": "3206.11.10",
+          "description": "200X Los demas, comprendidos en la Ley 25.174 (Malla antigranizo-materia prima), sus normas modificatorias y"
+        }
+      ]
+    },
+    {
+      "code": "1200",
+      "description": "0.00 3.00 LA 3.00 1.50",
+      "subheadings": []
+    },
+    {
+      "code": "1200",
+      "description": "0.00 3.00 LA 3.00 2.50",
+      "subheadings": []
+    },
+    {
+      "code": "3207",
+      "description": "PIGMENTOS, OPACIFICANTES Y COLORES PREPARADOS, COMPOSICIONES VITRIFICABLES, ENGOBES,",
+      "subheadings": [
+        {
+          "code": "3207.10",
+          "description": "Pigmentos, opacificantes y colores preparados y preparaciones similares"
+        },
+        {
+          "code": "3207.10.10",
+          "description": "A base de circonio o de sus sales"
+        },
+        {
+          "code": "3207.10.10",
+          "description": "000T A base de circonio o de sus sales 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3207.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3207.10.90",
+          "description": "100B Pigmentos 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3207.10.90",
+          "description": "200G Opacificantes 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3207.10.90",
+          "description": "900V Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3207.20",
+          "description": "Composiciones vitrificables, engobes y preparaciones similares"
+        },
+        {
+          "code": "3207.20.10",
+          "description": "Engobes"
+        },
+        {
+          "code": "3207.20.10",
+          "description": "000G Engobes 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3207.20.91",
+          "description": "Con un contenido de plata superior o igual al 25 % en peso o de bismuto superior o igual al 40 % en peso, de los tipos"
+        },
+        {
+          "code": "3207.20.91",
+          "description": "000T Con un contenido de plata superior o igual al 25 % en peso o de bismuto superior o igual al 40 % en peso, de los tipos"
+        },
+        {
+          "code": "3207.20.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "3207.20.99",
+          "description": "000D Las demás 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3207.30.00",
+          "description": "Abrillantadores (lustres) líquidos y preparaciones similares"
+        },
+        {
+          "code": "3207.30.00",
+          "description": "000L -Abrillantadores (lustres) líquidos y preparaciones similares 12.00 12.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3207.40",
+          "description": "Frita de vidrio y demás vidrios, en polvo, gránulos, copos o escamillas"
+        },
+        {
+          "code": "3207.40.10",
+          "description": "Frita de vidrio"
+        },
+        {
+          "code": "3207.40.10",
+          "description": "000K Frita de vidrio 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3207.40.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3207.40.90",
+          "description": "000N Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3208",
+      "description": "PINTURAS Y BARNICES A BASE DE POLÍMEROS SINTÉTICOS O NATURALES MODIFICADOS, DISPERSOS O",
+      "subheadings": [
+        {
+          "code": "3208.10",
+          "description": "A base de poliésteres"
+        },
+        {
+          "code": "3208.10.10",
+          "description": "Pinturas"
+        },
+        {
+          "code": "3208.10.10",
+          "description": "000L Pinturas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.10.20",
+          "description": "Barnices"
+        },
+        {
+          "code": "3208.10.20",
+          "description": "000W Barnices 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.10.30",
+          "description": "Disoluciones definidas en la Nota 4 de este Capítulo"
+        },
+        {
+          "code": "3208.10.30",
+          "description": "000F Disoluciones definidas en la Nota 4 de este Capítulo 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.20",
+          "description": "A base de polímeros acrílicos o vinílicos"
+        },
+        {
+          "code": "3208.20.11",
+          "description": "A base de polímeros acrílicos, presentados en surtidos definidos en la Nota 3 de la Sección VI, de los tipos utilizados"
+        },
+        {
+          "code": "3208.20.11",
+          "description": "000H A base de polímeros acrílicos, presentados en surtidos definidos en la Nota 3 de la Sección VI, de los tipos utilizados"
+        },
+        {
+          "code": "3208.20.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3208.20.19",
+          "description": "100Z A base de polímeros acrílicos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.20.19",
+          "description": "200E A base de polímeros vinílicos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.20.20",
+          "description": "Barnices"
+        },
+        {
+          "code": "3208.20.20",
+          "description": "100Q A base de polímeros acrílicos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.20.20",
+          "description": "200W A base de polímeros vinílicos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.20.30",
+          "description": "Disoluciones definidas en la Nota 4 de este Capítulo"
+        },
+        {
+          "code": "3208.20.30",
+          "description": "000V Disoluciones definidas en la Nota 4 de este Capítulo 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "Pinturas"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "A base de resinas epoxi"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "110H Que contengan exclusivamente polvo de cinc como elemento protector 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "120L Que contengan pigmentos inhibidores de la oxidación (por ejemplo: minio) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "130P Que contengan mineral bituminoso 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "140T Esmaltes 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "190J Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "200K A base de resinas fenólicas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "A base de caucho sintético"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "310U Clorado 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "390V Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "A base de poliuretanos"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "410Z Esmaltes 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "490A Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "500B A base de siliconas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.10",
+          "description": "900Y Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.21",
+          "description": "A base de derivados de la celulosa"
+        },
+        {
+          "code": "3208.90.21",
+          "description": "000R A base de derivados de la celulosa 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3208.90.29",
+          "description": "100H A base de resinas epoxi 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.29",
+          "description": "200N A base de resinas fenólicas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.29",
+          "description": "300U A base de poliuretanos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.29",
+          "description": "900B Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.31",
+          "description": "De siliconas"
+        },
+        {
+          "code": "3208.90.31",
+          "description": "000B De siliconas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.39",
+          "description": "Las demás"
+        },
+        {
+          "code": "3208.90.39",
+          "description": "200Y De poliisocianatos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.39",
+          "description": "300D De resinas epoxi 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3208.90.39",
+          "description": "900L Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3209",
+      "description": "PINTURAS Y BARNICES A BASE DE POLÍMEROS SINTÉTICOS O NATURALES MODIFICADOS, DISPERSOS O",
+      "subheadings": [
+        {
+          "code": "3209.10",
+          "description": "A base de polímeros acrílicos o vinílicos"
+        },
+        {
+          "code": "3209.10.10",
+          "description": "Pinturas"
+        },
+        {
+          "code": "3209.10.10",
+          "description": "100K A base de polímeros acrílicos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3209.10.10",
+          "description": "200Q A base de polímeros vinilicos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3209.10.20",
+          "description": "Barnices"
+        },
+        {
+          "code": "3209.10.20",
+          "description": "100V A base de polímeros acrílicos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3209.10.20",
+          "description": "200A A base de polímeros vinílicos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3209.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3209.90.11",
+          "description": "A base de politetrafluoroetileno"
+        },
+        {
+          "code": "3209.90.11",
+          "description": "000A A base de politetrafluoroetileno 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3209.90.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3209.90.19",
+          "description": "100R A base de resinas epoxi 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3209.90.19",
+          "description": "200X A base de poliuretanos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3209.90.19",
+          "description": "910N A base de polímeros sintéticos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3209.90.19",
+          "description": "990P Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3209.90.20",
+          "description": "Barnices"
+        },
+        {
+          "code": "3209.90.20",
+          "description": "100H A base de resinas epoxi 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3209.90.20",
+          "description": "200N A base de poliuretanos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3209.90.20",
+          "description": "900B Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3210",
+      "description": "LAS DEMÁS PINTURAS Y BARNICES; PIGMENTOS AL AGUA PREPARADOS DE LOS TIPOS UTILIZADOS PARA",
+      "subheadings": [
+        {
+          "code": "3210.00.10",
+          "description": "Pinturas"
+        },
+        {
+          "code": "3210.00.10",
+          "description": "100A A base de silicatos, al agua 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3210.00.10",
+          "description": "200F Bituminosas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3210.00.10",
+          "description": "900U Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3210.00.20",
+          "description": "Barnices"
+        },
+        {
+          "code": "3210.00.20",
+          "description": "000E Barnices 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3210.00.30",
+          "description": "Pigmentos al agua preparados de los tipos utilizados para el acabado del cuero"
+        },
+        {
+          "code": "3210.00.30",
+          "description": "000P Pigmentos al agua preparados de los tipos utilizados para el acabado del cuero 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3211",
+      "description": "SECATIVOS PREPARADOS",
+      "subheadings": [
+        {
+          "code": "3211.00.00",
+          "description": "Secativos preparados"
+        },
+        {
+          "code": "3211.00.00",
+          "description": "000D SECATIVOS PREPARADOS. 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3212",
+      "description": "PIGMENTOS (INCLUIDOS EL POLVO Y ESCAMILLAS METÁLICOS) DISPERSOS EN MEDIOS NO ACUOSOS,",
+      "subheadings": [
+        {
+          "code": "3212.10.00",
+          "description": "Hojas para el marcado a fuego"
+        },
+        {
+          "code": "3212.10.00",
+          "description": "000L -Hojas para el marcado a fuego 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3212.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3212.90.10",
+          "description": "Aluminio en polvo o en escamillas, empastado con disolventes del tipo hidrocarburos, con un contenido de aluminio"
+        },
+        {
+          "code": "3212.90.10",
+          "description": "100P En polvo de grano esférico que presente una distribución de particulas inferior o igual a 60 micrómetros, con un"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "3213",
+      "description": "COLORES PARA LA PINTURA ARTÍSTICA, LA ENSEÑANZA, LA PINTURA DE CARTELES, PARA MATIZAR O",
+      "subheadings": [
+        {
+          "code": "3213.10.00",
+          "description": "Colores en surtidos"
+        },
+        {
+          "code": "3213.10.00",
+          "description": "100K Productos alcanzados por la Res. 163/2005 SCT 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3213.10.00",
+          "description": "900D Los demás 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3213.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3213.90.00",
+          "description": "100Y Productos alcanzados por la Res. 163/2005 SCT 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3213.90.00",
+          "description": "900R Los demás 14.00 14.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "3214",
+      "description": "MASILLA, CEMENTOS DE RESINA Y DEMÁS MÁSTIQUES; PLASTES (ENDUIDOS) UTILIZADOS EN PINTURA;",
+      "subheadings": [
+        {
+          "code": "3214.10",
+          "description": "Masilla, cementos de resina y demás mástiques; plastes (enduidos) utilizados en pintura"
+        },
+        {
+          "code": "3214.10.10",
+          "description": "Masilla, cementos de resina y demás mástiques"
+        },
+        {
+          "code": "3214.10.10",
+          "description": "100N Cementos de resina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3214.10.10",
+          "description": "Mastiques a base de materias plásticas"
+        },
+        {
+          "code": "3214.10.10",
+          "description": "210X A base de poliesteres no saturados 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3214.10.10",
+          "description": "290Y Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3214.10.10",
+          "description": "300Z Mastiques a base de caucho 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3214.10.10",
+          "description": "400E Mastiques a base de aceites 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3214.10.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "3214.10.10",
+          "description": "910K A base de poliesteres no saturados 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3214.10.10",
+          "description": "990L Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3214.10.20",
+          "description": "Plastes (enduidos) utilizados en pintura"
+        },
+        {
+          "code": "3214.10.20",
+          "description": "000T Plastes (enduídos) utilizados en pintura 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3214.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3214.90.00",
+          "description": "000L -Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3215",
+      "description": "TINTAS DE IMPRIMIR, TINTAS DE ESCRIBIR O DE DIBUJAR Y DEMÁS TINTAS, INCLUSO CONCENTRADAS O",
+      "subheadings": [
+        {
+          "code": "3215.1",
+          "description": "Tintas de imprimir:"
+        },
+        {
+          "code": "3215.11.00",
+          "description": "Negras"
+        },
+        {
+          "code": "3215.11.00",
+          "description": "100J Presentadas en pasta 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.11.00",
+          "description": "900C Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "100E Tintas de seguridad para impresión de papel moneda 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "Con una concentración de materia colorante inferior o igual al 10% en peso"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "911D Disueltas en hidrocarburos alifáticos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "912F Disueltas en hidrocarburos aromáticos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "913H Disueltas en monoalcoholes acrílicos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "914K Disueltas en dioles acrílicos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "915M Disueltas en éteres-dioles exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "916P Disueltas en cetonas acíclicas exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "917R Disueltas en ésteres del ácido acético exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "918U Disueltas mayoritariamente en uno de de los disolventes y excipientes mencionados en las posiciones SIM"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "919W Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "Con una concentración de materia colorante superior al 10% pero inferior o igual al 20% en peso"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "921G Disueltas en hidrocarburos alifáticos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "922J Disueltas en hidrocarburos aromáticos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "923L Disueltas en monoalcoholes acrílicos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "924N Disueltas en dioles acrílicos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "925Q Disueltas en éteres-dioles exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "926T Disueltas en cetonas acíclicas exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "927V Disueltas en ésteres del ácido acético exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "928X Disueltas mayoritariamente en uno de los disolventes y excipientes mencionados en las posiciones SIM precedentes,"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "929Z Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "Con una concentración de materia colorante superior al 20% pero inferior o igual al 30% en peso"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "931K Disueltas en hidrocarburos alifáticos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "932M Disueltas en hidrocarburos aromáticos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "933P Disueltas en monoalcoholes acrílicos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "934R Disueltas en dioles acrílicos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "935U Disueltas en éteres-dioles exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "936W Disueltas en cetonas acíclicas exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "937Y Disueltas en ésteres del ácido acético exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "938A Disueltas mayoritariamente en uno de los disolventes y excipientes mencionados en las posiciones SIM precedentes,"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "939C Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "Con una concentración de materia colorante superior al 30% pero inferior o igual al 40% en peso"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "941N Disueltas en hidrocarburos alifáticos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "942Q Disueltas en hidrocarburos aromáticos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "943T Disueltas en monoalcoholes acrílicos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "944V Disueltas en dioles acrílicos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "945X Disueltas en éteres-dioles exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "946Z Disueltas en cetonas acíclicas exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "947B Disueltas en ésteres del ácido acético exclusivamente y que contengan mayoritariamente uno de los excipientes 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "948D Disueltas mayoritariamente en uno de los disolventes y excipientes mencionados en las posiciones SIM precedentes,"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "949F Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "Con una concentración de materia colorante superior al 40% pero inferior o igual al 50% en peso"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "951R Disueltas en hidrocarburos alifáticos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "952U Disueltas en hidrocarburos aromáticos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "953W Disueltas en monoalcoholes acrílicos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "954Y Disueltas en dioles acrílicos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "955A Disueltas en éteres-dioles exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "956C Disueltas en cetonas acíclicas exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "957E Disueltas en ésteres del ácido acético exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "958G Disueltas mayoritariamente en uno de los disolventes y excipientes mencionados en las posiciones SIM precedentes,"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "959J Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "Con una concentración de materia colorante superior al 50% pero inferior o igual al 60% en peso"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "961V Disueltas en hidrocarburos alifáticos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "962X Disueltas en hidrocarburos aromáticos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "963Z Disueltas en monoalcoholes acrílicos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "964B Disueltas en dioles acrílicos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "965D Disueltas en éteres-dioles acrílicos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "966F Disueltas en cetonas acíclicas exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "967H Disueltas en ésteres del ácido acético exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "968K Disueltas mayoritariamente en uno de los disolventes y excipientes mencionados en las posiciones SIM precedentes,"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "969M Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "Con una concentración de materia colorante superior al 60% pero inferior o igual al 70% en peso"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "971Y Disueltas en hidrocarburos alifáticos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "972A Disueltas en hidrocarburos aromáticos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "973C Disueltas en monoalcoholes acrílicos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "974E Disueltas en dioles acrílicos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "975G Disueltas en éteres-dioles exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "976J Disueltas en cetonas acíclicas exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "977L Disueltas en ésteres del ácido acético exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "978N Disueltas mayoritariamente en uno de los disolventes y excipientes mencionados en las posiciones SIM precedentes,"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "979Q Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "Con una concentración de materia colorante superior al 70% pero inferior o igual al 80% en peso"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "981B Disueltas en hidrocarburos alifáticos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "982D Disueltas en hidrocarburos aromáticos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "983F Disueltas en monoalcoholes acrílicos exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "984H Disueltas en dioles acrílicos exclusivamente 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "985K Disueltas en éteres-dioles exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "986M Disueltas en cetonas acíclicas exclusivamente y que contengan mayoritariamente uno de los excipientes siguientes:"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "987P Disueltas en ésteres del ácido acético exclusivamente y que contengan mayoritariamente uno de los excipientes"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "988R Disueltas mayoritariamente en uno de los disolventes y excipientes mencionados en las posiciones SIM precedentes,"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "989U Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.19.00",
+          "description": "990C Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3215.90.00",
+          "description": "100K Tintas de escribir o dibujar 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3215.90.00",
+          "description": "900D Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 570
+}

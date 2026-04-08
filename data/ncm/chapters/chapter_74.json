@@ -1,0 +1,977 @@
+{
+  "chapter": "74",
+  "title": "Capítulo 71",
+  "sectionTitle": "CAP. 74 SECCION XV METALES COMUNES Y MANUFACTURAS DE ESTOS METALES Notas. 1. Esta Sección no comprende: a. los colores y",
+  "headings": [
+    {
+      "code": "3207",
+      "description": "a 32.10, 32.12, 32.13 ó 32.15);",
+      "subheadings": []
+    },
+    {
+      "code": "7401",
+      "description": "MATAS DE COBRE; COBRE DE CEMENTACIÓN (COBRE PRECIPITADO)",
+      "subheadings": [
+        {
+          "code": "7401.00.00",
+          "description": "Matas de cobre; cobre de cementación (cobre precipitado)"
+        },
+        {
+          "code": "7401.00.00",
+          "description": "000F MATAS DE COBRE; COBRE DE CEMENTACIÓN (COBRE PRECIPITADO). 6.00 6.00 3.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7402",
+      "description": "COBRE SIN REFINAR; ÁNODOS DE COBRE PARA REFINADO ELECTROLÍTICO",
+      "subheadings": [
+        {
+          "code": "7402.00.00",
+          "description": "Cobre sin refinar; ánodos de cobre para refinado electrolítico"
+        },
+        {
+          "code": "7402.00.00",
+          "description": "000Z COBRE SIN REFINAR; ANODOS DE COBRE PARA REFINADO ELECTROLÍTICO. 6.00 6.00 3.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7403",
+      "description": "COBRE REFINADO Y ALEACIONES DE COBRE, EN BRUTO",
+      "subheadings": [
+        {
+          "code": "7403.1",
+          "description": "Cobre refinado:"
+        },
+        {
+          "code": "7403.11.00",
+          "description": "Cátodos y secciones de cátodos"
+        },
+        {
+          "code": "7403.11.00",
+          "description": "000U --Cátodos y secciones de cátodos 6.00 6.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "7403.12.00",
+          "description": "Barras para alambrón («wire-bars»)"
+        },
+        {
+          "code": "7403.12.00",
+          "description": "000F --Barras para alambrón (\"wire-bars\") 6.00 6.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "7403.13.00",
+          "description": "Tochos"
+        },
+        {
+          "code": "7403.13.00",
+          "description": "000T --Tochos 6.00 6.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "7403.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7403.19.00",
+          "description": "000P --Los demás 6.00 6.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "7403.2",
+          "description": "Aleaciones de cobre:"
+        },
+        {
+          "code": "7403.21.00",
+          "description": "A base de cobre-cinc (latón)"
+        },
+        {
+          "code": "7403.21.00",
+          "description": "000H --A base de cobre-cinc (latón) 6.00 6.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "7403.22.00",
+          "description": "A base de cobre-estaño (bronce)"
+        },
+        {
+          "code": "7403.22.00",
+          "description": "000V --A base de cobre-estaño (bronce) 6.00 6.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "7403.29.00",
+          "description": "Las demás aleaciones de cobre (excepto las aleaciones madre de la partida 7405)"
+        },
+        {
+          "code": "7403.29.00",
+          "description": "000D --Las demás aleaciones de cobre (excepto las aleaciones madre de la partida 74.05) 6.00 6.00 3.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7404",
+      "description": "DESPERDICIOS Y DESECHOS, DE COBRE",
+      "subheadings": [
+        {
+          "code": "7404.00.00",
+          "description": "Desperdicios y desechos, de cobre"
+        },
+        {
+          "code": "7404.00.00",
+          "description": "100R De cobre refinado 2.00 2.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "7404.00.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7404.00.00",
+          "description": "910N A base de cobre-cinc (latón) 2.00 2.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "7404.00.00",
+          "description": "920R A base de cobre-estaño (bronce) 2.00 2.00 3.00 LA 12.00 0.00"
+        },
+        {
+          "code": "7404.00.00",
+          "description": "990P Los demás 2.00 2.00 3.00 LA 12.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7405",
+      "description": "ALEACIONES MADRE DE COBRE",
+      "subheadings": [
+        {
+          "code": "7405.00.00",
+          "description": "Aleaciones madre de cobre"
+        },
+        {
+          "code": "7405.00.00",
+          "description": "000E ALEACIONES MADRE DE COBRE. 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7406",
+      "description": "POLVO Y ESCAMILLAS, DE COBRE",
+      "subheadings": [
+        {
+          "code": "7406.10.00",
+          "description": "Polvo de estructura no laminar"
+        },
+        {
+          "code": "7406.10.00",
+          "description": "000M -Polvo de estructura no laminar 6.00 6.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7406.20.00",
+          "description": "Polvo de estructura laminar; escamillas"
+        },
+        {
+          "code": "7406.20.00",
+          "description": "000B -Polvo de estructura laminar; escamillas 6.00 6.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7407",
+      "description": "BARRAS Y PERFILES, DE COBRE",
+      "subheadings": [
+        {
+          "code": "7407.10",
+          "description": "De cobre refinado"
+        },
+        {
+          "code": "7407.10.10",
+          "description": "Barras"
+        },
+        {
+          "code": "7407.10.10",
+          "description": "000Q Barras 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7407.10.21",
+          "description": "Huecos"
+        },
+        {
+          "code": "7407.10.21",
+          "description": "000H Huecos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7407.10.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "7407.10.29",
+          "description": "000U Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7407.2",
+          "description": "De aleaciones de cobre:"
+        },
+        {
+          "code": "7407.21",
+          "description": "A base de cobre-cinc (latón)"
+        },
+        {
+          "code": "7407.21.10",
+          "description": "Barras"
+        },
+        {
+          "code": "7407.21.10",
+          "description": "000R Barras 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7407.21.20",
+          "description": "Perfiles"
+        },
+        {
+          "code": "7407.21.20",
+          "description": "000B Perfiles 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7407.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "7407.29.10",
+          "description": "Barras"
+        },
+        {
+          "code": "7407.29.10",
+          "description": "000M Barras 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7407.29.21",
+          "description": "Huecos"
+        },
+        {
+          "code": "7407.29.21",
+          "description": "000E Huecos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7407.29.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "7407.29.29",
+          "description": "000Q Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7408",
+      "description": "ALAMBRE DE COBRE",
+      "subheadings": [
+        {
+          "code": "7408.1",
+          "description": "De cobre refinado:"
+        },
+        {
+          "code": "7408.11.00",
+          "description": "Con la mayor dimensión de la sección transversal superior a 6 mm"
+        },
+        {
+          "code": "7408.11.00",
+          "description": "000L --Con la mayor dimensión de la sección transversal superior a 6 mm 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7408.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7408.19.00",
+          "description": "000G --Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7408.2",
+          "description": "De aleaciones de cobre:"
+        },
+        {
+          "code": "7408.21.00",
+          "description": "A base de cobre-cinc (latón)"
+        },
+        {
+          "code": "7408.21.00",
+          "description": "000A --A base de cobre-cinc (latón) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7408.22.00",
+          "description": "A base de cobre-níquel (cuproníquel) o de cobre-níquel-cinc (alpaca)"
+        },
+        {
+          "code": "7408.22.00",
+          "description": "000M --A base de cobre-níquel (cuproníquel) o de cobre-níquel-cinc (alpaca) 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7408.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "7408.29.11",
+          "description": "Fosforoso"
+        },
+        {
+          "code": "7408.29.11",
+          "description": "000N Fosforoso 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7408.29.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "7408.29.19",
+          "description": "000Z Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7408.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7408.29.90",
+          "description": "000J Los demás 12.00 12.00 3.00 LNA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7409",
+      "description": "CHAPAS Y TIRAS, DE COBRE, DE ESPESOR SUPERIOR A 0,15 MM",
+      "subheadings": [
+        {
+          "code": "7409.1",
+          "description": "De cobre refinado:"
+        },
+        {
+          "code": "7409.11.00",
+          "description": "Enrolladas"
+        },
+        {
+          "code": "7409.11.00",
+          "description": "000E --Enrolladas 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7409.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7409.19.00",
+          "description": "000A --Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7409.2",
+          "description": "De aleaciones a base de cobre-cinc (latón):"
+        },
+        {
+          "code": "7409.21.00",
+          "description": "Enrolladas"
+        },
+        {
+          "code": "7409.21.00",
+          "description": "000U --Enrolladas 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7409.29.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7409.29.00",
+          "description": "000P --Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7409.3",
+          "description": "De aleaciones a base de cobre-estaño (bronce):"
+        },
+        {
+          "code": "7409.31",
+          "description": "Enrolladas"
+        },
+        {
+          "code": "7409.31.11",
+          "description": "Con una capa intermedia de aleación cobre-estaño o cobre-estaño-plomo, aplicada por sinterización"
+        },
+        {
+          "code": "7409.31.11",
+          "description": "000A Con una capa intermedia de aleación cobre-estaño o cobre-estaño-plomo, aplicada por sinterización 2.00 2.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7409.31.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "7409.31.19",
+          "description": "000L Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7409.31.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7409.31.90",
+          "description": "000W Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7409.39.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7409.39.00",
+          "description": "000D --Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7409.40",
+          "description": "De aleaciones a base de cobre-níquel (cuproníquel) o de cobre-níquel-cinc (alpaca)"
+        },
+        {
+          "code": "7409.40.10",
+          "description": "Enrolladas"
+        },
+        {
+          "code": "7409.40.10",
+          "description": "000V Enrolladas 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7409.40.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7409.40.90",
+          "description": "000Y Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7409.90.00",
+          "description": "De las demás aleaciones de cobre"
+        },
+        {
+          "code": "7409.90.00",
+          "description": "000F -De las demás aleaciones de cobre 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7410",
+      "description": "HOJAS Y TIRAS, DELGADAS, DE COBRE (INCLUSO IMPRESAS O FIJADAS SOBRE PAPEL, CARTÓN, PLÁSTICO",
+      "subheadings": [
+        {
+          "code": "7410.1",
+          "description": "Sin soporte:"
+        },
+        {
+          "code": "7410.11",
+          "description": "De cobre refinado"
+        },
+        {
+          "code": "7410.11.12",
+          "description": "De espesor inferior o igual a 0,04 mm y una resistividad eléctrica inferior o igual a 0,017241 ohmmm2/m"
+        },
+        {
+          "code": "7410.11.12",
+          "description": "000J De espesor inferior o igual a 0,04 mm y una resistividad eléctrica inferior o igual a 0,017241 ohm.mm<sup>2</sup>/m 0.00 0.00 0.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7410.11.13",
+          "description": "Las demás, de espesor inferior o igual a 0,04 mm"
+        },
+        {
+          "code": "7410.11.13",
+          "description": "000R Las demás. de espesor inferior o iguala a 0,04 mm 12.00 12.00 0.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7410.11.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "7410.11.19",
+          "description": "000M Las demás 12.00 12.00 0.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7410.11.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7410.11.90",
+          "description": "000X Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7410.12.00",
+          "description": "De aleaciones de cobre"
+        },
+        {
+          "code": "7410.12.00",
+          "description": "000W --De aleaciones de cobre 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7410.2",
+          "description": "Con soporte:"
+        },
+        {
+          "code": "7410.21",
+          "description": "De cobre refinado"
+        },
+        {
+          "code": "7410.21.10",
+          "description": "Con soporte aislante de resina epoxi y fibra de vidrio, de los tipos utilizados para circuitos impresos"
+        },
+        {
+          "code": "7410.21.10",
+          "description": "000H Con soporte aislante de resina epoxi y fibra de vidrio, de los tipos utilizados para circuitos impresos 4.00 0.00 0.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7410.21.20",
+          "description": "Con espesor superior a 0,012 mm, sobre soporte de poliéster o poliimida y con espesor total, incluido el soporte,"
+        },
+        {
+          "code": "7410.21.20",
+          "description": "000T Con espesor superior a 0,012 mm, sobre soporte de poliéster o poliimida y con espesor total, incluido el soporte,"
+        },
+        {
+          "code": "7410.21.30",
+          "description": "Con soporte aislante de resina fenólica y papel, de los tipos utilizados para circuitos impresos"
+        },
+        {
+          "code": "7410.21.30",
+          "description": "000C Con soporte aislante de resina fenólica y papel, de los tipos utilizados para circuitos impresos 4.00 0.00 0.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7410.21.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7410.21.90",
+          "description": "000L Las demás 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7410.22.00",
+          "description": "De aleaciones de cobre"
+        },
+        {
+          "code": "7410.22.00",
+          "description": "000K --De aleaciones de cobre 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7411",
+      "description": "TUBOS DE COBRE",
+      "subheadings": [
+        {
+          "code": "7411.10",
+          "description": "De cobre refinado"
+        },
+        {
+          "code": "7411.10.10",
+          "description": "Sin aletas ni ranuras"
+        },
+        {
+          "code": "7411.10.10",
+          "description": "100F Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.10.10",
+          "description": "900Z Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7411.10.90",
+          "description": "100J Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.10.90",
+          "description": "900C Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.2",
+          "description": "De aleaciones de cobre:"
+        },
+        {
+          "code": "7411.21",
+          "description": "A base de cobre-cinc (latón)"
+        },
+        {
+          "code": "7411.21.10",
+          "description": "Sin aletas ni ranuras"
+        },
+        {
+          "code": "7411.21.10",
+          "description": "100G Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.21.10",
+          "description": "900A Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.21.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7411.21.90",
+          "description": "100K Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.21.90",
+          "description": "900D Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.22",
+          "description": "A base de cobre-níquel (cuproníquel) o de cobre-níquel-cinc (alpaca)"
+        },
+        {
+          "code": "7411.22.10",
+          "description": "Sin aletas ni ranuras"
+        },
+        {
+          "code": "7411.22.10",
+          "description": "100U Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.22.10",
+          "description": "900M Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.22.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7411.22.90",
+          "description": "100X Conformados, en dimensiones apropiadas como piezas de vehículos automóviles 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.22.90",
+          "description": "900Q Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "7411.29.10",
+          "description": "Sin aletas ni ranuras"
+        },
+        {
+          "code": "7411.29.10",
+          "description": "100C Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.29.10",
+          "description": "900W Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7411.29.90",
+          "description": "100F Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7411.29.90",
+          "description": "900Z Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7412",
+      "description": "ACCESORIOS DE TUBERÍA (POR EJEMPLO: EMPALMES (RACORES), CODOS, MANGUITOS) DE COBRE",
+      "subheadings": [
+        {
+          "code": "7412.10.00",
+          "description": "De cobre refinado"
+        },
+        {
+          "code": "7412.10.00",
+          "description": "100P Empalmes (racores) 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7412.10.00",
+          "description": "200V Codos y curvas 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7412.10.00",
+          "description": "900H Los demás 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7412.20.00",
+          "description": "De aleaciones de cobre"
+        },
+        {
+          "code": "7412.20.00",
+          "description": "A base de cobre-cinc (latón)"
+        },
+        {
+          "code": "7412.20.00",
+          "description": "110G Empalmes (racores) 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7412.20.00",
+          "description": "120K Codos y curvas 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7412.20.00",
+          "description": "190H Los demás 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7412.20.00",
+          "description": "A base de cobre-estaño (bronce)"
+        },
+        {
+          "code": "7412.20.00",
+          "description": "210M Empalmes (racores) 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7412.20.00",
+          "description": "290N Los demás 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7412.20.00",
+          "description": "900X Los demás 14.00 14.00 3.00 LA 3.00 4.50"
+        }
+      ]
+    },
+    {
+      "code": "7413",
+      "description": "CABLES, TRENZAS Y ARTÍCULOS SIMILARES, DE COBRE, SIN AISLAR PARA ELECTRICIDAD",
+      "subheadings": [
+        {
+          "code": "7413.00.00",
+          "description": "Cables, trenzas y artículos similares, de cobre, sin aislar para electricidad"
+        },
+        {
+          "code": "7413.00.00",
+          "description": "000N CABLES, TRENZAS Y ARTÍCULOS SIMILARES, DE COBRE, SIN AISLAR PARA ELECTRICIDAD. 14.00 14.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7415",
+      "description": "PUNTAS, CLAVOS, CHINCHETAS (CHINCHES), GRAPAS APUNTADAS Y ARTÍCULOS SIMILARES, DE COBRE, O",
+      "subheadings": [
+        {
+          "code": "7415.10.00",
+          "description": "Puntas y clavos, chinchetas (chinches), grapas apuntadas y artículos similares"
+        },
+        {
+          "code": "7415.10.00",
+          "description": "100V Puntas y clavos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7415.10.00",
+          "description": "200A Chinchetas (chinches) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7415.10.00",
+          "description": "900N Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7415.2",
+          "description": "Los demás artículos sin rosca:"
+        },
+        {
+          "code": "7415.21.00",
+          "description": "Arandelas (incluidas las arandelas de muelle (resorte))"
+        },
+        {
+          "code": "7415.21.00",
+          "description": "100W Arandelas de muelle (resorte) y las demás de seguridad 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7415.21.00",
+          "description": "900P Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7415.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7415.29.00",
+          "description": "100R Remaches parcialmente huecos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7415.29.00",
+          "description": "900K Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7415.3",
+          "description": "Los demás artículos roscados:"
+        },
+        {
+          "code": "7415.33.00",
+          "description": "Tornillos; pernos y tuercas"
+        },
+        {
+          "code": "7415.33.00",
+          "description": "Tornillos"
+        },
+        {
+          "code": "7415.33.00",
+          "description": "110M De diámetro mayor de rosca inferior o igual a 4,2 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7415.33.00",
+          "description": "190N Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7415.33.00",
+          "description": "200P Pernos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7415.33.00",
+          "description": "300V Tuercas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7415.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7415.39.00",
+          "description": "000A --Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7418",
+      "description": "ARTÍCULOS DE USO DOMÉSTICO, HIGIENE O TOCADOR, Y SUS PARTES, DE COBRE; ESPONJAS,",
+      "subheadings": [
+        {
+          "code": "7418.10.00",
+          "description": "Artículos de uso doméstico y sus partes; esponjas, estropajos, guantes y artículos similares para fregar, lustrar o usos"
+        },
+        {
+          "code": "7418.10.00",
+          "description": "Esponjas, estropajos, guantes y artículos similares para fregar, lustrar o usos análogos"
+        },
+        {
+          "code": "7418.10.00",
+          "description": "110D Esponjas 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7418.10.00",
+          "description": "190E Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7418.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7418.10.00",
+          "description": "910X Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7418.10.00",
+          "description": "990Y Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7418.20.00",
+          "description": "Artículos de higiene o tocador, y sus partes"
+        },
+        {
+          "code": "7418.20.00",
+          "description": "100P Partes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7418.20.00",
+          "description": "900H Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7419",
+      "description": "LAS DEMÁS MANUFACTURAS DE COBRE",
+      "subheadings": [
+        {
+          "code": "7419.10.00",
+          "description": "Cadenas y sus partes"
+        },
+        {
+          "code": "7419.10.00",
+          "description": "100U Partes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7419.10.00",
+          "description": "900M Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7419.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "7419.91.00",
+          "description": "Coladas, moldeadas, estampadas o forjadas, pero sin trabajar de otro modo"
+        },
+        {
+          "code": "7419.91.00",
+          "description": "000N --Coladas, moldeadas, estampadas o forjadas, pero sin trabajar de otro modo 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7419.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "7419.99.10",
+          "description": "Telas metálicas de alambre de cobre"
+        },
+        {
+          "code": "7419.99.10",
+          "description": "000U Telas metálicas de alambre de cobre 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7419.99.20",
+          "description": "Redes y rejas, de alambre de cobre; chapas y tiras, extendidas (desplegadas)"
+        },
+        {
+          "code": "7419.99.20",
+          "description": "100J Chapas y tiras, extendidas (desplegadas) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7419.99.20",
+          "description": "900C Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7419.99.30",
+          "description": "Muelles (resortes)"
+        },
+        {
+          "code": "7419.99.30",
+          "description": "000N Muelles (resortes) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7419.99.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7419.99.90",
+          "description": "100C ánodos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7419.99.90",
+          "description": "Depósitos, barriles, cubas y recipientes similares, y sus partes"
+        },
+        {
+          "code": "7419.99.90",
+          "description": "210L Aptos para contener alimentos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7419.99.90",
+          "description": "290M Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7419.99.90",
+          "description": "Discos y cospeles"
+        },
+        {
+          "code": "7419.99.90",
+          "description": "310R Aptos para la acuñación de monedas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7419.99.90",
+          "description": "390T Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7419.99.90",
+          "description": "900W Las demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 234
+}

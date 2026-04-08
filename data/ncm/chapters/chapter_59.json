@@ -1,0 +1,1137 @@
+{
+  "chapter": "59",
+  "title": "Capítulo 14",
+  "sectionTitle": "CAP. 59 SECCION XI MATERIAS TEXTILES Y SUS MANUFACTURAS Notas. 1. Esta Sección no comprende: a. los pelos y cerdas para",
+  "headings": [
+    {
+      "code": "4303",
+      "description": "o 43.04;",
+      "subheadings": []
+    },
+    {
+      "code": "5901",
+      "description": "TELAS RECUBIERTAS DE COLA O MATERIAS AMILÁCEAS, DE LOS TIPOS UTILIZADOS PARA",
+      "subheadings": [
+        {
+          "code": "5901.10.00",
+          "description": "Telas recubiertas de cola o materias amiláceas, de los tipos utilizados para encuadernación, cartonaje, estuchería o"
+        },
+        {
+          "code": "5901.10.00",
+          "description": "000K -Telas recubiertas de cola o materias amiláceas, de los tipos utilizados para encuadernación, cartonaje, estuchería o"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LNA 3.00 6.00",
+      "subheadings": []
+    },
+    {
+      "code": "5902",
+      "description": "NAPAS TRAMADAS PARA NEUMÁTICOS FABRICADAS CON HILADOS DE ALTA TENACIDAD DE NAILON O",
+      "subheadings": [
+        {
+          "code": "5902.10",
+          "description": "De nailon o demás poliamidas"
+        },
+        {
+          "code": "5902.10.10",
+          "description": "Impregnadas, recubiertas o revestidas con caucho"
+        },
+        {
+          "code": "5902.10.10",
+          "description": "000N Impregnadas, recubiertas o revestidas con caucho 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5902.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "5902.10.90",
+          "description": "000R Las demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5902.20.00",
+          "description": "De poliésteres"
+        },
+        {
+          "code": "5902.20.00",
+          "description": "000T -De poliésteres 16.00 10.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5902.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "5902.90.00",
+          "description": "000R -Las demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    },
+    {
+      "code": "5903",
+      "description": "TELAS IMPREGNADAS, RECUBIERTAS, REVESTIDAS O ESTRATIFICADAS CON PLÁSTICO, EXCEPTO LAS DE",
+      "subheadings": [
+        {
+          "code": "5903.10.00",
+          "description": "Con poli(cloruro de vinilo)"
+        },
+        {
+          "code": "5903.10.00",
+          "description": "De peso inferior a 400 g/m2"
+        },
+        {
+          "code": "5903.10.00",
+          "description": "110F Cinta de cierre y fijación (tipo velcro), autoadhesiva 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.10.00",
+          "description": "190G Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.10.00",
+          "description": "200H De peso superior o igual a 400 g/m2 pero inferior a 550 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.10.00",
+          "description": "300N De peso superior o igual a 550 g/m2 pero inferior a 750 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.10.00",
+          "description": "400U De peso superior o igual a 750 g/m2 pero inferior a 1000 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.10.00",
+          "description": "900W Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.20.00",
+          "description": "Con poliuretano"
+        },
+        {
+          "code": "5903.20.00",
+          "description": "De peso inferior a 400 g/m2"
+        },
+        {
+          "code": "5903.20.00",
+          "description": "110V Cinta de cierre y fijación (tipo velcro), autoadhesiva 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.20.00",
+          "description": "190W Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.20.00",
+          "description": "200X De peso superior o igual a 400 g/m2 pero inferior a 550 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.20.00",
+          "description": "300C De peso superior o igual a 550 g/m2 pero inferior a 750 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.20.00",
+          "description": "400H De peso superior o igual a 750 g/m2 pero inferior a 1000 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.20.00",
+          "description": "900K Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "Impregnadas (Res. 1294/99 y 1295/99 MEOSP)"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "110U De peso inferior a 400 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "120X De peso superior o igual a 400 g/m2 pero inferior a 550 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "130A De peso superior o igual a 550 g/m2 pero inferior a 750 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "140D De peso superior o igual a 750 g/m2 pero inferior a 1000 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "190V Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "De peso inferior a 400 g/m2"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "911P Cinta de cierre y fijación (tipo velcro), autoadhesiva 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "919G Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "920Q De peso superior o igual a 400 g/m2 pero inferior a 550 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "930U De peso superior o igual a 550 g/m2 pero inferior a 750 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "940X De peso superior o igual a 750 g/m2 pero inferior a 1000 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5903.90.00",
+          "description": "990N Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    },
+    {
+      "code": "5904",
+      "description": "LINÓLEO, INCLUSO CORTADO; REVESTIMIENTOS PARA EL SUELO FORMADOS POR UN RECUBRIMIENTO O",
+      "subheadings": [
+        {
+          "code": "5904.10.00",
+          "description": "Linóleo"
+        },
+        {
+          "code": "5904.10.00",
+          "description": "000Q -Linóleo 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5904.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5904.90.00",
+          "description": "000D -Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    },
+    {
+      "code": "5905",
+      "description": "REVESTIMIENTOS DE MATERIA TEXTIL PARA PAREDES",
+      "subheadings": [
+        {
+          "code": "5905.00.00",
+          "description": "Revestimientos de materia textil para paredes"
+        },
+        {
+          "code": "5905.00.00",
+          "description": "000V REVESTIMIENTOS DE MATERIA TEXTIL PARA PAREDES. 16.00 16.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    },
+    {
+      "code": "5906",
+      "description": "TELAS CAUCHUTADAS, EXCEPTO LAS DE LA PARTIDA 5902",
+      "subheadings": [
+        {
+          "code": "5906.10.00",
+          "description": "Cintas adhesivas de anchura inferior o igual a 20 cm"
+        },
+        {
+          "code": "5906.10.00",
+          "description": "000C -Cintas adhesivas de anchura inferior o igual a 20 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "De punto"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "110L De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "120P De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "130T De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "140W De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "150Z De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "160C De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "190M Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "210R De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "220V De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "230Y De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "240B De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "250E De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "260H De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "290T Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "910E De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "920H De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "930L De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "940P De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "950T De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "960W De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.91.00",
+          "description": "990F Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "Tejidos de poliéster de alta tenacidad diez por diez o doce por doce hilos por centimetro (10x10 o 12x12 hilos por cm),"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "110G Según las condiciones establecidas en la R.1101/99MEOSP 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "190H Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "911C De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "912E De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "913G De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "914J De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "915L De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "916N De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "919V Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "921F De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "922H De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "923K De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "924M De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "925P De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "926R De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "929Y Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "991D De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "992F De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "993H De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "994K De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "995M De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "996P De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5906.99.00",
+          "description": "999W Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    },
+    {
+      "code": "5907",
+      "description": "LAS DEMÁS TELAS IMPREGNADAS, RECUBIERTAS O REVESTIDAS; LIENZOS PINTADOS PARA",
+      "subheadings": [
+        {
+          "code": "5907.00.00",
+          "description": "Las demás telas impregnadas, recubiertas o revestidas; lienzos pintados para decoraciones de teatro, fondos de"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "Con tundiznos de algodón"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "110Q De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "120U De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "130X De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "140A De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "150D De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "160G De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "190R Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "Con tundiznos de fibras sintéticas o artificiales"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "210W De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "220Z De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "230C De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "240F De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "250J De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "260M De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "290X Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "Con tundiznos de las demás materias textiles"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "310B De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "320E De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "330H De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "340L De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "350P De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "360T De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "390C Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "Con lentejuelas"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "411J De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "412L De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "413N De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "414Q De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "415T De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "416V De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "419B Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "421M De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "422P De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "423R De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "424U De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "425W De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "426Y De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "429E Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "491K De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "492M De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "493P De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "494R De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "495U De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "496W De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "499C Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "Con ceras"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "De algonón"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "511P De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "512R De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "513U De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "514W De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "515Y De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "516A De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "519G Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "521T De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "522V De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "523X De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "524Z De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "525B De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "526D De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "529K Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "De las materias textiles"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "591Q De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "592T De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "593V De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "594X De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "595Z De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "596B De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "599H Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "911L De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "912N De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "913Q De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "914T De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "915V De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "916X De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "919D Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "921P De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "922R De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "923U De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "924W De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "925Y De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "926A De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "929G Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "991M De peso inferior a 200 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "992P De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "993R De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "994U De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "995W De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "996Y De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5907.00.00",
+          "description": "999E Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    },
+    {
+      "code": "5908",
+      "description": "MECHAS DE MATERIA TEXTIL TEJIDA, TRENZADA O DE PUNTO, PARA LÁMPARAS, HORNILLOS, MECHEROS,",
+      "subheadings": [
+        {
+          "code": "5908.00.00",
+          "description": "Mechas de materia textil tejida, trenzada o de punto, para lámparas, hornillos, mecheros, velas o similares; manguitos"
+        },
+        {
+          "code": "5908.00.00",
+          "description": "000A MECHAS DE MATERIA TEXTIL TEJIDA, TRENZADA O DE PUNTO, PARA LÁMPARAS, HORNILLOS, MECHEROS,"
+        }
+      ]
+    },
+    {
+      "code": "5909",
+      "description": "MANGUERAS PARA BOMBAS Y TUBOS SIMILARES, DE MATERIA TEXTIL, INCLUSO CON ARMADURA O",
+      "subheadings": [
+        {
+          "code": "5909.00.00",
+          "description": "Mangueras para bombas y tubos similares, de materia textil, incluso con armadura o accesorios de otras materias"
+        },
+        {
+          "code": "5909.00.00",
+          "description": "000U MANGUERAS PARA BOMBAS Y TUBOS SIMILARES, DE MATERIA TEXTIL, INCLUSO CON ARMADURA O"
+        }
+      ]
+    },
+    {
+      "code": "5910",
+      "description": "CORREAS TRANSPORTADORAS O DE TRANSMISIÓN, DE MATERIA TEXTIL, INCLUSO IMPREGNADAS,",
+      "subheadings": [
+        {
+          "code": "5910.00.00",
+          "description": "Correas transportadoras o de transmisión, de materia textil, incluso impregnadas, recubiertas, revestidas o"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "Sin impregnar, recubrir, revestir ni estratificar:"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "111J De anchura inferior a 10 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "112L De anchura superior o igual a 10 cm pero inferior a 30 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "113N De anchura superior o igual a 30 cm pero inferior a 90 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "114Q De anchura superior o igual a 90 cm pero inferior a 150 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "115T De anchura superior o igual a 150 cm pero inferior a 200 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "119B Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "121M De anchura inferior a 10 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "122P De anchura superior o igual a 10 cm pero inferior a 30 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "123R De anchura superior o igual a 30 cm pero inferior a 90 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "124U De anchura superior o igual a 90 cm pero inferior a 150 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "125W De anchura superior o igual a 150 cm pero inferior a 200 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "129E Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "191K De anchura inferior a 10 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "192M De anchura superior o igual a 10 cm pero inferior a 30 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "193P De anchura superior o igual a 30 cm pero inferior a 90 cm 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "194R De anchura superior o igual a 90 cm pero inferior a 150 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "195U De anchura superior o igual a 150 cm pero inferior a 200 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "199C Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "911C De anchura inferior a 10 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "912E De anchura superior o igual a 10 cm pero inferior a 30 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "913G De anchura superior o igual a 30 cm pero inferior a 90 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "914J De anchura superior o igual a 90 cm pero inferior a 150 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "915L De anchura superior o igual a 150 cm pero inferior a 200 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "919V Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "921F De anchura inferior a 10 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "922H De anchura superior o igual a 10 cm pero inferior a 30 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "923K De anchura superior o igual a 30 cm pero inferior a 90 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "924M De anchura superior o igual a 90 cm pero inferior a 150 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "925P De anchura superior o igual a 150 cm pero inferior a 200 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "929Y Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "De las demás materiales textiles"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "991D De anchura inferior a 10 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "992F De anchura superior o igual a 10 cm pero inferior a 30 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "993H De anchura superior o igual a 30 cm pero inferior a 90 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "994K De anchura superior o igual a 90 cm pero inferior a 150 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "995M De anchura superior o igual a 150 cm pero inferior a 200 cm 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5910.00.00",
+          "description": "999W Los demás 16.00 16.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    },
+    {
+      "code": "5911",
+      "description": "PRODUCTOS Y ARTÍCULOS TEXTILES PARA USOS TÉCNICOS MENCIONADOS EN LA NOTA 7 DE ESTE",
+      "subheadings": [
+        {
+          "code": "5911.10.00",
+          "description": "Telas, fieltro y tejidos forrados de fieltro, combinados con una o varias capas de caucho, cuero u otra materia, de los"
+        },
+        {
+          "code": "5911.10.00",
+          "description": "000F -Telas, fieltro y tejidos forrados de fieltro, combinados con una o varias capas de caucho, cuero u otra materia, de los"
+        },
+        {
+          "code": "5911.20",
+          "description": "Gasas y telas para cerner, incluso confeccionadas"
+        },
+        {
+          "code": "5911.20.10",
+          "description": "De materia textil sintética o artificial, en pieza"
+        },
+        {
+          "code": "5911.20.10",
+          "description": "000E De materia textil sintética o artificial, en pieza 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5911.20.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "5911.20.90",
+          "description": "100N Confeccionadas 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5911.20.90",
+          "description": "200U Sin confeccinar 16.00 16.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5911.3",
+          "description": "Telas y fieltros sin fin o con dispositivos de unión, de los tipos utilizados en las máquinas de fabricar papel o"
+        },
+        {
+          "code": "5911.31.00",
+          "description": "De peso inferior a 650 g/m2"
+        },
+        {
+          "code": "5911.31.00",
+          "description": "000W --De peso inferior a 650 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5911.32.00",
+          "description": "De peso superior o igual a 650 g/m2"
+        },
+        {
+          "code": "5911.32.00",
+          "description": "000H --De peso superior o igual a 650 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "5911.40.00",
+          "description": "Capachos y telas gruesas de los tipos utilizados en las prensas de aceite o para usos técnicos análogos, incluidos los"
+        },
+        {
+          "code": "5911.40.00",
+          "description": "000Y -Capachos y telas gruesas de los tipos utilizados en las prensas de aceite o para usos técnicos análogos, incluidos los"
+        }
+      ]
+    },
+    {
+      "code": "2600",
+      "description": "26.00 3.00 LNA 3.00 6.00",
+      "subheadings": []
+    }
+  ],
+  "_rowCount": 291
+}

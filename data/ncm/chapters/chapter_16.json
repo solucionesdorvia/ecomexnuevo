@@ -1,0 +1,995 @@
+{
+  "chapter": "16",
+  "title": "Capítulo 16",
+  "sectionTitle": "CAP. 16 SECCION IV PRODUCTOS DE LAS INDUSTRIAS ALIMENTARIAS; BEBIDAS, LIQUIDOS ALCOHOLICOS Y VINAGRE; TABACO Y SUCEDANEO",
+  "headings": [
+    {
+      "code": "1601",
+      "description": "EMBUTIDOS Y PRODUCTOS SIMILARES DE CARNE, DESPOJOS O SANGRE; PREPARACIONES ALIMENTICIAS",
+      "subheadings": [
+        {
+          "code": "1601.00.00",
+          "description": "Embutidos y productos similares de carne, despojos o sangre; preparaciones alimenticias a base de estos productos"
+        },
+        {
+          "code": "1601.00.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "1601.00.00",
+          "description": "110A únicamente de la especie porcina 16.00 16.00 3.00 LA 4.50 4.00"
+        },
+        {
+          "code": "1601.00.00",
+          "description": "190B Los demás 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1601.00.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1601.00.00",
+          "description": "910U únicamente de la especie porcina 16.00 16.00 3.00 LA 4.50 3.75"
+        },
+        {
+          "code": "1601.00.00",
+          "description": "990V Los demás 16.00 16.00 3.00 LA 4.50 3.75"
+        }
+      ]
+    },
+    {
+      "code": "1602",
+      "description": "LAS DEMÁS PREPARACIONES Y CONSERVAS DE CARNE, DESPOJOS O SANGRE",
+      "subheadings": [
+        {
+          "code": "1602.10.00",
+          "description": "Preparaciones homogeneizadas"
+        },
+        {
+          "code": "1602.10.00",
+          "description": "000Z -Preparaciones homogeneizadas 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.20.00",
+          "description": "De hígado de cualquier animal"
+        },
+        {
+          "code": "1602.20.00",
+          "description": "100U únicamente de la especie porcina 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1602.20.00",
+          "description": "900M Los demás 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1602.3",
+          "description": "De aves de la partida 0105:"
+        },
+        {
+          "code": "1602.31.00",
+          "description": "De pavo (gallipavo)"
+        },
+        {
+          "code": "1602.31.00",
+          "description": "000P --De pavo (gallipavo) 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.32",
+          "description": "De aves de la especie Gallus domesticus"
+        },
+        {
+          "code": "1602.32.10",
+          "description": "Con un contenido de carne o de despojos superior o igual a 57 % en peso, sin cocer"
+        },
+        {
+          "code": "1602.32.10",
+          "description": "000L Con un contenido de carne o de despojos superior o igual a 57 % en peso, sin cocer 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.32.20",
+          "description": "Con un contenido de carne o de despojos superior o igual a 57 % en peso, cocidas"
+        },
+        {
+          "code": "1602.32.20",
+          "description": "100B Carne cocida congelada procesada en IQF congelamiento rápido individual (R.1044/00 ME) 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1602.32.20",
+          "description": "200G Platos preparados semi-listos o listos (Resolución Conjunta N° 150/2005 MSyA y N° 684/2005 SAGPyA) 16.00 16.00 3.00 LA 4.50 4.25"
+        },
+        {
+          "code": "1602.32.20",
+          "description": "900V Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.32.30",
+          "description": "Con un contenido de carne o de despojos superior o igual a 25 % pero inferior a 57 %, en peso"
+        },
+        {
+          "code": "1602.32.30",
+          "description": "100L Carne cocida congelada procesada en IQF congelamiento rápido individual (R.1044/00 ME) 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1602.32.30",
+          "description": "200R Platos preparados semi-listos o listos (Resolución Conjunta N° 150/2005 MSyA y N° 684/2005 SAGPyA) 16.00 16.00 3.00 LA 4.50 4.25"
+        },
+        {
+          "code": "1602.32.30",
+          "description": "900E Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.32.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1602.32.90",
+          "description": "100V Carne cocida congelada procesada en IQF congelamiento rápido individual (R.1044/00 ME) 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1602.32.90",
+          "description": "200A Platos preparados semi-listos o listos (Resolución Conjunta N° 150/2005 MSyA y N° 684/2005 SAGPyA) 16.00 16.00 3.00 LA 4.50 4.25"
+        },
+        {
+          "code": "1602.32.90",
+          "description": "900N Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.39.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1602.39.00",
+          "description": "100Q Carne cocida congelada procesada en IQF congelamiento rápido individual (R.1044/00 ME) 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1602.39.00",
+          "description": "900J Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.4",
+          "description": "De la especie porcina:"
+        },
+        {
+          "code": "1602.41.00",
+          "description": "Jamones y trozos de jamón"
+        },
+        {
+          "code": "1602.41.00",
+          "description": "000D --Jamones y trozos de jamón 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.42.00",
+          "description": "Paletas y trozos de paleta"
+        },
+        {
+          "code": "1602.42.00",
+          "description": "000Q --Paletas y trozos de paleta 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1602.49.00",
+          "description": "Las demás, incluidas las mezclas"
+        },
+        {
+          "code": "1602.49.00",
+          "description": "100E Panceta 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.49.00",
+          "description": "200K Platos preparados semi-listos o listos (Resolución Conjunta N° 150/2005 MSyA y N° 684/2005 SAGPyA) 16.00 16.00 3.00 LA 4.50 4.25"
+        },
+        {
+          "code": "1602.49.00",
+          "description": "900Y Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "De la especie bovina"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 5 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "110P Conservas 16.00 16.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "120T Menudencias congeladas 16.00 16.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "130W Hamburguesas 16.00 16.00 3.00 LA 4.50 3.00"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "Carne cocida"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "141B Congelada procesada IQF congelamiento rápido individual 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "149U Las demás 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "150C Platos preparados semi-listos o listos (Resolución Conjunta N° 150/2005 MSyA y N° 684/2005 SAGPyA) 16.00 16.00 3.00 LA 4.50 4.25"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "190Q Las demas 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "910H Conservas 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "920L Menudencias congeladas 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "930P Hamburguesas 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "941V Congelada procesada IQF congelamiento rápido individual 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "949M Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "950W Platos preparados semi-listos o listos (Resolución Conjunta N° 150/2005 MSyA y N° 684/2005 SAGPyA) 16.00 16.00 3.00 LA 4.50 4.25"
+        },
+        {
+          "code": "1602.50.00",
+          "description": "990J Las demás 16.00 16.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "Las demás, incluidas las preparaciones de sangre de cualquier animal"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "Preparaciones de sangre de cualquier animal"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "110W De la especie bovina 16.00 16.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "120Z únicamente de la especie porcina 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "190X Las demás 16.00 16.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "De ciervo"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "210B Platos preparados semi-listos o listos (Resolución Conjunta N° 150/2005 MSyA y N° 684/2005 SAGPyA) 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "290C Los demás 16.00 16.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "De conejo"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "310G Platos preparados semi-listos o listos (Resolución Conjunta N° 150/2005 MSyA y N° 684/2005 SAGPyA) 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "390H Los demás 16.00 16.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "De las especies ovina y caprina"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "410M Platos preparados semi-listos o listos (Resolución Conjunta N° 150/2005 MSyA y N° 684/2005 SAGPyA) 16.00 16.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "490N Los demás 16.00 16.00 3.00 LA 4.50 1.75"
+        },
+        {
+          "code": "1602.90.00",
+          "description": "900L Las demás 16.00 16.00 3.00 LA 4.50 1.75"
+        }
+      ]
+    },
+    {
+      "code": "1603",
+      "description": "EXTRACTOS Y JUGOS DE CARNE, PESCADO O DE CRUSTÁCEOS, MOLUSCOS O DEMÁS INVERTEBRADOS",
+      "subheadings": [
+        {
+          "code": "1603.00.00",
+          "description": "Extractos y jugos de carne, pescado o de crustáceos, moluscos o demás invertebrados acuáticos"
+        },
+        {
+          "code": "1603.00.00",
+          "description": "De carne bovina (R.1579/98 MEYOSP)"
+        },
+        {
+          "code": "1603.00.00",
+          "description": "110M Extractos 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1603.00.00",
+          "description": "190N Los demás 16.00 16.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1603.00.00",
+          "description": "900C Los demás 16.00 16.00 3.00 LA 4.50 2.50"
+        }
+      ]
+    },
+    {
+      "code": "1604",
+      "description": "PREPARACIONES Y CONSERVAS DE PESCADO; CAVIAR Y SUS SUCEDÁNEOS PREPARADOS CON HUEVAS",
+      "subheadings": [
+        {
+          "code": "1604.1",
+          "description": "Pescado entero o en trozos, excepto el pescado picado:"
+        },
+        {
+          "code": "1604.11.00",
+          "description": "Salmones"
+        },
+        {
+          "code": "1604.11.00",
+          "description": "100D Platos preparados semi-listos o listos (Resolución Conjunta N° 150/2005 MSyA y N° 684/2005 SAGPyA) 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.11.00",
+          "description": "900X Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.12.00",
+          "description": "Arenques"
+        },
+        {
+          "code": "1604.12.00",
+          "description": "000K --Arenques 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.13",
+          "description": "Sardinas, sardinelas y espadines"
+        },
+        {
+          "code": "1604.13.10",
+          "description": "Sardinas"
+        },
+        {
+          "code": "1604.13.10",
+          "description": "100M Al natural 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.13.10",
+          "description": "200T En aceite 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.13.10",
+          "description": "300Y En salsa de tomate 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.13.10",
+          "description": "900F Las demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.13.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1604.13.90",
+          "description": "100Q Al natural 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.13.90",
+          "description": "200W En aceite 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.13.90",
+          "description": "300B En salsa de tomate 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.13.90",
+          "description": "900J Las demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.14",
+          "description": "Atunes, listados y bonitos (Sarda spp)"
+        },
+        {
+          "code": "1604.14.10",
+          "description": "Atunes"
+        },
+        {
+          "code": "1604.14.10",
+          "description": "Congelados"
+        },
+        {
+          "code": "1604.14.10",
+          "description": "110C Lomos precocidos 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.14.10",
+          "description": "190D Los demás 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.14.10",
+          "description": "Los demás, en trozos"
+        },
+        {
+          "code": "1604.14.10",
+          "description": "210H Al natural 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.14.10",
+          "description": "220L En aceite 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.14.10",
+          "description": "230P En salsa de tomate 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.14.10",
+          "description": "290J Los demás 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.14.10",
+          "description": "900T Los demás 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.14.20",
+          "description": "Listados"
+        },
+        {
+          "code": "1604.14.20",
+          "description": "000D Listados 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.14.30",
+          "description": "Bonitos"
+        },
+        {
+          "code": "1604.14.30",
+          "description": "000N Bonitos 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.15.00",
+          "description": "Caballas"
+        },
+        {
+          "code": "1604.15.00",
+          "description": "000W --Caballas 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "Anchoas"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "De la especie Engraulis anchoita"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "111U Filetes en aceite (Res. 137/08 MEYP) 16.00 16.00 3.00 LA 0.00 4.50"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "112W Preparaciones (Res. 137/08 MEYP) 16.00 16.00 3.00 LA 0.00 3.75"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "119L Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "190T Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "Anchoas (Engraulis anchoita)"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "911M Filetes en aceite (Res. 137/08 MEYP) 16.00 16.00 3.00 LA 0.00 4.50"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "912P Preparaciones (Res. 137/08 MEYP) 16.00 16.00 3.00 LA 0.00 3.75"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "919E Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.16.00",
+          "description": "990L Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.17.00",
+          "description": "Anguilas"
+        },
+        {
+          "code": "1604.17.00",
+          "description": "100A En envases inmediatos de contenido neto inferior o igual a 1 kg (R. 420/99 MEYOSP) 16.00 16.00 3.00 LA 0.00 3.75"
+        },
+        {
+          "code": "1604.17.00",
+          "description": "900U Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.18.00",
+          "description": "Aletas de tiburón"
+        },
+        {
+          "code": "1604.18.00",
+          "description": "000G --Aletas de tiburón 16.00 16.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "1604.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1604.19.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "1604.19.00",
+          "description": "110C Platos preparados semi-listos o listos (Resolución Conjunta N° 150/2005 MSyA y N° 684/2005 SAGPyA) 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.19.00",
+          "description": "150Q Filetes y demás carnes de Merluza hubbsi, rebozadas (Res.137/08 MEYP) 16.00 16.00 3.00 LA 0.00 3.50"
+        },
+        {
+          "code": "1604.19.00",
+          "description": "190D Los demás 16.00 16.00 3.00 LA 0.00 3.75"
+        },
+        {
+          "code": "1604.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1604.19.00",
+          "description": "910W Platos preparados semi-listos o listos (Resolución Conjunta N° 150/2005 MSyA y N° 684/2005 SAGPyA) 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.19.00",
+          "description": "950J Filetes y demás carnes de Merluza hubbsi, rebozadas (Res.137/08 MEYP) 16.00 16.00 3.00 LA 0.00 3.50"
+        },
+        {
+          "code": "1604.19.00",
+          "description": "990X Los demás 16.00 16.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "1604.20",
+          "description": "Las demás preparaciones y conservas de pescado"
+        },
+        {
+          "code": "1604.20.10",
+          "description": "De atún"
+        },
+        {
+          "code": "1604.20.10",
+          "description": "100Q Al natural 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.20.10",
+          "description": "200W En aceite 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.20.10",
+          "description": "300B En salsa de tomate 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.20.10",
+          "description": "900J Los demás 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.20.20",
+          "description": "De listados"
+        },
+        {
+          "code": "1604.20.20",
+          "description": "000V De listados 16.00 16.00 3.00 LNA 0.00 3.25"
+        },
+        {
+          "code": "1604.20.30",
+          "description": "De sardinas, de sardinelas o de espadines"
+        },
+        {
+          "code": "1604.20.30",
+          "description": "000E De sardinas, de sardinelas o de espadines 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.20.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1604.20.90",
+          "description": "De «surimi» acondicionadas al vacío"
+        },
+        {
+          "code": "1604.20.90",
+          "description": "110X En envases inmediatos de contenido neto inferior o igual a 1 kg (Res. 137/08 MEYP) 16.00 16.00 3.00 LA 0.00 3.75"
+        },
+        {
+          "code": "1604.20.90",
+          "description": "190Y Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.20.90",
+          "description": "De merluza común (Merluccius hubbsi), excepto de «surimi» acondicionadas al vacio"
+        },
+        {
+          "code": "1604.20.90",
+          "description": "210C Medallones, bastones, formitas, hamburguesas y nuggets (Res. 137/08 MEyP) 16.00 16.00 3.00 LA 0.00 4.75"
+        },
+        {
+          "code": "1604.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1604.20.90",
+          "description": "291F En envases inmediatos de contenido neto inferior o igual a 1 kg 16.00 16.00 3.00 LA 0.00 4.25"
+        },
+        {
+          "code": "1604.20.90",
+          "description": "299Y Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1604.20.90",
+          "description": "300E De truchas provenientes de cultivo (Oncorhynchus mykiss) (Res. 137/08 MEYP) 16.00 16.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1604.20.90",
+          "description": "910Q Excepto de «surimi», en envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP y Decreto"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LA 0.00 0.50",
+      "subheadings": []
+    },
+    {
+      "code": "1605",
+      "description": "CRUSTÁCEOS, MOLUSCOS Y DEMÁS INVERTEBRADOS ACUÁTICOS, PREPARADOS O CONSERVADOS",
+      "subheadings": [
+        {
+          "code": "1605.10.00",
+          "description": "Cangrejos (excepto macruros)"
+        },
+        {
+          "code": "1605.10.00",
+          "description": "100K En envases inmediatos de contenido neto superior a 1 kg (R.420/99 MEYOSP) 16.00 16.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1605.10.00",
+          "description": "900D Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.2",
+          "description": "Camarones, langostinos y demás decápodos Natantia:"
+        },
+        {
+          "code": "1605.21.00",
+          "description": "Presentados en envases no herméticos"
+        },
+        {
+          "code": "1605.21.00",
+          "description": "Camarones"
+        },
+        {
+          "code": "1605.21.00",
+          "description": "110P Cocidos y pelados 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.21.00",
+          "description": "190Q Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.21.00",
+          "description": "Langostinos"
+        },
+        {
+          "code": "1605.21.00",
+          "description": "210V Empanados o rebozados 16.00 16.00 3.00 LA 0.00 4.75"
+        },
+        {
+          "code": "1605.21.00",
+          "description": "290W Los demas 16.00 16.00 3.00 LA 0.00 4.75"
+        },
+        {
+          "code": "1605.21.00",
+          "description": "900E Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1605.29.00",
+          "description": "Camarones"
+        },
+        {
+          "code": "1605.29.00",
+          "description": "110K Cocidos y pelados 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.29.00",
+          "description": "190L Los demas 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.29.00",
+          "description": "Langostinos"
+        },
+        {
+          "code": "1605.29.00",
+          "description": "210Q Empanados o rebozados 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.29.00",
+          "description": "290R Los demas 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.29.00",
+          "description": "900A Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.30.00",
+          "description": "Bogavantes"
+        },
+        {
+          "code": "1605.30.00",
+          "description": "000H -Bogavantes 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.40.00",
+          "description": "Los demás crustáceos"
+        },
+        {
+          "code": "1605.40.00",
+          "description": "100C En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP) 16.00 16.00 3.00 LA 0.00 3.75"
+        },
+        {
+          "code": "1605.40.00",
+          "description": "900W Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.5",
+          "description": "Moluscos:"
+        },
+        {
+          "code": "1605.51.00",
+          "description": "Ostras"
+        },
+        {
+          "code": "1605.51.00",
+          "description": "000Y --Ostras 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.52.00",
+          "description": "Vieiras, volandeiras y demás moluscos de los géneros Pecten, Chlamys o Placopecten"
+        },
+        {
+          "code": "1605.52.00",
+          "description": "100Q Vieiras (zygochlamis patagonica) 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.52.00",
+          "description": "900J Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.53.00",
+          "description": "Mejillones"
+        },
+        {
+          "code": "1605.53.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R. 420/99 MEYOSP)"
+        },
+        {
+          "code": "1605.53.00",
+          "description": "110F Congelados 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.53.00",
+          "description": "190G Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.53.00",
+          "description": "900W Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.54.00",
+          "description": "Jibias (sepias)*, globitos, calamares y potas"
+        },
+        {
+          "code": "1605.54.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R. 420/99 MEYOSP)"
+        },
+        {
+          "code": "1605.54.00",
+          "description": "Congelados"
+        },
+        {
+          "code": "1605.54.00",
+          "description": "111V Rebozados, prefritos, cazuela, de Calamar (Illex Argentinus) (Res. 137/08 MEYP) 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.54.00",
+          "description": "119M Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.54.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1605.54.00",
+          "description": "191W Rebozados, prefritos, cazuela, en escabeche de Calamar (Illex Argentinus) (Res. 137/08 MEYP) 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.54.00",
+          "description": "199N Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.54.00",
+          "description": "911N Rebozados, prefritos, cazuela, de Calamar (Illex Argentinus) (Res. 137/08 MEYP) 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.54.00",
+          "description": "919F Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.54.00",
+          "description": "991P Rebozados, prefritos, cazuela, en escabeche de Calamar (Illex Argentinus) (Res. 137/08 MEYP) 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.54.00",
+          "description": "999G Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.55.00",
+          "description": "Pulpos"
+        },
+        {
+          "code": "1605.55.00",
+          "description": "000W --Pulpos 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.56.00",
+          "description": "Almejas, berberechos y arcas"
+        },
+        {
+          "code": "1605.56.00",
+          "description": "Almejas"
+        },
+        {
+          "code": "1605.56.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP)"
+        },
+        {
+          "code": "1605.56.00",
+          "description": "111U Congeladas 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.56.00",
+          "description": "119L Las demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.56.00",
+          "description": "190T Las demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.56.00",
+          "description": "Berberechos"
+        },
+        {
+          "code": "1605.56.00",
+          "description": "210X Congelados 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.56.00",
+          "description": "290Y Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.56.00",
+          "description": "300Z Arcas 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.56.00",
+          "description": "900G Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.57.00",
+          "description": "Abulones u orejas de mar"
+        },
+        {
+          "code": "1605.57.00",
+          "description": "000V --Abulones u orejas de mar 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.58.00",
+          "description": "Caracoles, excepto los de mar"
+        },
+        {
+          "code": "1605.58.00",
+          "description": "000G --Caracoles, excepto los de mar 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.59.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1605.59.00",
+          "description": "000U --Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.6",
+          "description": "Los demás invertebrados acuáticos:"
+        },
+        {
+          "code": "1605.61.00",
+          "description": "Pepinos de mar"
+        },
+        {
+          "code": "1605.61.00",
+          "description": "000M --Pepinos de mar 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.62.00",
+          "description": "Erizos de mar"
+        },
+        {
+          "code": "1605.62.00",
+          "description": "000Z --Erizos de mar 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.63.00",
+          "description": "Medusas"
+        },
+        {
+          "code": "1605.63.00",
+          "description": "000L --Medusas 16.00 16.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1605.69.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1605.69.00",
+          "description": "000H --Los demás 16.00 16.00 3.00 LA 0.00 3.25"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 256
+}

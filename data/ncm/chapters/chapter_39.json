@@ -1,0 +1,4722 @@
+{
+  "chapter": "39",
+  "title": "Capítulo 49",
+  "sectionTitle": "CAP. 39 SECCION VII PLASTICO Y SUS MANUFACTURAS; CAUCHO Y SUS MANUFACTURAS Notas. 1. Los productos presentados en surtid",
+  "headings": [
+    {
+      "code": "3901",
+      "description": "POLÍMEROS DE ETILENO EN FORMAS PRIMARIAS",
+      "subheadings": [
+        {
+          "code": "3901.10",
+          "description": "Polietileno de densidad inferior a 0,94"
+        },
+        {
+          "code": "3901.10.10",
+          "description": "Lineal"
+        },
+        {
+          "code": "3901.10.10",
+          "description": "100H Con carga 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.10.10",
+          "description": "200N Sin carga 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.10.91",
+          "description": "Con carga"
+        },
+        {
+          "code": "3901.10.91",
+          "description": "100U Reticulado 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.10.91",
+          "description": "900M Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.10.92",
+          "description": "Sin carga"
+        },
+        {
+          "code": "3901.10.92",
+          "description": "100B Reticulado 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.10.92",
+          "description": "900V Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.20",
+          "description": "Polietileno de densidad superior o igual a 0,94"
+        },
+        {
+          "code": "3901.20.11",
+          "description": "Vulcanizado, de densidad superior a 1,3"
+        },
+        {
+          "code": "3901.20.11",
+          "description": "000Z Vulcanizado, de densidad superior a 1,3 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.20.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3901.20.19",
+          "description": "000K Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.20.21",
+          "description": "Vulcanizado, de densidad superior a 1,3"
+        },
+        {
+          "code": "3901.20.21",
+          "description": "000J Vulcanizado, de densidad superior a 1,3 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.20.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3901.20.29",
+          "description": "100A Comprendidos en la Ley N° 25.174 (Malla antigranizo-materia prima), sus normas modificatorias y complementarias 14.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.20.29",
+          "description": "900U Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.30",
+          "description": "Copolímeros de etileno y acetato de vinilo"
+        },
+        {
+          "code": "3901.30.10",
+          "description": "En las formas previstas en la Nota 6 a) de este Capítulo"
+        },
+        {
+          "code": "3901.30.10",
+          "description": "000F En las formas previstas en la Nota 6 a) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.30.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3901.30.90",
+          "description": "000J Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.40.00",
+          "description": "Copolímeros de etileno y alfa-olefina de densidad inferior a 0,94"
+        },
+        {
+          "code": "3901.40.00",
+          "description": "000K -Copolímeros de etileno y alfa-olefina de densidad inferior a 0,94 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3901.90.10",
+          "description": "Copolímeros de etileno y ácido acrílico"
+        },
+        {
+          "code": "3901.90.10",
+          "description": "000Q Copolímeros de etileno y ácido acrílico 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3901.90.20",
+          "description": "Copolímeros de etileno y monómeros con radicales carboxílicos, incluso con metacrilato de metilo o acrilato de metilo"
+        },
+        {
+          "code": "3901.90.20",
+          "description": "000A Copolímeros de etileno y monómeros con radicales carboxílicos, incluso con metacrilato de metilo o acrilato de metilo"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LA 4.50 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "3902",
+      "description": "POLÍMEROS DE PROPILENO O DE OTRAS OLEFINAS, EN FORMAS PRIMARIAS",
+      "subheadings": [
+        {
+          "code": "3902.10",
+          "description": "Polipropileno"
+        },
+        {
+          "code": "3902.10.10",
+          "description": "Con carga"
+        },
+        {
+          "code": "3902.10.10",
+          "description": "000W Con carga 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3902.10.20",
+          "description": "Sin carga"
+        },
+        {
+          "code": "3902.10.20",
+          "description": "000F Sin carga 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3902.20.00",
+          "description": "Poliisobutileno"
+        },
+        {
+          "code": "3902.20.00",
+          "description": "000A -Poliisobutileno 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3902.30.00",
+          "description": "Copolímeros de propileno"
+        },
+        {
+          "code": "3902.30.00",
+          "description": "100V Copolímeros con etileno 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3902.30.00",
+          "description": "200A Copolímeros con las demás olefinas 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3902.30.00",
+          "description": "900N Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3902.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3902.90.00",
+          "description": "000Z -Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3903",
+      "description": "POLÍMEROS DE ESTIRENO EN FORMAS PRIMARIAS",
+      "subheadings": [
+        {
+          "code": "3903.1",
+          "description": "Poliestireno:"
+        },
+        {
+          "code": "3903.11",
+          "description": "Expandible"
+        },
+        {
+          "code": "3903.11.10",
+          "description": "Con carga"
+        },
+        {
+          "code": "3903.11.10",
+          "description": "100G En granulos 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.11.10",
+          "description": "900A Los demas 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.11.20",
+          "description": "Sin carga"
+        },
+        {
+          "code": "3903.11.20",
+          "description": "100R En granulos 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.11.20",
+          "description": "900K Los demas 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3903.19.00",
+          "description": "000M --Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.20.00",
+          "description": "Copolímeros de estireno-acrilonitrilo (SAN)"
+        },
+        {
+          "code": "3903.20.00",
+          "description": "000U -Copolímeros de estireno-acrilonitrilo (SAN) 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.30",
+          "description": "Copolímeros de acrilonitrilo-butadieno-estireno (ABS)"
+        },
+        {
+          "code": "3903.30.10",
+          "description": "Con carga"
+        },
+        {
+          "code": "3903.30.10",
+          "description": "100Y En las formas previstas en la Nota 6 a) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.30.10",
+          "description": "En las formas previstas en la Nota 6 b) de este Capítulo"
+        },
+        {
+          "code": "3903.30.10",
+          "description": "210G En gránulos 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.30.10",
+          "description": "290H Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.30.20",
+          "description": "Sin carga"
+        },
+        {
+          "code": "3903.30.20",
+          "description": "100H En las formas previstas en la Nota 6 a) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.30.20",
+          "description": "En las formas previstas en la Nota 6 b) de este Capítulo"
+        },
+        {
+          "code": "3903.30.20",
+          "description": "210R En gránulos 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.30.20",
+          "description": "290T Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3903.90.10",
+          "description": "Copolímeros de metacrilato de metilbutadieno-estireno (MBS)"
+        },
+        {
+          "code": "3903.90.10",
+          "description": "000C Copolímeros de metacrilato de metilbutadieno- estireno (MBS) 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.90.20",
+          "description": "Copolímeros de acrilonitrilo-estireno-acrilato de butilo (ASA)"
+        },
+        {
+          "code": "3903.90.20",
+          "description": "000M Copolímeros de acrilonitrilo-estireno-acrilato de butilo (ASA) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3903.90.90",
+          "description": "100L Copolímeros de estireno-acrílico 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3903.90.90",
+          "description": "200R Copolímeros de estireno-butadieno con un contenido de estireno superior o igual a 60 % pero inferior o igual a 85 % en"
+        },
+        {
+          "code": "3903.90.90",
+          "description": "900E Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3904",
+      "description": "POLÍMEROS DE CLORURO DE VINILO O DE OTRAS OLEFINAS HALOGENADAS, EN FORMAS PRIMARIAS",
+      "subheadings": [
+        {
+          "code": "3904.10",
+          "description": "Poli(cloruro de vinilo) sin mezclar con otras sustancias"
+        },
+        {
+          "code": "3904.10.10",
+          "description": "Obtenido por proceso de suspensión"
+        },
+        {
+          "code": "3904.10.10",
+          "description": "000H Obtenido por proceso de suspensión 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.10.20",
+          "description": "Obtenido por proceso de emulsión"
+        },
+        {
+          "code": "3904.10.20",
+          "description": "000T Obtenido por proceso de emulsión 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3904.10.90",
+          "description": "000L Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.2",
+          "description": "Los demás poli(cloruro de vinilo):"
+        },
+        {
+          "code": "3904.21.00",
+          "description": "Sin plastificar"
+        },
+        {
+          "code": "3904.21.00",
+          "description": "000Z --Sin plastificar 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.22.00",
+          "description": "Plastificados"
+        },
+        {
+          "code": "3904.22.00",
+          "description": "000L --Plastificados 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.30.00",
+          "description": "Copolímeros de cloruro de vinilo y acetato de vinilo"
+        },
+        {
+          "code": "3904.30.00",
+          "description": "000B -Copolímeros de cloruro de vinilo y acetato de vinilo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.40",
+          "description": "Los demás copolímeros de cloruro de vinilo"
+        },
+        {
+          "code": "3904.40.10",
+          "description": "Con acetato de vinilo, con un ácido dibásico o alcohol vinílico, en las formas previstas en la Nota 6 b) de este Capítulo"
+        },
+        {
+          "code": "3904.40.10",
+          "description": "000A Con acetato de vinilo, con un ácido dibásico o alcohol vinílico, en las formas previstas en la Nota 6 b) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.40.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3904.40.90",
+          "description": "000D Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.50",
+          "description": "Polímeros de cloruro de vinilideno"
+        },
+        {
+          "code": "3904.50.10",
+          "description": "Copolímeros de cloruro de vinilideno, sin emulsionante ni plastificante"
+        },
+        {
+          "code": "3904.50.10",
+          "description": "000P Copolímeros de cloruro de vinilideno, sin emulsionante ni plastificante 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.50.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3904.50.90",
+          "description": "000T Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.6",
+          "description": "Polímeros fluorados:"
+        },
+        {
+          "code": "3904.61",
+          "description": "Politetrafluoroetileno"
+        },
+        {
+          "code": "3904.61.10",
+          "description": "En las formas previstas en la Nota 6 a) de este Capítulo"
+        },
+        {
+          "code": "3904.61.10",
+          "description": "000Q En las formas previstas en la Nota 6 a) de este Capítulo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.61.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3904.61.90",
+          "description": "000U Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.69",
+          "description": "Los demás"
+        },
+        {
+          "code": "3904.69.10",
+          "description": "Copolímero de fluoruro de vinilideno y hexafluoropropileno"
+        },
+        {
+          "code": "3904.69.10",
+          "description": "000L Copolímeros de fluoruro de vinilideno y hexa- fluoropropileno 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.69.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3904.69.90",
+          "description": "100V Polímeros de cloro-trifluoroetileno 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.69.90",
+          "description": "200A Polímeros de fluoruro de vinilideno 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.69.90",
+          "description": "900N Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3904.90.10",
+          "description": "Poli(cloruro de vinilo) clorado"
+        },
+        {
+          "code": "3904.90.10",
+          "description": "000W Poli(cloruro de vinilo) clorado. 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3904.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3904.90.90",
+          "description": "000Z Los demas. 14.00 14.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3905",
+      "description": "POLÍMEROS DE ACETATO DE VINILO O DE OTROS ÉSTERES VINÍLICOS, EN FORMAS PRIMARIAS; LOS",
+      "subheadings": [
+        {
+          "code": "3905.1",
+          "description": "Poli(acetato de vinilo):"
+        },
+        {
+          "code": "3905.12.00",
+          "description": "En dispersión acuosa"
+        },
+        {
+          "code": "3905.12.00",
+          "description": "000Q --En dispersión acuosa 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3905.19.10",
+          "description": "Con grupos alcohol vinílico, en las formas previstas en la Nota 6 b) de este Capítulo"
+        },
+        {
+          "code": "3905.19.10",
+          "description": "000J Con grupos alcohol vinílico, en las formas previstas en la Nota 6 b) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.19.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3905.19.90",
+          "description": "100T En las formas previstas en la Nota 6 b) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.19.90",
+          "description": "900L Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.2",
+          "description": "Copolímeros de acetato de vinilo:"
+        },
+        {
+          "code": "3905.21.00",
+          "description": "En dispersión acuosa"
+        },
+        {
+          "code": "3905.21.00",
+          "description": "000T --En dispersión acuosa 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3905.29.00",
+          "description": "100U En las formas previstas en la Nota 6 b) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.29.00",
+          "description": "900M Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.30.00",
+          "description": "Poli(alcohol vinílico), incluso con grupos acetato sin hidrolizar"
+        },
+        {
+          "code": "3905.30.00",
+          "description": "000V -Poli(alcohol vinílico), incluso con grupos acetato sin hidrolizar 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "3905.91",
+          "description": "Copolímeros"
+        },
+        {
+          "code": "3905.91.30",
+          "description": "De vinilpirrolidona y acetato de vinilo, en solución alcohólica"
+        },
+        {
+          "code": "3905.91.30",
+          "description": "000W De vinilpirrolidona y acetato de vinilo, en solución alcohólica 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.91.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3905.91.90",
+          "description": "000E Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3905.99.10",
+          "description": "Poli(vinilformal)"
+        },
+        {
+          "code": "3905.99.10",
+          "description": "000X Poli(vinilformal) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.99.20",
+          "description": "Poli(vinilbutiral)"
+        },
+        {
+          "code": "3905.99.20",
+          "description": "000G Poli(vinilbutiral) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.99.30",
+          "description": "Poli(vinilpirrolidona) iodada"
+        },
+        {
+          "code": "3905.99.30",
+          "description": "000R Poli(vinilpirrolidona) iodada 12.00 12.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3905.99.90",
+          "description": "100F Poli(vinilpirrolidona)(PVP) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3905.99.90",
+          "description": "900Z Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3906",
+      "description": "POLÍMEROS ACRÍLICOS EN FORMAS PRIMARIAS",
+      "subheadings": [
+        {
+          "code": "3906.10.00",
+          "description": "Poli(metacrilato de metilo)"
+        },
+        {
+          "code": "3906.10.00",
+          "description": "100Q En las formas previstas en la Nota 6 a) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.10.00",
+          "description": "En las formas previstas en la Nota 6 b) de este Capítulo"
+        },
+        {
+          "code": "3906.10.00",
+          "description": "210Z En gránulos 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.10.00",
+          "description": "290A Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3906.90.11",
+          "description": "Poli(ácido acrílico) y sus sales"
+        },
+        {
+          "code": "3906.90.11",
+          "description": "000Q Poli(ácido acrílico) y sus sales 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.12",
+          "description": "Sal sódica del poli(ácido acrilamídico), soluble en agua"
+        },
+        {
+          "code": "3906.90.12",
+          "description": "000Y Sal sódica del poli(ácido acrilamídico), soluble en agua 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3906.90.19",
+          "description": "100G Poli(ácido metacrílico) y sus sales 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.19",
+          "description": "200M Poliacrilato de alquilo en emulsión 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.19",
+          "description": "900A Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.21",
+          "description": "Poli(ácido acrílico) y sus sales"
+        },
+        {
+          "code": "3906.90.21",
+          "description": "000A Poli(ácido acrílico) y sus sales 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.22",
+          "description": "Copolímero de metacrilato de 2-diisopropilaminoetilo y metacrilato de n-decilo, en suspensión de dimetilacetamida"
+        },
+        {
+          "code": "3906.90.22",
+          "description": "000H Copolímero de metacrilato de 2-diisopropilaminoetilo y metacrilato de n-decilo, en suspensión de dimetilacetamida 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3906.90.29",
+          "description": "000L Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.31",
+          "description": "Poli(ácido acrílico) y sus sales"
+        },
+        {
+          "code": "3906.90.31",
+          "description": "000K Poli(ácido acrílico) y sus sales 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.32",
+          "description": "Sal sódica del poli(ácido acrilamídico), soluble en agua"
+        },
+        {
+          "code": "3906.90.32",
+          "description": "000T Sal sódica del poli(ácido acrilamídico), soluble en agua 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3906.90.39",
+          "description": "000W Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.41",
+          "description": "Poli(ácido acrílico) y sus sales"
+        },
+        {
+          "code": "3906.90.41",
+          "description": "000V Poli(ácido acrílico) y sus sales 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.42",
+          "description": "Sal sódica del poli(ácido acrilamídico), soluble en agua"
+        },
+        {
+          "code": "3906.90.42",
+          "description": "000C Sal sódica del poli(ácido acrilamídico), soluble en agua 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.43",
+          "description": "Carboxipolimetileno, en polvo"
+        },
+        {
+          "code": "3906.90.43",
+          "description": "000K Carboxipolimetileno, en polvo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.44",
+          "description": "Poli(acrilato de sodio), con capacidad de absorción de una solución acuosa de cloruro de sodio al 0,9 % en peso,"
+        },
+        {
+          "code": "3906.90.44",
+          "description": "000T Poli(acrilato de sodio), con capacidad de absorción de una solución acuosa de cloruro de sodio al 0,9 % en peso,"
+        },
+        {
+          "code": "3906.90.45",
+          "description": "Copolímero de poli(acrilato de potasio) y poli(acrilamida), con capacidad de absorción de agua destilada de"
+        },
+        {
+          "code": "3906.90.45",
+          "description": "000A Copolímero de poli(acrilato de potasio) y poli(acrilamida), con capacidad de absorción de agua destilada de"
+        },
+        {
+          "code": "3906.90.46",
+          "description": "Copolímeros de acrilato de metilo-etileno con un contenido de acrilato de metilo superior o igual al 50 % en peso"
+        },
+        {
+          "code": "3906.90.46",
+          "description": "000H Copolímeros de acrilato de metilo-etileno con un contenido de acrilato de metilo superior o igual al 50 %, en peso 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.47",
+          "description": "Copolímero de acrilato de etilo, acrilato de n-butilo y acrilato de 2-metoxietilo"
+        },
+        {
+          "code": "3906.90.47",
+          "description": "000Q Copolímero de acrilato de etilo, acrilato de n-butilo y acrilato de 2-metoxietilo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.48",
+          "description": "Copolímero de acrilato de potasio y ácido acrílico, con capacidad de absorción de agua destilada de hasta"
+        },
+        {
+          "code": "3906.90.48",
+          "description": "000Y Copolimero de acrilato de potasio y acido acrilico, con capacidad de absorcion de agua destilada de hasta cuatricientas"
+        },
+        {
+          "code": "3906.90.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "3906.90.49",
+          "description": "100L Polímeros de acrilonitrilo y sus copolímeros 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3906.90.49",
+          "description": "900E Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3907",
+      "description": "POLIACETALES, LOS DEMÁS POLIÉTERES Y RESINAS EPOXI, EN FORMAS PRIMARIAS; POLICARBONATOS,",
+      "subheadings": [
+        {
+          "code": "3907.10",
+          "description": "Poliacetales"
+        },
+        {
+          "code": "3907.10.10",
+          "description": "Con carga, en las formas previstas en la Nota 6 a) de este Capítulo"
+        },
+        {
+          "code": "3907.10.10",
+          "description": "000N Con carga, en las formas previstas en la Nota 6 a) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.10.20",
+          "description": "Con carga, en las formas previstas en la Nota 6 b) de este Capítulo"
+        },
+        {
+          "code": "3907.10.20",
+          "description": "000Y Con carga, en las formas previstas en la Nota 6 b) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.10.31",
+          "description": "Polidextrosa"
+        },
+        {
+          "code": "3907.10.31",
+          "description": "000Q Polidextrosa 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.10.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3907.10.39",
+          "description": "000B Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.10.41",
+          "description": "Polidextrosa"
+        },
+        {
+          "code": "3907.10.41",
+          "description": "000A Polidextrosa 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.10.42",
+          "description": "Los demás, en polvo que pase por un tamiz con abertura de malla de 0,85 mm en proporción superior al 80 % en peso"
+        },
+        {
+          "code": "3907.10.42",
+          "description": "000H Los demás, en polvo que pase por un tamiz con abertura de malla de 0,85 mm en proporción superior al 80 % en peso 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.10.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "3907.10.49",
+          "description": "000L Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.10.91",
+          "description": "En gránulos, con diámetro de partícula superior a 2 mm, según Norma ASTM E 11-70"
+        },
+        {
+          "code": "3907.10.91",
+          "description": "000Z En gránulos, con diámetro de partícula superior a 2 mm, según norma ASTM E 11-70 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.10.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3907.10.99",
+          "description": "000K Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20",
+          "description": "Los demás poliéteres"
+        },
+        {
+          "code": "3907.20.11",
+          "description": "Con carga"
+        },
+        {
+          "code": "3907.20.11",
+          "description": "000K Con carga 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.12",
+          "description": "Sin carga"
+        },
+        {
+          "code": "3907.20.12",
+          "description": "000T Sin carga 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.20",
+          "description": "Politetrametilenoeterglicol"
+        },
+        {
+          "code": "3907.20.20",
+          "description": "000M Politetrametilenoeterglicol 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.31",
+          "description": "Polietilenglicol 400"
+        },
+        {
+          "code": "3907.20.31",
+          "description": "000E Polietilenglicol 400 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "Los demás polietilenglicoles"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "110Z Polietilenglicol de peso molecular superior a 400 pero inferior ó igual a 800 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "120C Polietilenglicol de peso molecular superior a 800 pero inferior ó igual a 1200 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "130F De peso molecular superior o igual a 2900 pero inferior o igual a 3500, con número de hidroxilos superior o igual a 47"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "190A Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "Polipropilenglicoles"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "210E De peso molecular superior o igual a 2900 pero inferior o igual a 3500, con número de hidroxilos supeior o igual a 47 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "290F Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "De peso molecular superior o igual a 2900 pero inferior o igual a 3500, con número de hidroxilos superior o igual a 47"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "911V Copolímero compuesto por unidades monomericas de oxipropileno y oxietileno 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "919M Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.39",
+          "description": "990U Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.41",
+          "description": "Poli(epiclorhidrina)"
+        },
+        {
+          "code": "3907.20.41",
+          "description": "000P Poli(epiclorhidrina) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.42",
+          "description": "Copolímeros de óxido de etileno"
+        },
+        {
+          "code": "3907.20.42",
+          "description": "000X Copolímeros de óxido de etileno 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "3907.20.49",
+          "description": "000A Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3907.20.90",
+          "description": "000F Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.30",
+          "description": "Resinas epoxi"
+        },
+        {
+          "code": "3907.30.11",
+          "description": "En las formas previstas en la Nota 6 a) de este Capítulo"
+        },
+        {
+          "code": "3907.30.11",
+          "description": "000Z En las formas previstas en la Nota 6 a) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.30.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3907.30.19",
+          "description": "100Q De los tipos utilizados para revestimiento de superficies 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.30.19",
+          "description": "900J Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.30.21",
+          "description": "Copolímero de tetrabromo-bisfenol A y epiclorhidrina (resina epoxibromada)"
+        },
+        {
+          "code": "3907.30.21",
+          "description": "000J Copolímero de tetrabromo-bisfenol A y epiclorhidrina (resina epoxibromada) 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.30.22",
+          "description": "Las demás, en las formas previstas en la Nota 6 a) de este Capítulo"
+        },
+        {
+          "code": "3907.30.22",
+          "description": "000R Las demás, en las formas previstas en la Nota 6 a) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.30.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3907.30.29",
+          "description": "100A De los tipos utilizados para revestimiento de superficies 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.30.29",
+          "description": "900U Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.40",
+          "description": "Policarbonatos"
+        },
+        {
+          "code": "3907.40.10",
+          "description": "En las formas previstas en la Nota 6 b) de este Capítulo, con transmisión de luz de longitud de onda de 550 nm u 800"
+        },
+        {
+          "code": "3907.40.10",
+          "description": "000F En las formas previstas en la Nota 6 b) de este Capítulo, con transmisión de luz de longitud de onda de 550 nm u 800"
+        },
+        {
+          "code": "3907.40.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3907.40.90",
+          "description": "000J Los demás 14.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.50",
+          "description": "Resinas alcídicas"
+        },
+        {
+          "code": "3907.50.10",
+          "description": "En las formas previstas en la Nota 6 a) de este Capítulo"
+        },
+        {
+          "code": "3907.50.10",
+          "description": "000V En las formas previstas en la Nota 6 a) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.50.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3907.50.90",
+          "description": "000Y Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.6",
+          "description": "Poli(tereftalato de etileno):"
+        },
+        {
+          "code": "3907.61.00",
+          "description": "Con un índice de viscosidad superior o igual a 78 ml/g"
+        },
+        {
+          "code": "3907.61.00",
+          "description": "En las formas previstas en la Nota 6 b) de este Capítulo"
+        },
+        {
+          "code": "3907.61.00",
+          "description": "En gránulos"
+        },
+        {
+          "code": "3907.61.00",
+          "description": "111X Con un indice de viscosidad superior o igual a 78 ml/g pero inferior o igual a 101 ml/g. 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.61.00",
+          "description": "119P Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.61.00",
+          "description": "190W Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.61.00",
+          "description": "900K Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.69.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3907.69.00",
+          "description": "En las formas previstas en la Nota 6 b) de este Capítulo"
+        },
+        {
+          "code": "3907.69.00",
+          "description": "110Q En gránulos 14.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.69.00",
+          "description": "190R Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.69.00",
+          "description": "900F Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.70.00",
+          "description": "Poli(ácido láctico)"
+        },
+        {
+          "code": "3907.70.00",
+          "description": "000N -Poli(ácido láctico) 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.9",
+          "description": "Los demás poliésteres:"
+        },
+        {
+          "code": "3907.91.00",
+          "description": "No saturados"
+        },
+        {
+          "code": "3907.91.00",
+          "description": "100J Esteres polialílicos 14.00 14.00 3.00 LNA 4.50 0.00"
+        },
+        {
+          "code": "3907.91.00",
+          "description": "200P Resinas alcídicas sin aceite 14.00 14.00 3.00 LNA 4.50 0.00"
+        },
+        {
+          "code": "3907.91.00",
+          "description": "900C Los demás 14.00 14.00 3.00 LNA 4.50 0.00"
+        },
+        {
+          "code": "3907.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3907.99.11",
+          "description": "Con carga de fibra de vidrio"
+        },
+        {
+          "code": "3907.99.11",
+          "description": "000R Con carga de fibra de vidrio 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.99.12",
+          "description": "Los demás, en las formas previstas en la Nota 6 a) de este Capítulo"
+        },
+        {
+          "code": "3907.99.12",
+          "description": "000Z Los demás, en las formas previstas en la Nota 6 a) de este Capítulo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.99.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3907.99.19",
+          "description": "000C Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.99.91",
+          "description": "En las formas previstas en la Nota 6 a) de este Capítulo"
+        },
+        {
+          "code": "3907.99.91",
+          "description": "000V En las formas previstas en la Nota 6 a) de este Capítulo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.99.92",
+          "description": "Poli(epsilon caprolactona)"
+        },
+        {
+          "code": "3907.99.92",
+          "description": "000C Poli(epsilon caprolactona) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.99.93",
+          "description": "Copolímero de tereftalato de dimetilo, ciclohexanodimetanol y ácido isoftálico"
+        },
+        {
+          "code": "3907.99.93",
+          "description": "000K Copolimero de tereftalato de dimetilo, ciclohexanodimetanol y acido isoftalico 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.99.94",
+          "description": "Copolímero de tereftalato de dimetilo, ciclohexanodimetanol y tetrametil ciclobutanodiol"
+        },
+        {
+          "code": "3907.99.94",
+          "description": "000T Copolimero de tereftalato de dimetilo, ciclohexanodimetanol y tetrametil ciclobutanodiol 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.99.95",
+          "description": "Copolímero de tereftalato de dimetilo, ciclohexanodimetanol y etilenglicol"
+        },
+        {
+          "code": "3907.99.95",
+          "description": "000A Copolimero de tereftalato de dimetilo, ciclohexanodimetanol y etilenglicol 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.99.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3907.99.99",
+          "description": "De los tipos utilizados para revestimiento de superficies, en polvo"
+        },
+        {
+          "code": "3907.99.99",
+          "description": "110P De resinas poliester unicamente 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.99.99",
+          "description": "120T De resinas poliester y epoxi 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.99.99",
+          "description": "190Q Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.99.99",
+          "description": "200R Resinas alcídicas sin aceite 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3907.99.99",
+          "description": "900E Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3908",
+      "description": "POLIAMIDAS EN FORMAS PRIMARIAS",
+      "subheadings": [
+        {
+          "code": "3908.10",
+          "description": "Poliamidas -6, -11, -12, -6,6, -6,9, -6,10 ó -6,12"
+        },
+        {
+          "code": "3908.10.11",
+          "description": "Poliamida-11"
+        },
+        {
+          "code": "3908.10.11",
+          "description": "000P Poliamida-11 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.12",
+          "description": "Poliamida-12"
+        },
+        {
+          "code": "3908.10.12",
+          "description": "000X Poliamida-12 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.13",
+          "description": "Poliamida-6 ó poliamida-6,6, con carga"
+        },
+        {
+          "code": "3908.10.13",
+          "description": "000E Poliamida-6 ó poliamida-6,6, con carga 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.14",
+          "description": "Poliamida-6 ó poliamida-6,6, sin carga"
+        },
+        {
+          "code": "3908.10.14",
+          "description": "000M Poliamida-6 ó poliamida-6,6, sin carga 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3908.10.19",
+          "description": "100F Poliamida-6,9 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.19",
+          "description": "200L Poliamida-6,10 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.19",
+          "description": "300R Poliamida-6,12 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.21",
+          "description": "Poliamida-11"
+        },
+        {
+          "code": "3908.10.21",
+          "description": "000Z Poliamida-11 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.22",
+          "description": "Poliamida-12"
+        },
+        {
+          "code": "3908.10.22",
+          "description": "000G Poliamida-12 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.23",
+          "description": "Poliamida-6 ó poliamida-6,6, con carga"
+        },
+        {
+          "code": "3908.10.23",
+          "description": "000P Poliamida-6 ó poliamida-6,6, con carga 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.24",
+          "description": "Poliamida-6 ó poliamida-6,6, sin carga"
+        },
+        {
+          "code": "3908.10.24",
+          "description": "100C Poliamida-6 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.24",
+          "description": "200H Poliamida-6,6 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3908.10.29",
+          "description": "100Q Poliamida-6,9 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.29",
+          "description": "200W Poliamida-6,10 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.10.29",
+          "description": "300B Poliamida-6,12 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3908.90.10",
+          "description": "Copolímero de lauril-lactama"
+        },
+        {
+          "code": "3908.90.10",
+          "description": "000V Copolímero de lauril-lactama 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.90.20",
+          "description": "Obtenidas por condensación de ácidos grasos dimerizados o trimerizados con etilenaminas"
+        },
+        {
+          "code": "3908.90.20",
+          "description": "000E Obtenidas por condensación de ácidos grasos dimerizados o trimerizados con etilenaminas 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3908.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3908.90.90",
+          "description": "000Y Las demás 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3909",
+      "description": "RESINAS AMÍNICAS, RESINAS FENÓLICAS Y POLIURETANOS, EN FORMAS PRIMARIAS",
+      "subheadings": [
+        {
+          "code": "3909.10.00",
+          "description": "Resinas ureicas; resinas de tiourea"
+        },
+        {
+          "code": "3909.10.00",
+          "description": "100W Ureicas 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.10.00",
+          "description": "200B Tioureicas 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.20",
+          "description": "Resinas melamínicas"
+        },
+        {
+          "code": "3909.20.11",
+          "description": "Melamina-formaldehído, en polvo"
+        },
+        {
+          "code": "3909.20.11",
+          "description": "000X Melamina-formaldehído, en polvo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.20.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3909.20.19",
+          "description": "000H Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.20.21",
+          "description": "Melamina-formaldehído, en polvo"
+        },
+        {
+          "code": "3909.20.21",
+          "description": "000G Melamina-formaldehído, en polvo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.20.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3909.20.29",
+          "description": "000T Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.3",
+          "description": "Las demás resinas amínicas:"
+        },
+        {
+          "code": "3909.31.00",
+          "description": "Poli(metilenfenilisocianato) (MDI en bruto, MDI polimérico)"
+        },
+        {
+          "code": "3909.31.00",
+          "description": "000F --Poli(metilenfenilisocianato) (MDI en bruto, MDI polimerico) 14.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.39.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "3909.39.00",
+          "description": "000B --Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.40",
+          "description": "Resinas fenólicas"
+        },
+        {
+          "code": "3909.40.11",
+          "description": "Fenol-formaldehído"
+        },
+        {
+          "code": "3909.40.11",
+          "description": "000A Fenol-formaldehído 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.40.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3909.40.19",
+          "description": "000L Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.40.91",
+          "description": "Fenol-formaldehído"
+        },
+        {
+          "code": "3909.40.91",
+          "description": "000D Fenol-formaldehído 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.40.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "3909.40.99",
+          "description": "000P Las demás 14.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.50",
+          "description": "Poliuretanos"
+        },
+        {
+          "code": "3909.50.11",
+          "description": "Soluciones en disolventes orgánicos"
+        },
+        {
+          "code": "3909.50.11",
+          "description": "000P Soluciones en disolventes orgánicos 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.50.12",
+          "description": "En dispersión acuosa"
+        },
+        {
+          "code": "3909.50.12",
+          "description": "000X En dispersión acuosa 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.50.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3909.50.19",
+          "description": "000A Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.50.21",
+          "description": "Hidroxilados, con propiedades adhesivas"
+        },
+        {
+          "code": "3909.50.21",
+          "description": "000Z Hidroxilados, con propiedades adhesivas 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3909.50.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3909.50.29",
+          "description": "000K Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3910",
+      "description": "SILICONAS EN FORMAS PRIMARIAS",
+      "subheadings": [
+        {
+          "code": "3910.00.11",
+          "description": "Mezclas de prepolímeros lineales y cíclicos obtenidos por hidrólisis de dimetildiclorosilano, de peso molecular medio"
+        },
+        {
+          "code": "3910.00.11",
+          "description": "000Y Mezclas de prepolímeros lineales y cÍclicos obtenidos por hidrólisis de dimetildiclorosilano, de peso molecular medio"
+        },
+        {
+          "code": "3910.00.12",
+          "description": "Polidimetilsiloxano, polimetilhidrogenosiloxano o mezclas de estos productos, en dispersión"
+        },
+        {
+          "code": "3910.00.12",
+          "description": "000F Polidimetilsiloxano, polimetilhidrogenosiloxano o mezclas de estos productos, en dispersión 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3910.00.13",
+          "description": "Copolímero de dimetilsiloxano con compuestos vinílicos, de viscosidad superior o igual a 1000000 cSt"
+        },
+        {
+          "code": "3910.00.13",
+          "description": "000N Copolímeros de dimetilsiloxano con compuestos vinílicos, de viscosidad superior o igual a 1.000.000 cSt 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3910.00.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3910.00.19",
+          "description": "000J Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3910.00.21",
+          "description": "De vulcanización en caliente"
+        },
+        {
+          "code": "3910.00.21",
+          "description": "000H De vulcanización en caliente 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3910.00.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3910.00.29",
+          "description": "000U Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3910.00.30",
+          "description": "Resinas"
+        },
+        {
+          "code": "3910.00.30",
+          "description": "000K Resinas 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3910.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3910.00.90",
+          "description": "000U Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3911",
+      "description": "RESINAS DE PETRÓLEO, RESINAS DE CUMARONA-INDENO, POLITERPENOS, POLISULFUROS,",
+      "subheadings": [
+        {
+          "code": "3911.10",
+          "description": "Resinas de petróleo, resinas de cumarona, resinas de indeno, resinas de cumarona-indeno y politerpenos"
+        },
+        {
+          "code": "3911.10.10",
+          "description": "Con carga"
+        },
+        {
+          "code": "3911.10.10",
+          "description": "100D Resinas de petróleo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.10.10",
+          "description": "200J Resinas de cumarona 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.10.10",
+          "description": "300P Resinas de indeno 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.10.10",
+          "description": "400V Resinas de cumarona-indeno 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.10.10",
+          "description": "500A Resinas de politerpenos 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.10.21",
+          "description": "Resinas de petróleo, parcial o totalmente hidrogenadas, de Color Gardner inferior a 3"
+        },
+        {
+          "code": "3911.10.21",
+          "description": "000Q Resinas de petróleo, parcial o totalmente hidrogenadas, de Color Gardner inferior a 3 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.10.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3911.10.29",
+          "description": "100G Resinas de petróleo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.10.29",
+          "description": "200M Resinas de cumarona 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.10.29",
+          "description": "300T Resinas de indeno 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.10.29",
+          "description": "400Y Resinas de cumarona-indeno 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.10.29",
+          "description": "500D Resinas de politerpenos 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3911.90.11",
+          "description": "Politerpenos modificados químicamente, excepto con fenoles"
+        },
+        {
+          "code": "3911.90.11",
+          "description": "000U Politerpenos modificados químicamente, excepto con fenoles 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.12",
+          "description": "Polieterimidas (PEI) y sus copolímeros"
+        },
+        {
+          "code": "3911.90.12",
+          "description": "000B Polieterimidas (PEI) y sus copolímeros 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.13",
+          "description": "Polietersulfonas (PES) y sus copolímeros"
+        },
+        {
+          "code": "3911.90.13",
+          "description": "000J Polietersulfonas (PES) y sus copolímeros 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.14",
+          "description": "Poli (sulfuro de fenileno)"
+        },
+        {
+          "code": "3911.90.14",
+          "description": "000R Poli (sulfuro de fenileno) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3911.90.19",
+          "description": "100K Polisulfonas 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.19",
+          "description": "200Q Poliimidas 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.19",
+          "description": "900D Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.21",
+          "description": "Politerpenos modificados químicamente, excepto con fenoles"
+        },
+        {
+          "code": "3911.90.21",
+          "description": "000D Politerpenos modificados químicamente, excepto con fenoles 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.22",
+          "description": "Poli(sulfuro de fenileno)"
+        },
+        {
+          "code": "3911.90.22",
+          "description": "000L Poli(sulfuro de fenileno) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.23",
+          "description": "Polietilenaminas"
+        },
+        {
+          "code": "3911.90.23",
+          "description": "000U Polietilenaminas (R.469/97 MEOSP) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.24",
+          "description": "Polieterimidas (PEI) y sus copolímeros"
+        },
+        {
+          "code": "3911.90.24",
+          "description": "000B Polieterimidas (PEI) y sus copolímeros 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.25",
+          "description": "Polietersulfonas (PES) y sus copolímeros"
+        },
+        {
+          "code": "3911.90.25",
+          "description": "000J Polietersulfonas (PES) y sus copolímeros 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.26",
+          "description": "Polisulfonas"
+        },
+        {
+          "code": "3911.90.26",
+          "description": "000R Polisulfonas 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.27",
+          "description": "Cloruro de hexadimetrina"
+        },
+        {
+          "code": "3911.90.27",
+          "description": "000Z Cloruro de hexadimetrina 2.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3911.90.29",
+          "description": "100V Poliimidas 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.29",
+          "description": "300F Cetonas polivinílicas 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3911.90.29",
+          "description": "900N Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3912",
+      "description": "CELULOSA Y SUS DERIVADOS QUÍMICOS, NO EXPRESADOS NI COMPRENDIDOS EN OTRA PARTE, EN",
+      "subheadings": [
+        {
+          "code": "3912.1",
+          "description": "Acetatos de celulosa:"
+        },
+        {
+          "code": "3912.11",
+          "description": "Sin plastificar"
+        },
+        {
+          "code": "3912.11.10",
+          "description": "Con carga"
+        },
+        {
+          "code": "3912.11.10",
+          "description": "000D Con carga 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.11.20",
+          "description": "Sin carga"
+        },
+        {
+          "code": "3912.11.20",
+          "description": "000N Sin carga 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.12.00",
+          "description": "Plastificados"
+        },
+        {
+          "code": "3912.12.00",
+          "description": "000F --Plastificados 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.20",
+          "description": "Nitratos de celulosa (incluidos los colodiones)"
+        },
+        {
+          "code": "3912.20.10",
+          "description": "Con carga"
+        },
+        {
+          "code": "3912.20.10",
+          "description": "100L Nitrocelulosa totalmente disuelta y la modificada en forma de pasta o gelatina, no apta para ser empleada como"
+        },
+        {
+          "code": "3912.20.10",
+          "description": "900E Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.20.21",
+          "description": "En alcohol, con un contenido de no volátiles superior o igual al 65 % en peso"
+        },
+        {
+          "code": "3912.20.21",
+          "description": "100D Nitrocelulosa totalmente disuelta y la modificada en forma de pasta o gelatina, no apta para ser empleada como"
+        },
+        {
+          "code": "3912.20.21",
+          "description": "900X Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.20.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3912.20.29",
+          "description": "100P Nitrocelulosa totalmente disuelta y la modificada en forma de pasta o gelatina, no apta para ser empleada como"
+        },
+        {
+          "code": "3912.20.29",
+          "description": "900H Los demás (R.3115/94 ex-ANA) 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.3",
+          "description": "Éteres de celulosa:"
+        },
+        {
+          "code": "3912.31",
+          "description": "Carboximetilcelulosa y sus sales"
+        },
+        {
+          "code": "3912.31.11",
+          "description": "Con un contenido de carboximetilcelulosa superior o igual al 75 % en peso"
+        },
+        {
+          "code": "3912.31.11",
+          "description": "000P Con un contenido de carboximetilcelulosa superior o igual al 75 % en peso 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.31.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3912.31.19",
+          "description": "000A Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.31.21",
+          "description": "Con un contenido de sales superior o igual al 75 % en peso"
+        },
+        {
+          "code": "3912.31.21",
+          "description": "000Z Con un contenido de sales superior o igual al 75 % en peso 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.31.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3912.31.29",
+          "description": "000K Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3912.39.10",
+          "description": "Metil-, etil- y propilcelulosa, hidroxiladas"
+        },
+        {
+          "code": "3912.39.10",
+          "description": "100H Metil-celulosa hidroxilada 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.39.10",
+          "description": "200N Etil-celulosa hidroxilada 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.39.10",
+          "description": "300U Propil-celulosa hidroxilada 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.39.20",
+          "description": "Otras metilcelulosas"
+        },
+        {
+          "code": "3912.39.20",
+          "description": "000M Otras metilcelulosas 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.39.30",
+          "description": "Otras etilcelulosas"
+        },
+        {
+          "code": "3912.39.30",
+          "description": "000X Otras etilcelulosas 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.39.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3912.39.90",
+          "description": "000F Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3912.90.10",
+          "description": "Propionato de celulosa"
+        },
+        {
+          "code": "3912.90.10",
+          "description": "000E Propionato de celulosa 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.90.20",
+          "description": "Acetobutanoato de celulosa"
+        },
+        {
+          "code": "3912.90.20",
+          "description": "000P Acetobutanoato de celulosa 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.90.31",
+          "description": "En polvo"
+        },
+        {
+          "code": "3912.90.31",
+          "description": "100M Celulosa microcristalina con un contenido inferior o igual a 20 % de carboximetilcelulosa sódica 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.90.31",
+          "description": "900F Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.90.39",
+          "description": "Las demás"
+        },
+        {
+          "code": "3912.90.39",
+          "description": "000T Las demás 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.90.40",
+          "description": "Otras celulosas, en polvo"
+        },
+        {
+          "code": "3912.90.40",
+          "description": "000J Otras celulosas, en polvo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3912.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3912.90.90",
+          "description": "000H Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3913",
+      "description": "POLÍMEROS NATURALES (POR EJEMPLO, ÁCIDO ALGÍNICO) Y POLÍMEROS NATURALES MODIFICADOS (POR",
+      "subheadings": [
+        {
+          "code": "3913.10.00",
+          "description": "Ácido algínico, sus sales y sus ésteres"
+        },
+        {
+          "code": "3913.10.00",
+          "description": "100F ácido algínico 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.10.00",
+          "description": "Sales"
+        },
+        {
+          "code": "3913.10.00",
+          "description": "210P De sodio 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.10.00",
+          "description": "290Q Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.10.00",
+          "description": "Esteres"
+        },
+        {
+          "code": "3913.10.00",
+          "description": "310V De polialcoholes 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.10.00",
+          "description": "390W Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3913.90.11",
+          "description": "Caucho clorado o clorhidratado, en las formas previstas en la Nota 6 b) de este Capítulo"
+        },
+        {
+          "code": "3913.90.11",
+          "description": "000F Caucho clorado o clorhidratado, en las formas previstas en la Nota 6 b) de este Capítulo 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.90.12",
+          "description": "Caucho clorado, en otras formas"
+        },
+        {
+          "code": "3913.90.12",
+          "description": "000N Caucho clorado, en otras formas 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3913.90.19",
+          "description": "100X Caucho oxidado 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.90.19",
+          "description": "200C Caucho ciclado 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.90.19",
+          "description": "900Q Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.90.20",
+          "description": "Goma xantana"
+        },
+        {
+          "code": "3913.90.20",
+          "description": "000H Goma xantana 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.90.30",
+          "description": "Dextrano"
+        },
+        {
+          "code": "3913.90.30",
+          "description": "000T Dextrano 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.90.40",
+          "description": "Proteínas endurecidas"
+        },
+        {
+          "code": "3913.90.40",
+          "description": "100H Que contengan colágeno (R.2012/93 ex-ANA) 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.90.40",
+          "description": "900B Las demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.90.50",
+          "description": "Quitosan («Chitosan»), sus sales o sus derivados"
+        },
+        {
+          "code": "3913.90.50",
+          "description": "000M Quitosan (\"Chitosan\"), sus sales o sus derivados 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.90.60",
+          "description": "Sulfato de condroitina y sus sales"
+        },
+        {
+          "code": "3913.90.60",
+          "description": "000X Sulfato de condroitina y sus sales 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3913.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3913.90.90",
+          "description": "000B Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3914",
+      "description": "INTERCAMBIADORES DE IONES A BASE DE POLÍMEROS DE LAS PARTIDAS 3901 A 3913, EN FORMAS",
+      "subheadings": [
+        {
+          "code": "3914.00.11",
+          "description": "De copolímeros de estireno-divinilbenceno, sulfonados"
+        },
+        {
+          "code": "3914.00.11",
+          "description": "000X De copolímeros de estireno-divinilbenceno, sulfonados 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3914.00.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3914.00.19",
+          "description": "000H Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3914.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3914.00.90",
+          "description": "100Y Polímeros acrílicos 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3914.00.90",
+          "description": "200D Polímeros fenólicos modificados químicamente 2.00 2.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3914.00.90",
+          "description": "900R Los demás 2.00 2.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3915",
+      "description": "DESECHOS, DESPERDICIOS Y RECORTES, DE PLÁSTICO",
+      "subheadings": [
+        {
+          "code": "3915.10.00",
+          "description": "De polímeros de etileno"
+        },
+        {
+          "code": "3915.10.00",
+          "description": "000M -De polímeros de etileno 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3915.20.00",
+          "description": "De polímeros de estireno"
+        },
+        {
+          "code": "3915.20.00",
+          "description": "000B -De polímeros de estireno 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3915.30.00",
+          "description": "De polímeros de cloruro de vinilo"
+        },
+        {
+          "code": "3915.30.00",
+          "description": "000Q -De polímeros de cloruro de vinilo 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3915.90.00",
+          "description": "De los demás plásticos"
+        },
+        {
+          "code": "3915.90.00",
+          "description": "100F De polipropileno 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3915.90.00",
+          "description": "200L De tereftalato de polietilenglicol 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3915.90.00",
+          "description": "300R De polímeros acrílicos 14.00 14.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "3915.90.00",
+          "description": "900Z Los demás 14.00 14.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "3916",
+      "description": "MONOFILAMENTOS CUYA MAYOR DIMENSIÓN DEL CORTE TRANSVERSAL SEA SUPERIOR A 1 MM, BARRAS,",
+      "subheadings": [
+        {
+          "code": "3916.10.00",
+          "description": "De polímeros de etileno"
+        },
+        {
+          "code": "3916.10.00",
+          "description": "100L Monofilamentos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3916.10.00",
+          "description": "200R Barras, varillas y perfiles 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3916.20.00",
+          "description": "De polímeros de cloruro de vinilo"
+        },
+        {
+          "code": "3916.20.00",
+          "description": "100A Monofilamentos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3916.20.00",
+          "description": "Barras, varillas y perfiles"
+        },
+        {
+          "code": "3916.20.00",
+          "description": "210J Perfiles, de los tipos utilizados en la fabricación de aberturas o cerramientos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3916.20.00",
+          "description": "290K Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3916.90",
+          "description": "De los demás plásticos"
+        },
+        {
+          "code": "3916.90.10",
+          "description": "Monofilamentos"
+        },
+        {
+          "code": "3916.90.10",
+          "description": "100J De polipropileno 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3916.90.10",
+          "description": "200P De polímeros acrílicos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3916.90.10",
+          "description": "900C Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3916.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3916.90.90",
+          "description": "100M De polipropileno 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3916.90.90",
+          "description": "200T De polímeros acrílicos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3916.90.90",
+          "description": "300Y De poliestireno 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3916.90.90",
+          "description": "400D De siliconas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3916.90.90",
+          "description": "900F Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3917",
+      "description": "TUBOS Y ACCESORIOS DE TUBERÍA (POR EJEMPLO: JUNTAS, CODOS, EMPALMES (RACORES)), DE",
+      "subheadings": [
+        {
+          "code": "3917.10",
+          "description": "Tripas artificiales de proteínas endurecidas o de plásticos celulósicos"
+        },
+        {
+          "code": "3917.10.10",
+          "description": "De proteínas endurecidas"
+        },
+        {
+          "code": "3917.10.10",
+          "description": "100P Que contengan colágeno (R.2012/93 ex-ANA) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.10.10",
+          "description": "900H Las demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.10.21",
+          "description": "Fibrosas, de celulosa regenerada, de diámetro superior o igual a 150 mm"
+        },
+        {
+          "code": "3917.10.21",
+          "description": "000B Fibrosas, de celulosa regenerada, de diámetro superior o igual a 150 mm 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.10.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3917.10.29",
+          "description": "000M Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.2",
+          "description": "Tubos rígidos:"
+        },
+        {
+          "code": "3917.21.00",
+          "description": "De polímeros de etileno"
+        },
+        {
+          "code": "3917.21.00",
+          "description": "100F Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.21.00",
+          "description": "200L Cortados en dimensiones finales para uso en productos englobados por el acuerdo ALADI/AAP.CE/14.44 Apendice I 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.21.00",
+          "description": "900Z Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.22.00",
+          "description": "De polímeros de propileno"
+        },
+        {
+          "code": "3917.22.00",
+          "description": "100T Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.22.00",
+          "description": "200Y Cortados en dimensiones finales para uso en productos englobados por el acuerdo ALADI/AAP.CE/14.44 Apendice I 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.22.00",
+          "description": "900L Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.23.00",
+          "description": "De polímeros de cloruro de vinilo"
+        },
+        {
+          "code": "3917.23.00",
+          "description": "100E Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.23.00",
+          "description": "200K Cortados en dimensiones finales para uso en productos englobados por el acuerdo ALADI/AAP.CE/14.44 Apendice I 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.23.00",
+          "description": "900Y Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.29.00",
+          "description": "De los demás plásticos"
+        },
+        {
+          "code": "3917.29.00",
+          "description": "100B De resinas fenólicas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.29.00",
+          "description": "200G Cortados en dimensiones finales para uso en productos englobados por el acuerdo ALADI/AAP.CE/14.44 Apendice I 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3917.29.00",
+          "description": "910Y Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.29.00",
+          "description": "990Z Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.3",
+          "description": "Los demás tubos:"
+        },
+        {
+          "code": "3917.31.00",
+          "description": "Tubos flexibles para una presión superior o igual a 27,6 MPa"
+        },
+        {
+          "code": "3917.31.00",
+          "description": "000P --Tubos flexibles para una presión superior o igual a 27,6 MPa 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32",
+          "description": "Los demás, sin reforzar ni combinar con otras materias, sin accesorios"
+        },
+        {
+          "code": "3917.32.10",
+          "description": "De copolímeros de etileno"
+        },
+        {
+          "code": "3917.32.10",
+          "description": "100R Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.10",
+          "description": "200X Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.10",
+          "description": "900K Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.21",
+          "description": "Tubos capilares, semipermeables, aptos para hemodiálisis o para oxigenación sanguínea"
+        },
+        {
+          "code": "3917.32.21",
+          "description": "000D Tubos capilares, semipermeables, aptos para hemodiálisis o para oxigenación sanguínea 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3917.32.29",
+          "description": "100V Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.29",
+          "description": "200A Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.29",
+          "description": "900N Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.30",
+          "description": "De poli(tereftalato de etileno)"
+        },
+        {
+          "code": "3917.32.30",
+          "description": "100L Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.30",
+          "description": "200R Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.30",
+          "description": "900E Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.40",
+          "description": "De siliconas"
+        },
+        {
+          "code": "3917.32.40",
+          "description": "000Q De siliconas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.51",
+          "description": "Tubos capilares, semipermeables, aptos para hemodiálisis"
+        },
+        {
+          "code": "3917.32.51",
+          "description": "000H Tubos capilares, semipermeables, aptos para hemodiálisis 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.59",
+          "description": "Los demás"
+        },
+        {
+          "code": "3917.32.59",
+          "description": "100Z Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.59",
+          "description": "900T Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3917.32.90",
+          "description": "100V Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.90",
+          "description": "200A Aptos para estar en contacto con alimentos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.90",
+          "description": "910R De polietileno 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.90",
+          "description": "920V De poli(cloruro de vinilo) 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.32.90",
+          "description": "990T Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "Los demás, sin reforzar ni combinar con otras materias, con accesorios"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "De polímeros de etileno"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "110X Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes. 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "190Y Los demas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "De polímeros de propileno"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "210C Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes. 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "290D Los demas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "De poli(cloruro de vinilo)"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "310H Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "390J Los demas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "De poliesteres"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "410N Cortados o conformados en las dimensiones finales para utilizacion en vehiulos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "490P Los demas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "De siliconas"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "510U Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes. 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "590V Los demas. 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "910Q Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes. 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.33.00",
+          "description": "990R Los demas. 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3917.39.00",
+          "description": "100Q Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.39.00",
+          "description": "Los demás reforzados o combinados con otras materias"
+        },
+        {
+          "code": "3917.39.00",
+          "description": "910M Con materias textiles 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.39.00",
+          "description": "920Q Con metales 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.39.00",
+          "description": "930U Con fibra de vidrio 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.39.00",
+          "description": "990N Los demas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.40",
+          "description": "Accesorios"
+        },
+        {
+          "code": "3917.40.10",
+          "description": "De los tipos utilizados en líneas de sangre para hemodiálisis"
+        },
+        {
+          "code": "3917.40.10",
+          "description": "100G Codos 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.40.10",
+          "description": "200M Juntas 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.40.10",
+          "description": "900A Los demás 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.40.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3917.40.90",
+          "description": "Codos"
+        },
+        {
+          "code": "3917.40.90",
+          "description": "110N De los tipos utilizados en vehiculos automoviles 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.40.90",
+          "description": "190P Los demas. 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.40.90",
+          "description": "Juntas"
+        },
+        {
+          "code": "3917.40.90",
+          "description": "210U De los tipos utilizados em vehiculos automoviles. 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.40.90",
+          "description": "290V Los demas. 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3917.40.90",
+          "description": "910G De los tipos utilizados en vehiculos automoviles. 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3917.40.90",
+          "description": "990H Los demas. 16.00 16.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3918",
+      "description": "REVESTIMIENTOS DE PLÁSTICO PARA SUELOS, INCLUSO AUTOADHESIVOS, EN ROLLOS O LOSETAS;",
+      "subheadings": [
+        {
+          "code": "3918.10.00",
+          "description": "De polímeros de cloruro de vinilo"
+        },
+        {
+          "code": "3918.10.00",
+          "description": "Para suelos, excepto los englobados por el acuerdo ALADI/AAP.CE/14.44 Apendice I"
+        },
+        {
+          "code": "3918.10.00",
+          "description": "110B Losetas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3918.10.00",
+          "description": "120E Rollos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3918.10.00",
+          "description": "200D Para paredes o techos, excepto los englobados por el acuerdo ALADI/AAP.CE/14.44 Apendice I 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3918.10.00",
+          "description": "300J Cortados en dimensiones finales para uso en productos englobados por el acuerdo ALADI/AAP.CE/14.44 Apendice I 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3918.90.00",
+          "description": "De los demás plásticos"
+        },
+        {
+          "code": "3918.90.00",
+          "description": "Para suelos"
+        },
+        {
+          "code": "3918.90.00",
+          "description": "Losetas"
+        },
+        {
+          "code": "3918.90.00",
+          "description": "111R Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3918.90.00",
+          "description": "119J Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3918.90.00",
+          "description": "120T Rollos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3918.90.00",
+          "description": "200R Para paredes o techos 16.00 16.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3919",
+      "description": "PLACAS, LÁMINAS, HOJAS, CINTAS, TIRAS Y DEMÁS FORMAS PLANAS, AUTOADHESIVAS, DE PLÁSTICO,",
+      "subheadings": [
+        {
+          "code": "3919.10",
+          "description": "En rollos de anchura inferior o igual a 20 cm"
+        },
+        {
+          "code": "3919.10.10",
+          "description": "De polipropileno"
+        },
+        {
+          "code": "3919.10.10",
+          "description": "Impresas"
+        },
+        {
+          "code": "3919.10.10",
+          "description": "110E De los tipos utilizados para la fabricacion de tiras para diagnostico de COVID19 16.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.10",
+          "description": "190F Las demas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.10",
+          "description": "Las demás"
+        },
+        {
+          "code": "3919.10.10",
+          "description": "910Y Cintas de embalaje, sin soporte de despegue descartable 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.10",
+          "description": "990Z Las demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.20",
+          "description": "De poli(cloruro de vinilo)"
+        },
+        {
+          "code": "3919.10.20",
+          "description": "100L Impresas 16.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.20",
+          "description": "900E Las demás 16.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "De polietileno"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "Impresas"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "111K De anchura superior o igual a 5 cm pero inferior o igual a 20 cm, con revestimiento anticorrosivo 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "119C Las demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "191L De anchura superior o igual a 5 cm pero inferior o igual a 20 cm, con revestimiento anticorrosivo. 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "199D Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "De poliesteres"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "210N Impresas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "290P Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "De acetato de celulosa"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "310U Impresas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "390V Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "De celulosa regenerada"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "410Z Impresas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "490A Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "De poliuretanos"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "510E Impresas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "590F Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "De polímeros fluorados"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "610K Impresas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "690L Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "910B Impresas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.10.90",
+          "description": "990C Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3919.90.10",
+          "description": "De polipropileno"
+        },
+        {
+          "code": "3919.90.10",
+          "description": "Sin imprimir, en rollos o en hojas de forma cuadrada o rectangular"
+        },
+        {
+          "code": "3919.90.10",
+          "description": "110T En rollos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.10",
+          "description": "Las demás"
+        },
+        {
+          "code": "3919.90.10",
+          "description": "191W Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.10",
+          "description": "192Y Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.10",
+          "description": "199N Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.10",
+          "description": "910L En rollos 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.10",
+          "description": "991P Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.10",
+          "description": "992R Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.10",
+          "description": "999G Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.20",
+          "description": "De poli(cloruro de vinilo)"
+        },
+        {
+          "code": "3919.90.20",
+          "description": "Sin imprimir, en rollos o en hojas de forma cuadrada o rectangular"
+        },
+        {
+          "code": "3919.90.20",
+          "description": "110C Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.20",
+          "description": "120F Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.20",
+          "description": "Las demás"
+        },
+        {
+          "code": "3919.90.20",
+          "description": "192H En rollos de anchura superior o igual a 105 cm y de largo inferior o igual a 50 m, con un peso superior a 239 g/m2 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.20",
+          "description": "199Y Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.20",
+          "description": "200E De los tipos utilizados para la fabricacion de tiras para diagnostico de COVID-19 16.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.20",
+          "description": "910W Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.20",
+          "description": "920Z Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.20",
+          "description": "990X Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "De polietileno"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "Sin imprimir, en rollos o en hojas de forma cuadrada o rectangular"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "111Y En rollos de anchura superior a 20 cm pero inferior o igual a 120 cm, con revestimiento anticorrosivo 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "112A Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "113C Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "119Q Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "191Z En rollos de anchura superior a 20 cm pero inferior o igual a 120 cm, con revestimiento anticorrosivo 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "192B Las demas, cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "193D Las demás, alcanzadas por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "199R Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "De poliesteres"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "211D Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "212F Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "219W Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "291E Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "292G Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "299X Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "De acetato de celulosa"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "311J Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "312L Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "319B Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "391K Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "392M Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "399C Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "De celulosa regenerada"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "410M Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "420Q Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "490N Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "De poliuretanos"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "510T Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "520W Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "590U Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "De polímeros fluorados"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "610Y Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "620B Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "690Z Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "910P Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "Las demás, sin imprimir, en rollos o en hojas de forma cuadrada o rectángular"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "921V Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "929M Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "991T Productos alcanzados por la Res. 163/2005 SCT 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3919.90.90",
+          "description": "999K Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3920",
+      "description": "LAS DEMÁS PLACAS, LÁMINAS, HOJAS Y TIRAS, DE PLÁSTICO NO CELULAR Y SIN REFUERZO,",
+      "subheadings": [
+        {
+          "code": "3920.10",
+          "description": "De polímeros de etileno"
+        },
+        {
+          "code": "3920.10.10",
+          "description": "De densidad superior o igual a 0,94, espesor inferior o igual a 19 micrómetros, en rollos de anchura inferior o igual a 66"
+        },
+        {
+          "code": "3920.10.10",
+          "description": "100F Impresas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.10",
+          "description": "900Z Las demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.91",
+          "description": "De densidad inferior a 0,94, con aceite de parafina y carga (sílice y negro de humo), presentando nervaduras paralelas"
+        },
+        {
+          "code": "3920.10.91",
+          "description": "000L De densidad inferior a 0,94, con aceite de parafina y carga (sílice y negro de humo), presentando nervaduras paralelas"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "Impresas"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "110F De polietileno, exclusivamente, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "120J Estratificadas exclusivamente con polipropileno biaxialmente orientado, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "130M Estratificadas exclusivamente con polipropileno monoaxialmente orientado, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "Estratificadas exclusivamente con poliesteres"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "141T Metalizadas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "149K Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "150U Estratificadas exclusivamente con poliesteres y policloruro de vinilideno, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "160X Estratificadas exclusivamente con poliamidas, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "170A Estratificadas exclusivamente con poli(cloruro de vinilo), sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "180D Estratificadas exclusivamente con poli(alcohol vinílico), sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "191J Estratificadas exclusivamente con celulosa regenerada, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "199B Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "910Z De polietileno, exclusivamente, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "920C Estratificadas exclusivamente con polipropileno biaxialmente orientado, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "930F Estratificadas exclusivamente con polipropileno monoaxialmente orientado, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "941L Metalizadas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "949D Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "950M Estratificadas exclusivamente con poliester y policloruro de vinilideno, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "960Q Estratificadas exclusivamente con poliamidas, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "970U Estratificadas exclusivamente con poli(cloruro de vinilo), sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "980X Estratificadas exclusivamente con poli(alcohol vinílico), sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "991C Estratificadas exclusivamente con celulosa regenerada, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.10.99",
+          "description": "999V Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20",
+          "description": "De polímeros de propileno"
+        },
+        {
+          "code": "3920.20.11",
+          "description": "De anchura inferior o igual a 12,5 cm y espesor inferior o igual a 10 micrómetros, metalizadas"
+        },
+        {
+          "code": "3920.20.11",
+          "description": "100C Impresas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.11",
+          "description": "900W Las demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.12",
+          "description": "De anchura inferior o igual a 50 cm y espesor inferior o igual a 25 micrómetros, con una o ambas caras rugosas de"
+        },
+        {
+          "code": "3920.20.12",
+          "description": "000E De anchura inferior o igual a 50 cm y espesor inferior o igual a 25 micrómetros, con una o ambas caras rugosas de"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "Impresas"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "110R De polipropileno biaxialmente orientado exclusivamente 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "120V Estratificadas exclusivamente con polietileno y polipropileno monoaxialmente orientado, sin metalizar 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "Estratificadas exclusivamente con poliesteres"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "131A Metalizadas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "139T Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "140B Estratificadas exclusivamente con poliesteres y policloruro de vinilideno, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "150E Estratificadas exclusivamente con polipropileno monoaxialmente orientado, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "160H Estratificadas exclusivamente con celulosa regenerada, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "190T Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "De polipropileno biaxialmente orientado exclusivamente"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "911M De espesor superior a 10 micrones, transparentes 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "912P De espesor superior a 10 micrones, opacas o translucidas 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "913R De espesor superior a 10 micrones, metalizadas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "919E Las demás. 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "920N Estratificadas exclusivamente con polietileno y polipropileno monoaxialmente orientado, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "Estratificadas con poliésteres, exclusivamente"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "931U Metalizadas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "939L Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "940V Estratificadas exclusivamente con poliesteres y policloruro de vinilideno, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "950Y Estratificadas exclusivamente con polipropileno monoaxialmente orientado, sin metalizar 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "960B Estratificadas exclusivamente con celulosa regenerada, sin metalizar 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.19",
+          "description": "990L Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3920.20.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3920.20.90",
+          "description": "Impresas"
+        },
+        {
+          "code": "3920.20.90",
+          "description": "110B De polipropileno monoaxialmente orientado estratificadas exclusivamente con polipropileno biaxialmente orientado, sin"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LNA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "3921",
+      "description": "LAS DEMÁS PLACAS, LÁMINAS, HOJAS Y TIRAS, DE PLÁSTICO",
+      "subheadings": [
+        {
+          "code": "3921.1",
+          "description": "Productos celulares:"
+        },
+        {
+          "code": "3921.11.00",
+          "description": "De polímeros de estireno"
+        },
+        {
+          "code": "3921.11.00",
+          "description": "000W --De polímeros de estireno 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3921.12.00",
+          "description": "De polímeros de cloruro de vinilo"
+        },
+        {
+          "code": "3921.12.00",
+          "description": "000H --De polímeros de cloruro de vinilo 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3921.13",
+          "description": "De poliuretanos"
+        },
+        {
+          "code": "3921.13.10",
+          "description": "Con base poliéster, de células abiertas, con un número de poros por decímetro lineal superior o igual a 24 pero inferior"
+        },
+        {
+          "code": "3921.13.10",
+          "description": "000E Con base poliester, de células abiertas, con un número de poros por decímetro lineal superior o igual a 24 pero inferior"
+        },
+        {
+          "code": "3921.13.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3921.13.90",
+          "description": "100N Lámina de poliuretano celular con recubrimiento reflectivo y retroreflectivo que conforma logotipos, microesferas de"
+        },
+        {
+          "code": "3921.13.90",
+          "description": "900G Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3921.14.00",
+          "description": "De celulosa regenerada"
+        },
+        {
+          "code": "3921.14.00",
+          "description": "000G --De celulosa regenerada 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3921.19.00",
+          "description": "De los demás plásticos"
+        },
+        {
+          "code": "3921.19.00",
+          "description": "000R --De los demás plásticos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "3921.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3921.90.11",
+          "description": "De resina melamina-formaldehído"
+        },
+        {
+          "code": "3921.90.11",
+          "description": "000P De resina melamina-formaldehído 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3921.90.12",
+          "description": "De polietileno, con refuerzo de napas de fibras de polietileno paralelizadas, superpuestas entre sí en ángulo de 90º e"
+        },
+        {
+          "code": "3921.90.12",
+          "description": "100C A prueba de balas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3921.90.12",
+          "description": "900W Las demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3921.90.13",
+          "description": "De copolímeros de tetrafluoroetileno reforzadas con tejido de fibras de politetrafluoroetileno, de los tipos utilizados"
+        },
+        {
+          "code": "3921.90.13",
+          "description": "000E De copolimeros de tetrafluoroetileno reforzadas con tejido de fibras de politetrafluoroetileno, de los tipos utilizados"
+        },
+        {
+          "code": "3921.90.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3921.90.19",
+          "description": "100F Placas, láminas, hojas y tiras de plástico, estratificadas con napas de filamentos de aramida, a prueba de balas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3921.90.19",
+          "description": "200L Placas, laminas, hojas y tiras de nitrocelulosa con soporte absorbente, de los tipos utilizados para la fabricacion de"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "0.00 0.00 LA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "3922",
+      "description": "BAÑERAS, DUCHAS, FREGADEROS, LAVABOS, BIDÉS, INODOROS Y SUS ASIENTOS Y TAPAS, CISTERNAS",
+      "subheadings": [
+        {
+          "code": "3922.10.00",
+          "description": "Bañeras, duchas, fregaderos y lavabos"
+        },
+        {
+          "code": "3922.10.00",
+          "description": "100H Bañeras 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3922.10.00",
+          "description": "200N Duchas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3922.10.00",
+          "description": "300U Fregaderos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3922.10.00",
+          "description": "400Z Lavabos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3922.20.00",
+          "description": "Asientos y tapas de inodoros"
+        },
+        {
+          "code": "3922.20.00",
+          "description": "100X Moldeados por soplado 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3922.20.00",
+          "description": "900Q Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3922.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3922.90.00",
+          "description": "100W Bides 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3922.90.00",
+          "description": "200B Inodoros 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3922.90.00",
+          "description": "Cisternas (depósito de agua) para inodoros"
+        },
+        {
+          "code": "3922.90.00",
+          "description": "Moldeadas por soplado"
+        },
+        {
+          "code": "3922.90.00",
+          "description": "311M Tipo mochila 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3922.90.00",
+          "description": "319E Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3922.90.00",
+          "description": "390L Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3922.90.00",
+          "description": "900P Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "3923",
+      "description": "ARTÍCULOS PARA EL TRANSPORTE O ENVASADO, DE PLÁSTICO; TAPONES, TAPAS, CÁPSULAS Y DEMÁS",
+      "subheadings": [
+        {
+          "code": "3923.10",
+          "description": "Cajas, cajones, jaulas y artículos similares"
+        },
+        {
+          "code": "3923.10.10",
+          "description": "Estuches de plástico, de los tipos utilizados para acondicionar discos para sistemas de lectura por rayos láser"
+        },
+        {
+          "code": "3923.10.10",
+          "description": "000F Estuches de plástico, de los tipos utilizados para acondicionar discos para sistemas de lectura por rayos láser 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3923.10.90",
+          "description": "Cajas, cajones y artículos similares"
+        },
+        {
+          "code": "3923.10.90",
+          "description": "110T De polietileno 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.10.90",
+          "description": "120W De polipropileno 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.10.90",
+          "description": "130Z De poli(cloruro de vinilo) 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.10.90",
+          "description": "140C De polímeros acrílicos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.10.90",
+          "description": "190U Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.10.90",
+          "description": "Jaulas y artículos similares"
+        },
+        {
+          "code": "3923.10.90",
+          "description": "210Y De polipropileno 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.10.90",
+          "description": "290Z Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.2",
+          "description": "Sacos (bolsas), bolsitas y cucuruchos:"
+        },
+        {
+          "code": "3923.21",
+          "description": "De polímeros de etileno"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "De capacidad inferior o igual a 1000 cm3"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Impresos, sin soporte o refuerzo"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "De polietileno exclusivamente"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "111T Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "112V Con pico vertedor, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "119K Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Estratificados con poli(tereftalato de etileno) exclusivamente, sin metalizar"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "121W Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "122Y Con pico vertedor, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "129N Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Estratificados exclusivamente con poli(tereftalato de etileno) y policloruro de vinilideno, sin metalizar"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "131Z Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "132B Con pico vertedor exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "139R Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Estratificados exclusivamente con poli(tereftalato de etileno), metalizadas"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "141C Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "142E Con pico vertedor exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "149V Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Estratificadas exclusivamente con poli(tereftalato de etileno) y polipropileno biaxialmente orientado, sin metalizar"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "151F Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "152H Con pico vertedor, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "159Y Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Estratificados exclusivamente con poli(tereftalato de etileno) y polipropileno biaxialmente orientado, metalizados"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "161J Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "162L Con pico vertedor, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "169B Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Estratificados exclusivamente con polipropileno biaxialmente orientado"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "171M Metalizados 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "179E Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "190R Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Impresos, con soporte o refuerzo exclusivamente de papel"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "210W Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "220Z Con pico vertedor exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "290X Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Impresos, con soporte o refuerzo exclusivamente de aluminio"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Estratificados exclusivamente con poli(tereftalato de etileno)"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "311D Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "312F Con pico vertedor, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "319W Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "390C Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "911L Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "912N Con pico vertedor, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "919D Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Estratificados con poli(tereftalato de etileno) exclusivamente, sin metalizar, sin soporte o refuerzo"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "921P Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "922R Con pico vertedor, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "929G Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Estratificados exclusivamente con poli(tereftalato de etileno) y policloruro de vinilideno, sin metalizar, sin soporte o"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "931T Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "932V Con pico vertedor, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "939K Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Estratificados con poli(tereftalato de etileno) exclusivamente, metalizadas, sin soporte o refuerzo"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "941W Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "942Y Con pico vertedor, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "949N Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "Estratificados exclusivamente con poli(tereftalato de etileno) y polipropileno biaxialmente orientado, sin metalizar, sin"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "951Z Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "952B Con pico vertedor, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "959R Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "961C Con dispositivo de cierre por presión, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "962E Con pico vertedor, exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "969V Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "971F Metalizados 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "979Y Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "991M Con soporte o refuerzo exclusivamente de papel, sin metalizar, con dispositivo de cierre por presión exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "992P Con soporte o refuerzo exclusivamente de papel, sin metalizar, con pico vertedor exclusivamente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3923.21.10",
+          "description": "993R Estratificados exclusivamente con poli(tereftalato de etileno) con soporte o refuerzo exclusivamente de aluminio y con"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LNA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "3924",
+      "description": "VAJILLA, ARTÍCULOS DE COCINA O DE USO DOMÉSTICO Y ARTÍCULOS DE HIGIENE O TOCADOR, DE",
+      "subheadings": [
+        {
+          "code": "3924.10.00",
+          "description": "Vajilla y demás artículos para el servicio de mesa o de cocina"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "Cubiertos"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "110Y Destinados a ser llevados a la boca por niños menores de tres años 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "190Z Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "Platos"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "De un solo uso"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "211F De polipropileno 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "212H De poliestireno de alto impacto 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "213K De poliestireno expandido 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "214M De poliestireno biaxialmente orientado 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "215P De poli(tereftalato de etileno) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "216R De poli(cloruro de vinilo) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "219Y Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "290E Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "Tazas"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "310J Destinados a ser llevados a la boca por niños menores de tres años 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "390K Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "Vasos"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "411R De polipropileno 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "412U De poliestireno de alto impacto 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "413W De poliestireno expandido 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "414Y De poliestireno biaxialmente orientado 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "415A De poli(tereftalato de etileno) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "416C De poli(cloruro de vinilo) 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "419J Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "491T Destinados a ser llevados a la boca por niños menores de tres años 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "499K Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "Fuentes, bandejas y artículos similares"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "510V Aptos para estar en contacto con alimentos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "590W Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "600X Cajas para alimentos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "700C Artículos de manteleria 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "800H Juegos de te o cafe 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "Biberones"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "911U Presentados con su correspondiente tetina 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "919L Los demas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "920V Los demás, aptos para estar en contacto con alimentos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.10.00",
+          "description": "990T Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3924.90.00",
+          "description": "100H Jaboneras 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.90.00",
+          "description": "200N Portacepillos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.90.00",
+          "description": "Esponjas"
+        },
+        {
+          "code": "3924.90.00",
+          "description": "310X Presentadas en juegos o surtidos con preparaciones para el lavado de la piel 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.90.00",
+          "description": "390Y Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.90.00",
+          "description": "400Z Cubos (incluidos los de basura) y palanganas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.90.00",
+          "description": "500E Portarrollos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.90.00",
+          "description": "600K Toalleros 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.90.00",
+          "description": "700Q Cortinas de baño 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.90.00",
+          "description": "800W Tetinas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3924.90.00",
+          "description": "900B Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "3925",
+      "description": "ARTÍCULOS PARA LA CONSTRUCCIÓN, DE PLÁSTICO, NO EXPRESADOS NI COMPRENDIDOS EN OTRA",
+      "subheadings": [
+        {
+          "code": "3925.10.00",
+          "description": "Depósitos, cisternas, cubas y recipientes análogos, de capacidad superior a 300 l"
+        },
+        {
+          "code": "3925.10.00",
+          "description": "000H -Depósitos, cisternas, cubas y recipientes análogos, de capacidad superior a 300 l 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.20.00",
+          "description": "Puertas, ventanas, y sus marcos, contramarcos y umbrales"
+        },
+        {
+          "code": "3925.20.00",
+          "description": "000X -Puertas, ventanas, y sus marcos, contramarcos y umbrales 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.30.00",
+          "description": "Contraventanas, persianas (incluidas las venecianas) y artículos similares, y sus partes"
+        },
+        {
+          "code": "3925.30.00",
+          "description": "100R Cortina enrollable con su correspondiente bastidor, sobre el cual se encuentra montado en forma permanente un"
+        },
+        {
+          "code": "3925.30.00",
+          "description": "900K Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3925.90.10",
+          "description": "De poliestireno expandido (EPS)"
+        },
+        {
+          "code": "3925.90.10",
+          "description": "000F De poliestireno expandido (EPS) 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "100P Artículos para guarnecer los cuartos de baño o de tocador 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "200V Artículos para guarnecer las cocinas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "Elementos estructurales constituidos por placas de policarbonato alveolar especialmente diseñadas para la"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "911N De espesor superior o igual a 3mm pero inferior o igual a 6mm 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "912Q De espesor superior a 6mm pero inferior o igual a 8mm 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "913T De espesor superior a 8mm pero inferior o igual a 10mm 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "914V De espesor superior a 10mm pero inferior o igual a 12mm 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "915X De espesor superior a 12mm pero inferior o igual a 16mm 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "916Z De espesor superior a 16mm pero inferior o igual a 18mm 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "917B De espesor superior a 18mm pero a inferior o igual a 20mm 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "918D De espesor superior a 20mm pero inferior o igual a 25mm 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "919F Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3925.90.90",
+          "description": "990M Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "3926",
+      "description": "LAS DEMÁS MANUFACTURAS DE PLÁSTICO Y MANUFACTURAS DE LAS DEMÁS MATERIAS DE LAS PARTIDAS",
+      "subheadings": [
+        {
+          "code": "3926.10.00",
+          "description": "Artículos para oficina y artículos escolares"
+        },
+        {
+          "code": "3926.10.00",
+          "description": "100G Gomas de borrar 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.10.00",
+          "description": "200M Productos alcanzados por la Res. 163/2005 SCT 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.10.00",
+          "description": "900A Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "Prendas y complementos (accesorios), de vestir, incluidos los guantes, mitones y manoplas"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "Unicamente para uso médico (R.G.30/97 AFIP)"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "Guantes"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "111B Esteriles, envasados para su venta directa al usuario final 18.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "112D No esteriles, envasados para su venta directa al usuario final 18.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "119U Los demás 18.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "190A Los demás 18.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "Las demás prendas y complementos (accesorios) de vestir"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "211G Aptos para estar en contacto con alimentos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "219Z Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "220H Impermeables 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "230L Delantales 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "240P Baberos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.20.00",
+          "description": "290F Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.30.00",
+          "description": "Guarniciones para muebles, carrocerías o similares"
+        },
+        {
+          "code": "3926.30.00",
+          "description": "100K Manijas,tiradores y patas, de los tipos utilizados en muebles 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.30.00",
+          "description": "900D Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.40.00",
+          "description": "Estatuillas y demás artículos de adorno"
+        },
+        {
+          "code": "3926.40.00",
+          "description": "100Z Porta macetas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.40.00",
+          "description": "200E Porta retratos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.40.00",
+          "description": "900T Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3926.90.10",
+          "description": "Arandelas"
+        },
+        {
+          "code": "3926.90.10",
+          "description": "000Z Arandelas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.21",
+          "description": "Para transmisión"
+        },
+        {
+          "code": "3926.90.21",
+          "description": "000R Para transmisión 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.22",
+          "description": "Transportadoras"
+        },
+        {
+          "code": "3926.90.22",
+          "description": "000Z Transportadoras 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.30",
+          "description": "Bolsas para uso en medicina (hemodiálisis y usos similares)"
+        },
+        {
+          "code": "3926.90.30",
+          "description": "000U Bolsas para uso en medicina (hemodiálisis y usos similares) 0.00 0.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.40",
+          "description": "Artículos de laboratorio o farmacia"
+        },
+        {
+          "code": "3926.90.40",
+          "description": "Artículos de puericultura"
+        },
+        {
+          "code": "3926.90.40",
+          "description": "110M Tetinas 18.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.40",
+          "description": "190N Los demás 18.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.40",
+          "description": "200P Aplicadores de uso vaginal (R.G.30/97 AFIP) 18.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.40",
+          "description": "900C Los demas 18.00 0.00 0.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.50",
+          "description": "Accesorios de los tipos utilizados en líneas de sangre para hemodiálisis, tales como: obturadores, incluidos los"
+        },
+        {
+          "code": "3926.90.50",
+          "description": "000N Accesorios de los tipos utilizados en líneas de sangre para hemodiálisis, tales como: obturadores, incluidos los"
+        },
+        {
+          "code": "3926.90.61",
+          "description": "De tetrafluoroetileno y éter perfluorometilvinilo"
+        },
+        {
+          "code": "3926.90.61",
+          "description": "100L De los tipos utilizados en vehículos automóviles 2.00 2.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.61",
+          "description": "900E Los demás 2.00 2.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.69",
+          "description": "Los demás"
+        },
+        {
+          "code": "3926.90.69",
+          "description": "100X De los tipos utilizados en vehículos automóviles 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.69",
+          "description": "900Q Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "100H Manufacturas de poliamidas aromáticas a prueba de balas (R.3115/94 ANA) 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "Accesorios de uso general"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "210R Tornillos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "220V Pernos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "230Y Ruedas que cumplan con la Nota 2 del Capítulo 83 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "290T Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "300U Estuches o cajas para herramientas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "400Z Mangos de herramientas o de cubiertos de mesa 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "Recipientes de plástico moldeado, de los tipos utilizados como neveras"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "510H De polietileno y polipropileno, de capacidad inferior o igual a 28 l 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "520L De poliestireno de alto impacto, de capacidad superior a 28 l 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "590J Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "600K Bolsas y continentes similares de los tipos utilizados para nutrición enteral o parenteral (R.G.30/97AFIP) 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "Dispensadores de los tipos utilizados para golosinas, incluso presentados con estas"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "Presentados con golosinas"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "711W Productos alcanzados por la Res. 163/2005 SCT 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "719N Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "791X Productos alcanzados por la Res. 163/2005 SCT 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "799P Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "800W Cadenas de los tipos utilizados para colgar chupetes 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "De lo tipos utilizados en vehiculos automoviles"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "911G Juntas o empaquetaduras 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "912J Tapa de distribucion de motores de vehiculos automoviles 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "919Z Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "Elementos de señalización de los tipos utilizados en seguridad vial"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "921K Placas reflectantes de forma triangular 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "922M Conos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "923P Cadenas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "929C Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "930L Terminal de cordón para prendas de vestir 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "940P Caravana, de los tipos utilizados para la identificación de animales. 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "Red extruída de polietileno o polipropileno presentada en rollos de anchura superior o igual a 0,5 m pero inferior o igual"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "951V De polietileno 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "952X De polipropileno 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "960W Placas, láminas, hojas y tiras de poli (metacrilato de metilo) exclusivamente, no celular, sin metalizar; cuadradas o"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "991H Juntas o empaquetaduras 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "992K Productos alcanzados por la Res. 163/2005 SCT 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "993M Aptas para estar en contacto con alimentos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3926.90.90",
+          "description": "999A Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 1693
+}

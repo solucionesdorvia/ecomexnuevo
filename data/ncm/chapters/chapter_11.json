@@ -1,0 +1,474 @@
+{
+  "chapter": "11",
+  "title": "Capítulo 11",
+  "sectionTitle": "CAP. 11 SECCION II PRODUCTOS DEL REINO VEGETAL Notas. 1. En esta Sección, el término \"pellets\" designa los productos en",
+  "headings": [
+    {
+      "code": "1101",
+      "description": "HARINA DE TRIGO O DE MORCAJO (TRANQUILLÓN)",
+      "subheadings": [
+        {
+          "code": "1101.00.10",
+          "description": "De trigo"
+        },
+        {
+          "code": "1101.00.10",
+          "description": "Fortificada con hierro y vitaminas, con adición de aditivos"
+        },
+        {
+          "code": "1101.00.10",
+          "description": "110C En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res. 835/05 SAGPyA) 12.00 12.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "1101.00.10",
+          "description": "120F En envases inmediatos de contenido neto superior a 2 kg pero inferior o igual a 5 kg 12.00 12.00 3.00 LA 7.00 1.25"
+        },
+        {
+          "code": "1101.00.10",
+          "description": "190D Los demás 12.00 12.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "1101.00.10",
+          "description": "Las demás"
+        },
+        {
+          "code": "1101.00.10",
+          "description": "910W En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res. 835/05 SAGPyA) 12.00 12.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "1101.00.10",
+          "description": "920Z En envases inmediatos de contenido neto superior a 2 kg pero inferior o igual a 5 kg 12.00 12.00 3.00 LA 7.00 1.25"
+        },
+        {
+          "code": "1101.00.10",
+          "description": "990X Los demás 12.00 12.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "1101.00.20",
+          "description": "De morcajo (tranquillón)"
+        },
+        {
+          "code": "1101.00.20",
+          "description": "000D De morcajo (tranquillón) 12.00 12.00 3.00 LA 5.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1102",
+      "description": "HARINA DE CEREALES, EXCEPTO DE TRIGO O DE MORCAJO (TRANQUILLÓN)",
+      "subheadings": [
+        {
+          "code": "1102.20.00",
+          "description": "Harina de maíz"
+        },
+        {
+          "code": "1102.20.00",
+          "description": "100L En envases de contenido neto inferior o igual a 20 kg (R.967/99 MEYOSP) 10.00 10.00 3.00 LA 3.00 1.75"
+        },
+        {
+          "code": "1102.20.00",
+          "description": "900E Las demás 10.00 10.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "1102.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1102.90.00",
+          "description": "100K De cebada 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1102.90.00",
+          "description": "200Q De avena 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1102.90.00",
+          "description": "300W De Quinoa (Chenopodium quinoa) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1102.90.00",
+          "description": "400B De arroz 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1102.90.00",
+          "description": "500G De centeno 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1102.90.00",
+          "description": "900D Las demás 10.00 10.00 3.00 LA 5.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1103",
+      "description": "GRAÑONES, SÉMOLA Y «PELLETS», DE CEREALES",
+      "subheadings": [
+        {
+          "code": "1103.1",
+          "description": "Grañones y sémola:"
+        },
+        {
+          "code": "1103.11.00",
+          "description": "De trigo"
+        },
+        {
+          "code": "1103.11.00",
+          "description": "100C En envases inmediatos de contenido neto inferior o igual a 2,5 kg (R.967/99 MEYOSP) 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1103.11.00",
+          "description": "900W Los demás 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "1103.13.00",
+          "description": "De maíz"
+        },
+        {
+          "code": "1103.13.00",
+          "description": "100B En envases inmediatos de contenido neto inferior o igual a 2,5 kg (R.967/99 MEYOSP) 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "1103.13.00",
+          "description": "900V Los demás 10.00 10.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "1103.19.00",
+          "description": "De los demás cereales"
+        },
+        {
+          "code": "1103.19.00",
+          "description": "100Y De centeno 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1103.19.00",
+          "description": "200D De cebada 10.00 10.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "1103.19.00",
+          "description": "900R De los demás cereales 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1103.20.00",
+          "description": "«Pellets»"
+        },
+        {
+          "code": "1103.20.00",
+          "description": "000Z -'Pellets' 10.00 10.00 3.00 LA 5.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1104",
+      "description": "GRANOS DE CEREALES TRABAJADOS DE OTRO MODO (POR EJEMPLO: MONDADOS, APLASTADOS, EN",
+      "subheadings": [
+        {
+          "code": "1104.1",
+          "description": "Granos aplastados o en copos:"
+        },
+        {
+          "code": "1104.12.00",
+          "description": "De avena"
+        },
+        {
+          "code": "1104.12.00",
+          "description": "000C --De avena 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1104.19.00",
+          "description": "De los demás cereales"
+        },
+        {
+          "code": "1104.19.00",
+          "description": "000L --De los demás cereales 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1104.2",
+          "description": "Los demás granos trabajados (por ejemplo: mondados, perlados, troceados o quebrantados):"
+        },
+        {
+          "code": "1104.22.00",
+          "description": "De avena"
+        },
+        {
+          "code": "1104.22.00",
+          "description": "Despuntada"
+        },
+        {
+          "code": "1104.22.00",
+          "description": "110A A granel, con hasta el 15% embolsado. 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1104.22.00",
+          "description": "Mas del 15% embolsado."
+        },
+        {
+          "code": "1104.22.00",
+          "description": "121F En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "1104.22.00",
+          "description": "129Y Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1104.22.00",
+          "description": "900Q Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1104.23.00",
+          "description": "De maíz"
+        },
+        {
+          "code": "1104.23.00",
+          "description": "000D --De maíz 10.00 10.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "1104.29.00",
+          "description": "De los demás cereales"
+        },
+        {
+          "code": "1104.29.00",
+          "description": "000A --De los demás cereales 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1104.30.00",
+          "description": "Germen de cereales entero, aplastado, en copos o molido"
+        },
+        {
+          "code": "1104.30.00",
+          "description": "100M De trigo 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1104.30.00",
+          "description": "200T De maíz 10.00 10.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1104.30.00",
+          "description": "900F De los demás cereales 10.00 10.00 3.00 LA 0.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1105",
+      "description": "HARINA, SÉMOLA, POLVO, COPOS, GRÁNULOS Y «PELLETS» DE PAPA (PATATA)*",
+      "subheadings": [
+        {
+          "code": "1105.10.00",
+          "description": "Harina, sémola y polvo"
+        },
+        {
+          "code": "1105.10.00",
+          "description": "000X -Harina, semola y polvo 12.00 12.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1105.20.00",
+          "description": "Copos, gránulos y «pellets»"
+        },
+        {
+          "code": "1105.20.00",
+          "description": "100R En envases inmediatos de contenido neto inferior o igual a 1 kg (R.420/99 MEYOSP) 12.00 12.00 3.00 LA 0.00 3.50"
+        },
+        {
+          "code": "1105.20.00",
+          "description": "900K Los demás 12.00 12.00 3.00 LA 0.00 2.50"
+        }
+      ]
+    },
+    {
+      "code": "1106",
+      "description": "HARINA, SÉMOLA Y POLVO DE LAS HORTALIZAS DE LA PARTIDA 0713, DE SAGÚ O DE LAS RAÍCES O",
+      "subheadings": [
+        {
+          "code": "1106.10.00",
+          "description": "De las hortalizas de la partida 0713"
+        },
+        {
+          "code": "1106.10.00",
+          "description": "100W De arvejas (chícharos, guisantes)* (Pisum Sativum) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "1106.10.00",
+          "description": "200B De garbanzos 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "1106.10.00",
+          "description": "300G De habas (Vicia faba var. major), haba caballar (Vicia faba var. equina) y haba menor (Vicia faba var. minor) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "1106.10.00",
+          "description": "400M De lentejas 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "1106.10.00",
+          "description": "500T De porotos (frijoles, fríjoles, alubias, judías)* (Vigna spp, Phaseolus spp.) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "1106.10.00",
+          "description": "900P Los demás 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "1106.20.00",
+          "description": "De sagú o de las raíces o tubérculos de la partida 0714"
+        },
+        {
+          "code": "1106.20.00",
+          "description": "000E -De sagú o de las raíces o tuberculos de la partida 07.14 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1106.30.00",
+          "description": "De los productos del Capítulo 8"
+        },
+        {
+          "code": "1106.30.00",
+          "description": "100Z De bananas o plátanos 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1106.30.00",
+          "description": "200E De castañas 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1106.30.00",
+          "description": "300K De almendras 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1106.30.00",
+          "description": "900T Los demás 10.00 10.00 3.00 LA 0.00 1.00"
+        }
+      ]
+    },
+    {
+      "code": "1107",
+      "description": "MALTA (DE CEBADA U OTROS CEREALES), INCLUSO TOSTADA",
+      "subheadings": [
+        {
+          "code": "1107.10",
+          "description": "Sin tostar"
+        },
+        {
+          "code": "1107.10.10",
+          "description": "Entera o partida"
+        },
+        {
+          "code": "1107.10.10",
+          "description": "De cebada cervecera (Ley 21.453)"
+        },
+        {
+          "code": "1107.10.10",
+          "description": "110C En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res Nº 835/2005 SAGPyA) 14.00 14.00 3.00 LA 9.00 1.75"
+        },
+        {
+          "code": "1107.10.10",
+          "description": "190D Los demás 14.00 14.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "1107.10.10",
+          "description": "900T Las demás 14.00 14.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "1107.10.20",
+          "description": "Molida o en harina"
+        },
+        {
+          "code": "1107.10.20",
+          "description": "000D Molida o en harina 14.00 14.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "1107.20",
+          "description": "Tostada"
+        },
+        {
+          "code": "1107.20.10",
+          "description": "Entera o partida"
+        },
+        {
+          "code": "1107.20.10",
+          "description": "000H Entera o partida 14.00 14.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "1107.20.20",
+          "description": "Molida o en harina"
+        },
+        {
+          "code": "1107.20.20",
+          "description": "000T Molida o en harina 14.00 14.00 3.00 LA 9.00 2.50"
+        }
+      ]
+    },
+    {
+      "code": "1108",
+      "description": "ALMIDÓN Y FÉCULA; INULINA",
+      "subheadings": [
+        {
+          "code": "1108.1",
+          "description": "Almidón y fécula:"
+        },
+        {
+          "code": "1108.11.00",
+          "description": "Almidón de trigo"
+        },
+        {
+          "code": "1108.11.00",
+          "description": "000P --Almidón de trigo 10.00 10.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1108.12.00",
+          "description": "Almidón de maíz"
+        },
+        {
+          "code": "1108.12.00",
+          "description": "000B --Almidón de maíz 10.00 10.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1108.13.00",
+          "description": "Fécula de papa (patata)*"
+        },
+        {
+          "code": "1108.13.00",
+          "description": "000N --Fecula de papa (patata)* 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1108.14.00",
+          "description": "Fécula de mandioca (yuca)*"
+        },
+        {
+          "code": "1108.14.00",
+          "description": "000A --Fecula de mandioca (yuca)* 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "1108.19.00",
+          "description": "Los demás almidones y féculas"
+        },
+        {
+          "code": "1108.19.00",
+          "description": "100Q Almidón de arroz 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1108.19.00",
+          "description": "900J Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "1108.20.00",
+          "description": "Inulina"
+        },
+        {
+          "code": "1108.20.00",
+          "description": "000R -Inulina 10.00 10.00 3.00 LA 0.00 1.75"
+        }
+      ]
+    },
+    {
+      "code": "1109",
+      "description": "GLUTEN DE TRIGO, INCLUSO SECO",
+      "subheadings": [
+        {
+          "code": "1109.00.00",
+          "description": "Gluten de trigo, incluso seco"
+        },
+        {
+          "code": "1109.00.00",
+          "description": "000G GLUTEN DE TRIGO, INCLUSO SECO. 10.00 31.00 3.00 LA 4.50 0.75"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 112
+}

@@ -1,0 +1,390 @@
+{
+  "chapter": "86",
+  "title": "Capítulo 39",
+  "sectionTitle": "CAP. 86 SECCION XVII MATERIAL DE TRANSPORTE Notas. 1. Esta Sección no comprende los artículos de las partidas 95.03 ó 95",
+  "headings": [
+    {
+      "code": "8601",
+      "description": "LOCOMOTORAS Y LOCOTRACTORES, DE FUENTE EXTERNA DE ELECTRICIDAD O ACUMULADORES",
+      "subheadings": [
+        {
+          "code": "8601.10.00",
+          "description": "De fuente externa de electricidad"
+        },
+        {
+          "code": "8601.10.00",
+          "description": "000R -De fuente externa de electricidad 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8601.20.00",
+          "description": "De acumuladores eléctricos"
+        },
+        {
+          "code": "8601.20.00",
+          "description": "000F -De acumuladores eléctricos 14.00 2.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8602",
+      "description": "LAS DEMÁS LOCOMOTORAS Y LOCOTRACTORES; TÉNDERES",
+      "subheadings": [
+        {
+          "code": "8602.10.00",
+          "description": "Locomotoras diésel-eléctricas"
+        },
+        {
+          "code": "8602.10.00",
+          "description": "000K -Locomotoras Diesel-eléctricas 14.00 2.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8602.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8602.90.00",
+          "description": "000Y -Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8603",
+      "description": "AUTOMOTORES PARA VÍAS FÉRREAS Y TRANVÍAS AUTOPROPULSADOS, EXCEPTO LOS DE LA PARTIDA",
+      "subheadings": [
+        {
+          "code": "8603.10.00",
+          "description": "De fuente externa de electricidad"
+        },
+        {
+          "code": "8603.10.00",
+          "description": "000D -De fuente externa de electricidad 14.00 2.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8603.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8603.90.00",
+          "description": "000R -Los demás 14.00 2.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8604",
+      "description": "VEHÍCULOS PARA MANTENIMIENTO O SERVICIO DE VÍAS FÉRREAS O SIMILARES, INCLUSO",
+      "subheadings": [
+        {
+          "code": "8604.00.10",
+          "description": "Autopropulsados, equipados para apisonar balasto y alinear vías férreas"
+        },
+        {
+          "code": "8604.00.10",
+          "description": "000T Autopropulsados, equipados para apisonar balasto y alinear vías férreas 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8604.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8604.00.90",
+          "description": "000W Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8605",
+      "description": "COCHES DE VIAJEROS, FURGONES DE EQUIPAJES, COCHES CORREO Y DEMÁS COCHES ESPECIALES,",
+      "subheadings": [
+        {
+          "code": "8605.00.10",
+          "description": "Coches de viajeros"
+        },
+        {
+          "code": "8605.00.10",
+          "description": "000L Coches de viajeros 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8605.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8605.00.90",
+          "description": "000P Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8606",
+      "description": "VAGONES PARA TRANSPORTE DE MERCANCÍAS SOBRE CARRILES (RIELES)",
+      "subheadings": [
+        {
+          "code": "8606.10.00",
+          "description": "Vagones cisterna y similares"
+        },
+        {
+          "code": "8606.10.00",
+          "description": "000J -Vagones cisterna y similares 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8606.30.00",
+          "description": "Vagones de descarga automática, excepto los de la subpartida 860610"
+        },
+        {
+          "code": "8606.30.00",
+          "description": "000M -Vagones de descarga automática, excepto los de la subpartida 8606.10 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8606.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "8606.91.00",
+          "description": "Cubiertos y cerrados"
+        },
+        {
+          "code": "8606.91.00",
+          "description": "000J --Cubiertos y cerrados 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8606.92.00",
+          "description": "Abiertos, con pared fija de altura superior a 60 cm"
+        },
+        {
+          "code": "8606.92.00",
+          "description": "000W --Abiertos, con pared fija de altura superior a 60 cm 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8606.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8606.99.00",
+          "description": "000E --Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8607",
+      "description": "PARTES DE VEHÍCULOS PARA VÍAS FÉRREAS O SIMILARES",
+      "subheadings": [
+        {
+          "code": "8607.1",
+          "description": "Bojes, «bissels», ejes y ruedas, y sus partes:"
+        },
+        {
+          "code": "8607.11",
+          "description": "Bojes y «bissels», de tracción"
+        },
+        {
+          "code": "8607.11.10",
+          "description": "Bojes"
+        },
+        {
+          "code": "8607.11.10",
+          "description": "000Z Bojes 14.00 2.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8607.11.20",
+          "description": "«Bissels»"
+        },
+        {
+          "code": "8607.11.20",
+          "description": "000J \"Bissels\" 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8607.12.00",
+          "description": "Los demás bojes y «bissels»"
+        },
+        {
+          "code": "8607.12.00",
+          "description": "000B --Los demás bojes y \"bissels\" 14.00 2.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8607.19",
+          "description": "Los demás, incluidas las partes"
+        },
+        {
+          "code": "8607.19.11",
+          "description": "Con rodamientos incorporados, de diámetro exterior superior a 190 mm, de los tipos utilizados en ejes de ruedas de"
+        },
+        {
+          "code": "8607.19.11",
+          "description": "000C Con rodamientos incorporados, de diámetro exterior superior a 190 mm, de los tipos utilizados en ejes de ruedas de"
+        },
+        {
+          "code": "8607.19.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "8607.19.19",
+          "description": "000N Las demás 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8607.19.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8607.19.90",
+          "description": "000Y Los demás 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8607.2",
+          "description": "Frenos y sus partes:"
+        },
+        {
+          "code": "8607.21.00",
+          "description": "Frenos de aire comprimido y sus partes"
+        },
+        {
+          "code": "8607.21.00",
+          "description": "000D --Frenos de aire comprimido y sus partes 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8607.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8607.29.00",
+          "description": "000Z --Los demás 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8607.30.00",
+          "description": "Ganchos y demás sistemas de enganche, topes, y sus partes"
+        },
+        {
+          "code": "8607.30.00",
+          "description": "000F -Ganchos y demás sistemas de enganche, topes, y sus partes 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8607.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "8607.91.00",
+          "description": "De locomotoras o locotractores"
+        },
+        {
+          "code": "8607.91.00",
+          "description": "000C --Para locomotoras o locotractores 14.00 14.00 0.00 LNA 3.00 5.50"
+        },
+        {
+          "code": "8607.99.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "8607.99.00",
+          "description": "000Y --Las demás 14.00 14.00 0.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "8608",
+      "description": "MATERIAL FIJO DE VÍAS FÉRREAS O SIMILARES; APARATOS MECÁNICOS (INCLUSO ELECTROMECÁNICOS)",
+      "subheadings": [
+        {
+          "code": "8608.00.11",
+          "description": "Mecánicos"
+        },
+        {
+          "code": "8608.00.11",
+          "description": "000Z Mecánicos 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8608.00.12",
+          "description": "Electromecánicos"
+        },
+        {
+          "code": "8608.00.12",
+          "description": "000G Electromecánicos 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8608.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8608.00.90",
+          "description": "100A Material fijo para vías ferreas o similares 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8608.00.90",
+          "description": "900U Partes (R.909/94 MEOSP) 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8609",
+      "description": "CONTENEDORES (INCLUIDOS LOS CONTENEDORES CISTERNA Y LOS CONTENEDORES DEPÓSITO)",
+      "subheadings": [
+        {
+          "code": "8609.00.00",
+          "description": "Contenedores (incluidos los contenedores cisterna y los contenedores depósito) especialmente concebidos y"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "De carga seca, del tipo de los utilizados en el transporte marítimo de mercaderías (R.231/99 MEOSP)"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "Cerrados"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "111L Refrigerados con equipo eléctrico incorporado 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "119D Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "120M Sin techo (open top) 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "130Q Abierto (open side) 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "140U Plataforma (flat rag) 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "190K Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "911E Refrigerados con equipo eléctrico incorporado 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "919X Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "920F Sin techo (open top) 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "930J Abiertos (open side) 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "940M Plataforma (flat rag) 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "950Q Cisterna para fluidos líquidos y gaseosos 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8609.00.00",
+          "description": "990D Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 92
+}

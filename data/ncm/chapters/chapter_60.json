@@ -1,0 +1,1201 @@
+{
+  "chapter": "60",
+  "title": "Capítulo 14",
+  "sectionTitle": "CAP. 60 SECCION XI MATERIAS TEXTILES Y SUS MANUFACTURAS Notas. 1. Esta Sección no comprende: a. los pelos y cerdas para",
+  "headings": [
+    {
+      "code": "4303",
+      "description": "o 43.04;",
+      "subheadings": []
+    },
+    {
+      "code": "6001",
+      "description": "TERCIOPELO, FELPA (INCLUIDOS LOS TEJIDOS DE PUNTO «DE PELO LARGO») Y TEJIDOS CON BUCLES, DE",
+      "subheadings": [
+        {
+          "code": "6001.10",
+          "description": "Tejidos «de pelo largo»"
+        },
+        {
+          "code": "6001.10.10",
+          "description": "De algodón"
+        },
+        {
+          "code": "6001.10.10",
+          "description": "100A No elástico, sin cauchutar 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6001.10.10",
+          "description": "900U Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6001.10.20",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6001.10.20",
+          "description": "000E De fibras sinteticas o artificiales 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6001.10.90",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6001.10.90",
+          "description": "000Y De las demás materias textiles 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6001.2",
+          "description": "Tejidos con bucles:"
+        },
+        {
+          "code": "6001.21.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6001.21.00",
+          "description": "000L --De algodón 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6001.22.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6001.22.00",
+          "description": "000Y --De fibras sinteticas o artificiales 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6001.29.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6001.29.00",
+          "description": "000G --De las demás materias textiles 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6001.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "6001.91.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6001.91.00",
+          "description": "000K --De algodón 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6001.92.00",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6001.92.00",
+          "description": "000X --De fibras sinteticas o artificiales 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6001.99.00",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6001.99.00",
+          "description": "000F --De las demás materias textiles 26.00 26.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    },
+    {
+      "code": "6002",
+      "description": "TEJIDOS DE PUNTO DE ANCHURA INFERIOR O IGUAL A 30 CM, CON UN CONTENIDO DE HILADOS DE",
+      "subheadings": [
+        {
+          "code": "6002.40",
+          "description": "Con un contenido de hilados de elastómeros superior o igual al 5 % en peso, sin hilos de caucho"
+        },
+        {
+          "code": "6002.40.10",
+          "description": "De algodón"
+        },
+        {
+          "code": "6002.40.10",
+          "description": "100L Crudos o blanqueados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.10",
+          "description": "200R Teñidos 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.10",
+          "description": "300X Con hilados de distintos colores 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.10",
+          "description": "400C Estampados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "110Z De fibras acrílicas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "120C De nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "130F De poliester 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "140J De rayón viscosa 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "190A Las demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "Teñidos"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "210E De fibras acrílicas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "220H De nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "230L De poliester 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "240P De rayón viscosa 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "290F Las demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "310K De fibras acrílicas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "320N De nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "330R De poliester 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "340V De rayón viscosa 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "390L Las demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "Estampados"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "410Q De fibras acrílicas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "420U De nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "430X De poliester 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "440A De rayón viscosa 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.20",
+          "description": "490R Las demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.90",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6002.40.90",
+          "description": "100P Crudos o blanqueados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.90",
+          "description": "200V Teñidos 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.90",
+          "description": "300A Con hilados de distintos colores 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.40.90",
+          "description": "400F Estampados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6002.90.10",
+          "description": "De algodón"
+        },
+        {
+          "code": "6002.90.10",
+          "description": "000B De algodón 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.90.20",
+          "description": "De fibras sintéticas o artificiales"
+        },
+        {
+          "code": "6002.90.20",
+          "description": "000L De fibras sinteticas o artificiales 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6002.90.90",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6002.90.90",
+          "description": "000E De las demás materias textiles 26.00 26.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    },
+    {
+      "code": "6003",
+      "description": "TEJIDOS DE PUNTO DE ANCHURA INFERIOR O IGUAL A 30 CM, EXCEPTO LOS DE LAS PARTIDAS 6001 Ó 6002",
+      "subheadings": [
+        {
+          "code": "6003.10.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6003.10.00",
+          "description": "000X -De lana o pelo fino 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6003.20.00",
+          "description": "De algodón"
+        },
+        {
+          "code": "6003.20.00",
+          "description": "000L -De algodón 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6003.30.00",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6003.30.00",
+          "description": "000A -De fibras sinteticas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6003.40.00",
+          "description": "De fibras artificiales"
+        },
+        {
+          "code": "6003.40.00",
+          "description": "000P -De fibras artificiales 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6003.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6003.90.00",
+          "description": "000K -Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    },
+    {
+      "code": "6004",
+      "description": "TEJIDOS DE PUNTO DE ANCHURA SUPERIOR A 30 CM, CON UN CONTENIDO DE HILADOS DE ELASTÓMEROS",
+      "subheadings": [
+        {
+          "code": "6004.10",
+          "description": "Con un contenido de hilados de elastómeros superior o igual al 5 % en peso, sin hilos de caucho"
+        },
+        {
+          "code": "6004.10.11",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "6004.10.11",
+          "description": "000H Crudos o blanqueados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.12",
+          "description": "Teñidos"
+        },
+        {
+          "code": "6004.10.12",
+          "description": "000Q Teñidos 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.13",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "6004.10.13",
+          "description": "000Y Con hilados de distintos colores 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.14",
+          "description": "Estampados"
+        },
+        {
+          "code": "6004.10.14",
+          "description": "000F Estampados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.31",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "6004.10.31",
+          "description": "000C Crudos o blanqueados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.32",
+          "description": "Teñidos"
+        },
+        {
+          "code": "6004.10.32",
+          "description": "000K Teñidos 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.33",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "6004.10.33",
+          "description": "000T Con hilados de distintos colores 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.34",
+          "description": "Estampados"
+        },
+        {
+          "code": "6004.10.34",
+          "description": "000A Estampados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.41",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "6004.10.41",
+          "description": "000M Crudos o blanqueados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.42",
+          "description": "Teñidos"
+        },
+        {
+          "code": "6004.10.42",
+          "description": "000V Teñidos 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.43",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "6004.10.43",
+          "description": "000C Con hilados de distintos colores 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.44",
+          "description": "Estampados"
+        },
+        {
+          "code": "6004.10.44",
+          "description": "000K Estampados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.91",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "6004.10.91",
+          "description": "000L Crudos o blanqueados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.92",
+          "description": "Teñidos"
+        },
+        {
+          "code": "6004.10.92",
+          "description": "000U Teñidos 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.93",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "6004.10.93",
+          "description": "000B Con hilados de distintos colores 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.10.94",
+          "description": "Estampados"
+        },
+        {
+          "code": "6004.10.94",
+          "description": "000J Estampados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6004.90.10",
+          "description": "De algodón"
+        },
+        {
+          "code": "6004.90.10",
+          "description": "000N De algodón 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.90.30",
+          "description": "De fibras sintéticas"
+        },
+        {
+          "code": "6004.90.30",
+          "description": "000H De fibras sinteticas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.90.40",
+          "description": "De fibras artificiales"
+        },
+        {
+          "code": "6004.90.40",
+          "description": "000T De fibras artificiales 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6004.90.90",
+          "description": "De las demás materias textiles"
+        },
+        {
+          "code": "6004.90.90",
+          "description": "000R De las demás materias textiles 26.00 26.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    },
+    {
+      "code": "6005",
+      "description": "TEJIDOS DE PUNTO POR URDIMBRE (INCLUIDOS LOS OBTENIDOS EN TELARES DE PASAMANERÍA),",
+      "subheadings": [
+        {
+          "code": "6005.2",
+          "description": "De algodón:"
+        },
+        {
+          "code": "6005.21.00",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "6005.21.00",
+          "description": "100Q No elástico, sin cauchutar 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.21.00",
+          "description": "900J Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.22.00",
+          "description": "Teñidos"
+        },
+        {
+          "code": "6005.22.00",
+          "description": "100C No elástico, sin cauchutar 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.22.00",
+          "description": "900W Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.23.00",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "6005.23.00",
+          "description": "100P No elástico, sin cauchutar 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.23.00",
+          "description": "900H Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.24.00",
+          "description": "Estampados"
+        },
+        {
+          "code": "6005.24.00",
+          "description": "100B No elástico, sin cauchutar 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.24.00",
+          "description": "900V Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.3",
+          "description": "De fibras sintéticas:"
+        },
+        {
+          "code": "6005.35.00",
+          "description": "Tejidos mencionados en la Nota 1 de subpartida de este Capítulo"
+        },
+        {
+          "code": "6005.35.00",
+          "description": "000X --Tejidos mencionados en la Nota 1 de subpartida de este capitulo 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.36.00",
+          "description": "Los demás, crudos o blanqueados"
+        },
+        {
+          "code": "6005.36.00",
+          "description": "000J --Los demás, crudos o blanqueados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.37.00",
+          "description": "Los demás, teñidos"
+        },
+        {
+          "code": "6005.37.00",
+          "description": "100B Comprendidos en la Ley N° 25.174 (Malla antigranizo), sus normas modificatorias y complementarias 26.00 5.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.37.00",
+          "description": "900V Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.38.00",
+          "description": "Los demás, con hilados de distintos colores"
+        },
+        {
+          "code": "6005.38.00",
+          "description": "000H --Los demás, con hilados de distintos colores 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.39.00",
+          "description": "Los demás, estampados"
+        },
+        {
+          "code": "6005.39.00",
+          "description": "000V --Los demás, estampados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.4",
+          "description": "De fibras artificiales:"
+        },
+        {
+          "code": "6005.41.00",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "6005.41.00",
+          "description": "000N --Crudos o blanqueados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.42.00",
+          "description": "Teñidos"
+        },
+        {
+          "code": "6005.42.00",
+          "description": "000A --Teñidos 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.43.00",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "6005.43.00",
+          "description": "000M --Con hilados de distintos colores 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.44.00",
+          "description": "Estampados"
+        },
+        {
+          "code": "6005.44.00",
+          "description": "000Z --Estampados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6005.90.10",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6005.90.10",
+          "description": "000G De lana o pelo fino 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "De tiras o formas similares"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "111W De peso inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "112Y De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "113A De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "114C De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "115E De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "116G De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "117J De peso superior o igual a 1000 g/m2 pero inferior a 1300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "119N Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "191X De peso inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "192Z De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "193B De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "194D De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "195F De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "196H De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "197K De peso superior o igual a 1000 g/m2 pero inferior a 1300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "199P Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "Teñidos"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "211B De peso inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "212D De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "213F De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "214H De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "215K De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "216M De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "217P De peso superior o igual a 1000 g/m2 pero inferior a 1300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "219U Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "291C De peso inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "292E De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "293G De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "294J De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "295L De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "296N De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "297Q De peso superior o igual a 1000 g/m2 pero inferior a 1300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "299V Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "Con hilados, tiras o formas similares, de distintos colores"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "311G De peso inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "312J De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "313L De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "314N De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "315Q De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "316T De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "317V De peso superior o igual a 1000 g/m2 pero inferior a 1300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "319Z Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "391H De peso inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "392K De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "393M De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "394P De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "395R De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "396U De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "397W De peso superior o igual a 1000 g/m2 pero inferior a 1300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "399A Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "Estampados"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "De tiras y formas similares"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "411M De peso inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "412P De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "413R De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "414U De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "415W De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "416Y De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "417A De peso superior o igual a 1000 g/m2 pero inferior a 1300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "419E Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "491N De peso inferior a 200 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "492Q De peso superior o igual a 200 g/m2 pero inferior a 300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "493T De peso superior o igual a 300 g/m2 pero inferior a 400 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "494V De peso superior o igual a 400 g/m2 pero inferior a 600 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "495X De peso superior o igual a 600 g/m2 pero inferior a 800 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "496Z De peso superior o igual a 800 g/m2 pero inferior a 1000 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "497B De peso superior o igual a 1000 g/m2 pero inferior a 1300 g/m2 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6005.90.90",
+          "description": "499F Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    },
+    {
+      "code": "6006",
+      "description": "LOS DEMÁS TEJIDOS DE PUNTO",
+      "subheadings": [
+        {
+          "code": "6006.10.00",
+          "description": "De lana o pelo fino"
+        },
+        {
+          "code": "6006.10.00",
+          "description": "000C -De lana o pelo fino 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.2",
+          "description": "De algodón:"
+        },
+        {
+          "code": "6006.21.00",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "6006.21.00",
+          "description": "100J No elástico, sin cauchutar 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.21.00",
+          "description": "900C Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.22.00",
+          "description": "Teñidos"
+        },
+        {
+          "code": "6006.22.00",
+          "description": "100W No elástico, sin cauchutar 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.22.00",
+          "description": "900P Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.23.00",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "6006.23.00",
+          "description": "100H No elástico, sin cauchutar 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.23.00",
+          "description": "900B Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.24.00",
+          "description": "Estampados"
+        },
+        {
+          "code": "6006.24.00",
+          "description": "100V No elástico, sin cauchutar 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.24.00",
+          "description": "900N Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.3",
+          "description": "De fibras sintéticas:"
+        },
+        {
+          "code": "6006.31",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "6006.31.10",
+          "description": "De nailon o demás poliamidas"
+        },
+        {
+          "code": "6006.31.10",
+          "description": "000C De nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.31.20",
+          "description": "De poliésteres"
+        },
+        {
+          "code": "6006.31.20",
+          "description": "000M De poliesteres 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.31.30",
+          "description": "Acrílicas o modacrílicas"
+        },
+        {
+          "code": "6006.31.30",
+          "description": "000X Acrílicas o modacrílicas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.31.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6006.31.90",
+          "description": "000F Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.32",
+          "description": "Teñidos"
+        },
+        {
+          "code": "6006.32.10",
+          "description": "De nailon o demás poliamidas"
+        },
+        {
+          "code": "6006.32.10",
+          "description": "000P De nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.32.20",
+          "description": "De poliésteres"
+        },
+        {
+          "code": "6006.32.20",
+          "description": "000Z De poliesteres 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.32.30",
+          "description": "Acrílicas o modacrílicas"
+        },
+        {
+          "code": "6006.32.30",
+          "description": "000J Acrílicas o modacrílicas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.32.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6006.32.90",
+          "description": "000T Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.33",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "6006.33.10",
+          "description": "De nailon o demás poliamidas"
+        },
+        {
+          "code": "6006.33.10",
+          "description": "000B De nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.33.20",
+          "description": "De poliésteres"
+        },
+        {
+          "code": "6006.33.20",
+          "description": "000L De poliesteres 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.33.30",
+          "description": "Acrílicas o modacrílicas"
+        },
+        {
+          "code": "6006.33.30",
+          "description": "000W Acrílicas o modacrílicas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.33.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6006.33.90",
+          "description": "000E Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.34",
+          "description": "Estampados"
+        },
+        {
+          "code": "6006.34.10",
+          "description": "De nailon o demás poliamidas"
+        },
+        {
+          "code": "6006.34.10",
+          "description": "000N De nailon o demás poliamidas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.34.20",
+          "description": "De poliésteres"
+        },
+        {
+          "code": "6006.34.20",
+          "description": "000Y De poliesteres 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.34.30",
+          "description": "Acrílicas o modacrílicas"
+        },
+        {
+          "code": "6006.34.30",
+          "description": "000H Acrílicas o modacrílicas 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.34.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "6006.34.90",
+          "description": "000R Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.4",
+          "description": "De fibras artificiales:"
+        },
+        {
+          "code": "6006.41.00",
+          "description": "Crudos o blanqueados"
+        },
+        {
+          "code": "6006.41.00",
+          "description": "000G --Crudos o blanqueados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.42.00",
+          "description": "Teñidos"
+        },
+        {
+          "code": "6006.42.00",
+          "description": "000U --Teñidos 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.43.00",
+          "description": "Con hilados de distintos colores"
+        },
+        {
+          "code": "6006.43.00",
+          "description": "000F --Con hilados de distintos colores 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.44.00",
+          "description": "Estampados"
+        },
+        {
+          "code": "6006.44.00",
+          "description": "000T --Estampados 26.00 26.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "6006.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6006.90.00",
+          "description": "000Q -Los demás 26.00 26.00 3.00 LNA 3.00 6.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 301
+}

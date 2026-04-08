@@ -1,0 +1,914 @@
+{
+  "chapter": "42",
+  "title": "Capítulo 42",
+  "sectionTitle": "CAP. 42 SECCION VIII PIELES, CUEROS, PELETERIA Y MANUFACTURAS DE ESTAS MATERIAS; ARTICULOS DE TALABARTERIA O GUARNICIONE",
+  "headings": [
+    {
+      "code": "4201",
+      "description": "ARTÍCULOS DE TALABARTERÍA O GUARNICIONERÍA PARA TODOS LOS ANIMALES (INCLUIDOS LOS TIROS,",
+      "subheadings": [
+        {
+          "code": "4201.00.10",
+          "description": "De cuero natural o regenerado"
+        },
+        {
+          "code": "4201.00.10",
+          "description": "000B De cuero natural o regenerado 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4201.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "4201.00.90",
+          "description": "000E Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4202",
+      "description": "BAÚLES, MALETAS (VALIJAS), MALETINES, INCLUIDOS LOS DE ASEO Y LOS PORTADOCUMENTOS,",
+      "subheadings": [
+        {
+          "code": "4202.1",
+          "description": "Baúles, maletas (valijas) y maletines, incluidos los de aseo y los portadocumentos, portafolios (carteras de mano),"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "Con la superficie exterior de cuero natural o cuero regenerado"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "De cuero natural"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "De hasta 90 cm inclusive, de perímetro por cara"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "111X Portafolios 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "112Z Maletines, incluidos los de aseo 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "119P Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "191Y Baúles 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "192A Valijas 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "193C Portafolios 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "194E Maletines, incluidos los de aseo 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "199Q Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "De cuero regenerado"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "211C Portafolios 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "212E Maletines, incluidos los de aseo 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "219V Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "291D Baúles 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "292F Valijas 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "293H Portafolios 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "294K Maletines, incluidos los de aseo 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.11.00",
+          "description": "299W Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.12",
+          "description": "Con la superficie exterior de plástico o materia textil"
+        },
+        {
+          "code": "4202.12.10",
+          "description": "De plástico"
+        },
+        {
+          "code": "4202.12.10",
+          "description": "De hasta 90 cm inclusive, de perímetro por cara"
+        },
+        {
+          "code": "4202.12.10",
+          "description": "110R Portafolios 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.10",
+          "description": "120V Maletines, incluidos los de aseo 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.10",
+          "description": "190T Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "4202.12.10",
+          "description": "910K Baúles 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.10",
+          "description": "920N Valijas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.10",
+          "description": "930R Portafolios 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.10",
+          "description": "940V Maletines, incluidos los de aseo 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.10",
+          "description": "990L Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.20",
+          "description": "De materia textil"
+        },
+        {
+          "code": "4202.12.20",
+          "description": "De hasta 90 cm inclusive, de perímetro por cara"
+        },
+        {
+          "code": "4202.12.20",
+          "description": "110B Portafolios 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.20",
+          "description": "120E Maletines, incluidos los de aseo 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.20",
+          "description": "190C Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.20",
+          "description": "Los demás"
+        },
+        {
+          "code": "4202.12.20",
+          "description": "910V Baúles 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.20",
+          "description": "920Y Valijas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.20",
+          "description": "930B Portafolios 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.20",
+          "description": "940E Maletines, incluidos los de aseo 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.12.20",
+          "description": "990W Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "De madera"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "De hasta 90 cm inclusive, de perímetro por cara"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "111T Maletines, incluidos los de aseo 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "119K Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "191U Baúles 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "192W Valijas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "193Y Maletines, incluidos los de aseo 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "199L Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "911L Portafolios 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "912N Maletines, incluidos los de aseo 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "919D Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "991M Baúles 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "992P Valijas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "993R Portafolios 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "994U Maletines, incluidos los de aseo 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.19.00",
+          "description": "999E Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.2",
+          "description": "Bolsos de mano (carteras), incluso con bandolera o sin asas:"
+        },
+        {
+          "code": "4202.21.00",
+          "description": "Con la superficie exterior de cuero natural o cuero regenerado"
+        },
+        {
+          "code": "4202.21.00",
+          "description": "De cuero natural"
+        },
+        {
+          "code": "4202.21.00",
+          "description": "110J De hasta 90 cm inclusive, de perímetro por cara 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.21.00",
+          "description": "190K Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.21.00",
+          "description": "De cuero regenerado"
+        },
+        {
+          "code": "4202.21.00",
+          "description": "210P De hasta 90 cm inclusive, de perímetro por cara 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.21.00",
+          "description": "290Q Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.22",
+          "description": "Con la superficie exterior de hojas de plástico o materia textil"
+        },
+        {
+          "code": "4202.22.10",
+          "description": "De hojas de plástico"
+        },
+        {
+          "code": "4202.22.10",
+          "description": "De hasta 90 cm inclusive, de perímetro por cara"
+        },
+        {
+          "code": "4202.22.10",
+          "description": "110F Productos alcanzados por la Res. 163/2005 SCT 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.22.10",
+          "description": "190G Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.22.10",
+          "description": "900W Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.22.20",
+          "description": "De materia textil"
+        },
+        {
+          "code": "4202.22.20",
+          "description": "De hasta 90 cm inclusive, de perímetro por cara"
+        },
+        {
+          "code": "4202.22.20",
+          "description": "110Q Productos alcanzados por la Res. 163/2005 SCT 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.22.20",
+          "description": "190R Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.22.20",
+          "description": "900F Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4202.29.00",
+          "description": "100B De hasta 90 cm inclusive, de perímetro por cara 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.29.00",
+          "description": "900V Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.3",
+          "description": "Artículos de bolsillo o de bolso de mano (cartera):"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "Con la superficie exterior de cuero natural o cuero regenerado"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "De cuero natural"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "110Y Billeteras 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "120B Portamonedas 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "130E Pitilleras 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "140H Fundas y estuches para gafas 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "150L Tarjeteros y portachequeras 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "190Z Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "De cuero regenerado"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "210D Billeteras 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "220G Portamonedas 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "230K Pitilleras 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "240N Fundas y estuches para gafas 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "250R Tarjeteros y portachequeras 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.31.00",
+          "description": "290E Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "Con la superficie exterior de hojas de plástico o materia textil"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "De hojas de plástico"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "110K Productos alcanzados por la Res. 163/2005 SCT 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "120N Portamonedas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "130R Pitilleras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "140V Fundas y estuches para gafas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "150Y Tarjeteros y portachequeras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "160B Billeteras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "190L Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "De materia textil"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "210Q Productos alcanzados por la Res. 163/2005 SCT 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "220U Portamonedas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "230X Pitilleras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "240A Fundas y estuches para gafas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "250D Tarjeteros y portachequeras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "260G Billeteras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.32.00",
+          "description": "290R Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4202.39.00",
+          "description": "100Q Billeteras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.39.00",
+          "description": "200W Portamonedas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.39.00",
+          "description": "300B Pitilleras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.39.00",
+          "description": "400G Fundas y estuches para gafas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.39.00",
+          "description": "500M Tarjeteros y portachequeras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.39.00",
+          "description": "900J Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "Con la superficie exterior de cuero natural o cuero regenerado"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "Mochilas"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "110H De campamento 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "191L De hasta 70 cm inclusive, de perímetro por cara 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "199D Las demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "Bolsos"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "Para artículos de deporte"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "211Q Para golf 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "219H Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "220R De viaje 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "230V Isotermicos 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "290P Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "Estuches"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "310U Para instrumentos musicales 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "320X Para herramientas 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "330A Para cámaras fotográficas y videocámaras 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "340D Para joyas 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "390V Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.91.00",
+          "description": "900Y Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "Con la superficie exterior de hojas de plástico o materia textil"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "Mochilas"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "110V De campamento 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "120Y Productos alcanzados por la Res. 163/2005 SCT 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "191Y De hasta 70 cm inclusive, de perímetro por cara 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "199Q Las demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "Bolsos"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "Para artículos de deporte"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "211C Para golf 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "219V Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "220D De viaje 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "230G Isotermicos 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "290B Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "Estuches"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "310F Para instrumentos musicales 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "320J Para herramientas 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "330M Para cámaras fotográficas y videocámaras 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "340Q Para joyas 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "390G Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "400H Bolsas 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.92.00",
+          "description": "900K Los demás 35.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "Mochilas"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "110D De campamento 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "191G De hasta 70 cm inclusive, de perímetro por cara 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "199Z Las demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "Bolsos"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "Para artículos de deporte"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "211L Para golf 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "219D Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "220M De viaje 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "230Q Isotermicos 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "290K Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "Estuches"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "310P Para instrumentos musicales 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "320T Para herramientas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "330W Para cámaras fotográficas y videocámaras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "340Z Para joyas 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "390Q Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4202.99.00",
+          "description": "900U Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4203",
+      "description": "PRENDAS Y COMPLEMENTOS (ACCESORIOS), DE VESTIR, DE CUERO NATURAL O CUERO REGENERADO",
+      "subheadings": [
+        {
+          "code": "4203.10.00",
+          "description": "Prendas de vestir"
+        },
+        {
+          "code": "4203.10.00",
+          "description": "100Y Cortadas en forma (R.747/95 MEOSP) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4203.10.00",
+          "description": "900R Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4203.2",
+          "description": "Guantes, mitones y manoplas:"
+        },
+        {
+          "code": "4203.21.00",
+          "description": "Diseñados especialmente para la práctica del deporte"
+        },
+        {
+          "code": "4203.21.00",
+          "description": "Cortados en forma (R.747/95 MEOSP)"
+        },
+        {
+          "code": "4203.21.00",
+          "description": "110C Guantes de golf y de base-ball 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4203.21.00",
+          "description": "190D Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4203.21.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4203.21.00",
+          "description": "910W Guantes de golf y de base-ball 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4203.21.00",
+          "description": "990X Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4203.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "4203.29.00",
+          "description": "100V Cortados en forma (R.747/95 MEOSP) 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "4203.29.00",
+          "description": "900N Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4203.30.00",
+          "description": "Cintos, cinturones y bandoleras"
+        },
+        {
+          "code": "4203.30.00",
+          "description": "100B Cortados en forma (R.747/95 MEOSP) 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4203.30.00",
+          "description": "900V Los demás 20.00 20.00 3.00 LNA 0.00 8.00"
+        },
+        {
+          "code": "4203.40.00",
+          "description": "Los demás complementos (accesorios) de vestir"
+        },
+        {
+          "code": "4203.40.00",
+          "description": "000K -Los demás complementos (accesorios) de vestir 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "4205",
+      "description": "LAS DEMÁS MANUFACTURAS DE CUERO NATURAL O CUERO REGENERADO",
+      "subheadings": [
+        {
+          "code": "4205.00.00",
+          "description": "Las demás manufacturas de cuero natural o cuero regenerado"
+        },
+        {
+          "code": "4205.00.00",
+          "description": "100W Entretenimientos para mascotas (R.257/00 ME) 20.00 20.00 3.00 LNA 3.00 8.00"
+        },
+        {
+          "code": "4205.00.00",
+          "description": "200B Viras para calzado 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4205.00.00",
+          "description": "400M Para usos tecnicos 20.00 20.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "4205.00.00",
+          "description": "500T Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes. 20.00 20.00 3.00 LNA 3.00 6.50"
+        },
+        {
+          "code": "4205.00.00",
+          "description": "900P Las demás 20.00 20.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "4206",
+      "description": "MANUFACTURAS DE TRIPA, VEJIGAS O TENDONES",
+      "subheadings": [
+        {
+          "code": "4206.00.00",
+          "description": "Manufacturas de tripa, vejigas o tendones"
+        },
+        {
+          "code": "4206.00.00",
+          "description": "100P Cuerdas de tripa 20.00 20.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "4206.00.00",
+          "description": "900H Las demás 20.00 20.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 230
+}

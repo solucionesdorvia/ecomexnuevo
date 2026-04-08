@@ -1,0 +1,322 @@
+{
+  "chapter": "88",
+  "title": "Capítulo 39",
+  "sectionTitle": "CAP. 88 SECCION XVII MATERIAL DE TRANSPORTE Notas. 1. Esta Sección no comprende los artículos de las partidas 95.03 ó 95",
+  "headings": [
+    {
+      "code": "8801",
+      "description": "GLOBOS Y DIRIGIBLES; PLANEADORES, ALAS PLANEADORAS Y DEMÁS AERONAVES, NO PROPULSADOS",
+      "subheadings": [
+        {
+          "code": "8801.00.00",
+          "description": "Globos y dirigibles; planeadores, alas planeadoras y demás aeronaves, no propulsados con motor"
+        },
+        {
+          "code": "8801.00.00",
+          "description": "100W Planeadores 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8801.00.00",
+          "description": "200B Alas planeadoras 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8801.00.00",
+          "description": "900P Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8802",
+      "description": "LAS DEMÁS AERONAVES (POR EJEMPLO: HELICÓPTEROS, AVIONES); VEHÍCULOS ESPACIALES (INCLUIDOS",
+      "subheadings": [
+        {
+          "code": "8802.1",
+          "description": "Helicópteros:"
+        },
+        {
+          "code": "8802.11.00",
+          "description": "De peso en vacío inferior o igual a 2000 kg"
+        },
+        {
+          "code": "8802.11.00",
+          "description": "000K --De peso en vacío inferior o igual a 2.000 kg 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.12",
+          "description": "De peso en vacío superior a 2000 kg"
+        },
+        {
+          "code": "8802.12.10",
+          "description": "De peso en vacío inferior o igual a 3500 kg"
+        },
+        {
+          "code": "8802.12.10",
+          "description": "000G De peso en vacio inferior o igual a 3.500 kg 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.12.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8802.12.90",
+          "description": "000K Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.20",
+          "description": "Aviones y demás aeronaves, de peso en vacío inferior o igual a 2000 kg"
+        },
+        {
+          "code": "8802.20.10",
+          "description": "A hélice"
+        },
+        {
+          "code": "8802.20.10",
+          "description": "100C Tripulados 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.20.10",
+          "description": "800Q Los demás, no tripulados, radiodirigidos o de navegación controlada por aparato receptor de sistema de"
+        },
+        {
+          "code": "8802.20.21",
+          "description": "Monomotores"
+        },
+        {
+          "code": "8802.20.21",
+          "description": "100V Tripulados 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.20.21",
+          "description": "800H Los demás, no tripulados, radiodirigidos o de navegación controlada por aparato receptor de sistema de"
+        },
+        {
+          "code": "8802.20.22",
+          "description": "Multimotores"
+        },
+        {
+          "code": "8802.20.22",
+          "description": "100C Tripulados 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.20.22",
+          "description": "800Q Los demás, no tripulados, radiodirigidos o de navegación controlada por aparato receptor de sistema de"
+        },
+        {
+          "code": "8802.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8802.20.90",
+          "description": "100F Tripulados 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.20.90",
+          "description": "800U Los demás, no tripulados, radiodirigidos o de navegación controlada por aparato receptor de sistema de"
+        },
+        {
+          "code": "8802.30",
+          "description": "Aviones y demás aeronaves, de peso en vacío superior a 2000 kg pero inferior o igual a 15000 kg"
+        },
+        {
+          "code": "8802.30.10",
+          "description": "A hélice"
+        },
+        {
+          "code": "8802.30.10",
+          "description": "000L A helice 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.30.21",
+          "description": "Multimotores, de peso en vacío inferior o igual a 7000 kg"
+        },
+        {
+          "code": "8802.30.21",
+          "description": "000D Multimotores, de peso en vacío inferior o igual a 7.000 kg 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.30.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "8802.30.29",
+          "description": "000P Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.30.31",
+          "description": "De peso en vacío inferior o igual a 7000 kg"
+        },
+        {
+          "code": "8802.30.31",
+          "description": "000N De peso en vacío inferior o igual a 7.000 kg 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.30.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "8802.30.39",
+          "description": "000Z Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.30.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8802.30.90",
+          "description": "000P Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.40",
+          "description": "Aviones y demás aeronaves, de peso en vacío superior a 15000 kg"
+        },
+        {
+          "code": "8802.40.10",
+          "description": "A turbohélice"
+        },
+        {
+          "code": "8802.40.10",
+          "description": "000A A turbohelice 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.40.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "8802.40.90",
+          "description": "000D Los demás 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8802.60.00",
+          "description": "Vehículos espaciales (incluidos los satélites) y sus vehículos de lanzamiento y vehículos suborbitales"
+        },
+        {
+          "code": "8802.60.00",
+          "description": "000U -Vehículos espaciales (incluidos los satelites) y sus vehículos de lanzamiento y vehículos suborbitales 0.00 0.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8803",
+      "description": "PARTES DE LOS APARATOS DE LAS PARTIDAS 8801 U 8802",
+      "subheadings": [
+        {
+          "code": "8803.10.00",
+          "description": "Hélices y rotores, y sus partes"
+        },
+        {
+          "code": "8803.10.00",
+          "description": "000R -Helices y rotores, y sus partes 0.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8803.20.00",
+          "description": "Trenes de aterrizaje y sus partes"
+        },
+        {
+          "code": "8803.20.00",
+          "description": "000F -Trenes de aterrizaje y sus partes 0.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8803.30.00",
+          "description": "Las demás partes de aviones o helicópteros"
+        },
+        {
+          "code": "8803.30.00",
+          "description": "000V -Las demás partes para aviones o helicópteros 0.00 0.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "8803.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "8803.90.00",
+          "description": "000E -Las demás 0.00 0.00 0.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "8804",
+      "description": "PARACAÍDAS, INCLUIDOS LOS DIRIGIBLES, PLANEADORES (PARAPENTES) O DE ASPAS GIRATORIAS; SUS",
+      "subheadings": [
+        {
+          "code": "8804.00.00",
+          "description": "Paracaídas, incluidos los dirigibles, planeadores (parapentes) o de aspas giratorias; sus partes y accesorios"
+        },
+        {
+          "code": "8804.00.00",
+          "description": "Paracaidas"
+        },
+        {
+          "code": "8804.00.00",
+          "description": "110E Dirigibles 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8804.00.00",
+          "description": "120H Planeadores 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8804.00.00",
+          "description": "130L De aspas giratorias 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8804.00.00",
+          "description": "190F Los demás 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8804.00.00",
+          "description": "200G Accesorios 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8804.00.00",
+          "description": "900V Partes (R.909/94 MEOSP) 14.00 14.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "8805",
+      "description": "APARATOS Y DISPOSITIVOS PARA LANZAMIENTO DE AERONAVES; APARATOS Y DISPOSITIVOS PARA",
+      "subheadings": [
+        {
+          "code": "8805.10.00",
+          "description": "Aparatos y dispositivos para lanzamiento de aeronaves, y sus partes; aparatos y dispositivos para aterrizaje en"
+        },
+        {
+          "code": "8805.10.00",
+          "description": "100J Aparatos y dispositivos 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8805.10.00",
+          "description": "900C Partes 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8805.2",
+          "description": "Aparatos de entrenamiento de vuelo en tierra y sus partes:"
+        },
+        {
+          "code": "8805.21.00",
+          "description": "Simuladores de combate aéreo y sus partes"
+        },
+        {
+          "code": "8805.21.00",
+          "description": "100K Simuladores de combate aereo 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8805.21.00",
+          "description": "900D Partes 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8805.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "8805.29.00",
+          "description": "100F Aparatos 0.00 0.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "8805.29.00",
+          "description": "900Z Partes 0.00 0.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 76
+}

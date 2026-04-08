@@ -1,0 +1,362 @@
+{
+  "chapter": "92",
+  "title": "Capítulo 92",
+  "sectionTitle": "CAP. 92 SECCION XVIII INSTRUMENTOS Y APARATOS DE OPTICA, FOTOGRAFIA O CINEMATOGRAFIA, DE MEDIDA, CONTROL O PRECISION; IN",
+  "headings": [
+    {
+      "code": "9201",
+      "description": "PIANOS, INCLUSO AUTOMÁTICOS; CLAVECINES Y DEMÁS INSTRUMENTOS DE CUERDA CON TECLADO",
+      "subheadings": [
+        {
+          "code": "9201.10.00",
+          "description": "Pianos verticales"
+        },
+        {
+          "code": "9201.10.00",
+          "description": "000Z -Pianos verticales 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9201.20.00",
+          "description": "Pianos de cola"
+        },
+        {
+          "code": "9201.20.00",
+          "description": "000N -Pianos de cola 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9201.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9201.90.00",
+          "description": "000M -Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9202",
+      "description": "LOS DEMÁS INSTRUMENTOS MUSICALES DE CUERDA (POR EJEMPLO: GUITARRAS, VIOLINES, ARPAS)",
+      "subheadings": [
+        {
+          "code": "9202.10.00",
+          "description": "De arco"
+        },
+        {
+          "code": "9202.10.00",
+          "description": "000T -De arco 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9202.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9202.90.00",
+          "description": "Instrumentos de cuerdas pinzadas"
+        },
+        {
+          "code": "9202.90.00",
+          "description": "Guitarras"
+        },
+        {
+          "code": "9202.90.00",
+          "description": "111R Clásicas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9202.90.00",
+          "description": "112U Acústicas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9202.90.00",
+          "description": "119J Las demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9202.90.00",
+          "description": "190Q Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9202.90.00",
+          "description": "900E Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9205",
+      "description": "INSTRUMENTOS MUSICALES DE VIENTO (POR EJEMPLO: ÓRGANOS DE TUBOS Y TECLADO, ACORDEONES,",
+      "subheadings": [
+        {
+          "code": "9205.10.00",
+          "description": "Instrumentos llamados «metales»"
+        },
+        {
+          "code": "9205.10.00",
+          "description": "100D Trompetas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9205.10.00",
+          "description": "200J Cornetas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9205.10.00",
+          "description": "300P Trompas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9205.10.00",
+          "description": "400V Tubas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9205.10.00",
+          "description": "500A Trombones 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9205.10.00",
+          "description": "900X Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9205.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9205.90.00",
+          "description": "De tubos con agujeros"
+        },
+        {
+          "code": "9205.90.00",
+          "description": "110V Flautas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9205.90.00",
+          "description": "120Y Clarinetes 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9205.90.00",
+          "description": "130B Saxofones 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9205.90.00",
+          "description": "190W Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9205.90.00",
+          "description": "200X Armónicas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9205.90.00",
+          "description": "300C Bandoneón diatónico 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9205.90.00",
+          "description": "900K Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9206",
+      "description": "INSTRUMENTOS MUSICALES DE PERCUSIÓN (POR EJEMPLO: TAMBORES, CAJAS, XILÓFONOS, PLATILLOS,",
+      "subheadings": [
+        {
+          "code": "9206.00.00",
+          "description": "Instrumentos musicales de percusión (por ejemplo: tambores, cajas, xilófonos, platillos, castañuelas, maracas)"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "Instrumentos de membrana o parche"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "110L Tamboriles 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "120P Tambores, cajas y bombos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "130T Timbales 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "140W Panderos y panderetas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "150Z Tam-tams 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "190M Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "910E Platillos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "920H Castañuelas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "930L Maracas 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "940P Campanas y sus juegos, carillones de tubos 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9206.00.00",
+          "description": "990F Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9207",
+      "description": "INSTRUMENTOS MUSICALES EN LOS QUE EL SONIDO SE PRODUZCA O TENGA QUE AMPLIFICARSE",
+      "subheadings": [
+        {
+          "code": "9207.10",
+          "description": "Instrumentos de teclado, excepto los acordeones"
+        },
+        {
+          "code": "9207.10.10",
+          "description": "Sintetizadores"
+        },
+        {
+          "code": "9207.10.10",
+          "description": "000V Sintetizadores 10.00 10.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9207.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9207.10.90",
+          "description": "000Y Los demás 10.00 10.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9207.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9207.90.10",
+          "description": "Guitarras y contrabajos"
+        },
+        {
+          "code": "9207.90.10",
+          "description": "100N Guitarras 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9207.90.10",
+          "description": "200U Contrabajos (bajos) 18.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9207.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "9207.90.90",
+          "description": "000L Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9208",
+      "description": "CAJAS DE MÚSICA, ORQUESTRIONES, ORGANILLOS, PÁJAROS CANTORES, SIERRAS MUSICALES Y DEMÁS",
+      "subheadings": [
+        {
+          "code": "9208.10.00",
+          "description": "Cajas de música"
+        },
+        {
+          "code": "9208.10.00",
+          "description": "000D -Cajas de música 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9208.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9208.90.00",
+          "description": "100X Productos alcanzados por la Res. 163/2005 SCT 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "9208.90.00",
+          "description": "900Q Los demás 18.00 18.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "9209",
+      "description": "PARTES (POR EJEMPLO, MECANISMOS DE CAJAS DE MÚSICA) Y ACCESORIOS (POR EJEMPLO: TARJETAS,",
+      "subheadings": [
+        {
+          "code": "9209.30.00",
+          "description": "Cuerdas armónicas"
+        },
+        {
+          "code": "9209.30.00",
+          "description": "100F De tripa 16.00 16.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "9209.30.00",
+          "description": "200L De seda 16.00 16.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "9209.30.00",
+          "description": "300R De monofilamentos de materia textil sintética 16.00 16.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "9209.30.00",
+          "description": "400X Metálica 16.00 16.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "9209.30.00",
+          "description": "900Z Las demás 16.00 16.00 3.00 LNA 0.00 7.50"
+        },
+        {
+          "code": "9209.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "9209.91.00",
+          "description": "Partes y accesorios de pianos"
+        },
+        {
+          "code": "9209.91.00",
+          "description": "000X --Partes y accesorios de pianos 2.00 2.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "9209.92.00",
+          "description": "Partes y accesorios de instrumentos musicales de la partida 9202"
+        },
+        {
+          "code": "9209.92.00",
+          "description": "000J --Partes y accesorios de instrumentos musicales de la partida 92.02 16.00 16.00 3.00 LNA 3.00 7.50"
+        },
+        {
+          "code": "9209.94.00",
+          "description": "Partes y accesorios de instrumentos musicales de la partida 9207"
+        },
+        {
+          "code": "9209.94.00",
+          "description": "000H --Partes y accesorios de instrumentos musicales de la partida 92.07 16.00 16.00 3.00 LNA 3.00 7.50"
+        },
+        {
+          "code": "9209.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "9209.99.00",
+          "description": "100Y Metrónomos y diapasones 16.00 16.00 3.00 LNA 3.00 7.50"
+        },
+        {
+          "code": "9209.99.00",
+          "description": "900R Los demás 16.00 16.00 3.00 LNA 3.00 7.50"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 85
+}

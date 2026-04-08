@@ -1,0 +1,364 @@
+{
+  "chapter": "18",
+  "title": "Capítulo 18",
+  "sectionTitle": "CAP. 18 SECCION IV PRODUCTOS DE LAS INDUSTRIAS ALIMENTARIAS; BEBIDAS, LIQUIDOS ALCOHOLICOS Y VINAGRE; TABACO Y SUCEDANEO",
+  "headings": [
+    {
+      "code": "1801",
+      "description": "CACAO EN GRANO, ENTERO O PARTIDO, CRUDO O TOSTADO",
+      "subheadings": [
+        {
+          "code": "1801.00.00",
+          "description": "Cacao en grano, entero o partido, crudo o tostado"
+        },
+        {
+          "code": "1801.00.00",
+          "description": "Entero"
+        },
+        {
+          "code": "1801.00.00",
+          "description": "110N Crudo 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1801.00.00",
+          "description": "120R Tostado 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1801.00.00",
+          "description": "Partido"
+        },
+        {
+          "code": "1801.00.00",
+          "description": "210U Crudo 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1801.00.00",
+          "description": "220X Tostado 10.00 10.00 3.00 LA 4.50 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1802",
+      "description": "CÁSCARA, PELÍCULAS Y DEMÁS RESIDUOS DE CACAO",
+      "subheadings": [
+        {
+          "code": "1802.00.00",
+          "description": "Cáscara, películas y demás residuos de cacao"
+        },
+        {
+          "code": "1802.00.00",
+          "description": "000Y CÁSCARA, PELÍCULAS Y DEMÁS RESIDUOS DE CACAO. 10.00 10.00 3.00 LA 4.50 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1803",
+      "description": "PASTA DE CACAO, INCLUSO DESGRASADA",
+      "subheadings": [
+        {
+          "code": "1803.10.00",
+          "description": "Sin desgrasar"
+        },
+        {
+          "code": "1803.10.00",
+          "description": "000F -Sin desgrasar 12.00 12.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1803.20.00",
+          "description": "Desgrasada total o parcialmente"
+        },
+        {
+          "code": "1803.20.00",
+          "description": "000V -Desgrasada total o parcialmente 12.00 12.00 3.00 LA 4.50 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1804",
+      "description": "MANTECA, GRASA Y ACEITE DE CACAO",
+      "subheadings": [
+        {
+          "code": "1804.00.00",
+          "description": "Manteca, grasa y aceite de cacao"
+        },
+        {
+          "code": "1804.00.00",
+          "description": "100Q Manteca de cacao 12.00 12.00 3.00 LA 4.50 0.75"
+        },
+        {
+          "code": "1804.00.00",
+          "description": "900J Los demás 12.00 12.00 3.00 LA 4.50 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1805",
+      "description": "CACAO EN POLVO SIN ADICIÓN DE AZÚCAR NI OTRO EDULCORANTE",
+      "subheadings": [
+        {
+          "code": "1805.00.00",
+          "description": "Cacao en polvo sin adición de azúcar ni otro edulcorante"
+        },
+        {
+          "code": "1805.00.00",
+          "description": "000D CACAO EN POLVO SIN ADICIÓN DE AZÚCAR NI OTRO EDULCORANTE. 14.00 14.00 3.00 LA 4.50 1.25"
+        }
+      ]
+    },
+    {
+      "code": "1806",
+      "description": "CHOCOLATE Y DEMÁS PREPARACIONES ALIMENTICIAS QUE CONTENGAN CACAO",
+      "subheadings": [
+        {
+          "code": "1806.10.00",
+          "description": "Cacao en polvo con adición de azúcar u otro edulcorante"
+        },
+        {
+          "code": "1806.10.00",
+          "description": "000L -Cacao en polvo con adición de azúcar u otro edulcorante 18.00 18.00 3.00 LA 4.50 1.25"
+        },
+        {
+          "code": "1806.20.00",
+          "description": "Las demás preparaciones, en bloques, tabletas o barras con peso superior a 2 kg o en forma líquida, pastosa o en"
+        },
+        {
+          "code": "1806.20.00",
+          "description": "100F Cobertura de chocolate 18.00 18.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "1806.20.00",
+          "description": "200L Chocolate 18.00 18.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "1806.20.00",
+          "description": "900Z Las demás 18.00 18.00 3.00 LNA 4.50 2.50"
+        },
+        {
+          "code": "1806.3",
+          "description": "Los demás, en bloques, tabletas o barras:"
+        },
+        {
+          "code": "1806.31",
+          "description": "Rellenos"
+        },
+        {
+          "code": "1806.31.10",
+          "description": "Chocolate"
+        },
+        {
+          "code": "1806.31.10",
+          "description": "100R En envases inmediatos de contenido neto inferior o igual a 50 g 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.31.10",
+          "description": "200X En envases inmediatos de contenido neto superior a 50 g pero inferior o igual a 100 g 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.31.10",
+          "description": "900K Los demás 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "1806.31.20",
+          "description": "Las demás preparaciones"
+        },
+        {
+          "code": "1806.31.20",
+          "description": "100B En envases inmediatos de contenido neto inferior o igual a 50 g 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.31.20",
+          "description": "200G En envases inmediatos de contenido neto superior a 50 g pero inferior o igual a 100 g 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.31.20",
+          "description": "900V Las demás 20.00 20.00 3.00 LNA 4.50 3.25"
+        },
+        {
+          "code": "1806.32",
+          "description": "Sin rellenar"
+        },
+        {
+          "code": "1806.32.10",
+          "description": "Chocolate"
+        },
+        {
+          "code": "1806.32.10",
+          "description": "100D Que contenga edulcorante sintético como sustituto del azúcar 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.10",
+          "description": "Con cereales, frutas u otros frutos"
+        },
+        {
+          "code": "1806.32.10",
+          "description": "210M En envases inmediatos de contenido neto inferior o igual 50 g 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.10",
+          "description": "220Q En envases inmediatos de contenido neto superior a 50 g pero inferior o igual a 100 g 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.10",
+          "description": "290N Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "1806.32.10",
+          "description": "910A En envases inmediatos de contenido neto inferior o igual 50 g 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.10",
+          "description": "920D En envases inmediatos de contenido neto superior a 50 g pero inferior o igual a 100 g 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.10",
+          "description": "990B Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.20",
+          "description": "Las demás preparaciones"
+        },
+        {
+          "code": "1806.32.20",
+          "description": "100N Que contenga edulcorante sintético como sustituto del azúcar 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.20",
+          "description": "Con cereales, frutas u otros frutos"
+        },
+        {
+          "code": "1806.32.20",
+          "description": "210X En envases inmediatos de contenido neto inferior o igual 50 g 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.20",
+          "description": "220A En envases inmediatos de contenido neto superior a 50 g pero inferior o igual a 100 g 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.20",
+          "description": "290Y Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.20",
+          "description": "Los demás"
+        },
+        {
+          "code": "1806.32.20",
+          "description": "910K En envases inmediatos de contenido neto inferior o igual 50 g 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.20",
+          "description": "920N En envases inmediatos de contenido neto superior a 50 g pero inferior o igual a 100 g 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.32.20",
+          "description": "990L Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "Avellanas, almendras, pasas de uva, frutas y otros frutos recubiertos"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "110H Avellanas 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "120L Almendras 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "130P Maní 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "190J Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "Bombones"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "210N Rellenos 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "290P Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "300Q Caramelos 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "Turrones"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "410Z Recubiertos 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "490A Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "500B Confites y grageas 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "Figuras"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "Huevos"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "611M Macizos 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "619E Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "691N Macizas 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "699F Las demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "700M Pasta para untar 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "910B Productos a base de cereales 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "920E Chocolate 20.00 20.00 3.00 LNA 4.50 3.75"
+        },
+        {
+          "code": "1806.90.00",
+          "description": "990C Los demás 20.00 20.00 3.00 LNA 4.50 3.75"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 87
+}

@@ -1,0 +1,5230 @@
+{
+  "chapter": "30",
+  "title": "Capítulo 30",
+  "sectionTitle": "CAP. 30 SECCION VI PRODUCTOS DE LAS INDUSTRIAS QUIMICAS O DE LAS INDUSTRIAS CONEXAS Notas. A. Cualquier producto que res",
+  "headings": [
+    {
+      "code": "3001",
+      "description": "GLÁNDULAS Y DEMÁS ÓRGANOS PARA USOS OPOTERÁPICOS, DESECADOS, INCLUSO PULVERIZADOS;",
+      "subheadings": [
+        {
+          "code": "3001.20",
+          "description": "Extractos de glándulas o de otros órganos o de sus secreciones"
+        },
+        {
+          "code": "3001.20.10",
+          "description": "De hígado"
+        },
+        {
+          "code": "3001.20.10",
+          "description": "000H De hígado 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3001.20.90",
+          "description": "100R De bilis 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.20.90",
+          "description": "900K Los demás 6.00 6.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3001.90.10",
+          "description": "Heparina y sus sales"
+        },
+        {
+          "code": "3001.90.10",
+          "description": "000G Heparina y sus sales 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.90.20",
+          "description": "Trozos de pericardio de origen bovino o porcino"
+        },
+        {
+          "code": "3001.90.20",
+          "description": "000R Trozos de pericardio de origen bovino o porcino 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.90.31",
+          "description": "Hígados"
+        },
+        {
+          "code": "3001.90.31",
+          "description": "000J Hígados 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.90.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3001.90.39",
+          "description": "000V Los demás 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3001.90.90",
+          "description": "100Q Médula roja 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.90.90",
+          "description": "Venenos provenientes de animales"
+        },
+        {
+          "code": "3001.90.90",
+          "description": "210Z De abejas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.90.90",
+          "description": "220C De serpientes 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.90.90",
+          "description": "290A Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.90.90",
+          "description": "300B Criptotoxinas no microbianas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.90.90",
+          "description": "400G Los demás órganos, huesos o tejidos, humanos o animales, vivos o conservados, presentados en envases esteriles 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3001.90.90",
+          "description": "900J Las demás 2.00 2.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3002",
+      "description": "SANGRE HUMANA; SANGRE ANIMAL PREPARADA PARA USOS TERAPÉUTICOS, PROFILÁCTICOS O DE",
+      "subheadings": [
+        {
+          "code": "3002.1",
+          "description": "Antisueros (sueros con anticuerpos), demás fracciones de la sangre y productos inmunológicos, incluso modificados"
+        },
+        {
+          "code": "3002.11.00",
+          "description": "Kit para el diagnóstico de la malaria (paludismo)"
+        },
+        {
+          "code": "3002.11.00",
+          "description": "000P --Kit para el diagnóstico de la malaria (paludismo) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12",
+          "description": "Antisueros (sueros con anticuerpos) y demás fracciones de la sangre"
+        },
+        {
+          "code": "3002.12.11",
+          "description": "Antiofídicos y otros antivenenosos"
+        },
+        {
+          "code": "3002.12.11",
+          "description": "000U Antiofídicos y otros antivenenosos 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.12",
+          "description": "Antitetánico"
+        },
+        {
+          "code": "3002.12.12",
+          "description": "000B Antitetánico 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.13",
+          "description": "Anticatarral"
+        },
+        {
+          "code": "3002.12.13",
+          "description": "000J Anticatarral 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.14",
+          "description": "Antipiógeno"
+        },
+        {
+          "code": "3002.12.14",
+          "description": "000R Antipiógeno 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.15",
+          "description": "Antidiftérico"
+        },
+        {
+          "code": "3002.12.15",
+          "description": "000Z Antidifterico 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.16",
+          "description": "Polivalentes"
+        },
+        {
+          "code": "3002.12.16",
+          "description": "000G Polivalentes 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3002.12.19",
+          "description": "100K Suero antilinfocitario 2.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.19",
+          "description": "200Q Gammaglobulina humana antihepatitis B 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.19",
+          "description": "300W Gammaglobulina humana antirrabica 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.19",
+          "description": "400B Gammaglobulina humana para varicela-zoster 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.19",
+          "description": "900D Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.21",
+          "description": "Inmunoglobulina anti-Rh"
+        },
+        {
+          "code": "3002.12.21",
+          "description": "000D Inmunoglobulina anti-Rh 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.22",
+          "description": "Otras inmunoglobulinas séricas"
+        },
+        {
+          "code": "3002.12.22",
+          "description": "100R Reactivos de diagnóstico comprendidos en la Ley 25.590, sus normas modificatorias y complementarias 2.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.22",
+          "description": "900K Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.23",
+          "description": "Concentrado de factor VIII"
+        },
+        {
+          "code": "3002.12.23",
+          "description": "000U Concentrado de factor VIII 2.00 2.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.12.24",
+          "description": "Seroalbúmina, en forma de gel, para preparación de reactivos de diagnóstico"
+        },
+        {
+          "code": "3002.12.24",
+          "description": "000B Seroalbúmina, en forma de gel, para preparación de reactivos de diagnóstico 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3002.12.29",
+          "description": "100V Suero y plasma comprendidos en la Resolución N° 1789/06 MS 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.29",
+          "description": "200A Plasma deshidratado bovino y hemoglobina deshidratada bovina 2.00 2.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.12.29",
+          "description": "300F Inmunoglobulinas, de los tipos utilizadas para la fabricacion de kits para diagnostico de COVID-19 2.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.29",
+          "description": "900N Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.31",
+          "description": "Seroalbúmina, excepto la humana"
+        },
+        {
+          "code": "3002.12.31",
+          "description": "000N Seroalbúmina, excepto la humana 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.32",
+          "description": "Plasmina (fibrinolisina)"
+        },
+        {
+          "code": "3002.12.32",
+          "description": "000W Plasmina (fibrinolisina) 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.33",
+          "description": "Uroquinasa"
+        },
+        {
+          "code": "3002.12.33",
+          "description": "000D Uroquinasa 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.34",
+          "description": "Inmunoglobulina y clorhidrato de histamina, asociados"
+        },
+        {
+          "code": "3002.12.34",
+          "description": "000L Inmunoglobulina y clorhidrato de histamina, asociados 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.35",
+          "description": "Inmunoglobulina G, liofilizada o en solución"
+        },
+        {
+          "code": "3002.12.35",
+          "description": "000U Inmunoglobulina G, liofilizada o en solución 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.36",
+          "description": "Seroalbúmina humana"
+        },
+        {
+          "code": "3002.12.36",
+          "description": "000B Seroalbúmina humana 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.12.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3002.12.39",
+          "description": "100E Activador tisular del plasminogeno; antiinhibidor factor VIII; alfa1-antitripsina; concentrado de antitrombina III; factor VII;"
+        },
+        {
+          "code": "3002.12.39",
+          "description": "900Y Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.13.00",
+          "description": "Productos inmunológicos sin mezclar, sin dosificar ni acondicionar para la venta al por menor"
+        },
+        {
+          "code": "3002.13.00",
+          "description": "100U Productos inmunologicos definidos en la Nota 2 del Capitulo 30, de los tipos utilizados para la fabricacion de kits para"
+        },
+        {
+          "code": "3002.13.00",
+          "description": "900M Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.14",
+          "description": "Productos inmunológicos mezclados, sin dosificar ni acondicionar para la venta al por menor"
+        },
+        {
+          "code": "3002.14.10",
+          "description": "Anticuerpos monoclonales en solución tampón, conteniendo albúmina bovina"
+        },
+        {
+          "code": "3002.14.10",
+          "description": "000K Anticuerpos monoclonales en solución tampón, conteniendo albúmina bovina 2.00 2.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.14.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3002.14.90",
+          "description": "Interferones"
+        },
+        {
+          "code": "3002.14.90",
+          "description": "110X Alfa 2.00 2.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.14.90",
+          "description": "120A Gamma 2.00 2.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.14.90",
+          "description": "190Y Los demás 2.00 2.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.14.90",
+          "description": "400K Eritropoyetina humana recombinante 2.00 2.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.14.90",
+          "description": "500Q Productos inmunologicos definidos en la Nota 2 del Capitulo 30, de los tipos utilizados para la fabricacion de kits para"
+        },
+        {
+          "code": "3002.14.90",
+          "description": "900M Los demás 2.00 2.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.15",
+          "description": "Productos inmunológicos dosificados o acondicionados para la venta al por menor"
+        },
+        {
+          "code": "3002.15.10",
+          "description": "Interferón beta; peg interferón alfa-2-a"
+        },
+        {
+          "code": "3002.15.10",
+          "description": "Interferón beta"
+        },
+        {
+          "code": "3002.15.10",
+          "description": "110F Interferon beta 1-a 0.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.15.10",
+          "description": "190G Los demas. 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.15.10",
+          "description": "200H Peg interferón alfa-2-a 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.15.20",
+          "description": "Basiliximab (DCI); bevacizumab (DCI); daclizumab (DCI); etanercept (DCI); gemtuzumab ozogamicin (DCI); oprelvekin"
+        },
+        {
+          "code": "3002.15.20",
+          "description": "Basiliximab; etanercept; gemtuzumab ozogamicin; oprelvekin"
+        },
+        {
+          "code": "3002.15.20",
+          "description": "110Q Etanercept. 0.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.15.20",
+          "description": "190R Los demas. 0.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.15.20",
+          "description": "200T Bevacizumab (DCI) 0.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.15.20",
+          "description": "300Y Rituximab (DCI) 0.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.15.20",
+          "description": "900F Los demás 0.00 0.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "Interferones"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "110J Alfa 2.00 2.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "120M Gamma 2.00 2.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "190K Los demás 2.00 2.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "300R Abciximab; infliximab; palivizumab 2.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "400X Eritropoyetina humana recombinante 2.00 2.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "Reactivos de origen inmunológico, para diagnóstico"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "Destinados a medicina humana (R.G. 30/97 AFIP)"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "511H Reactivos de diagnóstico comprendidos en la Ley 25.590, sus normas modificatorias y complementarias 2.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "512K Para la deteccion de COVID-19. 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "519A Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "520J Destinados a medicina veterinaria (R. 2012/93 ex- ANA) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "590G Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.15.90",
+          "description": "900Z Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3002.19.00",
+          "description": "000K --Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20",
+          "description": "Vacunas para la medicina humana"
+        },
+        {
+          "code": "3002.20.11",
+          "description": "Contra la gripe"
+        },
+        {
+          "code": "3002.20.11",
+          "description": "000J Contra la gripe 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.12",
+          "description": "Contra la poliomielitis"
+        },
+        {
+          "code": "3002.20.12",
+          "description": "000R Contra la poliomielitis 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.13",
+          "description": "Contra la hepatitis B"
+        },
+        {
+          "code": "3002.20.13",
+          "description": "000Z Contra la hepatitis B 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.14",
+          "description": "Contra el sarampión"
+        },
+        {
+          "code": "3002.20.14",
+          "description": "000G Contra el sarampión 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.15",
+          "description": "Contra la meningitis"
+        },
+        {
+          "code": "3002.20.15",
+          "description": "000P Contra la meningitis 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.16",
+          "description": "Contra la rubeola, sarampión y paperas"
+        },
+        {
+          "code": "3002.20.16",
+          "description": "000X Contra la rubeola, sarampión y paperas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.17",
+          "description": "Otras triples"
+        },
+        {
+          "code": "3002.20.17",
+          "description": "000E Otras triples 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.18",
+          "description": "Anticatarral y antipiógena"
+        },
+        {
+          "code": "3002.20.18",
+          "description": "000M Anticatarral y antipiógena 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3002.20.19",
+          "description": "100A Contra la hepatitis A 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.19",
+          "description": "200F Contra tétanos-difteria-coqueluche y poliomielitis 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.19",
+          "description": "300L Contra el tetanos 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.19",
+          "description": "400R Contra el Covid-19 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.19",
+          "description": "900U Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.21",
+          "description": "Contra la gripe"
+        },
+        {
+          "code": "3002.20.21",
+          "description": "100Z Contra la gripe tipo B (HIB) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.21",
+          "description": "900T Los demas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.22",
+          "description": "Contra la poliomielitis"
+        },
+        {
+          "code": "3002.20.22",
+          "description": "100G Vacuna inactivada contra la poliomielitis (IPV) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.22",
+          "description": "200M Vacuna oral contra la poliomielitis (OPV) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.23",
+          "description": "Contra la hepatitis B"
+        },
+        {
+          "code": "3002.20.23",
+          "description": "000J Contra la hepatitis B 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.24",
+          "description": "Contra el sarampión"
+        },
+        {
+          "code": "3002.20.24",
+          "description": "000R Contra el sarampión 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.25",
+          "description": "Contra la meningitis"
+        },
+        {
+          "code": "3002.20.25",
+          "description": "100E Vacuna polisacarida meningococica tetravalente (A, C, Y, W 135) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.25",
+          "description": "900Y Las demas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.26",
+          "description": "Contra la rubeola, sarampión y paperas"
+        },
+        {
+          "code": "3002.20.26",
+          "description": "000G Contra la rubeola, sarampión y paperas 2.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.27",
+          "description": "Otras triples"
+        },
+        {
+          "code": "3002.20.27",
+          "description": "100V Contra la difteria, tetanos y coqueluche (tosferina), incluso acelulares 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.27",
+          "description": "900N Las demas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.28",
+          "description": "Anticatarral y antipiógena"
+        },
+        {
+          "code": "3002.20.28",
+          "description": "000X Anticatarral y antipiógena 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "100K Contra la hepatitis A 2.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "200Q Contra tétanos-difteria-coqueluche y poliomielitis 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "300W Contra el tetanos 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "Contra: la neumonía, la fiebre amarilla a virus atenuados, contra la paperas a virus atenuados, contra la rubeola a virus"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "Contra la neumonia"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "411G Antineumococica conjugada 13 valente 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "412J Neumococo 23 valente 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "419Z Las demas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "420H Contra la varicela a virus atenuados 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "430L Contra la fiebre amarilla a virus atenuados 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "490F Las demas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "DT; penta; sextuple; doble viral"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "510K Contra la difteria y tetanos 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "520N Contra la difteria, tetanos, coqueluche, hepatitis B y gripe B 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "530R Contra la difteria, tetanos, coqueluche, hepatitis B, gripe B y poliomielitis (IPV) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "540V Doble viral 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "BCG; contra rotavirus; contra HPV"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "610Q Contra la tuberculosis (BCG) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "620U Contra el rotavirus 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "630X Contra el virus del Papiloma Humano (HPV) 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "700T Contra la rabia 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "800Y Contra el Covid-19 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "Contra la fiebre tifoidea; contra el colera"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "911J Contra la fiebre tifoidea 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "912L Contra el colera 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.20.29",
+          "description": "990H Las demas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30",
+          "description": "Vacunas para la medicina veterinaria"
+        },
+        {
+          "code": "3002.30.10",
+          "description": "Contra la rabia"
+        },
+        {
+          "code": "3002.30.10",
+          "description": "100W Para bovinos o equinos 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.10",
+          "description": "900P Las demas 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.20",
+          "description": "Contra la coccidiosis"
+        },
+        {
+          "code": "3002.30.20",
+          "description": "000A Contra la coccidiosis 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.30",
+          "description": "Contra la queratoconjuntivitis"
+        },
+        {
+          "code": "3002.30.30",
+          "description": "000K Contra la queratoconjuntivitis 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.40",
+          "description": "Contra el distemper"
+        },
+        {
+          "code": "3002.30.40",
+          "description": "100A Para caninos 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.40",
+          "description": "900U Las demas 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.50",
+          "description": "Contra la leptospirosis"
+        },
+        {
+          "code": "3002.30.50",
+          "description": "100K Para caninos 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.50",
+          "description": "900D Las demas 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.60",
+          "description": "Contra la fiebre aftosa"
+        },
+        {
+          "code": "3002.30.60",
+          "description": "000P Contra la fiebre aftosa 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.70",
+          "description": "Contra las siguientes enfermedades: de Newcastle, a virus vivo o virus inactivado; de Gumboro, a virus vivo o virus"
+        },
+        {
+          "code": "3002.30.70",
+          "description": "100E Contra Newcastle, a virus vivo o virus inactivado 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.70",
+          "description": "200K Contra Gumboro, a virus vivo o virus inactivado 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.70",
+          "description": "300Q Contra la bronquitis, a virus vivo o virus inactivado 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.70",
+          "description": "400W Contra la difteroviruela, a virus vivo 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.70",
+          "description": "500B Contra el síndrome de caída de puesta (EDS) 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.70",
+          "description": "600G Contra la salmonelosis aviar, elaboradas con cepa 9R 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.70",
+          "description": "700M Contra el Cólera de las aves, inactivadas 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.80",
+          "description": "Vacunas combinadas contra las enfermedades citadas en el ítem 30023070"
+        },
+        {
+          "code": "3002.30.80",
+          "description": "000J Vacunas combinadas contra las enfermedades citadas en el ítem 3002.30.70 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "3002.30.90",
+          "description": "100Z Las demas vacunas monovalentes o polivalentes, para caninos 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.30.90",
+          "description": "900T Las demas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3002.90.10",
+          "description": "Reactivos de origen microbiano para diagnóstico"
+        },
+        {
+          "code": "3002.90.10",
+          "description": "Destinados a sanidad humana (R.G.30/97 AFIP)"
+        },
+        {
+          "code": "3002.90.10",
+          "description": "110J Comprendidos en la Ley 25.590, sus normas modificatorias y complementarias 10.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.10",
+          "description": "190K Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.10",
+          "description": "200L Destinados a medicina veterinaria (R.2012/93 ex-ANA) 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.10",
+          "description": "900Z Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.20",
+          "description": "Antitoxinas de origen microbiano"
+        },
+        {
+          "code": "3002.90.20",
+          "description": "000K Antitoxinas de origen microbiano 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.30",
+          "description": "Tuberculinas"
+        },
+        {
+          "code": "3002.90.30",
+          "description": "000V Tuberculinas 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.91",
+          "description": "Para sanidad animal"
+        },
+        {
+          "code": "3002.90.91",
+          "description": "100R Sangre animal (R.2012/93 ex-ANA) 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.91",
+          "description": "200X Toxinas (R.2012/93 ex-ANA) 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.91",
+          "description": "300C Microorganismos (R.2012/93 ex-ANA) 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.91",
+          "description": "900K Los demás (R.2012/93 ex-ANA) 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.92",
+          "description": "Para sanidad humana"
+        },
+        {
+          "code": "3002.90.92",
+          "description": "100Z Sangre animal (R.2014/93 ex-ANA) 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.92",
+          "description": "200E Microorganismos 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.92",
+          "description": "Sangre humana (R.2014/93 ex-ANA)"
+        },
+        {
+          "code": "3002.90.92",
+          "description": "310N Comprendida en la Resolución N° 1789/06 MS 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.92",
+          "description": "390P Las demás 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.92",
+          "description": "400Q Toxinas (R.2014/93 ex-ANA) 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.92",
+          "description": "900T Los demás 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.93",
+          "description": "Saxitoxina"
+        },
+        {
+          "code": "3002.90.93",
+          "description": "000B Saxitoxina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.94",
+          "description": "Ricina"
+        },
+        {
+          "code": "3002.90.94",
+          "description": "000J Ricina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3002.90.99",
+          "description": "Cultivos de microorganismos"
+        },
+        {
+          "code": "3002.90.99",
+          "description": "110F Aptos para la fabricación de alimentos (R.1946/93 ex-ANA) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.99",
+          "description": "120J Aptos para la humidificación del suelo (R.2013 ex-ANA) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.99",
+          "description": "130M Bacilos thuringiensis (R.2013/93 ex-ANA) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.99",
+          "description": "140Q Aptos para limpieza de cañerias, de uso domestico 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.99",
+          "description": "150U Aptos para uso en la industria del petróleo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.99",
+          "description": "160X Aptos para el tratamiento de efluentes industriales 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.99",
+          "description": "170A Material biológico comprendido en la Resolución N° 1789/06 MS 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.99",
+          "description": "190G Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.99",
+          "description": "200H Reactivos de diagnóstico comprendidos en la Ley 25.590, sus normas modificatorias y complementarias 8.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3002.90.99",
+          "description": "900W Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3003",
+      "description": "MEDICAMENTOS (EXCEPTO LOS PRODUCTOS DE LAS PARTIDAS 3002, 3005 Ó 3006) CONSTITUIDOS POR",
+      "subheadings": [
+        {
+          "code": "3003.10",
+          "description": "Que contengan penicilinas o derivados de estos productos con la estructura del ácido penicilánico, o estreptomicinas"
+        },
+        {
+          "code": "3003.10.11",
+          "description": "Ampicilina o sus sales"
+        },
+        {
+          "code": "3003.10.11",
+          "description": "000N Ampicilina o sus sales 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.10.12",
+          "description": "Amoxicilina o sus sales"
+        },
+        {
+          "code": "3003.10.12",
+          "description": "000W Amoxicilina o sus sales 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.10.13",
+          "description": "Penicilina G benzatínica"
+        },
+        {
+          "code": "3003.10.13",
+          "description": "000D Penicilina G benzatínica 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.10.14",
+          "description": "Penicilina G potásica"
+        },
+        {
+          "code": "3003.10.14",
+          "description": "000L Penicilina G potásica 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.10.15",
+          "description": "Penicilina G procaínica"
+        },
+        {
+          "code": "3003.10.15",
+          "description": "000U Penicilina G procaínica 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.10.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.10.19",
+          "description": "000Z Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.10.20",
+          "description": "Que contengan estreptomicinas o derivados de estos productos"
+        },
+        {
+          "code": "3003.10.20",
+          "description": "000Q Que contengan estreptomicinas o derivados de estos productos 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20",
+          "description": "Los demás, que contengan antibióticos"
+        },
+        {
+          "code": "3003.20.11",
+          "description": "Cloranfenicol, su palmitato, su succinato o su hemisuccinato"
+        },
+        {
+          "code": "3003.20.11",
+          "description": "100H Para medicina veterinaria (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.11",
+          "description": "900B Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.20.19",
+          "description": "000N Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.21",
+          "description": "Eritromicina o sus sales"
+        },
+        {
+          "code": "3003.20.21",
+          "description": "000M Eritromicina o sus sales 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.20.29",
+          "description": "100D Azitromicina o sus sales 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.29",
+          "description": "200J Roxitromicina o sus sales 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.29",
+          "description": "900X Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.31",
+          "description": "Rifamicina SV sódica"
+        },
+        {
+          "code": "3003.20.31",
+          "description": "000X Rifamicina SV sódica 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.32",
+          "description": "Rifampicina"
+        },
+        {
+          "code": "3003.20.32",
+          "description": "000E Rifampicina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.20.39",
+          "description": "000H Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.41",
+          "description": "Clorhidrato de lincomicina"
+        },
+        {
+          "code": "3003.20.41",
+          "description": "000G Clorhidrato de lincomicina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.20.49",
+          "description": "000T Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.51",
+          "description": "Cefalotina sódica"
+        },
+        {
+          "code": "3003.20.51",
+          "description": "000R Cefalotina sódica 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.52",
+          "description": "Cefaclor o cefalexina monohidratados"
+        },
+        {
+          "code": "3003.20.52",
+          "description": "100E Cefaclor monohidratado 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.52",
+          "description": "200K Cefalexina monohidratada 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.59",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.20.59",
+          "description": "100H Cefalotina o sus sales, excepto la sal sódica 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.59",
+          "description": "200N Cefazolina o sus sales 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.59",
+          "description": "900B Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.61",
+          "description": "Sulfato de gentamicina"
+        },
+        {
+          "code": "3003.20.61",
+          "description": "000B Sulfato de gentamicina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.62",
+          "description": "Daunorubicina"
+        },
+        {
+          "code": "3003.20.62",
+          "description": "000J Daunorubicina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.63",
+          "description": "Idarubicina; pirarubicina"
+        },
+        {
+          "code": "3003.20.63",
+          "description": "000R Idarubicina; pirarubicina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.69",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.20.69",
+          "description": "000M Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.71",
+          "description": "Vancomicina"
+        },
+        {
+          "code": "3003.20.71",
+          "description": "000L Vancomicina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.72",
+          "description": "Actinomicinas"
+        },
+        {
+          "code": "3003.20.72",
+          "description": "000U Actinomicinas 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.73",
+          "description": "Ciclosporina A"
+        },
+        {
+          "code": "3003.20.73",
+          "description": "000B Ciclosporina A 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.79",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.20.79",
+          "description": "000X Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.91",
+          "description": "Mitomicina"
+        },
+        {
+          "code": "3003.20.91",
+          "description": "000F Mitomicina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.92",
+          "description": "Fumarato de tiamulina"
+        },
+        {
+          "code": "3003.20.92",
+          "description": "000N Fumarato de tiamulina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.93",
+          "description": "Bleomicinas o sus sales"
+        },
+        {
+          "code": "3003.20.93",
+          "description": "000W Bleomicinas o sus sales 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.94",
+          "description": "Imipenem"
+        },
+        {
+          "code": "3003.20.94",
+          "description": "000D Imipenem 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.95",
+          "description": "Anfotericina B en liposomas"
+        },
+        {
+          "code": "3003.20.95",
+          "description": "000L Anfotericina B en liposomas 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.20.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.20.99",
+          "description": "000R Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.3",
+          "description": "Los demás, que contengan hormonas u otros productos de la partida 2937:"
+        },
+        {
+          "code": "3003.31.00",
+          "description": "Que contengan insulina"
+        },
+        {
+          "code": "3003.31.00",
+          "description": "000L --Que contengan insulina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.39.11",
+          "description": "Somatotropina"
+        },
+        {
+          "code": "3003.39.11",
+          "description": "000Z Somatotropina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.12",
+          "description": "Gonadotropina coriónica (hCG)"
+        },
+        {
+          "code": "3003.39.12",
+          "description": "000G Gonadotropina coriónica (hCG) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.13",
+          "description": "Menotropinas"
+        },
+        {
+          "code": "3003.39.13",
+          "description": "000P Menotropinas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.14",
+          "description": "Corticotropina (ACTH)"
+        },
+        {
+          "code": "3003.39.14",
+          "description": "000X Corticotropina (ACTH) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.15",
+          "description": "Gonadotropina sérica (PMSG)"
+        },
+        {
+          "code": "3003.39.15",
+          "description": "000E Gonadotropina serica (PMSG) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.16",
+          "description": "Somatostatina o sus sales"
+        },
+        {
+          "code": "3003.39.16",
+          "description": "000M Somatostatina o sus sales 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.17",
+          "description": "Buserelina o su acetato"
+        },
+        {
+          "code": "3003.39.17",
+          "description": "000V Buserelina o su acetato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.18",
+          "description": "Triptorelina o sus sales"
+        },
+        {
+          "code": "3003.39.18",
+          "description": "000C Triptorelina o sus sales 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.19",
+          "description": "Leuprolide o su acetato"
+        },
+        {
+          "code": "3003.39.19",
+          "description": "000K Leuprolide o su acetato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.21",
+          "description": "LH-RH (gonadorelina)"
+        },
+        {
+          "code": "3003.39.21",
+          "description": "000J LH-RH (gonadorelina) 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.22",
+          "description": "Oxitocina"
+        },
+        {
+          "code": "3003.39.22",
+          "description": "000R Oxitocina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.23",
+          "description": "Sales de insulina"
+        },
+        {
+          "code": "3003.39.23",
+          "description": "000Z Sales de insulina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.24",
+          "description": "Timosinas"
+        },
+        {
+          "code": "3003.39.24",
+          "description": "000G Timosinas 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.25",
+          "description": "Octreotida"
+        },
+        {
+          "code": "3003.39.25",
+          "description": "000P Octreotida 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.26",
+          "description": "Goserelina o su acetato"
+        },
+        {
+          "code": "3003.39.26",
+          "description": "000X Goserelina o su acetato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.27",
+          "description": "Nafarelina o su acetato"
+        },
+        {
+          "code": "3003.39.27",
+          "description": "000E Nafarelina o su acetato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.39.29",
+          "description": "000V Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.31",
+          "description": "Hemisuccinato de estradiol"
+        },
+        {
+          "code": "3003.39.31",
+          "description": "000U Hemisuccinato de estradiol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.32",
+          "description": "Fempropionato de estradiol"
+        },
+        {
+          "code": "3003.39.32",
+          "description": "000B Fempropionato de estradiol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.33",
+          "description": "Estriol o su succinato"
+        },
+        {
+          "code": "3003.39.33",
+          "description": "000J Estriol o su succinato 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.34",
+          "description": "Alilestrenol"
+        },
+        {
+          "code": "3003.39.34",
+          "description": "000R Alilestrenol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.35",
+          "description": "Linestrenol"
+        },
+        {
+          "code": "3003.39.35",
+          "description": "000Z Linestrenol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.36",
+          "description": "Acetato de megestrol; formestano; fulvestrant"
+        },
+        {
+          "code": "3003.39.36",
+          "description": "100M Acetato de megestrol 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.36",
+          "description": "200T Formestano 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.36",
+          "description": "300Y Fulvestrant 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.37",
+          "description": "Desogestrel"
+        },
+        {
+          "code": "3003.39.37",
+          "description": "000P Desogestrel 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.39.39",
+          "description": "000E Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.81",
+          "description": "Levotiroxina sódica"
+        },
+        {
+          "code": "3003.39.81",
+          "description": "000T Levotiroxina sódica 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.82",
+          "description": "Liotironina sódica"
+        },
+        {
+          "code": "3003.39.82",
+          "description": "000A Liotironina sódica 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.91",
+          "description": "Sal sódica o éster metílico del ácido 9,11,15-trihidroxi-16-(3-clorofenoxi)prosta-5,13-dien-1-oico (derivado de la"
+        },
+        {
+          "code": "3003.39.91",
+          "description": "000C Sal sódica o ester metílico del ácido 9,11,15-trihidroxi-16-(3-clorofenoxi) prosta-5,13-dien-1-oico (derivado de la"
+        },
+        {
+          "code": "3003.39.92",
+          "description": "Tiratricol (triac) o su sal sódica"
+        },
+        {
+          "code": "3003.39.92",
+          "description": "000K Tiratricol(triac) o su sal sódica 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.94",
+          "description": "Espironolactona"
+        },
+        {
+          "code": "3003.39.94",
+          "description": "000A Espironolactona 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.95",
+          "description": "Exemestano"
+        },
+        {
+          "code": "3003.39.95",
+          "description": "000H Exemestano 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.39.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.39.99",
+          "description": "000N Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.4",
+          "description": "Los demás, que contengan alcaloides o sus derivados:"
+        },
+        {
+          "code": "3003.41.00",
+          "description": "Que contengan efedrina o sus sales"
+        },
+        {
+          "code": "3003.41.00",
+          "description": "000A --Que contengan efedrina o sus sales 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.42.00",
+          "description": "Que contengan seudoefedrina (DCI) o sus sales"
+        },
+        {
+          "code": "3003.42.00",
+          "description": "000M --Que contengan seudoefedrina (DCI) o sus sales 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.43.00",
+          "description": "Que contengan norefedrina o sus sales"
+        },
+        {
+          "code": "3003.43.00",
+          "description": "000Z --Que contengan norefedrina o sus sales 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.49.10",
+          "description": "Vimblastina; vincristina; derivados de estos productos; topotecan o su clorhidrato"
+        },
+        {
+          "code": "3003.49.10",
+          "description": "000F Vimblastina; vincristina; derivados de estos productos; topotecan o su clorhidrato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.20",
+          "description": "Pilocarpina, su nitrato o su clorhidrato"
+        },
+        {
+          "code": "3003.49.20",
+          "description": "000Q Pilocarpina, su nitrato o su clorhidrato 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.30",
+          "description": "Metansulfonato de dihidroergocristina"
+        },
+        {
+          "code": "3003.49.30",
+          "description": "000A Metansulfonato de dihidroergocristina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.40",
+          "description": "Codeína o sus sales"
+        },
+        {
+          "code": "3003.49.40",
+          "description": "000K Codeína o sus sales 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.50",
+          "description": "Granisetrón; tropisetrón o su clorhidrato"
+        },
+        {
+          "code": "3003.49.50",
+          "description": "000V Granisetrón; tropisetrón o su clorhidrato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "Que contengan sicotropos Lista I (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "Lisergida; DET; DMT; ibogaína; mescalina; psilocibina; psilocina; marmalina; marmina"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "111V Lisergida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "112X DET 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "113Z DMT 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "114B Ibogaína 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "115D Mescalina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "116F Psilocibina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "117H Psilocina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "118K Marmalina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "119M Marmina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "190U Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "Que contengan otros sicotropos (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "210Y Metanfetamina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "220B Buprenorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "230E Catina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "240H Fenetilina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "290Z Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "Que contengan estupefacientes Lista IV (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "310D Heroína 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "320G Desomorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "330K Acetorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "340N Etorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "350R Nalline o nalorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "390E Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "Que contengan otros estupefacientes (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "Hidrocodona y sus esteres; oxicodona; bencilmorfina; codoxima; dihidromorfina y sus esteres;hidromorfinol;"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "411L Hidrocodona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "412N Oxicodona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "413Q Bencilmorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "414T Codoxima 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "415V Esteres de dihidromorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "416X Dihidromorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "417Z Esteres de la hidrocodona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "418B Hidromorfinol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "419D Hidromorfona y sus esteres 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "Metildesorfina; metildihidromorfina; metopon; mirofina; morfina y sus sales; bromometilato de morfina y otros derivados"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "421P Metildesorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "422R Metildihidromorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "423U Metopon 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "424W Mirofina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "425Y Morfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "426A Sales de la morfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "427C Bromometilato de morfina y otros derivados de la morfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "428E N-Oximorfina incluida la N-oxicodeína 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "Derivados de la N-oximorfina; nicomorfina; normorfina; ésteres de la oxicodona; oximorfona; tebacon;tebaína; cocaína"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "431T Derivados de la N-oximorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "432V Nicomorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "433X Normorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "434Z Esteres de la oxicodona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "435B Oximorfona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "436D Tebacon 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "437F Tebaína 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "438H Cocaína 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "Ecgonina y sus ésteres; etilmorfina; folcodina; acetildihidrocodeína; dihidrocodeína; nicocodina; nicodicodina"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "441W Ecgonina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "442Y Esteres de la ecgonina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "444C Etilmorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "445E Folcodina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "446G Acetildihidrocodeina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "447J Dihidrocodeína 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "448L Nicocodina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "449N Nicodicodina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "Norcodeína; dehidroetorfina"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "451Z Norcodeína 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "452B Dehidroetorfina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "490K Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "500L isómero ópticos o sales de los isómeros ópticos de la efedrina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "600R isómero ópticos o sales de los isómeros ópticos de la seudoefedrina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "700X isómero ópticos o sales de los isómeros ópticos de la norefedrina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.49.90",
+          "description": "900H Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.60.00",
+          "description": "Los demás, que contengan los principios activos contra la malaria (paludismo) descritos en la Nota 2 de subpartida"
+        },
+        {
+          "code": "3003.60.00",
+          "description": "000R -Los demás, que contengan los principios activos contra la malaria (paludismo)descritos en la Nota 2 de subpartida del"
+        },
+        {
+          "code": "3003.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.90.11",
+          "description": "Folinato de calcio (leucovorina)"
+        },
+        {
+          "code": "3003.90.11",
+          "description": "000B Folinato de calcio (leucovorina) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.12",
+          "description": "Nicotinamida"
+        },
+        {
+          "code": "3003.90.12",
+          "description": "000J Nicotinamida 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.13",
+          "description": "Hidroxocobalamina o sus sales; cianocobalamina"
+        },
+        {
+          "code": "3003.90.13",
+          "description": "100X Hidroxocobalamina o sus sales 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.13",
+          "description": "200C Cianocobalamina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.14",
+          "description": "Vitamina A1 (retinol) o sus derivados, excepto el ácido retinoico"
+        },
+        {
+          "code": "3003.90.14",
+          "description": "000Z Vitamina A1 (retinol) o sus derivados, excepto el ácido retinoico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.15",
+          "description": "D-Pantotenato de calcio; vitamina D3 (colecalciferol)"
+        },
+        {
+          "code": "3003.90.15",
+          "description": "100M D-Pantotenato de calcio 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.15",
+          "description": "200T Vitamina D3 (colecalciferol) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.16",
+          "description": "Ésteres de las vitaminas A y D3, en concentración superior o igual a 1500000 UI/g de vitamina A y superior o igual a"
+        },
+        {
+          "code": "3003.90.16",
+          "description": "000P Esteres de las vitaminas A y D3, en concentración superior o igual a 1.500.000 UI/g de vitamina A y superior o igual a"
+        },
+        {
+          "code": "3003.90.17",
+          "description": "Ácido retinoico (tretinoína)"
+        },
+        {
+          "code": "3003.90.17",
+          "description": "000X ácido retinoico (tretinoína) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.90.19",
+          "description": "000M Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.21",
+          "description": "Estreptoquinasa"
+        },
+        {
+          "code": "3003.90.21",
+          "description": "000L Estreptoquinasa 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.22",
+          "description": "L-Asparaginasa"
+        },
+        {
+          "code": "3003.90.22",
+          "description": "000U L-Asparaginasa 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.23",
+          "description": "Deoxirribonucleasa"
+        },
+        {
+          "code": "3003.90.23",
+          "description": "000B Deoxirribonucleasa 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.24",
+          "description": "Idursulfasa"
+        },
+        {
+          "code": "3003.90.24",
+          "description": "000J Idursulfasa 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.90.29",
+          "description": "000X Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.31",
+          "description": "Permetrina; nitrato de propatilo; benzoato de bencilo; dioctilsulfosuccinato de sodio"
+        },
+        {
+          "code": "3003.90.31",
+          "description": "100B Permetrina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.31",
+          "description": "200G Nitrato de propatilo 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.31",
+          "description": "300M Benzoato de bencilo 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.31",
+          "description": "400T Dioctilsulfosuccinato de sodio 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.32",
+          "description": "Ácido cólico; ácido deoxicólico; sal magnésica del ácido dehidrocólico"
+        },
+        {
+          "code": "3003.90.32",
+          "description": "200P ácido cólico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.32",
+          "description": "300V ácido deoxicólico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.32",
+          "description": "400A Sal magnesica del ácido dehidrocólico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.33",
+          "description": "Ácido glucónico, sus sales o sus ésteres"
+        },
+        {
+          "code": "3003.90.33",
+          "description": "000L ácido glucónico, sus sales o sus esteres 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.34",
+          "description": "Ácido o-acetilsalicílico; o-acetilsalicilato de aluminio; salicilato de metilo; diclorvós"
+        },
+        {
+          "code": "3003.90.34",
+          "description": "100Z Acido o-acetilsalicilico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.34",
+          "description": "200E o-Acetilsalicilato de aluminio 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.34",
+          "description": "300K Salicilato de metilo 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.34",
+          "description": "400Q Diclorvós 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.35",
+          "description": "Lactofosfato de calcio"
+        },
+        {
+          "code": "3003.90.35",
+          "description": "000B Lactofosfato de calcio 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.36",
+          "description": "Ácido láctico, sus sales o sus ésteres; ácido 4-(4-hidroxifenoxi)-3,5-diiodofenilacético"
+        },
+        {
+          "code": "3003.90.36",
+          "description": "100P Acido láctico, sus sales o sus esteres 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.36",
+          "description": "200V Acido 4-(4-hidroxifenoxi)-3,5- diiodofenilacetico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.37",
+          "description": "Ácido fumárico, sus sales o sus ésteres"
+        },
+        {
+          "code": "3003.90.37",
+          "description": "000R ácido fumérico, sus sales o sus esteres 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.38",
+          "description": "Etretinato; fosfestrol o sus sales de di o tetrasodio"
+        },
+        {
+          "code": "3003.90.38",
+          "description": "200K Etretinato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.38",
+          "description": "400W Fosfestrol o sus sales de di o tetrasodio 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.90.39",
+          "description": "Que contengan difosfato o disulfato de dietilestilbestrol, o difosfato de hexestrol"
+        },
+        {
+          "code": "3003.90.39",
+          "description": "110Q Destinado a medicina veterinaria (R.2507/93 ex-ANA) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.39",
+          "description": "190R Los demás (R.2014/93 ex-ANA) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.39",
+          "description": "Que contengan estupefacientes (R. 2017 ex-ANA)"
+        },
+        {
+          "code": "3003.90.39",
+          "description": "210W Estupefacientes Lista IV 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.39",
+          "description": "290X Otros estupefacientes 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.39",
+          "description": "Que contengan sicotropos (R. 2017 ex-ANA)"
+        },
+        {
+          "code": "3003.90.39",
+          "description": "310B Sicotropos Lista I 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.39",
+          "description": "390C Otros sicotropos 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.39",
+          "description": "900F Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.41",
+          "description": "Sulfato de tranilcipromina; dietilpropión"
+        },
+        {
+          "code": "3003.90.41",
+          "description": "100L Sulfato de tranilcipromina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.41",
+          "description": "200R Dietilpropión 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.42",
+          "description": "Clorhidrato de ketamina"
+        },
+        {
+          "code": "3003.90.42",
+          "description": "000N Clorhidrato de ketamina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.43",
+          "description": "Clembuterol o su clorhidrato"
+        },
+        {
+          "code": "3003.90.43",
+          "description": "000W Clembuterol o su clorhidrato 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.44",
+          "description": "Tamoxifeno o su citrato"
+        },
+        {
+          "code": "3003.90.44",
+          "description": "000D Tamoxifeno o su citrato 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.45",
+          "description": "Levodopa; alfa-metildopa"
+        },
+        {
+          "code": "3003.90.45",
+          "description": "100R Levodopa 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.45",
+          "description": "200X alfa-Metildopa 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.46",
+          "description": "Clorhidrato de fenilefrina; mirtecaína; propranolol o sus sales"
+        },
+        {
+          "code": "3003.90.46",
+          "description": "100Z Clorhidrato de fenilefrina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.46",
+          "description": "200E Mirtecaína 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.46",
+          "description": "300K Propanolol o sus sales 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.47",
+          "description": "Diclofenac sódico; diclofenac potásico; diclofenac dietilamina"
+        },
+        {
+          "code": "3003.90.47",
+          "description": "100G Diclofenac sódico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.47",
+          "description": "200M Diclofenac potásico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.47",
+          "description": "300T Diclofenac dietilamina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.48",
+          "description": "Clorambucil; clormetina (DCI) o su clorhidrato; melfalano; toremifene o su citrato"
+        },
+        {
+          "code": "3003.90.48",
+          "description": "100P Melfalano 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.48",
+          "description": "200V Clorambucil 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.48",
+          "description": "300A Toremifene o su citrato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.48",
+          "description": "400F Clormetina (DCI) o su clorhidrato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "Que contengan sicotropos Lista I (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "110A PCE 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "120D PMA 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "130G DMA 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "140K DOB 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "150N DOET 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "160R STP o DOM 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "170V TMA 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "190B Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "Que contengan otros sicotropos (R. 2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "Anfetamina; bencedrina; benzfetamina; clobenzorex; clorfentermina; dexanfetamina; fencanfamina; fentermina;"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "211H Anfetamina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "212K Bencedrina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "213M Benzfetamina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "214P Clobenzorex 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "215R Clorfentermina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "216U Dexanfetamina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "217W Fencanfamina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "218Y Fentermina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "219A Levanfetamina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "Mefenorex; N-etilanfetamina; anfepramona; metanfepramona; propilhexedrina; amitriptilina; clorhidrato de amitriptilina;"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "221L Mefenorex 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "222N N-Etilanfetamina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "223Q Anfepramona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "224T Metanfepramona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "225V Propilhexedrina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "226X Amitriptilina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "227Z Clorhidrato de amitriptilina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "228B Benzoctamina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "229D Butiltriptilina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "Maprotilina; nortriptilina; pargilina; protriptilina; SPA; fenfluramina; tranilcipromina; ciprodenato; demanyl fosfato"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "231P Maprotilina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "232R Nortriptilina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "233U Pargilina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "234W Protriptilina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "235Y SPA 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "236A Fenfluramina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "237C Tranilcipromina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "238E Ciprodenato 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "239G Demanyl fosfato 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "240Q Dimetilaminoetanol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "250U Clorhidrato de benactizina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "260X Centrofenoxina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "290G Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "Que contengan estupefacientes (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "Acetilmetadol; alfa-acetilmetadol; alfa-metadol; beta-acetilmetadol; beta-metadol; dimetileptanol; dimenoxadol;"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "311N Acetilmetadol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "312Q alfa-Acetilmetadol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "313T alfa-Metadol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "314V beta-Acetilmetadol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "315X beta-Metadol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "316Z Dimetileptanol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "317B Dimenoxadol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "318D Noracimetadol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "319F Isometadona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "320P Metadona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "330T Normetadona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "340W Tilidina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "350Z Clorhidrato de propoxifeno 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "360C Dextropropoxifeno 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "390M Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.49",
+          "description": "900Q Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.51",
+          "description": "Metoclopramida o su clorhidrato; closantel"
+        },
+        {
+          "code": "3003.90.51",
+          "description": "100W Metoclopramida o su clorhidrato 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.51",
+          "description": "200B Closantel 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.52",
+          "description": "Atenolol; prilocaína o su clorhidrato; talidomida"
+        },
+        {
+          "code": "3003.90.52",
+          "description": "100D Atenolol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.52",
+          "description": "200J Prilocaína o su clorhidrato 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.52",
+          "description": "300P Talidomida 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.53",
+          "description": "Lidocaína o su clorhidrato; flutamida"
+        },
+        {
+          "code": "3003.90.53",
+          "description": "100L Lidocaína o su clorhidrato 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.53",
+          "description": "200R Flutamida 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.54",
+          "description": "Femproporex"
+        },
+        {
+          "code": "3003.90.54",
+          "description": "Sicotropos (R. 2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.54",
+          "description": "110X Femproporex 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.55",
+          "description": "Paracetamol; bromoprida"
+        },
+        {
+          "code": "3003.90.55",
+          "description": "100B Paracetamol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.55",
+          "description": "200G Bromoprida 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.56",
+          "description": "Amitraz; cipermetrina"
+        },
+        {
+          "code": "3003.90.56",
+          "description": "100J Amitraz 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.56",
+          "description": "200P Cipermetrina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.57",
+          "description": "Clorhexidina o sus sales; isetionato de pentamidina"
+        },
+        {
+          "code": "3003.90.57",
+          "description": "100R Clorhexidina o sus sales 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.57",
+          "description": "200X Isetionato de pentamidina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.58",
+          "description": "Aminoglutetimida; carmustina; deferoxamina (desferrioxamina B) o sus sales, derivados de estos productos; lomustina"
+        },
+        {
+          "code": "3003.90.58",
+          "description": "100Z Carmustina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.58",
+          "description": "200E Lomustina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.58",
+          "description": "400Q Deferoxamina (desferrioxamina B) o sus sales, derivados de estos productos 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.58",
+          "description": "500W Aminoglutetimida 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "Que contengan sicotropos (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "110K Glutetimida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "120N Sales o ésteres de femproporex 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "130R Isoaminilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "140V Meprobamato 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "150Y Etinamato 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "160B Hexapropimato 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "170E Mefexamida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "190L Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "Que contengan estupefacientes (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "210Q Diampromida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "220U 1-Ciano-1,1-difenil-3-dimetilamino-butano (intermediario de la metadona) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "290R Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.59",
+          "description": "900A Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.61",
+          "description": "Quercetina"
+        },
+        {
+          "code": "3003.90.61",
+          "description": "000A Quercetina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.62",
+          "description": "Tiaprida"
+        },
+        {
+          "code": "3003.90.62",
+          "description": "000H Tiaprida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.63",
+          "description": "Etidronato disódico"
+        },
+        {
+          "code": "3003.90.63",
+          "description": "000Q Etidronato disódico 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.64",
+          "description": "Clorhidrato de amiodarona"
+        },
+        {
+          "code": "3003.90.64",
+          "description": "000Y Clorhidrato de amiodarona 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.65",
+          "description": "Nitrovin; moxidectina"
+        },
+        {
+          "code": "3003.90.65",
+          "description": "100L Nitrovin 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.65",
+          "description": "200R Moxidectina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.66",
+          "description": "Ácido clodrónico o su sal disódica; estreptozocina; fotemustina"
+        },
+        {
+          "code": "3003.90.66",
+          "description": "000N ácido clodrónico o su sal disódica; estreptozocina; fotemustina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.67",
+          "description": "Carbocisteína; sulfiram"
+        },
+        {
+          "code": "3003.90.67",
+          "description": "100B Carbocisteína 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.67",
+          "description": "200G Sulfiram 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "Que contenga furoato de dietilestilbestrol"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "110V Destinado a medicina veterinaria (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "190W Los demás (R.2014/93 ex-ANA) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "Que contengan sicotropos (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "Sicotropos Lista I"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "211C DMHP 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "212E MDA 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "213G MDMA 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "214J MMDA 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "215L N-Etil MDA 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "216N N-Hidroxi MDA 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "217Q Parahexilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "218T Tetrahidrocanabinoles 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "219V Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "Otros sicotropos"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "291D Captodiamina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "292F Furfenorex 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "293H Doxepina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "299W Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "300C Pamidronato disódico 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.69",
+          "description": "900K Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.71",
+          "description": "Terfenadina; talniflumato; malato ácido de cleboprida; econazol o su nitrato; nitrato de isoconazol; flubendazol;"
+        },
+        {
+          "code": "3003.90.71",
+          "description": "100Q Terfenadina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.71",
+          "description": "200W Talniflumato 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.71",
+          "description": "300B Malato ácido de cleboprida 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.71",
+          "description": "400G Econazol o su nitrato 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.71",
+          "description": "500M Nitrato de isoconazol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.71",
+          "description": "600T Flubendazol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.71",
+          "description": "700Y Clorhidrato de mepivacaína 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.71",
+          "description": "800D Trimetoprim 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.71",
+          "description": "900J Clorhidrato de bupivacaína 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.72",
+          "description": "Clorhidrato de loperamida; fembendazol; ketorolac trometamina; nifedipina; nimodipina; nitrendipina"
+        },
+        {
+          "code": "3003.90.72",
+          "description": "100Y Nifedipina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.72",
+          "description": "200D Nitrendipina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.72",
+          "description": "400P Ketorolac trometamina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.72",
+          "description": "600A Fembendazol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.72",
+          "description": "700F Clorhidrato de loperamida 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.72",
+          "description": "800L Nimodipina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.73",
+          "description": "Albendazol o su sulfóxido; mebendazol; 6-mercaptopurina; metilsulfato de amezinio; oxfendazol; praziquantel"
+        },
+        {
+          "code": "3003.90.73",
+          "description": "100F Oxfendazol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.73",
+          "description": "200L Albendazol o su sulfóxido 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.73",
+          "description": "300R Mebendazol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.73",
+          "description": "600H 6-Mercaptopurina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.73",
+          "description": "700N Praziquantel 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.73",
+          "description": "800U Metilsulfato de amezinio 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.74",
+          "description": "Alprazolam; bromazepam; clordiazepóxido; clorhidrato de petidina; diazepam; droperidol; mazindol; triazolam"
+        },
+        {
+          "code": "3003.90.74",
+          "description": "Estupefacientes (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.74",
+          "description": "110R Clorhidrato de petidina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.74",
+          "description": "Sicotropos (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.74",
+          "description": "210X Triazolam 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.74",
+          "description": "220A Alprazolam 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.74",
+          "description": "230D Diazepam 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.74",
+          "description": "240G Clorodiazepóxido 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.74",
+          "description": "260N Bromazepam 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.74",
+          "description": "280V Mazindol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.74",
+          "description": "290Y Droperidol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.75",
+          "description": "Benzetimida o su clorhidrato; fenitoína o su sal sódica; isoniazida; pirazinamida"
+        },
+        {
+          "code": "3003.90.75",
+          "description": "100W Fenitoína o su sal sódica 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.75",
+          "description": "200B Benzetimida o su clorhidrato 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.75",
+          "description": "500T Pirazinamida 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.75",
+          "description": "600Y Isoniazida 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.76",
+          "description": "Ácido 2-(2-metil-3-cloroanilino)nicotínico o su sal de lisina; metronidazol o sus sales; nitrato de miconazol"
+        },
+        {
+          "code": "3003.90.76",
+          "description": "100D Acido 2-(2-metil-3-cloroanilino)nicotínico o su sal de lisina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.76",
+          "description": "200J Metronidazol o sus sales 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.76",
+          "description": "400V Nitrato de miconazol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.77",
+          "description": "Enrofloxacina; maleato de enalapril; maleato de pirilamina; nicarbazina; norfloxacina; sales de piperazina"
+        },
+        {
+          "code": "3003.90.77",
+          "description": "100L Nicarbazina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.77",
+          "description": "200R Norfloxacina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.77",
+          "description": "400C Maleato de enalapril 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.77",
+          "description": "500H Sales de piperazina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.77",
+          "description": "600N Maleato de pirilamina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.77",
+          "description": "700U Enrofloxacina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "Altretamina; bortezomib; clorhidrato de erlotinib; dacarbacina; disoproxilfumarato de tenofovir; enfuvirtida; fluspirileno;"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "Sicotropos (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "110X Fluspirileno 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "120A Tiopental sódico 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "200Z Clorhidrato de erlotinib 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "300E Trietilentiofosforamida 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "400K Tioguanina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "600W Dacarbazina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "Trimetrexato; nelfinavir o su mesilato; nevirapine; saquinavir; sulfato de indinavir; letrozol; sulfato de abacavir; lopinavir"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "720H Trimetrexato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "730L Nelfinavir o su mesilato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "740P Nevirapine 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "750T Saquinavir 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "760W Sulfato de indinavir 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "770Z Letrozol 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "780C Sulfato de abacavir 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "790F Lopinavir 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "Altretamina; bortezomib; disoproxilfumarato de tenofovir; enfuvirtida; mesilato de imatinib; pemetrexed; sulfato de"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "811M Altretamina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "812P Bortezomib 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "813R Disoproxilfumarato de tenofovir 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "814U Enfuvirtida 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "815W Mesilato de imatinib 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "816Y Pemetrexed 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "817A Sulfato de atazanavir 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "818C Temozolomida 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "819E Uracil y tegafur 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.78",
+          "description": "820N Verteporfin 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Que contengan sicotropos Lista I (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "110E Meclocualona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "120H Metacualona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "130L Etriptamina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "140P Bufotenina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "150T PHP o PCPY 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "190F Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Que contengan otros sicotropos, excepto los incluidos en el desarrollo SIM 3003.90.79.5 (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Metilfenidato; fenciclidina; secobarbital; zipeprol; pentazocina; alobarbital; amobarbital; aprobarbital; barbital"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "211M Metilfenidato 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "212P Fenciclidina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "213R Secobarbital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "214U Zipeprol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "215W Pentazocina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "216Y Alobarbital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "217A Amobarbital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "218C Aprobarbital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "219E Barbital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Brallobarbital cálcico; butabarbital sódico; butalbital; butetal; ciclobarbital; fenobarbital; hexobarbital sódico; metarbital;"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "221Q Brallobarbital cílcico 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "222T Butabarbital sódico 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "223V Butalbital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "224X Butetal 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "225Z Ciclobarbital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "226B Fenobarbital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "227D Hexobarbital sódico 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "228F Metarbital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "229H Metilfenobarbital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Pentobarbital; proxibarbal; ipronal o axeen; secbutabarbital; tiamilal sódico; vinilbital; flunitrazepam; midazolam;"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "231U Pentobarbital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "232W Proxibarbal, ipronal o axeen 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "233Y Secbutabarbital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "234A Tiamilal sódico 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "235C Vinilvital 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "236E Flunitrazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "237G Midazolam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "238J Penfluoridol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Trifluperidol; haloperidol; nialamida; sales o esteres de droperidol; clorhidrato de azaclinolol; bemperidol; pimozida;"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "241X Trifluperidol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "242Z Haloperidol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "243B Nialamida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "244D Sales o esteres de droperidol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "245F Clorhidrato de azaclinolol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "246H Bemperidol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "247K Pimozida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "248M Pipradol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "249P Nomifensin 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Clozapina; etodroxicina; clorhidrato de hidroxicina; loprazolam; opipramol; trazodona; metiprilona; sales o ésteres de"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "251A Clozapina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "252C Etodroxicina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "253E Clorhidrato de hidroxicina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "254G Loprazolam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "255J Opipramol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "256L Trazodona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "257N Metiprilona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "258Q Sales o esteres de bromazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "259T Clorhidrato de clordiazepóxido 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Sales o ésteres de diazepam; oxazepam, sus sales o sus ésteres; camazepam; clobazam; clonazepam; clorazepato"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "261D Sales o esteres de Diazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "262F Oxazepam, sus sales o sus esteres 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "263H Camazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "264K Clobazam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "265M Clonazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "266P Clorazepato dipotásico 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "267R Clorimipramina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "268U Delorazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "269W Desipramina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Dibenzepina; fludiazepam; flurazepam; halazepam; imipramina; loflazepato de etilo; lorazepam; lormetazepam;"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "271G Dibenzepina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "272J Fludiazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "273L Flurazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "274N Halazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "275Q Imipramina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "276T Loflazepato de etilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "277V Lorazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "278X Lormetazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "279Z Medazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "N-Desmetildiazepam o nordazepam; nimetazepam; nitrazepam; nitrazepato de potasio; pinazepam; prazepam;"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "281K N-Desmetildiazepam o nordazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "282M Nimetazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "283P Nitrazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "284R Nitrazepato de potasio 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "285U Pinazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "286W Prazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "287Y Sulazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "288A Temazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "289C Tetrazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "291N Trimipramina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "292Q Oxipertina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "293T Piracetam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "294V Pirovalerona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "295X Prolintano 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "296Z Quazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "297B Estazolam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "299F Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Que contengan estupefacientes Lista IV (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "310Q MPPP 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "320U PEPAP 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "330X Metilfentanilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "340A Acetil-alfa-metilfentanilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "350D alfa-Metilfentanilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "360G Cetobemidona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "370K beta-Hidroxifentanilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "391U beta-Hidroxi-3-metilfentanilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "392W para-Fluorofentanilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "399L Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Que contengan otros estupefacientes (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Difenoxina; etoxeridina; fenoperidina; intermediario C de la petidina; clorhidrato de difenoxilato; anileridina; benzetidina;"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "411Y Difenoxina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "412A Etoxeridina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "413C Fenoperidina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "414E Intermediario C de la petidina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "415G Clorhidrato de difenoxilato 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "416J Anileridina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "417L Benzetidina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "418N beta-meprodina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "419Q beta-prodina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Difenoxilato; hidroxipetidina; petidina y sus sales, excepto el clorhidrato; piminodina; properidina; trimeperidina;"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "421B Difenoxilato 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "422D Hidroxipetidina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "423F Petidina y sus sales, excepto el clorhidrato 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "424H Piminodina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "425K Properidina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "426M Trimeperidina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "427P Dipipanona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "428R Intermediario B de la petidina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "429U Becitramida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Fenampromida; piritramida; intermediario A de la petidina; alfa-meprodina; alfa-prodina; alfentanil; alil prodina; fentanil;"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "431E Fenampromida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "432G Piritramida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "433J Intermediario A de la petidina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "434L alfa-Meprodina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "435N alfa-Prodina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "436Q Alfentanil 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "437T Alil prodina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "438V Fentanil 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "439X Norpipanona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Drotebanol; fenazocina; fenomorfan; levofenacilmorfan; levometorfan; levorfanol; metazocina; norlevorfanol;"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "441H Drotebanol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "442K Fenazocina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "443M Fenomorfan 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "444P Levofenacilmorfan 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "445R Levometorfan 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "446U Levorfanol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "447W Metazocina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "448Y Norlevorfanol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "449A Racemetorfan 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Racemorfan; proheptazina; clonitaceno; etonitaceno; propiramo"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "451L Racemorfan 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "452N Proheptazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "453Q Clonitaceno 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "454T Etonitaceno 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "455V Propiramo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "490X Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Otros, que contengan otros sicotropos (R. 2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "510B Sales o esteres de alprazolam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "520E Sales de esteres de triazolam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "530H Sales o esteres de mazindol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "540L Sales o esteres de fluspirileno 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "600D ácido zoledrónico 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "Para medicina veterinaria"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "911A Que contengan carbadox (R.57/16 SENASA) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "919T Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.79",
+          "description": "990Z Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.81",
+          "description": "Levamisol o sus sales; tetramisol"
+        },
+        {
+          "code": "3003.90.81",
+          "description": "100A Levamisol o sus sales 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.81",
+          "description": "200F Tetramisol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.82",
+          "description": "Sulfadiazina o su sal sódica; sulfametoxazol"
+        },
+        {
+          "code": "3003.90.82",
+          "description": "100H Sulfadiazina o su sal sódica 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.82",
+          "description": "300U Sulfametoxazol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.83",
+          "description": "Cloxazolam; ketazolam; piroxicam; tenoxicam"
+        },
+        {
+          "code": "3003.90.83",
+          "description": "Sicotropos (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.83",
+          "description": "110U Ketazolam 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.83",
+          "description": "130A Cloxazolam 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.83",
+          "description": "300B Tenoxicam 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.83",
+          "description": "400G Piroxicam 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.84",
+          "description": "Ftalilsulfatiazol; inosina"
+        },
+        {
+          "code": "3003.90.84",
+          "description": "100Y Ftalilsulfatiazol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.84",
+          "description": "300J Inosina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.85",
+          "description": "Enantato de flufenazina; prometazina; gliburida; rutósido; deslanósido"
+        },
+        {
+          "code": "3003.90.85",
+          "description": "Sicotropos (R. 2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.85",
+          "description": "110J Enantato de Flufenazina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.85",
+          "description": "120M Prometazina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.85",
+          "description": "200L Gliburida 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.85",
+          "description": "300R Rutósido 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.85",
+          "description": "400X Deslanósido 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.86",
+          "description": "Clortalidona; furosemida"
+        },
+        {
+          "code": "3003.90.86",
+          "description": "100N Furosemida 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.86",
+          "description": "200U Clortalidona 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.87",
+          "description": "Clorhidrato de tizanidina; furazolidona; ketoconazol"
+        },
+        {
+          "code": "3003.90.87",
+          "description": "100W Clorhidrato de tizanidina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.87",
+          "description": "300G Furazolidona 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.87",
+          "description": "400M Ketoconazol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "Amprenavir; aprepitanto; delavirdina o su mesilato; efavirenz; emtricitabina; etopósido; everolimus; fosamprenavir"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "100D Temsirolimus 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "300P Ritonavir 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "400V Tenipósido 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "500A Fosfato de fludarabina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "600F Gemcitabina o su clorhidrato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "700L Efavirenz 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "Amprenavir; aprepitanto; delavirdina o su mesilato; emtricitabina; etopósido; everolimus; fosamprenavir cálcico;"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "810V Amprenavir 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "820Y Aprepitanto 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "830B Delavirdina o su mesilato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "840E Emtricitabina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "850H Fosamprenavir cílcico 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "860L Raltitrexida 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "870P Etopósido 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "880T Tacrolimus 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "Everolimus; sirolimus"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "891Y Everolimus 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.88",
+          "description": "892A Sirolimus 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "Que contengan sicotropos Lista I (R. 2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "110P TCP 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "120T Metilaminorex 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "190Q Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "Que contengan otros sicotropos (R. 2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "Fendimetrazina; fenmetrazina; clometiazol; acepromazina; aceprometazina; alimenazina; butirilperazina;"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "211X Fendimetrazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "212Z Fenmetrazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "213B Clometiazol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "214D Acepromazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "215F Aceprometazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "216H Alimenazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "217K Butirilperazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "218M Clormezanona sus sales o sus esteres 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "219P Clorhidrato de clorpromazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "Dixirazina; clorhidrato de flufenazina; homofenazina; maleato de levomepromazina; metopromazina; perfenazina;"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "221A Dixirazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "222C Clorhidrato de flufenazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "223E Homofenazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "224G Maleato de levomepromazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "225J Metopromazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "226L Perfenazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "227N Piperacetazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "228Q Edisilato de proclorperazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "229T Maleato de proclorperazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "Clorhidrato de promazina; clorhidrato de prometazina; propericiazina; clorhidrato de tioridazina; clorhidrato de"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "231D Clorhidrato de promazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "232F Clorhidrato de prometazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "233H Propericiazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "234K Clorhidrato de tioridazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "235M Clorhidrato de trifluoperazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "236P Clorhidrato de triflupromazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "237R Clorhidrato de tripropazato 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "238U Sales o esteres de ketazolam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "239W Mesocarbo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "Aminorex; isocarboxiazida; brotizolam; clotiapina; clotiazepam; clorprotixeno; etifoxina; haloxazolam"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "241G Aminorex 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "242J Isocarboxiazida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "243L Brotizolam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "244N Clotiapina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "245Q Clotiazepam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "246T Clorprotixeno 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "248X Etifoxina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "249Z Haloxazolam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "Loxapina; oxazolam; pemolina y sus sales; succinato de loxapina; ácido 2-metil-3-morfolino-1,1- difenil-propano-"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "251K Loxapina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "252M Oxazolam 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "253P Pemolina y sus sales 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "254R Succinato de loxapina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "255U ácido 2-metil-3-morfolino-1,1-difenil- propano-carboxílico (intermediario de la moramida) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "256W Sulpirida, sus sales o sus esteres 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "257Y Pipotiazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "258A Tioperazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "259C Mesilato de tioproperazina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "260L Tiotixeno 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "290W Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "Que contengan estupefacientes Lista IV (R. 2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "310A alfa-Metiltiofentanilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "320D Metiltiofentanilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "330G Tiofentanilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "390B Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "Que contengan otros estupefacientes (R. 2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "Dietiltiambuteno; dimetiltiambuteno; etilmetiltiambuteno; sufentanil; butirato de dioxafetilo; dextromoramida;"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "411H Dietiltiambuteno 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "412K Dimetiltiambuteno 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "413M Etilmetiltiambuteno 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "414P Sufentanil 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "415R Butirato de dioxafetilo 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "416U Dextromoramida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "417W Fenadoxona 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "418Y Levomoramida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "419A Morferidina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "Racemoramida; furetidina"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "421L Racemoramida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "422N Furetidina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "490G Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "920L Zidovudina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "930P Lamivudina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "940T Stavudina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "950W Didanosina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "960Z Dideoxiadenosina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "970C Zalcitavina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.89",
+          "description": "990J Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.91",
+          "description": "Extracto de polen"
+        },
+        {
+          "code": "3003.90.91",
+          "description": "000E Extracto de polen 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.92",
+          "description": "Crisarobina; disofenol"
+        },
+        {
+          "code": "3003.90.92",
+          "description": "100T Disofenol 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.92",
+          "description": "200Y Crisarobina 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.93",
+          "description": "Diclofenac resinato"
+        },
+        {
+          "code": "3003.90.93",
+          "description": "000V Diclofenac resinato 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.94",
+          "description": "Silimarina"
+        },
+        {
+          "code": "3003.90.94",
+          "description": "000C Silimarina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.95",
+          "description": "Busulfano; dexormaplatino; dietilestilbestrol o su dipropionato; enloplatino; iproplatino; lobaplatino; miboplatino;"
+        },
+        {
+          "code": "3003.90.95",
+          "description": "100Q Propofol 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.95",
+          "description": "200W Busulfano 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.95",
+          "description": "300B Mitotano 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.95",
+          "description": "400G Dexormaplatino; enloplatino; iproplatino; lobaplatino; miboplatino;ormaplatino; sebriplatino; zeniplatino 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.95",
+          "description": "Dietilestilbestrol o su dipropionato"
+        },
+        {
+          "code": "3003.90.95",
+          "description": "510Q Destinado a medicina veterinaria (R.G. 2146/06 AFIP) 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.95",
+          "description": "590R Los demás (R. 2014/93 ex ANA) 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.95",
+          "description": "Miltefosina; procarbazina o su clorhidrato"
+        },
+        {
+          "code": "3003.90.95",
+          "description": "610W Miltefosina 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.95",
+          "description": "620Z Procarbazina o su clorhidrato 0.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.96",
+          "description": "Complejo hierro dextrano"
+        },
+        {
+          "code": "3003.90.96",
+          "description": "000T Complejo hierro dextrano 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.97",
+          "description": "Sevoflurano"
+        },
+        {
+          "code": "3003.90.97",
+          "description": "000A Sevoflurano 14.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "Que contengan sicotropos (R.2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "Metilpentinol; etclorvinol; alcohol tribromoetílico; pentaeritritol diclorhidrina; fenpentadiol; mefenesina; fenelzina;"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "111B Metilpentinol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "112D Etclorvinol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "113F Alcohol tribromoetílico 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "114H Pentaeritritol diclorhidrina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "115K Fenpentadiol 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "116M Mefenesina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "117P Fenelzina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "118R Iproclozida 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "119U Noxiptilina 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "190A Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "Que contengan estupefacientes (R. 2017/93 ex-ANA)"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "210E Estupefacientes Lista IV 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "290F Otros estupefacientes 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "Que contengan palmitato de dietilestilbestrol, o que contengan hexestrol, su dipropionato o su diacetato, o diacetato de"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "310K Destinado a medicina veterinaria (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "390L Los demás (R.2014/93 ex-ANA) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "Antiparasitarios usados en medicina veterinaria"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "410Q Que contengan lindano (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "490R Los demás (R.2012/93 ex-ANA) 8.00 8.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3003.90.99",
+          "description": "900P Los demás 8.00 8.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3004",
+      "description": "MEDICAMENTOS (EXCEPTO LOS PRODUCTOS DE LAS PARTIDAS 3002, 3005 Ó 3006) CONSTITUIDOS POR",
+      "subheadings": [
+        {
+          "code": "3004.10",
+          "description": "Que contengan penicilinas o derivados de estos productos con la estructura del ácido penicilánico, o estreptomicinas"
+        },
+        {
+          "code": "3004.10.11",
+          "description": "Ampicilina o sus sales"
+        },
+        {
+          "code": "3004.10.11",
+          "description": "000G Ampicilina o sus sales 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.10.12",
+          "description": "Amoxicilina o sus sales"
+        },
+        {
+          "code": "3004.10.12",
+          "description": "000P Amoxicilina o sus sales 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.10.13",
+          "description": "Penicilina G benzatínica"
+        },
+        {
+          "code": "3004.10.13",
+          "description": "000X Penicilina G benzatínica 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.10.14",
+          "description": "Penicilina G potásica"
+        },
+        {
+          "code": "3004.10.14",
+          "description": "000E Penicilina G potásica 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.10.15",
+          "description": "Penicilina G procaínica"
+        },
+        {
+          "code": "3004.10.15",
+          "description": "000M Penicilina G procaínica 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.10.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3004.10.19",
+          "description": "000T Los demás 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.10.20",
+          "description": "Que contengan estreptomicinas o derivados de estos productos"
+        },
+        {
+          "code": "3004.10.20",
+          "description": "000J Que contengan estreptomicinas o derivados de estos productos 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20",
+          "description": "Los demás, que contengan antibióticos"
+        },
+        {
+          "code": "3004.20.11",
+          "description": "Cloranfenicol, su palmitato, su succinato o su hemisuccinato"
+        },
+        {
+          "code": "3004.20.11",
+          "description": "100B Para medicina veterinaria (R.G. 2146/06 AFIP) 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.11",
+          "description": "900V Los demás 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3004.20.19",
+          "description": "000G Los demás 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.21",
+          "description": "Eritromicina o sus sales"
+        },
+        {
+          "code": "3004.20.21",
+          "description": "000F Eritromicina o sus sales 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3004.20.29",
+          "description": "100X Azitromicina o sus sales 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.29",
+          "description": "200C Roxitromicina o sus sales 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.29",
+          "description": "900Q Los demás 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.31",
+          "description": "Rifamicina SV sódica"
+        },
+        {
+          "code": "3004.20.31",
+          "description": "000Q Rifamicina SV sódica 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.32",
+          "description": "Rifampicina"
+        },
+        {
+          "code": "3004.20.32",
+          "description": "000Y Rifampicina 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "3004.20.39",
+          "description": "000B Los demás 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.41",
+          "description": "Clorhidrato de lincomicina"
+        },
+        {
+          "code": "3004.20.41",
+          "description": "000A Clorhidrato de lincomicina 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.49",
+          "description": "Los demás"
+        },
+        {
+          "code": "3004.20.49",
+          "description": "000L Los demás 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.51",
+          "description": "Cefalotina sódica"
+        },
+        {
+          "code": "3004.20.51",
+          "description": "000K Cefalotina sódica 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.52",
+          "description": "Cefaclor o cefalexina monohidratados"
+        },
+        {
+          "code": "3004.20.52",
+          "description": "100Y Cefaclor monohidratado 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.52",
+          "description": "200D Cefalexina monohidratada 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.59",
+          "description": "Los demás"
+        },
+        {
+          "code": "3004.20.59",
+          "description": "100B Cefalotina o sus sales, excepto la sal sódica 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.59",
+          "description": "200G Cefazolina o sus sales 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.59",
+          "description": "900V Los demás 8.00 8.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3004.20.61",
+          "description": "Sulfato de gentamicina"
+        },
+        {
+          "code": "3004.20.61",
+          "description": "100A Soluciones que contengan sulfato de gentamicina, sulfato de estreptomicina, sulfato de condroitina, polipeptidos,"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "0.00 0.00 LA 0.00 7.00",
+      "subheadings": []
+    },
+    {
+      "code": "3005",
+      "description": "GUATAS, GASAS, VENDAS Y ARTÍCULOS ANÁLOGOS (POR EJEMPLO: APÓSITOS, ESPARADRAPOS,",
+      "subheadings": [
+        {
+          "code": "3005.10",
+          "description": "Apósitos y demás artículos, con una capa adhesiva"
+        },
+        {
+          "code": "3005.10.10",
+          "description": "Impregnados o recubiertos de sustancias farmacéuticas"
+        },
+        {
+          "code": "3005.10.10",
+          "description": "000T Impregnados o recubiertos de sustancias farmaceuticas 12.00 12.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.10.20",
+          "description": "Apósitos quirúrgicos que permitan la observación directa de heridas"
+        },
+        {
+          "code": "3005.10.20",
+          "description": "000C Apósitos quirúrgicos que permitan la observación directa de heridas 12.00 12.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.10.30",
+          "description": "Apósitos impermeables aplicables sobre mucosas"
+        },
+        {
+          "code": "3005.10.30",
+          "description": "000M Apósitos impermeables aplicables sobre mucosas 12.00 12.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.10.40",
+          "description": "Apósitos con obturador, aptos para colostomía (conos obturadores)"
+        },
+        {
+          "code": "3005.10.40",
+          "description": "000X Apósitos con obturador, aptos para colostomía (conos obturadores) 2.00 2.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.10.50",
+          "description": "Apósitos con dispositivo de cierre, aptos para cerrar heridas"
+        },
+        {
+          "code": "3005.10.50",
+          "description": "000G Apósitos con dispositivo de cierre, aptos para cerrar heridas 2.00 2.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3005.10.90",
+          "description": "000W Los demás 12.00 12.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3005.90.11",
+          "description": "De ácido poliglicólico"
+        },
+        {
+          "code": "3005.90.11",
+          "description": "000N De ácido poliglicólico 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3005.90.12",
+          "description": "De copolímeros de ácido glicólico y ácido láctico"
+        },
+        {
+          "code": "3005.90.12",
+          "description": "000W De copolímeros de ácido glicólico y ácido láctico 2.00 2.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.90.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "3005.90.19",
+          "description": "000Z Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3005.90.20",
+          "description": "Campos quirúrgicos de telas sin tejer"
+        },
+        {
+          "code": "3005.90.20",
+          "description": "000Q Campos quirúrgicos de telas sin tejer 12.00 12.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3005.90.90",
+          "description": "100P Artículos impregnados o recubiertos de sustancias farmaceuticas, de uso humano (R.2014/93 ex-ANA) 12.00 12.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.90.90",
+          "description": "Otros, de uso humano (R.G.30/97 AFIP)"
+        },
+        {
+          "code": "3005.90.90",
+          "description": "Gasas"
+        },
+        {
+          "code": "3005.90.90",
+          "description": "211A Esterilizadas 12.00 12.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.90.90",
+          "description": "212C Sin esterilizar 12.00 12.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.90.90",
+          "description": "Vendas"
+        },
+        {
+          "code": "3005.90.90",
+          "description": "221D Esterilizadas 12.00 12.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.90.90",
+          "description": "222F Sin esterilizar 12.00 12.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.90.90",
+          "description": "290Z Los demás 12.00 12.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.90.90",
+          "description": "300A Algodón hidrófilo 12.00 12.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3005.90.90",
+          "description": "900H Los demás 12.00 12.00 3.00 LA 0.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3006",
+      "description": "PREPARACIONES Y ARTÍCULOS FARMACÉUTICOS A QUE SE REFIERE LA NOTA 4 DE ESTE CAPÍTULO",
+      "subheadings": [
+        {
+          "code": "3006.10",
+          "description": "Catguts estériles y ligaduras estériles similares, para suturas quirúrgicas (incluidos los hilos reabsorbibles estériles"
+        },
+        {
+          "code": "3006.10.10",
+          "description": "Ligaduras de polidioxanona"
+        },
+        {
+          "code": "3006.10.10",
+          "description": "000L Ligaduras de polidioxanona 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.10.20",
+          "description": "Ligaduras de acero inoxidable"
+        },
+        {
+          "code": "3006.10.20",
+          "description": "000W Ligaduras de acero inoxidable 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "Las demás ligaduras"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "110Y De catgut 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "120B De lino u otras fibras naturales 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "130E De polipropileno 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "140H De polietileno 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "190Z Las demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "Adhesivos"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "210D De fibrina 12.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "290E Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "300F Laminarias 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "400L Hemostáticos reabsorbibles 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.10.90",
+          "description": "500R Barreras antiadherencias esteriles, para cirugía u odontología, incluso reabsorbibles 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.20.00",
+          "description": "Reactivos para la determinación de los grupos o de los factores sanguíneos"
+        },
+        {
+          "code": "3006.20.00",
+          "description": "100W Comprendidos en la Ley 25.590, sus normas modificatorias y complementarias 10.00 0.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.20.00",
+          "description": "900P Los demás 10.00 10.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.30",
+          "description": "Preparaciones opacificantes para exámenes radiológicos; reactivos de diagnóstico concebidos para usar en el"
+        },
+        {
+          "code": "3006.30.11",
+          "description": "A base de iohexol"
+        },
+        {
+          "code": "3006.30.11",
+          "description": "000X A base de iohexol 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.30.12",
+          "description": "A base de iocarmato de dimeglumina o de gadoterato de meglumina"
+        },
+        {
+          "code": "3006.30.12",
+          "description": "000E A base de iocarmato de dimeglumina o de gadoterato de meglumina 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.30.13",
+          "description": "A base de iopamidol"
+        },
+        {
+          "code": "3006.30.13",
+          "description": "000M A base de iopamidol 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.30.15",
+          "description": "A base de dióxido de circonio y sulfato de gentamicina"
+        },
+        {
+          "code": "3006.30.15",
+          "description": "000C A base de dóxido de circonio y de sulfato de gentamicina 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.30.16",
+          "description": "A base de diatrizoato de sodio o de meglumina"
+        },
+        {
+          "code": "3006.30.16",
+          "description": "000K A base de diatrizoato de sodio o de meglumina 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.30.17",
+          "description": "A base de ioversol o iopromida"
+        },
+        {
+          "code": "3006.30.17",
+          "description": "000T A base de ioversol o iopromida 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.30.18",
+          "description": "A base de iotalamato de sodio, de iotalamato de meglumina o de sus mezclas"
+        },
+        {
+          "code": "3006.30.18",
+          "description": "000A A base de iotalamato de sodio, de iotalamato de meglumina o de sus mezclas 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.30.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "3006.30.19",
+          "description": "100N A base de sulfato de bario 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.30.19",
+          "description": "900G Las demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.30.21",
+          "description": "A base de somatoliberina"
+        },
+        {
+          "code": "3006.30.21",
+          "description": "000G A base de somatoliberina 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.30.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "3006.30.29",
+          "description": "000T Los demás 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.40",
+          "description": "Cementos y demás productos de obturación dental; cementos para la refección de los huesos"
+        },
+        {
+          "code": "3006.40.11",
+          "description": "Cementos"
+        },
+        {
+          "code": "3006.40.11",
+          "description": "000L Cementos 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.40.12",
+          "description": "Demás productos para obturación dental"
+        },
+        {
+          "code": "3006.40.12",
+          "description": "100Z Conos de gutapercha 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.40.12",
+          "description": "200E A base de aleaciones metálicas (\"amalgamas\") 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.40.12",
+          "description": "900T Los demás 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.40.20",
+          "description": "Cementos para la refección de los huesos"
+        },
+        {
+          "code": "3006.40.20",
+          "description": "000N Cementos para la refección de los huesos 2.00 2.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3006.50.00",
+          "description": "Botiquines equipados para primeros auxilios"
+        },
+        {
+          "code": "3006.50.00",
+          "description": "100N Que presenten medicamentos (R.2014/93 ex-ANA) 14.00 14.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3006.50.00",
+          "description": "200U Que no presenten medicamentos (R.G. 30/97 AFIP) 14.00 14.00 3.00 LA 0.00 5.00"
+        },
+        {
+          "code": "3006.60.00",
+          "description": "Preparaciones químicas anticonceptivas a base de hormonas, de otros productos de la partida 2937 o de"
+        },
+        {
+          "code": "3006.60.00",
+          "description": "100C De administración oral, acondicionados para la venta al por menor 12.00 12.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3006.60.00",
+          "description": "200H De administración parenteral, acondicionados para la venta al por menor 12.00 12.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3006.60.00",
+          "description": "900W Los demás 12.00 12.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3006.70.00",
+          "description": "Preparaciones en forma de gel, concebidas para ser utilizadas en medicina humana o veterinaria como lubricante"
+        },
+        {
+          "code": "3006.70.00",
+          "description": "000L -Preparaciones en forma de gel, concebidas para ser utilizadas en medicina humana o veterinaria como lubricante para"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LA 3.00 5.00",
+      "subheadings": []
+    }
+  ],
+  "_rowCount": 2225
+}

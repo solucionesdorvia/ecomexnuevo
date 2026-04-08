@@ -1,0 +1,1997 @@
+{
+  "chapter": "02",
+  "title": "Capítulo 02",
+  "sectionTitle": "CAP. 02 SECCION I ANIMALES VIVOS Y PRODUCTOS DEL REINO ANIMAL Notas. 1. En esta Sección, cualquier referencia a un géner",
+  "headings": [
+    {
+      "code": "0201",
+      "description": "CARNE DE ANIMALES DE LA ESPECIE BOVINA, FRESCA O REFRIGERADA",
+      "subheadings": [
+        {
+          "code": "0201.10.00",
+          "description": "En canales o medias canales"
+        },
+        {
+          "code": "0201.10.00",
+          "description": "Canales"
+        },
+        {
+          "code": "0201.10.00",
+          "description": "110E Del Genero Bubalus 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0201.10.00",
+          "description": "190F Las demás 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0201.10.00",
+          "description": "Medias canales"
+        },
+        {
+          "code": "0201.10.00",
+          "description": "210K Del Genero Bubalus 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0201.10.00",
+          "description": "290L Las demás 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0201.20",
+          "description": "Los demás cortes (trozos) sin deshuesar"
+        },
+        {
+          "code": "0201.20.10",
+          "description": "Cuartos delanteros"
+        },
+        {
+          "code": "0201.20.10",
+          "description": "100A Del Genero Bubalus 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0201.20.10",
+          "description": "900U Los demás 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0201.20.20",
+          "description": "Cuartos traseros"
+        },
+        {
+          "code": "0201.20.20",
+          "description": "100K Del Genero Bubalus 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0201.20.20",
+          "description": "900D Los demás 10.00 10.00 3.00 LA 9.00 0.50"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "100D Medias canales incompletas, excepto del Genero Bubalus 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "200J Cuartos delanteros incompletos, excepto del Genero Bubalus 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "Bife angosto, cuadril y lomo (Rump & Loin), Pierna mocha, Rueda, excepto del Genero Bubalus"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "310T Bife angosto, cuadril y lomo (Rump & Loin) 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "320W Pierna mocha 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "330Z Rueda 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "400V Cuarto pistola, excepto del Genero Bubalus 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "500A Asado, incluso con vacío, excepto del Genero Bubalus 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "600F Bifes, excepto del Genero Bubalus 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "Ossobuco, Pecho, Espinazo, excepto del Genero Bubalus"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "710P Ossobuco 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "720T Pecho 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "730W Espinazo 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "910A Del Genero Bubalus 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.20.90",
+          "description": "990B Los demás 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Deshuesada"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 5 kg (R.420/99 MEYOSP), excepto del Genero Bubalus"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Aguja, Huachalomo, Tapa de aguja, Sobrecostilla, Bife Ancho, Tapa de bife ancho, Chingolo, Marucha, Matambre"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "111K Aguja 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "112M Huachalomo 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "113P Tapa de aguja 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "114R Sobrecostilla 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "115U Bife Ancho 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "116W Tapa de bife ancho 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "117Y Chingolo 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "118A Marucha 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "119C Matambre 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Asado, Tapa de asado, Azotillo, Brazuelo, Cogote, Falda, Pecho"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "121N Asado 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "122Q Tapa de asado 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "123T Azotillo 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "124V Brazuelo 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "125X Cogote 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "126Z Falda 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "127B Pecho 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Bife Angosto, Colita de Cuadril, Cuadril, Corazón de cuadril, Tapa de cuadril, Lomo, Peceto"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "131R Bife Angosto 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "132U Colita de Cuadril 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "133W Cuadril 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "134Y Corazón de cuadril 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "135A Tapa de cuadril 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "136C Lomo 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "137E Peceto 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Bola de Lomo, Cuadrada, Nalga de Adentro, Tapa de nalga, Nalga de Afuera, Tortuguita, Garrón"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "141V Bola de Lomo 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "142X Cuadrada 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "143Z Nalga de Adentro 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "144B Tapa de nalga 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "145D Nalga de Afuera 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "146F Tortuguita 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "147H Garrón 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Carnaza de paleta, Bife de paleta, Centro de carnaza de paleta, Vacío, Bife de vacío"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "151Y Carnaza de paleta 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "152A Bife de paleta 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "153C Centro de carnaza de paleta 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "154E Vacío 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "155G Bife de vacío 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Cortes en juego"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "161B Pertenecientes únicamente al cuarto delantero 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "162D Pertenecientes únicamente al cuarto trasero 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "169U Los demás 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "191L Cuarto delantero, incluso incompleto 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "192N Cuarto trasero, incluso incompleto 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "193Q Carne picada 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "200K Del Genero Bubalus, en envases inmediatos de contenido neto inferior o igual a 5 kg (R.420/99 MEYOSP) 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "300Q Del Genero Bubalus, en envases inmediatos de contenido neto superior a 5 kg 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Aguja, Sobrecostilla, Bife Ancho"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "911D Aguja 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "912F Sobrecostilla 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "913H Bife ancho 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Asado, Brazuelo, Cogote, Pecho"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "921G Asado 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "922J Brazuelo 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "923L Cogote 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "924N Pecho 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Bife Angosto, Cuadril"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "931K Bife angosto 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "932M Cuadril 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Bola de Lomo, Cuadrada, Nalga de Adentro, Nalga de Afuera, Garrón"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "941N Bola de Lomo 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "942Q Cuadrada 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "943T Nalga de Adentro 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "944V Nalga de Afuera 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "945X Garrón 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "Carnaza de paleta, Vacío"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "951R Carnaza de paleta 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "952U Vacío 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "961V Pertenecientes únicamente al Cuarto delantero 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "962X Pertenecientes únicamente al Cuarto trasero 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "969M Los demás 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "970W Tapa de asado, paleta, falda y matambre 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "991E Cuarto delantero, incluso incompleto 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "992G Cuarto trasero, incluso incompleto 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "993J Cogote, Aguja, Carnaza de paleta y parte de asado (Chuck and Blade) 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "994L Carne picada 12.00 12.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0201.30.00",
+          "description": "995N Recortes de troceo (Trimming) 12.00 12.00 3.00 LA 9.00 1.00"
+        }
+      ]
+    },
+    {
+      "code": "0202",
+      "description": "CARNE DE ANIMALES DE LA ESPECIE BOVINA, CONGELADA",
+      "subheadings": [
+        {
+          "code": "0202.10.00",
+          "description": "En canales o medias canales"
+        },
+        {
+          "code": "0202.10.00",
+          "description": "Canales"
+        },
+        {
+          "code": "0202.10.00",
+          "description": "110Y Del Genero Bubalus 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0202.10.00",
+          "description": "190Z Las demás 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0202.10.00",
+          "description": "Medias canales"
+        },
+        {
+          "code": "0202.10.00",
+          "description": "210D Del Genero Bubalus 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0202.10.00",
+          "description": "290E Las demás 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0202.20",
+          "description": "Los demás cortes (trozos) sin deshuesar"
+        },
+        {
+          "code": "0202.20.10",
+          "description": "Cuartos delanteros"
+        },
+        {
+          "code": "0202.20.10",
+          "description": "100U Del Genero Bubalus 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0202.20.10",
+          "description": "900M Los demás 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0202.20.20",
+          "description": "Cuartos traseros"
+        },
+        {
+          "code": "0202.20.20",
+          "description": "100D Del Genero Bubalus 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0202.20.20",
+          "description": "900X Los demás 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "100X Medias canales incompletas, excepto del Genero Bubalus 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "200C Cuartos delanteros incompletos, excepto del Genero Bubalus 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "Bife angosto, cuadril y lomo (Rump & Loin), Pierna mocha, Rueda, excepto del Genero Bubalus"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "310L Bife angosto, cuadril y lomo (Rump & Loin) 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "320P Pierna mocha 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "330T Rueda 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "400N Cuarto Pistola, excepto del Genero Bubalus 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "500U Asado, incluso con vacío, excepto del Genero Bubalus 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "600Z Bifes, excepto del Genero Bubalus 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "Ossobuco, Pecho, Espinazo, excepto del Genero Bubalus"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "710H Ossobuco 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "720L Pecho 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "730P Espinazo 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "910U Del Genero Bubalus 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "920X Los demas huesos resultantes del desposte. 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "930A Corte constituido por bola de lomo, nalga de adentro, peceto, tortuguita y garron. 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "940D Corte constituido por cuadril, colita de cuadril, bola de lomo, nalga de adentro, peceto, tortuguita y garron. 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.20.90",
+          "description": "990V Los demás 10.00 10.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Deshuesada"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "En envases inmediato de contenido neto inferior o igual a 5 kg (R.420/99 MEYOSP), excepto del Genero Bubalus"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Aguja, Huachalomo, Tapa de aguja, Sobrecostilla, Bife ancho, Tapa de bife ancho, Chingolo, Marucha, Matambre"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "111D Aguja 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "112F Huachalomo 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "113H Tapa de aguja 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "114K Sobrecostilla 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "115M Bife ancho 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "116P Tapa de bife ancho 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "117R Chingolo 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "118U Marucha 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "119W Matambre 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Asado, Tapa de asado, Azotillo, Brazuelo, Cogote, Falda, Pecho"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "121G Asado 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "122J Tapa de asado 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "123L Azotillo 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "124N Brazuelo 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "125Q Cogote 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "126T Falda 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "127V Pecho 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Bife angosto, Colita de Cuadril, Cuadril, Corazón de cuadril, Tapa de cuadril, Lomo, Peceto"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "131K Bife angosto 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "132M Colita de Cuadril 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "133P Cuadril 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "134R Corazón de cuadril 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "135U Tapa de cuadril 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "136W Lomo 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "137Y Peceto 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Bola de Lomo, Cuadrada, Nalga de adentro, Tapa de nalga, Nalga de afuera, Tortuguita, Garrón"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "141N Bola de lomo 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "142Q Cuadrada 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "143T Nalga de adentro 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "144V Tapa de Nalga 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "145X Nalga de afuera 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "146Z Tortuguita 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "147B Garrón 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Carnaza de paleta, Bife de paleta, Centro de carnaza de paleta, Vacío, Bife de vacío"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "151R Carnaza de paleta 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "152U Bife de paleta 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "153W Centro de carnaza de paleta 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "154Y Vacío 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "155A Bife de vacío 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Cortes en juego"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "161V Pertenecientes únicamente al cuarto delantero 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "162X Pertenecientes únicamente al cuarto trasero 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "169M Los demás 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "191E Cuarto delantero, incluso incompleto 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "192G Cuarto trasero, incluso incompleto 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "193J Carne picada 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "194L Recortes de troceo (trimming) 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "200D Del Genero Bubalus, en envases inmediato de contenido neto inferior o igual a 5 kg (R.420/99 MEYOSP) 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "300J Del Genero Bubalus, en envases inmediato de contenido neto superior a 5 kg 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Aguja, Sobrecostilla, Bife Ancho, Tapa de Bife Ancho envasada en block, Tapa de Aguja envasada en block."
+        },
+        {
+          "code": "0202.30.00",
+          "description": "911X Aguja 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "912Z Sobrecostilla 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "913B Bife Ancho 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "914D Tapa de Bife Ancho envasada en block 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "915F Tapa de Aguja envasada en block 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Asado, Brazuelo, Cogote, Pecho"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "921A Asado 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "922C Brazuelo 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "923E Cogote 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "924G Pecho 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Bife Angosto, Cuadril"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "931D Bife Angosto 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "932F Cuadril 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Bola de Lomo, Cuadrada, Nalga de Adentro, Nalga de Afuera, Garrón"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "941G Bola de Lomo 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "942J Cuadrada 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "943L Nalga de Adentro 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "944N Nalga de Afuera 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "945Q Garrón 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "Carnaza de Paleta, Vacío"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "951K Carnaza de Paleta 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "952M Vacío 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "961N Pertenecientes únicamente al cuarto delantero 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "962Q Pertenecientes únicamente al Cuarto trasero 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "969F Los demás 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "970P Tapa de asado, falda y matambre 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "991Y Cuarto delantero, incluso incompleto 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "992A Cuarto trasero, incluso incompleto 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "993C Cogote, aguja, carnaza de paleta y parte de asado (Chuck and Blade) 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "994E Carne picada 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "995G Recortes de troceo (Trimming) 12.00 12.00 3.00 LA 9.00 1.25"
+        },
+        {
+          "code": "0202.30.00",
+          "description": "996J Nalga de afuera con tortuguita 12.00 12.00 3.00 LA 9.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0203",
+      "description": "CARNE DE ANIMALES DE LA ESPECIE PORCINA, FRESCA, REFRIGERADA O CONGELADA",
+      "subheadings": [
+        {
+          "code": "0203.1",
+          "description": "Fresca o refrigerada:"
+        },
+        {
+          "code": "0203.11.00",
+          "description": "En canales o medias canales"
+        },
+        {
+          "code": "0203.11.00",
+          "description": "000V --En canales o medias canales 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0203.12.00",
+          "description": "Piernas, paletas, y sus trozos, sin deshuesar"
+        },
+        {
+          "code": "0203.12.00",
+          "description": "000G --Piernas, paletas, y sus trozos, sin deshuesar 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "Piernas y sus trozos"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "110Z Piernas 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "190A Los demás 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "200B Paletas y sus trozos 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "Sin deshuesar"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "911V Carre 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "912X Pechito 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "919M Los demás 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "991W Carre 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "992Y Panceta 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "993A Lomo (solomillo) 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "994C Bondiola 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "995E Recortes de troceo (Trimming) 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0203.19.00",
+          "description": "999N Los demás 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0203.2",
+          "description": "Congelada:"
+        },
+        {
+          "code": "0203.21.00",
+          "description": "En canales o medias canales"
+        },
+        {
+          "code": "0203.21.00",
+          "description": "000J --En canales o medias canales 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0203.22.00",
+          "description": "Piernas, paletas, y sus trozos, sin deshuesar"
+        },
+        {
+          "code": "0203.22.00",
+          "description": "000W --Piernas, paletas, y sus trozos, sin deshuesar 10.00 10.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "Piernas y sus trozos"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "110N Piernas 10.00 10.00 3.00 LNA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "190P Los demás 10.00 10.00 3.00 LNA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "200Q Paletas y sus trozos 10.00 10.00 3.00 LNA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "Sin deshuesar"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "911J Carre 10.00 10.00 3.00 LNA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "912L Pechito 10.00 10.00 3.00 LNA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "919B Los demás 10.00 10.00 3.00 LNA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "920K Huesos resultantes del desposte. 10.00 10.00 3.00 LNA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "991K Carre 10.00 10.00 3.00 LNA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "992M Panceta 10.00 10.00 3.00 LNA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "993P Lomo (solomillo) 10.00 10.00 3.00 LNA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "994R Bondiola 10.00 10.00 3.00 LNA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "995U Recortes de troceo (Trimming) 10.00 10.00 3.00 LNA 5.00 1.25"
+        },
+        {
+          "code": "0203.29.00",
+          "description": "999C Los demás 10.00 10.00 3.00 LNA 5.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0204",
+      "description": "CARNE DE ANIMALES DE LAS ESPECIES OVINA O CAPRINA, FRESCA, REFRIGERADA O CONGELADA",
+      "subheadings": [
+        {
+          "code": "0204.10.00",
+          "description": "Canales o medias canales de cordero, frescas o refrigeradas"
+        },
+        {
+          "code": "0204.10.00",
+          "description": "100G En envases inmediatos de contenido neto inferior o igual a 14 kg (R.257/00 ME) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0204.10.00",
+          "description": "900A Las demás 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0204.2",
+          "description": "Las demás carnes de animales de la especie ovina, frescas o refrigeradas:"
+        },
+        {
+          "code": "0204.21.00",
+          "description": "En canales o medias canales"
+        },
+        {
+          "code": "0204.21.00",
+          "description": "000C --En canales o medias canales 10.00 10.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "0204.22.00",
+          "description": "Los demás cortes (trozos) sin deshuesar"
+        },
+        {
+          "code": "0204.22.00",
+          "description": "100V En envases inmediatos de contenido neto inferior o igual a 5 kg (R.257/00 ME) 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0204.22.00",
+          "description": "900N Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0204.23.00",
+          "description": "Deshuesadas"
+        },
+        {
+          "code": "0204.23.00",
+          "description": "100G En envases inmediatos de contenido neto inferior o igual a 5 kg (R.257/00 ME) 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0204.23.00",
+          "description": "900A Las demás 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0204.30.00",
+          "description": "Canales o medias canales de cordero, congeladas"
+        },
+        {
+          "code": "0204.30.00",
+          "description": "100K En envases inmediatos de contenido neto inferior o igual a 14 kg (R.257/00 ME) 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0204.30.00",
+          "description": "900D Las demás 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0204.4",
+          "description": "Las demás carnes de animales de la especie ovina, congeladas:"
+        },
+        {
+          "code": "0204.41.00",
+          "description": "En canales o medias canales"
+        },
+        {
+          "code": "0204.41.00",
+          "description": "000F --En canales o medias canales 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "0204.42.00",
+          "description": "Los demás cortes (trozos) sin deshuesar"
+        },
+        {
+          "code": "0204.42.00",
+          "description": "100Y En envases inmediatos de contenido neto inferior o igual a 5 kg (R.257/00 ME) 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0204.42.00",
+          "description": "900R Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0204.43.00",
+          "description": "Deshuesadas"
+        },
+        {
+          "code": "0204.43.00",
+          "description": "100K En envases inmediatos de contenido neto inferior o igual a 5 kg (R.420/99 MEYOSP) 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0204.43.00",
+          "description": "900D Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0204.50.00",
+          "description": "Carne de animales de la especie caprina"
+        },
+        {
+          "code": "0204.50.00",
+          "description": "000H -Carne de animales de la especie caprina 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0205",
+      "description": "CARNE DE ANIMALES DE LAS ESPECIES CABALLAR, ASNAL O MULAR, FRESCA, REFRIGERADA O",
+      "subheadings": [
+        {
+          "code": "0205.00.00",
+          "description": "Carne de animales de las especies caballar, asnal o mular, fresca, refrigerada o congelada"
+        },
+        {
+          "code": "0205.00.00",
+          "description": "Cuartos delanteros y sus cortes"
+        },
+        {
+          "code": "0205.00.00",
+          "description": "110P Cuartos completos 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0205.00.00",
+          "description": "120T Cortes individuales 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0205.00.00",
+          "description": "190Q Los demás 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0205.00.00",
+          "description": "Cuartos traseros y sus cortes"
+        },
+        {
+          "code": "0205.00.00",
+          "description": "210V Cuartos completos 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0205.00.00",
+          "description": "220Y Corte pistola 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0205.00.00",
+          "description": "230B Cortes individuales 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0205.00.00",
+          "description": "290W Los demás 10.00 10.00 3.00 LA 9.00 0.75"
+        },
+        {
+          "code": "0205.00.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0205.00.00",
+          "description": "910H Cortes combinados individuales de ambos cuartos 10.00 10.00 3.00 LA 9.00 1.00"
+        },
+        {
+          "code": "0205.00.00",
+          "description": "990J Los demás 10.00 10.00 3.00 LA 9.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "0206",
+      "description": "DESPOJOS COMESTIBLES DE ANIMALES DE LAS ESPECIES BOVINA, PORCINA, OVINA, CAPRINA, CABALLAR,",
+      "subheadings": [
+        {
+          "code": "0206.10.00",
+          "description": "De la especie bovina, frescos o refrigerados"
+        },
+        {
+          "code": "0206.10.00",
+          "description": "100U Sesos, quijadas, pulmón, corazón, riñones, centro de entraña, medula y pajarilla (Dto 499/98, RG 159/98 AFIP) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0206.10.00",
+          "description": "200Z Molleja de corazón y molleja de cogote (Dto. 499/98; RG 159/98 AFIP) 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0206.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0206.10.00",
+          "description": "910Q Entraña fina 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0206.10.00",
+          "description": "990R Los demás 10.00 10.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0206.2",
+          "description": "De la especie bovina, congelados:"
+        },
+        {
+          "code": "0206.21.00",
+          "description": "Lenguas"
+        },
+        {
+          "code": "0206.21.00",
+          "description": "100V Sin epitelio (Dto. 499/98; RG 159/98 AFIP) 10.00 10.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "0206.21.00",
+          "description": "900N Las demás 10.00 10.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "0206.22.00",
+          "description": "Hígados"
+        },
+        {
+          "code": "0206.22.00",
+          "description": "000B --Hígados 10.00 10.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "0206.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "0206.29.10",
+          "description": "Colas (rabos)"
+        },
+        {
+          "code": "0206.29.10",
+          "description": "000V Colas (rabos) 10.00 10.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "0206.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0206.29.90",
+          "description": "100D Sesos, quijadas, pulmón, corazón, riñones, centro de entraña, medula, pajarilla (Dto. 499/98; RG 159/98 AFIP) 10.00 10.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "0206.29.90",
+          "description": "200J Molleja de corazón y molleja de cogote (Dto. 499/98; RG 159/98 AFIP) 10.00 10.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "0206.29.90",
+          "description": "300P Entraña fina 10.00 10.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "0206.29.90",
+          "description": "900X Los demás 10.00 10.00 3.00 LA 7.00 0.75"
+        },
+        {
+          "code": "0206.30.00",
+          "description": "De la especie porcina, frescos o refrigerados"
+        },
+        {
+          "code": "0206.30.00",
+          "description": "000R -De la especie porcina, frescos o refrigerados 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0206.4",
+          "description": "De la especie porcina, congelados:"
+        },
+        {
+          "code": "0206.41.00",
+          "description": "Hígados"
+        },
+        {
+          "code": "0206.41.00",
+          "description": "000T --Hígados 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0206.49.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0206.49.00",
+          "description": "000N --Los demás 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0206.80.00",
+          "description": "Los demás, frescos o refrigerados"
+        },
+        {
+          "code": "0206.80.00",
+          "description": "De las especies ovina y caprina (R.2507/93 ex-ANA)"
+        },
+        {
+          "code": "0206.80.00",
+          "description": "110W De la especie ovina (R.2507/93 ex-ANA) 10.00 10.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0206.80.00",
+          "description": "120Z De la especie caprina (R.2507/93 ex-ANA) 10.00 10.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0206.80.00",
+          "description": "900L Los demás 10.00 10.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0206.90.00",
+          "description": "Los demás, congelados"
+        },
+        {
+          "code": "0206.90.00",
+          "description": "De las especies ovina y caprina (R.2507/93 ex-ANA)"
+        },
+        {
+          "code": "0206.90.00",
+          "description": "110K De la especie ovina (R.2507/93 ex-ANA) 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0206.90.00",
+          "description": "120N De la especie caprina (R.2507/93 ex-ANA) 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0206.90.00",
+          "description": "900A Los demás 10.00 10.00 3.00 LA 5.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "0207",
+      "description": "CARNE Y DESPOJOS COMESTIBLES, DE AVES DE LA PARTIDA 0105, FRESCOS, REFRIGERADOS O",
+      "subheadings": [
+        {
+          "code": "0207.1",
+          "description": "De aves de la especie Gallus domesticus:"
+        },
+        {
+          "code": "0207.11.00",
+          "description": "Sin trocear, frescos o refrigerados"
+        },
+        {
+          "code": "0207.11.00",
+          "description": "Pollos eviscerados (Res. N° 11/99 SIC y M)"
+        },
+        {
+          "code": "0207.11.00",
+          "description": "110C De peso inferior o igual a 1 kg. 10.00 10.00 3.00 LNA 9.00 1.00"
+        },
+        {
+          "code": "0207.11.00",
+          "description": "190D Los demas. 10.00 10.00 3.00 LNA 9.00 1.00"
+        },
+        {
+          "code": "0207.11.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0207.11.00",
+          "description": "910W De peso inferior o igual a 1 kg. 10.00 10.00 3.00 LNA 9.00 1.00"
+        },
+        {
+          "code": "0207.11.00",
+          "description": "990X Los demas. 10.00 10.00 3.00 LNA 9.00 1.00"
+        },
+        {
+          "code": "0207.12.00",
+          "description": "Sin trocear, congelados"
+        },
+        {
+          "code": "0207.12.00",
+          "description": "Pollos eviscerados (Res.N° 11/99 SICyM)"
+        },
+        {
+          "code": "0207.12.00",
+          "description": "110P De peso inferior o igual a 1 kg. 10.00 10.00 3.00 LNA 9.00 1.25"
+        },
+        {
+          "code": "0207.12.00",
+          "description": "190Q Los demas. 10.00 10.00 3.00 LNA 9.00 1.25"
+        },
+        {
+          "code": "0207.12.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0207.12.00",
+          "description": "910H De peso inferior o igual a 1 kg. 10.00 10.00 3.00 LNA 9.00 1.25"
+        },
+        {
+          "code": "0207.12.00",
+          "description": "990J Los demas. 10.00 10.00 3.00 LNA 9.00 1.25"
+        },
+        {
+          "code": "0207.13.00",
+          "description": "Trozos y despojos, frescos o refrigerados"
+        },
+        {
+          "code": "0207.13.00",
+          "description": "100Y En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP) 10.00 10.00 3.00 LNA 9.00 3.00"
+        },
+        {
+          "code": "0207.13.00",
+          "description": "900R Los demás 10.00 10.00 3.00 LNA 9.00 1.75"
+        },
+        {
+          "code": "0207.14.00",
+          "description": "Trozos y despojos, congelados"
+        },
+        {
+          "code": "0207.14.00",
+          "description": "100K En envases inmediatos de contenido neto inferior o igual a 15 kg (R.420/99 MEYOSP) 10.00 10.00 3.00 LNA 9.00 3.00"
+        },
+        {
+          "code": "0207.14.00",
+          "description": "900D Los demás 10.00 10.00 3.00 LNA 9.00 1.75"
+        },
+        {
+          "code": "0207.2",
+          "description": "De pavo (gallipavo):"
+        },
+        {
+          "code": "0207.24.00",
+          "description": "Sin trocear, frescos o refrigerados"
+        },
+        {
+          "code": "0207.24.00",
+          "description": "000U --Sin trocear, frescos o refrigerados 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0207.25.00",
+          "description": "Sin trocear, congelados"
+        },
+        {
+          "code": "0207.25.00",
+          "description": "100L En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 ME) 10.00 10.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "0207.25.00",
+          "description": "900E Las demás 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0207.26.00",
+          "description": "Trozos y despojos, frescos o refrigerados"
+        },
+        {
+          "code": "0207.26.00",
+          "description": "100Y En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP) 10.00 10.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "0207.26.00",
+          "description": "900R Los demás 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0207.27.00",
+          "description": "Trozos y despojos, congelados"
+        },
+        {
+          "code": "0207.27.00",
+          "description": "100K En envases inmediatos de contenido neto inferior o igual a 2 kg (R.420/99 MEYOSP) 10.00 10.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "0207.27.00",
+          "description": "900D Los demás 10.00 10.00 3.00 LA 5.00 1.75"
+        },
+        {
+          "code": "0207.4",
+          "description": "De pato:"
+        },
+        {
+          "code": "0207.41.00",
+          "description": "Sin trocear, frescos o refrigerados"
+        },
+        {
+          "code": "0207.41.00",
+          "description": "000L --Sin trocear, frescos o refrigerados 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0207.42.00",
+          "description": "Sin trocear, congelados"
+        },
+        {
+          "code": "0207.42.00",
+          "description": "000Y --Sin trocear, congelados 10.00 10.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0207.43.00",
+          "description": "Hígados grasos, frescos o refrigerados"
+        },
+        {
+          "code": "0207.43.00",
+          "description": "000K --Hígados grasos, frescos o refrigerados 10.00 10.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "0207.44.00",
+          "description": "Los demás, frescos o refrigerados"
+        },
+        {
+          "code": "0207.44.00",
+          "description": "000X --Los demás, frescos o refrigerados 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0207.45.00",
+          "description": "Los demás, congelados"
+        },
+        {
+          "code": "0207.45.00",
+          "description": "000J --Los demás, congelados 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0207.5",
+          "description": "De ganso:"
+        },
+        {
+          "code": "0207.51.00",
+          "description": "Sin trocear, frescos o refrigerados"
+        },
+        {
+          "code": "0207.51.00",
+          "description": "000A --Sin trocear, frescos o refrigerados 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0207.52.00",
+          "description": "Sin trocear, congelados"
+        },
+        {
+          "code": "0207.52.00",
+          "description": "000M --Sin trocear, congelados 10.00 10.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0207.53.00",
+          "description": "Hígados grasos, frescos o refrigerados"
+        },
+        {
+          "code": "0207.53.00",
+          "description": "000Z --Hígados grasos, frescos o refrigerados 10.00 10.00 3.00 LA 5.00 2.50"
+        },
+        {
+          "code": "0207.54.00",
+          "description": "Los demás, frescos o refrigerados"
+        },
+        {
+          "code": "0207.54.00",
+          "description": "000L --Los demás, frescos o refrigerados 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0207.55.00",
+          "description": "Los demás, congelados"
+        },
+        {
+          "code": "0207.55.00",
+          "description": "000Y --Los demás, congelados 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0207.60.00",
+          "description": "De pintada"
+        },
+        {
+          "code": "0207.60.00",
+          "description": "000C -De pintada 10.00 10.00 3.00 LA 5.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "0208",
+      "description": "LAS DEMÁS CARNES Y DESPOJOS COMESTIBLES, FRESCOS, REFRIGERADOS O CONGELADOS",
+      "subheadings": [
+        {
+          "code": "0208.10.00",
+          "description": "De conejo o liebre"
+        },
+        {
+          "code": "0208.10.00",
+          "description": "De conejo"
+        },
+        {
+          "code": "0208.10.00",
+          "description": "110J Trozos (R.747/95 MEYOSP) 10.00 10.00 3.00 LA 5.00 3.25"
+        },
+        {
+          "code": "0208.10.00",
+          "description": "190K Los demás 10.00 10.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0208.10.00",
+          "description": "De liebre"
+        },
+        {
+          "code": "0208.10.00",
+          "description": "Europea (Lepus Capensis L. Europeaus) (R.3023/93 ex-ANA)"
+        },
+        {
+          "code": "0208.10.00",
+          "description": "211R Trozos (R.747/95 MEYOSP) 10.00 10.00 3.00 LA 5.00 3.25"
+        },
+        {
+          "code": "0208.10.00",
+          "description": "219J Los demás 10.00 10.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0208.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0208.10.00",
+          "description": "291T Trozos (R.747/95 MEYOSP) 10.00 10.00 3.00 LA 5.00 3.25"
+        },
+        {
+          "code": "0208.10.00",
+          "description": "299K Los demás 10.00 10.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0208.30.00",
+          "description": "De primates"
+        },
+        {
+          "code": "0208.30.00",
+          "description": "100J En envases inmediatos de contenido neto inferior o igual a 5 kg (R.1044/00 ME) 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0208.30.00",
+          "description": "900C Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0208.40.00",
+          "description": "De ballenas, delfines y marsopas (mamíferos del orden Cetacea); de manatíes y dugones o dugongos (mamíferos del"
+        },
+        {
+          "code": "0208.40.00",
+          "description": "100Y En envases inmediatos de contenido neto inferior o igual a 5 kg (R.1044/00 ME) 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0208.40.00",
+          "description": "900R Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0208.50.00",
+          "description": "De reptiles (incluidas las serpientes y tortugas de mar)"
+        },
+        {
+          "code": "0208.50.00",
+          "description": "100M En envases inmediatos de contenido neto inferior o igual a 5 kg (R.1044/00 ME) 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0208.50.00",
+          "description": "900F Los demás 10.00 10.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0208.60.00",
+          "description": "De camellos y demás camélidos (Camelidae)"
+        },
+        {
+          "code": "0208.60.00",
+          "description": "100B En envases inmediatos de contenido neto inferior o igual a 5 kg (R.1044/00 ME) 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0208.60.00",
+          "description": "900V Los demás 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "De ciervo"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 5 kg (R.1044/00 ME)"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "111Z Cuartos delanteros 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "112B Cuartos traseros 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "113D Lomos 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "114F Bifes anchos y angostos 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "115H Cogote en cortes 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "116K Colas 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "117M Vacío y costillar 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "119R Los demás 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "191A Cuartos delanteros 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "192C Cuartos traseros 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "193E Lomos 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "194G Bifes anchos y angostos 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "195J Cogote en cortes 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "196L Colas 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "197N Vacío y costillar 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "199T Los demás 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "300E Ancas (patas) de rana 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "910Q En envases inmediatos de contenido neto inferior o igual a 5 kg (R.1044/00 ME) 10.00 10.00 3.00 LA 5.00 1.00"
+        },
+        {
+          "code": "0208.90.00",
+          "description": "990R Los demás 10.00 10.00 3.00 LA 5.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "0209",
+      "description": "TOCINO SIN PARTES MAGRAS Y GRASA DE CERDO O DE AVE SIN FUNDIR NI EXTRAER DE OTRO MODO,",
+      "subheadings": [
+        {
+          "code": "0209.10",
+          "description": "De cerdo"
+        },
+        {
+          "code": "0209.10.11",
+          "description": "Fresco, refrigerado o congelado"
+        },
+        {
+          "code": "0209.10.11",
+          "description": "100R De lomo 6.00 6.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0209.10.11",
+          "description": "900K Los demás 6.00 6.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0209.10.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "0209.10.19",
+          "description": "000X Los demás 6.00 6.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0209.10.21",
+          "description": "Fresca, refrigerada o congelada"
+        },
+        {
+          "code": "0209.10.21",
+          "description": "000W Fresca, refrigerada o congelada 6.00 6.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0209.10.29",
+          "description": "Las demás"
+        },
+        {
+          "code": "0209.10.29",
+          "description": "000G Las demás 6.00 6.00 3.00 LA 5.00 1.25"
+        },
+        {
+          "code": "0209.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0209.90.00",
+          "description": "000G -Los demás 6.00 6.00 3.00 LA 5.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "0210",
+      "description": "CARNE Y DESPOJOS COMESTIBLES, SALADOS O EN SALMUERA, SECOS O AHUMADOS; HARINA Y POLVO",
+      "subheadings": [
+        {
+          "code": "0210.1",
+          "description": "Carne de la especie porcina:"
+        },
+        {
+          "code": "0210.11.00",
+          "description": "Jamones, paletas, y sus trozos, sin deshuesar"
+        },
+        {
+          "code": "0210.11.00",
+          "description": "100Q Jamones 10.00 10.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "0210.11.00",
+          "description": "200W Paletas y sus trozos 10.00 10.00 3.00 LA 5.00 3.00"
+        },
+        {
+          "code": "0210.12.00",
+          "description": "Tocino entreverado de panza (panceta) y sus trozos"
+        },
+        {
+          "code": "0210.12.00",
+          "description": "000X --Tocino entreverado de panza (panceta) y sus trozos 10.00 10.00 3.00 LNA 5.00 3.00"
+        },
+        {
+          "code": "0210.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0210.19.00",
+          "description": "100L Jamones 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0210.19.00",
+          "description": "200R Bondiola 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0210.19.00",
+          "description": "900E Los demás 10.00 10.00 3.00 LNA 5.00 1.00"
+        },
+        {
+          "code": "0210.20.00",
+          "description": "Carne de la especie bovina"
+        },
+        {
+          "code": "0210.20.00",
+          "description": "000M -Carne de la especie bovina 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0210.9",
+          "description": "Los demás, incluidos la harina y polvo comestibles, de carne o de despojos:"
+        },
+        {
+          "code": "0210.91.00",
+          "description": "De primates"
+        },
+        {
+          "code": "0210.91.00",
+          "description": "000Y --De primates 10.00 10.00 3.00 LA 5.00 0.75"
+        },
+        {
+          "code": "0210.92.00",
+          "description": "De ballenas, delfines y marsopas (mamíferos del orden Cetacea); de manatíes y dugones o dugongos (mamíferos"
+        },
+        {
+          "code": "0210.92.00",
+          "description": "000K --De ballenas, delfines y marsopas (mamíferos del orden Cetacea); de manatíes y dugones o dugongos (mamíferos del"
+        }
+      ]
+    },
+    {
+      "code": "1000",
+      "description": "10.00 3.00 LA 5.00 0.75",
+      "subheadings": []
+    }
+  ],
+  "_rowCount": 520
+}

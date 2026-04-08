@@ -1,0 +1,268 @@
+{
+  "chapter": "36",
+  "title": "Capítulo 36",
+  "sectionTitle": "CAP. 36 SECCION VI PRODUCTOS DE LAS INDUSTRIAS QUIMICAS O DE LAS INDUSTRIAS CONEXAS Notas. A. Cualquier producto que res",
+  "headings": [
+    {
+      "code": "3601",
+      "description": "PÓLVORA",
+      "subheadings": [
+        {
+          "code": "3601.00.00",
+          "description": "Pólvora"
+        },
+        {
+          "code": "3601.00.00",
+          "description": "000J PÓLVORA. 12.00 12.00 3.00 LNA 3.00 1.50"
+        }
+      ]
+    },
+    {
+      "code": "3602",
+      "description": "EXPLOSIVOS PREPARADOS, EXCEPTO LA PÓLVORA",
+      "subheadings": [
+        {
+          "code": "3602.00.00",
+          "description": "Explosivos preparados, excepto la pólvora"
+        },
+        {
+          "code": "3602.00.00",
+          "description": "100H A base de nitrato de amonio 12.00 12.00 3.00 LNA 3.00 1.50"
+        },
+        {
+          "code": "3602.00.00",
+          "description": "200N A base de cloratos 12.00 12.00 3.00 LA 3.00 1.50"
+        },
+        {
+          "code": "3602.00.00",
+          "description": "300U A base de percloratos 12.00 12.00 3.00 LNA 3.00 1.50"
+        },
+        {
+          "code": "3602.00.00",
+          "description": "400Z Preparaciones primarias o de cebado 12.00 12.00 3.00 LA 3.00 1.50"
+        },
+        {
+          "code": "3602.00.00",
+          "description": "900B Los demás 12.00 12.00 3.00 LNA 3.00 1.50"
+        }
+      ]
+    },
+    {
+      "code": "3603",
+      "description": "MECHAS DE SEGURIDAD; CORDONES DETONANTES; CEBOS Y CÁPSULAS FULMINANTES; INFLAMADORES;",
+      "subheadings": [
+        {
+          "code": "3603.00",
+          "description": "Mechas de seguridad; cordones detonantes; cebos y cápsulas fulminantes; inflamadores; detonadores eléctricos"
+        },
+        {
+          "code": "3603.00.10",
+          "description": "Mechas de seguridad"
+        },
+        {
+          "code": "3603.00.10",
+          "description": "000F Mechas de seguridad 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3603.00.20",
+          "description": "Cordones detonantes"
+        },
+        {
+          "code": "3603.00.20",
+          "description": "000Q Cordones detonantes 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3603.00.30",
+          "description": "Cebos fulminantes"
+        },
+        {
+          "code": "3603.00.30",
+          "description": "000A Cebos fulminantes 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3603.00.40",
+          "description": "Cápsulas fulminantes"
+        },
+        {
+          "code": "3603.00.40",
+          "description": "000K Capsulas fulminantes 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3603.00.50",
+          "description": "Inflamadores"
+        },
+        {
+          "code": "3603.00.50",
+          "description": "000V Inflamadores 12.00 12.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3603.00.60",
+          "description": "Detonadores eléctricos"
+        },
+        {
+          "code": "3603.00.60",
+          "description": "000E Detonadores electricos 12.00 12.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3604",
+      "description": "ARTÍCULOS PARA FUEGOS ARTIFICIALES, COHETES DE SEÑALES O GRANÍFUGOS Y SIMILARES, PETARDOS",
+      "subheadings": [
+        {
+          "code": "3604.10.00",
+          "description": "Artículos para fuegos artificiales"
+        },
+        {
+          "code": "3604.10.00",
+          "description": "100J Estallos en todas sus formas y tamaños (R.620/98 MEOSP) 14.00 20.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3604.10.00",
+          "description": "200P Petardos en todas sus formas y tamaños (R.620/98 MEOSP) 14.00 20.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3604.10.00",
+          "description": "300V Fósforos cohete en todas sus formas y tamaños (R.620/98 MEOSP) 14.00 20.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3604.10.00",
+          "description": "400A Baterias de dieciseis (16) tiros (R.620/98 MEOSP) 14.00 20.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3604.10.00",
+          "description": "500F Bombas de estruendo de dos (2) pulgadas de diámetro (R.620/98 MEOSP) 14.00 20.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3604.10.00",
+          "description": "600L Bombas de estruendo de tres (3) pulgadas de diámetro (R.620/98 MEOSP) 14.00 20.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3604.10.00",
+          "description": "900C Los demás 14.00 20.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3604.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3604.90.10",
+          "description": "Cohetes y cartuchos antigranizo y similares"
+        },
+        {
+          "code": "3604.90.10",
+          "description": "000B Cohetes y cartuchos antigranizo y similares 4.00 4.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3604.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "3604.90.90",
+          "description": "100K Dispositivos de señalización 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3604.90.90",
+          "description": "910G Cebos para pistolas de juguete 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3604.90.90",
+          "description": "990H Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "3605",
+      "description": "FÓSFOROS (CERILLAS), EXCEPTO LOS ARTÍCULOS DE PIROTECNIA DE LA PARTIDA 3604",
+      "subheadings": [
+        {
+          "code": "3605.00.00",
+          "description": "Fósforos (cerillas), excepto los artículos de pirotecnia de la partida 3604"
+        },
+        {
+          "code": "3605.00.00",
+          "description": "100N En envases inmediatos de contenido inferior o igual a 30 cerillas 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3605.00.00",
+          "description": "200U En envases inmediatos de contenido superior a 30 cerillas pero inferior o igual a 50 cerillas 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3605.00.00",
+          "description": "300Z En envases inmediatos de contenido superior a 50 cerillas pero inferior o igual a 100 cerillas 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3605.00.00",
+          "description": "400E En envases inmediatos de contenido superior a 100 cerillas pero inferior o igual a 200 cerillas 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3605.00.00",
+          "description": "500K En envases inmediatos de contenido superior a 200 cerillas pero inferior o igual a 250 cerillas 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3605.00.00",
+          "description": "600Q En envases inmediatos de contenido superior a 250 cerillas pero inferior o igual a 300 cerillas 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3605.00.00",
+          "description": "700W En envases inmediatos de contenido superior a 300 cerillas pero inferior o igual a 400 cerillas 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3605.00.00",
+          "description": "800B En envases inmediatos de contenido superior a 400 cerillas pero inferior o igual a 600 cerillas 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3605.00.00",
+          "description": "900G Las demás 14.00 14.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "3606",
+      "description": "FERROCERIO Y DEMÁS ALEACIONES PIROFÓRICAS EN CUALQUIER FORMA; ARTÍCULOS DE MATERIAS",
+      "subheadings": [
+        {
+          "code": "3606.10.00",
+          "description": "Combustibles líquidos y gases combustibles licuados en recipientes de los tipos utilizados para cargar o recargar"
+        },
+        {
+          "code": "3606.10.00",
+          "description": "Combustibles líquidos"
+        },
+        {
+          "code": "3606.10.00",
+          "description": "Productos que se correspondan con las definiciones de la Ley Nº 23.966, Título III, sus normas modificatorias y"
+        },
+        {
+          "code": "3606.10.00",
+          "description": "111B Solventes 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3606.10.00",
+          "description": "119U Los demas 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3606.10.00",
+          "description": "190A Los demás 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3606.10.00",
+          "description": "200B Gases combustibles licuados 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "3606.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "3606.90.00",
+          "description": "100J Combustibles sólidos 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "3606.90.00",
+          "description": "900C Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 63
+}

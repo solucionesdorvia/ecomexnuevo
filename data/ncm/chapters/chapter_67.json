@@ -1,0 +1,161 @@
+{
+  "chapter": "67",
+  "title": "Capítulo 67",
+  "sectionTitle": "CAP. 67 SECCION XII CALZADO, SOMBREROS Y DEMAS TOCADOS, PARAGUAS, QUITASOLES, BASTONES, LATIGOS, FUSTAS, Y SUS PARTES; P",
+  "headings": [
+    {
+      "code": "6701",
+      "description": "PIELES Y DEMÁS PARTES DE AVE CON SUS PLUMAS O PLUMÓN; PLUMAS, PARTES DE PLUMAS, PLUMÓN Y",
+      "subheadings": [
+        {
+          "code": "6701.00.00",
+          "description": "Pieles y demás partes de ave con sus plumas o plumón; plumas, partes de plumas, plumón y artículos de estas"
+        },
+        {
+          "code": "6701.00.00",
+          "description": "100X Pieles y demás partes de ave con sus plumas o plumón 16.00 16.00 3.00 LNA 4.50 3.00"
+        },
+        {
+          "code": "6701.00.00",
+          "description": "200C Plumas 16.00 16.00 3.00 LNA 4.50 3.00"
+        },
+        {
+          "code": "6701.00.00",
+          "description": "300H Artículos de estas materias 16.00 16.00 3.00 LNA 4.50 3.00"
+        },
+        {
+          "code": "6701.00.00",
+          "description": "900Q Los demás 16.00 16.00 3.00 LNA 4.50 3.00"
+        }
+      ]
+    },
+    {
+      "code": "6702",
+      "description": "FLORES, FOLLAJE Y FRUTOS, ARTIFICIALES, Y SUS PARTES; ARTÍCULOS CONFECCIONADOS CON FLORES,",
+      "subheadings": [
+        {
+          "code": "6702.10.00",
+          "description": "De plástico"
+        },
+        {
+          "code": "6702.10.00",
+          "description": "Artículos confeccionados principalmente con follajes"
+        },
+        {
+          "code": "6702.10.00",
+          "description": "110H árboles o arbustos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6702.10.00",
+          "description": "190J Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6702.10.00",
+          "description": "200K Artículos confeccionados principalmente con flores 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6702.10.00",
+          "description": "300Q Artículos confeccionados principalmente con frutos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6702.10.00",
+          "description": "900Y Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6702.90.00",
+          "description": "De las demás materias"
+        },
+        {
+          "code": "6702.90.00",
+          "description": "Artículos confeccionados principalmente con follajes"
+        },
+        {
+          "code": "6702.90.00",
+          "description": "110W árboles o arbustos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6702.90.00",
+          "description": "190X Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6702.90.00",
+          "description": "200Y Artículos confeccionados principalmente con flores 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6702.90.00",
+          "description": "300D Artículos confeccionados principalmente con frutos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "6702.90.00",
+          "description": "900L Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "6703",
+      "description": "CABELLO PEINADO, AFINADO, BLANQUEADO O PREPARADO DE OTRA FORMA; LANA, PELO U OTRA",
+      "subheadings": [
+        {
+          "code": "6703.00.00",
+          "description": "Cabello peinado, afinado, blanqueado o preparado de otra forma; lana, pelo u otra materia textil, preparados para la"
+        },
+        {
+          "code": "6703.00.00",
+          "description": "000D CABELLO PEINADO, AFINADO, BLANQUEADO O PREPARADO DE OTRA FORMA; LANA, PELO U OTRA"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LNA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "6704",
+      "description": "PELUCAS, BARBAS, CEJAS, PESTAÑAS, MECHONES Y ARTÍCULOS ANÁLOGOS, DE CABELLO, PELO O",
+      "subheadings": [
+        {
+          "code": "6704.1",
+          "description": "De materias textiles sintéticas:"
+        },
+        {
+          "code": "6704.11.00",
+          "description": "Pelucas que cubran toda la cabeza"
+        },
+        {
+          "code": "6704.11.00",
+          "description": "000Y --Pelucas que cubran toda la cabeza 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6704.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "6704.19.00",
+          "description": "000U --Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6704.20.00",
+          "description": "De cabello"
+        },
+        {
+          "code": "6704.20.00",
+          "description": "100F Pelucas que cubran toda la cabeza 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6704.20.00",
+          "description": "900Z Los demás 16.00 16.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "6704.90.00",
+          "description": "De las demás materias"
+        },
+        {
+          "code": "6704.90.00",
+          "description": "000Z -De las demás materias 16.00 16.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 36
+}

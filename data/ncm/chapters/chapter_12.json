@@ -1,0 +1,1176 @@
+{
+  "chapter": "12",
+  "title": "Capítulo 12",
+  "sectionTitle": "CAP. 12 SECCION II PRODUCTOS DEL REINO VEGETAL Notas. 1. En esta Sección, el término \"pellets\" designa los productos en",
+  "headings": [
+    {
+      "code": "1201",
+      "description": "HABAS (POROTOS, FRIJOLES, FRÉJOLES)* DE SOJA (SOYA), INCLUSO QUEBRANTADAS",
+      "subheadings": [
+        {
+          "code": "1201.10.00",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1201.10.00",
+          "description": "000E -Para siembra 0.00 0.00 0.00 LA 4.50 0.00"
+        },
+        {
+          "code": "1201.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1201.90.00",
+          "description": "A granel, con hasta 15 % embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1201.90.00",
+          "description": "110B Desactivada 8.00 8.00 3.00 LA 33.00 0.00"
+        },
+        {
+          "code": "1201.90.00",
+          "description": "190C Las demás 8.00 8.00 3.00 LA 33.00 0.00"
+        },
+        {
+          "code": "1201.90.00",
+          "description": "Más del 15 % embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1201.90.00",
+          "description": "Desactivada"
+        },
+        {
+          "code": "1201.90.00",
+          "description": "211J En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 8.00 8.00 3.00 LA 33.00 0.00"
+        },
+        {
+          "code": "1201.90.00",
+          "description": "219B Las demás 8.00 8.00 3.00 LA 33.00 0.00"
+        },
+        {
+          "code": "1201.90.00",
+          "description": "291K En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 8.00 8.00 3.00 LA 33.00 0.00"
+        },
+        {
+          "code": "1201.90.00",
+          "description": "299C Las demás 8.00 8.00 3.00 LA 33.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1202",
+      "description": "MANÍES (CACAHUETES, CACAHUATES)* SIN TOSTAR NI COCER DE OTRO MODO, INCLUSO SIN CÁSCARA O",
+      "subheadings": [
+        {
+          "code": "1202.30.00",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1202.30.00",
+          "description": "000B -Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1202.4",
+          "description": "Los demás:"
+        },
+        {
+          "code": "1202.41.00",
+          "description": "Con cáscara"
+        },
+        {
+          "code": "1202.41.00",
+          "description": "100H En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1202.41.00",
+          "description": "900B Los demás 8.00 8.00 3.00 LA 7.00 0.00"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "Sin cáscara, incluso quebrantados"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "Mani confiteria segun resolucion 12/99 de la Secretaria de Agricultura, Ganaderia, Pesca y Alimentacion, excepto"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "110Y En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "190Z Los demás 10.00 10.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "Mani partido segun resolucion 12/99 de la Secretaria de Agricultura, Ganaderia, Pesca y Alimentacion, excepto"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "210D En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "290E Los demás 10.00 10.00 3.00 LA 4.50 1.00"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "Maní blancheado"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "310J Entero 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "320M Partido 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "910R A granel, con hasta el 15 % embolsado (Ley 21.453) 10.00 10.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "Más del 15 % embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "921X En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1202.42.00",
+          "description": "929P Los demás 10.00 10.00 3.00 LA 4.50 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1203",
+      "description": "COPRA",
+      "subheadings": [
+        {
+          "code": "1203.00.00",
+          "description": "Copra"
+        },
+        {
+          "code": "1203.00.00",
+          "description": "000C COPRA. 8.00 8.00 3.00 LA 0.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1204",
+      "description": "SEMILLAS DE LINO, INCLUSO QUEBRANTADAS",
+      "subheadings": [
+        {
+          "code": "1204.00.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1204.00.10",
+          "description": "000F Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1204.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1204.00.90",
+          "description": "100P A granel, con hasta el 15 % embolsado (Ley 21.453) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1204.00.90",
+          "description": "Más del 15 % embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1204.00.90",
+          "description": "210Y En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1204.00.90",
+          "description": "290Z Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1205",
+      "description": "SEMILLAS DE NABO (NABINA) O DE COLZA, INCLUSO QUEBRANTADAS",
+      "subheadings": [
+        {
+          "code": "1205.10",
+          "description": "Semillas de nabo (nabina) o de colza con bajo contenido de ácido erúcico"
+        },
+        {
+          "code": "1205.10.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1205.10.10",
+          "description": "000N Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1205.10.90",
+          "description": "Semilla de nabo."
+        },
+        {
+          "code": "1205.10.90",
+          "description": "110A A granel, con hasta el 15 % embolsado (Ley 21.453) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.10.90",
+          "description": "Mas del 15% embolsado."
+        },
+        {
+          "code": "1205.10.90",
+          "description": "121F En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.10.90",
+          "description": "129Y Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.10.90",
+          "description": "Semilla de Colza."
+        },
+        {
+          "code": "1205.10.90",
+          "description": "210F A granel con hasta el 15 % embolsado (Ley 21.453) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.10.90",
+          "description": "221L En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.10.90",
+          "description": "229D Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1205.90.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1205.90.10",
+          "description": "000B Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1205.90.90",
+          "description": "Semilla de nabo (Ley 21.453)"
+        },
+        {
+          "code": "1205.90.90",
+          "description": "110N A granel con hasta el 15 % embolsado (Ley 21.453) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.90.90",
+          "description": "Más del 15 % embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1205.90.90",
+          "description": "121U En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.90.90",
+          "description": "129L Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.90.90",
+          "description": "Semilla de colza (Ley 21.453)"
+        },
+        {
+          "code": "1205.90.90",
+          "description": "210U A granel con hasta el 15 % embolsado (Ley 21.453) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.90.90",
+          "description": "Más de 15 % embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1205.90.90",
+          "description": "221Z En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1205.90.90",
+          "description": "229R Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1206",
+      "description": "SEMILLAS DE GIRASOL, INCLUSO QUEBRANTADAS",
+      "subheadings": [
+        {
+          "code": "1206.00.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1206.00.10",
+          "description": "000T Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1206.00.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1206.00.90",
+          "description": "Descascaradas (R.747/95 MEYOSP)"
+        },
+        {
+          "code": "1206.00.90",
+          "description": "110E En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 8.00 8.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1206.00.90",
+          "description": "190F Las demás 8.00 8.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1206.00.90",
+          "description": "Tipo confitería, con cáscara, con un contenido de materia grasa inferior o igual al 36 % en peso, calculado sobre"
+        },
+        {
+          "code": "1206.00.90",
+          "description": "210K En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1206.00.90",
+          "description": "290L Las demás 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1206.00.90",
+          "description": "910Y A granel, con hasta el 15 % embolsado (Ley 21.453) 8.00 8.00 3.00 LA 7.00 0.00"
+        },
+        {
+          "code": "1206.00.90",
+          "description": "Más del 15 % embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1206.00.90",
+          "description": "921D En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "1206.00.90",
+          "description": "929W Las demás 8.00 8.00 3.00 LA 7.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1207",
+      "description": "LAS DEMÁS SEMILLAS Y FRUTOS OLEAGINOSOS, INCLUSO QUEBRANTADOS",
+      "subheadings": [
+        {
+          "code": "1207.10",
+          "description": "Nueces y almendras de palma"
+        },
+        {
+          "code": "1207.10.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1207.10.10",
+          "description": "000A Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1207.10.90",
+          "description": "000D Las demás 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1207.2",
+          "description": "Semillas de algodón:"
+        },
+        {
+          "code": "1207.21.00",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1207.21.00",
+          "description": "000R --Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.29.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1207.29.00",
+          "description": "100T A granel, con hasta el 15% embolsado. 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.29.00",
+          "description": "Mas del 15% embolsado."
+        },
+        {
+          "code": "1207.29.00",
+          "description": "210B En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1207.29.00",
+          "description": "290C Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.30",
+          "description": "Semillas de ricino"
+        },
+        {
+          "code": "1207.30.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1207.30.10",
+          "description": "000D Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.30.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1207.30.90",
+          "description": "000G Las demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.40",
+          "description": "Semillas de sésamo (ajonjolí)"
+        },
+        {
+          "code": "1207.40.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1207.40.10",
+          "description": "000T Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.40.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1207.40.90",
+          "description": "000W Las demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.50",
+          "description": "Semillas de mostaza"
+        },
+        {
+          "code": "1207.50.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1207.50.10",
+          "description": "000G Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.50.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1207.50.90",
+          "description": "000K Las demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.60",
+          "description": "Semillas de cártamo (Carthamus tinctorius)"
+        },
+        {
+          "code": "1207.60.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1207.60.10",
+          "description": "000W Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.60.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1207.60.90",
+          "description": "100E A granel, con hasta el 15 % embolsado (Ley 21.453) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.60.90",
+          "description": "Más del 15 % embolsado (Ley 21.453)"
+        },
+        {
+          "code": "1207.60.90",
+          "description": "210N En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N° 835/2005 SAGPyA) 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1207.60.90",
+          "description": "290P Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.70",
+          "description": "Semillas de melón"
+        },
+        {
+          "code": "1207.70.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1207.70.10",
+          "description": "000K Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.70.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1207.70.90",
+          "description": "000N Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "1207.91",
+          "description": "Semillas de amapola (adormidera)"
+        },
+        {
+          "code": "1207.91.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1207.91.10",
+          "description": "000A Para siembra 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.91.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "1207.91.90",
+          "description": "000D Las demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "1207.99.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "1207.99.10",
+          "description": "100B Semillas de Cáñamo (Cannabis sativa) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.99.10",
+          "description": "900V Las demás 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1207.99.90",
+          "description": "100E Semilla de piñón (Jatropha curcas) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.99.90",
+          "description": "200K Semillas de Cáñamo (Cannabis sativa) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.99.90",
+          "description": "300Q Semillas de Chia (Salvia hispanica L) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1207.99.90",
+          "description": "900Y Las demás 8.00 8.00 3.00 LA 0.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1208",
+      "description": "HARINA DE SEMILLAS O DE FRUTOS OLEAGINOSOS, EXCEPTO LA HARINA DE MOSTAZA",
+      "subheadings": [
+        {
+          "code": "1208.10.00",
+          "description": "De habas (porotos, frijoles, fréjoles)* de soja (soya)"
+        },
+        {
+          "code": "1208.10.00",
+          "description": "000J -De habas (porotos, frijoles, fríjoles)* de soja (soya) 10.00 10.00 3.00 LA 12.00 0.50"
+        },
+        {
+          "code": "1208.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1208.90.00",
+          "description": "000X -Las demás 10.00 10.00 3.00 LA 0.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "1209",
+      "description": "SEMILLAS, FRUTOS Y ESPORAS, PARA SIEMBRA",
+      "subheadings": [
+        {
+          "code": "1209.10.00",
+          "description": "Semillas de remolacha azucarera"
+        },
+        {
+          "code": "1209.10.00",
+          "description": "000C -Semilla de remolacha azucarera 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.2",
+          "description": "Semillas forrajeras:"
+        },
+        {
+          "code": "1209.21.00",
+          "description": "De alfalfa"
+        },
+        {
+          "code": "1209.21.00",
+          "description": "000D --De alfalfa 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.22.00",
+          "description": "De trébol (Trifolium spp)"
+        },
+        {
+          "code": "1209.22.00",
+          "description": "100W Blanco (Trifolium repens) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.22.00",
+          "description": "200B Rojo (Trifolium pratense) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.22.00",
+          "description": "900P Los demás 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.23.00",
+          "description": "De festucas"
+        },
+        {
+          "code": "1209.23.00",
+          "description": "100H Alta (Festuca arundinacea) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.23.00",
+          "description": "200N Rubra (Festuca rubra) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.23.00",
+          "description": "900B Las demás 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.24.00",
+          "description": "De pasto azul de Kentucky (Poa pratensis L)"
+        },
+        {
+          "code": "1209.24.00",
+          "description": "000P --De pasto azul de Kentucky (Poa pratensis L.) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.25.00",
+          "description": "De ballico (Lolium multiflorum Lam, Lolium perenne L)"
+        },
+        {
+          "code": "1209.25.00",
+          "description": "000B --De ballico (Lolium multiflorum Lam., Lolium perenne L.) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.29.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1209.29.00",
+          "description": "100E De Sorgo de Alepo (Shorgum halepense) (R.2507/93 ex-ANA) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.29.00",
+          "description": "200K De melilotus (Melilotus spp.) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.29.00",
+          "description": "300Q De poa (Poa trivialis) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.29.00",
+          "description": "400W De lotus (Lotus spp.) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.29.00",
+          "description": "500B De agropiro (Agropyrum elongatum) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.29.00",
+          "description": "600G De pasto ovillo (Dactylis glomerata) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.29.00",
+          "description": "700M De cebadilla (Bromus spp.) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.29.00",
+          "description": "800T De fleo de los prados (Phleum pratensis) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.29.00",
+          "description": "900Y Las demás 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.30.00",
+          "description": "Semillas de plantas herbáceas utilizadas principalmente por sus flores"
+        },
+        {
+          "code": "1209.30.00",
+          "description": "000F -Semillas de plantas herbáceas utilizadas principalmente por sus flores 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "Semillas de hortalizas"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "100H De tomate 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "De hortalizas aliáceas"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "210R De cebolla 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "220V De puerro 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "290T Las demás 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "De raíces comestibles"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "310X De zanahoria 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "320A De rábano 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "390Y Las demás 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "De coles"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "410C De coliflor 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "420F De brócoles ('broccoli') 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "430J De Bruselas 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "440M De repollo 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "490D Las demás 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "500E De lechuga 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "600K De berenjena 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "700Q De espinaca 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.91.00",
+          "description": "900B Las demás 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1209.99.00",
+          "description": "100D De cítricos (R. 2507/93 ex-ANA) 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.99.00",
+          "description": "De coníferas"
+        },
+        {
+          "code": "1209.99.00",
+          "description": "210M De Pinus elliotti 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.99.00",
+          "description": "220Q De Pinus taeda 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.99.00",
+          "description": "290N Las demás 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.99.00",
+          "description": "300P De Eucalyptus spp. 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.99.00",
+          "description": "400V De sandía 0.00 0.00 0.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1209.99.00",
+          "description": "900X Los demás 0.00 0.00 0.00 LA 0.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1210",
+      "description": "CONOS DE LÚPULO FRESCOS O SECOS, INCLUSO TRITURADOS, MOLIDOS O EN «PELLETS»; LUPULINO",
+      "subheadings": [
+        {
+          "code": "1210.10.00",
+          "description": "Conos de lúpulo sin triturar ni moler ni en «pellets»"
+        },
+        {
+          "code": "1210.10.00",
+          "description": "000G -Conos de lúpulo sin triturar ni moler ni en «pellets» 8.00 8.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1210.20",
+          "description": "Conos de lúpulo triturados, molidos o en «pellets»; lupulino"
+        },
+        {
+          "code": "1210.20.10",
+          "description": "Conos de lúpulo"
+        },
+        {
+          "code": "1210.20.10",
+          "description": "000F Conos de lúpulo 8.00 8.00 3.00 LA 0.00 1.00"
+        },
+        {
+          "code": "1210.20.20",
+          "description": "Lupulino"
+        },
+        {
+          "code": "1210.20.20",
+          "description": "000Q Lupulino 8.00 8.00 3.00 LA 0.00 0.75"
+        }
+      ]
+    },
+    {
+      "code": "1211",
+      "description": "PLANTAS, PARTES DE PLANTAS, SEMILLAS Y FRUTOS DE LAS ESPECIES UTILIZADAS PRINCIPALMENTE EN",
+      "subheadings": [
+        {
+          "code": "1211.20.00",
+          "description": "Raíces de ginseng"
+        },
+        {
+          "code": "1211.20.00",
+          "description": "000P -Raíces de 'ginseng' 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1211.30.00",
+          "description": "Hojas de coca"
+        },
+        {
+          "code": "1211.30.00",
+          "description": "000D -Hojas de coca 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1211.40.00",
+          "description": "Paja de adormidera"
+        },
+        {
+          "code": "1211.40.00",
+          "description": "000T -Paja de adormidera 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1211.50.00",
+          "description": "Efedra"
+        },
+        {
+          "code": "1211.50.00",
+          "description": "000G -Efedra 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1211.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1211.90.10",
+          "description": "Orégano (Origanum vulgare)"
+        },
+        {
+          "code": "1211.90.10",
+          "description": "000Y Orégano (Origanum vulgare) 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "Precursores"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "Cornezuelo del centeno (R.2020/93 ex-ANA)"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "111M En disolución acuosa con una concentración inferior o igual al 30 % P/V 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "119E Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "191N En disolución acuosa con una concentración inferior o igual al 30 % P/V 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "199F Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "Estupefacientes"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "210Q Estupefacientes Lista 4 (R.2017/93 ex-ANA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "290R Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "300T Polen proveniente de la familia de las ros?ceas (R.2507/93 ex-ANA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "400Y Albahaca 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "500D Plantago psillum 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "600J Tilo 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "700P Boldo 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "800V Cedr?n 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "910D Cardo mariano 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "920G Manzanilla 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "930K Menta 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "940N Valeriana 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "950R Raíces de regaliz 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "960V Hojas de hybiscus frescas 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "970Y Hojas de senna secas 8.00 8.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "1211.90.90",
+          "description": "990E Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1212",
+      "description": "ALGARROBAS, ALGAS, REMOLACHA AZUCARERA Y CAÑA DE AZÚCAR, FRESCAS, REFRIGERADAS,",
+      "subheadings": [
+        {
+          "code": "1212.2",
+          "description": "Algas:"
+        },
+        {
+          "code": "1212.21.00",
+          "description": "Aptas para la alimentación humana"
+        },
+        {
+          "code": "1212.21.00",
+          "description": "000V --Aptas para la alimentación humana 6.00 6.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1212.29.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "1212.29.00",
+          "description": "000Q --Las demás 6.00 6.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1212.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "1212.91.00",
+          "description": "Remolacha azucarera"
+        },
+        {
+          "code": "1212.91.00",
+          "description": "000U --Remolacha azucarera 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1212.92.00",
+          "description": "Algarrobas"
+        },
+        {
+          "code": "1212.92.00",
+          "description": "000F --Algarrobas 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1212.93.00",
+          "description": "Caña de azúcar"
+        },
+        {
+          "code": "1212.93.00",
+          "description": "000T --Caña de azúcar 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1212.94.00",
+          "description": "Raíces de achicoria"
+        },
+        {
+          "code": "1212.94.00",
+          "description": "000E --Raíces de achicoria 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1212.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "1212.99.10",
+          "description": "Estevia (stevia) («Ka'a He'e») (Stevia rebaudiana)"
+        },
+        {
+          "code": "1212.99.10",
+          "description": "000Z Estevia (stevia) (\"Ka'a He'e\") (Stevia rebaudiana) 8.00 8.00 3.00 LA 0.00 0.75"
+        },
+        {
+          "code": "1212.99.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "1212.99.90",
+          "description": "200N Carozos (huesos)* y almendras de damasco (albaricoque, chabacano)*, de durazno (melocotén)* (incluidos los"
+        },
+        {
+          "code": "1212.99.90",
+          "description": "900B Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1213",
+      "description": "PAJA Y CASCABILLO DE CEREALES, EN BRUTO, INCLUSO PICADOS, MOLIDOS, PRENSADOS O EN",
+      "subheadings": [
+        {
+          "code": "1213.00.00",
+          "description": "Paja y cascabillo de cereales, en bruto, incluso picados, molidos, prensados o en «pellets»"
+        },
+        {
+          "code": "1213.00.00",
+          "description": "100D De maíz (R.2507/93 ex-ANA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1213.00.00",
+          "description": "900X Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "1214",
+      "description": "NABOS FORRAJEROS, REMOLACHAS FORRAJERAS, RAÍCES FORRAJERAS, HENO, ALFALFA, TRÉBOL,",
+      "subheadings": [
+        {
+          "code": "1214.10.00",
+          "description": "Harina y «pellets» de alfalfa"
+        },
+        {
+          "code": "1214.10.00",
+          "description": "000F -Harina y «pellets» de alfalfa 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1214.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "1214.90.00",
+          "description": "100Z De sorgo de Alepo (Shorgum halepense) (R.2507/93 ex-ANA) 8.00 8.00 3.00 LA 0.00 0.00"
+        },
+        {
+          "code": "1214.90.00",
+          "description": "900T Los demás 8.00 8.00 3.00 LA 0.00 0.00"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 290
+}

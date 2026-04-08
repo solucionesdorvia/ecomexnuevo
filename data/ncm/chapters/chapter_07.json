@@ -1,0 +1,1504 @@
+{
+  "chapter": "07",
+  "title": "Capítulo 07",
+  "sectionTitle": "CAP. 07 SECCION II PRODUCTOS DEL REINO VEGETAL Notas. 1. En esta Sección, el término \"pellets\" designa los productos en",
+  "headings": [
+    {
+      "code": "0701",
+      "description": "PAPAS (PATATAS)* FRESCAS O REFRIGERADAS",
+      "subheadings": [
+        {
+          "code": "0701.10.00",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0701.10.00",
+          "description": "000D -Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0701.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0701.90.00",
+          "description": "100X En envases inmediatos de contenido neto inferior o igual a 2,5 kg (R.420/99 MEYOSP) 10.00 10.00 3.00 LA 4.50 3.25"
+        },
+        {
+          "code": "0701.90.00",
+          "description": "900Q Los demás 10.00 10.00 3.00 LA 4.50 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0702",
+      "description": "TOMATES FRESCOS O REFRIGERADOS",
+      "subheadings": [
+        {
+          "code": "0702.00.00",
+          "description": "Tomates frescos o refrigerados"
+        },
+        {
+          "code": "0702.00.00",
+          "description": "100N Redondos (Res.46/91 IASCAV) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0702.00.00",
+          "description": "200U Peritas (Res.46/91 IASCAV) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0702.00.00",
+          "description": "900G Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0703",
+      "description": "CEBOLLAS, CHALOTES, AJOS, PUERROS Y DEMÁS HORTALIZAS ALIÁCEAS, FRESCOS O REFRIGERADOS",
+      "subheadings": [
+        {
+          "code": "0703.10",
+          "description": "Cebollas y chalotes"
+        },
+        {
+          "code": "0703.10.11",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0703.10.11",
+          "description": "000H Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0703.10.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "0703.10.19",
+          "description": "100Z En envases inmediatos de contenido neto inferior o igual a 2,5 kg (R.420/99 MEYOSP) 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0703.10.19",
+          "description": "900T Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0703.10.21",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0703.10.21",
+          "description": "000T Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0703.10.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "0703.10.29",
+          "description": "000D Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0703.20",
+          "description": "Ajos"
+        },
+        {
+          "code": "0703.20.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0703.20.10",
+          "description": "000P Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0703.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0703.20.90",
+          "description": "100Y En envases inmediatos de contenido neto inferior o igual a 2,5 kg (R.967/99 MEYOSP) 10.00 25.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0703.20.90",
+          "description": "900R Los demás 10.00 25.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0703.90",
+          "description": "Puerros y demás hortalizas aliáceas"
+        },
+        {
+          "code": "0703.90.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0703.90.10",
+          "description": "000N Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0703.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0703.90.90",
+          "description": "000R Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0704",
+      "description": "COLES, INCLUIDOS LOS REPOLLOS, COLIFLORES, COLES RIZADAS, COLINABOS Y PRODUCTOS",
+      "subheadings": [
+        {
+          "code": "0704.10.00",
+          "description": "Coliflores y brócolis"
+        },
+        {
+          "code": "0704.10.00",
+          "description": "000J -Coliflores y brócolis 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0704.20.00",
+          "description": "Coles (repollitos) de Bruselas"
+        },
+        {
+          "code": "0704.20.00",
+          "description": "000Y -Coles (repollitos) de Bruselas 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0704.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0704.90.00",
+          "description": "000X -Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0705",
+      "description": "LECHUGAS (LACTUCA SATIVA) Y ACHICORIAS, COMPRENDIDAS LA ESCAROLA Y LA ENDIBIA (CICHORIUM",
+      "subheadings": [
+        {
+          "code": "0705.1",
+          "description": "Lechugas:"
+        },
+        {
+          "code": "0705.11.00",
+          "description": "Repolladas"
+        },
+        {
+          "code": "0705.11.00",
+          "description": "000P --Repolladas 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0705.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0705.19.00",
+          "description": "000K --Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0705.2",
+          "description": "Achicorias, comprendidas la escarola y la endibia:"
+        },
+        {
+          "code": "0705.21.00",
+          "description": "Endibia «witloof» (Cichorium intybus var foliosum)"
+        },
+        {
+          "code": "0705.21.00",
+          "description": "000D --Endibia «witloof» (Cichorium intybus var. foliosum) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0705.29.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0705.29.00",
+          "description": "000Z --Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0706",
+      "description": "ZANAHORIAS, NABOS, REMOLACHAS PARA ENSALADA, SALSIFÍES, APIONABOS, RÁBANOS Y RAÍCES",
+      "subheadings": [
+        {
+          "code": "0706.10.00",
+          "description": "Zanahorias y nabos"
+        },
+        {
+          "code": "0706.10.00",
+          "description": "000W -Zanahorias y nabos 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0706.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0706.90.00",
+          "description": "000J -Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0707",
+      "description": "PEPINOS Y PEPINILLOS, FRESCOS O REFRIGERADOS",
+      "subheadings": [
+        {
+          "code": "0707.00.00",
+          "description": "Pepinos y pepinillos, frescos o refrigerados"
+        },
+        {
+          "code": "0707.00.00",
+          "description": "000A PEPINOS Y PEPINILLOS, FRESCOS O REFRIGERADOS. 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0708",
+      "description": "HORTALIZAS DE VAINA, AUNQUE ESTÉN DESVAINADAS, FRESCAS O REFRIGERADAS",
+      "subheadings": [
+        {
+          "code": "0708.10.00",
+          "description": "Arvejas (chícharos, guisantes)* (Pisum sativum)"
+        },
+        {
+          "code": "0708.10.00",
+          "description": "000H -Arvejas (chícharos, guisantes)* (Pisum sativum) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0708.20.00",
+          "description": "Porotos (frijoles, fréjoles, alubias, judías)* (Vigna spp, Phaseolus spp)"
+        },
+        {
+          "code": "0708.20.00",
+          "description": "000X -Porotos (frijoles, fréjoles, alubias, judías)* (Vigna spp., Phaseolus spp.) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0708.90.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0708.90.00",
+          "description": "000W -Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0709",
+      "description": "LAS DEMÁS HORTALIZAS, FRESCAS O REFRIGERADAS",
+      "subheadings": [
+        {
+          "code": "0709.20.00",
+          "description": "Espárragos"
+        },
+        {
+          "code": "0709.20.00",
+          "description": "100W En envases inmediatos de contenido neto inferior o igual a 1 kg (R. 257/00 ME) 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0709.20.00",
+          "description": "900P Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.30.00",
+          "description": "Berenjenas"
+        },
+        {
+          "code": "0709.30.00",
+          "description": "000E -Berenjenas 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.40.00",
+          "description": "Apio, excepto el apionabo"
+        },
+        {
+          "code": "0709.40.00",
+          "description": "000U -Apio, excepto el apionabo 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.5",
+          "description": "Hongos y trufas:"
+        },
+        {
+          "code": "0709.51.00",
+          "description": "Hongos del género Agaricus"
+        },
+        {
+          "code": "0709.51.00",
+          "description": "000V --Hongos del género Agaricus 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.59.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0709.59.00",
+          "description": "100W Trufas 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.59.00",
+          "description": "900P Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.60.00",
+          "description": "Frutos de los géneros Capsicum o Pimenta"
+        },
+        {
+          "code": "0709.60.00",
+          "description": "000X -Frutos de los géneros Capsicum o Pimenta 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.70.00",
+          "description": "Espinacas (incluida la de Nueva Zelanda) y armuelles"
+        },
+        {
+          "code": "0709.70.00",
+          "description": "000L -Espinacas (incluida la de Nueva Zelanda) y armuelles 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "0709.91.00",
+          "description": "Alcachofas (alcauciles)*"
+        },
+        {
+          "code": "0709.91.00",
+          "description": "000B --Alcachofas (alcauciles)* 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.92.00",
+          "description": "Aceitunas"
+        },
+        {
+          "code": "0709.92.00",
+          "description": "000N --Aceitunas 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.93.00",
+          "description": "Calabazas (zapallos)* y calabacines (Cucurbita spp)"
+        },
+        {
+          "code": "0709.93.00",
+          "description": "000A --Calabazas (zapallos)* y calabacines (Cucurbita spp.) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "0709.99.11",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0709.99.11",
+          "description": "000P Para siembra 0.00 0.00 0.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.99.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "0709.99.19",
+          "description": "000A Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.99.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0709.99.90",
+          "description": "100Q Perejil, radichio, berro, hinojo (R.2507/93 ex-ANA) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0709.99.90",
+          "description": "900J Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0710",
+      "description": "HORTALIZAS, AUNQUE ESTÉN COCIDAS EN AGUA O VAPOR, CONGELADAS",
+      "subheadings": [
+        {
+          "code": "0710.10.00",
+          "description": "Papas (patatas)*"
+        },
+        {
+          "code": "0710.10.00",
+          "description": "Sin cocer (Ley 25063)"
+        },
+        {
+          "code": "0710.10.00",
+          "description": "110P En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0710.10.00",
+          "description": "190Q Los demás 10.00 10.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0710.10.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0710.10.00",
+          "description": "910H En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0710.10.00",
+          "description": "990J Los demás 10.00 10.00 3.00 LA 4.50 2.50"
+        },
+        {
+          "code": "0710.2",
+          "description": "Hortalizas de vaina, estén o no desvainadas:"
+        },
+        {
+          "code": "0710.21.00",
+          "description": "Arvejas (chícharos, guisantes)* (Pisum sativum)"
+        },
+        {
+          "code": "0710.21.00",
+          "description": "Sin cocer (Ley 25063)"
+        },
+        {
+          "code": "0710.21.00",
+          "description": "110Q En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.21.00",
+          "description": "190R Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.21.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0710.21.00",
+          "description": "910J En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.21.00",
+          "description": "990K Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.22.00",
+          "description": "Porotos (frijoles, fréjoles, alubias, judías)* (Vigna spp, Phaseolus spp)"
+        },
+        {
+          "code": "0710.22.00",
+          "description": "Sin cocer (Ley 25063)"
+        },
+        {
+          "code": "0710.22.00",
+          "description": "110C En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.22.00",
+          "description": "190D Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.22.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0710.22.00",
+          "description": "910W En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.22.00",
+          "description": "990X Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.29.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0710.29.00",
+          "description": "Sin cocer (Ley 25063)"
+        },
+        {
+          "code": "0710.29.00",
+          "description": "110L En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.29.00",
+          "description": "190M Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.29.00",
+          "description": "910E En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.29.00",
+          "description": "990F Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.30.00",
+          "description": "Espinacas (incluida la de Nueva Zelanda) y armuelles"
+        },
+        {
+          "code": "0710.30.00",
+          "description": "Espinaca de la especie Spinacea oleracea, sin cocer (R.2507/93 ex-ANA)"
+        },
+        {
+          "code": "0710.30.00",
+          "description": "110T En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.30.00",
+          "description": "190U Lo demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.30.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0710.30.00",
+          "description": "Sin cocer (Ley 25063)"
+        },
+        {
+          "code": "0710.30.00",
+          "description": "911N En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.30.00",
+          "description": "919F Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.30.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0710.30.00",
+          "description": "991P En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.30.00",
+          "description": "999G Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.40.00",
+          "description": "Maíz dulce"
+        },
+        {
+          "code": "0710.40.00",
+          "description": "Sin cocer (Ley 25063)"
+        },
+        {
+          "code": "0710.40.00",
+          "description": "110G En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.40.00",
+          "description": "190H Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.40.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0710.40.00",
+          "description": "910A En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.40.00",
+          "description": "990B Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.80.00",
+          "description": "Las demás hortalizas"
+        },
+        {
+          "code": "0710.80.00",
+          "description": "Lechuga, repollo, endibia, perejil, apio, achicoria, radichio, berro, hinojo, brécol («broccoli»), coliflor, coles, espárragos,"
+        },
+        {
+          "code": "0710.80.00",
+          "description": "110N En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.80.00",
+          "description": "190P Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.80.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0710.80.00",
+          "description": "Sin cocer (Ley 25063)"
+        },
+        {
+          "code": "0710.80.00",
+          "description": "911J En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.80.00",
+          "description": "919B Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.80.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "0710.80.00",
+          "description": "991K En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.80.00",
+          "description": "999C Los demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.90.00",
+          "description": "Mezclas de hortalizas"
+        },
+        {
+          "code": "0710.90.00",
+          "description": "Sin cocer"
+        },
+        {
+          "code": "0710.90.00",
+          "description": "210H En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.90.00",
+          "description": "290J Las demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0710.90.00",
+          "description": "910W En envases inmediatos de contenido neto inferior o igual a 3 kg 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0710.90.00",
+          "description": "990X Las demás 10.00 10.00 3.00 LA 0.00 2.50"
+        }
+      ]
+    },
+    {
+      "code": "0711",
+      "description": "HORTALIZAS CONSERVADAS PROVISIONALMENTE (POR EJEMPLO: CON GAS SULFUROSO O CON AGUA",
+      "subheadings": [
+        {
+          "code": "0711.20",
+          "description": "Aceitunas"
+        },
+        {
+          "code": "0711.20.10",
+          "description": "Con agua salada"
+        },
+        {
+          "code": "0711.20.10",
+          "description": "000Y Con agua salada 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0711.20.20",
+          "description": "Con agua sulfurosa o adicionada de otras sustancias"
+        },
+        {
+          "code": "0711.20.20",
+          "description": "000H Con agua sulfurosa o adicionada de otras sustancias 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0711.20.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0711.20.90",
+          "description": "000B Las demás 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0711.40.00",
+          "description": "Pepinos y pepinillos"
+        },
+        {
+          "code": "0711.40.00",
+          "description": "000R -Pepinos y pepinillos 10.00 10.00 3.00 LA 0.00 2.50"
+        },
+        {
+          "code": "0711.5",
+          "description": "Hongos y trufas:"
+        },
+        {
+          "code": "0711.51.00",
+          "description": "Hongos del género Agaricus"
+        },
+        {
+          "code": "0711.51.00",
+          "description": "000T --Hongos del género Agaricus 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0711.59.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0711.59.00",
+          "description": "000N --Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0711.90.00",
+          "description": "Las demás hortalizas; mezclas de hortalizas"
+        },
+        {
+          "code": "0711.90.00",
+          "description": "Alcaparras"
+        },
+        {
+          "code": "0711.90.00",
+          "description": "110W Con agua salada, sulfurosa o adicionada de otras sustancias 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0711.90.00",
+          "description": "190X Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0711.90.00",
+          "description": "900L Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0712",
+      "description": "HORTALIZAS SECAS, INCLUIDAS LAS CORTADAS EN TROZOS O EN RODAJAS O LAS TRITURADAS O",
+      "subheadings": [
+        {
+          "code": "0712.20.00",
+          "description": "Cebollas"
+        },
+        {
+          "code": "0712.20.00",
+          "description": "000G -Cebollas 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0712.3",
+          "description": "Orejas de Judas (Auricularia spp), hongos gelatinosos (Tremella spp) y demás hongos; trufas:"
+        },
+        {
+          "code": "0712.31.00",
+          "description": "Hongos del género Agaricus"
+        },
+        {
+          "code": "0712.31.00",
+          "description": "000H --Hongos del género Agaricus 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0712.32.00",
+          "description": "Orejas de Judas (Auricularia spp)"
+        },
+        {
+          "code": "0712.32.00",
+          "description": "000V --Orejas de Judas (Auricularia spp.) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0712.33.00",
+          "description": "Hongos gelatinosos (Tremella spp)"
+        },
+        {
+          "code": "0712.33.00",
+          "description": "000G --Hongos gelatinosos (Tremella spp.) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0712.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0712.39.00",
+          "description": "000D --Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0712.90",
+          "description": "Las demás hortalizas; mezclas de hortalizas"
+        },
+        {
+          "code": "0712.90.10",
+          "description": "Ajo en polvo"
+        },
+        {
+          "code": "0712.90.10",
+          "description": "000Q Ajo en polvo 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0712.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0712.90.90",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 2,5 kg (R.967/99 MEYOSP)"
+        },
+        {
+          "code": "0712.90.90",
+          "description": "110C Calabaza (zapallo) 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0712.90.90",
+          "description": "120F Zanahoria 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0712.90.90",
+          "description": "190D Las demás 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0712.90.90",
+          "description": "910W Calabaza (zapallo) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0712.90.90",
+          "description": "920Z Zanahoria 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0712.90.90",
+          "description": "990X Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0713",
+      "description": "HORTALIZAS DE VAINA SECAS DESVAINADAS, AUNQUE ESTÉN MONDADAS O PARTIDAS",
+      "subheadings": [
+        {
+          "code": "0713.10",
+          "description": "Arvejas (chícharos, guisantes)* (Pisum sativum)"
+        },
+        {
+          "code": "0713.10.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.10.10",
+          "description": "000W Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1 kg (R.967/99 MEYOSP) (Res.835/05 SAGPyA)"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "110H Enteras 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "120L Partidas 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "En envases inmediatos de contenido neto superior a 1 kg e inferior o igual 2 kg (Res.835/05 SAGPyA)"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "210N Enteras 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "220R Partidas 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "Enteras (Ley 21453)"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "911D Verdes (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "912F Amarillas (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "919W Las demas 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "Partidas (Ley 21453)"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "921G Verdes (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "922J Amarillas (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.10.90",
+          "description": "929Z Las demas 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.20",
+          "description": "Garbanzos"
+        },
+        {
+          "code": "0713.20.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.20.10",
+          "description": "000K Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "En envases inmediatos de contenido neto inferior o igual a 1kg (R.967/99 MEYOSP) (Res. 835/05 SAGPyA)"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "110X Enteros 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "120A Partidos 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "En envases inmediatos de contenido neto superior a 1 kg e inferior o igual a 2kg. (Res. 835/05 SAGPyA)"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "210C Enteros 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "220F Partidos 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "Los demas"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "Enteros (Ley 21453)"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "911T De diametro superior o igual a 9 mm (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "912V De diametro superior o igual a 8 mm pero inferior a 9 mm (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "913X De diametro superior o igual a 7 mm pero inferior a 8 mm (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "919K Los demas (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.20.90",
+          "description": "920U Partidos (Ley 21453) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.3",
+          "description": "Porotos (frijoles, fréjoles, alubias, judías)* (Vigna spp, Phaseolus spp):"
+        },
+        {
+          "code": "0713.31",
+          "description": "Porotos (frijoles, fréjoles, alubias, judías)* de las especies Vigna mungo (L) Hepper o Vigna radiata (L) Wilczek"
+        },
+        {
+          "code": "0713.31.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.31.10",
+          "description": "000L Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.31.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0713.31.90",
+          "description": "100V En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.31.90",
+          "description": "900N Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.32",
+          "description": "Porotos (frijoles, fréjoles, alubias, judías)* adzuki (Phaseolus o Vigna angularis)"
+        },
+        {
+          "code": "0713.32.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.32.10",
+          "description": "000Y Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.32.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0713.32.90",
+          "description": "100G En envases de contenido neto superior a 20 kg (Ley 21453) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.32.90",
+          "description": "200M En envases inmediatos de contenido neto inferior o igual a 1 kg (R.967/99 MEOSP) 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0713.32.90",
+          "description": "300T En envases inmediatos de contenido neto superior a 1 kg e inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.32.90",
+          "description": "900A Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.33",
+          "description": "Porotos (frijoles, fréjoles, alubias, judías)* comunes (Phaseolus vulgaris)"
+        },
+        {
+          "code": "0713.33.11",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.33.11",
+          "description": "000T Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.33.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "0713.33.19",
+          "description": "100J En envases de contenido neto superior a 20 kg (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.19",
+          "description": "200P En envases inmediatos de contenido neto inferior o igual a 1 kg (R.967/99 MEYOSP) 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0713.33.19",
+          "description": "300V En envases inmediatos de contenido neto superior a 1 kg e inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.19",
+          "description": "900C Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.33.21",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.33.21",
+          "description": "000C Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "Alubia (Ley 21.453)"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "En envases de contenido neto superior a 20 Kg (Ley 21.453)"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "111Z De hasta 190 granos/100 g (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "112B De 191 granos, hasta 220 granos/100 g (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "113D Desde 221 granos/100 g (ley 21.453) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "120A En envases inmediatos de contenido neto inferior o igual a 1 kg (R.967/99 MEYOSP) 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "130D En envases inmediatos de contenido neto superior a 1 kg e inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "190Y Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "Ovales (Ley 21.453)"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "210C En envase de contenido neto superior a 20 kg (Ley 21.453) 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "220F En envases inmediatos de contenido neto inferior o igual a 1 kg (R.967/99 MEYOSP) 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "230J En envases inmediatos de contenido neto superior a 1 kg e inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "290D Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "910Q En envases inmediatos de contenido neto inferior o igual a 1 kg (R.967/99 MEYOSP) 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "920U En envases de contenido neto superior a 20 kg 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.33.29",
+          "description": "990R Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.33.91",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.33.91",
+          "description": "000W Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "Colorados"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "Del tipo comercial Light Red Kidney"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "111T En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "112V En envases de contenido neto superior a 20 Kg (Ley 21453) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "119K Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "Del tipo comercial Dark Red Kidney"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "121W En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "122Y En envases de contenido neto superior a 20 Kg (Ley 21453) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "129N Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "191U En envases de contenido neto superior a 20 kg (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "192W En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "199L Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "Del tipo comercial Carioca"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "911L En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "919D Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "Del tipo comercial Cranberry"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "921P En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "929G Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "991M En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.33.99",
+          "description": "999E Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.34",
+          "description": "Porotos (frijoles, fréjoles, alubias, judías)* bambara (Vigna subterranea o Voandzeia subterranea)"
+        },
+        {
+          "code": "0713.34.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.34.10",
+          "description": "000X Para siembra 0.00 0.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.34.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0713.34.90",
+          "description": "100F En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N°835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.34.90",
+          "description": "900Z Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.35",
+          "description": "Porotos (frijoles, fréjoles, alubias, judías)* salvajes o caupí (Vigna unguiculata)"
+        },
+        {
+          "code": "0713.35.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.35.10",
+          "description": "000J Para Siembra 0.00 0.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.35.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0713.35.90",
+          "description": "100T En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N°835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.35.90",
+          "description": "900L Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.39",
+          "description": "Los demás"
+        },
+        {
+          "code": "0713.39.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.39.10",
+          "description": "000G Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.39.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0713.39.90",
+          "description": "Pallares (Phaseolus coccineus, var. Albus) (Ley 21.453)"
+        },
+        {
+          "code": "0713.39.90",
+          "description": "110U En envases de contenido neto superior a 20 kg (Ley 21.453) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.39.90",
+          "description": "120X En envases inmediatos de contenido neto inferior o igual a 2 kg (Res. N° 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.39.90",
+          "description": "190V Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.39.90",
+          "description": "910M En envases inmediatos de contenido neto inferior o igual a 2 Kg (Res N°835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.39.90",
+          "description": "990N Los demás. 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.40",
+          "description": "Lentejas"
+        },
+        {
+          "code": "0713.40.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.40.10",
+          "description": "000N Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.40.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0713.40.90",
+          "description": "100X En envases inmediatos de contenido neto inferior o igual a 1 kg (R.967/99 MEYOSP) (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0713.40.90",
+          "description": "200C En envases inmediatos de contenido neto superior a 1 kg e inferior o igual a 2 kg (Res. 835/05 SAGPyA) 10.00 10.00 3.00 LA 0.00 1.75"
+        },
+        {
+          "code": "0713.40.90",
+          "description": "900Q Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.50",
+          "description": "Habas (Vicia faba var major), haba caballar (Vicia faba var equina) y haba menor (Vicia faba var minor)"
+        },
+        {
+          "code": "0713.50.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.50.10",
+          "description": "000C Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.50.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0713.50.90",
+          "description": "100L En envases inmediatos de contenido neto inferior o igual a 1 kg (R.967/99 MEYOSP) 10.00 10.00 3.00 LA 0.00 3.25"
+        },
+        {
+          "code": "0713.50.90",
+          "description": "900E Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.60",
+          "description": "Arvejas (chícharos, guisantes)* de palo, gandú o gandul (Cajanus cajan)"
+        },
+        {
+          "code": "0713.60.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.60.10",
+          "description": "000R Para siembra 0.00 0.00 3.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.60.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0713.60.90",
+          "description": "000V Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0713.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0713.90.10",
+          "description": "Para siembra"
+        },
+        {
+          "code": "0713.90.10",
+          "description": "000J Para siembra 0.00 0.00 0.00 LA 0.00 0.50"
+        },
+        {
+          "code": "0713.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0713.90.90",
+          "description": "000M Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    },
+    {
+      "code": "0714",
+      "description": "RAÍCES DE MANDIOCA (YUCA)*, ARRURRUZ O SALEP, AGUATURMAS (PATACAS)*, BATATAS (BONIATOS,",
+      "subheadings": [
+        {
+          "code": "0714.10.00",
+          "description": "Raíces de mandioca (yuca)*"
+        },
+        {
+          "code": "0714.10.00",
+          "description": "000E -Raíces de mandioca (yuca)* 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0714.20.00",
+          "description": "Batatas (boniatos, camotes)*"
+        },
+        {
+          "code": "0714.20.00",
+          "description": "100Z Secas 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0714.20.00",
+          "description": "900T Las demás 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0714.30.00",
+          "description": "Ñame (Dioscorea spp)"
+        },
+        {
+          "code": "0714.30.00",
+          "description": "000H -ñame (Dioscorea spp.) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0714.40.00",
+          "description": "Taro (Colocasia spp)"
+        },
+        {
+          "code": "0714.40.00",
+          "description": "000X -Taro (Colocasia spp.) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0714.50.00",
+          "description": "Yautía (malanga)* (Xanthosoma spp)"
+        },
+        {
+          "code": "0714.50.00",
+          "description": "000L -Yautía (malanga)* (Xanthosoma spp.) 10.00 10.00 3.00 LA 0.00 1.25"
+        },
+        {
+          "code": "0714.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0714.90.00",
+          "description": "000T -Los demás 10.00 10.00 3.00 LA 0.00 1.25"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 375
+}

@@ -1,0 +1,726 @@
+{
+  "chapter": "05",
+  "title": "Capítulo 05",
+  "sectionTitle": "CAP. 05 SECCION I ANIMALES VIVOS Y PRODUCTOS DEL REINO ANIMAL Notas. 1. En esta Sección, cualquier referencia a un géner",
+  "headings": [
+    {
+      "code": "0501",
+      "description": "CABELLO EN BRUTO, INCLUSO LAVADO O DESGRASADO; DESPERDICIOS DE CABELLO",
+      "subheadings": [
+        {
+          "code": "0501.00.00",
+          "description": "Cabello en bruto, incluso lavado o desgrasado; desperdicios de cabello"
+        },
+        {
+          "code": "0501.00.00",
+          "description": "000B CABELLO EN BRUTO, INCLUSO LAVADO O DESGRASADO; DESPERDICIOS DE CABELLO. 8.00 8.00 3.00 LA 9.00 0.25"
+        }
+      ]
+    },
+    {
+      "code": "0502",
+      "description": "CERDAS DE CERDO O DE JABALÍ; PELO DE TEJÓN Y DEMÁS PELOS PARA CEPILLERÍA; DESPERDICIOS DE",
+      "subheadings": [
+        {
+          "code": "0502.10",
+          "description": "Cerdas de cerdo o de jabalí y sus desperdicios"
+        },
+        {
+          "code": "0502.10.11",
+          "description": "Lavadas, blanqueadas o desgrasadas, incluso teñidas"
+        },
+        {
+          "code": "0502.10.11",
+          "description": "100G Teñidas 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0502.10.11",
+          "description": "Las demás"
+        },
+        {
+          "code": "0502.10.11",
+          "description": "910D Blancas 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0502.10.11",
+          "description": "920G Negras 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0502.10.11",
+          "description": "990E Las demás 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0502.10.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "0502.10.19",
+          "description": "000M Las demás 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0502.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0502.10.90",
+          "description": "Lavadas, blanqueadas o desgrasadas, incluso teñidas"
+        },
+        {
+          "code": "0502.10.90",
+          "description": "110F Teñidas 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0502.10.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "0502.10.90",
+          "description": "191J Blancas 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0502.10.90",
+          "description": "192L Negras 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0502.10.90",
+          "description": "199B Las demás 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0502.10.90",
+          "description": "910Z Desperdicios 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0502.10.90",
+          "description": "990A Las demás 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0502.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0502.90.10",
+          "description": "Pelos"
+        },
+        {
+          "code": "0502.90.10",
+          "description": "Lavados, blanqueados o desgrasados, incluso teñidos"
+        },
+        {
+          "code": "0502.90.10",
+          "description": "110Q Teñidos 8.00 8.00 3.00 LA 9.00 0.25"
+        },
+        {
+          "code": "0502.90.10",
+          "description": "190R Los demás 8.00 8.00 3.00 LA 9.00 0.25"
+        },
+        {
+          "code": "0502.90.10",
+          "description": "900F Los demás 8.00 8.00 3.00 LA 9.00 0.25"
+        },
+        {
+          "code": "0502.90.20",
+          "description": "Desperdicios"
+        },
+        {
+          "code": "0502.90.20",
+          "description": "000R Desperdicios 8.00 8.00 3.00 LA 9.00 0.25"
+        }
+      ]
+    },
+    {
+      "code": "0504",
+      "description": "TRIPAS, VEJIGAS Y ESTÓMAGOS DE ANIMALES, EXCEPTO LOS DE PESCADO, ENTEROS O EN TROZOS,",
+      "subheadings": [
+        {
+          "code": "0504.00.11",
+          "description": "De bovino"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "Tripa orilla"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "Frescas, refrigeradas o congeladas (Dto. 499/98; RG 159/98 AFIP)"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "111K Calibradas 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "119C Las demás 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "Las demás"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "191L Calibradas 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "199D Las demás 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "Tripa salame"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "211Q Calibradas 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "219H Las demás 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "291R Calibradas 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "299J Las demás 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "Tripón"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "Frescos, refrigerados o congelados (Dto. 499/98; RG 159/98 AFIP)"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "311W Calibrados 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "319N Los demás 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "Los demás"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "391X Calibradas 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "399P Los demás 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "Tripa gorda"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "410Z Frescas, refrigeradas o congeladas (Dto. 499/98; RG 159/98 AFIP) 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "490A Las demás 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "Chinchulines"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "510E Frescos, refrigerados o congelados (Dto. 499/98; RG 159/98 AFIP) 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "590F Los demás 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.11",
+          "description": "900Y Las demás 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.12",
+          "description": "De ovino"
+        },
+        {
+          "code": "0504.00.12",
+          "description": "100M Calibradas 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.12",
+          "description": "900F Las demás 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.13",
+          "description": "De porcino"
+        },
+        {
+          "code": "0504.00.13",
+          "description": "100V Calibradas 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.13",
+          "description": "900N Las demás 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.19",
+          "description": "Las demás"
+        },
+        {
+          "code": "0504.00.19",
+          "description": "100Q De caprino (R.2507/93 ex-ANA) 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.19",
+          "description": "200W De equino 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.19",
+          "description": "900J Las demás 8.00 8.00 3.00 LA 5.00 0.50"
+        },
+        {
+          "code": "0504.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0504.00.90",
+          "description": "De bovino, ovino o caprino (R.2507/93 ex-ANA)"
+        },
+        {
+          "code": "0504.00.90",
+          "description": "De bovino"
+        },
+        {
+          "code": "0504.00.90",
+          "description": "111F Mondongo, librillo, cuajo, vejiga, frescos, refrigerados o congelados (Dto. 499/98; RG 159/98 AFIP) 4.00 4.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0504.00.90",
+          "description": "119Y Los demás 4.00 4.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0504.00.90",
+          "description": "De ovino"
+        },
+        {
+          "code": "0504.00.90",
+          "description": "121J Mondongo, librillo, cuajo, vejiga, frescos, refrigerados o congelados 4.00 4.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0504.00.90",
+          "description": "129B Los demás 4.00 4.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0504.00.90",
+          "description": "130K De caprino 4.00 4.00 3.00 LA 7.00 0.50"
+        },
+        {
+          "code": "0504.00.90",
+          "description": "900U Los demás 4.00 4.00 3.00 LA 7.00 0.50"
+        }
+      ]
+    },
+    {
+      "code": "0505",
+      "description": "PIELES Y DEMÁS PARTES DE AVE, CON SUS PLUMAS O PLUMÓN, PLUMAS Y PARTES DE PLUMAS (INCLUSO",
+      "subheadings": [
+        {
+          "code": "0505.10.00",
+          "description": "Plumas de las utilizadas para relleno; plumón"
+        },
+        {
+          "code": "0505.10.00",
+          "description": "100V De avestruz 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0505.10.00",
+          "description": "200A De ganso 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0505.10.00",
+          "description": "900N Los demás 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0505.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0505.90.00",
+          "description": "100H Harina de pluma 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0505.90.00",
+          "description": "910E De avestruz 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0505.90.00",
+          "description": "990F Los demás 8.00 8.00 3.00 LA 5.00 0.25"
+        }
+      ]
+    },
+    {
+      "code": "0506",
+      "description": "HUESOS Y NÚCLEOS CÓRNEOS, EN BRUTO, DESGRASADOS, SIMPLEMENTE PREPARADOS (PERO SIN",
+      "subheadings": [
+        {
+          "code": "0506.10.00",
+          "description": "Oseína y huesos acidulados"
+        },
+        {
+          "code": "0506.10.00",
+          "description": "000H -Oseína y huesos acidulados 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0506.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0506.90.00",
+          "description": "000W -Los demás 8.00 8.00 3.00 LA 5.00 0.25"
+        }
+      ]
+    },
+    {
+      "code": "0507",
+      "description": "MARFIL, CONCHA (CAPARAZÓN) DE TORTUGA, BALLENAS DE MAMÍFEROS MARINOS (INCLUIDAS LAS",
+      "subheadings": [
+        {
+          "code": "0507.10.00",
+          "description": "Marfil; polvo y desperdicios de marfil"
+        },
+        {
+          "code": "0507.10.00",
+          "description": "Marfil"
+        },
+        {
+          "code": "0507.10.00",
+          "description": "110K Material biológico comprendido en la Resolución MS N° 1789/06 8.00 8.00 3.00 LA 9.00 0.25"
+        },
+        {
+          "code": "0507.10.00",
+          "description": "190L Los demás 8.00 8.00 3.00 LA 9.00 0.25"
+        },
+        {
+          "code": "0507.10.00",
+          "description": "200M Polvo y desperdicios de marfil 8.00 8.00 3.00 LA 9.00 0.25"
+        },
+        {
+          "code": "0507.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "0507.90.00",
+          "description": "100V Cuernos y astas 8.00 8.00 3.00 LA 9.00 0.25"
+        },
+        {
+          "code": "0507.90.00",
+          "description": "200A Cascos, uñas, pezuñas y garras 8.00 8.00 3.00 LA 9.00 0.25"
+        },
+        {
+          "code": "0507.90.00",
+          "description": "900N Los demás 8.00 8.00 3.00 LA 9.00 0.25"
+        }
+      ]
+    },
+    {
+      "code": "0508",
+      "description": "CORAL Y MATERIAS SIMILARES, EN BRUTO O SIMPLEMENTE PREPARADOS, PERO SIN OTRO TRABAJO;",
+      "subheadings": [
+        {
+          "code": "0508.00.00",
+          "description": "Coral y materias similares, en bruto o simplemente preparados, pero sin otro trabajo; valvas y caparazones de"
+        },
+        {
+          "code": "0508.00.00",
+          "description": "100L Coral 8.00 8.00 3.00 LA 9.00 0.25"
+        },
+        {
+          "code": "0508.00.00",
+          "description": "200R Valvas y caparazones 8.00 8.00 3.00 LA 9.00 0.25"
+        },
+        {
+          "code": "0508.00.00",
+          "description": "900E Los demás 8.00 8.00 3.00 LA 9.00 0.25"
+        }
+      ]
+    },
+    {
+      "code": "0510",
+      "description": "ÁMBAR GRIS, CASTÓREO, ALGALIA Y ALMIZCLE; CANTÁRIDAS; BILIS, INCLUSO DESECADA; GLÁNDULAS Y",
+      "subheadings": [
+        {
+          "code": "0510.00.10",
+          "description": "Páncreas bovinos"
+        },
+        {
+          "code": "0510.00.10",
+          "description": "000N Páncreas bovinos 0.00 0.00 3.00 LA 5.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "100X Ambar gris 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "200C Castóreo 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "300H Algalia 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "400N Almizcle 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "500U Cantáridas 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "600Z Cálculos biliares 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "Glándulas"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "710H Suprarrenales 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "720L Tiroides 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "730P Testículos 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "740T Ovarios 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "750W Hipófisis 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "760Z Páncreas porcino 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "770C Vesícula biliar 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "790J Las demás 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "Secreciones"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "810N Bilis, incluso desecada 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "890P Las demás 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "Órganos"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "911W Tráqueas de aves de la partida 01.05 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "919N Los demás 2.00 2.00 3.00 LA 9.00 0.00"
+        },
+        {
+          "code": "0510.00.90",
+          "description": "990V Los demás 2.00 2.00 3.00 LA 9.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "0511",
+      "description": "PRODUCTOS DE ORIGEN ANIMAL NO EXPRESADOS NI COMPRENDIDOS EN OTRA PARTE; ANIMALES",
+      "subheadings": [
+        {
+          "code": "0511.10.00",
+          "description": "Semen de bovino"
+        },
+        {
+          "code": "0511.10.00",
+          "description": "000L -Semen de bovino 0.00 0.00 3.00 LNA 4.50 0.50"
+        },
+        {
+          "code": "0511.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "0511.91",
+          "description": "Productos de pescado o de crustáceos, moluscos o demás invertebrados acuáticos; animales muertos del Capítulo"
+        },
+        {
+          "code": "0511.91.10",
+          "description": "Huevas de pescado fecundadas, para reproducción"
+        },
+        {
+          "code": "0511.91.10",
+          "description": "000W Huevas de pescado fecundadas, para reproducción 0.00 0.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "0511.91.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "0511.91.90",
+          "description": "000Z Los demás 8.00 8.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "0511.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "0511.99.10",
+          "description": "Embriones de animales"
+        },
+        {
+          "code": "0511.99.10",
+          "description": "100X De bovino, ovino o caprino (R.2507/93 ex-ANA) 0.00 0.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "0511.99.10",
+          "description": "900Q Los demás 0.00 0.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "0511.99.20",
+          "description": "Semen animal"
+        },
+        {
+          "code": "0511.99.20",
+          "description": "100G Ovino o caprino (R.2507/93 ex-ANA) 0.00 0.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "0511.99.20",
+          "description": "900A Los demás 0.00 0.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "0511.99.30",
+          "description": "Huevos de gusano de seda"
+        },
+        {
+          "code": "0511.99.30",
+          "description": "000L Huevos de gusano de seda 0.00 0.00 3.00 LA 4.50 0.50"
+        },
+        {
+          "code": "0511.99.91",
+          "description": "Crin y sus desperdicios, incluso en capas con soporte o sin él"
+        },
+        {
+          "code": "0511.99.91",
+          "description": "De équidos"
+        },
+        {
+          "code": "0511.99.91",
+          "description": "110L Lavadas, blanqueadas o desgrasadas, incluso teñidas 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.91",
+          "description": "120P Desperdicios 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.91",
+          "description": "190M Las demás 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.91",
+          "description": "De bóvidos"
+        },
+        {
+          "code": "0511.99.91",
+          "description": "210R Lavadas, blanqueadas o desgrasadas, incluso teñidas 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.91",
+          "description": "220V Desperdicios 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.91",
+          "description": "290T Las demás 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "Los demás"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "De bovino, ovino o caprino (R.2507/93 ex-ANA)"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "Sangre"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "111Z De bovino, excepto seca (Dto. 499/98; RG 159/98 AFIP) 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "112B De ovino, excepto seca 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "119R Las demás 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "120A Recortes y desperdicios de pieles y cueros en bruto 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "190Y Los demás 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "200Z Despojos de liebre europea (LEPUS CAPENSIS- -L.EUROPAEUS) (R.3023/93 ex-ANA) 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "300E Esponjas naturales de origen animal 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "910Q Cochinilla 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "920U Cartílago de tiburón 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "930X Material biológico comprendido en la Resolución N° 1789/06 MS 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "940A Huevos de Rana Toro (Rana catesbeiana) 8.00 8.00 3.00 LA 5.00 0.25"
+        },
+        {
+          "code": "0511.99.99",
+          "description": "990R Los demás 8.00 8.00 3.00 LA 5.00 0.25"
+        }
+      ]
+    }
+  ],
+  "_rowCount": 181
+}

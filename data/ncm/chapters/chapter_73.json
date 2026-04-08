@@ -1,0 +1,3381 @@
+{
+  "chapter": "73",
+  "title": "Capítulo 71",
+  "sectionTitle": "CAP. 73 SECCION XV METALES COMUNES Y MANUFACTURAS DE ESTOS METALES Notas. 1. Esta Sección no comprende: a. los colores y",
+  "headings": [
+    {
+      "code": "3207",
+      "description": "a 32.10, 32.12, 32.13 ó 32.15);",
+      "subheadings": []
+    },
+    {
+      "code": "7301",
+      "description": "TABLESTACAS DE HIERRO O ACERO, INCLUSO PERFORADAS O HECHAS CON ELEMENTOS ENSAMBLADOS;",
+      "subheadings": [
+        {
+          "code": "7301.10.00",
+          "description": "Tablestacas"
+        },
+        {
+          "code": "7301.10.00",
+          "description": "000N -Tablestacas 10.00 10.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7301.20.00",
+          "description": "Perfiles"
+        },
+        {
+          "code": "7301.20.00",
+          "description": "000C -Perfiles 10.00 10.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7302",
+      "description": "ELEMENTOS PARA VÍAS FÉRREAS, DE FUNDICIÓN, HIERRO O ACERO: CARRILES (RIELES),",
+      "subheadings": [
+        {
+          "code": "7302.10",
+          "description": "Carriles (rieles)"
+        },
+        {
+          "code": "7302.10.10",
+          "description": "De acero, de peso lineal superior o igual a 44,5 kg/m"
+        },
+        {
+          "code": "7302.10.10",
+          "description": "000R De acero, de peso lineal superior o igual a 44,5 kg/m 0.00 0.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7302.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7302.10.90",
+          "description": "000V Los demás 12.00 12.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7302.30.00",
+          "description": "Agujas, puntas de corazón, varillas para mando de agujas y otros elementos para cruce o cambio de vías"
+        },
+        {
+          "code": "7302.30.00",
+          "description": "000K -Agujas, puntas de corazón, varillas para mando de agujas y otros elementos para cruce o cambio de vías 12.00 12.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7302.40.00",
+          "description": "Bridas y placas de asiento"
+        },
+        {
+          "code": "7302.40.00",
+          "description": "000Z -Bridas y placas de asiento 12.00 12.00 3.00 LA 4.50 0.00"
+        },
+        {
+          "code": "7302.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7302.90.00",
+          "description": "000V -Los demás 12.00 12.00 3.00 LA 4.50 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7303",
+      "description": "TUBOS Y PERFILES HUECOS, DE FUNDICIÓN",
+      "subheadings": [
+        {
+          "code": "7303.00.00",
+          "description": "Tubos y perfiles huecos, de fundición"
+        },
+        {
+          "code": "7303.00.00",
+          "description": "100R Tubos 12.00 12.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7303.00.00",
+          "description": "900K Los demás 12.00 12.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7304",
+      "description": "TUBOS Y PERFILES HUECOS, SIN SOLDADURA (SIN COSTURA)*, DE HIERRO O ACERO",
+      "subheadings": [
+        {
+          "code": "7304.1",
+          "description": "Tubos de los tipos utilizados en oleoductos o gasoductos:"
+        },
+        {
+          "code": "7304.11.00",
+          "description": "De acero inoxidable"
+        },
+        {
+          "code": "7304.11.00",
+          "description": "000F De acero inoxidable 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7304.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7304.19.00",
+          "description": "100G De diámetro exterior inferior o igual a 406,4 mm y espesor inferior o igual a 12,7 mm, fabricados según normas"
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LNA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "1600",
+      "description": "16.00 3.00 LA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "7305",
+      "description": "LOS DEMÁS TUBOS (POR EJEMPLO: SOLDADOS O REMACHADOS) DE SECCIÓN CIRCULAR CON DIÁMETRO",
+      "subheadings": [
+        {
+          "code": "7305.1",
+          "description": "Tubos de los tipos utilizados en oleoductos o gasoductos:"
+        },
+        {
+          "code": "7305.11.00",
+          "description": "Soldados longitudinalmente con arco sumergido"
+        },
+        {
+          "code": "7305.11.00",
+          "description": "000Z --Soldados longitudinalmente con arco sumergido 14.00 14.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7305.12.00",
+          "description": "Los demás, soldados longitudinalmente"
+        },
+        {
+          "code": "7305.12.00",
+          "description": "000L --Los demás, soldados longitudinalmente 14.00 14.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7305.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7305.19.00",
+          "description": "000V --Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7305.20.00",
+          "description": "Tubos de entubación («casing») de los tipos utilizados para la extracción de petróleo o gas"
+        },
+        {
+          "code": "7305.20.00",
+          "description": "000B -Tubos de entubación (\"casing\") de los tipos utilizados para la extracción de petróleo o gas 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7305.3",
+          "description": "Los demás, soldados:"
+        },
+        {
+          "code": "7305.31.00",
+          "description": "Soldados longitudinalmente"
+        },
+        {
+          "code": "7305.31.00",
+          "description": "000C --Soldados longitudinalmente 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7305.39.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7305.39.00",
+          "description": "000Y --Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7305.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7305.90.00",
+          "description": "000A -Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        }
+      ]
+    },
+    {
+      "code": "7306",
+      "description": "LOS DEMÁS TUBOS Y PERFILES HUECOS (POR EJEMPLO: SOLDADOS, REMACHADOS, GRAPADOS O CON",
+      "subheadings": [
+        {
+          "code": "7306.1",
+          "description": "Tubos de los tipos utilizados en oleoductos o gasoductos:"
+        },
+        {
+          "code": "7306.11.00",
+          "description": "Soldados, de acero inoxidable"
+        },
+        {
+          "code": "7306.11.00",
+          "description": "100Y De diámetro exterior superior o igual a 254 mm pero inferior o igual a 355,6 mm 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7306.11.00",
+          "description": "900R Los demás 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7306.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7306.19.00",
+          "description": "De diámetro exterior superior o igual a 254 mm pero inferior o igual a 355,6 mm"
+        },
+        {
+          "code": "7306.19.00",
+          "description": "110X De espesor inferior o igual a 12,7 mm, fabricados según normas API 5L/ISO 3183 o similares de otras normas 14.00 14.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7306.19.00",
+          "description": "190Y Las demás 14.00 14.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7306.19.00",
+          "description": "910Q De espesor inferior o igual a 12,7 mm, fabricados según normas API 5L/ISO 3183 o similares de otras normas 14.00 14.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7306.19.00",
+          "description": "990R Los demás 14.00 14.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7306.2",
+          "description": "Tubos de entubación («casing») o de producción («tubing»), de los tipos utilizados para la extracción de petróleo o"
+        },
+        {
+          "code": "7306.21.00",
+          "description": "Soldados, de acero inoxidable"
+        },
+        {
+          "code": "7306.21.00",
+          "description": "000G --Soldados, de acero inoxidable 14.00 14.00 3.00 LA 3.00 0.00"
+        },
+        {
+          "code": "7306.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7306.29.00",
+          "description": "De entubación (\"casing\") de diámetro exterior igual a 339,7 mm (13 3/8\")"
+        },
+        {
+          "code": "7306.29.00",
+          "description": "110L De acero grado J-55 14.00 14.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7306.29.00",
+          "description": "120P De acero grado N-80 14.00 14.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7306.29.00",
+          "description": "130T De acero grado H-40 14.00 14.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7306.29.00",
+          "description": "190M Los demás 14.00 14.00 3.00 LNA 3.00 0.00"
+        },
+        {
+          "code": "7306.29.00",
+          "description": "200N De entubación (\"casing\") o de producción (\"tubing\") de diámetro exterior inferior o igual a 273.1 mm, fabricados según"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LNA 3.00 0.00",
+      "subheadings": []
+    },
+    {
+      "code": "7307",
+      "description": "ACCESORIOS DE TUBERÍA (POR EJEMPLO: EMPALMES (RACORES), CODOS, MANGUITOS), DE FUNDICIÓN,",
+      "subheadings": [
+        {
+          "code": "7307.1",
+          "description": "Moldeados:"
+        },
+        {
+          "code": "7307.11.00",
+          "description": "De fundición no maleable"
+        },
+        {
+          "code": "7307.11.00",
+          "description": "100R Roscados 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.11.00",
+          "description": "200X Cortados o conformados en las dimensiones finales para utilizacion en vehiculos o autopartes. 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.11.00",
+          "description": "900K Los demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19",
+          "description": "Los demás"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "De fundición maleable, de diámetro interior superior a 50,8 mm"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "Con revestimiento epoxi, de diámetro interior inferior a 600 mm"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "Curvas"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "111C De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "112E De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "113G De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "114J De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "115L De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "118T Las demás, roscadas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "119V Las demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "Codos"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "121F De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "122H De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "123K De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "124M De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "125P De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "128W Los demás, roscados 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "129Y Los demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "Tes"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "131J De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "132L De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "133N De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "134Q De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "135T De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "138Z Las demás, roscadas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "139B Las demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "Cuplas"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "141M De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "142P De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "143R De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "144U De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "145W De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "148C Las demás, roscadas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "149E Las demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "Uniones dobles"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "151Q De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "152T De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "153V De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "154X De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "155Z De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "158F Las demás, roscadas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "159H Las demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "Los demás"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "191D Roscados 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "199W Los demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "Cincados, de diámetro interior inferior a 600 mm"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "211H De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "212K De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "213M De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "214P De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "215R De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "218Y Las demás, roscadas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "219A Las demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "221L De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "222N De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "223Q De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "224T De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "225V De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "228B Los demás, roscados 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "229D Los demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "231P De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "232R De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "233U De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "234W De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "235Y De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "238E Las demás, roscadas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "239G Las demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "241T De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "242V De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "243X De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "244Z De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "245B De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "248H Las demás, roscadas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "249K Las demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "251W De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "252Y De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "253A De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "254C De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "255E De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "258L Las demás, roscadas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "259N Las demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "291J Roscados 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "299B Los demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "Sin revestir, de diámetro interior inferior a 600 mm"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "311N De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "312Q De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "313T De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "314V De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "315X De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "318D Las demás, roscadas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "319F Las demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "321R De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "322U De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "323W De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "324Y De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "325A De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "328G Los demás, roscados 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "329J Los demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "331V De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "332X De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "333Z De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "334B De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "335D De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "338K Las demás, roscadas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "339M Las demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "341Y De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "342A De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "343C De diámetro interior igual a 87,9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "344E De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "345G De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "348N Las demás, roscadas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "349Q Las demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "351B De diámetro interior igual a 59,6 mm (designación 50) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "352D De diámetro interior igual a 75,2 mm (designación 65) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "353F De diámetro interior igual a 87.9 mm (designación 80) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "354H De diámetro interior igual a 113 mm (designación 100) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "355K De diámetro interior igual a 163,8 mm (designación 150) según norma IRAM 2548 y equivalentes de otras normas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "358R Las demás, roscadas 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "359U Las demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "391P Roscados 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "399G Los demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "Roscados"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "911W De diámetro interior superior o igual a 600 mm 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "919N Los demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "991X De diámetro interior superior o igual a 600 mm 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.10",
+          "description": "999P Los demás 14.00 14.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "De acero"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "Accesorios de acero sin alear para soldar a tope, de diámetro exterior inferior o igual a 120 mm"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "Codos de noventa grados (90º) radio largo, según normas IRAM 2607 o normas equivalentes (ASME B16.9 y ASTM"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "111M De diámetro exterior igual a 60,3 mm (designación 2) en espesores de 3,9 mm y 5,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "112P De diámetro exterior igual a 73 mm (designación 2 1/2) en espesores de 5,2 mm y 7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "113R De diámetro exterior igual a 88,9 mm (designación 3) en espesores de 5,5 mm y 7,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "114U De diámetro exterior igual a 101,6 mm (designación 3 1/2) en espesores de 5,8 mm y 8,1 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "115W De diámetro exterior igual a 114,3 mm (designación 4) en espesores de 6 mm y 8,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "119E Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "Codos de noventa grados (90º) radio corto, según norma IRAM 2647 o normas equivalentes (ASME B16.9 y ASTM"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "121Q De diámetro exterior igual a 60,3 mm (designación 2) en espesores de 3,9 mm y 5,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "122T De diámetro exterior igual a 73 mm (designación 2 1/2) en espesores de 5,2 mm y 7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "123V De diámetro exterior igual a 88,9 mm (designación 3) en espesores de 5,5 mm y 7,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "124X De diámetro exterior igual a 101,6 mm (designación 3 1/2) en espesores de 5,8 mm y 8,1 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "125Z De diámetro exterior igual a 114,3 mm (designación 4) en espesores de 6 mm y 8,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "129H Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "Codos de cuarenta y cinco grados (45º) radio largo, según norma IRAM 2607 o normas equivalentes (ASME B16.9 y"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "131U De diámetro exterior igual a 60,3 mm (designación 2) en espesores de 3,9 mm y 5,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "132W De diámetro exterior igual a 73 mm (designación 2 1/2) en espesores de 5,2 mm y 7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "133Y De diámetro exterior igual a 88,9 mm (designación 3) en espesores de 5,5 mm y 7,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "134A De diámetro exterior igual a 101,6 mm (designación 3 1/2) en espesores de 5,8 mm y 8,1 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "135C De diámetro exterior igual a 114,3 mm (designación 4) en espesores de 6 mm y 8,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "139L Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "Codos de ciento ochenta grados (180°) radio largo, según norma IRAM 2607 o normas equivalentes (ASME B16.9 y"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "141X De diámetro exterior igual a 60,3 mm (designación 2) en espesores de 3,9 mm y 5,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "142Z De diámetro exterior igual a 73 mm (designación 2 1/2) en espesores de 5,2 mm y 7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "143B De diámetro exterior igual a 88,9 mm (designación 3) en espesores de 5,5 mm y 7,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "144D De diámetro exterior igual a 101,6 mm (designación 3 1/2) en espesores de 5,8 mm y 8,1 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "145F De diámetro exterior igual a 114,3 mm (designación 4) en espesores de 6 mm y 8,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "149P Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "Codos de ciento ochenta grados (180°) radio corto, según norma IRAM 2647 o normas equivalentes (ASME B16.9 y"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "151A De diámetro exterior igual a 60,3 mm (designación 2) en espesores de 3,9 mm y 5,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "152C De diámetro exterior igual a 73 mm (designación 2 1/2) en espesores de 5,2 mm y 7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "153E De diámetro exterior igual a 88,9 mm (designación 3) en espesores de 5,5 mm y 7,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "154G De diámetro exterior igual a 101,6 mm (designación 3 1/2) en espesores de 5,8 mm y 8,1 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "155J De diámetro exterior igual a 114,3 mm (designación 4) en espesores de 6 mm y 8,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "159T Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "Codos de reducción de radio largo, según norma IRAM 2607 o normas equivalentes (ASME B16.9 y ASTM A234)"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "161D De diámetro exterior de la boca mayor igual a 60,5 mm en espesores 3,9 mm y 5,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "162F De diámetro exterior de la boca mayor igual a 73,2 mm en espesores de 5,2 mm y 7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "163H De diámetro exterior de la boca mayor igual a 88,9 mm en espesores de 5,5 mm y 7,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "164K De diámetro exterior de la boca mayor igual a 101,6 mm en espesores de 5,8 mm y 8,1 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "165M De diámetro exterior de la boca mayor igual a 114,3 mm en espesores de 6 mm y 8,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "169W Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "Tes normales, según norma IRAM 2607 o normas equivalentes (ASME B16.9 y ASTM A234)"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "171G De diámetro exterior igual a 60,3 mm (designación 2) en espesores 3,9 mm y 5,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "172J De diámetro exterior igual a 73 mm (designación 2 1/2) en espesores de 5,2 mm y 7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "173L De diámetro exterior igual a 88,9 mm (designación 3) en espesores de 5,5 mm y 7,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "174N De diámetro exterior igual a 101,6 mm (designación 3 1/2) en espesores de 5,8 mm y 8,1 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "175Q De diámetro exterior igual a 114,3 mm (designación 4) en espesores de 6 mm y 8,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "179Z Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "Tes de reducción, según norma IRAM 2607 o normas equivalentes (ASME B16.9 y ASTM A234)"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "181K De diámetro exterior de la boca mayor igual a 60,5 mm en espesores 3,9 mm y 5,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "182M De diámetro exterior de la boca mayor igual a 73,2 mm en espesores de 5,2 mm y 7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "183P De diámetro exterior de la boca mayor igual a 88,9 mm en espesores de 5,5 mm y 7,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "184R De diámetro exterior de la boca mayor igual a 101,6 mm en espesores de 5,8 mm y 8,1 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "185U De diámetro exterior de la boca mayor igual a 114,3 mm en espesores de 6 mm y 8,6 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "189C Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "190L Los demás. 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "Accesorios de acero sin alear para soldar a tope, de diámetro exterior superior a 120 mm"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "Codos de noventa grados (90º) radio largo, según norma IRAM 2607 o normas equivalentes (ASME B16.9 y ASTM"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "211T De diámetro exterior igual a 141,3 mm (designación 5) en espesores de 6,6 mm y 9,5 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "212V De diámetro exterior igual a 168,3 mm (designación 6) en espesores de 7,1 mm y 11 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "213X De diámetro exterior igual a 219,1 mm (designación 8) en espesores de 8,2 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "214Z De diámetro exterior igual a 273,1 mm (designación 10) en espesores de 9,3 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "215B De diámetro exterior igual a 323,8 mm (designación 12) en espesores de 9,5 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "219K Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "221W De diámetro exterior igual a 141,3 mm (designación 5) en espesores de 6,6 mm y 9,5 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "222Y De diámetro exterior igual a 168,3 mm (designación 6) en espesores de 7,1 mm y 11 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "223A De diámetro exterior igual a 219,1 mm (designación 8) en espesores de 8,2 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "224C De diámetro exterior igual a 273,1 mm (designación 10) en espesores de 9,3 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "225E De diámetro exterior igual a 323,8 mm (designación 12) en espesores de 9,5 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "229N Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "231Z De diámetro exterior igual a 141,3 mm (designación 5) en espesores de 6,6 mm y 9,5 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "232B De diámetro exterior igual a 168,3 mm (designación 6) en espesores de 7,1 mm y 11 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "233D De diámetro exterior igual a 219,1 mm (designación 8) en espesores de 8,2 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "234F De diámetro exterior igual a 273,1 mm (designación 10) en espesores de 9,3 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "235H De diámetro exterior igual a 323,8 mm (designación 12) en espesores de 9,5 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "239R Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "241C De diámetro exterior igual a 141,3 mm (designación 5) en espesores de 6,6 mm y 9,5 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "242E De diámetro exterior igual a 168,3 mm (designación 6) en espesores de 7,1 mm y 11 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "243G De diámetro exterior igual a 219,1 mm (designación 8) en espesores de 8,2 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "244J De diámetro exterior igual a 273,1 mm (designación 10) en espesores de 9,3 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "245L De diámetro exterior igual a 323,8 mm (designación 12) en espesores de 9,5 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "249V Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "251F De diámetro exterior igual a 141,3 mm (designación 5) en espesores de 6,6 mm y 9,5 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "252H De diámetro exterior igual a 168,3 mm (designación 6) en espesores de 7,1 mm y 11 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "253K De diámetro exterior igual a 219,1 mm (designación 8) en espesores de 8,2 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "254M De diámetro exterior igual a 273,1 mm (designación 10) en espesores de 9,3 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "255P De diámetro exterior igual a 323,8 mm (designación 12) en espesores de 9,5 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "259Y Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "261J De diámetro exterior de la boca mayor igual a 141,3 mm en espesores 6,6 mm y 9,5 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "262L De diámetro exterior de la boca mayor igual a 168,1 mm en espesores de 7,1 mm y 11 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "263N De diámetro exterior de la boca mayor igual a 218,9 mm en espesores de 8,2 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "264Q De diámetro exterior de la boca mayor igual a 273,1 mm en espesores de 9,3 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "265T De diámetro exterior de la boca mayor igual a 323,8 mm en espesores de 9,5 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "269B Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "271M De diámetro exterior igual a 141,3 mm (designación 5) en espesores 6,6 mm y 9,5 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "272P De diámetro exterior igual a 168,3 mm (designación 6) en espesores de 7,1 mm y 11 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "273R De diámetro exterior igual a 219,1 mm (designación 8) en espesores de 8,2 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "274U De diámetro exterior igual a 273,1 mm (designación 10) en espesores de 9,3 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "275W De diámetro exterior igual a 323,8 mm (designación 12) en espesores de 9,5 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "279E Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "281Q De diámetro exterior de la boca mayor igual a 141,3 mm en espesores 6,6 mm y 9,5 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "282T De diámetro exterior de la boca mayor igual a 168,1 mm en espesores de 7,1 mm y 11 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "283V De diámetro exterior de la boca mayor igual a 218,9 mm en espesores de 8,2 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "284X De diámetro exterior de la boca mayor igual a 273,1 mm en espesores de 9,3 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "285Z De diámetro exterior de la boca mayor igual a 323,8 mm en espesores de 9,5 mm y 12,7 mm 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "289H Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "290R Los demás 14.00 14.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "Los demás, para soldar a tope, de diámetro exterior inferior o igual a 120 mm"
+        },
+        {
+          "code": "7307.19.20",
+          "description": "310W Codos de noventa grados (90°) radio largo, según norma IRAM 2607 o normas equivalentes (ASME B16.9 Y ASTM"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LNA 3.00 6.00",
+      "subheadings": []
+    },
+    {
+      "code": "7308",
+      "description": "CONSTRUCCIONES Y SUS PARTES (POR EJEMPLO: PUENTES Y SUS PARTES, COMPUERTAS DE ESCLUSAS,",
+      "subheadings": [
+        {
+          "code": "7308.10.00",
+          "description": "Puentes y sus partes"
+        },
+        {
+          "code": "7308.10.00",
+          "description": "100Y Puentes 14.00 14.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7308.10.00",
+          "description": "200D Partes 14.00 14.00 0.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7308.20.00",
+          "description": "Torres y castilletes"
+        },
+        {
+          "code": "7308.20.00",
+          "description": "100M Castilletes blindados (R.3115/94 ex-ANA) 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7308.20.00",
+          "description": "200T Torres para grupos electrógenos de energía eólica 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7308.20.00",
+          "description": "900F Los demás 14.00 14.00 0.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7308.30.00",
+          "description": "Puertas y ventanas y sus marcos, contramarcos y umbrales"
+        },
+        {
+          "code": "7308.30.00",
+          "description": "Puertas y sus marcos"
+        },
+        {
+          "code": "7308.30.00",
+          "description": "110E Puertas de acero, de peso superior o igual a 24 kg pero inferior o igual a 100 kg, excepto las puertas blindadas"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LNA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LA 3.00 5.00",
+      "subheadings": []
+    },
+    {
+      "code": "7309",
+      "description": "DEPÓSITOS, CISTERNAS, CUBAS Y RECIPIENTES SIMILARES PARA CUALQUIER MATERIA (EXCEPTO GAS",
+      "subheadings": [
+        {
+          "code": "7309.00.10",
+          "description": "Para almacenamiento de granos o demás materias sólidas"
+        },
+        {
+          "code": "7309.00.10",
+          "description": "000G Para almacenamiento de granos o demás materias sólidas 14.00 14.00 0.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7309.00.20",
+          "description": "Recipientes isotérmicos refrigerados a nitrógeno líquido, de los tipos utilizados para semen, sangre, tejidos biológicos y"
+        },
+        {
+          "code": "7309.00.20",
+          "description": "000R Recipientes isotérmicos refrigerados a nitrógeno líquido, de los tipos utilizados para semen, sangre, tejidos biológicos y"
+        },
+        {
+          "code": "7309.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7309.00.90",
+          "description": "000K Los demás 14.00 14.00 0.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7310",
+      "description": "DEPÓSITOS, BARRILES, TAMBORES, BIDONES, LATAS O BOTES, CAJAS Y RECIPIENTES SIMILARES, PARA",
+      "subheadings": [
+        {
+          "code": "7310.10",
+          "description": "De capacidad superior o igual a 50 l"
+        },
+        {
+          "code": "7310.10.10",
+          "description": "Recipientes isotérmicos refrigerados a nitrógeno líquido, de los tipos utilizados para semen, sangre, tejidos biológicos y"
+        },
+        {
+          "code": "7310.10.10",
+          "description": "000A Recipientes isotérmicos refrigerados a nitrógeno líquido, de los tipos utilizados para semen, sangre, tejidos biológicos y"
+        },
+        {
+          "code": "7310.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7310.10.90",
+          "description": "Aptos para estar en contacto con alimentos"
+        },
+        {
+          "code": "7310.10.90",
+          "description": "110M Tambores de acero de 200 l a 230 l de capacidad, con tapa desmontable, incluso presentados sin tapa. 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7310.10.90",
+          "description": "190N Los demás 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7310.10.90",
+          "description": "910F Tambores de acero de 200 l a 230 l de capacidad, con tapa desmontable, incluso presentados sin tapa 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7310.10.90",
+          "description": "990G Los demas 14.00 14.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7310.2",
+          "description": "De capacidad inferior a 50 l:"
+        },
+        {
+          "code": "7310.21",
+          "description": "Latas o botes para ser cerrados por soldadura o rebordeado"
+        },
+        {
+          "code": "7310.21.10",
+          "description": "Aptos para el envasado de productos alimenticios"
+        },
+        {
+          "code": "7310.21.10",
+          "description": "100G De capacidad inferior o igual a 0,25 l 14.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.21.10",
+          "description": "200M De capacidad superior a 0,25 l pero inferior a 0,5 l 14.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.21.10",
+          "description": "300T De capacidad superior o igual a 0,5 l pero inferior a 1 l 14.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.21.10",
+          "description": "400Y De capacidad superior o igual a 1 l pero inferior a 5 l 14.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.21.10",
+          "description": "900A Los demás 14.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.21.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7310.21.90",
+          "description": "100K De capacidad inferior o igual a 1 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.21.90",
+          "description": "200Q De capacidad superior a 1 l pero inferior o igual a 5 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.21.90",
+          "description": "300W De capacidad superior a 5 l pero inferior o igual 25 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.21.90",
+          "description": "900D Los demás 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.29",
+          "description": "Los demás"
+        },
+        {
+          "code": "7310.29.10",
+          "description": "Aptos para el envasado de productos alimenticios"
+        },
+        {
+          "code": "7310.29.10",
+          "description": "100C De capacidad inferior o igual a 0,25 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.29.10",
+          "description": "200H De capacidad superior a 0,25 l pero pero inferior o igual a 0,5 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.29.10",
+          "description": "300N De capacidad superior a 0,5 l pero inferior o igual a 1 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.29.10",
+          "description": "400U De capacidad superior a 1 l pero inferior o igual a 5 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.29.10",
+          "description": "900W Los demás 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.29.20",
+          "description": "Recipientes isotérmicos refrigerados a nitrógeno líquido, de los tipos utilizados para semen, sangre, tejidos biológicos y"
+        },
+        {
+          "code": "7310.29.20",
+          "description": "000G Recipientes isotérmicos refrigerados a nitrógeno líquido, de los tipos utilizados para semen, sangre, tejidos biológicos y"
+        },
+        {
+          "code": "7310.29.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7310.29.90",
+          "description": "100F De capacidad inferior o igual a 0,3 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.29.90",
+          "description": "200L De capacidad superior a 0,3 l pero inferior o igual a 0,56 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.29.90",
+          "description": "300R De capacidad superior a 0,56 l pero inferior o igual a 0,98 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.29.90",
+          "description": "400X De capacidad superior a 0,98 l pero inferior o igual a 3,6 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.29.90",
+          "description": "500C De capacidad superior a 3,6 l pero inferior o igual a 4,3 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.29.90",
+          "description": "600H De capacidad superior a 4,3 l pero inferior o igual a 5,2 l 14.00 14.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7310.29.90",
+          "description": "900Z Los demás 14.00 14.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7311",
+      "description": "RECIPIENTES PARA GAS COMPRIMIDO O LICUADO, DE FUNDICIÓN, HIERRO O ACERO",
+      "subheadings": [
+        {
+          "code": "7311.00.00",
+          "description": "Recipientes para gas comprimido o licuado, de fundición, hierro o acero"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "Garrafas de chapa de acero utilizadas para el llenado de diez (10) kilogramos de una mezcla de propano y butano, con"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "110D Con válvula incorporada (R.51/98 MEOSP) 14.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "190E Las demás (R.51/98 MEOSP) 14.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "200F Cilindros para gas natural comprimido, de los tipos utilizados en vehículos automóviles 14.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "300L Recipientes con acetona para el transporte de acetileno 14.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "910X De capacidad inferior o igual a 0,5 l 14.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "920A De capacidad superior a 0,5 l pero inferior o igual a 1 l 14.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "930D De capacidad superior a 1 l pero inferior o igual a 5 l 14.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "940G De capacidad superior a 5 l pero inferior o igual a 10 l 14.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "950K De capacidad superior a 10 l pero inferior o igual a 20 l 14.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "960N De capacidad superior a 20 l pero inferior o igual a 30 l 14.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "970R De capacidad superior a 30 l pero inferior o igual a 50 l 14.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "980V De capacidad superior a 50 l pero inferior o igual a 2000 l 14.00 35.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7311.00.00",
+          "description": "990Y Los demás 14.00 35.00 3.00 LNA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7312",
+      "description": "CABLES, TRENZAS, ESLINGAS Y ARTÍCULOS SIMILARES, DE HIERRO O ACERO, SIN AISLAR PARA",
+      "subheadings": [
+        {
+          "code": "7312.10",
+          "description": "Cables"
+        },
+        {
+          "code": "7312.10.10",
+          "description": "De alambre de acero revestido con bronce o latón"
+        },
+        {
+          "code": "7312.10.10",
+          "description": "000M De alambre de acero revestido con bronce o latón 14.00 0.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7312.10.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7312.10.90",
+          "description": "Monocordones"
+        },
+        {
+          "code": "7312.10.90",
+          "description": "Tipo de construcción 1x2"
+        },
+        {
+          "code": "7312.10.90",
+          "description": "111B Con un contenido de carbono inferior al 0,6 % en peso 14.00 14.00 3.00 LNA 3.00 4.50"
+        },
+        {
+          "code": "7312.10.90",
+          "description": "119U Los demás 14.00 14.00 3.00 LNA 3.00 4.50"
+        },
+        {
+          "code": "7312.10.90",
+          "description": "Tipo de construcción 1x3"
+        },
+        {
+          "code": "7312.10.90",
+          "description": "121E Con un contenido de carbono inferior al 0,6 % en peso 14.00 14.00 3.00 LNA 3.00 4.50"
+        },
+        {
+          "code": "7312.10.90",
+          "description": "129X Los demás 14.00 14.00 3.00 LNA 3.00 4.50"
+        },
+        {
+          "code": "7312.10.90",
+          "description": "Tipo de construcción 1x7"
+        },
+        {
+          "code": "7312.10.90",
+          "description": "131H Revestidos de cobre con una conductividad inferior al 20 % de la correspondiente al cobre recocido patrón según"
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "description": "14.00 3.00 LNA 3.00 4.50",
+      "subheadings": []
+    },
+    {
+      "code": "7313",
+      "description": "ALAMBRE DE PÚAS, DE HIERRO O ACERO; ALAMBRE (SIMPLE O DOBLE) Y FLEJE, TORCIDOS, INCLUSO CON",
+      "subheadings": [
+        {
+          "code": "7313.00.00",
+          "description": "Alambre de púas, de hierro o acero; alambre (simple o doble) y fleje, torcidos, incluso con púas, de hierro o acero, de"
+        },
+        {
+          "code": "7313.00.00",
+          "description": "000G ALAMBRE DE PÚAS, DE HIERRO O ACERO; ALAMBRE (SIMPLE O DOBLE) Y FLEJE, TORCIDOS, INCLUSO CON"
+        }
+      ]
+    },
+    {
+      "code": "7314",
+      "description": "TELAS METÁLICAS (INCLUIDAS LAS CONTINUAS O SIN FIN), REDES Y REJAS, DE ALAMBRE DE HIERRO O",
+      "subheadings": [
+        {
+          "code": "7314.1",
+          "description": "Telas metálicas tejidas:"
+        },
+        {
+          "code": "7314.12.00",
+          "description": "Telas metálicas continuas o sin fin, de acero inoxidable, para máquinas"
+        },
+        {
+          "code": "7314.12.00",
+          "description": "000N --Telas metálicas continuas o sin fin, de acero inoxidable, para máquinas 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7314.14.00",
+          "description": "Las demás telas metálicas tejidas, de acero inoxidable"
+        },
+        {
+          "code": "7314.14.00",
+          "description": "000M --Las demás telas metálicas tejidas, de acero inoxidable 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7314.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7314.19.00",
+          "description": "100C Galvanizadas para mosquitero (R.1096/97 MEOSP) 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7314.19.00",
+          "description": "900W Las demás 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7314.20.00",
+          "description": "Redes y rejas, soldadas en los puntos de cruce, de alambre cuya mayor dimensión de la sección transversal sea"
+        },
+        {
+          "code": "7314.20.00",
+          "description": "100J Con muescas, cordones, surcos o relieves 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7314.20.00",
+          "description": "900C Las demás 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7314.3",
+          "description": "Las demás redes y rejas, soldadas en los puntos de cruce:"
+        },
+        {
+          "code": "7314.31.00",
+          "description": "Cincadas"
+        },
+        {
+          "code": "7314.31.00",
+          "description": "000E --Cincadas 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7314.39.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7314.39.00",
+          "description": "000A --Las demás 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7314.4",
+          "description": "Las demás telas metálicas, redes y rejas:"
+        },
+        {
+          "code": "7314.41.00",
+          "description": "Cincadas"
+        },
+        {
+          "code": "7314.41.00",
+          "description": "000U --Cincadas 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7314.42.00",
+          "description": "Revestidas de plástico"
+        },
+        {
+          "code": "7314.42.00",
+          "description": "000F --Revestidas de plástico 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7314.49.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7314.49.00",
+          "description": "000P --Las demás 14.00 14.00 3.00 LA 3.00 4.50"
+        },
+        {
+          "code": "7314.50.00",
+          "description": "Chapas y tiras, extendidas (desplegadas)"
+        },
+        {
+          "code": "7314.50.00",
+          "description": "000W -Chapas y tiras, extendidas (desplegadas) 14.00 14.00 3.00 LA 3.00 4.50"
+        }
+      ]
+    },
+    {
+      "code": "7315",
+      "description": "CADENAS Y SUS PARTES, DE FUNDICIÓN, HIERRO O ACERO",
+      "subheadings": [
+        {
+          "code": "7315.1",
+          "description": "Cadenas de eslabones articulados y sus partes:"
+        },
+        {
+          "code": "7315.11.00",
+          "description": "Cadenas de rodillos"
+        },
+        {
+          "code": "7315.11.00",
+          "description": "De los tipos utilizados en bicicletas"
+        },
+        {
+          "code": "7315.11.00",
+          "description": "110D De 12,70 x 2,38 mm 14.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.11.00",
+          "description": "120G De 12,70 x 3,17 mm 14.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.11.00",
+          "description": "190E Las demás 14.00 0.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.11.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7315.11.00",
+          "description": "910X De paso corto, para transmisión según norma IRAM 5184, con paso superior o igual a 31.75 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.11.00",
+          "description": "920A De paso largo, para transmisión según norma IRAM 5357, con paso superior o igual a 31.75 mm 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.11.00",
+          "description": "930D De los tipos utilizados en vehiculos automoviles. 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.11.00",
+          "description": "990Y Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.12",
+          "description": "Las demás cadenas"
+        },
+        {
+          "code": "7315.12.10",
+          "description": "Para transmisión"
+        },
+        {
+          "code": "7315.12.10",
+          "description": "100X De los tipos utilizados en vehiculos automoviles. 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.12.10",
+          "description": "900Q Los demas. 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.12.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7315.12.90",
+          "description": "100A De los tipos utilizados en vehiculos o autopartes 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.12.90",
+          "description": "900U Los demas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.19.00",
+          "description": "Partes"
+        },
+        {
+          "code": "7315.19.00",
+          "description": "100W De los tipos utilizados en vehiculos o autopartes 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.19.00",
+          "description": "900P Los demas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.20.00",
+          "description": "Cadenas antideslizantes"
+        },
+        {
+          "code": "7315.20.00",
+          "description": "100C De los tipos utilizados en vehiculos o autopartes 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.20.00",
+          "description": "900W Los demas 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.8",
+          "description": "Las demás cadenas:"
+        },
+        {
+          "code": "7315.81.00",
+          "description": "Cadenas de eslabones con contrete (travesaño)"
+        },
+        {
+          "code": "7315.81.00",
+          "description": "000U --Cadenas de eslabones con contrete (travesaño) 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "Las demás cadenas, de eslabones soldados"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "Tipo patente, con una tensión mínima de rotura inferior a 400 N/mm2"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "Pulidas"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "111R De diámetro del alambre del eslabón superior o igual a 2,5 mm pero inferior o igual a 25 mm 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "118G Las demás, de diámetro del alambre del eslabón inferior a 2,5 mm 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "119J Las demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "Galvanizadas"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "121V De diámetro del alambre del eslabón superior o igual a 2,5 mm pero inferior o igual a 25 mm 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "128K Las demás, de diámetro del alambre del eslabón inferior a 2,5 mm 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "129M Las demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "191T De diámetro del alambre del eslabón superior o igual a 2,5 mm pero inferior o igual a 25 mm 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "198H Las demás, de diámetro del alambre del eslabón inferior a 2,5 mm 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "199K Las demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "910H Tipo patente 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.82.00",
+          "description": "990J Las demás 14.00 14.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7315.89.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7315.89.00",
+          "description": "000P --Las demás 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7315.90.00",
+          "description": "Las demás partes"
+        },
+        {
+          "code": "7315.90.00",
+          "description": "000W -Las demás partes 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7316",
+      "description": "ANCLAS, REZONES Y SUS PARTES, DE FUNDICIÓN, HIERRO O ACERO",
+      "subheadings": [
+        {
+          "code": "7316.00.00",
+          "description": "Anclas, rezones y sus partes, de fundición, hierro o acero"
+        },
+        {
+          "code": "7316.00.00",
+          "description": "000M ANCLAS, REZONES Y SUS PARTES, DE FUNDICIÓN, HIERRO O ACERO. 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7317",
+      "description": "PUNTAS, CLAVOS, CHINCHETAS (CHINCHES), GRAPAS APUNTADAS, ONDULADAS O BISELADAS, Y",
+      "subheadings": [
+        {
+          "code": "7317.00.10",
+          "description": "Tachuelas"
+        },
+        {
+          "code": "7317.00.10",
+          "description": "000Q Tachuelas 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7317.00.20",
+          "description": "Grapas de alambre curvado"
+        },
+        {
+          "code": "7317.00.20",
+          "description": "000A Grapas de alambre curvado 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7317.00.30",
+          "description": "Puntas o dientes para máquinas textiles"
+        },
+        {
+          "code": "7317.00.30",
+          "description": "000K Puntas o dientes para máquinas textiles 14.00 14.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7317.00.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7317.00.90",
+          "description": "000U Los demás 14.00 14.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7318",
+      "description": "TORNILLOS, PERNOS, TUERCAS, TIRAFONDOS, ESCARPIAS ROSCADAS, REMACHES, PASADORES,",
+      "subheadings": [
+        {
+          "code": "7318.1",
+          "description": "Artículos roscados:"
+        },
+        {
+          "code": "7318.11.00",
+          "description": "Tirafondos"
+        },
+        {
+          "code": "7318.11.00",
+          "description": "100F De uso ferroviario, con peso unitario superior o igual a 400 g 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.11.00",
+          "description": "900Z Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.12.00",
+          "description": "Los demás tornillos para madera"
+        },
+        {
+          "code": "7318.12.00",
+          "description": "De acero sin alear"
+        },
+        {
+          "code": "7318.12.00",
+          "description": "Con tratamiento tèrmico"
+        },
+        {
+          "code": "7318.12.00",
+          "description": "111Y De diámetro mayor de rosca inferior o igual a 4,2 mm 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.12.00",
+          "description": "119Q Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.12.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7318.12.00",
+          "description": "191Z De diámetro mayor de rosca inferior o igual a 4,2 mm 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.12.00",
+          "description": "199R Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.12.00",
+          "description": "De acero inoxidable"
+        },
+        {
+          "code": "7318.12.00",
+          "description": "210B De diámetro mayor de rosca inferior o igual a 4,2 mm 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.12.00",
+          "description": "290C Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.12.00",
+          "description": "900L Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.13.00",
+          "description": "Escarpias y armellas, roscadas"
+        },
+        {
+          "code": "7318.13.00",
+          "description": "000Z --Escarpias y armellas, roscadas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "Tornillos taladradores"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "De acero sin alear, con un contenido de carbono inferior o igual a 0,25 % en peso"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "Con tratamiento térmico"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "111X De diámetro exterior de rosca inferior o igual a 4,2 mm 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "119P Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "191Y De diámetro exterior de rosca inferior o igual a 4,2 mm 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "199Q Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "Los demás, de acero sin alear"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "211C De diámetro exterior de rosca inferior o igual a 4,2 mm 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "219V Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "291D De diámetro exterior de rosca inferior o igual a 4,2 mm 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "299W Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "De acero inoxidable"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "310F De diámetro exterior de rosca inferior o igual a 4,2 mm 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "390G Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.14.00",
+          "description": "900K Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "Los demás tornillos y pernos, incluso con sus tuercas y arandelas"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "Tornillos perforador-roscantes, de acero sin alear"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "Con arandela ensamblada"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "111J De diámetro exterior de rosca inferior o igual a 4,2 mm 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "119B Los demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "191K De diámetro exterior de rosca inferior o igual a 4,2 mm 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "199C Los demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "Tornillos perforador-roscantes, de acero inoxidable"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "210M De diámetro exterior de rosca inferior o igual a 4,2 mm 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "290N Los demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "Pernos (bulones)"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "310T De acero inoxidable 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "320W Los demás, en U (U-bolt) 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "391W Tipo clase 4.6 y 4.8, según norma ISO 898 o equivalentes de otras normas 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "392Y Tipo clase 5.6 y 5.8, según norma ISO 898 o equivalentes de otras normas 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "393A Tipo clase 6.8 según norma ISO 898 o equivalentes de otras normas 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "394C Tipo clase 8.8, según norma ISO 898 o equivalentes de otras normas 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "395E Tipo clase 10.9, según norma ISO 898 o equivalentes de otras normas 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "396G Tipo clase 12.9, según norma ISO 898 o equivalentes de otras normas 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "399N Los demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "Tornillos para metales"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "De acero sin alear"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "411A De diámetro exterior de rosca inferior o igual 4,2 mm 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "412C De diámetro exterior de rosca superior a 4,2 mm con cabeza cuadrada y punta copa 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "419T Los demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "De acero inoxidable"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "421D De diámetro exterior de rosca inferior o igual 4,2 mm 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "429W Los demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "490Z Los demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "Prisioneros"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "510D De acero inoxidable 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "590E Los demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "Espárragos"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "610J De acero sin alear 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "620M De acero aleado, excepto acero inoxidable 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "690K Los demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "910A De acero inoxidable 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.15.00",
+          "description": "990B Los demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "Tuercas"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "De acero sin alear"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "Con tratamiento térmico"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "111W Con collar o arandela 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "112Y Autofrenantes, incluso con collar o arandela 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "113A Hexagonales o cuadradas, lisas, sin collar o arandela, excepto las autofrenantes 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "119N Las demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "Sin tratamiento térmico"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "121Z Con collar o arandela 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "122B Autofrenantes, incluso con collar o arandela 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "123D Hexagonales o cuadradas, lisas, sin collar o arandela, excepto las autofrenantes 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "129R Las demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "200W De acero inoxidable 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.16.00",
+          "description": "900J Las demás 16.00 25.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7318.19.00",
+          "description": "100B Barras totalmente roscadas, de longitud superior o igual a 1000 mm 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.19.00",
+          "description": "900V Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.2",
+          "description": "Artículos sin rosca:"
+        },
+        {
+          "code": "7318.21.00",
+          "description": "Arandelas de muelle (resorte) y las demás de seguridad"
+        },
+        {
+          "code": "7318.21.00",
+          "description": "100V Arandelas de muelle (resorte) 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.21.00",
+          "description": "900N Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.22.00",
+          "description": "Las demás arandelas"
+        },
+        {
+          "code": "7318.22.00",
+          "description": "100G De acero sin alear 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.22.00",
+          "description": "200M De acero inoxidable 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.22.00",
+          "description": "900A Las demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.23.00",
+          "description": "Remaches"
+        },
+        {
+          "code": "7318.23.00",
+          "description": "Parcialmente huecos"
+        },
+        {
+          "code": "7318.23.00",
+          "description": "110X De acero sin alear 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.23.00",
+          "description": "120A De acero inoxidable 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.23.00",
+          "description": "190Y Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.23.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7318.23.00",
+          "description": "910Q De acero sin alear 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.23.00",
+          "description": "920U De acero inoxidable 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.23.00",
+          "description": "990R Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.24.00",
+          "description": "Pasadores, clavijas y chavetas"
+        },
+        {
+          "code": "7318.24.00",
+          "description": "000A --Pasadores, clavijas y chavetas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7318.29.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7318.29.00",
+          "description": "000K --Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7319",
+      "description": "AGUJAS DE COSER, DE TEJER, PASACINTAS, AGUJAS DE GANCHILLO (CROCHÉ), PUNZONES PARA",
+      "subheadings": [
+        {
+          "code": "7319.40.00",
+          "description": "Alfileres de gancho (imperdibles) y demás alfileres"
+        },
+        {
+          "code": "7319.40.00",
+          "description": "000Z -Alfileres de gancho (imperdibles) y demás alfileres 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7319.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7319.90.00",
+          "description": "100A Agujas de tejer 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7319.90.00",
+          "description": "200F Agujas de ganchillo (croché) 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7319.90.00",
+          "description": "300L Agujas de coser, zurcir o bordar 16.00 16.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7319.90.00",
+          "description": "900U Los demás 16.00 16.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7320",
+      "description": "MUELLES (RESORTES), BALLESTAS Y SUS HOJAS, DE HIERRO O ACERO",
+      "subheadings": [
+        {
+          "code": "7320.10.00",
+          "description": "Ballestas y sus hojas"
+        },
+        {
+          "code": "7320.10.00",
+          "description": "000L -Ballestas y sus hojas 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7320.20",
+          "description": "Muelles (resortes) helicoidales"
+        },
+        {
+          "code": "7320.20.10",
+          "description": "Cilíndricos"
+        },
+        {
+          "code": "7320.20.10",
+          "description": "000K Cilíndricos 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7320.20.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7320.20.90",
+          "description": "000N Los demás 16.00 16.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7320.90.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7320.90.00",
+          "description": "100E En espiral plano 16.00 16.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7320.90.00",
+          "description": "900Y Los demás 16.00 16.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7321",
+      "description": "ESTUFAS, CALDERAS CON HOGAR, COCINAS (INCLUIDAS LAS QUE PUEDAN UTILIZARSE ACCESORIAMENTE",
+      "subheadings": [
+        {
+          "code": "7321.1",
+          "description": "Aparatos de cocción y calientaplatos:"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "De combustibles gaseosos, o de gas y otros combustibles"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "Cocinas con horno incorporado"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "De ancho inferior o igual a 50 cm"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "111C Sin parrilla, sin iluminación interior ni encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "112E Sin parrilla, con iluminación interior o encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "113G Con parrilla, sin iluminación interior ni encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "114J Con parrilla, con iluminación interior o encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "De ancho superior a 50 cm pero inferior o igual a 60 cm"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "121F Sin parrilla, sin iluminación interior ni encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "122H Sin parrilla, con iluminación interior o encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "123K Con parrilla, sin iluminación interior ni encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "124M Con parrilla, con iluminación interior o encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "191D Sin parrilla, sin iluminación interior, ni encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "192F Sin parrilla, con iluminación interior o encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "193H Con parrilla, sin iluminación interior, ni encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "194K Con parrilla, con iluminación interior o encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "Hornos de empotrar"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "210F Con iluminación interior o encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "290G Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "Anafes"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "De 2 hornallas"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "311N Con encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "319F Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "De 3 hornallas"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "321R Sin tapa, con encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "322U Con tapa, con encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "323W Sin tapa, sin encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "324Y Con tapa, sin encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "De 4 hornallas"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "331V Sin tapa, con encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "332X Con tapa, con encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "333Z Sin tapa, sin encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "334B Con tapa, sin encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "391P Con encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "399G Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "910U Con iluminación interior o encendido 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.11.00",
+          "description": "990V Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.12.00",
+          "description": "De combustibles líquidos"
+        },
+        {
+          "code": "7321.12.00",
+          "description": "000D --De combustibles líquidos 20.00 20.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7321.19.00",
+          "description": "Los demás, incluidos los aparatos de combustibles sólidos"
+        },
+        {
+          "code": "7321.19.00",
+          "description": "100T De combustibles sólidos 20.00 20.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7321.19.00",
+          "description": "900L Los demás 20.00 20.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7321.8",
+          "description": "Los demás aparatos:"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "De combustibles gaseosos, o de gas y otros combustibles"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "Sin ventilación exterior"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "110Z De capacidad inferior o igual a 2500 Kcal/h 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "120C De capacidad superior a 2500 Kcal/h pero inferior o igual a 4000 Kcal/h 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "190A Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "Con ventilación exterior"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "Tiro natural"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "211G De capacidad inferior o igual a 2500 Kcal/h 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "212J De capacidad superior a 2500 Kcal/h pero inferior o igual a 4000 Kcal/h 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "219Z Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "Tiro balanceado"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "221K De capacidad inferior o igual a 2500 Kcal/h 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "222M De capacidad superior a 2500 Kcal/h pero inferior o igual a 4000 Kcal/h 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.81.00",
+          "description": "229C Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.82.00",
+          "description": "De combustibles líquidos"
+        },
+        {
+          "code": "7321.82.00",
+          "description": "000C --De combustibles líquidos 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.89.00",
+          "description": "Los demás, incluidos los aparatos de combustibles sólidos"
+        },
+        {
+          "code": "7321.89.00",
+          "description": "100R De combustibles sólidos 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.89.00",
+          "description": "900K Los demás 20.00 20.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7321.90.00",
+          "description": "Partes"
+        },
+        {
+          "code": "7321.90.00",
+          "description": "000T -Partes 18.00 18.00 3.00 LNA 3.00 5.50"
+        }
+      ]
+    },
+    {
+      "code": "7322",
+      "description": "RADIADORES PARA CALEFACCIÓN CENTRAL, DE CALENTAMIENTO NO ELÉCTRICO, Y SUS PARTES, DE",
+      "subheadings": [
+        {
+          "code": "7322.1",
+          "description": "Radiadores y sus partes:"
+        },
+        {
+          "code": "7322.11.00",
+          "description": "De fundición"
+        },
+        {
+          "code": "7322.11.00",
+          "description": "100Q Partes 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7322.11.00",
+          "description": "900J Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7322.19.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7322.19.00",
+          "description": "100L Partes 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7322.19.00",
+          "description": "200R Radiadores para calefacción central, bimetálicos, con superficie exterior de aluminio y núcleo de acero 18.00 18.00 3.00 LNA 0.00 7.00"
+        },
+        {
+          "code": "7322.19.00",
+          "description": "900E Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7322.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7322.90.10",
+          "description": "Generadores de aire caliente, de combustible líquido, de capacidad superior o igual a 1500 kcal/h pero inferior o igual a"
+        },
+        {
+          "code": "7322.90.10",
+          "description": "000W Generadores de aire caliente, de combustible líquido, de capacidad superior o igual a 1.500 kcal/h pero inferior o igual"
+        },
+        {
+          "code": "7322.90.90",
+          "description": "Los demás"
+        },
+        {
+          "code": "7322.90.90",
+          "description": "000Z Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7323",
+      "description": "ARTÍCULOS DE USO DOMÉSTICO Y SUS PARTES, DE FUNDICIÓN, HIERRO O ACERO; LANA DE HIERRO O",
+      "subheadings": [
+        {
+          "code": "7323.10.00",
+          "description": "Lana de hierro o acero; esponjas, estropajos, guantes y artículos similares para fregar, lustrar o usos análogos"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "Lana de hierro o acero"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "Acondicionada para la venta al por menor"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "111C Impregnada con jabón 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "119V Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "191D Impregnada con jabón 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "199W Las demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "200C Guantes 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "Acondicionados para la venta al por menor"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "911W De acero inoxidable 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "919N Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "991X De acero inoxidable 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.10.00",
+          "description": "999P Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.9",
+          "description": "Los demás:"
+        },
+        {
+          "code": "7323.91.00",
+          "description": "De fundición, sin esmaltar"
+        },
+        {
+          "code": "7323.91.00",
+          "description": "100X Ollas y cacerolas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.91.00",
+          "description": "200C Planchas (biferas) 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.91.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7323.91.00",
+          "description": "910U Aptos para estar en contacto con alimentos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.91.00",
+          "description": "990V Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.92.00",
+          "description": "De fundición, esmaltados"
+        },
+        {
+          "code": "7323.92.00",
+          "description": "100J Ollas y cacerolas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.92.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7323.92.00",
+          "description": "910F Aptos para estar en contacto con alimentos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.92.00",
+          "description": "990G Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "De acero inoxidable"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "Acondicionados para la venta al por menor conteniendo dos o más artículos"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "110Z De hasta 6 unidades inclusive 18.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "120C De 7 y hasta 12 unidades inclusive 18.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "130F De 13 y hasta 24 unidades inclusive 18.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "190A Los demás 18.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "200B Ollas y cacerolas 18.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "300G Pavas, cafeteras y teteras 18.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "400M Bandejas 18.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "500T Fuentes y ensaladeras 18.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "600Y Azucareros 18.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "700D Vasos, copas y jarros 18.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "910T Aptos para estar en contacto con alimentos 18.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.93.00",
+          "description": "990U Los demás 18.00 35.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "De hierro o acero, esmaltados"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "Acondicionados para la venta al por menor conteniendo dos o más artículos"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "110L De hasta 6 unidades inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "120P De 7 y hasta 12 unidades inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "130T De 13 y hasta 24 unidades inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "190M Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "200N Ollas y cacerolas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "300U Pavas, cafeteras y teteras 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "400Z Bandejas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "500E Fuentes y ensaladeras 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "600K Azucareros 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "700Q Vasos, copas y jarros 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "910E Aptos para estar en contacto con alimentos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.94.00",
+          "description": "990F Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "Los demás"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "Acondicionados para la venta al por menor conteniendo dos o más artículos"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "110W De hasta 6 unidades inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "120Z De 7 y hasta 12 unidades inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "130C De 13 y hasta 24 unidades inclusive 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "190X Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "Ollas y cacerolas"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "210B Revestidas de antiadherente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "290C Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "Sartenes"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "310G Revestidos de antiadherente 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "390H Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "400J Tarros 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "500P Fuentes y ensaladeras 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "600V Bandejas 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "910P Aptos para estar en contacto con alimentos 18.00 18.00 3.00 LA 0.00 7.00"
+        },
+        {
+          "code": "7323.99.00",
+          "description": "990Q Los demás 18.00 18.00 3.00 LA 0.00 7.00"
+        }
+      ]
+    },
+    {
+      "code": "7324",
+      "description": "ARTÍCULOS DE HIGIENE O TOCADOR, Y SUS PARTES, DE FUNDICIÓN, HIERRO O ACERO",
+      "subheadings": [
+        {
+          "code": "7324.10.00",
+          "description": "Fregaderos (piletas de lavar) y lavabos, de acero inoxidable"
+        },
+        {
+          "code": "7324.10.00",
+          "description": "100Q Fregaderos (piletas de lavar) 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7324.10.00",
+          "description": "900J Los demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7324.2",
+          "description": "Bañeras:"
+        },
+        {
+          "code": "7324.21.00",
+          "description": "De fundición, incluso esmaltadas"
+        },
+        {
+          "code": "7324.21.00",
+          "description": "000L --De fundición, incluso esmaltadas 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7324.29.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7324.29.00",
+          "description": "000G --Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7324.90.00",
+          "description": "Los demás, incluidas las partes"
+        },
+        {
+          "code": "7324.90.00",
+          "description": "000Y -Los demás, incluidas las partes 18.00 18.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7325",
+      "description": "LAS DEMÁS MANUFACTURAS MOLDEADAS DE FUNDICIÓN, HIERRO O ACERO",
+      "subheadings": [
+        {
+          "code": "7325.10.00",
+          "description": "De fundición no maleable"
+        },
+        {
+          "code": "7325.10.00",
+          "description": "000D -De fundición no maleable 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7325.9",
+          "description": "Las demás:"
+        },
+        {
+          "code": "7325.91.00",
+          "description": "Bolas y artículos similares para molinos"
+        },
+        {
+          "code": "7325.91.00",
+          "description": "000D --Bolas y artículos similares para molinos 18.00 18.00 3.00 LA 3.00 6.00"
+        },
+        {
+          "code": "7325.99",
+          "description": "Las demás"
+        },
+        {
+          "code": "7325.99.10",
+          "description": "De acero"
+        },
+        {
+          "code": "7325.99.10",
+          "description": "100P Aleado 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7325.99.10",
+          "description": "900H Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7325.99.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7325.99.90",
+          "description": "000M Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        }
+      ]
+    },
+    {
+      "code": "7326",
+      "description": "LAS DEMÁS MANUFACTURAS DE HIERRO O ACERO",
+      "subheadings": [
+        {
+          "code": "7326.1",
+          "description": "Forjadas o estampadas pero sin trabajar de otro modo:"
+        },
+        {
+          "code": "7326.11.00",
+          "description": "Bolas y artículos similares para molinos"
+        },
+        {
+          "code": "7326.11.00",
+          "description": "000J --Bolas y artículos similares para molinos 18.00 18.00 3.00 LNA 3.00 6.00"
+        },
+        {
+          "code": "7326.19.00",
+          "description": "Las demás"
+        },
+        {
+          "code": "7326.19.00",
+          "description": "000E --Las demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7326.20.00",
+          "description": "Manufacturas de alambre de hierro o acero"
+        },
+        {
+          "code": "7326.20.00",
+          "description": "100R Arcos de los tipos utilizados en lencería y corsetería 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7326.20.00",
+          "description": "900K Las demás 18.00 18.00 3.00 LA 3.00 5.00"
+        },
+        {
+          "code": "7326.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7326.90.10",
+          "description": "Casquetes elípticos de acero al níquel según Norma ASME SA 353, de los tipos utilizados en la fabricación de"
+        },
+        {
+          "code": "7326.90.10",
+          "description": "000V Casquetes elipticos de acero al níquel según Norma ASME SA 353, de los tipos utilizados en la fabricación de"
+        },
+        {
+          "code": "7326.90.90",
+          "description": "Las demás"
+        },
+        {
+          "code": "7326.90.90",
+          "description": "Cajas, estuches y similares"
+        },
+        {
+          "code": "7326.90.90",
+          "description": "110G Aptos para estar en contacto con alimentos 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7326.90.90",
+          "description": "190H Los demás 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7326.90.90",
+          "description": "200J Escaleras 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7326.90.90",
+          "description": "300P Manufacturas de los tipos utilizados como partes de cuadros u horquillas de bicicletas 18.00 18.00 3.00 LNA 3.00 5.00"
+        },
+        {
+          "code": "7326.90.90",
+          "description": "400V Bocas de acceso y tapas de inspección, de acero inoxidable, de los tipos utilizados en depósitos, cisternas o"
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "description": "18.00 3.00 LNA 3.00 5.00",
+      "subheadings": []
+    }
+  ],
+  "_rowCount": 1561
+}
