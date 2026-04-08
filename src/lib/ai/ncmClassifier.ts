@@ -417,6 +417,14 @@ export async function classifyWithAI(
       if (!inList) {
         ncm_code = "9999.99.99";
       }
+      if (ncm_code === "9999.99.99" && isWearableConnectedDevice(text)) {
+        const fromEv = evidence
+          .map((e) => formatNcm(e.ncm_code))
+          .filter((c) => /^8517\.62/.test(c) && c !== "9999.99.99")
+          .sort()[0];
+        ncm_code = fromEv ?? "8517.62.72";
+        rationaleEvidence = `${rationaleEvidence} — Smartwatch/wearable: posición típica **8517.62** (transmisión/recepción de datos).`;
+      }
       let ambiguous = Boolean(r.ambiguous);
       if (ncm_code === "9999.99.99") ambiguous = true;
       let confidence = clamp01(Number(r.confidence ?? 0));
@@ -430,7 +438,7 @@ export async function classifyWithAI(
       ) {
         /** El modelo a veces devuelve confianza muy baja pese a candidato 8517.62 correcto para wearables. */
         ambiguous = false;
-        confidence = Math.max(confidence, 0.68);
+        confidence = Math.max(confidence, 0.72);
       }
       const rationale = rationaleEvidence;
       const discardedRaw = Array.isArray(r.discarded) ? r.discarded : [];
@@ -510,12 +518,38 @@ export async function classifyWithAI(
       }
     }
 
-    const ambiguous =
+    if (!guardPhone && !guard8527 && isWearableConnectedDevice(text) && ncm_code === "9999.99.99") {
+      ncm_code = "8517.62.72";
+      confidence = Math.max(confidence, 0.7);
+      rationale = `${rationale} — Clasificación orientativa **8517.62** para smartwatch/wearable (aparatos para transmisión/recepción de datos).`;
+      needs_clarification = false;
+      missing_info_questions = undefined;
+      hs_heading = hs_heading ?? "8517";
+    } else if (
+      !guardPhone &&
+      isWearableConnectedDevice(text) &&
+      /^8517\.62/.test(ncm_code) &&
+      ncm_code !== "9999.99.99"
+    ) {
+      confidence = Math.max(confidence, 0.72);
+      needs_clarification = false;
+      missing_info_questions = undefined;
+    }
+
+    let ambiguous =
       Boolean(guardPhone?.ambiguous) ||
       Boolean(guard8527?.ambiguous) ||
       needs_clarification ||
       (missing_info_questions && missing_info_questions.length > 0) ||
       confidence < 0.45;
+
+    if (
+      isWearableConnectedDevice(text) &&
+      /^8517\.62/.test(ncm_code) &&
+      ncm_code !== "9999.99.99"
+    ) {
+      ambiguous = false;
+    }
 
     return {
       ncm_code,
