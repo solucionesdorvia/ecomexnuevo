@@ -1,6 +1,7 @@
 "use client";
 
 import { ConfidenceBadge } from "./ConfidenceBadge";
+import { DiscardedCandidatesBlock, type DiscardedItem } from "./DiscardedCandidatesBlock";
 import { ShieldAlert } from "lucide-react";
 
 type Props = {
@@ -9,6 +10,7 @@ type Props = {
   confidence: number;
   rationale?: string;
   discardedNotes?: string[];
+  discardedCandidates?: DiscardedItem[];
   variant: "resolved" | "tentative";
 };
 
@@ -18,6 +20,7 @@ export function ClassificationCard({
   confidence,
   rationale,
   discardedNotes,
+  discardedCandidates,
   variant,
 }: Props) {
   return (
@@ -46,7 +49,9 @@ export function ClassificationCard({
           {rationale}
         </p>
       ) : null}
-      {discardedNotes && discardedNotes.length > 0 ? (
+      {discardedCandidates && discardedCandidates.length > 0 ? (
+        <DiscardedCandidatesBlock items={discardedCandidates} variant="full" className="mt-3" maxItems={8} />
+      ) : discardedNotes && discardedNotes.length > 0 ? (
         <div className="mt-3 rounded-lg border border-white/[0.05] bg-black/20 px-3 py-2">
           <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
             Descartes / matices

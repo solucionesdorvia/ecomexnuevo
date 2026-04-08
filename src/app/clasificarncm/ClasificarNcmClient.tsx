@@ -7,6 +7,7 @@ import { ChatContainer } from "./components/ChatContainer";
 import { ChatInput } from "./components/ChatInput";
 import { CaseSummaryPanel } from "./components/CaseSummaryPanel";
 import { ClassificationCard } from "./components/ClassificationCard";
+import { DiscardedCandidatesBlock } from "./components/DiscardedCandidatesBlock";
 import { FollowUpQuestions } from "./components/FollowUpQuestions";
 import { SuggestedCandidatesList } from "./components/SuggestedCandidatesList";
 import { AMBIGUITY_REASON_LABELS } from "@/lib/clasificar-ncm/ncmAmbiguity";
@@ -118,7 +119,10 @@ export default function ClasificarNcmClient() {
             </div>
           ) : null}
 
-          {caseState.messages.length > 0 && (showResultCard || (caseState.candidates && caseState.candidates.length > 0)) ? (
+          {caseState.messages.length > 0 &&
+          (showResultCard ||
+            (caseState.candidates && caseState.candidates.length > 0) ||
+            (caseState.discardedCandidates && caseState.discardedCandidates.length > 0)) ? (
             <div className="shrink-0 space-y-4 border-t border-white/[0.04] px-3 py-4 sm:px-6">
               <div className="mx-auto flex max-w-[720px] flex-col gap-4">
                 {showResultCard && caseState.recommendedNcm && typeof caseState.confidence === "number" ? (
@@ -132,8 +136,19 @@ export default function ClasificarNcmClient() {
                         : undefined
                     }
                     discardedNotes={caseState.discardedNotes}
+                    discardedCandidates={caseState.discardedCandidates}
                     variant={caseState.status === "resolved" && !caseState.ambiguity ? "resolved" : "tentative"}
                   />
+                ) : caseState.discardedCandidates && caseState.discardedCandidates.length > 0 ? (
+                  <div className="rounded-2xl border border-rose-500/15 bg-rose-500/[0.04] p-4 shadow-xl">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-rose-400/90">
+                      Sin NCM prioritaria
+                    </p>
+                    <p className="mt-1 text-[12px] leading-relaxed text-slate-400">
+                      El motor descartó las posiciones siguientes por incompatibilidad con el producto descrito.
+                    </p>
+                    <DiscardedCandidatesBlock items={caseState.discardedCandidates} variant="full" className="mt-3" />
+                  </div>
                 ) : null}
                 {caseState.candidates && caseState.candidates.length > 0 ? (
                   <SuggestedCandidatesList candidates={caseState.candidates} />

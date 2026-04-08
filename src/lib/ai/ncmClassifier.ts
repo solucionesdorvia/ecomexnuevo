@@ -38,6 +38,8 @@ export type NcmClassification = {
   /** Set when classifying from a restricted candidate list (PCRAM/local evidence). */
   ambiguous?: boolean;
   discarded?: Array<{ ncm: string; reason: string }>;
+  /** Mismo contenido que `discarded` con clave `code` (intercambio / UI). */
+  discardedCandidates?: Array<{ code: string; reason: string }>;
   /** Causa de la duda + pregunta decisiva (si aplica). */
   ambiguity?: NormalizedAmbiguity;
 };
@@ -585,6 +587,9 @@ export async function classifyWithAI(
         candidates: [],
         ambiguous,
         discarded: discarded.length ? discarded : undefined,
+        discardedCandidates: discarded.length
+          ? discarded.map((d) => ({ code: d.ncm, reason: d.reason }))
+          : undefined,
         missing_info_questions: followUp.length ? followUp : undefined,
         needs_clarification: followUp.length > 0 || ambiguous,
         ambiguity: ambEv,
@@ -733,6 +738,15 @@ export async function classifyWithAI(
       ambiguityOut = undefined;
     }
 
+    const discardedModelRaw = Array.isArray(r.discarded) ? r.discarded : [];
+    const discardedModel = discardedModelRaw
+      .slice(0, 12)
+      .map((d) => ({
+        ncm: formatNcm(String(d?.ncm ?? "")),
+        reason: String(d?.reason ?? "").trim() || "—",
+      }))
+      .filter((d) => ncmDigits(d.ncm).length >= 6 && d.ncm !== "9999.99.99");
+
     return {
       ncm_code,
       confidence,
@@ -745,6 +759,10 @@ export async function classifyWithAI(
       needs_clarification,
       ambiguous,
       ambiguity: ambiguityOut,
+      discarded: discardedModel.length ? discardedModel : undefined,
+      discardedCandidates: discardedModel.length
+        ? discardedModel.map((d) => ({ code: d.ncm, reason: d.reason }))
+        : undefined,
     };
   } catch (err) {
     // eslint-disable-next-line no-console

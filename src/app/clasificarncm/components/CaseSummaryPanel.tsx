@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AMBIGUITY_REASON_LABELS } from "@/lib/clasificar-ncm/ncmAmbiguity";
 import type { CaseState } from "@/lib/clasificar-ncm/types";
+import { DiscardedCandidatesBlock } from "./DiscardedCandidatesBlock";
 import { ConfidenceBadge } from "./ConfidenceBadge";
 import { ChevronDown, Cpu, Package, PanelLeft, Target } from "lucide-react";
 import { cn } from "@/components/ui/cn";
@@ -90,6 +91,11 @@ export function CaseSummaryPanel({
           <div className="rounded-lg border border-white/[0.06] bg-black/25 px-2.5 py-2">
             <p className="text-[9px] font-semibold uppercase tracking-wider text-slate-500">NCM prioritaria</p>
             <p className="mt-0.5 font-mono text-[15px] font-semibold text-white">{s.recommendedNcm}</p>
+          </div>
+        ) : null}
+        {s.discardedCandidates && s.discardedCandidates.length > 0 ? (
+          <div className="pt-1">
+            <DiscardedCandidatesBlock items={s.discardedCandidates} variant="compact" maxItems={6} />
           </div>
         ) : null}
         {s.missingCriticalData && s.missingCriticalData.length > 0 ? (

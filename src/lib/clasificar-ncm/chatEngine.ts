@@ -1,6 +1,13 @@
 import { classifyWithAI, type NcmClassification } from "@/lib/ai/ncmClassifier";
 import { openaiJson } from "@/lib/ai/openaiClient";
 import { buildAmbiguityAssistantParagraph } from "@/lib/clasificar-ncm/ncmAmbiguity";
+import {
+  deriveProductSignals,
+  runDeterministicCandidateStages,
+  snapshotAmbiguityToNormalized,
+  resolveAmbiguityDecision,
+  type DiscardedCandidate,
+} from "@/lib/clasificar-ncm/ncmCandidatePipeline";
 import { formatMercosurNcm8, ncmDigitsOnly } from "@/lib/ncm/knowledge/normalize";
 import { productFromTextPipeline } from "@/lib/scraper/productFromTextPipeline";
 import { NCM_AMBIGUITY_FALLBACK_QUESTION, NCM_ANALYST_PROFESSIONAL_BLOCK } from "@/lib/clasificar-ncm/professionalModePrompt";
@@ -236,11 +243,24 @@ function mapClassifyAIResult(cls: NcmClassification, conf: number): {
   ncm: string;
   candidates: NcmCandidateItem[];
   discardedNotes: string[];
+  discardedCandidates?: Array<{ code: string; reason: string }>;
   rationale?: string;
 } {
   const discardedNotes: string[] = [];
+  const seenCodes = new Set<string>();
+  const structured: Array<{ code: string; reason: string }> = [];
+  for (const x of cls.discardedCandidates ?? []) {
+    if (seenCodes.has(x.code)) continue;
+    seenCodes.add(x.code);
+    structured.push({ code: x.code, reason: x.reason });
+  }
   for (const d of cls.discarded ?? []) {
-    discardedNotes.push(`${d.ncm}: ${d.reason}`);
+    if (seenCodes.has(d.ncm)) continue;
+    seenCodes.add(d.ncm);
+    structured.push({ code: d.ncm, reason: d.reason });
+  }
+  for (const d of structured) {
+    discardedNotes.push(`${d.code}: ${d.reason}`);
   }
 
   const primary = cls.ncm_code;
@@ -277,8 +297,37 @@ function mapClassifyAIResult(cls: NcmClassification, conf: number): {
     ncm,
     candidates: candidates.slice(0, 12),
     discardedNotes,
+    discardedCandidates: structured.length ? structured : undefined,
     rationale: cls.rationale,
   };
+}
+
+/** Filtro duro + penalización + resolución por respuesta del usuario (turno siguiente). */
+function applyDecisiveCandidatePipeline(opts: {
+  techText: string;
+  snap: CaseSnapshot;
+  prev: CaseSnapshot;
+  messages: ChatMessage[];
+  candidates: NcmCandidateItem[];
+}): { candidates: NcmCandidateItem[]; discardedExtra: DiscardedCandidate[] } {
+  const signals = deriveProductSignals(opts.techText, { productType: opts.snap.productType });
+  const { candidates: staged, discarded: d1 } = runDeterministicCandidateStages(signals, opts.candidates);
+  let out = staged;
+  const extra: DiscardedCandidate[] = [...d1];
+
+  const lastUser = [...opts.messages].reverse().find((m) => m.role === "user")?.content?.trim() ?? "";
+  if (opts.prev.ambiguity && lastUser.length > 0) {
+    const norm = snapshotAmbiguityToNormalized(opts.prev.ambiguity);
+    const res = resolveAmbiguityDecision(norm, lastUser, out);
+    out = res.candidates;
+    extra.push(...res.discarded);
+  }
+
+  return { candidates: sortCandidatesByConfidence(out), discardedExtra: extra };
+}
+
+function sortCandidatesByConfidence(c: NcmCandidateItem[]): NcmCandidateItem[] {
+  return [...c].sort((a, b) => b.confidence - a.confidence);
 }
 
 export async function processClasificarTurn(opts: {
@@ -369,6 +418,32 @@ export async function processClasificarTurn(opts: {
       snap.discardedNotes = discardedNotes.length ? discardedNotes : snap.discardedNotes;
       snap.recommendedNcm = ncm || snap.recommendedNcm;
       snap.confidence = conf;
+
+      if (snap.candidates?.length) {
+        const dec = applyDecisiveCandidatePipeline({
+          techText,
+          snap,
+          prev,
+          messages,
+          candidates: snap.candidates,
+        });
+        if (dec.discardedExtra.length) {
+          snap.discardedCandidates = [...(snap.discardedCandidates ?? []), ...dec.discardedExtra];
+          snap.discardedNotes = [
+            ...(snap.discardedNotes ?? []),
+            ...dec.discardedExtra.map((d) => `${d.code}: ${d.reason}`),
+          ];
+        }
+        if (dec.candidates.length) {
+          snap.candidates = dec.candidates;
+          const top = dec.candidates[0]!;
+          snap.recommendedNcm = normalizeNcmCode(top.code) || top.code;
+          conf = top.confidence;
+        } else if (dec.discardedExtra.length) {
+          snap.candidates = [];
+          snap.recommendedNcm = undefined;
+        }
+      }
       const pcramTitle =
         pipeline.pcram && typeof pipeline.pcram === "object" && "title" in pipeline.pcram
           ? String((pipeline.pcram as { title?: string }).title ?? "").trim()
@@ -458,11 +533,45 @@ export async function processClasificarTurn(opts: {
     const ambiguous = Boolean(cls.ambiguous);
     let conf = clamp01(ambiguous ? rawConf * 0.85 : rawConf);
 
-    const { ncm: ncmRaw, candidates, discardedNotes, rationale } = mapClassifyAIResult(cls, conf);
+    const { ncm: ncmRaw, candidates, discardedNotes, discardedCandidates: clsDiscarded, rationale } =
+      mapClassifyAIResult(cls, conf);
     const ncm = normalizeNcmCode(ncmRaw) || ncmRaw;
     snap.candidates = candidates.length ? candidates : snap.candidates;
     snap.discardedNotes = discardedNotes.length ? discardedNotes : snap.discardedNotes;
-    snap.recommendedNcm = ncm || snap.recommendedNcm;
+    if (clsDiscarded?.length) {
+      snap.discardedCandidates = [...(snap.discardedCandidates ?? []), ...clsDiscarded];
+    }
+
+    let decisiveEmptiedAll = false;
+    if (snap.candidates?.length) {
+      const dec = applyDecisiveCandidatePipeline({
+        techText,
+        snap,
+        prev,
+        messages,
+        candidates: snap.candidates,
+      });
+      if (dec.discardedExtra.length) {
+        snap.discardedCandidates = [...(snap.discardedCandidates ?? []), ...dec.discardedExtra];
+        snap.discardedNotes = [
+          ...(snap.discardedNotes ?? []),
+          ...dec.discardedExtra.map((d) => `${d.code}: ${d.reason}`),
+        ];
+      }
+      if (dec.candidates.length) {
+        snap.candidates = dec.candidates;
+        const top = dec.candidates[0]!;
+        snap.recommendedNcm = normalizeNcmCode(top.code) || top.code;
+        conf = top.confidence;
+      } else if (dec.discardedExtra.length) {
+        snap.candidates = [];
+        snap.recommendedNcm = undefined;
+        decisiveEmptiedAll = true;
+      }
+    }
+    if (!decisiveEmptiedAll) {
+      snap.recommendedNcm = ncm || snap.recommendedNcm;
+    }
     snap.classificationRationale =
       rationale || snap.classificationRationale || analyst.classification_rationale_draft || undefined;
 

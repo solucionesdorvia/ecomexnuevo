@@ -58,6 +58,8 @@ export type CaseSnapshot = {
   mergedTechnicalDescription?: string;
   /** Alternativas descartadas (texto breve) */
   discardedNotes?: string[];
+  /** Descartes estructurados (filtro duro / ambigüedad resuelta) */
+  discardedCandidates?: Array<{ code: string; reason: string }>;
   status: CaseStatus;
   /** Preguntas pendientes sugeridas por el asistente (prioridad: 1 principal, 2 solo si aplica) */
   pendingQuestions?: string[];
