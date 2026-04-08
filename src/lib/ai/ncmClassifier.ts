@@ -1,7 +1,14 @@
 import { buildNcmKnowledgeEvidence } from "@/lib/ncm/knowledge/ncmKnowledgeEvidence";
 import { openaiJson } from "@/lib/ai/openaiClient";
 import {
-  NCM_AMBIGUITY_FALLBACK_QUESTION,
+  ambiguityQuestionsList,
+  buildFallbackAmbiguityFromCodes,
+  normalizeAmbiguityPayload,
+  type NormalizedAmbiguity,
+  NCM_AMBIGUITY_GENERIC_FALLBACK_QUESTION,
+} from "@/lib/clasificar-ncm/ncmAmbiguity";
+import {
+  NCM_AMBIGUITY_CLASSIFIER_BLOCK,
   NCM_CLASSIFIER_PROFESSIONAL_BLOCK,
   NCM_RGI_GIR_BLOCK,
 } from "@/lib/clasificar-ncm/professionalModePrompt";
@@ -31,6 +38,8 @@ export type NcmClassification = {
   /** Set when classifying from a restricted candidate list (PCRAM/local evidence). */
   ambiguous?: boolean;
   discarded?: Array<{ ncm: string; reason: string }>;
+  /** Causa de la duda + pregunta decisiva (si aplica). */
+  ambiguity?: NormalizedAmbiguity;
 };
 
 function formatNcm(ncmRaw: string) {
@@ -86,6 +95,7 @@ function tryGuardWearableVsPhone(
   missing_info_questions: string[];
   needs_clarification: boolean;
   ambiguous: boolean;
+  ambiguity?: NormalizedAmbiguity;
 } | null {
   if (!isWearableMisclassifiedAsPhone(text, ncm_code)) return null;
 
@@ -94,6 +104,18 @@ function tryGuardWearableVsPhone(
     "Si es smartwatch: ¿tiene **eSIM / línea celular propia** o solo **Bluetooth** vinculado al teléfono? (puede cambiar la subpartida).",
   ];
 
+  const amb =
+    normalizeAmbiguityPayload(
+      {
+        reason: "communication_vs_processing",
+        competing_candidates: ["8517.13.00", "8517.62.72"],
+        decisive_field: "Tipo de aparato (teléfono celular vs wearable / transmisión de datos)",
+        primary_question: q[0],
+        secondary_question: q[1],
+      },
+      { competingCodes: ["8517.13.00", "8517.62.72"] }
+    ) ?? undefined;
+
   return {
     ncm_code: "9999.99.99",
     confidence: Math.min(confidence, 0.38),
@@ -101,9 +123,10 @@ function tryGuardWearableVsPhone(
     hs_heading: "8517",
     kind: kind ? `${kind} (wearable vs teléfono)` : "Dispositivo cap. 8517 — confirmar tipo",
     search_terms: uniqueTerms([...(search_terms ?? []), "reloj inteligente", "smartwatch", "8517.62"]),
-    missing_info_questions: q,
+    missing_info_questions: amb ? ambiguityQuestionsList(amb) : q,
     needs_clarification: true,
     ambiguous: true,
+    ambiguity: amb,
   };
 }
 
@@ -176,12 +199,51 @@ function uniqueTerms(arr: string[]) {
   return out.length ? out : undefined;
 }
 
+/** Con ambigüedad abierta no se debe mostrar confianza “alta” artificial. */
+const AMBIGUITY_OPEN_CONF_CAP = 0.68;
+
+function collectCompetingCodesFree(ncm_code: string, candidates: NcmCandidate[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  const push = (c: string) => {
+    const f = formatNcm(c);
+    if (f === "9999.99.99" || seen.has(f)) return;
+    seen.add(f);
+    out.push(f);
+  };
+  push(ncm_code);
+  const sorted = [...candidates].sort((a, b) => b.confidence - a.confidence);
+  for (const c of sorted) {
+    if (c.confidence >= 0.22) push(c.ncm_code);
+    if (out.length >= 5) break;
+  }
+  return out;
+}
+
+function collectCompetingCodesEvidence(ncm_code: string, evidence: NcmEvidenceCandidate[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  const push = (c: string) => {
+    const f = formatNcm(c);
+    if (f === "9999.99.99" || seen.has(f)) return;
+    seen.add(f);
+    out.push(f);
+  };
+  push(ncm_code);
+  for (const e of evidence) {
+    push(e.ncm_code);
+    if (out.length >= 6) break;
+  }
+  return out;
+}
+
 const EVIDENCE_SYSTEM_PROMPT =
   `Sos un clasificador profesional de NCM (Mercosur / Argentina), actuando como un despachante de aduana senior.
 
 ` +
   NCM_CLASSIFIER_PROFESSIONAL_BLOCK +
   NCM_RGI_GIR_BLOCK +
+  NCM_AMBIGUITY_CLASSIFIER_BLOCK +
   `
 
 IMPORTANTE:
@@ -215,7 +277,7 @@ PROCESO OBLIGATORIO:
 6. DECISIÓN FINAL:
    - Elegir el mejor candidato de la lista
    - Si hay duda razonable → ambiguous = true (y preferí bajar confidence)
-   - Si ambiguous = true o no podés decidir entre candidatos serios → **follow_up_questions** con al menos **1** pregunta concreta (máx. 2); no dejes follow_up vacío en ese caso
+   - Si ambiguous = true o no podés decidir entre candidatos serios → completá **ambiguity** (objeto JSON) y **follow_up_questions** (1 prioritaria, 2 solo si secondary_question aplica)
 
 REGLAS CRÍTICAS:
 - NO usar conocimiento genérico si contradice los candidatos
@@ -229,7 +291,8 @@ Devolvé SOLO un objeto JSON con estas claves:
 - ambiguous: boolean
 - rationale: string (función principal + RGI, breve)
 - discarded: array de { "ncm": "XXXX.XX.XX", "reason": "..." } (puede estar vacío)
-- follow_up_questions: array de strings, máximo 2; antes de cada una: **«¿Esto puede cambiar la clasificación?»** Solo si afecta función principal, parte/accesorio/final, capítulo/partida o material dominante en mezclas; si no, dejá vacío`;
+- follow_up_questions: array de strings, máximo 2 (1 prioritaria; 2 solo si sigue empate fuerte)
+- ambiguity: null o { "reason": "part_vs_final" | ... | "generic_low_confidence", "competing_candidates": ["XXXX.XX.XX", ...], "decisive_field": "string", "primary_question": "string", "secondary_question": "string" | null }`;
 
 const SYSTEM_PROMPT =
   `Sos un clasificador experto NCM (Argentina/Mercosur). Devolvé SOLO JSON.
@@ -237,6 +300,7 @@ const SYSTEM_PROMPT =
 ` +
   NCM_CLASSIFIER_PROFESSIONAL_BLOCK +
   NCM_RGI_GIR_BLOCK +
+  NCM_AMBIGUITY_CLASSIFIER_BLOCK +
   `
 
 === REGLAS OBLIGATORIAS (prevalecen sobre todo) ===
@@ -302,15 +366,11 @@ Capítulo 91: reloj de pulsera **solo mecánico** o **de cuarzo tradicional** (s
 
 Antes de cada ítem en **missing_info_questions**, preguntate: **«¿Esta información puede cambiar la clasificación?»** → Si **NO**, no lo incluyas.
 
-**Máximo 3 preguntas**, solo si pueden afectar:
-- función principal; o
-- producto final vs parte vs accesorio; o
-- capítulo / partida (4 dígitos); o
-- material dominante en mezclas/composición.
+**Prioridad:** **1** pregunta principal que más reduzca la ambigüedad; **2** solo si sin la segunda seguiría un empate fuerte entre dos NCM.
 
-3. **missing_info_questions**: vacío salvo que quede una duda real en esos frentes. NO preguntar por datos obvios o inferibles.
-4. Si el texto es ambiguo entre **dos capítulos o partidas distintas** (ej. reloj mecánico vs smart; tejido vs plástico que define capítulo), needs_clarification true y **al menos una** pregunta en missing_info_questions (no vacío).
-5. Si tenés suficiente información (incluidas inferencias razonables), needs_clarification: false y missing_info_questions: [].
+3. **missing_info_questions**: vacío salvo duda real. NO preguntar por datos obvios o inferibles.
+4. Si el texto es ambiguo entre **dos capítulos o partidas distintas**, needs_clarification true y **al menos una** pregunta en missing_info_questions (no vacío), **más** el objeto **ambiguity** con la causa.
+5. Si tenés suficiente información (incluidas inferencias razonables), needs_clarification: false y missing_info_questions: [] y ambiguity: null.
 6. **Regla:** si needs_clarification es true o hay duda real entre partidas, **missing_info_questions no puede estar vacío** (salvo que una sola posición sea ya defendible sin más datos).
 
 **Salida:** usá **solo** el esquema JSON de abajo (ncm_code con puntos, confidence numérica 0–1). No uses otro formato (ej. confidence "high/medium/low" o claves ncm/justification).
@@ -324,7 +384,8 @@ Devolvé JSON con:
 - kind: etiqueta corta español
 - search_terms: 2-4 términos para buscar en nomenclador/PCRAM (incluí términos legales, no solo marca)
 - needs_clarification: boolean
-- missing_info_questions: array de strings, máximo 3, vacío si no hace falta`;
+- missing_info_questions: array de strings, máximo 2 (1 prioritaria)
+- ambiguity: null o { "reason": "part_vs_final" | ... | "generic_low_confidence", "competing_candidates": [...], "decisive_field": "...", "primary_question": "...", "secondary_question": null | "..." }`;
 
 export async function classifyWithAI(
   text: string,
@@ -406,6 +467,13 @@ export async function classifyWithAI(
       needs_clarification?: boolean;
       missing_info_questions?: string[];
       follow_up_questions?: string[];
+      ambiguity?: {
+        reason?: string;
+        competing_candidates?: string[];
+        decisive_field?: string;
+        primary_question?: string;
+        secondary_question?: string | null;
+      } | null;
     }>({
       system,
       user,
@@ -471,24 +539,55 @@ export async function classifyWithAI(
         }))
         .filter((d) => ncmDigits(d.ncm).length >= 6 && d.ncm !== "9999.99.99");
 
+      const codesEv = collectCompetingCodesEvidence(ncm_code, evidence);
+      let ambEv: NormalizedAmbiguity | undefined;
+      if (ambiguous) {
+        const fromModel =
+          r.ambiguity && r.ambiguity !== null
+            ? normalizeAmbiguityPayload(r.ambiguity, { competingCodes: codesEv })
+            : null;
+        if (fromModel) {
+          ambEv = fromModel;
+        } else if (codesEv.length >= 2) {
+          ambEv = buildFallbackAmbiguityFromCodes(codesEv);
+        } else {
+          ambEv =
+            normalizeAmbiguityPayload(
+              {
+                reason: "generic_low_confidence",
+                primary_question: NCM_AMBIGUITY_GENERIC_FALLBACK_QUESTION,
+              },
+              { competingCodes: codesEv.length ? codesEv : [ncm_code] }
+            ) ?? undefined;
+        }
+      }
+
       const followRaw = Array.isArray(r.follow_up_questions) ? r.follow_up_questions : [];
       let followUp = followRaw
         .map((x) => String(x).trim())
         .filter(Boolean)
         .slice(0, 2);
-      if (ambiguous && followUp.length === 0) {
-        followUp = [NCM_AMBIGUITY_FALLBACK_QUESTION];
+      if (ambEv) {
+        followUp = ambiguityQuestionsList(ambEv);
+      } else if (ambiguous && followUp.length === 0) {
+        followUp = [NCM_AMBIGUITY_GENERIC_FALLBACK_QUESTION];
+      }
+
+      let confOut = confidence;
+      if (ambEv) {
+        confOut = Math.min(confOut, AMBIGUITY_OPEN_CONF_CAP);
       }
 
       return {
         ncm_code,
-        confidence,
+        confidence: confOut,
         rationale,
         candidates: [],
         ambiguous,
         discarded: discarded.length ? discarded : undefined,
         missing_info_questions: followUp.length ? followUp : undefined,
         needs_clarification: followUp.length > 0 || ambiguous,
+        ambiguity: ambEv,
       };
     }
 
@@ -575,7 +674,37 @@ export async function classifyWithAI(
       ambiguous = false;
     }
 
-    if (
+    let ambiguityOut: NormalizedAmbiguity | undefined = guardPhone?.ambiguity;
+
+    if (!ambiguous) {
+      ambiguityOut = undefined;
+    } else if (!ambiguityOut) {
+      const codes = collectCompetingCodesFree(ncm_code, candidates);
+      const rawAmb = r.ambiguity;
+      ambiguityOut =
+        rawAmb && rawAmb !== null
+          ? normalizeAmbiguityPayload(rawAmb, { competingCodes: codes }) ?? undefined
+          : undefined;
+      if (!ambiguityOut && codes.length >= 2) {
+        ambiguityOut = buildFallbackAmbiguityFromCodes(codes);
+      }
+      if (!ambiguityOut) {
+        ambiguityOut =
+          normalizeAmbiguityPayload(
+            {
+              reason: "generic_low_confidence",
+              primary_question: NCM_AMBIGUITY_GENERIC_FALLBACK_QUESTION,
+            },
+            { competingCodes: codes.length ? codes : [ncm_code] }
+          ) ?? undefined;
+      }
+    }
+
+    if (ambiguityOut) {
+      missing_info_questions = ambiguityQuestionsList(ambiguityOut);
+      needs_clarification = true;
+      confidence = Math.min(confidence, AMBIGUITY_OPEN_CONF_CAP);
+    } else if (
       (needs_clarification || ambiguous || ncm_code === "9999.99.99") &&
       (!missing_info_questions || missing_info_questions.length === 0)
     ) {
@@ -584,7 +713,7 @@ export async function classifyWithAI(
         /^8517\.62/.test(ncm_code) &&
         ncm_code !== "9999.99.99";
       if (!skipWearable8517Resolved) {
-        missing_info_questions = [NCM_AMBIGUITY_FALLBACK_QUESTION];
+        missing_info_questions = [NCM_AMBIGUITY_GENERIC_FALLBACK_QUESTION];
         needs_clarification = true;
       }
     }
@@ -600,6 +729,10 @@ export async function classifyWithAI(
       }
     }
 
+    if (!ambiguous) {
+      ambiguityOut = undefined;
+    }
+
     return {
       ncm_code,
       confidence,
@@ -611,6 +744,7 @@ export async function classifyWithAI(
       missing_info_questions,
       needs_clarification,
       ambiguous,
+      ambiguity: ambiguityOut,
     };
   } catch (err) {
     // eslint-disable-next-line no-console

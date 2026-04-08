@@ -49,9 +49,26 @@ export const NCM_RGI_GIR_BLOCK = `
 
 `;
 
-/** Pregunta de respaldo cuando hay ambigüedad pero el modelo no devolvió ítems concretos. */
-export const NCM_AMBIGUITY_FALLBACK_QUESTION =
-  "¿Podés concretar un dato que permita cerrar la posición NCM (p. ej. función principal, material dominante, producto final vs parte o accesorio, o estado físico del artículo)?";
+/** Último recurso si no se identifica la causa (re-export desde ncmAmbiguity). */
+export { NCM_AMBIGUITY_GENERIC_FALLBACK_QUESTION as NCM_AMBIGUITY_FALLBACK_QUESTION } from "./ncmAmbiguity";
+
+/** Instrucciones JSON para causas de ambigüedad tipadas y pregunta decisiva. */
+export const NCM_AMBIGUITY_CLASSIFIER_BLOCK = `
+=== AMBIGÜEDAD ENTRE CANDIDATOS (OBLIGATORIO SI HAY 2+ NCM PLAUSIBLES O DUDA REAL) ===
+
+1. Explicá mentalmente **por qué** compiten las posiciones (no basta con “hay varias opciones”).
+2. Elegí **un** valor exacto para "ambiguity.reason" de esta lista:
+   part_vs_final | accessory_vs_machine | communication_vs_processing | medical_vs_consumer | industrial_vs_domestic | material_essential_character | finished_vs_unfinished | measurement_vs_control | generic_low_confidence
+3. Completá el objeto **ambiguity** (además del JSON principal):
+   - competing_candidates: array de NCM "XXXX.XX.XX" que realmente compiten (incluí el elegido si hay duda).
+   - decisive_field: **una frase corta** con el dato técnico que desempata (ej. "función principal", "material esencial", "uso médico vs general").
+   - primary_question: **una sola** pregunta, **específica** para obtener ese dato; **prohibido** texto genérico de relleno.
+   - secondary_question: **solo** si tras responder la primera podría seguir el empate; si no aplica, omití o null.
+
+4. **missing_info_questions**: como máximo **2** strings: primero = primary_question (o resumen); segundo = secondary_question **solo** si la incluiste en ambiguity.
+
+5. Si no hay dos posiciones reales pero la confianza es baja, usá reason **generic_low_confidence** y explicá en decisive_field qué falta para encuadrar.
+`;
 
 /** Bloque para classifyWithAI (libre y evidencia): validación de candidatos y confianza. */
 export const NCM_CLASSIFIER_PROFESSIONAL_BLOCK = `

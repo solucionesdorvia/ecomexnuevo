@@ -1,9 +1,27 @@
 import { classifyWithAI, type NcmClassification } from "@/lib/ai/ncmClassifier";
 import { openaiJson } from "@/lib/ai/openaiClient";
+import { buildAmbiguityAssistantParagraph } from "@/lib/clasificar-ncm/ncmAmbiguity";
 import { formatMercosurNcm8, ncmDigitsOnly } from "@/lib/ncm/knowledge/normalize";
 import { productFromTextPipeline } from "@/lib/scraper/productFromTextPipeline";
 import { NCM_AMBIGUITY_FALLBACK_QUESTION, NCM_ANALYST_PROFESSIONAL_BLOCK } from "@/lib/clasificar-ncm/professionalModePrompt";
 import type { CaseSnapshot, ChatMessage, NcmCandidateItem, ProductType } from "./types";
+
+const AMBIGUITY_UI_CONF_CAP = 0.68;
+
+function mapClassifierAmbiguityToSnapshot(
+  a: NcmClassification["ambiguity"],
+  prevAmb: CaseSnapshot["ambiguity"]
+): CaseSnapshot["ambiguity"] {
+  if (!a) return undefined;
+  return {
+    reason: a.reason,
+    competingCandidates: a.competingCandidates,
+    decisiveField: a.decisiveField,
+    question: a.primaryQuestion,
+    secondaryQuestion: a.secondaryQuestion,
+    answered: Boolean(prevAmb),
+  };
+}
 
 function normalizeNcmCode(raw: string | undefined): string {
   const d = ncmDigitsOnly(String(raw ?? ""));
@@ -344,7 +362,7 @@ export async function processClasificarTurn(opts: {
         ambiguous = false;
         rawConf = Math.max(rawConf, 0.85);
       }
-      const conf = clamp01(ambiguous ? rawConf * 0.85 : rawConf);
+      let conf = clamp01(ambiguous ? rawConf * 0.85 : rawConf);
 
       const { candidates, discardedNotes } = mapPipelineToCandidates(ncm || undefined, meta, conf);
       snap.candidates = candidates.length ? candidates : snap.candidates;
@@ -377,21 +395,42 @@ export async function processClasificarTurn(opts: {
       }
       snap.pendingQuestions = qsPipeline.length ? qsPipeline : undefined;
 
-      if (ncm && conf >= 0.7 && !ambiguous && !(qsPipeline.length > 0)) {
+      const ambFromMeta = meta?.ambiguity as NcmClassification["ambiguity"] | undefined;
+      snap.ambiguity =
+        pipeline.pcram && ncm ? undefined : mapClassifierAmbiguityToSnapshot(ambFromMeta, prev.ambiguity);
+
+      if (snap.ambiguity) {
+        conf = Math.min(conf, AMBIGUITY_UI_CONF_CAP);
+      }
+      snap.confidence = conf;
+
+      const blocksClose =
+        Boolean(snap.ambiguity) || qsPipeline.length > 0 || ambiguous;
+
+      if (ncm && conf >= 0.7 && !ambiguous && !blocksClose) {
         snap.status = "resolved";
         snap.pendingQuestions = undefined;
+        snap.ambiguity = undefined;
       } else if (ncm || (snap.candidates?.length ?? 0) > 0) {
         snap.status = "tentative";
       } else {
         snap.status = "needs_info";
       }
 
-      const extra =
-        ncm && conf < 0.7 && !pipeline.pcram
-          ? `\n\n**Clasificación tentativa.** Confianza ${Math.round(conf * 100)}% (umbral recomendado ≥70% para dar por cerrado). Podés afinar datos o validar con despachante.`
+      const ambFromMetaSnap = snap.ambiguity;
+      const ambiguityParagraph =
+        ambFromMetaSnap && ambFromMeta
+          ? `\n\n---\n**Ambigüedad:** ${buildAmbiguityAssistantParagraph(ambFromMeta)}\n\n**Pregunta:** ${ambFromMeta.primaryQuestion}${
+              ambFromMeta.secondaryQuestion ? `\n\n**Si aplica:** ${ambFromMeta.secondaryQuestion}` : ""
+            }`
           : ambiguous && !pipeline.pcram
             ? `\n\n**Ambigüedad detectada** entre posiciones cercanas; conviene validar documentalmente.`
             : "";
+
+      const extra =
+        ncm && conf < 0.7 && !pipeline.pcram
+          ? `\n\n**Clasificación tentativa.** Confianza ${Math.round(conf * 100)}% (umbral recomendado ≥70% para dar por cerrado). Podés afinar datos o validar con despachante.`
+          : "";
 
       const definitive =
         ncm
@@ -403,7 +442,7 @@ export async function processClasificarTurn(opts: {
           : "";
 
       return {
-        assistantMessage: assistantMessage + extra + definitive,
+        assistantMessage: assistantMessage + ambiguityParagraph + extra + definitive,
         snapshot: snap,
       };
     }
@@ -417,21 +456,26 @@ export async function processClasificarTurn(opts: {
     });
     const rawConf = clamp01(Number(cls.confidence ?? 0));
     const ambiguous = Boolean(cls.ambiguous);
-    const conf = clamp01(ambiguous ? rawConf * 0.85 : rawConf);
-
-    const qsFromClassify = Array.isArray(cls.missing_info_questions)
-      ? cls.missing_info_questions.map((q) => String(q).trim()).filter(Boolean).slice(0, 4)
-      : [];
-    snap.pendingQuestions = qsFromClassify.length ? qsFromClassify : undefined;
+    let conf = clamp01(ambiguous ? rawConf * 0.85 : rawConf);
 
     const { ncm: ncmRaw, candidates, discardedNotes, rationale } = mapClassifyAIResult(cls, conf);
     const ncm = normalizeNcmCode(ncmRaw) || ncmRaw;
     snap.candidates = candidates.length ? candidates : snap.candidates;
     snap.discardedNotes = discardedNotes.length ? discardedNotes : snap.discardedNotes;
     snap.recommendedNcm = ncm || snap.recommendedNcm;
-    snap.confidence = conf;
     snap.classificationRationale =
       rationale || snap.classificationRationale || analyst.classification_rationale_draft || undefined;
+
+    snap.ambiguity = mapClassifierAmbiguityToSnapshot(cls.ambiguity, prev.ambiguity);
+    if (snap.ambiguity) {
+      conf = Math.min(conf, AMBIGUITY_UI_CONF_CAP);
+    }
+    snap.confidence = conf;
+
+    const qsFromClassify = Array.isArray(cls.missing_info_questions)
+      ? cls.missing_info_questions.map((q) => String(q).trim()).filter(Boolean).slice(0, 4)
+      : [];
+    snap.pendingQuestions = qsFromClassify.length ? qsFromClassify : undefined;
 
     if (snap.recommendedNcm) {
       const n = normalizeNcmCode(snap.recommendedNcm);
@@ -444,22 +488,35 @@ export async function processClasificarTurn(opts: {
       }));
     }
 
-    if (ncm && conf >= 0.7 && !ambiguous) {
+    const blocksCloseFast =
+      Boolean(snap.ambiguity) ||
+      qsFromClassify.length > 0 ||
+      ambiguous ||
+      Boolean(cls.needs_clarification);
+
+    if (ncm && conf >= 0.7 && !ambiguous && !blocksCloseFast) {
       snap.status = "resolved";
       snap.pendingQuestions = undefined;
+      snap.ambiguity = undefined;
     } else if (ncm || (snap.candidates?.length ?? 0) > 0) {
       snap.status = "tentative";
-      snap.pendingQuestions = undefined;
     } else {
       snap.status = "needs_info";
     }
 
-    const extra =
-      ncm && conf < 0.7
-        ? `\n\n**Clasificación tentativa.** Confianza ${Math.round(conf * 100)}% (umbral recomendado ≥70% para dar por cerrado). Podés afinar datos o validar con despachante.`
+    const ambiguityParagraphFast =
+      cls.ambiguity && snap.ambiguity
+        ? `\n\n---\n**Ambigüedad:** ${buildAmbiguityAssistantParagraph(cls.ambiguity)}\n\n**Pregunta:** ${cls.ambiguity.primaryQuestion}${
+            cls.ambiguity.secondaryQuestion ? `\n\n**Si aplica:** ${cls.ambiguity.secondaryQuestion}` : ""
+          }`
         : ambiguous
           ? `\n\n**Ambigüedad detectada** entre posiciones cercanas; conviene validar documentalmente.`
           : "";
+
+    const extra =
+      ncm && conf < 0.7
+        ? `\n\n**Clasificación tentativa.** Confianza ${Math.round(conf * 100)}% (umbral recomendado ≥70% para dar por cerrado). Podés afinar datos o validar con despachante.`
+        : "";
 
     const definitive =
       ncm
@@ -467,7 +524,7 @@ export async function processClasificarTurn(opts: {
         : "";
 
     return {
-      assistantMessage: assistantMessage + extra + definitive,
+      assistantMessage: assistantMessage + ambiguityParagraphFast + extra + definitive,
       snapshot: snap,
     };
   } catch (e) {

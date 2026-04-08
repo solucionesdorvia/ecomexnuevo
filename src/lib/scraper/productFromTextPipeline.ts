@@ -1,4 +1,4 @@
-import { classifyWithAI } from "@/lib/ai/ncmClassifier";
+import { classifyWithAI, type NcmClassification } from "@/lib/ai/ncmClassifier";
 import { wearablePcramQueryBoost } from "@/lib/ncm/wearablePcramBoost";
 import { PcramClient } from "@/lib/pcram/pcramClient";
 import { LocalNomenclator } from "@/lib/nomenclator/localNomenclator";
@@ -21,6 +21,8 @@ export type TextPipelineResult = {
     ambiguous?: boolean;
     discarded?: Array<{ ncm: string; reason: string }>;
     needsClarification?: boolean;
+    /** Metadata de ambigüedad (misma forma que `NcmClassification.ambiguity`). */
+    ambiguity?: NonNullable<NcmClassification["ambiguity"]>;
   };
 };
 
@@ -236,6 +238,7 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
       }
       if (cls.needs_clarification) ncmMeta.needsClarification = true;
       if (cls.ambiguous) ncmMeta.ambiguous = true;
+      if (cls.ambiguity) ncmMeta.ambiguity = cls.ambiguity;
     } catch {
       // In production (e.g. Railway), OpenAI can intermittently fail (timeouts/quotas).
       // Don't abort the entire pipeline; we'll fall back to PCRAM/local evidence below.
@@ -383,6 +386,7 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
               ncmMeta.missingInfoQuestions = aiPick.missing_info_questions.map(String).filter(Boolean).slice(0, 4);
             }
             if (aiPick?.needs_clarification) ncmMeta.needsClarification = true;
+            if (aiPick?.ambiguity) ncmMeta.ambiguity = aiPick.ambiguity;
             ncmMeta.ambiguous = Boolean(
               aiPick?.ambiguous === true ||
                 (aiPick && aiPick.confidence != null && aiPick.confidence < 0.55)

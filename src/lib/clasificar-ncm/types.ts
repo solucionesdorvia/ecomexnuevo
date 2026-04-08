@@ -1,3 +1,7 @@
+import type { AmbiguityReason } from "./ncmAmbiguity";
+
+export type { AmbiguityReason } from "./ncmAmbiguity";
+
 export type ChatMessage = {
   id: string;
   role: "user" | "assistant";
@@ -22,6 +26,17 @@ export type CaseStatus =
 
 export type ProductType = "final" | "part" | "accessory" | "unknown";
 
+/** Metadata de ambigüedad activa (pregunta decisiva ligada a la causa). */
+export type NcmAmbiguitySnapshot = {
+  reason: AmbiguityReason;
+  competingCandidates: string[];
+  decisiveField: string;
+  question: string;
+  secondaryQuestion?: string;
+  /** True si el usuario ya respondió en un turno posterior a haber mostrado la duda. */
+  answered: boolean;
+};
+
 /** Estado acumulativo del caso (sin mensajes en API; el cliente añade messages). */
 export type CaseSnapshot = {
   productName?: string;
@@ -44,8 +59,10 @@ export type CaseSnapshot = {
   /** Alternativas descartadas (texto breve) */
   discardedNotes?: string[];
   status: CaseStatus;
-  /** Preguntas pendientes sugeridas por el asistente (máx. 3 en lógica) */
+  /** Preguntas pendientes sugeridas por el asistente (prioridad: 1 principal, 2 solo si aplica) */
   pendingQuestions?: string[];
+  /** Duda estructurada entre candidatos (bloquea “resuelto” hasta aclararse) */
+  ambiguity?: NcmAmbiguitySnapshot;
   errorMessage?: string;
 };
 

@@ -9,6 +9,7 @@ import { CaseSummaryPanel } from "./components/CaseSummaryPanel";
 import { ClassificationCard } from "./components/ClassificationCard";
 import { FollowUpQuestions } from "./components/FollowUpQuestions";
 import { SuggestedCandidatesList } from "./components/SuggestedCandidatesList";
+import { AMBIGUITY_REASON_LABELS } from "@/lib/clasificar-ncm/ncmAmbiguity";
 
 const SUGGESTIONS = [
   "Cargador USB-C de 65W",
@@ -25,6 +26,11 @@ export default function ClasificarNcmClient() {
     caseState.recommendedNcm &&
     typeof caseState.confidence === "number" &&
     (caseState.status === "resolved" || caseState.status === "tentative");
+
+  const followUpContext =
+    caseState.ambiguity && caseState.pendingQuestions?.length
+      ? `${AMBIGUITY_REASON_LABELS[caseState.ambiguity.reason]} — falta definir: ${caseState.ambiguity.decisiveField}.`
+      : undefined;
 
   return (
     <div
@@ -107,7 +113,7 @@ export default function ClasificarNcmClient() {
           {caseState.messages.length > 0 && caseState.pendingQuestions && caseState.pendingQuestions.length > 0 ? (
             <div className="shrink-0 border-t border-white/[0.04] px-3 py-3 sm:px-6">
               <div className="mx-auto max-w-[720px]">
-                <FollowUpQuestions questions={caseState.pendingQuestions} />
+                <FollowUpQuestions questions={caseState.pendingQuestions} context={followUpContext} />
               </div>
             </div>
           ) : null}
@@ -126,7 +132,7 @@ export default function ClasificarNcmClient() {
                         : undefined
                     }
                     discardedNotes={caseState.discardedNotes}
-                    variant={caseState.status === "resolved" ? "resolved" : "tentative"}
+                    variant={caseState.status === "resolved" && !caseState.ambiguity ? "resolved" : "tentative"}
                   />
                 ) : null}
                 {caseState.candidates && caseState.candidates.length > 0 ? (

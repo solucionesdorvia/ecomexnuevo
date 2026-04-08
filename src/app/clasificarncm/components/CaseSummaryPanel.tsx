@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AMBIGUITY_REASON_LABELS } from "@/lib/clasificar-ncm/ncmAmbiguity";
 import type { CaseState } from "@/lib/clasificar-ncm/types";
 import { ConfidenceBadge } from "./ConfidenceBadge";
 import { ChevronDown, Cpu, Package, PanelLeft, Target } from "lucide-react";
@@ -102,6 +103,27 @@ export function CaseSummaryPanel({
                 <li key={i}>{x}</li>
               ))}
             </ul>
+          </div>
+        ) : null}
+        {s.ambiguity ? (
+          <div className="rounded-lg border border-amber-500/20 bg-amber-500/[0.06] px-2.5 py-2">
+            <p className="text-[9px] font-semibold uppercase tracking-wider text-amber-500/90">Ambigüedad</p>
+            <p className="mt-1 text-[11px] leading-snug text-slate-400">
+              {AMBIGUITY_REASON_LABELS[s.ambiguity.reason]}
+            </p>
+            <p className="mt-1 text-[11px] text-slate-300">
+              <span className="text-slate-500">Dato decisivo:</span> {s.ambiguity.decisiveField}
+            </p>
+            {s.ambiguity.competingCandidates?.length ? (
+              <p className="mt-1 font-mono text-[10px] text-slate-500">
+                {s.ambiguity.competingCandidates.slice(0, 4).join(" · ")}
+              </p>
+            ) : null}
+            {s.ambiguity.answered ? (
+              <p className="mt-1 text-[10px] text-slate-500">Respuesta del usuario recibida; puede seguir afinándose.</p>
+            ) : (
+              <p className="mt-1 text-[10px] text-amber-500/80">Pendiente de respuesta</p>
+            )}
           </div>
         ) : null}
       </div>
