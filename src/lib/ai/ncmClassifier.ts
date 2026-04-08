@@ -1,5 +1,6 @@
 import { buildNcmKnowledgeEvidence } from "@/lib/ncm/knowledge/ncmKnowledgeEvidence";
 import { openaiJson } from "@/lib/ai/openaiClient";
+import { NCM_CLASSIFIER_PROFESSIONAL_BLOCK, NCM_RGI_GIR_BLOCK } from "@/lib/clasificar-ncm/professionalModePrompt";
 
 export type NcmCandidate = {
   ncm_code: string;
@@ -171,7 +172,13 @@ function uniqueTerms(arr: string[]) {
   return out.length ? out : undefined;
 }
 
-const EVIDENCE_SYSTEM_PROMPT = `Sos un clasificador profesional de NCM (Mercosur / Argentina), actuando como un despachante de aduana senior.
+const EVIDENCE_SYSTEM_PROMPT =
+  `Sos un clasificador profesional de NCM (Mercosur / Argentina), actuando como un despachante de aduana senior.
+
+` +
+  NCM_CLASSIFIER_PROFESSIONAL_BLOCK +
+  NCM_RGI_GIR_BLOCK +
+  `
 
 IMPORTANTE:
 - NO debes inventar códigos NCM
@@ -219,7 +226,13 @@ Devolvé SOLO un objeto JSON con estas claves:
 - discarded: array de { "ncm": "XXXX.XX.XX", "reason": "..." } (puede estar vacío)
 - follow_up_questions: array de strings, máximo 2; antes de cada una: **«¿Esto puede cambiar la clasificación?»** Solo si afecta función principal, parte/accesorio/final, capítulo/partida o material dominante en mezclas; si no, dejá vacío`;
 
-const SYSTEM_PROMPT = `Sos un clasificador experto NCM (Argentina/Mercosur). Devolvé SOLO JSON.
+const SYSTEM_PROMPT =
+  `Sos un clasificador experto NCM (Argentina/Mercosur). Devolvé SOLO JSON.
+
+` +
+  NCM_CLASSIFIER_PROFESSIONAL_BLOCK +
+  NCM_RGI_GIR_BLOCK +
+  `
 
 === REGLAS OBLIGATORIAS (prevalecen sobre todo) ===
 
@@ -294,9 +307,11 @@ Antes de cada ítem en **missing_info_questions**, preguntate: **«¿Esta inform
 4. Si el texto es ambiguo entre **dos capítulos o partidas distintas** (ej. reloj mecánico vs smart; tejido vs plástico que define capítulo), needs_clarification true y preguntas mínimas que pasen el test anterior.
 5. Si tenés suficiente información (incluidas inferencias razonables), needs_clarification: false y missing_info_questions: [].
 
+**Salida:** usá **solo** el esquema JSON de abajo (ncm_code con puntos, confidence numérica 0–1). No uses otro formato (ej. confidence "high/medium/low" o claves ncm/justification).
+
 Devolvé JSON con:
 - ncm_code: "XXXX.XX.XX"
-- confidence: 0 a 1 (bajá si hay duda)
+- confidence: 0 a 1 (producto simple y claro → ≥ 0.85 si encaje legal es firme; bajá solo ante duda real entre partidas/capítulos)
 - rationale: cadena breve: función principal → por qué esta partida (mencionar RGI si aplica)
 - candidates: 2-3 alternativas [{ncm_code, confidence, rationale}]
 - hs_heading: 4 dígitos (ej "8517")

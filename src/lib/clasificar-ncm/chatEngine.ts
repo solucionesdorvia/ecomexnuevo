@@ -2,6 +2,7 @@ import { classifyWithAI, type NcmClassification } from "@/lib/ai/ncmClassifier";
 import { openaiJson } from "@/lib/ai/openaiClient";
 import { formatMercosurNcm8, ncmDigitsOnly } from "@/lib/ncm/knowledge/normalize";
 import { productFromTextPipeline } from "@/lib/scraper/productFromTextPipeline";
+import { NCM_ANALYST_PROFESSIONAL_BLOCK } from "@/lib/clasificar-ncm/professionalModePrompt";
 import type { CaseSnapshot, ChatMessage, NcmCandidateItem, ProductType } from "./types";
 
 function normalizeNcmCode(raw: string | undefined): string {
@@ -60,8 +61,12 @@ export function buildTechnicalDescription(messages: ChatMessage[], snap: CaseSna
   return parts.join("\n").trim() || userLines.join("\n");
 }
 
-const ANALYST_SYSTEM = `Sos analista técnico senior en comercio exterior (Argentina / NCM Mercosur). No sos un chatbot de marketing.
+const ANALYST_SYSTEM =
+  `Sos analista técnico senior en comercio exterior (Argentina / NCM Mercosur). No sos un chatbot de marketing.
 
+` +
+  NCM_ANALYST_PROFESSIONAL_BLOCK +
+  `
 === INFERENCIA Y CONOCIMIENTO GENERAL (OBLIGATORIO ANTES DE PREGUNTAR) ===
 
 Antes de incluir algo en "questions_next" o "missing_critical_data":
