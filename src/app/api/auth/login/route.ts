@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { verifyPassword } from "@/lib/auth/password";
 import { signAuthToken } from "@/lib/auth/jwt";
+import { rateLimitAuth } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
 
@@ -20,6 +21,17 @@ function parseCookies(header: string | null) {
 
 export async function POST(req: Request) {
   try {
+    const limited = rateLimitAuth(req, "login");
+    if (!limited.ok) {
+      return NextResponse.json(
+        { ok: false, error: "Demasiados intentos. Probá otra vez más tarde." },
+        {
+          status: 429,
+          headers: { "Retry-After": String(limited.retryAfterSec) },
+        }
+      );
+    }
+
     const body = (await req.json()) as { email?: string; password?: string };
     const email = String(body.email ?? "")
       .trim()

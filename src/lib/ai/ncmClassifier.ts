@@ -20,6 +20,9 @@ export type NcmClassification = {
   kind?: string;
   search_terms?: string[];
   missing_info_questions?: string[];
+  /** Set when classifying from a restricted candidate list (PCRAM/local evidence). */
+  ambiguous?: boolean;
+  discarded?: Array<{ ncm: string; reason: string }>;
 };
 
 function formatNcm(ncmRaw: string) {
@@ -35,6 +38,57 @@ function clamp01(n: number) {
   if (!Number.isFinite(n)) return 0;
   return Math.max(0, Math.min(1, n));
 }
+
+function ncmDigits(s: string) {
+  return String(s ?? "").replace(/\D/g, "");
+}
+
+function isNcmInEvidence(formatted: string, evidence: NcmEvidenceCandidate[]) {
+  const key = ncmDigits(formatted);
+  if (key.length < 6) return false;
+  return evidence.some((e) => ncmDigits(e.ncm_code) === key);
+}
+
+const EVIDENCE_SYSTEM_PROMPT = `Sos un clasificador profesional de NCM (Mercosur / Argentina), actuando como un despachante de aduana senior.
+
+IMPORTANTE:
+- NO debes inventar códigos NCM
+- SOLO podés elegir entre los candidatos proporcionados
+- Si ninguno aplica correctamente → marcar como "ambiguous": true y devolver ncm_code "9999.99.99"
+
+PROCESO OBLIGATORIO:
+
+1. Determinar la FUNCIÓN PRINCIPAL del producto
+   → Esto tiene más peso que el nombre comercial o material
+
+2. Identificar:
+   - tipo de producto (final, parte, accesorio)
+   - tecnología (eléctrico, mecánico, químico, etc.)
+   - uso real
+
+3. Aplicar RGI:
+   - RGI 1: Comparar directamente con la descripción legal de cada candidato (usá el título provisto como proxy)
+   - RGI 3a: Elegir la descripción MÁS ESPECÍFICA
+   - RGI 3b: Si es un conjunto/kit → elegir por carácter esencial
+
+4. DESCARTAR candidatos: Para cada candidato descartado, indicar brevemente por qué NO aplica (si corresponde)
+
+5. DECISIÓN FINAL:
+   - Elegir el mejor candidato de la lista
+   - Si hay duda razonable → ambiguous = true (y preferí bajar confidence)
+
+REGLAS CRÍTICAS:
+- NO usar conocimiento genérico si contradice los candidatos
+- NO completar con códigos fuera de la lista
+- Si dos opciones son muy similares → bajar confidence
+- Si no hay match claro → ambiguous = true y ncm_code "9999.99.99"
+
+Devolvé SOLO un objeto JSON con exactamente estas claves:
+- ncm_code: string "XXXX.XX.XX" (uno de los candidatos, o "9999.99.99" si ninguno aplica)
+- confidence: número entre 0 y 1
+- ambiguous: boolean
+- rationale: string (función principal + RGI, breve)
+- discarded: array de { "ncm": "XXXX.XX.XX", "reason": "..." } (puede estar vacío)`;
 
 const SYSTEM_PROMPT = `Sos un clasificador experto NCM (Argentina/Mercosur). Devolvé SOLO JSON.
 
@@ -97,38 +151,86 @@ export async function classifyWithAI(
 ): Promise<NcmClassification> {
   const evidence = Array.isArray(opts?.candidates) ? opts!.candidates.slice(0, 12) : [];
 
-  const system = [
-    SYSTEM_PROMPT,
-    evidence.length
-      ? "REGLA: tu ncm_code DEBE ser uno de los EVIDENCE_CANDIDATES. Si no podés decidir, devolvé 9999.99.99."
-      : "",
-  ].filter(Boolean).join("\n\n");
+  const system = evidence.length
+    ? EVIDENCE_SYSTEM_PROMPT
+    : [
+        SYSTEM_PROMPT,
+        "",
+      ].join("\n");
 
-  const user = [
-    "Clasificá el NCM:",
-    opts?.evidenceNote ? `EVIDENCE_NOTE:\n${String(opts.evidenceNote).slice(0, 1000)}` : "",
-    evidence.length ? `EVIDENCE_CANDIDATES:\n${JSON.stringify(evidence, null, 2)}` : "",
-    text.slice(0, 4000),
-  ].join("\n");
+  const user = evidence.length
+    ? [
+        "INPUT:",
+        "",
+        "Producto:",
+        text.slice(0, 4000),
+        "",
+        "Candidatos NCM:",
+        JSON.stringify(
+          evidence.map((c) => ({
+            ncm_code: c.ncm_code,
+            title: c.title ?? "",
+          })),
+          null,
+          2
+        ),
+        opts?.evidenceNote ? `\nNota adicional:\n${String(opts.evidenceNote).slice(0, 1000)}` : "",
+      ].join("\n")
+    : [
+        "Clasificá el NCM:",
+        opts?.evidenceNote ? `EVIDENCE_NOTE:\n${String(opts.evidenceNote).slice(0, 1000)}` : "",
+        text.slice(0, 4000),
+      ].join("\n");
 
   try {
     const start = Date.now();
     // eslint-disable-next-line no-console
-    console.log("[ncmClassifier] calling OpenAI for:", text.slice(0, 80));
+    console.log("[ncmClassifier] calling OpenAI for:", text.slice(0, 80), evidence.length ? "(evidence)" : "");
+
     const r = await openaiJson<{
       ncm_code?: string;
       confidence?: number;
+      ambiguous?: boolean;
       rationale?: string;
       candidates?: Array<{ ncm_code?: string; confidence?: number; rationale?: string }>;
+      discarded?: Array<{ ncm?: string; reason?: string }>;
       hs_heading?: string;
       kind?: string;
       search_terms?: string[];
     }>({ system, user, model: process.env.OPENAI_MODEL || "gpt-4o-mini" });
 
     const elapsed = Date.now() - start;
-    const ncm_code = formatNcm(String(r.ncm_code ?? ""));
+    let ncm_code = formatNcm(String(r.ncm_code ?? ""));
     // eslint-disable-next-line no-console
     console.log(`[ncmClassifier] result: ${ncm_code} (confidence: ${r.confidence}, ${elapsed}ms)`);
+
+    if (evidence.length) {
+      const inList = ncm_code === "9999.99.99" || isNcmInEvidence(ncm_code, evidence);
+      if (!inList) {
+        ncm_code = "9999.99.99";
+      }
+      let ambiguous = Boolean(r.ambiguous);
+      if (ncm_code === "9999.99.99") ambiguous = true;
+      const confidence = clamp01(Number(r.confidence ?? 0));
+      const rationale = String(r.rationale ?? "Clasificación restringida a candidatos.").trim();
+      const discardedRaw = Array.isArray(r.discarded) ? r.discarded : [];
+      const discarded = discardedRaw
+        .slice(0, 12)
+        .map((d) => ({
+          ncm: formatNcm(String(d?.ncm ?? "")),
+          reason: String(d?.reason ?? "").trim() || "—",
+        }))
+        .filter((d) => ncmDigits(d.ncm).length >= 6 && d.ncm !== "9999.99.99");
+
+      return {
+        ncm_code,
+        confidence,
+        rationale,
+        candidates: [],
+        ambiguous,
+        discarded: discarded.length ? discarded : undefined,
+      };
+    }
 
     const confidence = clamp01(Number(r.confidence ?? 0));
     const rationale = String(r.rationale ?? "Clasificación sugerida por IA.").trim();
@@ -156,6 +258,7 @@ export async function classifyWithAI(
       confidence: 0.2,
       rationale: "Fallback: no se pudo clasificar con IA.",
       candidates: [],
+      ambiguous: evidence.length ? true : undefined,
     };
   }
 }

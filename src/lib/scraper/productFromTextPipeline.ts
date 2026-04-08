@@ -18,6 +18,7 @@ export type TextPipelineResult = {
     localCandidates?: Array<{ ncmCode: string; title?: string }>;
     confidence?: number;
     ambiguous?: boolean;
+    discarded?: Array<{ ncm: string; reason: string }>;
   };
 };
 
@@ -348,8 +349,14 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
               ncmMeta.adjustedTo = picked;
             }
             if (typeof aiPick?.confidence === "number") ncmMeta.confidence = aiPick.confidence;
+            if (Array.isArray(aiPick?.discarded) && aiPick.discarded.length) {
+              ncmMeta.discarded = aiPick.discarded;
+            }
             // Never store missing_info_questions — the system classifies automatically
-            ncmMeta.ambiguous = Boolean(aiPick && aiPick.confidence != null && aiPick.confidence < 0.55);
+            ncmMeta.ambiguous = Boolean(
+              aiPick?.ambiguous === true ||
+                (aiPick && aiPick.confidence != null && aiPick.confidence < 0.55)
+            );
           } else {
             // Fallback: if AI cannot pick, default to the top PCRAM candidate.
             const top = filteredByHs?.[0]?.ncmCode;

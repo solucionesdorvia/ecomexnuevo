@@ -372,6 +372,85 @@ function chooseBestPrice(candidates: PriceCandidate[]): PriceCandidate | null {
   return filtered.sort((a, b) => score(b) - score(a))[0] ?? null;
 }
 
+/** eBay (and similar) pages contain many $ amounts (fees, ads, seller stats). Regex/OpenAI often pick the wrong one. */
+function marketplaceSoftCapUsd(url: string): number | null {
+  try {
+    const h = new URL(url).hostname.toLowerCase();
+    if (h.includes("ebay.")) return 25_000;
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+function roughUsdEquivalent(
+  c: PriceCandidate,
+  fxCnyPerUsd: number,
+  fxArsPerUsd: number
+): number {
+  const cur = normalizeCurrency(c.currency);
+  if (!cur || cur === "USD") return c.amount;
+  if (cur === "CNY" && Number.isFinite(fxCnyPerUsd) && fxCnyPerUsd > 0) return c.amount / fxCnyPerUsd;
+  if (cur === "ARS" && Number.isFinite(fxArsPerUsd) && fxArsPerUsd > 0) return c.amount / fxArsPerUsd;
+  return c.amount;
+}
+
+function roughUsdForRangeMinMax(
+  min: number,
+  max: number,
+  currency: string | undefined,
+  fxCnyPerUsd: number,
+  fxArsPerUsd: number
+): { minUsd: number; maxUsd: number } {
+  const cur = normalizeCurrency(currency);
+  if (cur === "CNY" && Number.isFinite(fxCnyPerUsd) && fxCnyPerUsd > 0) {
+    return { minUsd: min / fxCnyPerUsd, maxUsd: max / fxCnyPerUsd };
+  }
+  if (cur === "ARS" && Number.isFinite(fxArsPerUsd) && fxArsPerUsd > 0) {
+    return { minUsd: min / fxArsPerUsd, maxUsd: max / fxArsPerUsd };
+  }
+  return { minUsd: min, maxUsd: max };
+}
+
+/**
+ * Drops regex/openai prices above cap on noisy marketplaces. Keeps json-ld + meta (structured product data).
+ */
+function applyMarketplacePriceSanity(args: {
+  url: string;
+  priceCandidates: PriceCandidate[];
+  rangeCandidates: PriceRangeCandidate[];
+  fxCnyPerUsd: number;
+}): { priceCandidates: PriceCandidate[]; rangeCandidates: PriceRangeCandidate[]; capUsd: number | null } {
+  const cap = marketplaceSoftCapUsd(args.url);
+  if (cap == null) {
+    return { priceCandidates: args.priceCandidates, rangeCandidates: args.rangeCandidates, capUsd: null };
+  }
+
+  const fxArsPerUsd = Number(process.env.FX_ARS_PER_USD ?? "1000");
+  const softCap = cap;
+
+  const priceCandidates = args.priceCandidates.filter((c) => {
+    if (c.source === "jsonld" || c.source === "meta") return true;
+    if (c.source !== "regex" && c.source !== "openai") return true;
+    const usd = roughUsdEquivalent(c, args.fxCnyPerUsd, fxArsPerUsd);
+    return usd <= softCap;
+  });
+
+  const rangeCandidates = args.rangeCandidates.filter((r) => {
+    const { minUsd, maxUsd } = roughUsdForRangeMinMax(
+      r.min,
+      r.max,
+      r.currency,
+      args.fxCnyPerUsd,
+      fxArsPerUsd
+    );
+    const hi = Math.max(minUsd, maxUsd);
+    return hi <= softCap;
+  });
+
+  return { priceCandidates, rangeCandidates, capUsd: softCap };
+}
+
 function hasOpenAiKey() {
   return Boolean(process.env.OPENAI_API_KEY);
 }
@@ -522,8 +601,20 @@ export async function productFromUrlPipeline(
           hints ? `URL_HINTS:\n${hints}` : "",
         ].join("\n\n");
 
+    const isEbay = (() => {
+      try {
+        return new URL(analysis.url).hostname.toLowerCase().includes("ebay.");
+      } catch {
+        return false;
+      }
+    })();
+
     extracted = await openaiJson<Record<string, any>>({
-      system,
+      system:
+        system +
+        (isEbay
+          ? "\nSitio eBay: el precio debe ser SOLO el precio de compra del listado (Buy It Now o puja actual), en número real. No uses totales de ventas del vendedor, cargos, envíos agregados, IDs largos ni cifras de publicidad/similares si no son el precio del ítem."
+          : ""),
       user,
       model: process.env.OPENAI_MODEL || "gpt-4o",
     }).catch(() => null);
@@ -572,8 +663,17 @@ export async function productFromUrlPipeline(
     ...(hintText ? extractRegexRangeCandidates(hintText) : []),
   ];
 
-  const best = chooseBestPrice(priceCandidates);
   const fxCnyPerUsd = Number(process.env.FX_CNY_PER_USD ?? "7.2");
+  const sanity = applyMarketplacePriceSanity({
+    url: analysis.url,
+    priceCandidates,
+    rangeCandidates,
+    fxCnyPerUsd,
+  });
+  const priceCandidatesSan = sanity.priceCandidates;
+  const rangeCandidatesSan = sanity.rangeCandidates;
+
+  const best = chooseBestPrice(priceCandidatesSan);
 
   let fobUsd: number | undefined = undefined;
   let currency: string | undefined = undefined;
@@ -582,7 +682,7 @@ export async function productFromUrlPipeline(
 
   // Prefer explicit ranges when present (Alibaba/1688 often show a min-max).
   const bestRange = (() => {
-    const filtered = rangeCandidates
+    const filtered = rangeCandidatesSan
       .filter((r) => Number.isFinite(r.min) && Number.isFinite(r.max) && r.min > 0 && r.max > 0)
       .sort((a, b) => (b.confidence ?? 0) - (a.confidence ?? 0));
     if (!filtered.length) return null;
@@ -622,7 +722,8 @@ export async function productFromUrlPipeline(
     }
     priceMeta = {
       rangeChosen: bestRange,
-      rangeCandidates: rangeCandidates.slice(0, 6),
+      rangeCandidates: rangeCandidatesSan.slice(0, 6),
+      marketplaceSoftCapUsd: sanity.capUsd,
       fxCnyPerUsd: cur === "CNY" ? fxCnyPerUsd : undefined,
       fxArsPerUsd: cur === "ARS" ? await getArsPerUsd().catch(() => undefined) : undefined,
     };
@@ -646,14 +747,20 @@ export async function productFromUrlPipeline(
 
     priceMeta = {
       chosen: best,
+      marketplaceSoftCapUsd: sanity.capUsd,
       fxCnyPerUsd: best.currency === "CNY" ? fxCnyPerUsd : undefined,
       fxArsPerUsd: best.currency === "ARS" ? await getArsPerUsd().catch(() => undefined) : undefined,
       usdEstimated: typeof fobUsd === "number" ? fobUsd : undefined,
-      candidates: priceCandidates.slice(0, 10),
+      candidates: priceCandidatesSan.slice(0, 10),
     };
   } else if (best && priceMeta) {
     // keep chosen metadata for debugging without altering the decided range
-    priceMeta = { ...priceMeta, chosen: best, candidates: priceCandidates.slice(0, 10) };
+    priceMeta = {
+      ...priceMeta,
+      chosen: best,
+      marketplaceSoftCapUsd: sanity.capUsd,
+      candidates: priceCandidatesSan.slice(0, 10),
+    };
   }
 
   // Defensive guard: avoid placeholder prices (e.g. 0.99) from blocked/unavailable pages.
@@ -729,6 +836,7 @@ export async function productFromUrlPipeline(
         localCandidates?: Array<{ ncmCode: string; title?: string }>;
         confidence?: number;
         ambiguous?: boolean;
+        discarded?: Array<{ ncm: string; reason: string }>;
       }
     | undefined = ncm
     ? {
@@ -801,6 +909,9 @@ export async function productFromUrlPipeline(
           candidates: enriched.slice(0, 10).map((c) => ({ ncm_code: c.ncmCode, title: c.title })),
           evidenceNote,
         }).catch(() => null);
+        if (aiPick && Array.isArray(aiPick.discarded) && aiPick.discarded.length && ncmMeta) {
+          ncmMeta.discarded = aiPick.discarded;
+        }
         const picked =
           aiPick?.ncm_code && aiPick.ncm_code !== "9999.99.99" ? aiPick.ncm_code : undefined;
         if (picked) {
@@ -814,7 +925,10 @@ export async function productFromUrlPipeline(
           if (Array.isArray(aiPick?.missing_info_questions) && aiPick!.missing_info_questions!.length) {
             ncmMeta.missingInfoQuestions = aiPick!.missing_info_questions;
           }
-          ncmMeta.ambiguous = Boolean(aiPick && aiPick.confidence != null && aiPick.confidence < 0.55);
+          ncmMeta.ambiguous = Boolean(
+            aiPick?.ambiguous === true ||
+              (aiPick && aiPick.confidence != null && aiPick.confidence < 0.55)
+          );
         } else {
           // Fallback: if AI cannot pick, default to the top PCRAM candidate.
           const top = enriched?.[0]?.ncmCode;

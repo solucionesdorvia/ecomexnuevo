@@ -18,9 +18,7 @@ function parseCookies(header: string | null) {
 }
 
 export async function GET(req: Request) {
-  if (process.env.NODE_ENV === "production") {
-    return NextResponse.json({ ok: false, error: "Not available in production." }, { status: 404 });
-  }
+  // Production access to /api/debug/* is gated by src/middleware.ts (ENABLE_DEBUG_API / DEBUG_API_SECRET).
 
   const cookieHeader = req.headers.get("cookie");
   const cookieMap = parseCookies(cookieHeader);
