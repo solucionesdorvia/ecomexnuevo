@@ -1,7 +1,14 @@
 import { classifyWithAI, type NcmClassification } from "@/lib/ai/ncmClassifier";
 import { openaiJson } from "@/lib/ai/openaiClient";
+import { formatMercosurNcm8, ncmDigitsOnly } from "@/lib/ncm/knowledge/normalize";
 import { productFromTextPipeline } from "@/lib/scraper/productFromTextPipeline";
 import type { CaseSnapshot, ChatMessage, NcmCandidateItem, ProductType } from "./types";
+
+function normalizeNcmCode(raw: string | undefined): string {
+  const d = ncmDigitsOnly(String(raw ?? ""));
+  if (d.length < 6) return "";
+  return formatMercosurNcm8(d);
+}
 
 /** Respuesta más rápida: últimos turnos y tope de caractereres para el analista. */
 function truncateTranscript(messages: ChatMessage[], maxMessages = 24, maxChars = 12_000): string {
@@ -21,9 +28,16 @@ function truncateTranscript(messages: ChatMessage[], maxMessages = 24, maxChars 
 const ANALYST_TIMEOUT_MS = Number(process.env.NCM_CHAT_ANALYST_TIMEOUT_MS) || 28_000;
 const CLASSIFY_TIMEOUT_MS = Number(process.env.NCM_CHAT_CLASSIFY_TIMEOUT_MS) || 22_000;
 
+/**
+ * Por defecto: pipeline completo (IA + nomenclador local + PCRAM si hay credenciales) para NCM de 8 dígitos alineado al oficial.
+ * `NCM_CHAT_FAST_PIPELINE=1` solo IA + índice local (más rápido, menos precisión).
+ */
 function useFullNcmPipeline(): boolean {
-  const v = process.env.NCM_CHAT_FULL_PIPELINE;
-  return v === "1" || v === "true";
+  const fast = process.env.NCM_CHAT_FAST_PIPELINE;
+  if (fast === "1" || fast === "true") return false;
+  const legacy = process.env.NCM_CHAT_FULL_PIPELINE;
+  if (legacy === "0" || legacy === "false") return false;
+  return true;
 }
 
 function clamp01(n: number) {
@@ -312,10 +326,15 @@ export async function processClasificarTurn(opts: {
   try {
     if (useFullNcmPipeline()) {
       const pipeline = await productFromTextPipeline(techText);
-      const ncm = typeof pipeline.ncm === "string" ? pipeline.ncm.trim() : "";
+      const ncmRaw = typeof pipeline.ncm === "string" ? pipeline.ncm.trim() : "";
+      const ncm = normalizeNcmCode(ncmRaw) || ncmRaw;
       const meta = pipeline.ncmMeta as Record<string, unknown> | undefined;
-      const rawConf = typeof meta?.confidence === "number" ? meta.confidence : 0.45;
-      const ambiguous = meta?.ambiguous === true;
+      let rawConf = typeof meta?.confidence === "number" ? meta.confidence : 0.45;
+      let ambiguous = meta?.ambiguous === true;
+      if (pipeline.pcram && ncm) {
+        ambiguous = false;
+        rawConf = Math.max(rawConf, 0.85);
+      }
       const conf = clamp01(ambiguous ? rawConf * 0.85 : rawConf);
 
       const { candidates, discardedNotes } = mapPipelineToCandidates(ncm || undefined, meta, conf);
@@ -330,10 +349,21 @@ export async function processClasificarTurn(opts: {
       snap.classificationRationale =
         pcramTitle || snap.classificationRationale || analyst.classification_rationale_draft || undefined;
 
+      if (snap.recommendedNcm) {
+        const n = normalizeNcmCode(snap.recommendedNcm);
+        if (n) snap.recommendedNcm = n;
+      }
+      if (snap.candidates?.length) {
+        snap.candidates = snap.candidates.map((c) => ({
+          ...c,
+          code: normalizeNcmCode(c.code) || c.code,
+        }));
+      }
+
       if (ncm && conf >= 0.7 && !ambiguous) {
         snap.status = "resolved";
         snap.pendingQuestions = undefined;
-      } else if (ncm || (candidates?.length ?? 0) > 0) {
+      } else if (ncm || (snap.candidates?.length ?? 0) > 0) {
         snap.status = "tentative";
         snap.pendingQuestions = undefined;
       } else {
@@ -341,14 +371,23 @@ export async function processClasificarTurn(opts: {
       }
 
       const extra =
-        ncm && conf < 0.7
+        ncm && conf < 0.7 && !pipeline.pcram
           ? `\n\n**Clasificación tentativa.** Confianza ${Math.round(conf * 100)}% (umbral recomendado ≥70% para dar por cerrado). Podés afinar datos o validar con despachante.`
-          : ambiguous
+          : ambiguous && !pipeline.pcram
             ? `\n\n**Ambigüedad detectada** entre posiciones cercanas; conviene validar documentalmente.`
             : "";
 
+      const definitive =
+        ncm
+          ? `\n\n---\n**NCM (8 dígitos, formato Mercosur):** \`${normalizeNcmCode(ncm) || ncm}\`${
+              pipeline.pcram
+                ? "\n\n*Posición confirmada contra descripción en nomenclador (PCRAM).*"
+                : "\n\n*Validá la última posición estadística con el despachante si el producto tiene variante no descrita.*"
+            }`
+          : "";
+
       return {
-        assistantMessage: assistantMessage + extra,
+        assistantMessage: assistantMessage + extra + definitive,
         snapshot: snap,
       };
     }
@@ -364,7 +403,8 @@ export async function processClasificarTurn(opts: {
     const ambiguous = Boolean(cls.ambiguous);
     const conf = clamp01(ambiguous ? rawConf * 0.85 : rawConf);
 
-    const { ncm, candidates, discardedNotes, rationale } = mapClassifyAIResult(cls, conf);
+    const { ncm: ncmRaw, candidates, discardedNotes, rationale } = mapClassifyAIResult(cls, conf);
+    const ncm = normalizeNcmCode(ncmRaw) || ncmRaw;
     snap.candidates = candidates.length ? candidates : snap.candidates;
     snap.discardedNotes = discardedNotes.length ? discardedNotes : snap.discardedNotes;
     snap.recommendedNcm = ncm || snap.recommendedNcm;
@@ -372,10 +412,21 @@ export async function processClasificarTurn(opts: {
     snap.classificationRationale =
       rationale || snap.classificationRationale || analyst.classification_rationale_draft || undefined;
 
+    if (snap.recommendedNcm) {
+      const n = normalizeNcmCode(snap.recommendedNcm);
+      if (n) snap.recommendedNcm = n;
+    }
+    if (snap.candidates?.length) {
+      snap.candidates = snap.candidates.map((c) => ({
+        ...c,
+        code: normalizeNcmCode(c.code) || c.code,
+      }));
+    }
+
     if (ncm && conf >= 0.7 && !ambiguous) {
       snap.status = "resolved";
       snap.pendingQuestions = undefined;
-    } else if (ncm || (candidates?.length ?? 0) > 0) {
+    } else if (ncm || (snap.candidates?.length ?? 0) > 0) {
       snap.status = "tentative";
       snap.pendingQuestions = undefined;
     } else {
@@ -389,8 +440,13 @@ export async function processClasificarTurn(opts: {
           ? `\n\n**Ambigüedad detectada** entre posiciones cercanas; conviene validar documentalmente.`
           : "";
 
+    const definitive =
+      ncm
+        ? `\n\n---\n**NCM (8 dígitos, formato Mercosur):** \`${normalizeNcmCode(ncm) || ncm}\`\n\n*Para posición estadística exacta y tributos, usá el pipeline completo (por defecto) o validá con despachante.*`
+        : "";
+
     return {
-      assistantMessage: assistantMessage + extra,
+      assistantMessage: assistantMessage + extra + definitive,
       snapshot: snap,
     };
   } catch (e) {

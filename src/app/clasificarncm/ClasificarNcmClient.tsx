@@ -147,8 +147,10 @@ export default function ClasificarNcmClient() {
 
       <footer className="relative z-10 border-t border-white/[0.04] px-4 py-3">
         <p className="mx-auto max-w-4xl text-center text-[10px] leading-relaxed text-slate-600">
-          Motor: análisis conversacional + pipeline NCM (IA, nomenclador, PCRAM si hay credenciales). No sustituye
-          dictamen de despachante matriculado.
+          Por defecto usa el pipeline completo (IA + nomenclador local + PCRAM con credenciales) para acercar el NCM a la
+          posición oficial en 8 dígitos. Modo rápido solo con{" "}
+          <code className="text-slate-500">NCM_CHAT_FAST_PIPELINE=1</code>. No sustituye dictamen de despachante
+          matriculado.
         </p>
       </footer>
     </div>
