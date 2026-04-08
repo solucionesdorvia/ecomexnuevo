@@ -1,4 +1,5 @@
 import { classifyWithAI } from "@/lib/ai/ncmClassifier";
+import { wearablePcramQueryBoost } from "@/lib/ncm/wearablePcramBoost";
 import { PcramClient } from "@/lib/pcram/pcramClient";
 import { LocalNomenclator } from "@/lib/nomenclator/localNomenclator";
 
@@ -224,6 +225,7 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
       ncm = cls.ncm_code !== "9999.99.99" ? cls.ncm_code : undefined;
       if (!ncmMeta) ncmMeta = { source: "ai" };
       if (cls.ncm_code !== "9999.99.99") ncmMeta.aiNcm = cls.ncm_code;
+      if (typeof cls.confidence === "number") ncmMeta.confidence = cls.confidence;
       if (cls.hs_heading) ncmMeta.hsHeading = cls.hs_heading;
       if (cls.kind) ncmMeta.kind = cls.kind;
       if (Array.isArray(cls.search_terms) && cls.search_terms.length) {
@@ -268,15 +270,35 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
       const baseQueries =
         Array.isArray(aiTerms) && aiTerms.length ? aiTerms.map(String) : [text];
       const hs = ncmMeta?.hsHeading;
+      const wearBoost = wearablePcramQueryBoost({
+        text,
+        aiNcmHint: ncm ?? ncmMeta?.aiNcm,
+        searchTerms: ncmMeta?.searchTerms,
+        kind: ncmMeta?.kind,
+      });
       const queries = uniqueStrings(
         [
+          ...wearBoost,
           hs && /^\d{4}$/.test(hs) ? hs : "",
           hs && /^\d{4}$/.test(hs) ? `${hs} ${ncmMeta?.kind ?? ""}` : "",
           ...baseQueries,
         ].flatMap((q) => expandSearchQueries(q))
-      ).slice(0, 6);
+      ).slice(0, 12);
       const merged: Array<{ ncmCode: string; title?: string; href?: string }> = [];
       const seen = new Set<string>();
+
+      const pushCand = (ncmCode: string, title?: string, href?: string) => {
+        const key = String(ncmCode).replace(/\D/g, "");
+        if (!key || key.length < 6 || seen.has(key)) return;
+        seen.add(key);
+        merged.push({ ncmCode, title, href });
+      };
+
+      // 1) NCM sugerido por IA primero (evita que solo aparezcan teléfonos 8517.11–8517.14).
+      if (ncm && ncm !== "9999.99.99") {
+        const d = await withTimeout(client.getDetail(ncm), pcramTimeoutMs).catch(() => null);
+        pushCand(ncm, typeof (d as any)?.title === "string" ? (d as any).title : undefined);
+      }
 
       // Seed with local candidates first.
       const localSeed = Array.isArray(ncmMeta?.localCandidates) ? ncmMeta!.localCandidates : [];
@@ -286,7 +308,7 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
         if (!key || key.length < 6 || seen.has(key)) continue;
         seen.add(key);
         merged.push({ ncmCode, title: (c as any)?.title });
-        if (merged.length >= 8) break;
+        if (merged.length >= 12) break;
       }
 
       for (const q of queries) {
@@ -298,9 +320,9 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
           if (!key || seen.has(key)) continue;
           seen.add(key);
           merged.push(c);
-          if (merged.length >= 8) break;
+          if (merged.length >= 14) break;
         }
-        if (merged.length >= 8) break;
+        if (merged.length >= 14) break;
       }
 
       const candidates = merged;
@@ -327,7 +349,7 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
 
         if (ncmMeta)
           ncmMeta.pcramCandidates = filteredByHs
-            .slice(0, 8)
+            .slice(0, 12)
             .map((c) => ({ ncmCode: c.ncmCode, title: c.title }));
 
         // AI "research": choose NCM from the evidence candidate list.
@@ -391,8 +413,6 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
           break;
         }
       }
-      // IMPORTANT: Only return an NCM as "real" when PCRAM could fetch its official detail.
-      // If PCRAM lookup fails, avoid claiming a code (prevents hallucinated/unverified NCMs).
       if (pcram) {
         const ncmOfficial =
           typeof (pcram as any)?.ncmCode === "string" && (pcram as any).ncmCode.trim()
@@ -400,10 +420,11 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
             : used ?? ncm;
         return { ncm: ncmOfficial, pcram, ncmMeta };
       }
+      // Sin detalle PCRAM: igual devolvemos el NCM inferido (cotización / lab), marcado ambiguo.
       if (ncmMeta) {
         ncmMeta.ambiguous = true;
       }
-      return ncmMeta ? { ncmMeta } : {};
+      return { ncm, ncmMeta, pcram: undefined };
     }
   }
 

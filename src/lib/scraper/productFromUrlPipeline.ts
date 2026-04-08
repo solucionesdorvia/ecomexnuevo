@@ -1,6 +1,7 @@
 import { analyzeUrl } from "@/lib/url/urlAnalyzer";
 import { openaiJson } from "@/lib/ai/openaiClient";
 import { classifyWithAI } from "@/lib/ai/ncmClassifier";
+import { wearablePcramQueryBoost } from "@/lib/ncm/wearablePcramBoost";
 import { PcramClient } from "@/lib/pcram/pcramClient";
 import { LocalNomenclator } from "@/lib/nomenclator/localNomenclator";
 import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
@@ -846,6 +847,7 @@ export async function productFromUrlPipeline(
         kind: cls?.kind,
         searchTerms: cls?.search_terms,
         localCandidates,
+        ...(typeof cls?.confidence === "number" ? { confidence: cls.confidence } : {}),
       }
     : undefined;
 
@@ -858,6 +860,7 @@ export async function productFromUrlPipeline(
       missingInfoQuestions: cls.missing_info_questions,
       needsClarification: cls.needs_clarification,
       ambiguous: cls.ambiguous,
+      ...(typeof cls.confidence === "number" ? { confidence: cls.confidence } : {}),
     };
   } else if (ncmMeta && cls) {
     if (Array.isArray(cls.missing_info_questions) && cls.missing_info_questions.length) {
@@ -865,14 +868,36 @@ export async function productFromUrlPipeline(
     }
     if (cls.needs_clarification) ncmMeta.needsClarification = true;
     if (cls.ambiguous) ncmMeta.ambiguous = true;
+    if (typeof cls.confidence === "number") ncmMeta.confidence = cls.confidence;
   }
 
   if (process.env.PCRAM_USER && process.env.PCRAM_PASS) {
     const client = new PcramClient();
     const queryForSearch = (title || category || description || "").trim() || textForNcm || url;
-    const queries = expandSearchQueries(queryForSearch);
+    const wearBoost = wearablePcramQueryBoost({
+      text: textForNcm,
+      aiNcmHint: ncmAdjusted ?? cls?.ncm_code,
+      searchTerms: cls?.search_terms,
+      kind: cls?.kind,
+    });
+    const queries = uniqueStrings([...wearBoost, ...expandSearchQueries(queryForSearch)]).slice(0, 12);
     const merged: Array<{ ncmCode: string; title?: string; href?: string }> = [];
     const seen = new Set<string>();
+
+    const pushCandUrl = (ncmCode: string, title?: string, href?: string) => {
+      const key = String(ncmCode).replace(/\D/g, "");
+      if (!key || key.length < 6 || seen.has(key)) return;
+      seen.add(key);
+      merged.push({ ncmCode, title, href });
+    };
+
+    if (ncmAdjusted && ncmAdjusted !== "9999.99.99") {
+      const d = await client.getDetail(ncmAdjusted).catch(() => null);
+      pushCandUrl(
+        ncmAdjusted,
+        typeof (d as any)?.title === "string" ? (d as any).title : undefined
+      );
+    }
 
     // Seed with local candidates first.
     if (Array.isArray(localCandidates) && localCandidates.length) {
@@ -882,7 +907,7 @@ export async function productFromUrlPipeline(
         if (!key || key.length < 6 || seen.has(key)) continue;
         seen.add(key);
         merged.push({ ncmCode, title: c.title });
-        if (merged.length >= 8) break;
+        if (merged.length >= 12) break;
       }
     }
 
@@ -893,9 +918,9 @@ export async function productFromUrlPipeline(
         if (!key || seen.has(key)) continue;
         seen.add(key);
         merged.push(c);
-        if (merged.length >= 8) break;
+        if (merged.length >= 14) break;
       }
-      if (merged.length >= 8) break;
+      if (merged.length >= 14) break;
     }
     const candidates = merged;
     if (candidates.length) {
@@ -915,7 +940,7 @@ export async function productFromUrlPipeline(
       ncmMeta = ncmMeta ?? (ncmAdjusted ? { aiNcm: ncmAdjusted } : {});
       if (ncmMeta && localCandidates) ncmMeta.localCandidates = localCandidates;
       ncmMeta.pcramCandidates = enriched
-        .slice(0, 8)
+        .slice(0, 12)
         .map((c) => ({ ncmCode: c.ncmCode, title: c.title }));
 
       // AI "research": choose NCM from the evidence candidate list (PCRAM + local).
