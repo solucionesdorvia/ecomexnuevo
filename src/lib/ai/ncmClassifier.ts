@@ -102,6 +102,61 @@ function tryGuardWearableVsPhone(
   };
 }
 
+/** 8527 = radiodifusión / receptores de radio; no aplica a smartwatch por “inalámbrico”. */
+function isWearableConnectedDevice(text: string): boolean {
+  return WEARABLE_NOT_PHONE.test(text);
+}
+
+function is8527MisclassifiedForWearable(ncmFormatted: string): boolean {
+  return /^8527\./.test(ncmFormatted);
+}
+
+/**
+ * Smartwatch/wearable: función principal = conectividad y datos, no radiodifusión (8527).
+ * Corrige a 8517.62.72 cuando la IA eligió 8527 por error de razonamiento.
+ */
+function tryGuardWearableVs8527(
+  text: string,
+  ncm_code: string,
+  confidence: number,
+  rationale: string,
+  hs_heading: string | undefined,
+  kind: string | undefined,
+  search_terms: string[] | undefined
+): {
+  ncm_code: string;
+  confidence: number;
+  rationale: string;
+  hs_heading?: string;
+  kind?: string;
+  search_terms?: string[];
+  missing_info_questions?: string[];
+  needs_clarification: boolean;
+  ambiguous: boolean;
+} | null {
+  if (!isWearableConnectedDevice(text) || !is8527MisclassifiedForWearable(ncm_code)) return null;
+
+  const conf = Math.min(Math.max(confidence, 0.66), 0.74);
+
+  return {
+    ncm_code: "8517.62.72",
+    confidence: conf,
+    rationale: `${rationale} — Ajuste automático: **8527** alcanza receptores de **radiodifusión** / aparatos de radio; un Apple Watch u otro wearable no tiene como función principal recibir broadcast. La función principal es **conectividad y transmisión/recepción de datos** con teléfono/red → **8517.62** (p. ej. 8517.62.72), no 8527.`,
+    hs_heading: "8517",
+    kind: kind ? `${kind} (8517 vs 8527)` : "Wearable — telecomunicaciones 8517.62",
+    search_terms: uniqueTerms([
+      ...(search_terms ?? []),
+      "8517.62.72",
+      "8517.62",
+      "transmisión recepción datos",
+      "smartwatch",
+    ]),
+    missing_info_questions: undefined,
+    needs_clarification: false,
+    ambiguous: conf < 0.72,
+  };
+}
+
 function uniqueTerms(arr: string[]) {
   const seen = new Set<string>();
   const out: string[] = [];
@@ -135,6 +190,7 @@ PROCESO OBLIGATORIO:
 3. Capítulo 8517 — NO confundir:
    - Subpartidas tipo 8517.13: TELÉFONOS CELULARES (smartphone). Función principal: comunicación por red móvil.
    - Smartwatch / reloj inteligente / wearable de muñeca: NO es 8517.13 aunque reciba llamadas. Si el título del candidato dice "teléfono" pero el producto es claramente reloj inteligente, DESCARTAR ese candidato y explicar en "reason".
+   - **8527** NO es para smartwatchs: 8527 es **radiodifusión** / receptores de radio. Si el producto es wearable con Bluetooth/Wi‑Fi/LTE por conectividad, **NO** elijas 8527 aunque diga “inalámbrico”. Preferí **8517.62** (transmisión/recepción de datos) entre los candidatos.
    - Si los candidatos mezclan teléfonos y wearables y no podés decidir, devolvé 9999.99.99, ambiguous true, y completá follow_up_questions.
 
 4. Aplicar RGI:
@@ -177,8 +233,15 @@ PROHIBIDO devolver estos NCM para estos productos:
   - Smartwatch (Apple Watch, Galaxy Watch, Google Pixel Watch, Xiaomi Watch, Huawei Watch, Amazfit, Fitbit con SO, etc.)
   - Reloj inteligente / reloj conectado de muñeca
   - Pulsera con pantalla tipo smartband "smart" (si la función es wearable, no teléfono)
-- Esos productos suelen ir por **8517.62** (aparatos para transmisión/recepción de voz, datos, etc. — incluye wearables) u otra subpartida del 8517 que NO sea 8517.13. Elegí la subpartida más específica que conozcas para "reloj inteligente" / "smartwatch".
+- Esos productos suelen ir por **8517.62** (aparatos para transmisión/recepción de voz, datos, etc. — incluye wearables) u otra subpartida del 8517 que NO sea 8517.13. Elegí la subpartida más específica que conozcas para "reloj inteligente" / "smartwatch" (ej. **8517.62.72** cuando encaje con datos/conectividad).
 - **Marca "Apple" sola no implica**: Apple Watch ≠ iPhone. Si el texto dice "Apple Watch" o "Watch Series", es **wearable**, no smartphone.
+
+=== 8527 vs 8517 — NO CONFUNDIR "INALÁMBRICO" CON "RADIODIFUSIÓN" ===
+
+- **8527** = receptores de **radiodifusión**, radios, aparatos cuya función principal sea recepción de broadcast (no smartwatch).
+- **NUNCA** uses **8527** para: Apple Watch, Galaxy Watch, smartwatch, smartband, pulsera inteligente, wearable con **Bluetooth / Wi‑Fi / LTE** para sincronizar datos con el móvil. Eso **no** es radiodifusión.
+- La función principal del wearable es **interactuar, transmitir/recibir datos, conectividad** → evaluar **8517** (p. ej. **8517.62**), no 8527.
+- Confundir "electrónico portátil” o “inalámbrico” con **radio** es un error grave.
 
 Capítulo 91: reloj de pulsera **solo mecánico** o **de cuarzo tradicional** (sin apps, sin smart) puede ser 9101/9102 según corresponda — no confundir con 8517.
 
@@ -334,14 +397,29 @@ export async function classifyWithAI(
     console.log(`[ncmClassifier] result: ${ncm_code} (confidence: ${r.confidence}, ${elapsed}ms)`);
 
     if (evidence.length) {
-      const inList = ncm_code === "9999.99.99" || isNcmInEvidence(ncm_code, evidence);
+      let rationaleEvidence = String(r.rationale ?? "Clasificación restringida a candidatos.").trim();
+      let wearable8527Fix = false;
+      if (isWearableConnectedDevice(text) && is8527MisclassifiedForWearable(ncm_code)) {
+        const fromList = evidence
+          .map((e) => formatNcm(e.ncm_code))
+          .filter((c) => /^8517\.62/.test(c) && c !== "9999.99.99")
+          .sort()[0];
+        ncm_code = fromList ?? "8517.62.72";
+        wearable8527Fix = true;
+        rationaleEvidence = `${rationaleEvidence} — Corrección: **8527** es radiodifusión/radio; wearable conectado → **8517.62** (datos/telecom), no 8527.`;
+      }
+
+      const inList =
+        ncm_code === "9999.99.99" ||
+        isNcmInEvidence(ncm_code, evidence) ||
+        (wearable8527Fix && /^8517\.62/.test(ncm_code));
       if (!inList) {
         ncm_code = "9999.99.99";
       }
       let ambiguous = Boolean(r.ambiguous);
       if (ncm_code === "9999.99.99") ambiguous = true;
       const confidence = clamp01(Number(r.confidence ?? 0));
-      const rationale = String(r.rationale ?? "Clasificación restringida a candidatos.").trim();
+      const rationale = rationaleEvidence;
       const discardedRaw = Array.isArray(r.discarded) ? r.discarded : [];
       const discarded = discardedRaw
         .slice(0, 12)
@@ -392,22 +470,36 @@ export async function classifyWithAI(
     let missing_info_questions: string[] | undefined = modelQuestions.length ? modelQuestions : undefined;
     let needs_clarification = Boolean(r.needs_clarification);
 
-    const guard = tryGuardWearableVsPhone(text, ncm_code, confidence, rationale, hs_heading, kind, search_terms);
-    if (guard) {
-      ncm_code = guard.ncm_code;
-      confidence = guard.confidence;
-      rationale = guard.rationale;
-      hs_heading = guard.hs_heading;
-      kind = guard.kind;
-      search_terms = guard.search_terms;
-      missing_info_questions = guard.missing_info_questions;
-      needs_clarification = guard.needs_clarification;
-    } else if (!needs_clarification && modelQuestions.length) {
-      needs_clarification = true;
+    let guard8527: ReturnType<typeof tryGuardWearableVs8527> = null;
+    const guardPhone = tryGuardWearableVsPhone(text, ncm_code, confidence, rationale, hs_heading, kind, search_terms);
+    if (guardPhone) {
+      ncm_code = guardPhone.ncm_code;
+      confidence = guardPhone.confidence;
+      rationale = guardPhone.rationale;
+      hs_heading = guardPhone.hs_heading;
+      kind = guardPhone.kind;
+      search_terms = guardPhone.search_terms;
+      missing_info_questions = guardPhone.missing_info_questions;
+      needs_clarification = guardPhone.needs_clarification;
+    } else {
+      guard8527 = tryGuardWearableVs8527(text, ncm_code, confidence, rationale, hs_heading, kind, search_terms);
+      if (guard8527) {
+        ncm_code = guard8527.ncm_code;
+        confidence = guard8527.confidence;
+        rationale = guard8527.rationale;
+        hs_heading = guard8527.hs_heading;
+        kind = guard8527.kind;
+        search_terms = guard8527.search_terms;
+        missing_info_questions = guard8527.missing_info_questions;
+        needs_clarification = guard8527.needs_clarification;
+      } else if (!needs_clarification && modelQuestions.length) {
+        needs_clarification = true;
+      }
     }
 
     const ambiguous =
-      Boolean(guard?.ambiguous) ||
+      Boolean(guardPhone?.ambiguous) ||
+      Boolean(guard8527?.ambiguous) ||
       needs_clarification ||
       (missing_info_questions && missing_info_questions.length > 0) ||
       confidence < 0.45;
