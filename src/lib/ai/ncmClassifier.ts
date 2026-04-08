@@ -153,7 +153,8 @@ function tryGuardWearableVs8527(
     ]),
     missing_info_questions: undefined,
     needs_clarification: false,
-    ambiguous: conf < 0.72,
+    /** Regla determinística: no marcar ambiguo (evita conf ×0.85 y mensaje erróneo en el chat). */
+    ambiguous: false,
   };
 }
 
@@ -418,7 +419,19 @@ export async function classifyWithAI(
       }
       let ambiguous = Boolean(r.ambiguous);
       if (ncm_code === "9999.99.99") ambiguous = true;
-      const confidence = clamp01(Number(r.confidence ?? 0));
+      let confidence = clamp01(Number(r.confidence ?? 0));
+      if (wearable8527Fix && ncm_code !== "9999.99.99") {
+        ambiguous = false;
+        confidence = Math.max(confidence, 0.7);
+      } else if (
+        isWearableConnectedDevice(text) &&
+        /^8517\.62/.test(ncm_code) &&
+        ncm_code !== "9999.99.99"
+      ) {
+        /** El modelo a veces devuelve confianza muy baja pese a candidato 8517.62 correcto para wearables. */
+        ambiguous = false;
+        confidence = Math.max(confidence, 0.68);
+      }
       const rationale = rationaleEvidence;
       const discardedRaw = Array.isArray(r.discarded) ? r.discarded : [];
       const discarded = discardedRaw
