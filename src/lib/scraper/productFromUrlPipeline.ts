@@ -837,6 +837,7 @@ export async function productFromUrlPipeline(
         confidence?: number;
         ambiguous?: boolean;
         discarded?: Array<{ ncm: string; reason: string }>;
+        needsClarification?: boolean;
       }
     | undefined = ncm
     ? {
@@ -847,6 +848,24 @@ export async function productFromUrlPipeline(
         localCandidates,
       }
     : undefined;
+
+  if (!ncmMeta && cls) {
+    ncmMeta = {
+      hsHeading: cls.hs_heading,
+      kind: cls.kind,
+      searchTerms: cls.search_terms,
+      localCandidates,
+      missingInfoQuestions: cls.missing_info_questions,
+      needsClarification: cls.needs_clarification,
+      ambiguous: cls.ambiguous,
+    };
+  } else if (ncmMeta && cls) {
+    if (Array.isArray(cls.missing_info_questions) && cls.missing_info_questions.length) {
+      ncmMeta.missingInfoQuestions = cls.missing_info_questions;
+    }
+    if (cls.needs_clarification) ncmMeta.needsClarification = true;
+    if (cls.ambiguous) ncmMeta.ambiguous = true;
+  }
 
   if (process.env.PCRAM_USER && process.env.PCRAM_PASS) {
     const client = new PcramClient();
@@ -923,13 +942,20 @@ export async function productFromUrlPipeline(
           }
           if (typeof aiPick?.confidence === "number") ncmMeta.confidence = aiPick.confidence;
           if (Array.isArray(aiPick?.missing_info_questions) && aiPick!.missing_info_questions!.length) {
-            ncmMeta.missingInfoQuestions = aiPick!.missing_info_questions;
+            ncmMeta.missingInfoQuestions = aiPick!.missing_info_questions.map(String).filter(Boolean).slice(0, 4);
           }
+          if (aiPick?.needs_clarification) ncmMeta.needsClarification = true;
           ncmMeta.ambiguous = Boolean(
             aiPick?.ambiguous === true ||
               (aiPick && aiPick.confidence != null && aiPick.confidence < 0.55)
           );
         } else {
+          if (aiPick) {
+            if (Array.isArray(aiPick.missing_info_questions) && aiPick.missing_info_questions.length) {
+              ncmMeta.missingInfoQuestions = aiPick.missing_info_questions.map(String).filter(Boolean).slice(0, 4);
+            }
+            if (aiPick.needs_clarification) ncmMeta.needsClarification = true;
+          }
           // Fallback: if AI cannot pick, default to the top PCRAM candidate.
           const top = enriched?.[0]?.ncmCode;
           if (!ncmAdjusted && top) {

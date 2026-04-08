@@ -16,6 +16,8 @@ type NcmMeta = {
   confidence?: number;
   ambiguous?: boolean;
   discarded?: Array<{ ncm: string; reason: string }>;
+  missingInfoQuestions?: string[];
+  needsClarification?: boolean;
 };
 
 type PipelineResult = {
@@ -33,6 +35,7 @@ type ApiOk = { ok: true; ms: number; result: PipelineResult };
 type ApiErr = { ok: false; error: string };
 
 const EXAMPLES = [
+  "Apple Watch Series 9 GPS 45mm caja aluminio, correa deportiva, nuevo",
   "Cargador USB-C GaN 65W, salida USB-A y USB-C, para notebook y teléfono, origen China",
   "Auriculares in-ear bluetooth 5.3 con estuche de carga, marca genérica",
   "Remera de algodón peinado 180g, cuello redondo, hombre, importación desde Bangladesh",
@@ -187,7 +190,7 @@ export default function ClasificarNcmClient() {
                 )}
               </div>
 
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-3">
                 <div className="rounded-xl border border-white/[0.06] bg-[#0B1622] p-4">
                   <p className="text-[9px] font-semibold uppercase tracking-wider text-[#5A6577]">Confianza</p>
                   <p className="mt-1 text-[18px] font-semibold text-white">
@@ -200,7 +203,26 @@ export default function ClasificarNcmClient() {
                     {meta?.ambiguous === true ? "Sí" : meta?.ambiguous === false ? "No" : "—"}
                   </p>
                 </div>
+                <div className="rounded-xl border border-white/[0.06] bg-[#0B1622] p-4">
+                  <p className="text-[9px] font-semibold uppercase tracking-wider text-[#5A6577]">Aclaraciones</p>
+                  <p className="mt-1 text-[18px] font-semibold text-white">
+                    {meta?.needsClarification === true ? "Sí" : meta?.needsClarification === false ? "No" : "—"}
+                  </p>
+                </div>
               </div>
+
+              {meta?.missingInfoQuestions && meta.missingInfoQuestions.length > 0 && (
+                <div className="rounded-xl border border-[#2F80ED]/25 bg-[#2F80ED]/[0.07] p-4">
+                  <p className="text-[9px] font-semibold uppercase tracking-wider text-[#A7B3C2]">Preguntas sugeridas</p>
+                  <ul className="mt-3 list-decimal space-y-2 pl-5 text-[13px] leading-relaxed text-white">
+                    {meta.missingInfoQuestions.map((q, i) => (
+                      <li key={i} className="marker:text-[#2F80ED]">
+                        {q}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {meta?.source && (
                 <p className="text-[12px] text-[#5A6577]">

@@ -19,6 +19,7 @@ export type TextPipelineResult = {
     confidence?: number;
     ambiguous?: boolean;
     discarded?: Array<{ ncm: string; reason: string }>;
+    needsClarification?: boolean;
   };
 };
 
@@ -228,7 +229,11 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
       if (Array.isArray(cls.search_terms) && cls.search_terms.length) {
         ncmMeta.searchTerms = cls.search_terms.map(String).filter(Boolean).slice(0, 6);
       }
-      // Never store missing_info_questions — the system classifies automatically
+      if (Array.isArray(cls.missing_info_questions) && cls.missing_info_questions.length) {
+        ncmMeta.missingInfoQuestions = cls.missing_info_questions.map(String).filter(Boolean).slice(0, 4);
+      }
+      if (cls.needs_clarification) ncmMeta.needsClarification = true;
+      if (cls.ambiguous) ncmMeta.ambiguous = true;
     } catch {
       // In production (e.g. Railway), OpenAI can intermittently fail (timeouts/quotas).
       // Don't abort the entire pipeline; we'll fall back to PCRAM/local evidence below.
@@ -352,7 +357,10 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
             if (Array.isArray(aiPick?.discarded) && aiPick.discarded.length) {
               ncmMeta.discarded = aiPick.discarded;
             }
-            // Never store missing_info_questions — the system classifies automatically
+            if (Array.isArray(aiPick?.missing_info_questions) && aiPick.missing_info_questions.length) {
+              ncmMeta.missingInfoQuestions = aiPick.missing_info_questions.map(String).filter(Boolean).slice(0, 4);
+            }
+            if (aiPick?.needs_clarification) ncmMeta.needsClarification = true;
             ncmMeta.ambiguous = Boolean(
               aiPick?.ambiguous === true ||
                 (aiPick && aiPick.confidence != null && aiPick.confidence < 0.55)

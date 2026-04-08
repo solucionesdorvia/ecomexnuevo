@@ -20,6 +20,8 @@ export type NcmClassification = {
   kind?: string;
   search_terms?: string[];
   missing_info_questions?: string[];
+  /** True cuando hace falta respuesta del usuario antes de afirmar el NCM. */
+  needs_clarification?: boolean;
   /** Set when classifying from a restricted candidate list (PCRAM/local evidence). */
   ambiguous?: boolean;
   discarded?: Array<{ ncm: string; reason: string }>;
@@ -49,6 +51,69 @@ function isNcmInEvidence(formatted: string, evidence: NcmEvidenceCandidate[]) {
   return evidence.some((e) => ncmDigits(e.ncm_code) === key);
 }
 
+/** Reloj/pulsera conectada — no es smartphone aunque la marca sea Apple/Samsung. */
+const WEARABLE_NOT_PHONE = /\b(apple watch|galaxy watch|google pixel watch|smartwatch|reloj inteligente|reloj conectado|huawei watch|xiaomi watch|amazfit|fitbit(?:\s+(?:sense|versa|charge|inspire))?|pulsera\s+inteligente|wearable|reloj\s+deportivo\s+con\s+pantalla)\b/i;
+
+function isWearableMisclassifiedAsPhone(text: string, ncmFormatted: string) {
+  if (!WEARABLE_NOT_PHONE.test(text)) return false;
+  return /^8517\.13\b/.test(ncmFormatted);
+}
+
+/**
+ * Si la IA confundió wearable con celular, no devolvemos 8517.13: anulamos NCM y dejamos que PCRAM/nomenclador busquen 8517.62*.
+ */
+function tryGuardWearableVsPhone(
+  text: string,
+  ncm_code: string,
+  confidence: number,
+  rationale: string,
+  hs_heading: string | undefined,
+  kind: string | undefined,
+  search_terms: string[] | undefined
+): {
+  ncm_code: string;
+  confidence: number;
+  rationale: string;
+  hs_heading?: string;
+  kind?: string;
+  search_terms?: string[];
+  missing_info_questions: string[];
+  needs_clarification: boolean;
+  ambiguous: boolean;
+} | null {
+  if (!isWearableMisclassifiedAsPhone(text, ncm_code)) return null;
+
+  const q = [
+    "¿El producto es un **smartwatch / reloj inteligente de muñeca** (pantalla, apps, sensores) o un **teléfono celular smartphone**? (8517.13 es solo para teléfonos; wearables suelen ir por 8517.62 u otra subpartida del 8517 distinta de 8517.13.)",
+    "Si es smartwatch: ¿tiene **eSIM / línea celular propia** o solo **Bluetooth** vinculado al teléfono? (puede cambiar la subpartida).",
+  ];
+
+  return {
+    ncm_code: "9999.99.99",
+    confidence: Math.min(confidence, 0.38),
+    rationale: `${rationale} — Ajuste automático: 8517.13 es **teléfono celular**; este texto describe un **wearable**, no un smartphone. Se busca posición en 8517.62 (o equivalente) vía nomenclador.`,
+    hs_heading: "8517",
+    kind: kind ? `${kind} (wearable vs teléfono)` : "Dispositivo cap. 8517 — confirmar tipo",
+    search_terms: uniqueTerms([...(search_terms ?? []), "reloj inteligente", "smartwatch", "8517.62"]),
+    missing_info_questions: q,
+    needs_clarification: true,
+    ambiguous: true,
+  };
+}
+
+function uniqueTerms(arr: string[]) {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const x of arr) {
+    const t = String(x || "").trim();
+    if (!t || seen.has(t.toLowerCase())) continue;
+    seen.add(t.toLowerCase());
+    out.push(t);
+    if (out.length >= 6) break;
+  }
+  return out.length ? out : undefined;
+}
+
 const EVIDENCE_SYSTEM_PROMPT = `Sos un clasificador profesional de NCM (Mercosur / Argentina), actuando como un despachante de aduana senior.
 
 IMPORTANTE:
@@ -59,21 +124,26 @@ IMPORTANTE:
 PROCESO OBLIGATORIO:
 
 1. Determinar la FUNCIÓN PRINCIPAL del producto
-   → Esto tiene más peso que el nombre comercial o material
+   → Esto tiene más peso que el nombre comercial o la marca (ej. "Apple" puede ser iPhone o Apple Watch: son capítulos distintos dentro de 85)
 
 2. Identificar:
    - tipo de producto (final, parte, accesorio)
    - tecnología (eléctrico, mecánico, químico, etc.)
    - uso real
 
-3. Aplicar RGI:
+3. Capítulo 8517 — NO confundir:
+   - Subpartidas tipo 8517.13: TELÉFONOS CELULARES (smartphone). Función principal: comunicación por red móvil.
+   - Smartwatch / reloj inteligente / wearable de muñeca: NO es 8517.13 aunque reciba llamadas. Si el título del candidato dice "teléfono" pero el producto es claramente reloj inteligente, DESCARTAR ese candidato y explicar en "reason".
+   - Si los candidatos mezclan teléfonos y wearables y no podés decidir, devolvé 9999.99.99, ambiguous true, y completá follow_up_questions.
+
+4. Aplicar RGI:
    - RGI 1: Comparar directamente con la descripción legal de cada candidato (usá el título provisto como proxy)
    - RGI 3a: Elegir la descripción MÁS ESPECÍFICA
    - RGI 3b: Si es un conjunto/kit → elegir por carácter esencial
 
-4. DESCARTAR candidatos: Para cada candidato descartado, indicar brevemente por qué NO aplica (si corresponde)
+5. DESCARTAR candidatos: Para cada candidato descartado, indicar brevemente por qué NO aplica (si corresponde)
 
-5. DECISIÓN FINAL:
+6. DECISIÓN FINAL:
    - Elegir el mejor candidato de la lista
    - Si hay duda razonable → ambiguous = true (y preferí bajar confidence)
 
@@ -83,12 +153,13 @@ REGLAS CRÍTICAS:
 - Si dos opciones son muy similares → bajar confidence
 - Si no hay match claro → ambiguous = true y ncm_code "9999.99.99"
 
-Devolvé SOLO un objeto JSON con exactamente estas claves:
+Devolvé SOLO un objeto JSON con estas claves:
 - ncm_code: string "XXXX.XX.XX" (uno de los candidatos, o "9999.99.99" si ninguno aplica)
 - confidence: número entre 0 y 1
 - ambiguous: boolean
 - rationale: string (función principal + RGI, breve)
-- discarded: array de { "ncm": "XXXX.XX.XX", "reason": "..." } (puede estar vacío)`;
+- discarded: array de { "ncm": "XXXX.XX.XX", "reason": "..." } (puede estar vacío)
+- follow_up_questions: array de strings, máximo 2, vacío si no hace falta (solo si necesitás datos del importador para decidir entre candidatos viables)`;
 
 const SYSTEM_PROMPT = `Sos un clasificador experto NCM (Argentina/Mercosur). Devolvé SOLO JSON.
 
@@ -98,10 +169,24 @@ PROHIBIDO devolver estos NCM para estos productos:
 - Cargador USB / adaptador corriente / fuente switching → 8504.40.21 (NUNCA 8504.10.XX)
 - 8504.10 es SOLO para transformadores de dieléctrico LÍQUIDO (postes de electricidad)
 
-TABLA DE REFERENCIA RÁPIDA:
+=== CAPÍTULO 8517 — CRÍTICO (errores frecuentes) ===
+
+- 8517.13.xx (y afines de "teléfonos para redes celulares"): SOLO **teléfonos celulares / smartphones**. Función principal: comunicación por red móvil.
+- **NUNCA** uses 8517.13 para:
+  - Smartwatch (Apple Watch, Galaxy Watch, Google Pixel Watch, Xiaomi Watch, Huawei Watch, Amazfit, Fitbit con SO, etc.)
+  - Reloj inteligente / reloj conectado de muñeca
+  - Pulsera con pantalla tipo smartband "smart" (si la función es wearable, no teléfono)
+- Esos productos suelen ir por **8517.62** (aparatos para transmisión/recepción de voz, datos, etc. — incluye wearables) u otra subpartida del 8517 que NO sea 8517.13. Elegí la subpartida más específica que conozcas para "reloj inteligente" / "smartwatch".
+- **Marca "Apple" sola no implica**: Apple Watch ≠ iPhone. Si el texto dice "Apple Watch" o "Watch Series", es **wearable**, no smartphone.
+
+Capítulo 91: reloj de pulsera **solo mecánico** o **de cuarzo tradicional** (sin apps, sin smart) puede ser 9101/9102 según corresponda — no confundir con 8517.
+
+=== TABLA DE REFERENCIA RÁPIDA (orientativa) ===
+
 - Cargador USB/Type-C/adaptador corriente → 8504.40.21
 - Fuente de alimentación / power supply → 8504.40.22
-- Smartphone → 8517.13.00
+- Smartphone / teléfono celular → 8517.13.00
+- Smartwatch / reloj inteligente → 8517.62 (NO 8517.13)
 - Tablet → 8471.30.19
 - Notebook/laptop → 8471.30.19
 - Auriculares/cascos bluetooth → 8518.30.00
@@ -125,22 +210,23 @@ TABLA DE REFERENCIA RÁPIDA:
 - Juguete → 9503.00.97
 - Videoconsola → 9504.50.00
 
-=== INSTRUCCIONES ===
+=== INSTRUCCIONES DE RAZONAMIENTO ===
 
-1. Identificá qué es el producto, su función principal y material.
-2. Determiná Sección y Capítulo.
-3. Elegí la partida (4 dígitos) y subpartida (8 dígitos) más específica.
-4. Verificá que no haya una posición mejor entre las vecinas.
-5. NUNCA pidas información adicional. Clasificá con lo que tenés.
+1. Identificá la FUNCIÓN PRINCIPAL (no el nombre comercial).
+2. Si el texto es ambiguo (ej. solo "reloj" sin decir si es smart o mecánico), o hay riesgo de confundir capítulos, NO inventes certeza: bajá confidence y usá needs_clarification.
+3. Si necesitás 1–3 datos técnicos para decidir entre partidas legales distintas, devolvé needs_clarification: true y missing_info_questions con preguntas concretas (sí/no o dato corto).
+4. Si tenés suficiente información, needs_clarification: false y missing_info_questions: [].
 
 Devolvé JSON con:
 - ncm_code: "XXXX.XX.XX"
-- confidence: 0 a 1
-- rationale: explicación breve (sección → capítulo → partida → subpartida)
+- confidence: 0 a 1 (bajá si hay duda)
+- rationale: cadena breve: función principal → por qué esta partida (mencionar RGI si aplica)
 - candidates: 2-3 alternativas [{ncm_code, confidence, rationale}]
-- hs_heading: 4 dígitos (ej "8504")
+- hs_heading: 4 dígitos (ej "8517")
 - kind: etiqueta corta español
-- search_terms: 2-4 términos para PCRAM`;
+- search_terms: 2-4 términos para buscar en nomenclador/PCRAM (incluí términos legales, no solo marca)
+- needs_clarification: boolean
+- missing_info_questions: array de strings, máximo 3, vacío si no hace falta`;
 
 export async function classifyWithAI(
   text: string,
@@ -197,6 +283,9 @@ export async function classifyWithAI(
       hs_heading?: string;
       kind?: string;
       search_terms?: string[];
+      needs_clarification?: boolean;
+      missing_info_questions?: string[];
+      follow_up_questions?: string[];
     }>({ system, user, model: process.env.OPENAI_MODEL || "gpt-4o-mini" });
 
     const elapsed = Date.now() - start;
@@ -222,6 +311,12 @@ export async function classifyWithAI(
         }))
         .filter((d) => ncmDigits(d.ncm).length >= 6 && d.ncm !== "9999.99.99");
 
+      const followRaw = Array.isArray(r.follow_up_questions) ? r.follow_up_questions : [];
+      const followUp = followRaw
+        .map((x) => String(x).trim())
+        .filter(Boolean)
+        .slice(0, 2);
+
       return {
         ncm_code,
         confidence,
@@ -229,11 +324,13 @@ export async function classifyWithAI(
         candidates: [],
         ambiguous,
         discarded: discarded.length ? discarded : undefined,
+        missing_info_questions: followUp.length ? followUp : undefined,
+        needs_clarification: followUp.length > 0 || ambiguous,
       };
     }
 
-    const confidence = clamp01(Number(r.confidence ?? 0));
-    const rationale = String(r.rationale ?? "Clasificación sugerida por IA.").trim();
+    let confidence = clamp01(Number(r.confidence ?? 0));
+    let rationale = String(r.rationale ?? "Clasificación sugerida por IA.").trim();
     const candidates = Array.isArray(r.candidates) && r.candidates.length
       ? r.candidates.slice(0, 6).map((c) => ({
           ncm_code: formatNcm(String(c.ncm_code ?? "")),
@@ -243,13 +340,50 @@ export async function classifyWithAI(
       : [];
 
     const hsRaw = String(r.hs_heading ?? "").replace(/\D/g, "");
-    const hs_heading = hsRaw.length === 4 ? hsRaw : undefined;
-    const kind = r.kind ? String(r.kind).trim() : undefined;
-    const search_terms = Array.isArray(r.search_terms)
+    let hs_heading = hsRaw.length === 4 ? hsRaw : undefined;
+    let kind = r.kind ? String(r.kind).trim() : undefined;
+    let search_terms = Array.isArray(r.search_terms)
       ? r.search_terms.map((x) => String(x).trim()).filter(Boolean).slice(0, 6)
       : undefined;
 
-    return { ncm_code, confidence, rationale, candidates, hs_heading, kind, search_terms };
+    const modelQuestions = Array.isArray(r.missing_info_questions)
+      ? r.missing_info_questions.map((x) => String(x).trim()).filter(Boolean).slice(0, 3)
+      : [];
+    let missing_info_questions: string[] | undefined = modelQuestions.length ? modelQuestions : undefined;
+    let needs_clarification = Boolean(r.needs_clarification);
+
+    const guard = tryGuardWearableVsPhone(text, ncm_code, confidence, rationale, hs_heading, kind, search_terms);
+    if (guard) {
+      ncm_code = guard.ncm_code;
+      confidence = guard.confidence;
+      rationale = guard.rationale;
+      hs_heading = guard.hs_heading;
+      kind = guard.kind;
+      search_terms = guard.search_terms;
+      missing_info_questions = guard.missing_info_questions;
+      needs_clarification = guard.needs_clarification;
+    } else if (!needs_clarification && modelQuestions.length) {
+      needs_clarification = true;
+    }
+
+    const ambiguous =
+      Boolean(guard?.ambiguous) ||
+      needs_clarification ||
+      (missing_info_questions && missing_info_questions.length > 0) ||
+      confidence < 0.45;
+
+    return {
+      ncm_code,
+      confidence,
+      rationale,
+      candidates,
+      hs_heading,
+      kind,
+      search_terms,
+      missing_info_questions,
+      needs_clarification,
+      ambiguous,
+    };
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error("[ncmClassifier] FAILED:", err instanceof Error ? err.message : err);
