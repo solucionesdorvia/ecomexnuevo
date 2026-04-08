@@ -22,9 +22,9 @@ export function ChatContainer({
   return (
     <div
       ref={scrollRef}
-      className="flex min-h-0 flex-1 flex-col overflow-y-auto px-3 py-4 sm:px-5"
+      className="flex min-h-0 flex-1 flex-col overflow-y-auto overflow-x-hidden overscroll-y-contain px-3 py-3 sm:px-5 sm:py-4"
     >
-      <div className="mx-auto flex w-full max-w-[720px] flex-col gap-4">
+      <div className="mx-auto flex w-full min-w-0 max-w-[720px] flex-col gap-3 sm:gap-4">
         {messages.map((m) => (
           <MessageBubble key={m.id} message={m} />
         ))}

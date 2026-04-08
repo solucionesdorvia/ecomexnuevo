@@ -7,7 +7,7 @@ export function SimpleMarkdown({ text }: { text: string }) {
   return (
     <div className="space-y-2">
       {lines.map((line, li) => (
-        <p key={li} className="leading-relaxed">
+        <p key={li} className="break-words leading-relaxed [overflow-wrap:anywhere]">
           <InlineBold text={line} />
         </p>
       ))}

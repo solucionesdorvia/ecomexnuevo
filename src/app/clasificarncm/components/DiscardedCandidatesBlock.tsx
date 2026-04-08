@@ -50,10 +50,15 @@ export function DiscardedCandidatesBlock({
         {slice.map((d, i) => (
           <li
             key={`${d.code}-${i}`}
-            className="border-l-2 border-rose-500/25 pl-2.5"
+            className="min-w-0 border-l-2 border-rose-500/25 pl-2.5"
           >
-            <p className="font-mono text-[11px] font-semibold tracking-tight text-slate-300">{d.code}</p>
-            <p className={cn("mt-0.5 leading-snug text-slate-500", compact ? "text-[10px]" : "text-[11px]")}>
+            <p className="break-all font-mono text-[11px] font-semibold tracking-tight text-slate-300">{d.code}</p>
+            <p
+              className={cn(
+                "mt-0.5 hyphens-auto break-words leading-snug text-slate-500 [overflow-wrap:anywhere]",
+                compact ? "text-[10px]" : "text-[11px]"
+              )}
+            >
               {d.reason}
             </p>
           </li>

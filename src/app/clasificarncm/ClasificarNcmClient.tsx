@@ -33,9 +33,11 @@ export default function ClasificarNcmClient() {
       ? `${AMBIGUITY_REASON_LABELS[caseState.ambiguity.reason]} — falta definir: ${caseState.ambiguity.decisiveField}.`
       : undefined;
 
+  const hasConversation = caseState.messages.length > 0;
+
   return (
     <div
-      className="flex min-h-[100dvh] flex-col bg-[#030712]"
+      className="flex min-h-[100dvh] flex-col overflow-x-hidden bg-[#030712] pb-[env(safe-area-inset-bottom,0px)] pt-[env(safe-area-inset-top,0px)]"
       style={{ fontFamily: "var(--font-body, ui-sans-serif, system-ui)" }}
     >
       {/* subtle grid */}
@@ -47,39 +49,45 @@ export default function ClasificarNcmClient() {
         }}
       />
 
-      <header className="relative z-10 flex flex-wrap items-center justify-between gap-3 border-b border-white/[0.06] px-4 py-3 sm:px-6">
-        <div className="flex items-center gap-3">
-          <Link href="/">
+      <header className="relative z-10 flex min-h-[52px] flex-wrap items-center justify-between gap-2 border-b border-white/[0.06] px-3 py-2 sm:min-h-0 sm:gap-3 sm:px-6 sm:py-3">
+        <div className="flex min-w-0 items-center gap-2 sm:gap-3">
+          <Link href="/" className="flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center sm:min-h-0 sm:min-w-0">
             <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-5 brightness-0 invert" />
           </Link>
           <div className="hidden h-4 w-px bg-white/[0.08] sm:block" />
-          <div className="hidden sm:block">
+          <div className="hidden min-w-0 sm:block">
             <span className="text-[13px] font-medium text-slate-400">Clasificación NCM</span>
             <span className="ml-2 text-[11px] text-slate-600">conversacional</span>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center justify-end gap-1 sm:gap-2">
           <button
             type="button"
             onClick={reset}
-            className="rounded-lg border border-white/[0.08] px-3 py-1.5 text-[12px] text-slate-500 transition hover:border-white/[0.15] hover:text-slate-300"
+            className="flex min-h-[44px] items-center justify-center rounded-lg border border-white/[0.08] px-3 text-[12px] text-slate-500 transition hover:border-white/[0.15] hover:text-slate-300 active:bg-white/[0.04] sm:min-h-0 sm:py-1.5"
           >
             Nuevo caso
           </button>
-          <Link href="/clasificador" className="text-[12px] text-slate-600 transition hover:text-slate-400">
+          <Link
+            href="/clasificador"
+            className="flex min-h-[44px] items-center px-3 text-[12px] text-slate-600 transition hover:text-slate-400 active:text-slate-300 sm:min-h-0 sm:px-2"
+          >
             Cotización
           </Link>
-          <Link href="/" className="text-[12px] text-slate-600 transition hover:text-slate-400">
+          <Link
+            href="/"
+            className="flex min-h-[44px] items-center px-3 text-[12px] text-slate-600 transition hover:text-slate-400 active:text-slate-300 sm:min-h-0 sm:px-2"
+          >
             Inicio
           </Link>
         </div>
       </header>
 
-      <div className="relative z-10 flex flex-1 flex-col overflow-hidden lg:flex-row">
+      <div className="relative z-10 flex min-h-0 flex-1 flex-col overflow-hidden lg:flex-row">
         {/* Main column */}
         <div className="flex min-h-0 min-w-0 flex-1 flex-col">
           {caseState.messages.length === 0 ? (
-            <div className="flex flex-1 flex-col items-center justify-center px-4 py-10">
+            <div className="flex flex-1 flex-col items-center justify-center px-4 py-8 sm:py-10">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#3b82f6]/20 bg-[#3b82f6]/10">
                 <Sparkles className="h-7 w-7 text-[#60a5fa]" />
               </div>
@@ -93,14 +101,14 @@ export default function ClasificarNcmClient() {
                 Describí el producto por función y uso real. El sistema va a pedirte solo lo necesario antes de
                 sugerir posiciones arancelarias con nivel de confianza.
               </p>
-              <div className="mt-8 flex max-w-xl flex-wrap justify-center gap-2">
+              <div className="mt-8 flex w-full max-w-xl flex-col gap-2 sm:flex-row sm:flex-wrap sm:justify-center">
                 {SUGGESTIONS.map((s) => (
                   <button
                     key={s}
                     type="button"
                     disabled={pending}
                     onClick={() => sendMessage(s)}
-                    className="rounded-xl border border-white/[0.08] bg-[#0f172a]/80 px-3 py-2 text-left text-[12px] text-slate-400 transition hover:border-[#3b82f6]/30 hover:text-slate-200 disabled:opacity-40"
+                    className="min-h-[48px] w-full touch-manipulation rounded-xl border border-white/[0.08] bg-[#0f172a]/80 px-4 py-3 text-left text-[14px] leading-snug text-slate-400 transition hover:border-[#3b82f6]/30 hover:text-slate-200 active:scale-[0.99] disabled:opacity-40 sm:min-h-0 sm:w-auto sm:px-3 sm:py-2 sm:text-[12px]"
                   >
                     {s}
                   </button>
@@ -140,7 +148,7 @@ export default function ClasificarNcmClient() {
                     variant={caseState.status === "resolved" && !caseState.ambiguity ? "resolved" : "tentative"}
                   />
                 ) : caseState.discardedCandidates && caseState.discardedCandidates.length > 0 ? (
-                  <div className="rounded-2xl border border-rose-500/15 bg-rose-500/[0.04] p-4 shadow-xl">
+                  <div className="rounded-2xl border border-rose-500/15 bg-rose-500/[0.04] p-3 shadow-xl sm:p-4">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-rose-400/90">
                       Sin NCM prioritaria
                     </p>
@@ -160,14 +168,16 @@ export default function ClasificarNcmClient() {
           <ChatInput onSend={sendMessage} disabled={pending} />
         </div>
 
-        {/* Summary */}
-        <div className="relative z-10 shrink-0 border-t border-white/[0.06] px-3 py-3 lg:w-[320px] lg:border-l lg:border-t-0 lg:px-4 lg:py-5">
+        {/* Oculto en móvil hasta que haya mensajes (landing más limpia); visible siempre en desktop */}
+        <div
+          className={`relative z-10 shrink-0 border-t border-white/[0.06] px-3 py-3 lg:w-[320px] lg:border-l lg:border-t-0 lg:px-4 lg:py-5 ${!hasConversation ? "hidden lg:block" : ""}`}
+        >
           <CaseSummaryPanel caseState={caseState} pending={pending} />
         </div>
       </div>
 
-      <footer className="relative z-10 border-t border-white/[0.04] px-4 py-3">
-        <p className="mx-auto max-w-4xl text-center text-[10px] leading-relaxed text-slate-600">
+      <footer className="relative z-10 border-t border-white/[0.04] px-3 py-3 sm:px-4">
+        <p className="mx-auto max-w-4xl text-balance text-center text-[11px] leading-relaxed text-slate-600 sm:text-[10px]">
           Por defecto usa el pipeline completo (IA + nomenclador local + PCRAM con credenciales) para acercar el NCM a la
           posición oficial en 8 dígitos. Modo rápido solo con{" "}
           <code className="text-slate-500">NCM_CHAT_FAST_PIPELINE=1</code>. No sustituye dictamen de despachante

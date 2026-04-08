@@ -13,6 +13,10 @@ function fmtDate(d: Date) {
   return d.toLocaleDateString("es-AR", { day: "2-digit", month: "short", year: "numeric" });
 }
 
+function quoteTitle(q: { productJson: unknown; userText: string | null }) {
+  return String((q.productJson as { title?: string } | null)?.title ?? q.userText ?? "—");
+}
+
 export default async function DashboardPage() {
   const cookieStore = await cookies();
   const token = cookieStore.get("ecomex_auth")?.value;
@@ -37,7 +41,7 @@ export default async function DashboardPage() {
   }
 
   const lastQuote = quotes[0] ?? null;
-  const lastTitle = lastQuote ? ((lastQuote.productJson as any)?.title ?? lastQuote.userText ?? "—") : null;
+  const lastTitle = lastQuote ? quoteTitle(lastQuote) : null;
 
   return (
     <div className="p-4 sm:p-6 lg:p-8">
@@ -78,54 +82,108 @@ export default async function DashboardPage() {
 
         {/* Recent operations */}
         <div className="mt-10">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <h2 className="text-[15px] font-bold text-white">Operaciones recientes</h2>
-            <Link href="/app/operaciones" className="text-[12px] text-[#2b59ff] transition-colors hover:text-white">
+            <Link
+              href="/app/operaciones"
+              className="inline-flex min-h-[44px] items-center text-[13px] font-medium text-[#2b59ff] transition-colors hover:text-white sm:min-h-0 sm:text-[12px] sm:font-normal"
+            >
               Ver todas
             </Link>
           </div>
 
           {quotes.length > 0 ? (
-            <div className="mt-4 overflow-x-auto rounded-xl border border-white/[0.04]">
-              <table className="w-full min-w-[600px] text-left">
-                <thead>
-                  <tr className="border-b border-white/[0.04] bg-[#0B1622]">
-                    <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Producto</th>
-                    <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Total USD</th>
-                    <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Fecha</th>
-                    <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Estado</th>
-                    <th className="px-4 py-3" />
-                  </tr>
-                </thead>
-                <tbody>
-                  {quotes.map((q) => {
-                    const title = (q.productJson as any)?.title ?? q.userText ?? "—";
-                    const total = q.totalMinUsd != null && q.totalMaxUsd != null
+            <>
+              {/* Móvil: tarjetas (sin scroll horizontal forzado) */}
+              <ul className="mt-4 space-y-3 md:hidden">
+                {quotes.map((q) => {
+                  const title = quoteTitle(q);
+                  const total =
+                    q.totalMinUsd != null && q.totalMaxUsd != null
                       ? `${fmtUsd(q.totalMinUsd)} – ${fmtUsd(q.totalMaxUsd)}`
                       : "—";
-                    return (
-                      <tr key={q.id} className="border-b border-white/[0.04] transition-colors hover:bg-white/[0.02]">
-                        <td className="px-4 py-3 text-[13px] text-white">{String(title).slice(0, 50)}</td>
-                        <td className="px-4 py-3 text-[13px] font-medium text-[#d4a843]">{total}</td>
-                        <td className="px-4 py-3 text-[13px] text-[#555c6b]">{fmtDate(q.createdAt)}</td>
-                        <td className="px-4 py-3">
-                          <span className="rounded-full bg-white/[0.04] px-2 py-0.5 text-[10px] font-medium text-[#b0b8c9]">
-                            {q.stage}
-                          </span>
-                        </td>
-                        <td className="px-4 py-3 text-right">
-                          <Link href={`/app/operaciones/${q.id}`} className="text-[12px] text-[#2b59ff] transition-colors hover:text-white">
-                            Ver
-                          </Link>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
+                  return (
+                    <li
+                      key={q.id}
+                      className="rounded-xl border border-white/[0.06] bg-[#0B1622] p-4 shadow-sm shadow-black/20"
+                    >
+                      <p className="text-[14px] font-semibold leading-snug text-white [overflow-wrap:anywhere]">
+                        {title.length > 120 ? `${title.slice(0, 120)}…` : title}
+                      </p>
+                      <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-white/[0.04] pt-3 text-[12px]">
+                        <div>
+                          <p className="text-[10px] font-semibold uppercase tracking-wider text-[#555c6b]">Total USD</p>
+                          <p className="mt-0.5 font-medium text-[#d4a843]">{total}</p>
+                        </div>
+                        <div>
+                          <p className="text-[10px] font-semibold uppercase tracking-wider text-[#555c6b]">Fecha</p>
+                          <p className="mt-0.5 text-[#b0b8c9]">{fmtDate(q.createdAt)}</p>
+                        </div>
+                      </div>
+                      <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
+                        <span className="inline-flex max-w-full rounded-full bg-white/[0.06] px-2.5 py-1 text-[10px] font-medium capitalize text-[#b0b8c9]">
+                          {String(q.stage).replace(/_/g, " ")}
+                        </span>
+                        <Link
+                          href={`/app/operaciones/${q.id}`}
+                          className="inline-flex min-h-[40px] min-w-[88px] items-center justify-center rounded-lg bg-[#2b59ff]/15 px-4 text-[13px] font-medium text-[#2b59ff] transition-colors hover:bg-[#2b59ff]/25 hover:text-white"
+                        >
+                          Ver detalle
+                        </Link>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              {/* Desktop: tabla */}
+              <div className="mt-4 hidden overflow-x-auto rounded-xl border border-white/[0.04] md:block">
+                <table className="w-full min-w-[640px] text-left">
+                  <thead>
+                    <tr className="border-b border-white/[0.04] bg-[#0B1622]">
+                      <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Producto</th>
+                      <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Total USD</th>
+                      <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Fecha</th>
+                      <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Estado</th>
+                      <th className="px-4 py-3" />
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {quotes.map((q) => {
+                      const title = quoteTitle(q);
+                      const total =
+                        q.totalMinUsd != null && q.totalMaxUsd != null
+                          ? `${fmtUsd(q.totalMinUsd)} – ${fmtUsd(q.totalMaxUsd)}`
+                          : "—";
+                      return (
+                        <tr key={q.id} className="border-b border-white/[0.04] transition-colors hover:bg-white/[0.02]">
+                          <td className="max-w-[220px] px-4 py-3 text-[13px] text-white">
+                            <span className="line-clamp-2">{title}</span>
+                          </td>
+                          <td className="whitespace-nowrap px-4 py-3 text-[13px] font-medium text-[#d4a843]">{total}</td>
+                          <td className="whitespace-nowrap px-4 py-3 text-[13px] text-[#555c6b]">{fmtDate(q.createdAt)}</td>
+                          <td className="px-4 py-3">
+                            <span className="rounded-full bg-white/[0.04] px-2 py-0.5 text-[10px] font-medium capitalize text-[#b0b8c9]">
+                              {String(q.stage).replace(/_/g, " ")}
+                            </span>
+                          </td>
+                          <td className="px-4 py-3 text-right">
+                            <Link
+                              href={`/app/operaciones/${q.id}`}
+                              className="text-[12px] text-[#2b59ff] transition-colors hover:text-white"
+                            >
+                              Ver
+                            </Link>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </>
           ) : (
-            <div className="mt-4 rounded-xl border border-dashed border-white/[0.06] bg-[#0B1622]/50 p-12 text-center">
+            <div className="mt-4 rounded-xl border border-dashed border-white/[0.06] bg-[#0B1622]/50 px-4 py-10 text-center sm:p-12">
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-[#2b59ff]/10">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2b59ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 4v16m8-8H4" />

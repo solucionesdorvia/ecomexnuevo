@@ -25,26 +25,28 @@ export function ClassificationCard({
 }: Props) {
   return (
     <div
-      className={`rounded-2xl border p-4 shadow-xl ${
+      className={`rounded-2xl border p-3 shadow-xl sm:p-4 ${
         variant === "resolved"
           ? "border-emerald-500/25 bg-emerald-500/[0.07]"
           : "border-amber-500/20 bg-amber-500/[0.06]"
       }`}
     >
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <div>
+      <div className="flex flex-wrap items-start justify-between gap-2 sm:gap-3">
+        <div className="min-w-0 flex-1">
           <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-slate-500">
             {variant === "resolved" ? "Clasificación sugerida" : "Clasificación tentativa"}
           </p>
-          <p className="mt-1 font-mono text-[26px] font-bold tracking-tight text-white">{ncm}</p>
+          <p className="mt-1 break-all font-mono text-[1.35rem] font-bold leading-tight tracking-tight text-white sm:text-[26px]">
+            {ncm}
+          </p>
         </div>
-        <ConfidenceBadge value={confidence} />
+        <ConfidenceBadge value={confidence} className="shrink-0" />
       </div>
       {description ? (
-        <p className="mt-3 text-[13px] leading-relaxed text-slate-300">{description}</p>
+        <p className="mt-3 break-words text-[13px] leading-relaxed text-slate-300">{description}</p>
       ) : null}
       {rationale ? (
-        <p className="mt-2 text-[12px] leading-relaxed text-slate-400">
+        <p className="mt-2 break-words text-[12px] leading-relaxed text-slate-400">
           <span className="font-medium text-slate-500">Criterio: </span>
           {rationale}
         </p>
@@ -65,7 +67,7 @@ export function ClassificationCard({
       ) : null}
       <div className="mt-4 flex gap-2 rounded-xl border border-slate-600/30 bg-slate-900/50 px-3 py-2.5">
         <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-slate-500" />
-        <p className="text-[11px] leading-relaxed text-slate-500">
+        <p className="min-w-0 text-[11px] leading-relaxed text-slate-500">
           Clasificación orientativa sujeta a validación profesional y documentación de importación.
         </p>
       </div>

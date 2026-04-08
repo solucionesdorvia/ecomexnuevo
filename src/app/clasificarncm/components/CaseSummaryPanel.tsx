@@ -22,7 +22,7 @@ function Row({ label, value }: { label: string; value?: string | null }) {
   return (
     <div className="border-b border-white/[0.04] py-2 last:border-0">
       <p className="text-[9px] font-semibold uppercase tracking-wider text-slate-500">{label}</p>
-      <p className="mt-0.5 text-[12px] leading-snug text-slate-300">{value}</p>
+      <p className="mt-0.5 break-words text-[12px] leading-snug text-slate-300">{value}</p>
     </div>
   );
 }
@@ -90,7 +90,7 @@ export function CaseSummaryPanel({
         {s.recommendedNcm ? (
           <div className="rounded-lg border border-white/[0.06] bg-black/25 px-2.5 py-2">
             <p className="text-[9px] font-semibold uppercase tracking-wider text-slate-500">NCM prioritaria</p>
-            <p className="mt-0.5 font-mono text-[15px] font-semibold text-white">{s.recommendedNcm}</p>
+            <p className="mt-0.5 break-all font-mono text-[15px] font-semibold leading-tight text-white">{s.recommendedNcm}</p>
           </div>
         ) : null}
         {s.discardedCandidates && s.discardedCandidates.length > 0 ? (
@@ -140,15 +140,16 @@ export function CaseSummaryPanel({
     <div className={cn("w-full shrink-0 lg:w-[300px]", className)}>
       <button
         type="button"
-        className="mb-2 flex w-full items-center justify-between rounded-xl border border-white/[0.08] bg-[#0f172a]/90 px-3 py-2.5 text-left lg:hidden"
+        className="mb-2 flex min-h-[48px] w-full items-center justify-between rounded-xl border border-white/[0.08] bg-[#0f172a]/90 px-3 py-3 text-left active:bg-[#0f172a] lg:hidden"
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
       >
-        <span className="text-[12px] font-medium text-slate-300">Resumen del caso</span>
-        <ChevronDown className={cn("h-4 w-4 text-slate-500 transition", open && "rotate-180")} />
+        <span className="text-[13px] font-medium text-slate-300">Resumen del caso</span>
+        <ChevronDown className={cn("h-5 w-5 shrink-0 text-slate-500 transition", open && "rotate-180")} />
       </button>
       <aside
         className={cn(
-          "rounded-2xl border border-white/[0.06] bg-[#0b1220]/95 p-4 shadow-xl shadow-black/40 backdrop-blur-sm lg:sticky lg:top-4 lg:max-h-[calc(100dvh-6rem)] lg:overflow-y-auto",
+          "rounded-2xl border border-white/[0.06] bg-[#0b1220]/95 p-4 shadow-xl shadow-black/40 backdrop-blur-sm max-lg:max-h-[min(70vh,520px)] max-lg:overflow-y-auto max-lg:overscroll-contain lg:sticky lg:top-4 lg:max-h-[calc(100dvh-6rem)] lg:overflow-y-auto",
           open ? "block" : "hidden lg:block"
         )}
       >
