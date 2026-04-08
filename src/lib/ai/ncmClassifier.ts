@@ -1,6 +1,10 @@
 import { buildNcmKnowledgeEvidence } from "@/lib/ncm/knowledge/ncmKnowledgeEvidence";
 import { openaiJson } from "@/lib/ai/openaiClient";
-import { NCM_CLASSIFIER_PROFESSIONAL_BLOCK, NCM_RGI_GIR_BLOCK } from "@/lib/clasificar-ncm/professionalModePrompt";
+import {
+  NCM_AMBIGUITY_FALLBACK_QUESTION,
+  NCM_CLASSIFIER_PROFESSIONAL_BLOCK,
+  NCM_RGI_GIR_BLOCK,
+} from "@/lib/clasificar-ncm/professionalModePrompt";
 
 export type NcmCandidate = {
   ncm_code: string;
@@ -211,6 +215,7 @@ PROCESO OBLIGATORIO:
 6. DECISIÓN FINAL:
    - Elegir el mejor candidato de la lista
    - Si hay duda razonable → ambiguous = true (y preferí bajar confidence)
+   - Si ambiguous = true o no podés decidir entre candidatos serios → **follow_up_questions** con al menos **1** pregunta concreta (máx. 2); no dejes follow_up vacío en ese caso
 
 REGLAS CRÍTICAS:
 - NO usar conocimiento genérico si contradice los candidatos
@@ -304,8 +309,9 @@ Antes de cada ítem en **missing_info_questions**, preguntate: **«¿Esta inform
 - material dominante en mezclas/composición.
 
 3. **missing_info_questions**: vacío salvo que quede una duda real en esos frentes. NO preguntar por datos obvios o inferibles.
-4. Si el texto es ambiguo entre **dos capítulos o partidas distintas** (ej. reloj mecánico vs smart; tejido vs plástico que define capítulo), needs_clarification true y preguntas mínimas que pasen el test anterior.
+4. Si el texto es ambiguo entre **dos capítulos o partidas distintas** (ej. reloj mecánico vs smart; tejido vs plástico que define capítulo), needs_clarification true y **al menos una** pregunta en missing_info_questions (no vacío).
 5. Si tenés suficiente información (incluidas inferencias razonables), needs_clarification: false y missing_info_questions: [].
+6. **Regla:** si needs_clarification es true o hay duda real entre partidas, **missing_info_questions no puede estar vacío** (salvo que una sola posición sea ya defendible sin más datos).
 
 **Salida:** usá **solo** el esquema JSON de abajo (ncm_code con puntos, confidence numérica 0–1). No uses otro formato (ej. confidence "high/medium/low" o claves ncm/justification).
 
@@ -466,10 +472,13 @@ export async function classifyWithAI(
         .filter((d) => ncmDigits(d.ncm).length >= 6 && d.ncm !== "9999.99.99");
 
       const followRaw = Array.isArray(r.follow_up_questions) ? r.follow_up_questions : [];
-      const followUp = followRaw
+      let followUp = followRaw
         .map((x) => String(x).trim())
         .filter(Boolean)
         .slice(0, 2);
+      if (ambiguous && followUp.length === 0) {
+        followUp = [NCM_AMBIGUITY_FALLBACK_QUESTION];
+      }
 
       return {
         ncm_code,
@@ -564,6 +573,31 @@ export async function classifyWithAI(
       ncm_code !== "9999.99.99"
     ) {
       ambiguous = false;
+    }
+
+    if (
+      (needs_clarification || ambiguous || ncm_code === "9999.99.99") &&
+      (!missing_info_questions || missing_info_questions.length === 0)
+    ) {
+      const skipWearable8517Resolved =
+        isWearableConnectedDevice(text) &&
+        /^8517\.62/.test(ncm_code) &&
+        ncm_code !== "9999.99.99";
+      if (!skipWearable8517Resolved) {
+        missing_info_questions = [NCM_AMBIGUITY_FALLBACK_QUESTION];
+        needs_clarification = true;
+      }
+    }
+
+    if (needs_clarification && missing_info_questions && missing_info_questions.length > 0) {
+      ambiguous = true;
+      if (
+        isWearableConnectedDevice(text) &&
+        /^8517\.62/.test(ncm_code) &&
+        ncm_code !== "9999.99.99"
+      ) {
+        ambiguous = false;
+      }
     }
 
     return {

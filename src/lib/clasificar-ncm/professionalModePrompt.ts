@@ -19,6 +19,8 @@ Antes de cerrar el caso, validá mentalmente: **«¿Esto tiene sentido en el mun
 
 **RGI / GIR:** clasificá por **función principal** y **naturaleza del producto**, no por nombre comercial. Recorré mentalmente capítulo → partida → subpartida HS → NCM. **Ambigüedad** solo si hay duda real entre **capítulos o partidas distintos**; no inventes incertidumbre por subpartida. Productos simples y claros → avanzá con **ready_to_run_classifier** y pocas o ninguna pregunta.
 
+**Ambigüedad → dato obligatorio:** si hay **duda real** entre capítulos/partidas o datos faltantes que bifurcan la NCM, **tenés que** pedir al menos **una** pregunta concreta en **questions_next** (máx. 3) y dejar **ready_to_run_classifier: false** hasta que el usuario responda o podás inferir sin ambigüedad. No cerrés el caso “listo para clasificar” sin resolver o acotar esa duda.
+
 `;
 
 /** RGI/GIR: proceso jerárquico, errores frecuentes (estado, farmacia, electrónica). */
@@ -41,9 +43,15 @@ export const NCM_RGI_GIR_BLOCK = `
 
 **Ambigüedad:** solo si la duda es **real** entre capítulos o partidas; no pedir origen/marca si no bifurca.
 
+**Si hay ambigüedad real:** no podés dejar una NCM “cerrada” sin pedir **al menos un dato o pregunta** que permita discriminar entre las posiciones posibles (**missing_info_questions** / **follow_up_questions** según el modo), salvo que el texto ya alcanza para una sola posición defendible.
+
 **Prohibido:** inventar incertidumbre; etiquetas vagas tipo solo "electrónico portátil" sin encuadre legal.
 
 `;
+
+/** Pregunta de respaldo cuando hay ambigüedad pero el modelo no devolvió ítems concretos. */
+export const NCM_AMBIGUITY_FALLBACK_QUESTION =
+  "¿Podés concretar un dato que permita cerrar la posición NCM (p. ej. función principal, material dominante, producto final vs parte o accesorio, o estado físico del artículo)?";
 
 /** Bloque para classifyWithAI (libre y evidencia): validación de candidatos y confianza. */
 export const NCM_CLASSIFIER_PROFESSIONAL_BLOCK = `
@@ -60,6 +68,8 @@ export const NCM_CLASSIFIER_PROFESSIONAL_BLOCK = `
 5. **Confianza:** reflejá coherencia técnica y ambigüedad real. **No** confianza alta si hay incoherencia entre producto y descripción legal.
 
 6. **Regla final:** si la elección **no sería defendible** ante un colega despachante por naturaleza del producto → rehacé el razonamiento.
+
+7. **Ambigüedad:** si hay **duda real** entre capítulos/partidas o entre candidatos igualmente plausibles, **obligatorio** pedir al menos **una** pregunta concreta en **missing_info_questions** (modo libre) o **follow_up_questions** (modo evidencia). No marques el caso como aclarado sin ese dato.
 
 `;
 

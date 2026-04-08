@@ -2,7 +2,7 @@ import { classifyWithAI, type NcmClassification } from "@/lib/ai/ncmClassifier";
 import { openaiJson } from "@/lib/ai/openaiClient";
 import { formatMercosurNcm8, ncmDigitsOnly } from "@/lib/ncm/knowledge/normalize";
 import { productFromTextPipeline } from "@/lib/scraper/productFromTextPipeline";
-import { NCM_ANALYST_PROFESSIONAL_BLOCK } from "@/lib/clasificar-ncm/professionalModePrompt";
+import { NCM_AMBIGUITY_FALLBACK_QUESTION, NCM_ANALYST_PROFESSIONAL_BLOCK } from "@/lib/clasificar-ncm/professionalModePrompt";
 import type { CaseSnapshot, ChatMessage, NcmCandidateItem, ProductType } from "./types";
 
 function normalizeNcmCode(raw: string | undefined): string {
@@ -98,6 +98,10 @@ Si ninguna pregunta cumple esos cuatro criterios → **questions_next: []** y av
 **Ejemplo (smartwatch tipo Apple Watch):** podés asumir dispositivo electrónico portátil, batería recargable, conectividad inalámbrica típica, producto final. **NO** preguntar si tiene batería, si se carga por cable, si tiene deportes, si se conecta al teléfono, salvo que el texto abra una duda que **sí** separe partidas (ej. reloj mecánico vs smart; uso exclusivo distinto que mueva capítulo).
 
 **Sí preguntar** solo cuando haya **bifurcación arancelaria real** encuadrable en los puntos 1–4 anteriores.
+
+=== AMBIGÜEDAD Y PREGUNTAS (OBLIGATORIO) ===
+
+Si detectás **ambigüedad real** (dos capítulos o partidas plausibles, o un dato que bifurca la NCM y no está en el texto): **questions_next** debe incluir **al menos 1** pregunta concreta (máx. 3) y **ready_to_run_classifier: false** hasta responder o poder inferir sin duda. No declarés el caso listo para clasificar dejando la ambigüedad sin una pregunta asociada.
 
 Tu tarea en CADA turno:
 1. Interpretar el producto por FUNCIÓN PRINCIPAL y uso real, no solo por nombre comercial.
@@ -365,12 +369,19 @@ export async function processClasificarTurn(opts: {
         }));
       }
 
-      if (ncm && conf >= 0.7 && !ambiguous) {
+      let qsPipeline = Array.isArray(meta?.missingInfoQuestions)
+        ? (meta!.missingInfoQuestions as string[]).map((q) => String(q).trim()).filter(Boolean).slice(0, 4)
+        : [];
+      if (ambiguous && qsPipeline.length === 0) {
+        qsPipeline = [NCM_AMBIGUITY_FALLBACK_QUESTION];
+      }
+      snap.pendingQuestions = qsPipeline.length ? qsPipeline : undefined;
+
+      if (ncm && conf >= 0.7 && !ambiguous && !(qsPipeline.length > 0)) {
         snap.status = "resolved";
         snap.pendingQuestions = undefined;
       } else if (ncm || (snap.candidates?.length ?? 0) > 0) {
         snap.status = "tentative";
-        snap.pendingQuestions = undefined;
       } else {
         snap.status = "needs_info";
       }
@@ -407,6 +418,11 @@ export async function processClasificarTurn(opts: {
     const rawConf = clamp01(Number(cls.confidence ?? 0));
     const ambiguous = Boolean(cls.ambiguous);
     const conf = clamp01(ambiguous ? rawConf * 0.85 : rawConf);
+
+    const qsFromClassify = Array.isArray(cls.missing_info_questions)
+      ? cls.missing_info_questions.map((q) => String(q).trim()).filter(Boolean).slice(0, 4)
+      : [];
+    snap.pendingQuestions = qsFromClassify.length ? qsFromClassify : undefined;
 
     const { ncm: ncmRaw, candidates, discardedNotes, rationale } = mapClassifyAIResult(cls, conf);
     const ncm = normalizeNcmCode(ncmRaw) || ncmRaw;
