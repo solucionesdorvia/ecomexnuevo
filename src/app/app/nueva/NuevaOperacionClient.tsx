@@ -32,38 +32,58 @@ function fmtUsd(n: number) {
 
 export default function NuevaOperacionClient() {
   const [input, setInput] = useState("");
+  const [invoiceFiles, setInvoiceFiles] = useState<File[]>([]);
   const [messages, setMessages] = useState<Msg[]>([]);
   const [pending, setPending] = useState(false);
   const [data, setData] = useState<ServerResponse | null>(null);
   const anonRef = useRef<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const invoiceInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => { anonRef.current = getAnonId(); }, []);
   useEffect(() => { scrollRef.current?.scrollTo(0, scrollRef.current.scrollHeight); }, [messages, pending]);
 
   async function send() {
     const text = input.trim();
-    if (!text || pending) return;
+    const hasInvoices = invoiceFiles.length > 0;
+    if (pending) return;
+    if (!text && !hasInvoices) return;
+
+    const userLine =
+      text ||
+      (hasInvoices ? `[SOURCE_INVOICE] ${invoiceFiles.map((f) => f.name).join(", ")}` : "");
     setInput("");
 
-    const next: Msg[] = [...messages, { role: "user", content: text }];
+    const next: Msg[] = [...messages, { role: "user", content: userLine }];
     setMessages(next);
     setPending(true);
+
+    const useInvoiceMultipart = hasInvoices;
 
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: {
-          "content-type": "application/json",
+          ...(useInvoiceMultipart
+            ? {}
+            : { "content-type": "application/json" }),
           ...(anonRef.current ? { "x-ecomex-anon": anonRef.current } : {}),
         },
         credentials: "include",
-        body: JSON.stringify({ mode: "quote", messages: next }),
+        body: useInvoiceMultipart
+          ? (() => {
+              const fd = new FormData();
+              fd.set("json", JSON.stringify({ mode: "quote", messages: next }));
+              for (const f of invoiceFiles) fd.append("invoice", f);
+              return fd;
+            })()
+          : JSON.stringify({ mode: "quote", messages: next }),
       });
       const json = (await res.json()) as ServerResponse;
       if (!res.ok) throw new Error(json?.assistantMessage || "Error");
       setMessages((prev) => [...prev, { role: "assistant", content: json.assistantMessage }]);
       setData(json);
+      if (useInvoiceMultipart) setInvoiceFiles([]);
     } catch (e) {
       setMessages((prev) => [...prev, { role: "assistant", content: e instanceof Error ? e.message : "Error inesperado." }]);
     } finally {
@@ -79,6 +99,19 @@ export default function NuevaOperacionClient() {
 
   return (
     <div className="flex h-full">
+      <input
+        ref={invoiceInputRef}
+        type="file"
+        multiple
+        accept=".pdf,.xlsx,.xls,.png,.jpg,.jpeg,.webp,application/pdf"
+        className="hidden"
+        aria-hidden
+        onChange={(e) => {
+          const list = e.target.files;
+          setInvoiceFiles(list && list.length ? Array.from(list) : []);
+          e.target.value = "";
+        }}
+      />
       {/* Main — chat/assistant */}
       <div className="flex flex-1 flex-col">
         {/* Messages */}
@@ -120,7 +153,13 @@ export default function NuevaOperacionClient() {
                     <button
                       key={s.label}
                       type="button"
-                      onClick={() => setInput(s.label === "Pegar link" ? "https://" : "")}
+                      onClick={() => {
+                        if (s.label === "Subir factura") {
+                          invoiceInputRef.current?.click();
+                          return;
+                        }
+                        setInput(s.label === "Pegar link" ? "https://" : "");
+                      }}
                       className="group relative flex flex-col items-center overflow-hidden rounded-xl border border-white/[0.04] bg-[#0B1622] p-6 text-center transition-all duration-300 hover:border-white/[0.08]"
                     >
                       <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ background: `radial-gradient(circle at 50% 0%, ${s.color}08, transparent 70%)` }} />
@@ -177,7 +216,24 @@ export default function NuevaOperacionClient() {
 
         {/* Input */}
         <div className="border-t border-white/[0.04] bg-[#060d16] px-4 py-4">
-          <div className="mx-auto max-w-[700px]">
+          <div className="mx-auto max-w-[700px] space-y-2">
+            {invoiceFiles.length > 0 ? (
+              <div className="flex flex-wrap items-center gap-2 rounded-lg border border-[#2b59ff]/20 bg-[#2b59ff]/5 px-3 py-2 text-[12px] text-[#94a3b8]">
+                <span className="text-[#555c6b]">Factura:</span>
+                {invoiceFiles.map((f) => (
+                  <span key={`${f.name}-${f.size}`} className="rounded-md bg-white/[0.06] px-2 py-0.5 font-medium text-white">
+                    {f.name}
+                  </span>
+                ))}
+                <button
+                  type="button"
+                  className="ml-auto text-[11px] text-[#2b59ff] underline hover:text-white"
+                  onClick={() => setInvoiceFiles([])}
+                >
+                  Quitar
+                </button>
+              </div>
+            ) : null}
             <div className="flex items-center gap-3 rounded-xl border border-white/[0.06] bg-[#0B1622] pl-4 pr-2 py-1.5 transition-colors focus-within:border-[#2b59ff]/25">
               <div className="flex shrink-0 items-center gap-2">
                 <div className={`h-1.5 w-1.5 rounded-full ${pending ? "animate-pulse bg-[#2b59ff]" : "bg-emerald-500"}`} />
@@ -185,20 +241,25 @@ export default function NuevaOperacionClient() {
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); } }}
+                onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void send(); } }}
                 placeholder="Pegá un link, describí el producto, o preguntá..."
                 className="flex-1 bg-transparent py-2.5 text-[14px] text-white outline-none placeholder:text-[#4a5568]"
               />
               <div className="flex shrink-0 items-center gap-1.5">
-                <button type="button" className="rounded-lg p-2 text-[#4a5568] transition-colors hover:bg-white/[0.04] hover:text-[#94a3b8]" title="Adjuntar archivo">
+                <button
+                  type="button"
+                  className="rounded-lg p-2 text-[#4a5568] transition-colors hover:bg-white/[0.04] hover:text-[#94a3b8]"
+                  title="Adjuntar factura o proforma"
+                  onClick={() => invoiceInputRef.current?.click()}
+                >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" />
                   </svg>
                 </button>
                 <button
                   type="button"
-                  disabled={pending || !input.trim()}
-                  onClick={send}
+                  disabled={pending || (!input.trim() && invoiceFiles.length === 0)}
+                  onClick={() => void send()}
                   className="rounded-lg bg-[#2b59ff] px-4 py-2 text-[12px] font-medium text-white transition-all hover:bg-[#2348d4] disabled:opacity-20"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
