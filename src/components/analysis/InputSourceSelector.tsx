@@ -12,14 +12,15 @@ export function InputSourceSelector({
   sourceValue,
   onSourceValueChange,
   onImageSelected,
-  onInvoiceSelected,
+  onInvoiceFilesSelected,
 }: {
   sourceType: SourceType;
   onSourceTypeChange: (v: SourceType) => void;
   sourceValue: string;
   onSourceValueChange: (v: string) => void;
   onImageSelected?: (f: File | null) => void;
-  onInvoiceSelected?: (f: File | null) => void;
+  /** Uno o varios archivos (factura, proforma, PDF, Excel, imagen). */
+  onInvoiceFilesSelected?: (files: File[] | null) => void;
 }) {
   const imageRef = useRef<HTMLInputElement | null>(null);
   const invoiceRef = useRef<HTMLInputElement | null>(null);
@@ -88,9 +89,13 @@ export function InputSourceSelector({
           <input
             ref={invoiceRef}
             type="file"
-            accept=".pdf,.xlsx,.xls,.png,.jpg,.jpeg,.webp"
+            multiple
+            accept=".pdf,.xlsx,.xls,.png,.jpg,.jpeg,.webp,application/pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
             className="hidden"
-            onChange={(e) => onInvoiceSelected?.(e.target.files?.[0] ?? null)}
+            onChange={(e) => {
+              const list = e.target.files;
+              onInvoiceFilesSelected?.(list && list.length ? Array.from(list) : null);
+            }}
           />
           <button
             type="button"
@@ -98,8 +103,11 @@ export function InputSourceSelector({
             className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 text-xs font-black uppercase tracking-[0.22em] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:bg-white/10"
           >
             <Icon name="upload_file" size={16} className="text-white/80" />
-            Subir factura/proforma
+            Adjuntar factura o proforma
           </button>
+          <p className="text-[11px] text-muted">
+            PDF, Excel o imagen. Podés seleccionar varios archivos.
+          </p>
         </div>
       ) : null}
     </div>

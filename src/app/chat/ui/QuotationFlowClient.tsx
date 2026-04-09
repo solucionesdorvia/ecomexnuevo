@@ -197,7 +197,7 @@ export default function QuotationFlowClient({
   const [input, setInput] = useState("");
   const [sourceType, setSourceType] = useState<"url" | "image" | "invoice" | "text">(initialSource);
   const [imageFile, setImageFile] = useState<File | null>(null);
-  const [invoiceFile, setInvoiceFile] = useState<File | null>(null);
+  const [invoiceFiles, setInvoiceFiles] = useState<File[]>([]);
   const [qty, setQty] = useState<string>("");
   const [unitPrice, setUnitPrice] = useState<string>("");
   const [origin, setOrigin] = useState("");
@@ -245,10 +245,13 @@ export default function QuotationFlowClient({
         : String(input || "").trim() ||
           (sourceType === "image" && imageFile
             ? `[SOURCE_IMAGE] ${imageFile.name}`
-            : sourceType === "invoice" && invoiceFile
-              ? `[SOURCE_INVOICE] ${invoiceFile.name}`
+            : sourceType === "invoice" && invoiceFiles.length > 0
+              ? `[SOURCE_INVOICE] ${invoiceFiles.map((f) => f.name).join(", ")}`
               : "");
     if (!baseText) return;
+    if (mode === "quote" && sourceType === "invoice" && invoiceFiles.length === 0 && !String(input || "").trim()) {
+      return;
+    }
 
     const extra: string[] = [];
     const q = Number(String(qty || "").replace(/[^\d]/g, ""));
@@ -269,18 +272,30 @@ export default function QuotationFlowClient({
     setMessages(nextMessages);
     setPending(true);
 
+    const useInvoiceMultipart =
+      mode === "quote" && sourceType === "invoice" && invoiceFiles.length > 0;
+
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: {
-          "content-type": "application/json",
+          ...(useInvoiceMultipart
+            ? {}
+            : { "content-type": "application/json" }),
           ...(anonIdRef.current ? { "x-ecomex-anon": anonIdRef.current } : {}),
         },
         credentials: "include",
-        body: JSON.stringify({
-          mode,
-          messages: nextMessages,
-        }),
+        body: useInvoiceMultipart
+          ? (() => {
+              const fd = new FormData();
+              fd.set("json", JSON.stringify({ mode, messages: nextMessages }));
+              for (const f of invoiceFiles) fd.append("invoice", f);
+              return fd;
+            })()
+          : JSON.stringify({
+              mode,
+              messages: nextMessages,
+            }),
       });
 
       const json = (await res.json()) as ServerResponse;
@@ -290,6 +305,7 @@ export default function QuotationFlowClient({
 
       setMessages((prev) => [...prev, { role: "assistant", content: json.assistantMessage }]);
       setData(json);
+      if (useInvoiceMultipart) setInvoiceFiles([]);
     } catch (e) {
       const msg = e instanceof Error ? e.message : "Error inesperado. Reintentá.";
       setData({
@@ -393,13 +409,17 @@ export default function QuotationFlowClient({
                       sourceValue={input}
                       onSourceValueChange={setInput}
                       onImageSelected={setImageFile}
-                      onInvoiceSelected={setInvoiceFile}
+                      onInvoiceFilesSelected={(files) => setInvoiceFiles(files ?? [])}
                     />
                     {imageFile ? (
                       <div className="text-xs text-muted">Imagen seleccionada: {imageFile.name}</div>
                     ) : null}
-                    {invoiceFile ? (
-                      <div className="text-xs text-muted">Factura/Proforma seleccionada: {invoiceFile.name}</div>
+                    {invoiceFiles.length > 0 ? (
+                      <ul className="list-inside list-disc text-xs text-muted">
+                        {invoiceFiles.map((f) => (
+                          <li key={`${f.name}-${f.size}`}>{f.name}</li>
+                        ))}
+                      </ul>
                     ) : null}
 
                     <button

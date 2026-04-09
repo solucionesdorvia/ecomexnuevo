@@ -1,6 +1,9 @@
 import { analyzeUrl } from "@/lib/url/urlAnalyzer";
 import { openaiJson } from "@/lib/ai/openaiClient";
 import { classifyWithAI } from "@/lib/ai/ncmClassifier";
+import { motorResultToNcmClassification } from "@/lib/clasificar-ncm/motorResultToNcmClassification";
+import { runNcmMotor } from "@/lib/clasificar-ncm/runNcmMotor";
+import type { CaseSnapshot } from "@/lib/clasificar-ncm/types";
 import { wearablePcramQueryBoost } from "@/lib/ncm/wearablePcramBoost";
 import { PcramClient } from "@/lib/pcram/pcramClient";
 import { LocalNomenclator } from "@/lib/nomenclator/localNomenclator";
@@ -552,6 +555,11 @@ function scoreCandidate(query: string, title?: string) {
   return { score: hits / qTokens.length, qTokens };
 }
 
+const idleNcmSnapshot = (): CaseSnapshot => ({
+  productType: "unknown",
+  status: "idle",
+});
+
 export async function productFromUrlPipeline(
   url: string,
   opts?: { hintText?: string }
@@ -797,9 +805,17 @@ export async function productFromUrlPipeline(
     .filter(Boolean)
     .join("\n");
 
-  const cls = textForNcm && hasOpenAiKey()
-    ? await classifyWithAI(textForNcm).catch(() => null)
-    : null;
+  const cls =
+    textForNcm && hasOpenAiKey()
+      ? await runNcmMotor({
+          text: textForNcm,
+          snapshot: idleNcmSnapshot(),
+          prevSnapshot: idleNcmSnapshot(),
+          messages: [],
+        })
+          .then((m) => motorResultToNcmClassification(m))
+          .catch(() => null)
+      : null;
   const ncm = cls?.ncm_code && cls.ncm_code !== "9999.99.99" ? cls.ncm_code : undefined;
 
   // Free "pro" candidates: local nomenclator index (auto-filled from PCRAM over time).

@@ -1,4 +1,7 @@
-import { productFromTextPipeline, type TextPipelineResult } from "@/lib/scraper/productFromTextPipeline";
+import { motorResultToTextPipelineResult } from "@/lib/clasificar-ncm/motorResultToTextPipelineResult";
+import { runNcmMotor } from "@/lib/clasificar-ncm/runNcmMotor";
+import type { CaseSnapshot } from "@/lib/clasificar-ncm/types";
+import type { TextPipelineResult } from "@/lib/scraper/productFromTextPipeline";
 import { buildNormalizedDescription } from "@/lib/analyzeProduct/normalize";
 import { normalizeAndFilterImages } from "@/lib/analyzeProduct/images";
 import { chooseBestPrice } from "@/lib/analyzeProduct/price";
@@ -16,6 +19,11 @@ function safeText(s: unknown, max = 50_000) {
   const t = String(s ?? "").replace(/\u0000/g, "").trim();
   return t.length > max ? t.slice(0, max) : t;
 }
+
+const idleNcmSnapshot = (): CaseSnapshot => ({
+  productType: "unknown",
+  status: "idle",
+});
 
 export async function analyzeProductUrl(urlInput: string): Promise<AnalyzeProductOutput> {
   const source = detectSource(urlInput);
@@ -83,7 +91,14 @@ export async function analyzeProductUrl(urlInput: string): Promise<AnalyzeProduc
 
   // NCM classification integrates ONLY normalized text (no hardcoded NCMs).
   const cls: TextPipelineResult = normalized_description
-    ? await productFromTextPipeline(normalized_description).catch(() => ({} as TextPipelineResult))
+    ? await runNcmMotor({
+        text: normalized_description,
+        snapshot: idleNcmSnapshot(),
+        prevSnapshot: idleNcmSnapshot(),
+        messages: [],
+      })
+        .then((m) => motorResultToTextPipelineResult(m))
+        .catch(() => ({} as TextPipelineResult))
     : ({} as TextPipelineResult);
 
   const ncm = typeof cls.ncm === "string" ? cls.ncm : "";

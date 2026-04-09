@@ -786,11 +786,59 @@ export async function POST(req: Request) {
       .toLowerCase()
       .startsWith("https");
 
-    const body = (await req.json()) as {
+    const contentType = req.headers.get("content-type") ?? "";
+    let body: {
       mode?: "quote" | "budget";
       messages?: IncomingMessage[];
       contact?: string;
     };
+
+    if (contentType.includes("multipart/form-data")) {
+      const form = await req.formData();
+      const jsonRaw = form.get("json");
+      if (typeof jsonRaw !== "string") {
+        return NextResponse.json(
+          { assistantMessage: "Falta el campo json en el envío con archivos." },
+          { status: 400 }
+        );
+      }
+      try {
+        body = JSON.parse(jsonRaw) as typeof body;
+      } catch {
+        return NextResponse.json({ assistantMessage: "JSON inválido en el formulario." }, { status: 400 });
+      }
+      const files = form.getAll("invoice").filter((x): x is File => x instanceof File && x.size > 0);
+      if (files.length) {
+        const { extractInvoiceTextsMerged, stitchInvoiceIntoUserMessage } = await import(
+          "@/lib/invoice/extractTextFromInvoiceFile"
+        );
+        const MAX_BYTES = 12 * 1024 * 1024;
+        const MAX_FILES = 8;
+        const slice = files.slice(0, MAX_FILES);
+        for (const f of slice) {
+          if (f.size > MAX_BYTES) {
+            return NextResponse.json(
+              {
+                assistantMessage: `El archivo "${f.name}" supera el límite de ${MAX_BYTES / 1024 / 1024} MB.`,
+              },
+              { status: 400 }
+            );
+          }
+        }
+        const merged = await extractInvoiceTextsMerged(slice);
+        const messages = Array.isArray(body.messages) ? body.messages : [];
+        const last = messages[messages.length - 1];
+        if (last?.role === "user" && typeof last.content === "string") {
+          last.content = stitchInvoiceIntoUserMessage(last.content, merged);
+        }
+      }
+    } else {
+      body = (await req.json()) as {
+        mode?: "quote" | "budget";
+        messages?: IncomingMessage[];
+        contact?: string;
+      };
+    }
 
     const mode = body.mode === "budget" ? "budget" : "quote";
     const messages = Array.isArray(body.messages) ? body.messages : [];
@@ -997,12 +1045,47 @@ export async function POST(req: Request) {
 
         const seedText = String(product?.title ?? last.userText ?? "").trim();
         if (seedText) {
-          const { productFromTextPipeline } = await import(
-            "@/lib/scraper/productFromTextPipeline"
-          );
-          const extra = (await productFromTextPipeline(seedText).catch(() => ({}))) as any;
-          // Keep only candidates/meta; don't auto-accept a new NCM while the user is disputing it.
-          if (extra?.ncmMeta) product.raw = { ...(product.raw ?? {}), ncmMeta: extra.ncmMeta };
+          const useNcmMotorDisagree =
+            process.env.NCM_CHAT_USE_MOTOR_IN_BUILD_PRODUCT === "1";
+
+          if (useNcmMotorDisagree) {
+            const { runNcmMotor } = await import("@/lib/clasificar-ncm/runNcmMotor");
+            const motor = await runNcmMotor({
+              text: seedText,
+              snapshot: { productType: "unknown", status: "idle" },
+              prevSnapshot: { productType: "unknown", status: "idle" },
+              messages: [],
+            }).catch(() => null);
+
+            if (motor) {
+              const rawNext: Record<string, unknown> = { ...(product.raw ?? {}) };
+              if (motor.engine.mode === "full") {
+                const pl = motor.engine.pipeline;
+                if (pl.ncmMeta) rawNext.ncmMeta = pl.ncmMeta;
+                if (pl.pcram) rawNext.pcram = pl.pcram;
+              }
+              rawNext.ncmMotor = {
+                confidence: motor.confidence,
+                alternatives: motor.alternatives,
+                ambiguity: motor.ambiguity ?? null,
+              };
+              product.raw = rawNext;
+            } else {
+              const { productFromTextPipeline } = await import(
+                "@/lib/scraper/productFromTextPipeline"
+              );
+              const extra = (await productFromTextPipeline(seedText).catch(() => ({}))) as any;
+              // Keep only candidates/meta; don't auto-accept a new NCM while the user is disputing it.
+              if (extra?.ncmMeta) product.raw = { ...(product.raw ?? {}), ncmMeta: extra.ncmMeta };
+            }
+          } else {
+            const { productFromTextPipeline } = await import(
+              "@/lib/scraper/productFromTextPipeline"
+            );
+            const extra = (await productFromTextPipeline(seedText).catch(() => ({}))) as any;
+            // Keep only candidates/meta; don't auto-accept a new NCM while the user is disputing it.
+            if (extra?.ncmMeta) product.raw = { ...(product.raw ?? {}), ncmMeta: extra.ncmMeta };
+          }
         }
 
         const candidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(
@@ -1084,22 +1167,65 @@ export async function POST(req: Request) {
       if (vehicleInf && vehicleInf.kind !== "desconocido") {
         base.raw = { ...(base.raw ?? {}), vehicleInference: vehicleInf };
       }
-      const { productFromTextPipeline } = await import(
-        "@/lib/scraper/productFromTextPipeline"
-      );
       const enrichedText =
         vehicleInf && vehicleInf.confidence >= 0.6
           ? `${inputText}\n\n[HINTS]\n${vehicleInferenceToHintsText(vehicleInf)}`
           : inputText;
 
-      const extra = (await productFromTextPipeline(enrichedText).catch(() => ({}))) as {
-        ncm?: string;
-        pcram?: unknown;
-        ncmMeta?: unknown;
-      };
-      if (extra.ncm) base.ncm = extra.ncm;
-      if (extra.pcram) base.raw = { ...(base.raw ?? {}), pcram: extra.pcram };
-      if (extra.ncmMeta) base.raw = { ...(base.raw ?? {}), ncmMeta: extra.ncmMeta };
+      const useNcmMotorInBuild =
+        process.env.NCM_CHAT_USE_MOTOR_IN_BUILD_PRODUCT === "1";
+
+      if (useNcmMotorInBuild) {
+        const { runNcmMotor } = await import("@/lib/clasificar-ncm/runNcmMotor");
+        const motor = await runNcmMotor({
+          text: enrichedText,
+          snapshot: { productType: "unknown", status: "idle" },
+          prevSnapshot: { productType: "unknown", status: "idle" },
+          messages: [],
+        }).catch(() => null);
+
+        if (motor) {
+          const rawNext: Record<string, unknown> = { ...(base.raw ?? {}) };
+          if (motor.engine.mode === "full") {
+            const pl = motor.engine.pipeline;
+            if (pl.ncmMeta) rawNext.ncmMeta = pl.ncmMeta;
+            if (pl.pcram) rawNext.pcram = pl.pcram;
+          }
+          rawNext.ncmMotor = {
+            confidence: motor.confidence,
+            alternatives: motor.alternatives,
+            ambiguity: motor.ambiguity ?? null,
+          };
+          base.raw = rawNext;
+          if (motor.ncm_code) {
+            base.ncm = motor.ncm_code;
+          }
+        } else {
+          const { productFromTextPipeline } = await import(
+            "@/lib/scraper/productFromTextPipeline"
+          );
+          const extra = (await productFromTextPipeline(enrichedText).catch(() => ({}))) as {
+            ncm?: string;
+            pcram?: unknown;
+            ncmMeta?: unknown;
+          };
+          if (extra.ncm) base.ncm = extra.ncm;
+          if (extra.pcram) base.raw = { ...(base.raw ?? {}), pcram: extra.pcram };
+          if (extra.ncmMeta) base.raw = { ...(base.raw ?? {}), ncmMeta: extra.ncmMeta };
+        }
+      } else {
+        const { productFromTextPipeline } = await import(
+          "@/lib/scraper/productFromTextPipeline"
+        );
+        const extra = (await productFromTextPipeline(enrichedText).catch(() => ({}))) as {
+          ncm?: string;
+          pcram?: unknown;
+          ncmMeta?: unknown;
+        };
+        if (extra.ncm) base.ncm = extra.ncm;
+        if (extra.pcram) base.raw = { ...(base.raw ?? {}), pcram: extra.pcram };
+        if (extra.ncmMeta) base.raw = { ...(base.raw ?? {}), ncmMeta: extra.ncmMeta };
+      }
       // If we have PCRAM candidates but no resolved NCM, pick the top one as default.
       // We'll still ask 1–3 questions to validate/refine before quoting when needed.
       if (!base.ncm) {
@@ -1562,14 +1688,75 @@ export async function POST(req: Request) {
           const seed = String(product?.title ?? "").trim();
           const combined = [seed, userText].filter(Boolean).join("\n");
           if (combined.trim().length >= 8) {
-            const { productFromTextPipeline } = await import(
-              "@/lib/scraper/productFromTextPipeline"
-            );
-            const extra = (await productFromTextPipeline(combined).catch(() => ({}))) as any;
-            if (extra?.ncm) product.ncm = extra.ncm;
-            if (extra?.pcram) product.raw = { ...(product.raw ?? {}), pcram: extra.pcram };
-            if (extra?.ncmMeta) product.raw = { ...(product.raw ?? {}), ncmMeta: extra.ncmMeta };
-            delete product.raw.ncmChoiceOptions;
+            const useNcmMotorInDisambig =
+              process.env.NCM_CHAT_USE_MOTOR_IN_BUILD_PRODUCT === "1";
+
+            if (useNcmMotorInDisambig) {
+              const { runNcmMotor } = await import("@/lib/clasificar-ncm/runNcmMotor");
+              const prevAmb = (product?.raw?.ncmMotor as { ambiguity?: unknown } | undefined)
+                ?.ambiguity;
+              const ncmHint = typeof product?.ncm === "string" ? product.ncm.trim() : "";
+              const motor = await runNcmMotor({
+                text: combined,
+                snapshot: {
+                  productType: "unknown",
+                  status: "idle",
+                  ...(ncmHint ? { recommendedNcm: ncmHint } : {}),
+                },
+                prevSnapshot: {
+                  productType: "unknown",
+                  status: "idle",
+                  ...(prevAmb != null && typeof prevAmb === "object"
+                    ? { ambiguity: prevAmb as any }
+                    : {}),
+                },
+                messages: [
+                  {
+                    id: "ncm-disambiguation",
+                    role: "user" as const,
+                    content: userText,
+                    ts: Date.now(),
+                  },
+                ],
+              }).catch(() => null);
+
+              if (motor) {
+                const rawNext: Record<string, unknown> = { ...(product.raw ?? {}) };
+                if (motor.engine.mode === "full") {
+                  const pl = motor.engine.pipeline;
+                  if (pl.ncmMeta) rawNext.ncmMeta = pl.ncmMeta;
+                  if (pl.pcram) rawNext.pcram = pl.pcram;
+                }
+                rawNext.ncmMotor = {
+                  confidence: motor.confidence,
+                  alternatives: motor.alternatives,
+                  ambiguity: motor.ambiguity ?? null,
+                };
+                delete rawNext.ncmChoiceOptions;
+                product.raw = rawNext;
+                if (motor.ncm_code) {
+                  product.ncm = motor.ncm_code;
+                }
+              } else {
+                const { productFromTextPipeline } = await import(
+                  "@/lib/scraper/productFromTextPipeline"
+                );
+                const extra = (await productFromTextPipeline(combined).catch(() => ({}))) as any;
+                if (extra?.ncm) product.ncm = extra.ncm;
+                if (extra?.pcram) product.raw = { ...(product.raw ?? {}), pcram: extra.pcram };
+                if (extra?.ncmMeta) product.raw = { ...(product.raw ?? {}), ncmMeta: extra.ncmMeta };
+                delete product.raw.ncmChoiceOptions;
+              }
+            } else {
+              const { productFromTextPipeline } = await import(
+                "@/lib/scraper/productFromTextPipeline"
+              );
+              const extra = (await productFromTextPipeline(combined).catch(() => ({}))) as any;
+              if (extra?.ncm) product.ncm = extra.ncm;
+              if (extra?.pcram) product.raw = { ...(product.raw ?? {}), pcram: extra.pcram };
+              if (extra?.ncmMeta) product.raw = { ...(product.raw ?? {}), ncmMeta: extra.ncmMeta };
+              delete product.raw.ncmChoiceOptions;
+            }
             await prisma.quote
               .update({ where: { id: active.id }, data: { productJson: product as any } })
               .catch(() => null);

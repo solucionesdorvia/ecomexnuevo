@@ -1,12 +1,20 @@
 import { NextResponse } from "next/server";
-import { productFromTextPipeline } from "@/lib/scraper/productFromTextPipeline";
+import { motorResultToTextPipelineResult } from "@/lib/clasificar-ncm/motorResultToTextPipelineResult";
+import { runNcmMotor } from "@/lib/clasificar-ncm/runNcmMotor";
+import type { CaseSnapshot } from "@/lib/clasificar-ncm/types";
 
 export const runtime = "nodejs";
 
 const MAX_LEN = 60_000;
 
+const idleSnapshot = (): CaseSnapshot => ({
+  productType: "unknown",
+  status: "idle",
+});
+
 /**
- * Sandbox: ejecuta el pipeline de texto → NCM (IA + nomenclador local + PCRAM si hay credenciales).
+ * Sandbox: ejecuta el motor NCM unificado (pipeline completo o modo rápido según env)
+ * y devuelve el mismo shape histórico que `productFromTextPipeline` (`result`).
  */
 export async function POST(req: Request) {
   try {
@@ -23,7 +31,13 @@ export async function POST(req: Request) {
     }
 
     const started = Date.now();
-    const result = await productFromTextPipeline(text);
+    const motor = await runNcmMotor({
+      text,
+      snapshot: idleSnapshot(),
+      prevSnapshot: idleSnapshot(),
+      messages: [],
+    });
+    const result = motorResultToTextPipelineResult(motor);
     return NextResponse.json({ ok: true, ms: Date.now() - started, result });
   } catch (e) {
     return NextResponse.json(
