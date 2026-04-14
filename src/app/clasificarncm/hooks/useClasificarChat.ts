@@ -9,7 +9,8 @@ function stripMessages(s: CaseState): CaseSnapshot {
   return rest;
 }
 
-export function useClasificarChat() {
+export function useClasificarChat(opts?: { credentials?: RequestCredentials }) {
+  const credentials = opts?.credentials ?? "same-origin";
   const [caseState, setCaseState] = useState<CaseState>(initialCaseState);
   const [pending, setPending] = useState(false);
   const stateRef = useRef(caseState);
@@ -44,6 +45,7 @@ export function useClasificarChat() {
     try {
       const res = await fetch("/api/clasificar-ncm/chat", {
         method: "POST",
+        credentials,
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
           messages: nextMessages,
@@ -92,7 +94,7 @@ export function useClasificarChat() {
       pendingRef.current = false;
       setPending(false);
     }
-  }, []);
+  }, [credentials]);
 
   const reset = useCallback(() => {
     pendingRef.current = false;

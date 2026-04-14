@@ -6,6 +6,18 @@ import type { CaseSnapshot, ChatMessage, ProductType } from "./types";
 
 const CLASSIFY_TIMEOUT_MS = Number(process.env.NCM_CHAT_CLASSIFY_TIMEOUT_MS) || 22_000;
 
+/** En la UI /clasificarncm priorizamos latencia: motor en modo rápido salvo env. */
+const CLASIFICAR_CHAT_USE_FULL_MOTOR_PIPELINE =
+  process.env.NCM_CLASIFICAR_CHAT_USE_FULL_PIPELINE === "1";
+
+const CLASIFICAR_CLASSIFY_TIMEOUT_MS =
+  Number(process.env.NCM_CLASIFICAR_CLASSIFY_TIMEOUT_MS) || CLASSIFY_TIMEOUT_MS;
+
+const CLASIFICAR_ANALYST_TIMEOUT_MS =
+  Number(process.env.NCM_CLASIFICAR_ANALYST_TIMEOUT_MS) ||
+  Number(process.env.NCM_CHAT_ANALYST_TIMEOUT_MS) ||
+  24_000;
+
 /** Respuesta más rápida: últimos turnos y tope de caractereres para el analista. */
 function truncateTranscript(messages: ChatMessage[], maxMessages = 24, maxChars = 12_000): string {
   const recent = messages.slice(-maxMessages);
@@ -20,8 +32,6 @@ function truncateTranscript(messages: ChatMessage[], maxMessages = 24, maxChars 
   }
   return parts.join("\n\n");
 }
-
-const ANALYST_TIMEOUT_MS = Number(process.env.NCM_CHAT_ANALYST_TIMEOUT_MS) || 28_000;
 
 export function buildTechnicalDescription(messages: ChatMessage[], snap: CaseSnapshot): string {
   const userLines = messages.filter((m) => m.role === "user").map((m) => m.content.trim()).filter(Boolean);
@@ -175,7 +185,7 @@ export async function processClasificarTurn(opts: {
       system: ANALYST_SYSTEM,
       user: userPayload,
       model: process.env.NCM_CHAT_ANALYST_MODEL ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
-      timeoutMs: ANALYST_TIMEOUT_MS,
+      timeoutMs: CLASIFICAR_ANALYST_TIMEOUT_MS,
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Error al analizar.";
@@ -218,8 +228,9 @@ export async function processClasificarTurn(opts: {
       snapshot: snap,
       prevSnapshot: prev,
       messages,
+      preferFullPipeline: CLASIFICAR_CHAT_USE_FULL_MOTOR_PIPELINE,
       classifyOptions: {
-        timeoutMs: CLASSIFY_TIMEOUT_MS,
+        timeoutMs: CLASIFICAR_CLASSIFY_TIMEOUT_MS,
         model: process.env.NCM_CHAT_CLASSIFY_MODEL ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
         skipNcmKnowledge:
           process.env.NCM_CHAT_SKIP_KNOWLEDGE === "1" || process.env.NCM_CHAT_SKIP_KNOWLEDGE === "true",
@@ -283,7 +294,7 @@ export async function processClasificarTurn(opts: {
               : "\n\n*Validá la última posición estadística con el despachante si el producto tiene variante no descrita.*"
           }`
         : ncm && motor.engine.mode === "fast"
-          ? `\n\n---\n**NCM (8 dígitos, formato Mercosur):** \`${normalizeNcmCode(ncm) || ncm}\`\n\n*Para posición estadística exacta y tributos, usá el pipeline completo (por defecto) o validá con despachante.*`
+          ? `\n\n---\n**NCM (8 dígitos, formato Mercosur):** \`${normalizeNcmCode(ncm) || ncm}\`\n\n*Clasificación rápida en chat. Para pipeline completo (nomenclador/PCRAM), configurá \`NCM_CLASIFICAR_CHAT_USE_FULL_PIPELINE=1\` en el servidor o validá con despachante.*`
           : "";
 
     return {

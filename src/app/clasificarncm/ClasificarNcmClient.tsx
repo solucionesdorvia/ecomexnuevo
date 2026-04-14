@@ -10,15 +10,13 @@ import { ClassificationCard } from "./components/ClassificationCard";
 import { DiscardedCandidatesBlock } from "./components/DiscardedCandidatesBlock";
 import { FollowUpQuestions } from "./components/FollowUpQuestions";
 import { SuggestedCandidatesList } from "./components/SuggestedCandidatesList";
+import { ClasificarNcmPipelineFooter } from "./components/ClasificarNcmPipelineFooter";
+import {
+  CLASIFICAR_NCM_LANDING_DESCRIPTION,
+  CLASIFICAR_NCM_LANDING_TITLE,
+  CLASIFICAR_NCM_SUGGESTIONS,
+} from "./uiConstants";
 import { AMBIGUITY_REASON_LABELS } from "@/lib/clasificar-ncm/ncmAmbiguity";
-
-const SUGGESTIONS = [
-  "Cargador USB-C de 65W",
-  "Guantes de nitrilo descartables",
-  "Bomba centrífuga de acero",
-  "Pantalla LCD notebook",
-  "Válvula hidráulica industrial",
-];
 
 export default function ClasificarNcmClient() {
   const { caseState, sendMessage, pending, reset } = useClasificarChat();
@@ -95,14 +93,13 @@ export default function ClasificarNcmClient() {
                 className="mt-6 max-w-lg text-center text-[22px] font-bold tracking-tight text-white sm:text-[24px]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Analista técnico NCM
+                {CLASIFICAR_NCM_LANDING_TITLE}
               </h1>
               <p className="mt-3 max-w-md text-center text-[14px] leading-relaxed text-slate-500">
-                Describí el producto por función y uso real. El sistema va a pedirte solo lo necesario antes de
-                sugerir posiciones arancelarias con nivel de confianza.
+                {CLASIFICAR_NCM_LANDING_DESCRIPTION}
               </p>
               <div className="mt-8 flex w-full max-w-xl flex-col gap-2 sm:flex-row sm:flex-wrap sm:justify-center">
-                {SUGGESTIONS.map((s) => (
+                {CLASIFICAR_NCM_SUGGESTIONS.map((s) => (
                   <button
                     key={s}
                     type="button"
@@ -176,14 +173,7 @@ export default function ClasificarNcmClient() {
         </div>
       </div>
 
-      <footer className="relative z-10 border-t border-white/[0.04] px-3 py-3 sm:px-4">
-        <p className="mx-auto max-w-4xl text-balance text-center text-[11px] leading-relaxed text-slate-600 sm:text-[10px]">
-          Por defecto usa el pipeline completo (IA + nomenclador local + PCRAM con credenciales) para acercar el NCM a la
-          posición oficial en 8 dígitos. Modo rápido solo con{" "}
-          <code className="text-slate-500">NCM_CHAT_FAST_PIPELINE=1</code>. No sustituye dictamen de despachante
-          matriculado.
-        </p>
-      </footer>
+      <ClasificarNcmPipelineFooter />
     </div>
   );
 }
