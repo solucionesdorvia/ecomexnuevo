@@ -715,7 +715,8 @@ export async function POST(req: Request) {
           delete (built as Record<string, unknown>).quantity;
           Object.assign(product, built);
 
-          const builtMeta = (built as Record<string, unknown>)?.raw && ((built as Record<string, unknown>).raw as Record<string, unknown>)?.ncmMeta as Record<string, unknown> | undefined;
+          const builtRaw = (built as Record<string, unknown>)?.raw as Record<string, unknown> | undefined;
+          const builtMeta = builtRaw?.ncmMeta as Record<string, unknown> | undefined;
           const builtCandidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(builtMeta?.pcramCandidates)
             ? builtMeta!.pcramCandidates as Array<{ ncmCode: string; title?: string }>
             : [];
