@@ -14,7 +14,7 @@ export default defineConfig({
   retries: isCI ? 1 : 0,
   timeout: 30_000,
   expect: { timeout: 10_000 },
-  reporter: [["list"], ...(isCI ? [["github" as const]] : [])],
+  reporter: isCI ? [["list"], ["github"]] : [["list"]],
   globalSetup: path.resolve(__dirname, "src/__tests__/e2e/global-setup.ts"),
   use: {
     baseURL: "http://localhost:3000",
