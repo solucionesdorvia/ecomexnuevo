@@ -2,9 +2,12 @@ import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
-export async function POST(req: Request) {
-  const url = new URL("/account/login", req.url);
-  const res = NextResponse.redirect(url, { status: 303 });
+export async function POST() {
+  // Use a relative redirect to preserve the current browser origin.
+  const res = new NextResponse(null, {
+    status: 303,
+    headers: { Location: "/account/login" },
+  });
   res.cookies.set("ecomex_auth", "", {
     httpOnly: true,
     sameSite: "lax",
