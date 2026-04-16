@@ -24,11 +24,7 @@ function SidebarContent({ userEmail, userRole, onNavigate }: { userEmail?: strin
         <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-5 brightness-0 invert opacity-90" />
       </div>
 
-      <nav className="flex-1 overflow-y-auto px-3 py-4">
-        <div className="mb-4 rounded-lg border border-white/[0.05] bg-white/[0.01] px-3 py-2.5">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#4a5568]">Modo sistema</p>
-          <p className="mt-1 text-[11px] leading-relaxed text-[#555c6b]">Navegacion organizada por flujo, ejecucion e inteligencia operativa.</p>
-        </div>
+      <nav className="no-scrollbar flex-1 overflow-y-auto px-3 py-4">
         <div className="space-y-5">
           {groups.map((groupKey) => {
             const groupItems = items.filter((item) => item.group === groupKey);
