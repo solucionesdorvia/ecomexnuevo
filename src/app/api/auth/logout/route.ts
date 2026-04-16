@@ -6,7 +6,7 @@ export async function POST() {
   // Use a relative redirect to preserve the current browser origin.
   const res = new NextResponse(null, {
     status: 303,
-    headers: { Location: "/account/login" },
+    headers: { Location: "/login" },
   });
   res.cookies.set("ecomex_auth", "", {
     httpOnly: true,
