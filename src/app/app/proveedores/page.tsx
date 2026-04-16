@@ -11,10 +11,10 @@ export default async function ProveedoresPage() {
   return (
     <SystemPage
       title="Proveedores"
-      description="Próximamente."
+      description="Próximamente tendrás acceso a los proveedores validados por E-COMEX."
     >
       <div className="mt-8 rounded-xl border border-white/[0.08] bg-[#0B1622] p-6 text-sm text-[#b0b8c9]">
-        Próximamente acá vas a poder ver a los proveedores de confianza de E-COMEX.
+        Próximamente tendrás acceso a los proveedores validados por E-COMEX.
       </div>
     </SystemPage>
   );
