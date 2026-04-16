@@ -286,6 +286,7 @@ export type QuoteWhereInput = {
   userId?: Prisma.StringNullableFilter<"Quote"> | string | null
   lead?: Prisma.XOR<Prisma.LeadNullableScalarRelationFilter, Prisma.LeadWhereInput> | null
   user?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
+  operation?: Prisma.XOR<Prisma.OperationNullableScalarRelationFilter, Prisma.OperationWhereInput> | null
   comments?: Prisma.QuoteCommentListRelationFilter
   audits?: Prisma.AuditLogListRelationFilter
 }
@@ -307,6 +308,7 @@ export type QuoteOrderByWithRelationInput = {
   userId?: Prisma.SortOrderInput | Prisma.SortOrder
   lead?: Prisma.LeadOrderByWithRelationInput
   user?: Prisma.UserOrderByWithRelationInput
+  operation?: Prisma.OperationOrderByWithRelationInput
   comments?: Prisma.QuoteCommentOrderByRelationAggregateInput
   audits?: Prisma.AuditLogOrderByRelationAggregateInput
 }
@@ -331,6 +333,7 @@ export type QuoteWhereUniqueInput = Prisma.AtLeast<{
   userId?: Prisma.StringNullableFilter<"Quote"> | string | null
   lead?: Prisma.XOR<Prisma.LeadNullableScalarRelationFilter, Prisma.LeadWhereInput> | null
   user?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
+  operation?: Prisma.XOR<Prisma.OperationNullableScalarRelationFilter, Prisma.OperationWhereInput> | null
   comments?: Prisma.QuoteCommentListRelationFilter
   audits?: Prisma.AuditLogListRelationFilter
 }, "id">
@@ -392,6 +395,7 @@ export type QuoteCreateInput = {
   stage?: string
   lead?: Prisma.LeadCreateNestedOneWithoutQuotesInput
   user?: Prisma.UserCreateNestedOneWithoutQuotesInput
+  operation?: Prisma.OperationCreateNestedOneWithoutQuoteInput
   comments?: Prisma.QuoteCommentCreateNestedManyWithoutQuoteInput
   audits?: Prisma.AuditLogCreateNestedManyWithoutQuoteInput
 }
@@ -411,6 +415,7 @@ export type QuoteUncheckedCreateInput = {
   stage?: string
   leadId?: string | null
   userId?: string | null
+  operation?: Prisma.OperationUncheckedCreateNestedOneWithoutQuoteInput
   comments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutQuoteInput
   audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutQuoteInput
 }
@@ -430,6 +435,7 @@ export type QuoteUpdateInput = {
   stage?: Prisma.StringFieldUpdateOperationsInput | string
   lead?: Prisma.LeadUpdateOneWithoutQuotesNestedInput
   user?: Prisma.UserUpdateOneWithoutQuotesNestedInput
+  operation?: Prisma.OperationUpdateOneWithoutQuoteNestedInput
   comments?: Prisma.QuoteCommentUpdateManyWithoutQuoteNestedInput
   audits?: Prisma.AuditLogUpdateManyWithoutQuoteNestedInput
 }
@@ -449,6 +455,7 @@ export type QuoteUncheckedUpdateInput = {
   stage?: Prisma.StringFieldUpdateOperationsInput | string
   leadId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operation?: Prisma.OperationUncheckedUpdateOneWithoutQuoteNestedInput
   comments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutQuoteNestedInput
   audits?: Prisma.AuditLogUncheckedUpdateManyWithoutQuoteNestedInput
 }
@@ -713,6 +720,20 @@ export type QuoteUpdateOneWithoutAuditsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.QuoteUpdateToOneWithWhereWithoutAuditsInput, Prisma.QuoteUpdateWithoutAuditsInput>, Prisma.QuoteUncheckedUpdateWithoutAuditsInput>
 }
 
+export type QuoteCreateNestedOneWithoutOperationInput = {
+  create?: Prisma.XOR<Prisma.QuoteCreateWithoutOperationInput, Prisma.QuoteUncheckedCreateWithoutOperationInput>
+  connectOrCreate?: Prisma.QuoteCreateOrConnectWithoutOperationInput
+  connect?: Prisma.QuoteWhereUniqueInput
+}
+
+export type QuoteUpdateOneRequiredWithoutOperationNestedInput = {
+  create?: Prisma.XOR<Prisma.QuoteCreateWithoutOperationInput, Prisma.QuoteUncheckedCreateWithoutOperationInput>
+  connectOrCreate?: Prisma.QuoteCreateOrConnectWithoutOperationInput
+  upsert?: Prisma.QuoteUpsertWithoutOperationInput
+  connect?: Prisma.QuoteWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.QuoteUpdateToOneWithWhereWithoutOperationInput, Prisma.QuoteUpdateWithoutOperationInput>, Prisma.QuoteUncheckedUpdateWithoutOperationInput>
+}
+
 export type QuoteCreateWithoutLeadInput = {
   id?: string
   createdAt?: Date | string
@@ -727,6 +748,7 @@ export type QuoteCreateWithoutLeadInput = {
   totalMaxUsd?: number | null
   stage?: string
   user?: Prisma.UserCreateNestedOneWithoutQuotesInput
+  operation?: Prisma.OperationCreateNestedOneWithoutQuoteInput
   comments?: Prisma.QuoteCommentCreateNestedManyWithoutQuoteInput
   audits?: Prisma.AuditLogCreateNestedManyWithoutQuoteInput
 }
@@ -745,6 +767,7 @@ export type QuoteUncheckedCreateWithoutLeadInput = {
   totalMaxUsd?: number | null
   stage?: string
   userId?: string | null
+  operation?: Prisma.OperationUncheckedCreateNestedOneWithoutQuoteInput
   comments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutQuoteInput
   audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutQuoteInput
 }
@@ -809,6 +832,7 @@ export type QuoteCreateWithoutUserInput = {
   totalMaxUsd?: number | null
   stage?: string
   lead?: Prisma.LeadCreateNestedOneWithoutQuotesInput
+  operation?: Prisma.OperationCreateNestedOneWithoutQuoteInput
   comments?: Prisma.QuoteCommentCreateNestedManyWithoutQuoteInput
   audits?: Prisma.AuditLogCreateNestedManyWithoutQuoteInput
 }
@@ -827,6 +851,7 @@ export type QuoteUncheckedCreateWithoutUserInput = {
   totalMaxUsd?: number | null
   stage?: string
   leadId?: string | null
+  operation?: Prisma.OperationUncheckedCreateNestedOneWithoutQuoteInput
   comments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutQuoteInput
   audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutQuoteInput
 }
@@ -872,6 +897,7 @@ export type QuoteCreateWithoutCommentsInput = {
   stage?: string
   lead?: Prisma.LeadCreateNestedOneWithoutQuotesInput
   user?: Prisma.UserCreateNestedOneWithoutQuotesInput
+  operation?: Prisma.OperationCreateNestedOneWithoutQuoteInput
   audits?: Prisma.AuditLogCreateNestedManyWithoutQuoteInput
 }
 
@@ -890,6 +916,7 @@ export type QuoteUncheckedCreateWithoutCommentsInput = {
   stage?: string
   leadId?: string | null
   userId?: string | null
+  operation?: Prisma.OperationUncheckedCreateNestedOneWithoutQuoteInput
   audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutQuoteInput
 }
 
@@ -924,6 +951,7 @@ export type QuoteUpdateWithoutCommentsInput = {
   stage?: Prisma.StringFieldUpdateOperationsInput | string
   lead?: Prisma.LeadUpdateOneWithoutQuotesNestedInput
   user?: Prisma.UserUpdateOneWithoutQuotesNestedInput
+  operation?: Prisma.OperationUpdateOneWithoutQuoteNestedInput
   audits?: Prisma.AuditLogUpdateManyWithoutQuoteNestedInput
 }
 
@@ -942,6 +970,7 @@ export type QuoteUncheckedUpdateWithoutCommentsInput = {
   stage?: Prisma.StringFieldUpdateOperationsInput | string
   leadId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operation?: Prisma.OperationUncheckedUpdateOneWithoutQuoteNestedInput
   audits?: Prisma.AuditLogUncheckedUpdateManyWithoutQuoteNestedInput
 }
 
@@ -960,6 +989,7 @@ export type QuoteCreateWithoutAuditsInput = {
   stage?: string
   lead?: Prisma.LeadCreateNestedOneWithoutQuotesInput
   user?: Prisma.UserCreateNestedOneWithoutQuotesInput
+  operation?: Prisma.OperationCreateNestedOneWithoutQuoteInput
   comments?: Prisma.QuoteCommentCreateNestedManyWithoutQuoteInput
 }
 
@@ -978,6 +1008,7 @@ export type QuoteUncheckedCreateWithoutAuditsInput = {
   stage?: string
   leadId?: string | null
   userId?: string | null
+  operation?: Prisma.OperationUncheckedCreateNestedOneWithoutQuoteInput
   comments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutQuoteInput
 }
 
@@ -1012,6 +1043,7 @@ export type QuoteUpdateWithoutAuditsInput = {
   stage?: Prisma.StringFieldUpdateOperationsInput | string
   lead?: Prisma.LeadUpdateOneWithoutQuotesNestedInput
   user?: Prisma.UserUpdateOneWithoutQuotesNestedInput
+  operation?: Prisma.OperationUpdateOneWithoutQuoteNestedInput
   comments?: Prisma.QuoteCommentUpdateManyWithoutQuoteNestedInput
 }
 
@@ -1030,7 +1062,100 @@ export type QuoteUncheckedUpdateWithoutAuditsInput = {
   stage?: Prisma.StringFieldUpdateOperationsInput | string
   leadId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   userId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operation?: Prisma.OperationUncheckedUpdateOneWithoutQuoteNestedInput
   comments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutQuoteNestedInput
+}
+
+export type QuoteCreateWithoutOperationInput = {
+  id?: string
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  anonId: string
+  mode: string
+  userText: string
+  sourceUrl?: string | null
+  productJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  quoteJson: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  totalMinUsd?: number | null
+  totalMaxUsd?: number | null
+  stage?: string
+  lead?: Prisma.LeadCreateNestedOneWithoutQuotesInput
+  user?: Prisma.UserCreateNestedOneWithoutQuotesInput
+  comments?: Prisma.QuoteCommentCreateNestedManyWithoutQuoteInput
+  audits?: Prisma.AuditLogCreateNestedManyWithoutQuoteInput
+}
+
+export type QuoteUncheckedCreateWithoutOperationInput = {
+  id?: string
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  anonId: string
+  mode: string
+  userText: string
+  sourceUrl?: string | null
+  productJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  quoteJson: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  totalMinUsd?: number | null
+  totalMaxUsd?: number | null
+  stage?: string
+  leadId?: string | null
+  userId?: string | null
+  comments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutQuoteInput
+  audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutQuoteInput
+}
+
+export type QuoteCreateOrConnectWithoutOperationInput = {
+  where: Prisma.QuoteWhereUniqueInput
+  create: Prisma.XOR<Prisma.QuoteCreateWithoutOperationInput, Prisma.QuoteUncheckedCreateWithoutOperationInput>
+}
+
+export type QuoteUpsertWithoutOperationInput = {
+  update: Prisma.XOR<Prisma.QuoteUpdateWithoutOperationInput, Prisma.QuoteUncheckedUpdateWithoutOperationInput>
+  create: Prisma.XOR<Prisma.QuoteCreateWithoutOperationInput, Prisma.QuoteUncheckedCreateWithoutOperationInput>
+  where?: Prisma.QuoteWhereInput
+}
+
+export type QuoteUpdateToOneWithWhereWithoutOperationInput = {
+  where?: Prisma.QuoteWhereInput
+  data: Prisma.XOR<Prisma.QuoteUpdateWithoutOperationInput, Prisma.QuoteUncheckedUpdateWithoutOperationInput>
+}
+
+export type QuoteUpdateWithoutOperationInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  anonId?: Prisma.StringFieldUpdateOperationsInput | string
+  mode?: Prisma.StringFieldUpdateOperationsInput | string
+  userText?: Prisma.StringFieldUpdateOperationsInput | string
+  sourceUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  productJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  quoteJson?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  totalMinUsd?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  totalMaxUsd?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  stage?: Prisma.StringFieldUpdateOperationsInput | string
+  lead?: Prisma.LeadUpdateOneWithoutQuotesNestedInput
+  user?: Prisma.UserUpdateOneWithoutQuotesNestedInput
+  comments?: Prisma.QuoteCommentUpdateManyWithoutQuoteNestedInput
+  audits?: Prisma.AuditLogUpdateManyWithoutQuoteNestedInput
+}
+
+export type QuoteUncheckedUpdateWithoutOperationInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  anonId?: Prisma.StringFieldUpdateOperationsInput | string
+  mode?: Prisma.StringFieldUpdateOperationsInput | string
+  userText?: Prisma.StringFieldUpdateOperationsInput | string
+  sourceUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  productJson?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  quoteJson?: Prisma.JsonNullValueInput | runtime.InputJsonValue
+  totalMinUsd?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  totalMaxUsd?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  stage?: Prisma.StringFieldUpdateOperationsInput | string
+  leadId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  userId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  comments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutQuoteNestedInput
+  audits?: Prisma.AuditLogUncheckedUpdateManyWithoutQuoteNestedInput
 }
 
 export type QuoteCreateManyLeadInput = {
@@ -1063,6 +1188,7 @@ export type QuoteUpdateWithoutLeadInput = {
   totalMaxUsd?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   stage?: Prisma.StringFieldUpdateOperationsInput | string
   user?: Prisma.UserUpdateOneWithoutQuotesNestedInput
+  operation?: Prisma.OperationUpdateOneWithoutQuoteNestedInput
   comments?: Prisma.QuoteCommentUpdateManyWithoutQuoteNestedInput
   audits?: Prisma.AuditLogUpdateManyWithoutQuoteNestedInput
 }
@@ -1081,6 +1207,7 @@ export type QuoteUncheckedUpdateWithoutLeadInput = {
   totalMaxUsd?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   stage?: Prisma.StringFieldUpdateOperationsInput | string
   userId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operation?: Prisma.OperationUncheckedUpdateOneWithoutQuoteNestedInput
   comments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutQuoteNestedInput
   audits?: Prisma.AuditLogUncheckedUpdateManyWithoutQuoteNestedInput
 }
@@ -1131,6 +1258,7 @@ export type QuoteUpdateWithoutUserInput = {
   totalMaxUsd?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   stage?: Prisma.StringFieldUpdateOperationsInput | string
   lead?: Prisma.LeadUpdateOneWithoutQuotesNestedInput
+  operation?: Prisma.OperationUpdateOneWithoutQuoteNestedInput
   comments?: Prisma.QuoteCommentUpdateManyWithoutQuoteNestedInput
   audits?: Prisma.AuditLogUpdateManyWithoutQuoteNestedInput
 }
@@ -1149,6 +1277,7 @@ export type QuoteUncheckedUpdateWithoutUserInput = {
   totalMaxUsd?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   stage?: Prisma.StringFieldUpdateOperationsInput | string
   leadId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operation?: Prisma.OperationUncheckedUpdateOneWithoutQuoteNestedInput
   comments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutQuoteNestedInput
   audits?: Prisma.AuditLogUncheckedUpdateManyWithoutQuoteNestedInput
 }
@@ -1226,6 +1355,7 @@ export type QuoteSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
   userId?: boolean
   lead?: boolean | Prisma.Quote$leadArgs<ExtArgs>
   user?: boolean | Prisma.Quote$userArgs<ExtArgs>
+  operation?: boolean | Prisma.Quote$operationArgs<ExtArgs>
   comments?: boolean | Prisma.Quote$commentsArgs<ExtArgs>
   audits?: boolean | Prisma.Quote$auditsArgs<ExtArgs>
   _count?: boolean | Prisma.QuoteCountOutputTypeDefaultArgs<ExtArgs>
@@ -1290,6 +1420,7 @@ export type QuoteOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = ru
 export type QuoteInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   lead?: boolean | Prisma.Quote$leadArgs<ExtArgs>
   user?: boolean | Prisma.Quote$userArgs<ExtArgs>
+  operation?: boolean | Prisma.Quote$operationArgs<ExtArgs>
   comments?: boolean | Prisma.Quote$commentsArgs<ExtArgs>
   audits?: boolean | Prisma.Quote$auditsArgs<ExtArgs>
   _count?: boolean | Prisma.QuoteCountOutputTypeDefaultArgs<ExtArgs>
@@ -1308,6 +1439,10 @@ export type $QuotePayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   objects: {
     lead: Prisma.$LeadPayload<ExtArgs> | null
     user: Prisma.$UserPayload<ExtArgs> | null
+    /**
+     * Si existe, esta cotización pasó a importación acompañada por Ecomex.
+     */
+    operation: Prisma.$OperationPayload<ExtArgs> | null
     comments: Prisma.$QuoteCommentPayload<ExtArgs>[]
     audits: Prisma.$AuditLogPayload<ExtArgs>[]
   }
@@ -1722,6 +1857,7 @@ export interface Prisma__QuoteClient<T, Null = never, ExtArgs extends runtime.Ty
   readonly [Symbol.toStringTag]: "PrismaPromise"
   lead<T extends Prisma.Quote$leadArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Quote$leadArgs<ExtArgs>>): Prisma.Prisma__LeadClient<runtime.Types.Result.GetResult<Prisma.$LeadPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   user<T extends Prisma.Quote$userArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Quote$userArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  operation<T extends Prisma.Quote$operationArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Quote$operationArgs<ExtArgs>>): Prisma.Prisma__OperationClient<runtime.Types.Result.GetResult<Prisma.$OperationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   comments<T extends Prisma.Quote$commentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Quote$commentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$QuoteCommentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   audits<T extends Prisma.Quote$auditsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Quote$auditsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AuditLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
@@ -2198,6 +2334,25 @@ export type Quote$userArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs
    */
   include?: Prisma.UserInclude<ExtArgs> | null
   where?: Prisma.UserWhereInput
+}
+
+/**
+ * Quote.operation
+ */
+export type Quote$operationArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Operation
+   */
+  select?: Prisma.OperationSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Operation
+   */
+  omit?: Prisma.OperationOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.OperationInclude<ExtArgs> | null
+  where?: Prisma.OperationWhereInput
 }
 
 /**

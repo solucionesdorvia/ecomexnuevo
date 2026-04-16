@@ -1,69 +1,218 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { getSessionUser } from "@/lib/auth/session";
+import { prisma } from "@/lib/db";
+import { QuoteCostBlocks } from "@/app/app/operaciones/[id]/operation/QuoteCostBlocks";
+import { parseQuoteCostJson } from "@/lib/quote/parseQuoteCostJson";
+import { SystemEmpty, SystemPage, SystemSection } from "@/components/app/SystemPage";
 
-const MOCK_BREAKDOWN = [
-  { label: "FOB", value: "$2,400", pct: "35%" },
-  { label: "Flete internacional", value: "$680", pct: "10%" },
-  { label: "Seguro", value: "$120", pct: "2%" },
-  { label: "Derechos de importación", value: "$960", pct: "14%" },
-  { label: "Tasa estadística", value: "$96", pct: "1%" },
-  { label: "IVA", value: "$840", pct: "12%" },
-  { label: "IVA Adicional", value: "$420", pct: "6%" },
-  { label: "Ganancias", value: "$360", pct: "5%" },
-  { label: "IIBB", value: "$180", pct: "3%" },
-  { label: "Gestión / despacho", value: "$450", pct: "7%" },
-  { label: "Transporte nacional", value: "$200", pct: "3%" },
-  { label: "Transferencia intl.", value: "$134", pct: "2%" },
-];
+export const runtime = "nodejs";
 
-export default function CostosPage() {
+function productTitle(productJson: unknown, userText: string) {
+  const pj = productJson as { title?: string; name?: string } | null | undefined;
+  const t = pj?.title ?? pj?.name;
+  if (t && String(t).trim()) return String(t).slice(0, 120);
+  const u = userText?.trim();
+  if (u) return u.slice(0, 80);
+  return "Cotización";
+}
+
+function fmtAt(d: Date) {
+  return d.toLocaleString("es-AR", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
+function fmtUsdRange(min: number, max: number) {
+  const a = min.toLocaleString("en-US", { style: "currency", currency: "USD" });
+  const b = max.toLocaleString("en-US", { style: "currency", currency: "USD" });
+  return `${a} – ${b}`;
+}
+
+export default async function CostosPage() {
+  const user = await getSessionUser();
+  if (!user) redirect("/login");
+
+  const operations = await prisma.operation.findMany({
+    where: { userId: user.id },
+    orderBy: { createdAt: "desc" },
+    take: 10,
+    include: {
+      quote: {
+        select: {
+          id: true,
+          productJson: true,
+          userText: true,
+          quoteJson: true,
+          totalMinUsd: true,
+          totalMaxUsd: true,
+          createdAt: true,
+        },
+      },
+    },
+  });
+
+  type Row =
+    | {
+        key: string;
+        kind: "operation";
+        operationId: string;
+        quoteId: string;
+        title: string;
+        at: Date;
+        cards: ReturnType<typeof parseQuoteCostJson>["cards"];
+        breakdown: ReturnType<typeof parseQuoteCostJson>["breakdown"];
+        totalMinUsd: number | null;
+        totalMaxUsd: number | null;
+      }
+    | {
+        key: string;
+        kind: "quote";
+        quoteId: string;
+        title: string;
+        at: Date;
+        cards: ReturnType<typeof parseQuoteCostJson>["cards"];
+        breakdown: ReturnType<typeof parseQuoteCostJson>["breakdown"];
+        totalMinUsd: number | null;
+        totalMaxUsd: number | null;
+      };
+
+  let rows: Row[] = [];
+
+  if (operations.length > 0) {
+    rows = operations.map((o) => {
+      const { cards, breakdown } = parseQuoteCostJson(o.quote.quoteJson);
+      return {
+        key: `op-${o.id}`,
+        kind: "operation" as const,
+        operationId: o.id,
+        quoteId: o.quote.id,
+        title: productTitle(o.quote.productJson, o.quote.userText),
+        at: o.createdAt,
+        cards,
+        breakdown,
+        totalMinUsd: o.quote.totalMinUsd,
+        totalMaxUsd: o.quote.totalMaxUsd,
+      };
+    });
+  } else {
+    const quotes = await prisma.quote.findMany({
+      where: { userId: user.id, operation: { is: null } },
+      orderBy: { createdAt: "desc" },
+      take: 10,
+      select: {
+        id: true,
+        productJson: true,
+        userText: true,
+        quoteJson: true,
+        totalMinUsd: true,
+        totalMaxUsd: true,
+        createdAt: true,
+      },
+    });
+    rows = quotes.map((q) => {
+      const { cards, breakdown } = parseQuoteCostJson(q.quoteJson);
+      return {
+        key: `q-${q.id}`,
+        kind: "quote" as const,
+        quoteId: q.id,
+        title: productTitle(q.productJson, q.userText),
+        at: q.createdAt,
+        cards,
+        breakdown,
+        totalMinUsd: q.totalMinUsd,
+        totalMaxUsd: q.totalMaxUsd,
+      };
+    });
+  }
+
+  let sumMin = 0;
+  let sumMax = 0;
+  let countWithRange = 0;
+  for (const r of rows) {
+    if (r.totalMinUsd != null && r.totalMaxUsd != null) {
+      sumMin += r.totalMinUsd;
+      sumMax += r.totalMaxUsd;
+      countWithRange += 1;
+    }
+  }
+
   return (
-    <div className="p-4 sm:p-6 lg:p-8">
-      <div className="mx-auto max-w-[1000px]">
-        <div className="flex items-end justify-between">
-          <div>
-            <h1 className="text-[22px] font-extrabold tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>Costos</h1>
-            <p className="mt-1 text-[14px] text-[#555c6b]">Desglose y estructura de costos de importación.</p>
-          </div>
-          <Link href="/app/nueva" className="rounded-lg bg-[#2b59ff] px-4 py-2 text-[13px] font-medium text-white hover:bg-[#2348d4]">
-            Simular operación
-          </Link>
-        </div>
+    <SystemPage
+      title="Costos"
+      description="Desglose de cotizaciones recientes e importaciones."
+      action={
+        <Link href="/app/nueva" className="rounded-lg bg-[#2b59ff] px-4 py-2 text-[13px] font-medium text-white hover:bg-[#2348d4]">
+          Simular operacion
+        </Link>
+      }
+    >
 
-        <div className="mt-8 grid gap-3 sm:grid-cols-4">
-          {[
-            { label: "FOB Total", value: "$2,400", color: "text-white" },
-            { label: "Impuestos AR", value: "$2,856", color: "text-white" },
-            { label: "Gestión", value: "$784", color: "text-white" },
-            { label: "Total landed", value: "$6,840", color: "text-[#d4a843]" },
-          ].map((s) => (
-            <div key={s.label} className="rounded-xl border border-white/[0.04] bg-[#0B1622] p-5">
-              <p className="text-[10px] font-medium uppercase tracking-wider text-[#555c6b]">{s.label}</p>
-              <p className={`mt-2 text-[18px] font-bold ${s.color}`} style={{ fontFamily: "var(--font-display)" }}>{s.value}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-8 overflow-x-auto rounded-xl border border-white/[0.04]">
-          <table className="w-full min-w-[600px] text-left">
-            <thead>
-              <tr className="border-b border-white/[0.04] bg-[#0B1622]">
-                <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Concepto</th>
-                <th className="px-4 py-3 text-right text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">USD</th>
-                <th className="px-4 py-3 text-right text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">%</th>
-              </tr>
-            </thead>
-            <tbody>
-              {MOCK_BREAKDOWN.map((r) => (
-                <tr key={r.label} className="border-b border-white/[0.04] hover:bg-white/[0.02]">
-                  <td className="px-4 py-3 text-[13px] text-[#b0b8c9]">{r.label}</td>
-                  <td className="px-4 py-3 text-right text-[13px] font-medium text-white">{r.value}</td>
-                  <td className="px-4 py-3 text-right text-[13px] text-[#555c6b]">{r.pct}</td>
-                </tr>
+        {rows.length === 0 ? (
+          <SystemSection title="Estado">
+            <SystemEmpty
+              title="Todavia no hay costos para mostrar."
+              description="Cuando generes cotizaciones u operaciones, vas a ver aca su desglose economico."
+              action={
+                <Link
+                  href="/app/nueva"
+                  className="inline-flex rounded-lg bg-[#2b59ff] px-4 py-2 text-[13px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+                >
+                  Nueva cotizacion
+                </Link>
+              }
+            />
+          </SystemSection>
+        ) : (
+          <>
+            <SystemSection title="Desglose por entidad">
+            <div className="space-y-0">
+              {rows.map((r, i) => (
+                <section key={r.key} className={i > 0 ? "mt-10 border-t border-white/[0.06] pt-10" : ""}>
+                  <h2 className="text-[16px] font-bold text-white [overflow-wrap:anywhere]">{r.title}</h2>
+                  <p className="mt-1 text-[12px] text-[#555c6b]">{fmtAt(r.at)}</p>
+                  <div className="mt-4">
+                    <QuoteCostBlocks
+                      cards={r.cards}
+                      breakdown={r.breakdown}
+                      totalMinUsd={r.totalMinUsd}
+                      totalMaxUsd={r.totalMaxUsd}
+                    />
+                  </div>
+                  <div className="mt-4">
+                    {r.kind === "operation" ? (
+                      <Link
+                        href={`/app/operaciones/${r.operationId}/operation`}
+                        className="text-[13px] font-medium text-[#2b59ff] hover:underline"
+                      >
+                        Ver operación
+                      </Link>
+                    ) : (
+                      <Link href={`/app/operaciones/${r.quoteId}`} className="text-[13px] font-medium text-[#2b59ff] hover:underline">
+                        Ver cotización
+                      </Link>
+                    )}
+                  </div>
+                </section>
               ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+            </div>
+            </SystemSection>
+
+            {rows.length > 1 && countWithRange > 0 ? (
+              <div className="mt-10 rounded-xl border border-[#d4a843]/20 bg-[#d4a843]/[0.06] p-5">
+                <p className="text-[10px] font-medium uppercase tracking-wider text-[#555c6b]">Total acumulado (estimado)</p>
+                <p className="mt-2 text-[18px] font-bold text-[#d4a843]" style={{ fontFamily: "var(--font-display)" }}>
+                  {fmtUsdRange(sumMin, sumMax)}
+                </p>
+                <p className="mt-1 text-[11px] text-[#555c6b]">Suma de rangos {countWithRange} ítem{countWithRange !== 1 ? "s" : ""} con total min/max.</p>
+              </div>
+            ) : null}
+          </>
+        )}
+    </SystemPage>
   );
 }

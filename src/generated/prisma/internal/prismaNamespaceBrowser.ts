@@ -56,7 +56,12 @@ export const ModelName = {
   User: 'User',
   OperatorBudget: 'OperatorBudget',
   QuoteComment: 'QuoteComment',
-  AuditLog: 'AuditLog'
+  AuditLog: 'AuditLog',
+  Operation: 'Operation',
+  Notification: 'Notification',
+  Supplier: 'Supplier',
+  OperationDocument: 'OperationDocument',
+  OperationEvent: 'OperationEvent'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -162,6 +167,68 @@ export const AuditLogScalarFieldEnum = {
 } as const
 
 export type AuditLogScalarFieldEnum = (typeof AuditLogScalarFieldEnum)[keyof typeof AuditLogScalarFieldEnum]
+
+
+export const OperationScalarFieldEnum = {
+  id: 'id',
+  quoteId: 'quoteId',
+  userId: 'userId',
+  stage: 'stage',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type OperationScalarFieldEnum = (typeof OperationScalarFieldEnum)[keyof typeof OperationScalarFieldEnum]
+
+
+export const NotificationScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  operationId: 'operationId',
+  type: 'type',
+  title: 'title',
+  body: 'body',
+  readAt: 'readAt',
+  createdAt: 'createdAt'
+} as const
+
+export type NotificationScalarFieldEnum = (typeof NotificationScalarFieldEnum)[keyof typeof NotificationScalarFieldEnum]
+
+
+export const SupplierScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  name: 'name',
+  country: 'country',
+  contact: 'contact',
+  createdAt: 'createdAt'
+} as const
+
+export type SupplierScalarFieldEnum = (typeof SupplierScalarFieldEnum)[keyof typeof SupplierScalarFieldEnum]
+
+
+export const OperationDocumentScalarFieldEnum = {
+  id: 'id',
+  operationId: 'operationId',
+  name: 'name',
+  url: 'url',
+  uploadedBy: 'uploadedBy',
+  createdAt: 'createdAt'
+} as const
+
+export type OperationDocumentScalarFieldEnum = (typeof OperationDocumentScalarFieldEnum)[keyof typeof OperationDocumentScalarFieldEnum]
+
+
+export const OperationEventScalarFieldEnum = {
+  id: 'id',
+  operationId: 'operationId',
+  stage: 'stage',
+  description: 'description',
+  actor: 'actor',
+  createdAt: 'createdAt'
+} as const
+
+export type OperationEventScalarFieldEnum = (typeof OperationEventScalarFieldEnum)[keyof typeof OperationEventScalarFieldEnum]
 
 
 export const SortOrder = {

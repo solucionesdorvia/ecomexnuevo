@@ -1,3 +1,5 @@
+import { SystemPage, SystemSection } from "@/components/app/SystemPage";
+
 const MOCK_REPORTS = [
   { name: "Cotización - Componentes electrónicos", type: "Cotización", date: "15 Mar 2026", total: "$6,840" },
   { name: "Presupuesto - Maquinaria industrial", type: "Presupuesto", date: "12 Mar 2026", total: "$24,500" },
@@ -7,12 +9,9 @@ const MOCK_REPORTS = [
 
 export default function ReportesPage() {
   return (
-    <div className="p-4 sm:p-6 lg:p-8">
-      <div className="mx-auto max-w-[1000px]">
-        <h1 className="text-[22px] font-extrabold tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>Reportes</h1>
-        <p className="mt-1 text-[14px] text-[#555c6b]">Historial de análisis y reportes exportados.</p>
-
-        <div className="mt-8 overflow-x-auto rounded-xl border border-white/[0.04]">
+    <SystemPage title="Reportes" description="Historial de analisis y reportes exportados para trazabilidad.">
+      <SystemSection title="Registro de exportaciones">
+        <div className="overflow-x-auto rounded-xl border border-white/[0.04]">
           <table className="w-full min-w-[600px] text-left">
             <thead>
               <tr className="border-b border-white/[0.04] bg-[#0B1622]">
@@ -38,7 +37,7 @@ export default function ReportesPage() {
             </tbody>
           </table>
         </div>
-      </div>
-    </div>
+      </SystemSection>
+    </SystemPage>
   );
 }

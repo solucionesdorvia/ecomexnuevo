@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { safeInternalRedirectPath } from "@/lib/auth/safeRedirect";
 
-export default function LoginClient() {
+export default function LoginClient({ redirectTo }: { redirectTo?: string }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [pending, setPending] = useState(false);
@@ -20,7 +21,7 @@ export default function LoginClient() {
       });
       const json = (await res.json()) as any;
       if (!res.ok || !json.ok) throw new Error(json.error || "Error.");
-      window.location.href = "/app";
+      window.location.href = safeInternalRedirectPath(redirectTo);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Error.");
     } finally {

@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import { verifyAuthToken } from "@/lib/auth/jwt";
 import { prisma } from "@/lib/db";
 import { notFound } from "next/navigation";
+import { IniciarImportacionButton } from "./IniciarImportacionButton";
 
 export const runtime = "nodejs";
 
@@ -26,6 +27,7 @@ export default async function OperacionDetallePage({ params }: { params: Promise
     select: {
       id: true, createdAt: true, updatedAt: true, mode: true, userText: true, sourceUrl: true,
       productJson: true, quoteJson: true, totalMinUsd: true, totalMaxUsd: true, stage: true,
+      operation: { select: { id: true } },
     },
   }).catch(() => null);
 
@@ -45,6 +47,8 @@ export default async function OperacionDetallePage({ params }: { params: Promise
     : "—";
 
   const pdfHref = `/api/quote/pdf?mode=${encodeURIComponent(quote.mode)}&id=${encodeURIComponent(quote.id)}`;
+
+  const canIniciarImportacion = quote.stage === "quoted" && !quote.operation;
 
   return (
     <div className="p-4 sm:p-6 lg:p-8">
@@ -143,6 +147,17 @@ export default async function OperacionDetallePage({ params }: { params: Promise
             <div className="rounded-xl border border-white/[0.04] bg-[#0B1622] p-5">
               <p className="text-[10px] font-medium uppercase tracking-wider text-[#555c6b]">Acciones</p>
               <div className="mt-3 space-y-2">
+                {canIniciarImportacion ? (
+                  <IniciarImportacionButton quoteId={quote.id} />
+                ) : null}
+                {quote.operation ? (
+                  <Link
+                    href={`/app/operaciones/${quote.operation.id}/operation`}
+                    className="flex w-full min-h-[44px] items-center justify-center rounded-lg border border-emerald-500/30 bg-emerald-500/10 py-2 text-[12px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20"
+                  >
+                    Ver importación
+                  </Link>
+                ) : null}
                 <a href={pdfHref} className="flex w-full items-center justify-center rounded-lg bg-[#2b59ff] py-2 text-[12px] font-medium text-white transition-colors hover:bg-[#2348d4]">
                   PDF
                 </a>

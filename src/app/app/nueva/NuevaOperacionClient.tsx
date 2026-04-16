@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useCallback, useRef, useState } from "react";
 import { Paperclip, Sparkles } from "lucide-react";
 import { useClasificarChat } from "@/app/clasificarncm/hooks/useClasificarChat";
@@ -19,30 +20,34 @@ import {
 } from "@/app/clasificarncm/uiConstants";
 import { AMBIGUITY_REASON_LABELS } from "@/lib/clasificar-ncm/ncmAmbiguity";
 import type { CaseSnapshot, CaseState } from "@/lib/clasificar-ncm/types";
+import { QuoteCostBreakdown, type QuoteCostPayload } from "./QuoteCostBreakdown";
+import { buildChatPrefillFromParams, stripNcmDigits } from "@/lib/quote/cotizarFromClassifier";
 
 function stripMessages(s: CaseState): CaseSnapshot {
   const { messages: _m, ...rest } = s;
   return rest;
 }
 
-type QuoteResult = {
-  quoteId: string;
-  cards: Array<{ label: string; value: string; detail?: string; highlight?: boolean }>;
-  totalMinUsd?: number;
-  totalMaxUsd?: number;
+type NuevaOperacionClientProps = {
+  initialNcm?: string;
+  initialProducto?: string;
 };
 
-function fmtUsd(n: number) {
-  return n.toLocaleString("en-US", { style: "currency", currency: "USD" });
-}
-
-export default function NuevaOperacionClient() {
+export default function NuevaOperacionClient({ initialNcm, initialProducto }: NuevaOperacionClientProps = {}) {
+  const router = useRouter();
   const { caseState, sendMessage, pending, reset } = useClasificarChat({ credentials: "include" });
   const [invoiceFiles, setInvoiceFiles] = useState<File[]>([]);
   const [pendingExtract, setPendingExtract] = useState(false);
   const [pendingQuote, setPendingQuote] = useState(false);
-  const [quoteResult, setQuoteResult] = useState<QuoteResult | null>(null);
+  const [quoteResult, setQuoteResult] = useState<QuoteCostPayload | null>(null);
+  const [ncmBannerDismissed, setNcmBannerDismissed] = useState(false);
   const invoiceInputRef = useRef<HTMLInputElement>(null);
+
+  const cleanNcm = initialNcm?.trim() ? stripNcmDigits(initialNcm) : "";
+  const productoDecoded = initialProducto?.trim() ?? "";
+  const hasValidPrefillNcm = cleanNcm.length >= 6;
+  const messagePrefill = hasValidPrefillNcm ? buildChatPrefillFromParams(cleanNcm, productoDecoded || null) : "";
+  const showNcmBanner = hasValidPrefillNcm && !ncmBannerDismissed;
 
   const showResultCard =
     caseState.recommendedNcm &&
@@ -112,7 +117,7 @@ export default function NuevaOperacionClient() {
           messages: caseState.messages,
         }),
       });
-      const json = (await res.json()) as QuoteResult & { ok?: boolean; error?: string; quoteId?: string };
+      const json = (await res.json()) as QuoteCostPayload & { ok?: boolean; error?: string };
       if (!res.ok) {
         throw new Error(json.error || "No se pudo crear el presupuesto.");
       }
@@ -122,6 +127,9 @@ export default function NuevaOperacionClient() {
           cards: json.cards,
           totalMinUsd: json.totalMinUsd,
           totalMaxUsd: json.totalMaxUsd,
+          explanation: json.explanation,
+          assumptions: json.assumptions,
+          quality: json.quality,
         });
       }
     } catch (e) {
@@ -267,12 +275,39 @@ export default function NuevaOperacionClient() {
                 </div>
               </div>
             ) : null}
+
+            {quoteResult ? (
+              <div className="shrink-0 border-t border-white/[0.04] px-3 py-4 sm:px-6">
+                <div className="mx-auto max-w-[720px]">
+                  <QuoteCostBreakdown quote={quoteResult} scrollIntoViewOnMount />
+                </div>
+              </div>
+            ) : null}
           </div>
+
+          {showNcmBanner ? (
+            <div className="flex shrink-0 flex-wrap items-center gap-2 border-t border-white/[0.06] bg-[#3b82f6]/10 px-3 py-2.5 text-[12px] text-slate-300 sm:px-5">
+              <span className="rounded-md border border-[#3b82f6]/25 bg-[#0f172a]/80 px-2 py-0.5 font-mono text-[11px] text-slate-200">
+                NCM precargado: {cleanNcm}
+              </span>
+              <button
+                type="button"
+                onClick={() => {
+                  setNcmBannerDismissed(true);
+                  router.replace("/app/nueva");
+                }}
+                className="ml-auto text-[11px] font-medium text-[#60a5fa] underline-offset-2 hover:text-white hover:underline"
+              >
+                Cerrar
+              </button>
+            </div>
+          ) : null}
 
           <ChatInput
             onSend={handleSend}
             disabled={busy}
             canSubmitEmpty={invoiceFiles.length > 0}
+            messagePrefill={messagePrefill || undefined}
             leading={
               <button
                 type="button"
@@ -339,24 +374,21 @@ export default function NuevaOperacionClient() {
 
           {quoteResult ? (
             <div className="mt-6 space-y-3 border-t border-white/[0.06] pt-6">
-              <p className="text-[11px] font-medium uppercase tracking-wider text-slate-500">Presupuesto</p>
-              <p className="text-[11px] text-slate-600">ID: {quoteResult.quoteId.slice(0, 12)}…</p>
+              <p className="text-[11px] font-medium uppercase tracking-wider text-slate-500">Acciones</p>
               {totalCard ? (
-                <div className="rounded-lg border border-white/[0.06] bg-[#0f172a]/80 p-4">
-                  <p className="text-[11px] font-medium uppercase tracking-wider text-slate-500">{totalCard.label}</p>
+                <div className="rounded-lg border border-white/[0.06] bg-[#0f172a]/80 p-3">
+                  <p className="text-[9px] font-semibold uppercase tracking-wider text-slate-500">Total (resumen)</p>
                   <p
-                    className="mt-1 text-[17px] font-bold text-amber-400/90"
+                    className="mt-1 text-[15px] font-bold leading-tight text-amber-200/90"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
                     {totalCard.value}
                   </p>
-                  {quoteResult.totalMinUsd != null && quoteResult.totalMaxUsd != null ? (
-                    <p className="mt-1 text-[10px] text-slate-600">
-                      Rango numérico: {fmtUsd(quoteResult.totalMinUsd)} – {fmtUsd(quoteResult.totalMaxUsd)}
-                    </p>
-                  ) : null}
                 </div>
               ) : null}
+              <p className="text-[11px] leading-relaxed text-slate-600">
+                Desglose línea por línea y supuestos del cálculo: panel principal (arriba).
+              </p>
               <Link
                 href="/app/operaciones"
                 className="flex w-full items-center justify-center rounded-lg bg-[#2563eb] py-2.5 text-[12px] font-medium text-white transition-colors hover:bg-[#1d4ed8]"

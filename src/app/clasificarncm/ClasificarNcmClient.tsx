@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
+import { useEffect, useState } from "react";
+import type { CaseState } from "@/lib/clasificar-ncm/types";
+import { buildNuevaCotizacionUrl } from "@/lib/quote/cotizarFromClassifier";
 import { useClasificarChat } from "./hooks/useClasificarChat";
 import { ChatContainer } from "./components/ChatContainer";
 import { ChatInput } from "./components/ChatInput";
@@ -17,6 +20,51 @@ import {
   CLASIFICAR_NCM_SUGGESTIONS,
 } from "./uiConstants";
 import { AMBIGUITY_REASON_LABELS } from "@/lib/clasificar-ncm/ncmAmbiguity";
+
+function CotizarEsteProductoCta({ caseState }: { caseState: CaseState }) {
+  const [sessionOk, setSessionOk] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/auth/session", { credentials: "same-origin" })
+      .then((r) => r.json())
+      .then((j: { ok?: boolean }) => {
+        if (!cancelled) setSessionOk(!!j.ok);
+      })
+      .catch(() => {
+        if (!cancelled) setSessionOk(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const target = buildNuevaCotizacionUrl(caseState);
+  if (!target) return null;
+
+  const href = sessionOk ? target : sessionOk === false ? `/login?redirect=${encodeURIComponent(target)}` : "#";
+
+  return (
+    <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+      {sessionOk === null ? (
+        <button
+          type="button"
+          disabled
+          className="min-h-[48px] w-full touch-manipulation rounded-xl bg-[#2563eb]/50 px-4 py-3 text-[13px] font-medium text-white shadow-lg shadow-[#2563eb]/20 sm:min-h-0 sm:w-auto"
+        >
+          Cotizar este producto
+        </button>
+      ) : (
+        <Link
+          href={href}
+          className="flex min-h-[48px] w-full touch-manipulation items-center justify-center rounded-xl bg-[#2563eb] px-4 py-3 text-center text-[13px] font-medium text-white shadow-lg shadow-[#2563eb]/20 transition hover:bg-[#1d4ed8] sm:min-h-0 sm:w-auto"
+        >
+          Cotizar este producto
+        </Link>
+      )}
+    </div>
+  );
+}
 
 export default function ClasificarNcmClient() {
   const { caseState, sendMessage, pending, reset } = useClasificarChat();
@@ -131,19 +179,22 @@ export default function ClasificarNcmClient() {
             <div className="shrink-0 space-y-4 border-t border-white/[0.04] px-3 py-4 sm:px-6">
               <div className="mx-auto flex max-w-[720px] flex-col gap-4">
                 {showResultCard && caseState.recommendedNcm && typeof caseState.confidence === "number" ? (
-                  <ClassificationCard
-                    ncm={caseState.recommendedNcm}
-                    description={caseState.classificationRationale}
-                    confidence={caseState.confidence}
-                    rationale={
-                      caseState.status === "tentative"
-                        ? "Confianza por debajo del 70% o posición ambigua: validá con documentación y despachante."
-                        : undefined
-                    }
-                    discardedNotes={caseState.discardedNotes}
-                    discardedCandidates={caseState.discardedCandidates}
-                    variant={caseState.status === "resolved" && !caseState.ambiguity ? "resolved" : "tentative"}
-                  />
+                  <div className="flex flex-col gap-4">
+                    <ClassificationCard
+                      ncm={caseState.recommendedNcm}
+                      description={caseState.classificationRationale}
+                      confidence={caseState.confidence}
+                      rationale={
+                        caseState.status === "tentative"
+                          ? "Confianza por debajo del 70% o posición ambigua: validá con documentación y despachante."
+                          : undefined
+                      }
+                      discardedNotes={caseState.discardedNotes}
+                      discardedCandidates={caseState.discardedCandidates}
+                      variant={caseState.status === "resolved" && !caseState.ambiguity ? "resolved" : "tentative"}
+                    />
+                    <CotizarEsteProductoCta caseState={caseState} />
+                  </div>
                 ) : caseState.discardedCandidates && caseState.discardedCandidates.length > 0 ? (
                   <div className="rounded-2xl border border-rose-500/15 bg-rose-500/[0.04] p-3 shadow-xl sm:p-4">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-rose-400/90">

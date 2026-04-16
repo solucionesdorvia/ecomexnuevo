@@ -69,3 +69,28 @@ export type QuoteComment = Prisma.QuoteCommentModel
  * 
  */
 export type AuditLog = Prisma.AuditLogModel
+/**
+ * Model Operation
+ * Importación ejecutada a partir de una cotización (`Quote`). Una cotización tiene como máximo una Operation.
+ */
+export type Operation = Prisma.OperationModel
+/**
+ * Model Notification
+ * 
+ */
+export type Notification = Prisma.NotificationModel
+/**
+ * Model Supplier
+ * Directorio de proveedores por usuario; asociación a importaciones vía relación M:N con Operation.
+ */
+export type Supplier = Prisma.SupplierModel
+/**
+ * Model OperationDocument
+ * 
+ */
+export type OperationDocument = Prisma.OperationDocumentModel
+/**
+ * Model OperationEvent
+ * 
+ */
+export type OperationEvent = Prisma.OperationEventModel

@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SendHorizontal } from "lucide-react";
 
 export function ChatInput({
@@ -13,6 +13,7 @@ export function ChatInput({
   /** Si hay adjuntos (ej. factura), permite enviar sin texto. */
   canSubmitEmpty = false,
   helperText,
+  messagePrefill,
 }: {
   onSend: (text: string) => void | Promise<void>;
   disabled?: boolean;
@@ -22,8 +23,17 @@ export function ChatInput({
   canSubmitEmpty?: boolean;
   /** Reemplaza la línea de ayuda bajo el campo (Enter / Shift+Enter). */
   helperText?: ReactNode;
+  /** Texto inicial (ej. llegada desde clasificador con ?ncm=). Solo se aplica una vez. */
+  messagePrefill?: string;
 }) {
   const [value, setValue] = useState("");
+  const appliedPrefill = useRef(false);
+  useEffect(() => {
+    if (messagePrefill && !appliedPrefill.current) {
+      setValue(messagePrefill);
+      appliedPrefill.current = true;
+    }
+  }, [messagePrefill]);
 
   async function submit() {
     const t = value.trim();

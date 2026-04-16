@@ -7,12 +7,16 @@
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p ${PORT:-3000}",
     "lint": "eslint",
-    "ncm:ingest": "tsx scripts/ncm/ingest-chapters.ts"
+    "ncm:ingest": "tsx scripts/ncm/ingest-chapters.ts",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
     "@prisma/adapter-pg": "^7.4.1",
     "@prisma/client": "^7.4.1",
+    "@vercel/blob": "^2.3.3",
     "bcryptjs": "^3.0.3",
     "better-sqlite3": "^12.6.2",
     "cheerio": "^1.2.0",
@@ -27,9 +31,11 @@
     "playwright": "^1.58.2",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
     "@tailwindcss/postcss": "^4",
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20",

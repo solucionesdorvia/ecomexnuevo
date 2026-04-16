@@ -1,50 +1,137 @@
-const MOCK_DOCS = [
-  { name: "Cotización - Shenzhen Yifang.pdf", type: "PDF", op: "Componentes electrónicos", date: "15 Mar 2026", size: "245 KB" },
-  { name: "Factura proforma #4821.pdf", type: "PDF", op: "Maquinaria industrial", date: "12 Mar 2026", size: "180 KB" },
-  { name: "Presupuesto operador.xlsx", type: "XLSX", op: "Textiles Turquía", date: "08 Mar 2026", size: "92 KB" },
-  { name: "Producto - Golf Cart.jpg", type: "Imagen", op: "Vehículos eléctricos", date: "05 Mar 2026", size: "1.2 MB" },
-  { name: "Reporte E-COMEX - Autopartes.pdf", type: "PDF", op: "Autopartes Brasil", date: "28 Feb 2026", size: "320 KB" },
-];
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import { getSessionUser } from "@/lib/auth/session";
+import { listUserOperationDocuments } from "@/lib/documents/listUserOperationDocuments";
+import {
+  OPERATION_STAGE_LABEL_ES,
+  operationStageBadgeClass,
+} from "@/app/app/operaciones/[id]/operation/operationStageUi";
+import { SystemEmpty, SystemPage, SystemSection } from "@/components/app/SystemPage";
 
-export default function DocumentosPage() {
+export const runtime = "nodejs";
+
+function productTitle(productJson: unknown, userText: string) {
+  const pj = productJson as { title?: string; name?: string } | null | undefined;
+  const t = pj?.title ?? pj?.name;
+  if (t && String(t).trim()) return String(t).slice(0, 120);
+  const u = userText?.trim();
+  if (u) return u.slice(0, 80);
+  return "Importación";
+}
+
+function fmtUploaded(d: Date) {
+  return d.toLocaleString("es-AR", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
+function isHttpUrl(url: string) {
+  return /^https?:\/\//i.test(url.trim());
+}
+
+export default async function DocumentosPage() {
+  const user = await getSessionUser();
+  if (!user) redirect("/login");
+
+  const docs = await listUserOperationDocuments(user.id);
+
+  const orderedOpIds: string[] = [];
+  const byOp = new Map<string, typeof docs>();
+  for (const d of docs) {
+    const oid = d.operation.id;
+    if (!byOp.has(oid)) {
+      orderedOpIds.push(oid);
+      byOp.set(oid, []);
+    }
+    byOp.get(oid)!.push(d);
+  }
+
   return (
-    <div className="p-4 sm:p-6 lg:p-8">
-      <div className="mx-auto max-w-[1000px]">
-        <div className="flex items-end justify-between">
-          <div>
-            <h1 className="text-[22px] font-extrabold tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>Documentos</h1>
-            <p className="mt-1 text-[14px] text-[#555c6b]">Repositorio de documentos asociados a operaciones.</p>
-          </div>
-          <button type="button" className="rounded-lg border border-white/[0.04] px-4 py-2 text-[13px] text-[#555c6b] hover:text-white">
-            Subir documento
-          </button>
-        </div>
+    <SystemPage title="Documentos" description="Indice de archivos subidos en tus importaciones.">
+      <p className="mt-3 text-[12px] leading-relaxed text-[#555c6b]">
+        Los archivos se cargan desde cada importacion en{" "}
+        <Link href="/app/operaciones" className="text-[#2b59ff] hover:underline">
+          Operaciones
+        </Link>
+        . Esta pantalla funciona como una vista global.
+      </p>
 
-        <div className="mt-8 overflow-x-auto rounded-xl border border-white/[0.04]">
-          <table className="w-full min-w-[600px] text-left">
-            <thead>
-              <tr className="border-b border-white/[0.04] bg-[#0B1622]">
-                <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Archivo</th>
-                <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Tipo</th>
-                <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Operación</th>
-                <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Fecha</th>
-                <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Tamaño</th>
-              </tr>
-            </thead>
-            <tbody>
-              {MOCK_DOCS.map((d) => (
-                <tr key={d.name} className="border-b border-white/[0.04] hover:bg-white/[0.02]">
-                  <td className="px-4 py-3 text-[13px] font-medium text-white">{d.name}</td>
-                  <td className="px-4 py-3"><span className="rounded bg-white/[0.04] px-2 py-0.5 text-[10px] text-[#b0b8c9]">{d.type}</span></td>
-                  <td className="px-4 py-3 text-[13px] text-[#555c6b]">{d.op}</td>
-                  <td className="px-4 py-3 text-[13px] text-[#555c6b]">{d.date}</td>
-                  <td className="px-4 py-3 text-[13px] text-[#555c6b]">{d.size}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+      {docs.length === 0 ? (
+        <SystemSection title="Repositorio">
+          <SystemEmpty
+            title="Todavia no hay documentos cargados."
+            description="Cuando subas archivos desde una importacion, apareceran listados aqui por operacion."
+            action={
+              <Link
+                href="/app/operaciones"
+                className="inline-flex rounded-lg bg-[#2b59ff] px-4 py-2 text-[13px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+              >
+                Ir a operaciones
+              </Link>
+            }
+          />
+        </SystemSection>
+      ) : (
+        <SystemSection title="Documentacion por operacion">
+          <div className="space-y-12">
+            {orderedOpIds.map((opId) => {
+              const opDocs = byOp.get(opId)!;
+              const op = opDocs[0].operation;
+              const title = productTitle(op.quote.productJson, op.quote.userText);
+              const stageKey = op.stage as keyof typeof OPERATION_STAGE_LABEL_ES;
+              const stageLabel = OPERATION_STAGE_LABEL_ES[stageKey] ?? op.stage;
+              return (
+                <section key={opId}>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h2 className="text-[15px] font-semibold text-white [overflow-wrap:anywhere]">{title}</h2>
+                    <span
+                      className={`inline-flex rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase ${operationStageBadgeClass(op.stage)}`}
+                    >
+                      {stageLabel}
+                    </span>
+                  </div>
+                  <ul className="mt-4 space-y-3 border-t border-white/[0.06] pt-4">
+                    {opDocs.map((d) => (
+                      <li
+                        key={d.id}
+                        className="flex flex-col gap-1 rounded-lg border border-white/[0.04] bg-[#0B1622] px-4 py-3 sm:flex-row sm:items-center sm:justify-between"
+                      >
+                        <div className="min-w-0">
+                          {isHttpUrl(d.url) ? (
+                            <a
+                              href={d.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[13px] font-medium text-[#2b59ff] hover:underline [overflow-wrap:anywhere]"
+                            >
+                              {d.name}
+                            </a>
+                          ) : (
+                            <span className="text-[13px] font-medium text-white [overflow-wrap:anywhere]">{d.name}</span>
+                          )}
+                          <p className="mt-1 text-[11px] text-[#555c6b]">
+                            {fmtUploaded(d.createdAt)} · Subido por {d.uploadedBy}
+                          </p>
+                        </div>
+                        <Link
+                          href={`/app/operaciones/${opId}/operation`}
+                          className="shrink-0 text-[12px] text-[#2b59ff] hover:underline sm:ml-4"
+                        >
+                          Ver importacion
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              );
+            })}
+          </div>
+        </SystemSection>
+      )}
+    </SystemPage>
   );
 }

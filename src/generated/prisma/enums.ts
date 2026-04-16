@@ -16,3 +16,24 @@ export const UserRole = {
 } as const
 
 export type UserRole = (typeof UserRole)[keyof typeof UserRole]
+
+
+export const OperationStage = {
+  INICIADA: 'INICIADA',
+  ORDEN_COMPRA: 'ORDEN_COMPRA',
+  EMBARQUE: 'EMBARQUE',
+  ADUANA: 'ADUANA',
+  ENTREGA: 'ENTREGA',
+  COMPLETADA: 'COMPLETADA'
+} as const
+
+export type OperationStage = (typeof OperationStage)[keyof typeof OperationStage]
+
+
+export const NotificationType = {
+  STAGE_CHANGED: 'STAGE_CHANGED',
+  EVENT_ADDED: 'EVENT_ADDED',
+  DOCUMENT_ADDED: 'DOCUMENT_ADDED'
+} as const
+
+export type NotificationType = (typeof NotificationType)[keyof typeof NotificationType]

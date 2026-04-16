@@ -14,6 +14,22 @@ enum UserRole {
   admin
 }
 
+/// Etapas del seguimiento de importación (distinto del `stage` string en Quote, que es flujo de cotización).
+enum OperationStage {
+  INICIADA
+  ORDEN_COMPRA
+  EMBARQUE
+  ADUANA
+  ENTREGA
+  COMPLETADA
+}
+
+enum NotificationType {
+  STAGE_CHANGED
+  EVENT_ADDED
+  DOCUMENT_ADDED
+}
+
 model Quote {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
@@ -37,6 +53,10 @@ model Quote {
 
   userId String?
   user   User? @relation(fields: [userId], references: [id])
+
+  /// Si existe, esta cotización pasó a importación acompañada por Ecomex.
+  operation Operation?
+
   comments QuoteComment[]
   audits   AuditLog[]
 
@@ -69,14 +89,21 @@ model User {
   email        String   @unique
   passwordHash String
 
-  role UserRole @default(user)
-  onboardingSeenAt DateTime?
+  role               UserRole @default(user)
+  onboardingSeenAt   DateTime?
 
-  quotes Quote[]
-  leads  Lead[]
-  operatorBudgets OperatorBudget[]
-  quoteComments QuoteComment[]
-  audits        AuditLog[]
+  quotes            Quote[]
+  leads             Lead[]
+  operatorBudgets   OperatorBudget[]
+  quoteComments     QuoteComment[]
+  audits            AuditLog[]
+
+  /// Importaciones en curso (Operation) donde el usuario es el cliente.
+  operations Operation[]
+  /// Proveedores cargados por el usuario (directorio).
+  suppliers  Supplier[]
+
+  notifications Notification[]
 }
 
 model OperatorBudget {
@@ -141,3 +168,89 @@ model AuditLog {
   @@index([actorUserId, createdAt])
 }
 
+/// Importación ejecutada a partir de una cotización (`Quote`). Una cotización tiene como máximo una Operation.
+model Operation {
+  id      String @id @default(cuid())
+  quoteId String @unique
+  quote   Quote  @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  stage OperationStage @default(INICIADA)
+
+  /// M:N — un proveedor puede participar en varias importaciones; una importación puede tener varios proveedores.
+  suppliers Supplier[]
+
+  documents OperationDocument[]
+  timeline  OperationEvent[]
+  notifications Notification[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, createdAt])
+  @@index([userId, stage])
+  @@index([stage, updatedAt])
+}
+
+model Notification {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  operationId String?
+  operation   Operation? @relation(fields: [operationId], references: [id], onDelete: SetNull)
+  type        NotificationType
+  title       String
+  body        String?
+  readAt      DateTime?
+  createdAt   DateTime @default(now())
+
+  @@index([userId, readAt, createdAt])
+  @@index([userId, createdAt])
+}
+
+/// Directorio de proveedores por usuario; asociación a importaciones vía relación M:N con Operation.
+model Supplier {
+  id      String @id @default(cuid())
+  userId  String
+  user    User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  name    String
+  country String
+  contact String?
+
+  operations Operation[]
+
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model OperationDocument {
+  id          String @id @default(cuid())
+  operationId String
+  operation   Operation @relation(fields: [operationId], references: [id], onDelete: Cascade)
+
+  name       String
+  url        String
+  uploadedBy String
+
+  createdAt DateTime @default(now())
+
+  @@index([operationId, createdAt])
+}
+
+model OperationEvent {
+  id          String @id @default(cuid())
+  operationId String
+  operation   Operation @relation(fields: [operationId], references: [id], onDelete: Cascade)
+
+  stage       OperationStage
+  description String
+  actor       String
+
+  createdAt DateTime @default(now())
+
+  @@index([operationId, createdAt])
+}

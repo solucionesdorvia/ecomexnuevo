@@ -2,6 +2,13 @@
 
 # dependencies
 /node_modules
+
+# Local uploads (dev)
+public/uploads
+
+# Playwright
+.playwright/
+src/__tests__/e2e/.env.test
 /.pnp
 .pnp.*
 .yarn/*

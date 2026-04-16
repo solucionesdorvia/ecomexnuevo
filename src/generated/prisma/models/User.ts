@@ -195,6 +195,9 @@ export type UserWhereInput = {
   operatorBudgets?: Prisma.OperatorBudgetListRelationFilter
   quoteComments?: Prisma.QuoteCommentListRelationFilter
   audits?: Prisma.AuditLogListRelationFilter
+  operations?: Prisma.OperationListRelationFilter
+  suppliers?: Prisma.SupplierListRelationFilter
+  notifications?: Prisma.NotificationListRelationFilter
 }
 
 export type UserOrderByWithRelationInput = {
@@ -209,6 +212,9 @@ export type UserOrderByWithRelationInput = {
   operatorBudgets?: Prisma.OperatorBudgetOrderByRelationAggregateInput
   quoteComments?: Prisma.QuoteCommentOrderByRelationAggregateInput
   audits?: Prisma.AuditLogOrderByRelationAggregateInput
+  operations?: Prisma.OperationOrderByRelationAggregateInput
+  suppliers?: Prisma.SupplierOrderByRelationAggregateInput
+  notifications?: Prisma.NotificationOrderByRelationAggregateInput
 }
 
 export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -226,6 +232,9 @@ export type UserWhereUniqueInput = Prisma.AtLeast<{
   operatorBudgets?: Prisma.OperatorBudgetListRelationFilter
   quoteComments?: Prisma.QuoteCommentListRelationFilter
   audits?: Prisma.AuditLogListRelationFilter
+  operations?: Prisma.OperationListRelationFilter
+  suppliers?: Prisma.SupplierListRelationFilter
+  notifications?: Prisma.NotificationListRelationFilter
 }, "id" | "email">
 
 export type UserOrderByWithAggregationInput = {
@@ -264,6 +273,9 @@ export type UserCreateInput = {
   operatorBudgets?: Prisma.OperatorBudgetCreateNestedManyWithoutCreatedByUserInput
   quoteComments?: Prisma.QuoteCommentCreateNestedManyWithoutAuthorUserInput
   audits?: Prisma.AuditLogCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateInput = {
@@ -278,6 +290,9 @@ export type UserUncheckedCreateInput = {
   operatorBudgets?: Prisma.OperatorBudgetUncheckedCreateNestedManyWithoutCreatedByUserInput
   quoteComments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutAuthorUserInput
   audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationUncheckedCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierUncheckedCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserUpdateInput = {
@@ -292,6 +307,9 @@ export type UserUpdateInput = {
   operatorBudgets?: Prisma.OperatorBudgetUpdateManyWithoutCreatedByUserNestedInput
   quoteComments?: Prisma.QuoteCommentUpdateManyWithoutAuthorUserNestedInput
   audits?: Prisma.AuditLogUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateInput = {
@@ -306,6 +324,9 @@ export type UserUncheckedUpdateInput = {
   operatorBudgets?: Prisma.OperatorBudgetUncheckedUpdateManyWithoutCreatedByUserNestedInput
   quoteComments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutAuthorUserNestedInput
   audits?: Prisma.AuditLogUncheckedUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUncheckedUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUncheckedUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateManyInput = {
@@ -458,6 +479,48 @@ export type UserUpdateOneWithoutAuditsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutAuditsInput, Prisma.UserUpdateWithoutAuditsInput>, Prisma.UserUncheckedUpdateWithoutAuditsInput>
 }
 
+export type UserCreateNestedOneWithoutOperationsInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutOperationsInput, Prisma.UserUncheckedCreateWithoutOperationsInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutOperationsInput
+  connect?: Prisma.UserWhereUniqueInput
+}
+
+export type UserUpdateOneRequiredWithoutOperationsNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutOperationsInput, Prisma.UserUncheckedCreateWithoutOperationsInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutOperationsInput
+  upsert?: Prisma.UserUpsertWithoutOperationsInput
+  connect?: Prisma.UserWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutOperationsInput, Prisma.UserUpdateWithoutOperationsInput>, Prisma.UserUncheckedUpdateWithoutOperationsInput>
+}
+
+export type UserCreateNestedOneWithoutNotificationsInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutNotificationsInput, Prisma.UserUncheckedCreateWithoutNotificationsInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutNotificationsInput
+  connect?: Prisma.UserWhereUniqueInput
+}
+
+export type UserUpdateOneRequiredWithoutNotificationsNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutNotificationsInput, Prisma.UserUncheckedCreateWithoutNotificationsInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutNotificationsInput
+  upsert?: Prisma.UserUpsertWithoutNotificationsInput
+  connect?: Prisma.UserWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutNotificationsInput, Prisma.UserUpdateWithoutNotificationsInput>, Prisma.UserUncheckedUpdateWithoutNotificationsInput>
+}
+
+export type UserCreateNestedOneWithoutSuppliersInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutSuppliersInput, Prisma.UserUncheckedCreateWithoutSuppliersInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutSuppliersInput
+  connect?: Prisma.UserWhereUniqueInput
+}
+
+export type UserUpdateOneRequiredWithoutSuppliersNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutSuppliersInput, Prisma.UserUncheckedCreateWithoutSuppliersInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutSuppliersInput
+  upsert?: Prisma.UserUpsertWithoutSuppliersInput
+  connect?: Prisma.UserWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutSuppliersInput, Prisma.UserUpdateWithoutSuppliersInput>, Prisma.UserUncheckedUpdateWithoutSuppliersInput>
+}
+
 export type UserCreateWithoutQuotesInput = {
   id?: string
   createdAt?: Date | string
@@ -469,6 +532,9 @@ export type UserCreateWithoutQuotesInput = {
   operatorBudgets?: Prisma.OperatorBudgetCreateNestedManyWithoutCreatedByUserInput
   quoteComments?: Prisma.QuoteCommentCreateNestedManyWithoutAuthorUserInput
   audits?: Prisma.AuditLogCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutQuotesInput = {
@@ -482,6 +548,9 @@ export type UserUncheckedCreateWithoutQuotesInput = {
   operatorBudgets?: Prisma.OperatorBudgetUncheckedCreateNestedManyWithoutCreatedByUserInput
   quoteComments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutAuthorUserInput
   audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationUncheckedCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierUncheckedCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutQuotesInput = {
@@ -511,6 +580,9 @@ export type UserUpdateWithoutQuotesInput = {
   operatorBudgets?: Prisma.OperatorBudgetUpdateManyWithoutCreatedByUserNestedInput
   quoteComments?: Prisma.QuoteCommentUpdateManyWithoutAuthorUserNestedInput
   audits?: Prisma.AuditLogUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutQuotesInput = {
@@ -524,6 +596,9 @@ export type UserUncheckedUpdateWithoutQuotesInput = {
   operatorBudgets?: Prisma.OperatorBudgetUncheckedUpdateManyWithoutCreatedByUserNestedInput
   quoteComments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutAuthorUserNestedInput
   audits?: Prisma.AuditLogUncheckedUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUncheckedUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUncheckedUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutLeadsInput = {
@@ -537,6 +612,9 @@ export type UserCreateWithoutLeadsInput = {
   operatorBudgets?: Prisma.OperatorBudgetCreateNestedManyWithoutCreatedByUserInput
   quoteComments?: Prisma.QuoteCommentCreateNestedManyWithoutAuthorUserInput
   audits?: Prisma.AuditLogCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutLeadsInput = {
@@ -550,6 +628,9 @@ export type UserUncheckedCreateWithoutLeadsInput = {
   operatorBudgets?: Prisma.OperatorBudgetUncheckedCreateNestedManyWithoutCreatedByUserInput
   quoteComments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutAuthorUserInput
   audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationUncheckedCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierUncheckedCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutLeadsInput = {
@@ -579,6 +660,9 @@ export type UserUpdateWithoutLeadsInput = {
   operatorBudgets?: Prisma.OperatorBudgetUpdateManyWithoutCreatedByUserNestedInput
   quoteComments?: Prisma.QuoteCommentUpdateManyWithoutAuthorUserNestedInput
   audits?: Prisma.AuditLogUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutLeadsInput = {
@@ -592,6 +676,9 @@ export type UserUncheckedUpdateWithoutLeadsInput = {
   operatorBudgets?: Prisma.OperatorBudgetUncheckedUpdateManyWithoutCreatedByUserNestedInput
   quoteComments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutAuthorUserNestedInput
   audits?: Prisma.AuditLogUncheckedUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUncheckedUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUncheckedUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutOperatorBudgetsInput = {
@@ -605,6 +692,9 @@ export type UserCreateWithoutOperatorBudgetsInput = {
   leads?: Prisma.LeadCreateNestedManyWithoutUserInput
   quoteComments?: Prisma.QuoteCommentCreateNestedManyWithoutAuthorUserInput
   audits?: Prisma.AuditLogCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutOperatorBudgetsInput = {
@@ -618,6 +708,9 @@ export type UserUncheckedCreateWithoutOperatorBudgetsInput = {
   leads?: Prisma.LeadUncheckedCreateNestedManyWithoutUserInput
   quoteComments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutAuthorUserInput
   audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationUncheckedCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierUncheckedCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutOperatorBudgetsInput = {
@@ -647,6 +740,9 @@ export type UserUpdateWithoutOperatorBudgetsInput = {
   leads?: Prisma.LeadUpdateManyWithoutUserNestedInput
   quoteComments?: Prisma.QuoteCommentUpdateManyWithoutAuthorUserNestedInput
   audits?: Prisma.AuditLogUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutOperatorBudgetsInput = {
@@ -660,6 +756,9 @@ export type UserUncheckedUpdateWithoutOperatorBudgetsInput = {
   leads?: Prisma.LeadUncheckedUpdateManyWithoutUserNestedInput
   quoteComments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutAuthorUserNestedInput
   audits?: Prisma.AuditLogUncheckedUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUncheckedUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUncheckedUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutQuoteCommentsInput = {
@@ -673,6 +772,9 @@ export type UserCreateWithoutQuoteCommentsInput = {
   leads?: Prisma.LeadCreateNestedManyWithoutUserInput
   operatorBudgets?: Prisma.OperatorBudgetCreateNestedManyWithoutCreatedByUserInput
   audits?: Prisma.AuditLogCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutQuoteCommentsInput = {
@@ -686,6 +788,9 @@ export type UserUncheckedCreateWithoutQuoteCommentsInput = {
   leads?: Prisma.LeadUncheckedCreateNestedManyWithoutUserInput
   operatorBudgets?: Prisma.OperatorBudgetUncheckedCreateNestedManyWithoutCreatedByUserInput
   audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationUncheckedCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierUncheckedCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutQuoteCommentsInput = {
@@ -715,6 +820,9 @@ export type UserUpdateWithoutQuoteCommentsInput = {
   leads?: Prisma.LeadUpdateManyWithoutUserNestedInput
   operatorBudgets?: Prisma.OperatorBudgetUpdateManyWithoutCreatedByUserNestedInput
   audits?: Prisma.AuditLogUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutQuoteCommentsInput = {
@@ -728,6 +836,9 @@ export type UserUncheckedUpdateWithoutQuoteCommentsInput = {
   leads?: Prisma.LeadUncheckedUpdateManyWithoutUserNestedInput
   operatorBudgets?: Prisma.OperatorBudgetUncheckedUpdateManyWithoutCreatedByUserNestedInput
   audits?: Prisma.AuditLogUncheckedUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUncheckedUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUncheckedUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutAuditsInput = {
@@ -741,6 +852,9 @@ export type UserCreateWithoutAuditsInput = {
   leads?: Prisma.LeadCreateNestedManyWithoutUserInput
   operatorBudgets?: Prisma.OperatorBudgetCreateNestedManyWithoutCreatedByUserInput
   quoteComments?: Prisma.QuoteCommentCreateNestedManyWithoutAuthorUserInput
+  operations?: Prisma.OperationCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutAuditsInput = {
@@ -754,6 +868,9 @@ export type UserUncheckedCreateWithoutAuditsInput = {
   leads?: Prisma.LeadUncheckedCreateNestedManyWithoutUserInput
   operatorBudgets?: Prisma.OperatorBudgetUncheckedCreateNestedManyWithoutCreatedByUserInput
   quoteComments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutAuthorUserInput
+  operations?: Prisma.OperationUncheckedCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierUncheckedCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutAuditsInput = {
@@ -783,6 +900,9 @@ export type UserUpdateWithoutAuditsInput = {
   leads?: Prisma.LeadUpdateManyWithoutUserNestedInput
   operatorBudgets?: Prisma.OperatorBudgetUpdateManyWithoutCreatedByUserNestedInput
   quoteComments?: Prisma.QuoteCommentUpdateManyWithoutAuthorUserNestedInput
+  operations?: Prisma.OperationUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutAuditsInput = {
@@ -796,6 +916,249 @@ export type UserUncheckedUpdateWithoutAuditsInput = {
   leads?: Prisma.LeadUncheckedUpdateManyWithoutUserNestedInput
   operatorBudgets?: Prisma.OperatorBudgetUncheckedUpdateManyWithoutCreatedByUserNestedInput
   quoteComments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutAuthorUserNestedInput
+  operations?: Prisma.OperationUncheckedUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUncheckedUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
+}
+
+export type UserCreateWithoutOperationsInput = {
+  id?: string
+  createdAt?: Date | string
+  email: string
+  passwordHash: string
+  role?: $Enums.UserRole
+  onboardingSeenAt?: Date | string | null
+  quotes?: Prisma.QuoteCreateNestedManyWithoutUserInput
+  leads?: Prisma.LeadCreateNestedManyWithoutUserInput
+  operatorBudgets?: Prisma.OperatorBudgetCreateNestedManyWithoutCreatedByUserInput
+  quoteComments?: Prisma.QuoteCommentCreateNestedManyWithoutAuthorUserInput
+  audits?: Prisma.AuditLogCreateNestedManyWithoutActorUserInput
+  suppliers?: Prisma.SupplierCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
+}
+
+export type UserUncheckedCreateWithoutOperationsInput = {
+  id?: string
+  createdAt?: Date | string
+  email: string
+  passwordHash: string
+  role?: $Enums.UserRole
+  onboardingSeenAt?: Date | string | null
+  quotes?: Prisma.QuoteUncheckedCreateNestedManyWithoutUserInput
+  leads?: Prisma.LeadUncheckedCreateNestedManyWithoutUserInput
+  operatorBudgets?: Prisma.OperatorBudgetUncheckedCreateNestedManyWithoutCreatedByUserInput
+  quoteComments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutAuthorUserInput
+  audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutActorUserInput
+  suppliers?: Prisma.SupplierUncheckedCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
+}
+
+export type UserCreateOrConnectWithoutOperationsInput = {
+  where: Prisma.UserWhereUniqueInput
+  create: Prisma.XOR<Prisma.UserCreateWithoutOperationsInput, Prisma.UserUncheckedCreateWithoutOperationsInput>
+}
+
+export type UserUpsertWithoutOperationsInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutOperationsInput, Prisma.UserUncheckedUpdateWithoutOperationsInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutOperationsInput, Prisma.UserUncheckedCreateWithoutOperationsInput>
+  where?: Prisma.UserWhereInput
+}
+
+export type UserUpdateToOneWithWhereWithoutOperationsInput = {
+  where?: Prisma.UserWhereInput
+  data: Prisma.XOR<Prisma.UserUpdateWithoutOperationsInput, Prisma.UserUncheckedUpdateWithoutOperationsInput>
+}
+
+export type UserUpdateWithoutOperationsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  passwordHash?: Prisma.StringFieldUpdateOperationsInput | string
+  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  quotes?: Prisma.QuoteUpdateManyWithoutUserNestedInput
+  leads?: Prisma.LeadUpdateManyWithoutUserNestedInput
+  operatorBudgets?: Prisma.OperatorBudgetUpdateManyWithoutCreatedByUserNestedInput
+  quoteComments?: Prisma.QuoteCommentUpdateManyWithoutAuthorUserNestedInput
+  audits?: Prisma.AuditLogUpdateManyWithoutActorUserNestedInput
+  suppliers?: Prisma.SupplierUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
+}
+
+export type UserUncheckedUpdateWithoutOperationsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  passwordHash?: Prisma.StringFieldUpdateOperationsInput | string
+  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  quotes?: Prisma.QuoteUncheckedUpdateManyWithoutUserNestedInput
+  leads?: Prisma.LeadUncheckedUpdateManyWithoutUserNestedInput
+  operatorBudgets?: Prisma.OperatorBudgetUncheckedUpdateManyWithoutCreatedByUserNestedInput
+  quoteComments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutAuthorUserNestedInput
+  audits?: Prisma.AuditLogUncheckedUpdateManyWithoutActorUserNestedInput
+  suppliers?: Prisma.SupplierUncheckedUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
+}
+
+export type UserCreateWithoutNotificationsInput = {
+  id?: string
+  createdAt?: Date | string
+  email: string
+  passwordHash: string
+  role?: $Enums.UserRole
+  onboardingSeenAt?: Date | string | null
+  quotes?: Prisma.QuoteCreateNestedManyWithoutUserInput
+  leads?: Prisma.LeadCreateNestedManyWithoutUserInput
+  operatorBudgets?: Prisma.OperatorBudgetCreateNestedManyWithoutCreatedByUserInput
+  quoteComments?: Prisma.QuoteCommentCreateNestedManyWithoutAuthorUserInput
+  audits?: Prisma.AuditLogCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierCreateNestedManyWithoutUserInput
+}
+
+export type UserUncheckedCreateWithoutNotificationsInput = {
+  id?: string
+  createdAt?: Date | string
+  email: string
+  passwordHash: string
+  role?: $Enums.UserRole
+  onboardingSeenAt?: Date | string | null
+  quotes?: Prisma.QuoteUncheckedCreateNestedManyWithoutUserInput
+  leads?: Prisma.LeadUncheckedCreateNestedManyWithoutUserInput
+  operatorBudgets?: Prisma.OperatorBudgetUncheckedCreateNestedManyWithoutCreatedByUserInput
+  quoteComments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutAuthorUserInput
+  audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationUncheckedCreateNestedManyWithoutUserInput
+  suppliers?: Prisma.SupplierUncheckedCreateNestedManyWithoutUserInput
+}
+
+export type UserCreateOrConnectWithoutNotificationsInput = {
+  where: Prisma.UserWhereUniqueInput
+  create: Prisma.XOR<Prisma.UserCreateWithoutNotificationsInput, Prisma.UserUncheckedCreateWithoutNotificationsInput>
+}
+
+export type UserUpsertWithoutNotificationsInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutNotificationsInput, Prisma.UserUncheckedUpdateWithoutNotificationsInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutNotificationsInput, Prisma.UserUncheckedCreateWithoutNotificationsInput>
+  where?: Prisma.UserWhereInput
+}
+
+export type UserUpdateToOneWithWhereWithoutNotificationsInput = {
+  where?: Prisma.UserWhereInput
+  data: Prisma.XOR<Prisma.UserUpdateWithoutNotificationsInput, Prisma.UserUncheckedUpdateWithoutNotificationsInput>
+}
+
+export type UserUpdateWithoutNotificationsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  passwordHash?: Prisma.StringFieldUpdateOperationsInput | string
+  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  quotes?: Prisma.QuoteUpdateManyWithoutUserNestedInput
+  leads?: Prisma.LeadUpdateManyWithoutUserNestedInput
+  operatorBudgets?: Prisma.OperatorBudgetUpdateManyWithoutCreatedByUserNestedInput
+  quoteComments?: Prisma.QuoteCommentUpdateManyWithoutAuthorUserNestedInput
+  audits?: Prisma.AuditLogUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUpdateManyWithoutUserNestedInput
+}
+
+export type UserUncheckedUpdateWithoutNotificationsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  passwordHash?: Prisma.StringFieldUpdateOperationsInput | string
+  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  quotes?: Prisma.QuoteUncheckedUpdateManyWithoutUserNestedInput
+  leads?: Prisma.LeadUncheckedUpdateManyWithoutUserNestedInput
+  operatorBudgets?: Prisma.OperatorBudgetUncheckedUpdateManyWithoutCreatedByUserNestedInput
+  quoteComments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutAuthorUserNestedInput
+  audits?: Prisma.AuditLogUncheckedUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUncheckedUpdateManyWithoutUserNestedInput
+  suppliers?: Prisma.SupplierUncheckedUpdateManyWithoutUserNestedInput
+}
+
+export type UserCreateWithoutSuppliersInput = {
+  id?: string
+  createdAt?: Date | string
+  email: string
+  passwordHash: string
+  role?: $Enums.UserRole
+  onboardingSeenAt?: Date | string | null
+  quotes?: Prisma.QuoteCreateNestedManyWithoutUserInput
+  leads?: Prisma.LeadCreateNestedManyWithoutUserInput
+  operatorBudgets?: Prisma.OperatorBudgetCreateNestedManyWithoutCreatedByUserInput
+  quoteComments?: Prisma.QuoteCommentCreateNestedManyWithoutAuthorUserInput
+  audits?: Prisma.AuditLogCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
+}
+
+export type UserUncheckedCreateWithoutSuppliersInput = {
+  id?: string
+  createdAt?: Date | string
+  email: string
+  passwordHash: string
+  role?: $Enums.UserRole
+  onboardingSeenAt?: Date | string | null
+  quotes?: Prisma.QuoteUncheckedCreateNestedManyWithoutUserInput
+  leads?: Prisma.LeadUncheckedCreateNestedManyWithoutUserInput
+  operatorBudgets?: Prisma.OperatorBudgetUncheckedCreateNestedManyWithoutCreatedByUserInput
+  quoteComments?: Prisma.QuoteCommentUncheckedCreateNestedManyWithoutAuthorUserInput
+  audits?: Prisma.AuditLogUncheckedCreateNestedManyWithoutActorUserInput
+  operations?: Prisma.OperationUncheckedCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
+}
+
+export type UserCreateOrConnectWithoutSuppliersInput = {
+  where: Prisma.UserWhereUniqueInput
+  create: Prisma.XOR<Prisma.UserCreateWithoutSuppliersInput, Prisma.UserUncheckedCreateWithoutSuppliersInput>
+}
+
+export type UserUpsertWithoutSuppliersInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutSuppliersInput, Prisma.UserUncheckedUpdateWithoutSuppliersInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutSuppliersInput, Prisma.UserUncheckedCreateWithoutSuppliersInput>
+  where?: Prisma.UserWhereInput
+}
+
+export type UserUpdateToOneWithWhereWithoutSuppliersInput = {
+  where?: Prisma.UserWhereInput
+  data: Prisma.XOR<Prisma.UserUpdateWithoutSuppliersInput, Prisma.UserUncheckedUpdateWithoutSuppliersInput>
+}
+
+export type UserUpdateWithoutSuppliersInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  passwordHash?: Prisma.StringFieldUpdateOperationsInput | string
+  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  quotes?: Prisma.QuoteUpdateManyWithoutUserNestedInput
+  leads?: Prisma.LeadUpdateManyWithoutUserNestedInput
+  operatorBudgets?: Prisma.OperatorBudgetUpdateManyWithoutCreatedByUserNestedInput
+  quoteComments?: Prisma.QuoteCommentUpdateManyWithoutAuthorUserNestedInput
+  audits?: Prisma.AuditLogUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
+}
+
+export type UserUncheckedUpdateWithoutSuppliersInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  passwordHash?: Prisma.StringFieldUpdateOperationsInput | string
+  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  quotes?: Prisma.QuoteUncheckedUpdateManyWithoutUserNestedInput
+  leads?: Prisma.LeadUncheckedUpdateManyWithoutUserNestedInput
+  operatorBudgets?: Prisma.OperatorBudgetUncheckedUpdateManyWithoutCreatedByUserNestedInput
+  quoteComments?: Prisma.QuoteCommentUncheckedUpdateManyWithoutAuthorUserNestedInput
+  audits?: Prisma.AuditLogUncheckedUpdateManyWithoutActorUserNestedInput
+  operations?: Prisma.OperationUncheckedUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
 }
 
 
@@ -809,6 +1172,9 @@ export type UserCountOutputType = {
   operatorBudgets: number
   quoteComments: number
   audits: number
+  operations: number
+  suppliers: number
+  notifications: number
 }
 
 export type UserCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -817,6 +1183,9 @@ export type UserCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.I
   operatorBudgets?: boolean | UserCountOutputTypeCountOperatorBudgetsArgs
   quoteComments?: boolean | UserCountOutputTypeCountQuoteCommentsArgs
   audits?: boolean | UserCountOutputTypeCountAuditsArgs
+  operations?: boolean | UserCountOutputTypeCountOperationsArgs
+  suppliers?: boolean | UserCountOutputTypeCountSuppliersArgs
+  notifications?: boolean | UserCountOutputTypeCountNotificationsArgs
 }
 
 /**
@@ -864,6 +1233,27 @@ export type UserCountOutputTypeCountAuditsArgs<ExtArgs extends runtime.Types.Ext
   where?: Prisma.AuditLogWhereInput
 }
 
+/**
+ * UserCountOutputType without action
+ */
+export type UserCountOutputTypeCountOperationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.OperationWhereInput
+}
+
+/**
+ * UserCountOutputType without action
+ */
+export type UserCountOutputTypeCountSuppliersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.SupplierWhereInput
+}
+
+/**
+ * UserCountOutputType without action
+ */
+export type UserCountOutputTypeCountNotificationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.NotificationWhereInput
+}
+
 
 export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -877,6 +1267,9 @@ export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
   operatorBudgets?: boolean | Prisma.User$operatorBudgetsArgs<ExtArgs>
   quoteComments?: boolean | Prisma.User$quoteCommentsArgs<ExtArgs>
   audits?: boolean | Prisma.User$auditsArgs<ExtArgs>
+  operations?: boolean | Prisma.User$operationsArgs<ExtArgs>
+  suppliers?: boolean | Prisma.User$suppliersArgs<ExtArgs>
+  notifications?: boolean | Prisma.User$notificationsArgs<ExtArgs>
   _count?: boolean | Prisma.UserCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["user"]>
 
@@ -914,6 +1307,9 @@ export type UserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
   operatorBudgets?: boolean | Prisma.User$operatorBudgetsArgs<ExtArgs>
   quoteComments?: boolean | Prisma.User$quoteCommentsArgs<ExtArgs>
   audits?: boolean | Prisma.User$auditsArgs<ExtArgs>
+  operations?: boolean | Prisma.User$operationsArgs<ExtArgs>
+  suppliers?: boolean | Prisma.User$suppliersArgs<ExtArgs>
+  notifications?: boolean | Prisma.User$notificationsArgs<ExtArgs>
   _count?: boolean | Prisma.UserCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type UserIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -927,6 +1323,15 @@ export type $UserPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs =
     operatorBudgets: Prisma.$OperatorBudgetPayload<ExtArgs>[]
     quoteComments: Prisma.$QuoteCommentPayload<ExtArgs>[]
     audits: Prisma.$AuditLogPayload<ExtArgs>[]
+    /**
+     * Importaciones en curso (Operation) donde el usuario es el cliente.
+     */
+    operations: Prisma.$OperationPayload<ExtArgs>[]
+    /**
+     * Proveedores cargados por el usuario (directorio).
+     */
+    suppliers: Prisma.$SupplierPayload<ExtArgs>[]
+    notifications: Prisma.$NotificationPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1334,6 +1739,9 @@ export interface Prisma__UserClient<T, Null = never, ExtArgs extends runtime.Typ
   operatorBudgets<T extends Prisma.User$operatorBudgetsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$operatorBudgetsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$OperatorBudgetPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   quoteComments<T extends Prisma.User$quoteCommentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$quoteCommentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$QuoteCommentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   audits<T extends Prisma.User$auditsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$auditsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AuditLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  operations<T extends Prisma.User$operationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$operationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$OperationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  suppliers<T extends Prisma.User$suppliersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$suppliersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$SupplierPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  notifications<T extends Prisma.User$notificationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$notificationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$NotificationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1874,6 +2282,78 @@ export type User$auditsArgs<ExtArgs extends runtime.Types.Extensions.InternalArg
   take?: number
   skip?: number
   distinct?: Prisma.AuditLogScalarFieldEnum | Prisma.AuditLogScalarFieldEnum[]
+}
+
+/**
+ * User.operations
+ */
+export type User$operationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Operation
+   */
+  select?: Prisma.OperationSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Operation
+   */
+  omit?: Prisma.OperationOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.OperationInclude<ExtArgs> | null
+  where?: Prisma.OperationWhereInput
+  orderBy?: Prisma.OperationOrderByWithRelationInput | Prisma.OperationOrderByWithRelationInput[]
+  cursor?: Prisma.OperationWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.OperationScalarFieldEnum | Prisma.OperationScalarFieldEnum[]
+}
+
+/**
+ * User.suppliers
+ */
+export type User$suppliersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Supplier
+   */
+  select?: Prisma.SupplierSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Supplier
+   */
+  omit?: Prisma.SupplierOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.SupplierInclude<ExtArgs> | null
+  where?: Prisma.SupplierWhereInput
+  orderBy?: Prisma.SupplierOrderByWithRelationInput | Prisma.SupplierOrderByWithRelationInput[]
+  cursor?: Prisma.SupplierWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.SupplierScalarFieldEnum | Prisma.SupplierScalarFieldEnum[]
+}
+
+/**
+ * User.notifications
+ */
+export type User$notificationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Notification
+   */
+  select?: Prisma.NotificationSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Notification
+   */
+  omit?: Prisma.NotificationOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.NotificationInclude<ExtArgs> | null
+  where?: Prisma.NotificationWhereInput
+  orderBy?: Prisma.NotificationOrderByWithRelationInput | Prisma.NotificationOrderByWithRelationInput[]
+  cursor?: Prisma.NotificationWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.NotificationScalarFieldEnum | Prisma.NotificationScalarFieldEnum[]
 }
 
 /**

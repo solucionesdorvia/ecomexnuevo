@@ -81,6 +81,9 @@ export async function POST(req: Request) {
     totalMinUsd: quote.totalMinUsd,
     totalMaxUsd: quote.totalMaxUsd,
     assistantMessage: quote.explanation,
+    explanation: quote.explanation,
+    assumptions: quote.assumptions ?? [],
+    quality: quote.quality,
   });
 
   res.cookies.set("ecomex_anon", anonId, {
