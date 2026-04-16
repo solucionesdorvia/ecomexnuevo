@@ -6,7 +6,7 @@ import {
   OPERATION_STAGE_LABEL_ES,
   operationStageBadgeClass,
 } from "@/app/app/operaciones/[id]/operation/operationStageUi";
-import { SystemEmpty, SystemPage, SystemSection } from "@/components/app/SystemPage";
+import { SystemEmpty, SystemKpi, SystemPage, SystemSection } from "@/components/app/SystemPage";
 
 export const runtime = "nodejs";
 
@@ -122,9 +122,29 @@ export default async function OperacionesPage() {
         </Link>
       }
     >
+      <div className="mt-8 grid gap-3 sm:grid-cols-3">
+        <SystemKpi
+          label="Importaciones activas"
+          value={operations.length}
+          hint={operations.length > 0 ? "Seguimiento operativo en curso." : "Sin operaciones activas."}
+        />
+        <SystemKpi
+          label="Cotizaciones pendientes"
+          value={quotesSinOperation.length}
+          hint="Aun no convertidas en importacion."
+        />
+        <SystemKpi
+          label="Cobertura operativa"
+          value={`${operations.length}/${operations.length + quotesSinOperation.length || 1}`}
+          hint="Relacion entre operaciones y oportunidades."
+        />
+      </div>
 
-        {operations.length > 0 ? (
-          <SystemSection title="Importaciones activas">
+      {operations.length > 0 ? (
+        <SystemSection
+          title="Importaciones activas"
+          subtitle="Cada tarjeta representa una importacion con su estado y ultimo evento."
+        >
             <div className="grid gap-4 sm:grid-cols-2">
               {operations.map((op) => {
                 const q = op.quote;
@@ -170,12 +190,16 @@ export default async function OperacionesPage() {
                 );
               })}
             </div>
-          </SystemSection>
-        ) : null}
+        </SystemSection>
+      ) : null}
 
-        <SystemSection title="Cotizaciones" className={operations.length > 0 ? "mt-12" : ""}>
+      <SystemSection
+        title="Cotizaciones"
+        subtitle="Backlog de cotizaciones listas para iniciar importacion."
+        className={operations.length > 0 ? "mt-12" : ""}
+      >
 
-          {quotesSinOperation.length > 0 ? (
+        {quotesSinOperation.length > 0 ? (
             <div className="mt-4 overflow-x-auto rounded-xl border border-white/[0.04]">
               <table className="w-full min-w-[700px] text-left">
                 <thead>
@@ -224,7 +248,7 @@ export default async function OperacionesPage() {
                 </tbody>
               </table>
             </div>
-          ) : (
+        ) : (
             <div className="mt-4">
               <SystemEmpty
                 title="No hay cotizaciones pendientes."
@@ -239,8 +263,8 @@ export default async function OperacionesPage() {
                 }
               />
             </div>
-          )}
-        </SystemSection>
+        )}
+      </SystemSection>
     </SystemPage>
   );
 }

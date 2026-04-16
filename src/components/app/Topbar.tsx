@@ -12,7 +12,7 @@ export default function Topbar({ onMenuToggle, userRole }: { onMenuToggle: () =>
   const current = matchNavItem(pathname, isOperator);
 
   return (
-    <header className="flex h-16 items-center justify-between border-b border-white/[0.04] bg-[#070e17]/95 px-4 backdrop-blur lg:px-6">
+    <header className="sticky top-0 z-20 flex h-16 items-center justify-between border-b border-white/[0.04] bg-[#070e17]/95 px-4 backdrop-blur lg:px-6">
       <div className="flex min-w-0 items-center gap-3">
         {/* Hamburger — mobile only */}
         <button

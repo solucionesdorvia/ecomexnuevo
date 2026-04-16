@@ -6,7 +6,8 @@ import {
   OPERATION_STAGE_LABEL_ES,
   operationStageBadgeClass,
 } from "@/app/app/operaciones/[id]/operation/operationStageUi";
-import { SystemPage, SystemSection } from "@/components/app/SystemPage";
+import { SystemKpi, SystemPage, SystemSection } from "@/components/app/SystemPage";
+import { APP_NAV_GROUP_LABELS, APP_NAV_ITEMS } from "@/components/app/navConfig";
 
 export const runtime = "nodejs";
 
@@ -138,30 +139,49 @@ export default async function DashboardPage() {
 
         {/* SECCION 1 — Stats */}
         <div className="mt-8 grid gap-3 sm:grid-cols-3">
-          <div className="rounded-xl border border-white/[0.04] bg-[#0B1622] p-5">
-            <p className="text-[28px] font-extrabold leading-none text-white" style={{ fontFamily: "var(--font-display)" }}>
-              {countActiveOps}
-            </p>
-            <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#555c6b]">Importaciones activas</p>
+          <div>
+            <SystemKpi
+              label="Importaciones activas"
+              value={countActiveOps}
+              hint={countActiveOps > 0 ? "Hay operaciones en curso en el pipeline." : "No hay operaciones activas."}
+            />
             {countActiveOps > 0 ? (
-              <Link href="/app/operaciones" className="mt-3 inline-block text-[12px] font-medium text-[#2b59ff] hover:underline">
+              <Link href="/app/operaciones" className="mt-2 inline-block text-[12px] font-medium text-[#2b59ff] hover:underline">
                 Ver todas
               </Link>
             ) : null}
           </div>
-          <div className="rounded-xl border border-white/[0.04] bg-[#0B1622] p-5">
-            <p className="text-[28px] font-extrabold leading-none text-white" style={{ fontFamily: "var(--font-display)" }}>
-              {countPendingQuotes}
-            </p>
-            <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#555c6b]">Cotizaciones sin importar</p>
-          </div>
-          <div className="rounded-xl border border-white/[0.04] bg-[#0B1622] p-5">
-            <p className="text-[28px] font-extrabold leading-none text-white" style={{ fontFamily: "var(--font-display)" }}>
-              {countCompletedOps}
-            </p>
-            <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#555c6b]">Importaciones completadas</p>
-          </div>
+          <SystemKpi label="Cotizaciones sin importar" value={countPendingQuotes} hint="Pendientes de decision o inicio." />
+          <SystemKpi label="Importaciones completadas" value={countCompletedOps} hint="Historico cerrado del sistema." />
         </div>
+
+        <SystemSection
+          title="Mapa del sistema"
+          subtitle="Estructura operativa basada en dominios para navegar el flujo completo de importacion."
+        >
+          <div className="grid gap-3 md:grid-cols-2">
+            {(["core", "operations", "intelligence", "workspace"] as const).map((group) => {
+              const modules = APP_NAV_ITEMS.filter((item) => item.group === group && item.href !== "/app");
+              return (
+                <div key={group} className="rounded-xl border border-white/[0.05] bg-[#0B1622] p-4">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#4a5568]">{APP_NAV_GROUP_LABELS[group]}</p>
+                  <div className="mt-3 space-y-2">
+                    {modules.map((module) => (
+                      <Link
+                        key={module.href}
+                        href={module.href}
+                        className="block rounded-lg border border-white/[0.04] bg-[#07111A] px-3 py-2 transition-colors hover:border-[#2b59ff]/30 hover:bg-[#0c1827]"
+                      >
+                        <p className="text-[13px] font-medium text-white">{module.label}</p>
+                        <p className="mt-1 text-[11px] text-[#555c6b]">{module.description}</p>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </SystemSection>
 
         {showWelcomeEmpty ? (
           <div className="mt-12 rounded-xl border border-dashed border-white/[0.08] bg-[#0B1622]/50 px-6 py-14 text-center sm:py-16">

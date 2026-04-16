@@ -4,7 +4,7 @@ import { getSessionUser } from "@/lib/auth/session";
 import { prisma } from "@/lib/db";
 import { QuoteCostBlocks } from "@/app/app/operaciones/[id]/operation/QuoteCostBlocks";
 import { parseQuoteCostJson } from "@/lib/quote/parseQuoteCostJson";
-import { SystemEmpty, SystemPage, SystemSection } from "@/components/app/SystemPage";
+import { SystemEmpty, SystemKpi, SystemPage, SystemSection } from "@/components/app/SystemPage";
 
 export const runtime = "nodejs";
 
@@ -151,8 +151,21 @@ export default async function CostosPage() {
         </Link>
       }
     >
+      <div className="mt-8 grid gap-3 sm:grid-cols-3">
+        <SystemKpi label="Entidades analizadas" value={rows.length} hint="Operaciones o cotizaciones con costo desglosado." />
+        <SystemKpi
+          label="Items con rango"
+          value={countWithRange}
+          hint="Con total minimo y maximo disponible."
+        />
+        <SystemKpi
+          label="Acumulado estimado"
+          value={countWithRange > 0 ? fmtUsdRange(sumMin, sumMax) : "—"}
+          hint="Suma de rangos detectados."
+        />
+      </div>
 
-        {rows.length === 0 ? (
+      {rows.length === 0 ? (
           <SystemSection title="Estado">
             <SystemEmpty
               title="Todavia no hay costos para mostrar."
@@ -167,10 +180,13 @@ export default async function CostosPage() {
               }
             />
           </SystemSection>
-        ) : (
+      ) : (
           <>
-            <SystemSection title="Desglose por entidad">
-            <div className="space-y-0">
+            <SystemSection
+              title="Desglose por entidad"
+              subtitle="Detalle de costos por operacion o cotizacion en orden cronologico."
+            >
+              <div className="space-y-0">
               {rows.map((r, i) => (
                 <section key={r.key} className={i > 0 ? "mt-10 border-t border-white/[0.06] pt-10" : ""}>
                   <h2 className="text-[16px] font-bold text-white [overflow-wrap:anywhere]">{r.title}</h2>
@@ -199,7 +215,7 @@ export default async function CostosPage() {
                   </div>
                 </section>
               ))}
-            </div>
+              </div>
             </SystemSection>
 
             {rows.length > 1 && countWithRange > 0 ? (
@@ -212,7 +228,7 @@ export default async function CostosPage() {
               </div>
             ) : null}
           </>
-        )}
+      )}
     </SystemPage>
   );
 }

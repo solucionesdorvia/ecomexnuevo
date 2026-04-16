@@ -6,7 +6,7 @@ import {
   OPERATION_STAGE_LABEL_ES,
   operationStageBadgeClass,
 } from "@/app/app/operaciones/[id]/operation/operationStageUi";
-import { SystemEmpty, SystemPage, SystemSection } from "@/components/app/SystemPage";
+import { SystemEmpty, SystemKpi, SystemPage, SystemSection } from "@/components/app/SystemPage";
 
 export const runtime = "nodejs";
 
@@ -49,9 +49,20 @@ export default async function DocumentosPage() {
     }
     byOp.get(oid)!.push(d);
   }
+  const opsWithDocs = orderedOpIds.length;
 
   return (
     <SystemPage title="Documentos" description="Indice de archivos subidos en tus importaciones.">
+      <div className="mt-8 grid gap-3 sm:grid-cols-3">
+        <SystemKpi label="Documentos" value={docs.length} hint="Archivos totales indexados." />
+        <SystemKpi label="Operaciones con archivos" value={opsWithDocs} hint="Importaciones con evidencia documental." />
+        <SystemKpi
+          label="Promedio por operacion"
+          value={opsWithDocs > 0 ? (docs.length / opsWithDocs).toFixed(1) : "0"}
+          hint="Documentos por importacion."
+        />
+      </div>
+
       <p className="mt-3 text-[12px] leading-relaxed text-[#555c6b]">
         Los archivos se cargan desde cada importacion en{" "}
         <Link href="/app/operaciones" className="text-[#2b59ff] hover:underline">
@@ -76,7 +87,10 @@ export default async function DocumentosPage() {
           />
         </SystemSection>
       ) : (
-        <SystemSection title="Documentacion por operacion">
+        <SystemSection
+          title="Documentacion por operacion"
+          subtitle="Cada bloque agrupa archivos por importacion y estado de avance."
+        >
           <div className="space-y-12">
             {orderedOpIds.map((opId) => {
               const opDocs = byOp.get(opId)!;

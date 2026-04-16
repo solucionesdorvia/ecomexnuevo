@@ -11,7 +11,7 @@ export type AppNavItem = {
 export const APP_NAV_GROUP_LABELS: Record<AppNavItem["group"], string> = {
   core: "Flujo principal",
   operations: "Ejecucion",
-  intelligence: "Analitica",
+  intelligence: "Inteligencia",
   workspace: "Workspace",
 };
 
