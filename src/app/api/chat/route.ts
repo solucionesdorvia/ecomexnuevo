@@ -2,777 +2,51 @@ import "dotenv/config";
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { calcImportQuote } from "@/lib/quote/calcImportQuote";
-import { scrapeProductFromUrl } from "@/lib/scraper/scrapeProductFromUrl";
 import { prisma } from "@/lib/db";
 import { verifyAuthToken } from "@/lib/auth/jwt";
-import {
-  extractVehicleInferenceFromText,
-  vehicleInferenceToHintsText,
-} from "@/lib/ai/vehicleExtractor";
 
-type IncomingMessage = { role: "user" | "assistant"; content: string };
+import {
+  type IncomingMessage,
+  lastUserMessage,
+  extractUrl,
+  stripUrlFromText,
+  parseUnitPriceUsdWithMode,
+  parseQuantityWithMode,
+  parseUnitPriceUsdSmart,
+  parseQuantitySmart,
+  userProvidedUnitPrice,
+  looksLikeJustNumber,
+  looksLikeProductText,
+  looksLikeFreshProductIntent,
+  normalizeUrl,
+  looksLikeContact,
+  contactChannel,
+  hasQuoteSignals,
+  isAffirmative,
+  consultingPostQuoteMessage,
+  cleanProductTitleFromMixedInput,
+} from "@/lib/chat/chatParsers";
+
+import {
+  inferStageHintFromMessages,
+  inferSeedForProductFromMessages,
+  extractNcmFromText,
+  isValidNcmCode,
+  parseAssumptionUpdate,
+  applyAssumptionUpdate,
+  validateNoGuessQuoteInputs,
+  buildHiddenChoiceSet,
+  deriveBasicNcmQuestions,
+  looksLikeNcmDisagreement,
+  looksLikeClassificationAnswer,
+  tryPickNcmCandidateFromHints,
+  shouldSkipTechnicalQuestions,
+} from "@/lib/chat/chatInference";
+
+import { buildProductFromInput, ensurePcram } from "@/lib/chat/chatProductBuilder";
+import { buildProductPreview, buildAnalysis } from "@/lib/chat/chatResponseHelpers";
 
 export const runtime = "nodejs";
-
-function normalizeNumberLike(input: string) {
-  // Accept "1.500,50" or "1,500.50" or "1500.50"
-  const s = String(input || "").trim();
-  if (!s) return "";
-  // If contains both separators, decide last one as decimal.
-  const lastDot = s.lastIndexOf(".");
-  const lastComma = s.lastIndexOf(",");
-  const decSep = lastDot > lastComma ? "." : lastComma > lastDot ? "," : null;
-  const cleaned = s.replace(/[^\d.,]/g, "");
-  if (!decSep) return cleaned.replace(/[.,]/g, "");
-  const parts = cleaned.split(decSep);
-  const intPart = (parts[0] ?? "").replace(/[.,]/g, "");
-  const fracPart = (parts[1] ?? "").replace(/[.,]/g, "");
-  return fracPart ? `${intPart}.${fracPart}` : intPart;
-}
-
-function hasQuantityHint(text: string) {
-  const t = String(text || "").toLowerCase();
-  return (
-    /\b(unid|unidad|unidades|pcs|piezas)\b/i.test(t) ||
-    /\bx\s*\d{1,6}\b/i.test(t) ||
-    /\b(cant|cantidad)\b/i.test(t) ||
-    /\b(\d{1,6})\s*u\b/i.test(t)
-  );
-}
-
-function parseUnitPriceUsdWithMode(
-  text: string,
-  opts: { allowBareNumber: boolean }
-): number | null {
-  // Accept: "USD 120", "U$S 120", "US$120", "$120", "120 usd", "120 dólares", "precio 1200"
-  // If allowBareNumber=true, accept a plain number ONLY when no quantity hints are present.
-  const raw = String(text || "").trim();
-  if (!raw) return null;
-  const t = raw.toLowerCase();
-
-  const hasUsdSignal =
-    /\b(usd|us\$|u\$s|u\$d|dolares|dólares|dls)\b/i.test(t) || /\$/.test(t);
-
-  // Avoid interpreting "500 unidades" as a price.
-  if (!hasUsdSignal && hasQuantityHint(t)) return null;
-
-  // Prefer currency-tagged matches
-  const tagged =
-    t.match(/(?:usd|us\$|u\$s|u\$d|\$)\s*([0-9][0-9.,]*)/i) ??
-    t.match(/([0-9][0-9.,]*)\s*(?:usd|us\$|u\$s|u\$d|dolares|dólares|dls)\b/i);
-  if (tagged?.[1]) {
-    const n = Number(normalizeNumberLike(tagged[1]));
-    if (Number.isFinite(n) && n > 0) return n;
-  }
-
-  if (!opts.allowBareNumber) return null;
-
-  // Bare number fallback (price stage): first number token
-  const bare = t.match(/\b([0-9][0-9.,]*)\b/);
-  if (!bare?.[1]) return null;
-  const n = Number(normalizeNumberLike(bare[1]));
-  if (!Number.isFinite(n) || n <= 0) return null;
-  return n;
-}
-
-function parseUnitPriceUsd(text: string): number | null {
-  return parseUnitPriceUsdWithMode(text, { allowBareNumber: false });
-}
-
-function userProvidedUnitPrice(text: string): boolean {
-  // IMPORTANT: keep this STRICT so bare numbers like "500" can be treated as quantity when needed.
-  return parseUnitPriceUsdWithMode(text, { allowBareNumber: false }) != null;
-}
-
-function parseQuantity(text: string): number | null {
-  return parseQuantityWithMode(text, { allowBareNumber: false });
-}
-
-function userProvidedQuantity(text: string): boolean {
-  return parseQuantity(text) != null;
-}
-
-function parseQuantityWithMode(
-  text: string,
-  opts: { allowBareNumber: boolean }
-): number | null {
-  const raw = String(text || "").trim().toLowerCase();
-  if (!raw) return null;
-
-  // Avoid interpreting prices as quantities.
-  const hasPriceSignal = /(usd|\$)/i.test(raw);
-  const hasQtyHint = hasQuantityHint(raw);
-
-  if (hasPriceSignal && !hasQtyHint) return null;
-  if (!hasQtyHint && !opts.allowBareNumber) return null;
-
-  // Prefer numbers that are clearly tied to quantity hints (avoid grabbing the USD amount).
-  const mExplicit =
-    raw.match(/\b(?:cant|cantidad)\b\s*[:=]?\s*(\d{1,6})\b/i) ??
-    raw.match(/\b(\d{1,6})\s*(?:unid|unidad|unidades|pcs|piezas)\b/i) ??
-    raw.match(/\bx\s*(\d{1,6})\b/i) ??
-    raw.match(/\b(\d{1,6})\s*u\b/i);
-  const cand = mExplicit?.[1];
-
-  // Fallback: first integer token, but strip currency fragments first.
-  const stripped = raw.replace(/(?:usd|us\$|u\$s|\$)\s*[0-9][0-9.,]*/gi, " ");
-  const m = cand ? null : stripped.match(/\b(\d{1,6})\b/);
-
-  const n = Number(cand ?? m?.[1]);
-  if (!Number.isFinite(n) || n <= 0) return null;
-  return Math.floor(n);
-}
-
-function looksLikeJustNumber(text: string) {
-  const t = String(text || "").trim();
-  return /^[0-9.,\s]+$/.test(t);
-}
-
-function looksLikePriceMessage(text: string) {
-  const t = String(text || "").toLowerCase();
-  return /\b(precio|sale|cuesta|valor|usd|us\$|u\$s|dolares|dólares)\b/i.test(t) || /\$/.test(t);
-}
-
-const PRICE_TRIGGERS =
-  /\b(precio|vale|valen|cuesta|sale|valor|usd|us\$|u\$s|dolares|dólares|fob|por\s+unidad)\b/i;
-
-function parseUnitPriceUsdSmart(text: string): number | null {
-  // First try strict (requires USD signal).
-  const strict = parseUnitPriceUsdWithMode(text, { allowBareNumber: false });
-  if (typeof strict === "number") return strict;
-
-  // If the user is clearly talking about price, allow a bare number (assume USD).
-  const t = String(text || "").toLowerCase();
-  if (!PRICE_TRIGGERS.test(t)) return null;
-
-  return parseUnitPriceUsdWithMode(text, { allowBareNumber: true });
-}
-
-function parseQuantitySmart(text: string): number | null {
-  const strict = parseQuantityWithMode(text, { allowBareNumber: false });
-  if (typeof strict === "number") return strict;
-  const raw = String(text || "").toLowerCase();
-  if (!hasQuantityHint(raw)) return null;
-  return parseQuantityWithMode(text, { allowBareNumber: true });
-}
-
-function looksLikeProductText(text: string) {
-  const t = String(text || "").trim();
-  if (!t) return false;
-  // If it contains letters and is not just USD/quantity shorthand, treat as product description.
-  const hasLetters = /[a-záéíóúñ]/i.test(t);
-  if (!hasLetters) return false;
-  // Avoid cases like "usd 1200" being treated as product.
-  if (userProvidedUnitPrice(t) && t.length <= 16) return false;
-  // Avoid cases like "precio 1500" being treated as product,
-  // but allow messages that contain a product + price in the same sentence.
-  if (looksLikePriceMessage(t) && !extractUrl(t)) {
-    const stripped = t
-      .toLowerCase()
-      .replace(PRICE_TRIGGERS, "")
-      .replace(/\$|usd|us\$|u\$s/gi, "")
-      .replace(/\b[0-9][0-9.,]*\b/g, "")
-      .replace(/\s+/g, " ")
-      .trim();
-    if (stripped.length < 4) return false;
-  }
-  // Avoid treating "500 unidades" as product, but allow "500 unidades de <producto>".
-  const q = parseQuantityWithMode(t, { allowBareNumber: false });
-  if (typeof q === "number") {
-    const stripped = t
-      .toLowerCase()
-      .replace(/\b(cant|cantidad|unid|unidad|unidades|pcs|piezas)\b/gi, "")
-      .replace(/\bx\b/gi, "")
-      .replace(/\b\d{1,6}\b/g, "")
-      .replace(/\s+/g, " ")
-      .trim();
-    if (stripped.length < 4) return false;
-  }
-  return true;
-}
-
-function looksLikeFreshProductIntent(text: string) {
-  const t = String(text || "").trim();
-  if (!t) return false;
-  if (extractUrl(t)) return true;
-  if (looksLikeJustNumber(t)) return false;
-  if (looksLikeProductText(t)) return true;
-  const cleaned = cleanProductTitleFromMixedInput(t);
-  const hasLetters = /[a-záéíóúñ]/i.test(cleaned);
-  const hasIntentVerb =
-    /\b(quiero|necesito|importar|cotizar|producto|articulo|artículo|mercader[ií]a|modelo)\b/i.test(
-      t
-    );
-  return hasLetters && cleaned.length >= 4 && hasIntentVerb;
-}
-
-function lastUserMessage(messages: IncomingMessage[]) {
-  for (let i = messages.length - 1; i >= 0; i--) {
-    if (messages[i]?.role === "user") return messages[i]!.content;
-  }
-  return "";
-}
-
-function extractUrl(text: string): string | null {
-  const t = String(text || "").trim();
-  if (!t) return null;
-
-  // 1) Full URL with scheme
-  const m1 = t.match(/https?:\/\/[^\s)]+/i);
-  if (m1?.[0]) return m1[0];
-
-  // 2) URL-like without scheme (common paste): "spanish.alibaba.com/product-detail/..."
-  // We only accept if there is a path segment (contains "/") to avoid false positives on plain domains.
-  const m2 = t.match(/\b((?:www\.)?[a-z0-9.-]+\.[a-z]{2,}(?:\/[^\s)]+)?)\b/i);
-  const cand = m2?.[1] ? String(m2[1]).trim() : "";
-  if (cand && cand.includes("/")) return `https://${cand.replace(/^https?:\/\//i, "")}`;
-
-  return null;
-}
-
-function normalizeUrl(u: string) {
-  try {
-    return new URL(u).toString();
-  } catch {
-    return String(u || "").trim();
-  }
-}
-
-function stripUrlFromText(text: string, url: string | null) {
-  const raw = String(text || "");
-  const withoutExact = url ? raw.split(url).join(" ") : raw;
-  // Remove any other URLs (scheme + bare).
-  return withoutExact
-    .replace(/https?:\/\/[^\s)]+/gi, " ")
-    .replace(/\b(?:www\.)?[a-z0-9.-]+\.[a-z]{2,}\/[^\s)]+/gi, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function withTimeout<T>(p: Promise<T>, timeoutMs: number): Promise<T> {
-  const ms = Math.max(1000, Math.floor(timeoutMs));
-  return new Promise<T>((resolve, reject) => {
-    const t = setTimeout(() => reject(new Error("timeout")), ms);
-    p.then(
-      (v) => {
-        clearTimeout(t);
-        resolve(v);
-      },
-      (e) => {
-        clearTimeout(t);
-        reject(e);
-      }
-    );
-  });
-}
-
-type StageHint = "awaiting_product" | "awaiting_price" | "awaiting_quantity" | null;
-
-function inferStageHintFromMessages(messages: IncomingMessage[]): StageHint {
-  for (let i = messages.length - 1; i >= 0; i--) {
-    const m = messages[i];
-    if (!m || m.role !== "assistant") continue;
-    const t = String(m.content || "").toLowerCase();
-    if (/precio unitario|precio por unidad|usd 120|solo el número/i.test(t)) return "awaiting_price";
-    if (/cantidad|unidades|pcs|piezas/i.test(t)) return "awaiting_quantity";
-    if (/qué producto|que producto|peg[aá]\s+el\s+link/i.test(t)) return "awaiting_product";
-    // If assistant already showed cards/quote signals, there is no active stage hint.
-    if (/total puesto en argentina|impuestos argentinos|flete internacional/i.test(t)) return null;
-  }
-  return null;
-}
-
-function inferSeedForProductFromMessages(messages: IncomingMessage[]): string | null {
-  for (let i = messages.length - 1; i >= 0; i--) {
-    const m = messages[i];
-    if (!m || m.role !== "user") continue;
-    const txt = String(m.content || "").trim();
-    if (!txt) continue;
-    if (looksLikeFreshProductIntent(txt)) return txt;
-  }
-  return null;
-}
-
-function extractNcmFromText(text: string): string | null {
-  const s = String(text || "");
-  const dot = s.match(/\b(\d{4}\.\d{2}\.\d{2})\b/);
-  if (dot?.[1] && dot[1] !== "9999.99.99") return dot[1];
-  const digits = s.match(/\b(\d{8})\b/);
-  if (digits?.[1]) {
-    const d = digits[1];
-    const formatted = `${d.slice(0, 4)}.${d.slice(4, 6)}.${d.slice(6, 8)}`;
-    if (formatted === "9999.99.99") return null;
-    return formatted;
-  }
-  return null;
-}
-
-function isValidNcmCode(ncm: unknown): ncm is string {
-  const s = String(ncm ?? "").trim();
-  if (!/^\d{4}\.\d{2}\.\d{2}$/.test(s)) return false;
-  return s !== "9999.99.99";
-}
-
-function parseChoiceIndex(text: string): number | null {
-  const t = String(text || "").trim();
-  if (!/^\d+$/.test(t)) return null;
-  const n = Number(t);
-  if (!Number.isFinite(n)) return null;
-  if (n < 1 || n > 5) return null;
-  return n;
-}
-
-function cleanOneLine(s: string, maxLen = 140) {
-  const t = String(s || "").replace(/\s+/g, " ").trim();
-  if (!t) return "";
-  if (t.length <= maxLen) return t;
-  return `${t.slice(0, maxLen - 1).trim()}…`;
-}
-
-function cleanProductTitleFromMixedInput(inputText: string) {
-  const s0 = String(inputText || "").replace(/\s+/g, " ").trim();
-  if (!s0) return s0;
-
-  let s = s0;
-
-  // Remove explicit NCM codes from the human-facing title.
-  s = s
-    .replace(/\b\d{4}\.\d{2}\.\d{2}\b/g, " ")
-    .replace(/\b\d{8}\b/g, " ");
-
-  // Remove obvious price fragments (keep model numbers like "iPhone 15" intact).
-  s = s.replace(
-    /(?:\b(precio|vale|valen|cuesta|sale|valor|fob)\b\s*[:=]?\s*)(?:usd|us\$|u\$s|\$)?\s*[0-9][0-9.,]*/gi,
-    " "
-  );
-  s = s.replace(/(?:\b(?:usd|us\$|u\$s)\b|\$)\s*[0-9][0-9.,]*/gi, " ");
-  // Remove leftover currency words.
-  s = s.replace(/\b(usd|us\$|u\$s|dolares|dólares)\b/gi, " ");
-
-  // Remove obvious quantity fragments.
-  s = s.replace(/\b(cant|cantidad)\b\s*[:=]?\s*\d{1,6}\b/gi, " ");
-  s = s.replace(/\b\d{1,6}\s*(unid|unidad|unidades|pcs|piezas)\b/gi, " ");
-  s = s.replace(/\bx\s*\d{1,6}\b/gi, " ");
-
-  // Remove common lead-in phrases.
-  s = s.replace(
-    /^\s*(quiero|quisiera|necesito|busco)\s+(importar|traer|comprar)\s+/i,
-    ""
-  );
-  s = s.replace(/^\s*(quiero|quisiera|necesito|busco)\s+/i, "");
-
-  s = s.replace(/\s+/g, " ").trim();
-  s = s.replace(/[.,;:]+$/g, "").trim();
-  if (s.length >= 6) return cleanOneLine(s, 120);
-  return cleanOneLine(s0, 120);
-}
-
-function looksLikeOnlyNcmCodeTitle(title?: string) {
-  const t = String(title ?? "").trim();
-  return /^\d{4}\.\d{2}\.\d{2}$/.test(t) || /^\d{8}$/.test(t);
-}
-
-function parseAssumptionUpdate(text: string): { origin?: string; shippingProfile?: "light" | "medium" | "heavy" } | null {
-  const raw = String(text || "").trim();
-  if (!raw) return null;
-  const t = raw.toLowerCase();
-
-  let origin: string | undefined;
-  let shippingProfile: "light" | "medium" | "heavy" | undefined;
-
-  const mOrigin = raw.match(/\borigen\b\s*[:=]\s*(.+)$/i) ?? raw.match(/^\s*origen\s+(.+)$/i);
-  if (mOrigin?.[1]) {
-    const v = String(mOrigin[1]).trim();
-    if (v && v.length <= 60) origin = v;
-  }
-
-  const mProf =
-    raw.match(/\b(perfil\s*(?:de)?\s*carga|perfil\s*flete|carga|flete)\b\s*[:=]\s*(livian[ao]|media|pesad[ao])/i) ??
-    raw.match(/^\s*(livian[ao]|media|pesad[ao])\s*$/i);
-  if (mProf?.[2] || mProf?.[1]) {
-    const v = String(mProf[2] ?? mProf[1]).toLowerCase();
-    if (v.startsWith("livi")) shippingProfile = "light";
-    else if (v.startsWith("pes")) shippingProfile = "heavy";
-    else shippingProfile = "medium";
-  }
-
-  if (!origin && !shippingProfile) return null;
-  return { origin, shippingProfile };
-}
-
-function applyAssumptionUpdate(product: any, upd: { origin?: string; shippingProfile?: "light" | "medium" | "heavy" }) {
-  if (!product || typeof product !== "object") return product;
-  if (upd.origin) product.origin = upd.origin;
-  if (upd.shippingProfile) {
-    product.raw = { ...(product.raw ?? {}), shippingProfile: upd.shippingProfile };
-  }
-  return product;
-}
-
-function validateNoGuessQuoteInputs(product: any, _opts?: { requireNcm?: boolean }) {
-  const missing: string[] = [];
-  const questions: string[] = [];
-
-  const hasPriceRange =
-    product?.price?.type === "range" &&
-    typeof product?.price?.min === "number" &&
-    typeof product?.price?.max === "number" &&
-    Number.isFinite(product.price.min) &&
-    Number.isFinite(product.price.max) &&
-    product.price.min > 0 &&
-    product.price.max > 0;
-  const hasUnitPrice =
-    typeof product?.fobUsd === "number" && Number.isFinite(product.fobUsd) && product.fobUsd > 0;
-  if (!hasPriceRange && !hasUnitPrice) {
-    missing.push("precio");
-    questions.push("¿Cuál es el **precio** en **USD**? (valor FOB o precio del proveedor)");
-  }
-
-  return { ok: missing.length === 0, missing, questions };
-}
-
-function originFromPurchaseUrl(u?: string) {
-  const raw = String(u ?? "").trim();
-  if (!raw) return null;
-  try {
-    const h = new URL(raw).hostname.replace(/^www\./i, "").toLowerCase();
-    if (/alibaba|1688|made-in-china|taobao|tmall/.test(h)) return "China";
-    if (/amazon\./.test(h)) return "Marketplace (Amazon)";
-    if (/mercadolibre|mercado libre/.test(h)) return "Marketplace (Mercado Libre)";
-    return h;
-  } catch {
-    return null;
-  }
-}
-
-function buildHiddenChoiceSet(
-  candidates: Array<{ ncmCode: string; title?: string }>,
-  currentNcm?: string,
-  limit = 5
-) {
-  // Note: choices are internal. We never expose codes (or lists) to the user.
-  // Keep a wider set so we can reliably map user answers to the right bucket.
-  const keep = Math.max(12, limit);
-  const hidden = candidates.slice(0, keep);
-  return { hidden };
-}
-
-function normLooseText(s: string) {
-  return String(s || "")
-    .toLowerCase()
-    .normalize("NFD")
-    // eslint-disable-next-line no-control-regex
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
-}
-
-function inferVehicleDefaultsFromTitle(title: string) {
-  const t = normLooseText(title);
-  if (!t) return null;
-
-  // If the user explicitly mentions special body types, don't assume defaults.
-  const mentionsBasculante = /\bbasculant/.test(t);
-  const mentionsFrigo = /\bfrigor|isoterm/.test(t);
-  const mentionsVolquete = /\bvolquete\b/.test(t);
-  const mentionsChasis = /\bchasis\b/.test(t);
-
-  const isPickup =
-    /\b(pickup|pick up|pick-up)\b/.test(t) ||
-    /\b(camioneta|utilitario)\b/.test(t) ||
-    /\b(hilux|ranger|amarok|frontier|navara|np300|l200|triton|dmax|d max|s10|s 10)\b/.test(t);
-
-  if (!isPickup) return null;
-  if (mentionsVolquete || mentionsChasis) return null;
-
-  // Defaults for common pickups: almost always <=5t, not basculante, not frigorífico.
-  // We only apply when user didn't explicitly mention otherwise.
-  const le5t = true;
-  const basculante = mentionsBasculante ? null : false;
-  const frigo = mentionsFrigo ? null : false;
-
-  return { kind: "pickup" as const, le5t, basculante, frigo };
-}
-
-function maybeAutoResolveKnownVehicle(product: any) {
-  const title = String(product?.title ?? "").trim();
-  if (!title) return product;
-  const defaults = inferVehicleDefaultsFromTitle(title);
-  if (!defaults) return product;
-
-  const meta: any = product?.raw?.ncmMeta;
-  const candidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(
-    meta?.pcramCandidates
-  )
-    ? meta.pcramCandidates
-    : [];
-  if (!candidates.length) return product;
-
-  const pool = candidates
-    .map((c) => ({ ...c, titleNorm: normLooseText(c.title ?? "") }))
-    .filter((c) => c.ncmCode);
-
-  let filtered = pool;
-  if (defaults.le5t) filtered = filtered.filter((c) => /inferior o igual a 5 t/.test(c.titleNorm));
-  if (defaults.basculante === false)
-    filtered = filtered.filter((c) => !/basculante/.test(c.titleNorm));
-  if (defaults.frigo === false)
-    filtered = filtered.filter((c) => !/frigor|isoterm/.test(c.titleNorm));
-
-  // Avoid matching "volquetes" when we inferred a pickup.
-  filtered = filtered.filter((c) => !/volquete/.test(c.titleNorm));
-
-  // Prefer "los demás" bucket for standard pickup.
-  const preferred = filtered.filter((c) => /\blos demas\b/.test(c.titleNorm));
-  const final = preferred.length ? preferred : filtered;
-
-  if (final.length === 1) {
-    product.ncm = final[0]!.ncmCode;
-    if (product?.raw?.ncmMeta) {
-      product.raw.ncmMeta.ambiguous = false;
-      // Keep missingInfoQuestions (if any) so we can still ask 1–3 basics
-      // to validate the classification before quoting.
-    }
-    // Remove any pending hidden options; we won't ask the user.
-    if (product?.raw) delete product.raw.ncmChoiceOptions;
-  }
-
-  return product;
-}
-
-function shouldSkipTechnicalQuestions(product: any) {
-  const vi = product?.raw?.vehicleInference as
-    | { kind?: string; confidence?: number }
-    | undefined;
-  const nm: any = product?.raw?.ncmMeta;
-  // If we're explicitly ambiguous, we DO want to ask the minimal technical questions.
-  if (nm?.ambiguous === true) return false;
-  // If we don't have a resolved NCM yet, don't skip questions (we need it to query PCRAM).
-  if (!product?.ncm) return false;
-  // If AI already recognized a vehicle with decent confidence, don't block the user with
-  // technical disambiguation. We'll quote with conservative ranges when needed.
-  if (vi && typeof vi.confidence === "number" && vi.confidence >= 0.75) return true;
-  // If the internal pipeline already determined this is chapter 87 (vehicles),
-  // we can still quote without blocking on cilindraje/peso, using wider ranges.
-  const hs = String(nm?.hsHeading ?? "").replace(/\D/g, "");
-  if (hs.startsWith("87")) return true;
-  return false;
-}
-
-function tryPickNcmCandidateFromHints(
-  candidates: Array<{ ncmCode: string; title?: string }>,
-  userText: string
-): { ncmCode: string } | null {
-  const t = normLooseText(userText);
-  if (!t || candidates.length < 2) return null;
-
-  const wantsLe5t =
-    /(<=\s*5\s*t|≤\s*5\s*t|hasta\s*5\s*t|menor\s+o\s+igual\s+a\s*5\s*t|\b5\s*t\s*o\s*menos\b)/i.test(
-      userText
-    );
-  const wantsGt5t =
-    /(>\s*5\s*t|mas\s+de\s*5\s*t|mayor\s+a\s*5\s*t|superior\s+a\s*5\s*t)/i.test(userText);
-
-  // Feature-scoped yes/no parsing (avoid global "sí ... no ..." ambiguity).
-  const basculanteNo = /\b(no|sin)\s+basculant/.test(t);
-  const basculanteYes = /\bbasculant/.test(t) && !basculanteNo && /\b(si|sí)\b/.test(t);
-
-  const frigoNo = /\b(no|sin)\s+(frigor|isoterm)/.test(t);
-  const frigoYes =
-    /\b(frigo|frigor|isoterm)/.test(t) && !frigoNo && /\b(si|sí)\b/.test(t);
-
-  const chasisNo = /\b(no|sin)\s+chasis\b/.test(t);
-  const chasisYes = /\bchasis\b/.test(t) && !chasisNo && /\b(si|sí)\b/.test(t);
-
-  const pool = candidates
-    .map((c) => ({ ...c, titleNorm: normLooseText(c.title ?? "") }))
-    .filter((c) => c.ncmCode);
-
-  let filtered = pool;
-  if (wantsLe5t) filtered = filtered.filter((c) => /inferior o igual a 5 t/.test(c.titleNorm));
-  if (wantsGt5t) filtered = filtered.filter((c) => /superior a 5 t/.test(c.titleNorm));
-
-  if (basculanteYes) filtered = filtered.filter((c) => /basculante/.test(c.titleNorm));
-  if (basculanteNo) filtered = filtered.filter((c) => !/basculante/.test(c.titleNorm));
-
-  if (frigoYes) filtered = filtered.filter((c) => /frigor|isoterm/.test(c.titleNorm));
-  if (frigoNo) filtered = filtered.filter((c) => !/frigor|isoterm/.test(c.titleNorm));
-
-  if (chasisYes) filtered = filtered.filter((c) => /chasis con motor/.test(c.titleNorm));
-  if (chasisNo) filtered = filtered.filter((c) => !/chasis con motor/.test(c.titleNorm));
-
-  if (filtered.length === 1) return { ncmCode: filtered[0]!.ncmCode };
-  return null;
-}
-
-function deriveBasicNcmQuestions(_opts: {
-  hsHeading?: string;
-  kind?: string;
-  candidates: Array<{ ncmCode: string; title?: string }>;
-}) {
-  return [] as string[];
-
-  // Disabled: the system now always picks the best NCM automatically
-  // without asking users technical questions they can't answer.
-  const hs = String(_opts.hsHeading ?? "").replace(/\D/g, "");
-  const kind = normLooseText(_opts.kind ?? "");
-  const titles = _opts.candidates
-    .map((c) => normLooseText(c.title ?? ""))
-    .filter(Boolean)
-    .slice(0, 12);
-
-  const has = (re: RegExp) => titles.some((t) => re.test(t));
-  const questions: string[] = [];
-
-  // Vehicles / tractors (chapter 87) often require a couple of hard attributes.
-  if (hs === "8704") {
-    // Weight with max load (<=5t vs >5t) is a common split.
-    if (has(/\binferior o igual a 5 t\b/) && has(/\bsuperior a 5 t\b/)) {
-      questions.push("¿El **peso total con carga máxima** es **≤ 5 t** o **> 5 t**?");
-    } else if (kind.includes("camioneta") || kind.includes("pickup")) {
-      questions.push("¿El **peso total con carga máxima** es **≤ 5 t**? (sí/no)");
-    }
-    if (has(/\bcaja basculante\b/)) {
-      questions.push("¿Es una camioneta/camión con **caja basculante**? (sí/no)");
-    }
-    if (has(/\bfrigorif|isoterm/)) {
-      questions.push("¿Es **frigorífico/isotérmico**? (sí/no)");
-    }
-    if (has(/\bchasis con motor\b/)) {
-      questions.push("¿Es **chasis con motor y cabina** o vehículo completo?");
-    }
-  } else if (hs === "8703") {
-    if (has(/\bchispa\b/) && has(/\bcompresion\b/)) {
-      questions.push("¿El motor es **nafta (chispa)** o **diésel (compresión)**?");
-    }
-    if (has(/\bcilindrada\b/)) {
-      questions.push("¿Cuál es la **cilindrada (cm³)**? (ej: `2800 cm3`)");
-    }
-    questions.push("¿Es para **transporte de personas** (auto/SUV) o es **utilitario/carga**?");
-  } else if (hs === "8701") {
-    if (has(/\btractor(?:es)? de carretera para semirremolques\b/)) {
-      questions.push(
-        "¿Es **tractor de carretera para semirremolques** (tipo camión) o **tractor agrícola**?"
-      );
-    }
-    if (has(/\borugas\b/)) {
-      questions.push("¿Es **tractor de orugas**? (sí/no)");
-    }
-    if (has(/\bun solo eje\b/)) {
-      questions.push("¿Es un **tractor de un solo eje**? (sí/no)");
-    }
-  }
-
-  return questions.filter(Boolean).slice(0, 4);
-}
-
-function topCandidatesWithCurrent(
-  candidates: Array<{ ncmCode: string; title?: string }>,
-  currentNcm: string | undefined,
-  limit = 5
-) {
-  const top = candidates.slice(0, limit);
-  const cur = currentNcm ? String(currentNcm) : "";
-  if (!cur) return top;
-  const inTop = top.some((c) => String(c.ncmCode).replace(/\D/g, "") === cur.replace(/\D/g, ""));
-  if (inTop) return top;
-  const found = candidates.find(
-    (c) => String(c.ncmCode).replace(/\D/g, "") === cur.replace(/\D/g, "")
-  );
-  if (!found) return top;
-  // Replace last item to keep 1–5 mapping stable.
-  return [...top.slice(0, Math.max(0, limit - 1)), found];
-}
-
-function looksLikeNcmDisagreement(text: string) {
-  const t = String(text || "").toLowerCase();
-  const hasCode = /\b\d{4}\.\d{2}\.\d{2}\b/.test(t) || /\b\d{8}\b/.test(t);
-  return (
-    (/\bncm\b/.test(t) || hasCode) &&
-    (/\bno\s+es\b/.test(t) ||
-      /\bcuando\s+no\s+es\b/.test(t) ||
-      /\bequivocad/.test(t) ||
-      /\bincorrect/.test(t) ||
-      /\bmal\b/.test(t))
-  );
-}
-
-function looksLikeClassificationAnswer(text: string) {
-  const raw = String(text || "").trim();
-  if (!raw) return false;
-  const t = raw
-    .toLowerCase()
-    .normalize("NFD")
-    // eslint-disable-next-line no-control-regex
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/\s+/g, " ");
-
-  // Typical short answers to our technical questions
-  const hasMarkers =
-    /<=\s*5\s*t|≤\s*5\s*t|\b5\s*t\b/.test(t) ||
-    /\b(basculant|frigor|isoterm|chasis|orugas|semirremolque)\b/.test(t) ||
-    /\b(personas|carga|utilitario)\b/.test(t) ||
-    /\b(cm3|cilindrada)\b/.test(t) ||
-    /\b(diesel|nafta|gasolina|electrico|hibrid)\b/.test(t) ||
-    /\b(si|sí|no)\b/.test(t);
-
-  // Keep it conservative: only treat as "answer" when it's short-ish.
-  return hasMarkers && t.length <= 120;
-}
-
-function isAffirmative(text: string) {
-  const t = text.trim().toLowerCase();
-  return /(sí|si|dale|ok|vamos|avanc|quiero avanzar|de una|hagamos|continuemos|valid(ar|alo)|agend(ar|alo)|consult(or[ií]a|a)|hablar con (un )?asesor|asesor(a)? experto)/i.test(
-    t
-  );
-}
-
-function consultingPostQuoteMessage() {
-  return [
-    "—",
-    "Esto es **orientativo**: el número final se valida con ficha técnica, documentación, origen y peso/volumen real.",
-    "",
-    "¿Querés **validarlo con un especialista** y cerrar números (consultoría paga)?",
-  ].join("\n");
-}
-
-function looksLikeContact(text: string) {
-  const t = text.trim();
-  const email = /[^\s@]+@[^\s@]+\.[^\s@]+/.test(t);
-  const phone = /\+?\d[\d\s().-]{7,}/.test(t);
-  return email || phone;
-}
-
-function contactChannel(text: string): "email" | "whatsapp" | "unknown" {
-  const t = text.trim();
-  if (/[^\s@]+@[^\s@]+\.[^\s@]+/.test(t)) return "email";
-  if (/\+?\d[\d\s().-]{7,}/.test(t)) return "whatsapp";
-  return "unknown";
-}
-
-function hasQuoteSignals(messages: IncomingMessage[]) {
-  // Heuristic: if assistant ever mentioned the total card label, we consider a quote was shown.
-  return messages.some(
-    (m) =>
-      m.role === "assistant" &&
-      /Total puesto en Argentina|Impuestos argentinos|Flete internacional/i.test(
-        m.content
-      )
-  );
-}
-
-function parseCookies(header: string | null) {
-  const out: Record<string, string> = {};
-  if (!header) return out;
-  for (const part of header.split(";")) {
-    const idx = part.indexOf("=");
-    if (idx === -1) continue;
-    const k = part.slice(0, idx).trim();
-    const v = part.slice(idx + 1).trim();
-    out[k] = decodeURIComponent(v);
-  }
-  return out;
-}
 
 export async function POST(req: Request) {
   try {
@@ -818,9 +92,7 @@ export async function POST(req: Request) {
         for (const f of slice) {
           if (f.size > MAX_BYTES) {
             return NextResponse.json(
-              {
-                assistantMessage: `El archivo "${f.name}" supera el límite de ${MAX_BYTES / 1024 / 1024} MB.`,
-              },
+              { assistantMessage: `El archivo "${f.name}" supera el límite de ${MAX_BYTES / 1024 / 1024} MB.` },
               { status: 400 }
             );
           }
@@ -847,43 +119,12 @@ export async function POST(req: Request) {
 
     if (!messages.length || !userText) {
       return NextResponse.json(
-        {
-          assistantMessage:
-            "Necesito tu mensaje para poder cotizar. Pegá un link del proveedor o describí el producto.",
-        },
+        { assistantMessage: "Necesito tu mensaje para poder cotizar. Pegá un link del proveedor o describí el producto." },
         { status: 400 }
       );
     }
 
-    // Contact step: only after user explicitly wants to advance.
-    if (looksLikeContact(userText) && contact === "") {
-      // User pasted contact in the main input. We still accept it, but we won't ask early.
-      // We'll treat it as "contact provided after request" only if a quote was shown and user said yes.
-    }
-
-    // If user confirms after seeing a quote, request contact to agendar consultoría.
-    if (isAffirmative(userText) && hasQuoteSignals(messages)) {
-      // Mark latest quote as decision requested (best-effort).
-      await prisma.quote
-        .findFirst({
-          where: { anonId },
-          orderBy: { createdAt: "desc" },
-        })
-        .then((q) =>
-          q
-            ? prisma.quote.update({
-                where: { id: q.id },
-                data: { stage: "decision_requested" },
-              })
-            : null
-        )
-        .catch(() => null);
-
-      const res = NextResponse.json({
-        assistantMessage:
-          "Perfecto. Para **agendar una consultoría paga** y validar esta importación con un especialista, dejame tu **mail o WhatsApp**.",
-        requestContact: true,
-      });
+    const setAnonCookie = (res: NextResponse) => {
       res.cookies.set("ecomex_anon", anonId, {
         httpOnly: true,
         sameSite: "lax",
@@ -892,44 +133,46 @@ export async function POST(req: Request) {
         maxAge: 60 * 60 * 24 * 365,
       });
       return res;
+    };
+
+    // If user confirms after seeing a quote, request contact.
+    if (isAffirmative(userText) && hasQuoteSignals(messages)) {
+      await prisma.quote
+        .findFirst({ where: { anonId }, orderBy: { createdAt: "desc" } })
+        .then((q) =>
+          q ? prisma.quote.update({ where: { id: q.id }, data: { stage: "decision_requested" } }) : null
+        )
+        .catch(() => null);
+
+      return setAnonCookie(
+        NextResponse.json({
+          assistantMessage:
+            "Perfecto. Para **agendar una consultoría paga** y validar esta importación con un especialista, dejame tu **mail o WhatsApp**.",
+          requestContact: true,
+        })
+      );
     }
 
-    // If client included contact field and it looks valid, acknowledge.
+    // Contact provided: persist lead and acknowledge.
     if (contact && looksLikeContact(contact)) {
       const lead = await prisma.lead.upsert({
         where: { contact },
-        create: {
-          anonId,
-          contact,
-          channel: contactChannel(contact),
-          userId: userId ?? undefined,
-        },
-        update: {
-          anonId,
-          channel: contactChannel(contact),
-          userId: userId ?? undefined,
-        },
+        create: { anonId, contact, channel: contactChannel(contact), userId: userId ?? undefined },
+        update: { anonId, channel: contactChannel(contact), userId: userId ?? undefined },
       });
 
-      // Attach lead to latest quote (best-effort).
       await prisma.quote
-        .findFirst({
-          where: { anonId },
-          orderBy: { createdAt: "desc" },
-        })
+        .findFirst({ where: { anonId }, orderBy: { createdAt: "desc" } })
         .then((q) =>
           q
-            ? prisma.quote.update({
-                where: { id: q.id },
-                data: { leadId: lead.id, stage: "lead_captured" },
-              })
+            ? prisma.quote.update({ where: { id: q.id }, data: { leadId: lead.id, stage: "lead_captured" } })
             : null
         )
         .catch(() => null);
 
-      const res = NextResponse.json({
-        assistantMessage:
-          [
+      return setAnonCookie(
+        NextResponse.json({
+          assistantMessage: [
             "Recibido. Un especialista va a tomar tu caso y coordinar la **consultoría paga** por el canal que dejaste.",
             "",
             "En la consultoría validamos:",
@@ -941,55 +184,34 @@ export async function POST(req: Request) {
             "",
             "Si querés, podés crear una cuenta opcional para ver historial y seguimiento: /account",
           ].join("\n"),
-        requestContact: false,
-      });
-      res.cookies.set("ecomex_anon", anonId, {
-        httpOnly: true,
-        sameSite: "lax",
-        secure: cookieSecure,
-        path: "/",
-        maxAge: 60 * 60 * 24 * 365,
-      });
-      return res;
+          requestContact: false,
+        })
+      );
     }
 
+    // Budget mode: single-shot estimation from free text.
     if (mode === "budget") {
-      const quote = await calcImportQuote({
-        mode,
-        budgetText: userText,
-      });
-
+      const quote = await calcImportQuote({ mode, budgetText: userText });
       await prisma.quote.create({
         data: {
-          anonId,
-          mode,
-          userText,
-          quoteJson: quote as any,
+          anonId, mode, userText,
+          quoteJson: quote as never,
           totalMinUsd: quote.totalMinUsd,
           totalMaxUsd: quote.totalMaxUsd,
           userId: userId ?? undefined,
         },
       });
-
-      const res = NextResponse.json({
-        assistantMessage: `${quote.explanation}\n\n${consultingPostQuoteMessage()}`,
-        cards: quote.cards,
-        analysis: {
-          stage: "budget_estimate",
-          timing: { route: "maritime", minDays: 35, maxDays: 55 },
-        },
-        requestContact: false,
-      });
-      res.cookies.set("ecomex_anon", anonId, {
-        httpOnly: true,
-        sameSite: "lax",
-        secure: cookieSecure,
-        path: "/",
-        maxAge: 60 * 60 * 24 * 365,
-      });
-      return res;
+      return setAnonCookie(
+        NextResponse.json({
+          assistantMessage: `${quote.explanation}\n\n${consultingPostQuoteMessage()}`,
+          cards: quote.cards,
+          analysis: { stage: "budget_estimate", timing: { route: "maritime", minDays: 35, maxDays: 55 } },
+          requestContact: false,
+        })
+      );
     }
 
+    // Load active (in-progress) quote row for this anonymous session.
     const active = await prisma.quote
       .findFirst({
         where: {
@@ -1012,8 +234,6 @@ export async function POST(req: Request) {
     let priceUsd: number | null = priceUsdStrict ?? parseUnitPriceUsdSmart(userTextSansUrl);
     let quantity: number | null = quantityStrict ?? parseQuantitySmart(userTextSansUrl);
 
-    // Reasoning fallback: if the assistant explicitly asked for price/quantity,
-    // accept a bare number as the answer (even without "USD"/"unidades").
     if (priceUsd == null && stageHint === "awaiting_price" && looksLikeJustNumber(userTextSansUrl)) {
       const loose = parseUnitPriceUsdWithMode(userTextSansUrl, { allowBareNumber: true });
       if (typeof loose === "number") priceUsd = loose;
@@ -1022,832 +242,321 @@ export async function POST(req: Request) {
       const qLoose = parseQuantityWithMode(userTextSansUrl, { allowBareNumber: true });
       if (typeof qLoose === "number") quantity = qLoose;
     }
+
     const disagreesWithNcm = looksLikeNcmDisagreement(userTextSansUrl);
     const explicitNcm = disagreesWithNcm ? null : extractNcmFromText(userTextSansUrl);
 
-    // If user says the previously shown NCM is wrong (after a quote),
-    // reopen the latest quote to let them pick from PCRAM candidates.
-    if (!active && disagreesWithNcm) {
-      const last = await prisma.quote
-        .findFirst({
-          where: { anonId, mode: "quote" },
-          orderBy: { createdAt: "desc" },
+    // ---------- Helper closures (depend on anonId, userId, userText, cookieSecure) ----------
+
+    const ask = (
+      assistantMessage: string,
+      product?: Record<string, unknown>,
+      opts?: { stage?: string; questions?: string[] }
+    ) =>
+      setAnonCookie(
+        NextResponse.json({
+          assistantMessage,
+          requestContact: false,
+          productPreview: product ? buildProductPreview(product) : undefined,
+          analysis: {
+            stage: opts?.stage ?? "needs_input",
+            questions: Array.isArray(opts?.questions)
+              ? opts.questions.map((q) => String(q || "").trim()).filter(Boolean).slice(0, 6)
+              : undefined,
+          },
         })
-        .catch(() => null);
-
-      if (last) {
-        const product: any = (last.productJson as any) ?? {};
-        delete product.ncm;
-        if (product?.raw) {
-          delete product.raw.pcram;
-          if (product.raw.ncmMeta) product.raw.ncmMeta.ambiguous = true;
-        }
-
-        const seedText = String(product?.title ?? last.userText ?? "").trim();
-        if (seedText) {
-          const useNcmMotorDisagree =
-            process.env.NCM_CHAT_USE_MOTOR_IN_BUILD_PRODUCT === "1";
-
-          if (useNcmMotorDisagree) {
-            const { runNcmMotor } = await import("@/lib/clasificar-ncm/runNcmMotor");
-            const motor = await runNcmMotor({
-              text: seedText,
-              snapshot: { productType: "unknown", status: "idle" },
-              prevSnapshot: { productType: "unknown", status: "idle" },
-              messages: [],
-            }).catch(() => null);
-
-            if (motor) {
-              const rawNext: Record<string, unknown> = { ...(product.raw ?? {}) };
-              if (motor.engine.mode === "full") {
-                const pl = motor.engine.pipeline;
-                if (pl.ncmMeta) rawNext.ncmMeta = pl.ncmMeta;
-                if (pl.pcram) rawNext.pcram = pl.pcram;
-              }
-              rawNext.ncmMotor = {
-                confidence: motor.confidence,
-                alternatives: motor.alternatives,
-                ambiguity: motor.ambiguity ?? null,
-              };
-              product.raw = rawNext;
-            } else {
-              const { productFromTextPipeline } = await import(
-                "@/lib/scraper/productFromTextPipeline"
-              );
-              const extra = (await productFromTextPipeline(seedText).catch(() => ({}))) as any;
-              // Keep only candidates/meta; don't auto-accept a new NCM while the user is disputing it.
-              if (extra?.ncmMeta) product.raw = { ...(product.raw ?? {}), ncmMeta: extra.ncmMeta };
-            }
-          } else {
-            const { productFromTextPipeline } = await import(
-              "@/lib/scraper/productFromTextPipeline"
-            );
-            const extra = (await productFromTextPipeline(seedText).catch(() => ({}))) as any;
-            // Keep only candidates/meta; don't auto-accept a new NCM while the user is disputing it.
-            if (extra?.ncmMeta) product.raw = { ...(product.raw ?? {}), ncmMeta: extra.ncmMeta };
-          }
-        }
-
-        const candidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(
-          product?.raw?.ncmMeta?.pcramCandidates
-        )
-          ? product.raw.ncmMeta.pcramCandidates
-          : [];
-
-        if (candidates.length) {
-        const { hidden } = buildHiddenChoiceSet(candidates, product?.ncm, 5);
-        product.raw = {
-          ...(product.raw ?? {}),
-          ncmChoiceOptions: hidden,
-        };
-
-          await prisma.quote
-            .update({
-              where: { id: last.id },
-              data: { productJson: product as any, stage: "awaiting_product" },
-            })
-            .catch(() => null);
-
-          const res = NextResponse.json({
-            assistantMessage: [
-            "Perfecto, lo recalculamos.",
-              "",
-            "Para estimar **impuestos** con precisión necesito afinar 1–3 datos técnicos del producto.",
-            "Respondeme con lo que sepas (en una sola línea está perfecto).",
-            ].join("\n"),
-            requestContact: false,
-          });
-          res.cookies.set("ecomex_anon", anonId, {
-            httpOnly: true,
-            sameSite: "lax",
-            secure: cookieSecure,
-            path: "/",
-            maxAge: 60 * 60 * 24 * 365,
-          });
-          return res;
-        }
-      }
-    }
-
-    const buildProductFromInput = async (inputText: string) => {
-      const url = extractUrl(inputText);
-      if (url) {
-        // IMPORTANT: strip URL so numbers in the link (IDs) are never parsed as price/qty hints.
-        const hintText = stripUrlFromText(inputText, url);
-        const p = await scrapeProductFromUrl(url, { hintText, timeoutMs: 45_000 });
-        // If the URL pipeline found PCRAM candidates but didn't set a final NCM, pick the top one
-        // (we'll still ask 1–3 basics to validate/refine before quoting when needed).
-        const meta: any = (p as any)?.raw?.ncmMeta;
-        const cands: Array<{ ncmCode: string; title?: string }> = Array.isArray(meta?.pcramCandidates)
-          ? meta.pcramCandidates
-          : [];
-        if (!(p as any)?.ncm && cands.length) {
-          const pick = cands.find((c) => isValidNcmCode(c?.ncmCode));
-          if (pick) {
-            (p as any).ncm = pick.ncmCode;
-            if ((p as any)?.raw?.ncmMeta) (p as any).raw.ncmMeta.ambiguous = true;
-          }
-        }
-        const inferredOrigin = originFromPurchaseUrl(url);
-        if (
-          inferredOrigin &&
-          (!String((p as any)?.origin ?? "").trim() ||
-            /^origen a confirmar$/i.test(String((p as any)?.origin ?? "").trim()))
-        ) {
-          (p as any).origin = inferredOrigin;
-        }
-        if (!Number.isFinite((p as any)?.quantity) || Number((p as any)?.quantity) <= 0) {
-          (p as any).quantity = 1;
-        }
-        return p as any;
-      }
-      const base: any = { title: cleanProductTitleFromMixedInput(inputText) };
-      // AI vehicle inference to reduce (or eliminate) follow-up questions.
-      const vehicleInf = await extractVehicleInferenceFromText(inputText).catch(() => null);
-      if (vehicleInf && vehicleInf.kind !== "desconocido") {
-        base.raw = { ...(base.raw ?? {}), vehicleInference: vehicleInf };
-      }
-      const enrichedText =
-        vehicleInf && vehicleInf.confidence >= 0.6
-          ? `${inputText}\n\n[HINTS]\n${vehicleInferenceToHintsText(vehicleInf)}`
-          : inputText;
-
-      const useNcmMotorInBuild =
-        process.env.NCM_CHAT_USE_MOTOR_IN_BUILD_PRODUCT === "1";
-
-      if (useNcmMotorInBuild) {
-        const { runNcmMotor } = await import("@/lib/clasificar-ncm/runNcmMotor");
-        const motor = await runNcmMotor({
-          text: enrichedText,
-          snapshot: { productType: "unknown", status: "idle" },
-          prevSnapshot: { productType: "unknown", status: "idle" },
-          messages: [],
-        }).catch(() => null);
-
-        if (motor) {
-          const rawNext: Record<string, unknown> = { ...(base.raw ?? {}) };
-          if (motor.engine.mode === "full") {
-            const pl = motor.engine.pipeline;
-            if (pl.ncmMeta) rawNext.ncmMeta = pl.ncmMeta;
-            if (pl.pcram) rawNext.pcram = pl.pcram;
-          }
-          rawNext.ncmMotor = {
-            confidence: motor.confidence,
-            alternatives: motor.alternatives,
-            ambiguity: motor.ambiguity ?? null,
-          };
-          base.raw = rawNext;
-          if (motor.ncm_code) {
-            base.ncm = motor.ncm_code;
-          }
-        } else {
-          const { productFromTextPipeline } = await import(
-            "@/lib/scraper/productFromTextPipeline"
-          );
-          const extra = (await productFromTextPipeline(enrichedText).catch(() => ({}))) as {
-            ncm?: string;
-            pcram?: unknown;
-            ncmMeta?: unknown;
-          };
-          if (extra.ncm) base.ncm = extra.ncm;
-          if (extra.pcram) base.raw = { ...(base.raw ?? {}), pcram: extra.pcram };
-          if (extra.ncmMeta) base.raw = { ...(base.raw ?? {}), ncmMeta: extra.ncmMeta };
-        }
-      } else {
-        const { productFromTextPipeline } = await import(
-          "@/lib/scraper/productFromTextPipeline"
-        );
-        const extra = (await productFromTextPipeline(enrichedText).catch(() => ({}))) as {
-          ncm?: string;
-          pcram?: unknown;
-          ncmMeta?: unknown;
-        };
-        if (extra.ncm) base.ncm = extra.ncm;
-        if (extra.pcram) base.raw = { ...(base.raw ?? {}), pcram: extra.pcram };
-        if (extra.ncmMeta) base.raw = { ...(base.raw ?? {}), ncmMeta: extra.ncmMeta };
-      }
-      // If we have PCRAM candidates but no resolved NCM, pick the top one as default.
-      // We'll still ask 1–3 questions to validate/refine before quoting when needed.
-      if (!base.ncm) {
-        const meta: any = base?.raw?.ncmMeta;
-        const cands: Array<{ ncmCode: string; title?: string }> = Array.isArray(meta?.pcramCandidates)
-          ? meta.pcramCandidates
-          : [];
-        const pick = cands.find((c) => isValidNcmCode(c?.ncmCode));
-        if (pick) {
-          base.ncm = pick.ncmCode;
-          if (base?.raw?.ncmMeta) base.raw.ncmMeta.ambiguous = true;
-        }
-      }
-      // If we can safely resolve common vehicle cases, do it here to avoid asking basics.
-      maybeAutoResolveKnownVehicle(base);
-      return base;
-    };
-
-    const ensurePcram = async (product: any) => {
-      if (product?.raw?.pcram) return product;
-      if (!product?.ncm) return product;
-      if (!(process.env.PCRAM_USER && process.env.PCRAM_PASS)) return product;
-      const { PcramClient } = await import("@/lib/pcram/pcramClient");
-      const client = new PcramClient();
-      const pcramTimeoutMs = Number(process.env.PCRAM_CALL_TIMEOUT_MS ?? "45000");
-      const pcram = await withTimeout(
-        client.getDetail(String(product.ncm)),
-        pcramTimeoutMs
-      ).catch(() => undefined);
-      if (pcram) {
-        product.raw = { ...(product.raw ?? {}), pcram };
-        // Ensure we persist the PCRAM-validated NCM (authoritative format/value).
-        if (typeof (pcram as any)?.ncmCode === "string" && (pcram as any).ncmCode.trim()) {
-          product.ncm = String((pcram as any).ncmCode).trim();
-        }
-      }
-      else {
-        // Keep the AI-derived NCM even if PCRAM fails, so we don't fall back to "Sin clasificar aún".
-        // Taxes will be estimated until PCRAM can be fetched.
-        product.raw = { ...(product.raw ?? {}), pcramError: true };
-        if (product?.raw?.ncmMeta) product.raw.ncmMeta.ambiguous = true;
-      }
-      return product;
-    };
-
-    const buildProductPreview = (product: any) => {
-      const imgs: string[] = Array.isArray(product?.images)
-        ? product.images
-        : Array.isArray(product?.raw?.urlAnalysis?.imageUrls)
-          ? product.raw.urlAnalysis.imageUrls
-          : [];
-      const imageUrls = imgs
-        .map((x) => String(x || "").trim())
-        .filter(Boolean)
-        .slice(0, 6);
-      const blockedHint = String(product?.raw?.urlAnalysis?.blockedHint ?? "").trim();
-      const showTrafficPlaceholder = !imageUrls.length && (blockedHint === "unusual_traffic" || blockedHint === "fetch_failed");
-      const sourceUrl =
-        typeof product?.url === "string"
-          ? product.url
-          : typeof product?.sourceUrl === "string"
-            ? product.sourceUrl
-            : undefined;
-
-      return {
-        title:
-          typeof product?.displayTitle === "string"
-            ? product.displayTitle
-            : typeof product?.title === "string"
-              ? product.title
-              : undefined,
-        imageUrl: showTrafficPlaceholder ? "/traffic-unusual.png" : imageUrls[0],
-        imageUrls: showTrafficPlaceholder
-          ? ["/traffic-unusual.png"]
-          : imageUrls.length
-            ? imageUrls
-            : undefined,
-        sourceUrl,
-        fobUsd: typeof product?.fobUsd === "number" ? product.fobUsd : undefined,
-        currency: typeof product?.currency === "string" ? product.currency : undefined,
-        price:
-          product?.price && typeof product.price === "object"
-            ? {
-                type: String(product.price.type ?? ""),
-                min:
-                  typeof product.price.min === "number" && Number.isFinite(product.price.min)
-                    ? product.price.min
-                    : null,
-                max:
-                  typeof product.price.max === "number" && Number.isFinite(product.price.max)
-                    ? product.price.max
-                    : null,
-                currency: typeof product.price.currency === "string" ? product.price.currency : "",
-                unit: typeof product.price.unit === "string" ? product.price.unit : "",
-              }
-            : undefined,
-        quantity: typeof product?.quantity === "number" ? product.quantity : undefined,
-        origin: typeof product?.origin === "string" ? product.origin : undefined,
-        supplier: typeof product?.supplier === "string" ? product.supplier : undefined,
-        // rubro/category for downstream PDF/report
-        category:
-          typeof product?.displayCategory === "string"
-            ? product.displayCategory
-            : typeof product?.category === "string"
-              ? product.category
-              : undefined,
-      };
-    };
-
-    const buildAnalysis = (product: any, quoteLike?: any) => {
-      const meta: any = product?.raw?.ncmMeta;
-      const pcram: any = product?.raw?.pcram;
-      const normalizedTitle = cleanProductTitleFromMixedInput(
-        typeof product?.displayTitle === "string" && product.displayTitle.trim()
-          ? product.displayTitle
-          : typeof product?.title === "string" && product.title.trim()
-            ? product.title
-            : userText
       );
 
-      const interventions: string[] = Array.isArray(pcram?.interventions)
-        ? pcram.interventions.map((x: any) => String(x || "").trim()).filter(Boolean).slice(0, 18)
-        : [];
-      const reclassifications: Array<{ label: string; href: string }> = Array.isArray(
-        pcram?.reclassifications
-      )
-        ? pcram.reclassifications
-            .map((x: any) => ({
-              label: String(x?.label ?? "").trim(),
-              href: String(x?.href ?? "").trim(),
-            }))
-            .filter((x: any) => x.label && x.href)
-            .slice(0, 12)
-        : [];
-
-      const ncmCode = typeof product?.ncm === "string" ? product.ncm.trim() : "";
-      const ncmMetaConfidence =
-        typeof meta?.confidence === "number" && Number.isFinite(meta.confidence)
-          ? meta.confidence
-          : null;
-
-      // Simple, conservative flags for UI (avoid speculative scoring).
-      const flags: string[] = [];
-      if (!ncmCode || ncmCode === "9999.99.99") flags.push("ncm_missing");
-      if (meta?.ambiguous === true) flags.push("ncm_ambiguous");
-      if (product?.raw?.pcramError === true) flags.push("pcram_unavailable");
-      if (!interventions.length) flags.push("requirements_unknown");
-
-      const totalMinUsd =
-        typeof quoteLike?.breakdown?.totalMinUsd === "number" ? quoteLike.breakdown.totalMinUsd : null;
-      const totalMaxUsd =
-        typeof quoteLike?.breakdown?.totalMaxUsd === "number" ? quoteLike.breakdown.totalMaxUsd : null;
-
-      return {
-        stage: "quoted",
-        normalizedTitle: normalizedTitle || undefined,
-        ncm: ncmCode && ncmCode !== "9999.99.99" ? ncmCode : undefined,
-        ncmMeta: {
-          source: typeof meta?.source === "string" ? meta.source : undefined,
-          confidence: ncmMetaConfidence,
-          ambiguous: meta?.ambiguous === true ? true : undefined,
-        },
-        pcram: pcram
-          ? {
-              title: typeof pcram?.title === "string" ? pcram.title : undefined,
-              breadcrumbs: Array.isArray(pcram?.breadcrumbs)
-                ? pcram.breadcrumbs.map(String).filter(Boolean).slice(0, 10)
-                : undefined,
-              unit: typeof pcram?.unit === "string" ? pcram.unit : undefined,
-              interventions,
-              reclassifications,
-            }
-          : undefined,
-        timing: { route: "maritime", minDays: 35, maxDays: 55 },
-        totals: totalMinUsd != null && totalMaxUsd != null ? { totalMinUsd, totalMaxUsd } : undefined,
-        flags: flags.length ? flags : undefined,
-        quality:
-          typeof quoteLike?.quality === "number" && Number.isFinite(quoteLike.quality)
-            ? quoteLike.quality
-            : undefined,
-      };
-    };
-
-    const ask = (assistantMessage: string, product?: any, opts?: { stage?: string; questions?: string[] }) => {
-      const res = NextResponse.json({
-        assistantMessage,
-        requestContact: false,
-        productPreview: product ? buildProductPreview(product) : undefined,
-        analysis: {
-          stage: opts?.stage ?? "needs_input",
-          questions: Array.isArray(opts?.questions)
-            ? opts?.questions.map((q) => String(q || "").trim()).filter(Boolean).slice(0, 6)
-            : undefined,
-        },
-      });
-      res.cookies.set("ecomex_anon", anonId, {
-        httpOnly: true,
-        sameSite: "lax",
-        secure: cookieSecure,
-        path: "/",
-        maxAge: 60 * 60 * 24 * 365,
-      });
-      return res;
-    };
-
-    const quoteAndRespond = async (quoteRowId: string | null, product: any) => {
+    const quoteAndRespond = async (quoteRowId: string | null, product: Record<string, unknown>) => {
       const product2 = await ensurePcram(product);
       const isLinkContext = Boolean(
         typeof product2?.url === "string" ||
           typeof product2?.sourceUrl === "string" ||
-          typeof product2?.raw?.urlAnalysis === "object"
+          typeof (product2?.raw as Record<string, unknown> | undefined)?.urlAnalysis === "object"
       );
 
-      // If the NCM is ambiguous (or not PCRAM-validated) and we have follow-up questions,
-      // ask for minimal technical info BEFORE quoting (so we can fetch the real code in PCRAM).
-      const meta: any = product2?.raw?.ncmMeta;
+      const meta = (product2?.raw as Record<string, unknown> | undefined)?.ncmMeta as Record<string, unknown> | undefined;
       const candidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(meta?.pcramCandidates)
-        ? meta.pcramCandidates
+        ? meta!.pcramCandidates as Array<{ ncmCode: string; title?: string }>
         : [];
       const qsFromMeta: string[] = Array.isArray(meta?.missingInfoQuestions)
-        ? meta.missingInfoQuestions.map((q: any) => String(q).trim()).filter(Boolean).slice(0, 4)
+        ? (meta!.missingInfoQuestions as unknown[]).map((q) => String(q).trim()).filter(Boolean).slice(0, 4)
         : [];
-      const qs =
-        qsFromMeta.length
-          ? qsFromMeta
-          : deriveBasicNcmQuestions({
-              hsHeading: meta?.hsHeading,
-              kind: meta?.kind,
-              candidates,
-            });
+      const qs = qsFromMeta.length
+        ? qsFromMeta
+        : deriveBasicNcmQuestions({ hsHeading: meta?.hsHeading as string | undefined, kind: meta?.kind as string | undefined, candidates });
 
-      const hasPcramDetail = Boolean(product2?.raw?.pcram);
-      const wantsPcram =
-        Boolean(process.env.PCRAM_USER && process.env.PCRAM_PASS);
-      const unresolvedNcm = !product2?.ncm || meta?.ambiguous === true;
+      // shouldAskNcmQuestions is intentionally false — system resolves NCM internally.
       const shouldAskNcmQuestions = false;
 
       if (shouldAskNcmQuestions) {
-        const { hidden } = buildHiddenChoiceSet(candidates, product2?.ncm, 5);
-        product2.raw = {
-          ...(product2.raw ?? {}),
-          ncmChoiceOptions: hidden,
-          ncmDisambiguationAsked: true,
-        };
+        const { hidden } = buildHiddenChoiceSet(candidates, product2?.ncm as string | undefined, 5);
+        product2.raw = { ...((product2.raw as Record<string, unknown>) ?? {}), ncmChoiceOptions: hidden, ncmDisambiguationAsked: true };
         if (quoteRowId) {
-          await prisma.quote
-            .update({
-              where: { id: quoteRowId },
-              data: { productJson: product2 as any, stage: "awaiting_product" },
-            })
-            .catch(() => null);
+          await prisma.quote.update({ where: { id: quoteRowId }, data: { productJson: product2 as never, stage: "awaiting_product" } }).catch(() => null);
         } else {
-          await prisma.quote
-            .create({
-              data: {
-                anonId,
-                mode: "quote",
-                userText,
-                sourceUrl: urlInText ?? undefined,
-                productJson: product2 as any,
-                quoteJson: { awaiting: "ncm_disambiguation" } as any,
-                stage: "awaiting_product",
-                userId: userId ?? undefined,
-              },
-            })
-            .catch(() => null);
+          await prisma.quote.create({ data: { anonId, mode: "quote", userText, sourceUrl: urlInText ?? undefined, productJson: product2 as never, quoteJson: { awaiting: "ncm_disambiguation" } as never, stage: "awaiting_product", userId: userId ?? undefined } }).catch(() => null);
         }
         return ask(
-          [
-            "Para **clasificar el NCM** con precisión necesito afinar 1–3 datos técnicos.",
-            "",
-            "Respondeme esto (una sola línea está perfecto):",
-            ...qs.map((q) => `- ${q}`),
-          ].join("\n"),
+          ["Para **clasificar el NCM** con precisión necesito afinar 1–3 datos técnicos.", "", "Respondeme esto (una sola línea está perfecto):", ...qs.map((q) => `- ${q}`)].join("\n"),
           product2,
           { stage: "needs_ncm_details", questions: qs }
         );
       }
 
-      // Strict policy requested by user: do not invent values.
-      // If key facts are missing/unverified, ask for them instead of estimating.
       const noGuessGate = validateNoGuessQuoteInputs(product2, { requireNcm: !isLinkContext });
       if (!noGuessGate.ok) {
         if (quoteRowId) {
-          await prisma.quote
-            .update({
-              where: { id: quoteRowId },
-              data: { productJson: product2 as any, stage: "awaiting_product" },
-            })
-            .catch(() => null);
+          await prisma.quote.update({ where: { id: quoteRowId }, data: { productJson: product2 as never, stage: "awaiting_product" } }).catch(() => null);
         }
         return ask(
-          [
-            "Para darte una cotización precisa necesito:",
-            "",
-            ...noGuessGate.questions.map((q) => `- ${q}`),
-            "",
-            "Con eso te doy el desglose completo.",
-          ].join("\n"),
+          ["Para darte una cotización precisa necesito:", "", ...noGuessGate.questions.map((q) => `- ${q}`), "", "Con eso te doy el desglose completo."].join("\n"),
           product2,
           { stage: "needs_verified_inputs", questions: noGuessGate.questions }
         );
       }
 
-      const quote = await calcImportQuote({
-        mode: "quote",
-        product: product2,
-        rawUserText: userText,
-      });
+      const quote = await calcImportQuote({ mode: "quote", product: product2, rawUserText: userText });
 
       if (quoteRowId) {
-        await prisma.quote
-          .update({
-            where: { id: quoteRowId },
-            data: {
-              productJson: product2 as any,
-              quoteJson: quote as any,
-              totalMinUsd: quote.totalMinUsd,
-              totalMaxUsd: quote.totalMaxUsd,
-              stage: "refined",
-            },
-          })
-          .catch(() => null);
+        await prisma.quote.update({
+          where: { id: quoteRowId },
+          data: { productJson: product2 as never, quoteJson: quote as never, totalMinUsd: quote.totalMinUsd, totalMaxUsd: quote.totalMaxUsd, stage: "refined" },
+        }).catch(() => null);
       } else {
-        await prisma.quote
-          .create({
-            data: {
-              anonId,
-              mode: "quote",
-              userText,
-              sourceUrl: urlInText ?? undefined,
-              productJson: product2 as any,
-              quoteJson: quote as any,
-              totalMinUsd: quote.totalMinUsd,
-              totalMaxUsd: quote.totalMaxUsd,
-              stage: "quoted",
-              userId: userId ?? undefined,
-            },
-          })
-          .catch(() => null);
+        await prisma.quote.create({
+          data: { anonId, mode: "quote", userText, sourceUrl: urlInText ?? undefined, productJson: product2 as never, quoteJson: quote as never, totalMinUsd: quote.totalMinUsd, totalMaxUsd: quote.totalMaxUsd, stage: "quoted", userId: userId ?? undefined },
+        }).catch(() => null);
       }
 
       const ncmUsed =
-        typeof product2?.ncm === "string" && product2.ncm.trim()
-          ? product2.ncm.trim() !== "9999.99.99"
-            ? product2.ncm.trim()
+        typeof product2?.ncm === "string" && (product2.ncm as string).trim()
+          ? (product2.ncm as string).trim() !== "9999.99.99"
+            ? (product2.ncm as string).trim()
             : undefined
           : undefined;
 
-      const res = NextResponse.json({
-        assistantMessage: `${quote.explanation}\n\n${consultingPostQuoteMessage()}`,
-        cards: quote.cards,
-        productPreview: buildProductPreview(product2),
-        ncm: ncmUsed,
-        quality: typeof (quote as any).quality === "number" ? (quote as any).quality : undefined,
-        assumptions: Array.isArray((quote as any).assumptions)
-          ? (quote as any).assumptions
-          : undefined,
-        breakdown: (quote as any)?.breakdown,
-        analysis: buildAnalysis(product2, quote as any),
-        requestContact: false,
-      });
-      res.cookies.set("ecomex_anon", anonId, {
-        httpOnly: true,
-        sameSite: "lax",
-        secure: cookieSecure,
-        path: "/",
-        maxAge: 60 * 60 * 24 * 365,
-      });
-      return res;
+      return setAnonCookie(
+        NextResponse.json({
+          assistantMessage: `${quote.explanation}\n\n${consultingPostQuoteMessage()}`,
+          cards: quote.cards,
+          productPreview: buildProductPreview(product2),
+          ncm: ncmUsed,
+          quality: typeof (quote as Record<string, unknown>).quality === "number" ? (quote as Record<string, unknown>).quality : undefined,
+          assumptions: Array.isArray((quote as Record<string, unknown>).assumptions) ? (quote as Record<string, unknown>).assumptions : undefined,
+          breakdown: (quote as Record<string, unknown>)?.breakdown,
+          analysis: buildAnalysis(product2, userText, quote as Record<string, unknown>),
+          requestContact: false,
+        })
+      );
     };
 
-    // Allow refining the latest quote after it was produced (no active stage),
-    // by sending simple structured updates like "Origen: China" or "Perfil carga: pesada".
+    // ---------- NCM disagreement: reopen last quote for re-classification ----------
+
+    if (!active && disagreesWithNcm) {
+      const last = await prisma.quote.findFirst({ where: { anonId, mode: "quote" }, orderBy: { createdAt: "desc" } }).catch(() => null);
+      if (last) {
+        const product = ((last.productJson as Record<string, unknown>) ?? {}) as Record<string, unknown>;
+        delete product.ncm;
+        if (product?.raw) {
+          const raw = product.raw as Record<string, unknown>;
+          delete raw.pcram;
+          if (raw.ncmMeta) (raw.ncmMeta as Record<string, unknown>).ambiguous = true;
+        }
+
+        const seedText = String(product?.title ?? last.userText ?? "").trim();
+        if (seedText) {
+          const useNcmMotorDisagree = process.env.NCM_CHAT_USE_MOTOR_IN_BUILD_PRODUCT === "1";
+          if (useNcmMotorDisagree) {
+            const { runNcmMotor } = await import("@/lib/clasificar-ncm/runNcmMotor");
+            const motor = await runNcmMotor({ text: seedText, snapshot: { productType: "unknown", status: "idle" }, prevSnapshot: { productType: "unknown", status: "idle" }, messages: [] }).catch(() => null);
+            if (motor) {
+              const rawNext: Record<string, unknown> = { ...((product.raw as Record<string, unknown>) ?? {}) };
+              if (motor.engine.mode === "full") {
+                const pl = motor.engine.pipeline;
+                if (pl.ncmMeta) rawNext.ncmMeta = pl.ncmMeta;
+                if (pl.pcram) rawNext.pcram = pl.pcram;
+              }
+              rawNext.ncmMotor = { confidence: motor.confidence, alternatives: motor.alternatives, ambiguity: motor.ambiguity ?? null };
+              product.raw = rawNext;
+            } else {
+              const { productFromTextPipeline } = await import("@/lib/scraper/productFromTextPipeline");
+              const extra = (await productFromTextPipeline(seedText).catch(() => ({}))) as Record<string, unknown>;
+              if (extra?.ncmMeta) product.raw = { ...((product.raw as Record<string, unknown>) ?? {}), ncmMeta: extra.ncmMeta };
+            }
+          } else {
+            const { productFromTextPipeline } = await import("@/lib/scraper/productFromTextPipeline");
+            const extra = (await productFromTextPipeline(seedText).catch(() => ({}))) as Record<string, unknown>;
+            if (extra?.ncmMeta) product.raw = { ...((product.raw as Record<string, unknown>) ?? {}), ncmMeta: extra.ncmMeta };
+          }
+        }
+
+        const candidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(
+          (product?.raw as Record<string, unknown> | undefined)?.ncmMeta &&
+            ((product.raw as Record<string, unknown>).ncmMeta as Record<string, unknown>)?.pcramCandidates
+        )
+          ? ((product.raw as Record<string, unknown>).ncmMeta as Record<string, unknown>).pcramCandidates as Array<{ ncmCode: string; title?: string }>
+          : [];
+
+        if (candidates.length) {
+          const { hidden } = buildHiddenChoiceSet(candidates, product?.ncm as string | undefined, 5);
+          product.raw = { ...((product.raw as Record<string, unknown>) ?? {}), ncmChoiceOptions: hidden };
+          await prisma.quote.update({ where: { id: last.id }, data: { productJson: product as never, stage: "awaiting_product" } }).catch(() => null);
+          return setAnonCookie(
+            NextResponse.json({
+              assistantMessage: ["Perfecto, lo recalculamos.", "", "Para estimar **impuestos** con precisión necesito afinar 1–3 datos técnicos del producto.", "Respondeme con lo que sepas (en una sola línea está perfecto)."].join("\n"),
+              requestContact: false,
+            })
+          );
+        }
+      }
+    }
+
+    // ---------- Refinement: update origin/shippingProfile on last quote ----------
+
     if (!active && mode === "quote") {
       const upd = parseAssumptionUpdate(userText);
       if (upd) {
-        const last = await prisma.quote
-          .findFirst({ where: { anonId, mode: "quote" }, orderBy: { createdAt: "desc" } })
-          .catch(() => null);
+        const last = await prisma.quote.findFirst({ where: { anonId, mode: "quote" }, orderBy: { createdAt: "desc" } }).catch(() => null);
         if (last) {
-          const product: any = (last.productJson as any) ?? {};
+          const product = ((last.productJson as Record<string, unknown>) ?? {}) as Record<string, unknown>;
           applyAssumptionUpdate(product, upd);
           return await quoteAndRespond(last.id, product);
         }
       }
     }
 
+    // ---------- Active quote: continue guided flow ----------
+
     if (active) {
-      const product: any = (active.productJson as any) ?? {};
+      const product = ((active.productJson as Record<string, unknown>) ?? {}) as Record<string, unknown>;
       const existingUrl =
-        typeof product?.url === "string"
-          ? product.url
-          : typeof product?.sourceUrl === "string"
-            ? product.sourceUrl
-            : "";
+        typeof product?.url === "string" ? product.url as string
+          : typeof product?.sourceUrl === "string" ? product.sourceUrl as string
+          : "";
       const sameUrl =
         urlInText && existingUrl
           ? normalizeUrl(urlInText) === normalizeUrl(existingUrl)
           : false;
 
-      // Update known fields from this message
-      if (typeof priceUsd === "number") {
-        product.fobUsd = priceUsd;
-        product.currency = "USD";
-      }
-      if (typeof quantity === "number") {
-        product.quantity = quantity;
-      }
+      if (typeof priceUsd === "number") { product.fobUsd = priceUsd; product.currency = "USD"; }
+      if (typeof quantity === "number") { product.quantity = quantity; }
 
-      // If user is providing product now
       if (active.stage === "awaiting_product") {
-        // If user says the shown NCM is wrong, clear it and force a re-pick from candidates.
         if (disagreesWithNcm) {
           delete product.ncm;
           if (product?.raw) {
-            delete product.raw.pcram;
-            if (product.raw.ncmMeta) product.raw.ncmMeta.ambiguous = true;
+            const raw = product.raw as Record<string, unknown>;
+            delete raw.pcram;
+            if (raw.ncmMeta) (raw.ncmMeta as Record<string, unknown>).ambiguous = true;
           }
-          // If we don't have candidates stored, re-run the text pipeline from the current title.
-          const hasCandidates = Array.isArray(product?.raw?.ncmMeta?.pcramCandidates);
+          const hasCandidates = Array.isArray((product?.raw as Record<string, unknown> | undefined)?.ncmMeta && ((product.raw as Record<string, unknown>).ncmMeta as Record<string, unknown>)?.pcramCandidates);
           if (!hasCandidates) {
             const built = await buildProductFromInput(String(product?.title ?? ""));
             Object.assign(product, built);
           }
-          await prisma.quote
-            .update({ where: { id: active.id }, data: { productJson: product as any } })
-            .catch(() => null);
+          await prisma.quote.update({ where: { id: active.id }, data: { productJson: product as never } }).catch(() => null);
         }
 
-        // We keep classification options internal; user answers questions and we resolve internally.
-        const prevHidden: Array<{ ncmCode: string; title?: string }> = Array.isArray(
-          product?.raw?.ncmChoiceOptions
-        )
-          ? product.raw.ncmChoiceOptions
+        const prevHidden: Array<{ ncmCode: string; title?: string }> = Array.isArray((product?.raw as Record<string, unknown> | undefined)?.ncmChoiceOptions)
+          ? (product.raw as Record<string, unknown>).ncmChoiceOptions as Array<{ ncmCode: string; title?: string }>
           : [];
-        const isTechAnswer =
-          prevHidden.length > 0 && !urlInText && looksLikeClassificationAnswer(userText);
+        const isTechAnswer = prevHidden.length > 0 && !urlInText && looksLikeClassificationAnswer(userText);
         let resolvedViaTechAnswer = false;
+
         if (prevHidden.length) {
           const hinted = tryPickNcmCandidateFromHints(prevHidden, userText);
           if (hinted?.ncmCode) {
             product.ncm = hinted.ncmCode;
-            if (product?.raw?.ncmMeta) product.raw.ncmMeta.ambiguous = false;
-            delete product.raw.ncmChoiceOptions;
-            await prisma.quote
-              .update({ where: { id: active.id }, data: { productJson: product as any } })
-              .catch(() => null);
+            const raw = product.raw as Record<string, unknown> | undefined;
+            if (raw?.ncmMeta) (raw.ncmMeta as Record<string, unknown>).ambiguous = false;
+            delete (product.raw as Record<string, unknown>).ncmChoiceOptions;
+            await prisma.quote.update({ where: { id: active.id }, data: { productJson: product as never } }).catch(() => null);
             resolvedViaTechAnswer = true;
           }
         }
 
-        // If the user answered classification questions but we couldn't resolve via simple hint rules,
-        // re-run the text pipeline using their answer as extra evidence (IA "inteligencia propia").
-        if (
-          isTechAnswer &&
-          !resolvedViaTechAnswer &&
-          product?.raw?.ncmDisambiguationAsked === true
-        ) {
+        if (isTechAnswer && !resolvedViaTechAnswer && (product?.raw as Record<string, unknown> | undefined)?.ncmDisambiguationAsked === true) {
           const seed = String(product?.title ?? "").trim();
           const combined = [seed, userText].filter(Boolean).join("\n");
           if (combined.trim().length >= 8) {
-            const useNcmMotorInDisambig =
-              process.env.NCM_CHAT_USE_MOTOR_IN_BUILD_PRODUCT === "1";
-
+            const useNcmMotorInDisambig = process.env.NCM_CHAT_USE_MOTOR_IN_BUILD_PRODUCT === "1";
             if (useNcmMotorInDisambig) {
               const { runNcmMotor } = await import("@/lib/clasificar-ncm/runNcmMotor");
-              const prevAmb = (product?.raw?.ncmMotor as { ambiguity?: unknown } | undefined)
-                ?.ambiguity;
-              const ncmHint = typeof product?.ncm === "string" ? product.ncm.trim() : "";
+              const prevAmb = ((product?.raw as Record<string, unknown> | undefined)?.ncmMotor as Record<string, unknown> | undefined)?.ambiguity;
+              const ncmHint = typeof product?.ncm === "string" ? (product.ncm as string).trim() : "";
               const motor = await runNcmMotor({
                 text: combined,
-                snapshot: {
-                  productType: "unknown",
-                  status: "idle",
-                  ...(ncmHint ? { recommendedNcm: ncmHint } : {}),
-                },
-                prevSnapshot: {
-                  productType: "unknown",
-                  status: "idle",
-                  ...(prevAmb != null && typeof prevAmb === "object"
-                    ? { ambiguity: prevAmb as any }
-                    : {}),
-                },
-                messages: [
-                  {
-                    id: "ncm-disambiguation",
-                    role: "user" as const,
-                    content: userText,
-                    ts: Date.now(),
-                  },
-                ],
+                snapshot: { productType: "unknown", status: "idle", ...(ncmHint ? { recommendedNcm: ncmHint } : {}) },
+                prevSnapshot: { productType: "unknown", status: "idle", ...(prevAmb != null && typeof prevAmb === "object" ? { ambiguity: prevAmb as never } : {}) },
+                messages: [{ id: "ncm-disambiguation", role: "user" as const, content: userText, ts: Date.now() }],
               }).catch(() => null);
 
               if (motor) {
-                const rawNext: Record<string, unknown> = { ...(product.raw ?? {}) };
+                const rawNext: Record<string, unknown> = { ...((product.raw as Record<string, unknown>) ?? {}) };
                 if (motor.engine.mode === "full") {
                   const pl = motor.engine.pipeline;
                   if (pl.ncmMeta) rawNext.ncmMeta = pl.ncmMeta;
                   if (pl.pcram) rawNext.pcram = pl.pcram;
                 }
-                rawNext.ncmMotor = {
-                  confidence: motor.confidence,
-                  alternatives: motor.alternatives,
-                  ambiguity: motor.ambiguity ?? null,
-                };
+                rawNext.ncmMotor = { confidence: motor.confidence, alternatives: motor.alternatives, ambiguity: motor.ambiguity ?? null };
                 delete rawNext.ncmChoiceOptions;
                 product.raw = rawNext;
-                if (motor.ncm_code) {
-                  product.ncm = motor.ncm_code;
-                }
+                if (motor.ncm_code) product.ncm = motor.ncm_code;
               } else {
-                const { productFromTextPipeline } = await import(
-                  "@/lib/scraper/productFromTextPipeline"
-                );
-                const extra = (await productFromTextPipeline(combined).catch(() => ({}))) as any;
+                const { productFromTextPipeline } = await import("@/lib/scraper/productFromTextPipeline");
+                const extra = (await productFromTextPipeline(combined).catch(() => ({}))) as Record<string, unknown>;
                 if (extra?.ncm) product.ncm = extra.ncm;
-                if (extra?.pcram) product.raw = { ...(product.raw ?? {}), pcram: extra.pcram };
-                if (extra?.ncmMeta) product.raw = { ...(product.raw ?? {}), ncmMeta: extra.ncmMeta };
-                delete product.raw.ncmChoiceOptions;
+                if (extra?.pcram) product.raw = { ...((product.raw as Record<string, unknown>) ?? {}), pcram: extra.pcram };
+                if (extra?.ncmMeta) product.raw = { ...((product.raw as Record<string, unknown>) ?? {}), ncmMeta: extra.ncmMeta };
+                delete (product.raw as Record<string, unknown>).ncmChoiceOptions;
               }
             } else {
-              const { productFromTextPipeline } = await import(
-                "@/lib/scraper/productFromTextPipeline"
-              );
-              const extra = (await productFromTextPipeline(combined).catch(() => ({}))) as any;
+              const { productFromTextPipeline } = await import("@/lib/scraper/productFromTextPipeline");
+              const extra = (await productFromTextPipeline(combined).catch(() => ({}))) as Record<string, unknown>;
               if (extra?.ncm) product.ncm = extra.ncm;
-              if (extra?.pcram) product.raw = { ...(product.raw ?? {}), pcram: extra.pcram };
-              if (extra?.ncmMeta) product.raw = { ...(product.raw ?? {}), ncmMeta: extra.ncmMeta };
-              delete product.raw.ncmChoiceOptions;
+              if (extra?.pcram) product.raw = { ...((product.raw as Record<string, unknown>) ?? {}), pcram: extra.pcram };
+              if (extra?.ncmMeta) product.raw = { ...((product.raw as Record<string, unknown>) ?? {}), ncmMeta: extra.ncmMeta };
+              delete (product.raw as Record<string, unknown>).ncmChoiceOptions;
             }
-            await prisma.quote
-              .update({ where: { id: active.id }, data: { productJson: product as any } })
-              .catch(() => null);
+            await prisma.quote.update({ where: { id: active.id }, data: { productJson: product as never } }).catch(() => null);
             resolvedViaTechAnswer = Boolean(product?.ncm);
           }
         }
 
-        // If we're answering the technical questions and we already have a resolved classification,
-        // continue the guided flow (price → qty) even if the user text "looks like product".
         if (isTechAnswer && (resolvedViaTechAnswer || Boolean(product?.ncm))) {
-          await prisma.quote
-            .update({ where: { id: active.id }, data: { productJson: product as any } })
-            .catch(() => null);
+          await prisma.quote.update({ where: { id: active.id }, data: { productJson: product as never } }).catch(() => null);
           if (typeof product.fobUsd !== "number") {
-            await prisma.quote
-              .update({ where: { id: active.id }, data: { stage: "awaiting_price" } })
-              .catch(() => null);
-            return ask(
-              "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
-              product
-            );
+            await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_price" } }).catch(() => null);
+            return ask("Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)", product);
           }
           if (typeof product.quantity !== "number") {
-            await prisma.quote
-              .update({ where: { id: active.id }, data: { stage: "awaiting_quantity" } })
-              .catch(() => null);
+            await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_quantity" } }).catch(() => null);
             return ask("Gracias. ¿Cuál es la **cantidad** a importar? (ej: `500`)", product);
           }
           return await quoteAndRespond(active.id, product);
         }
 
-        // Classification disambiguation: keep it internal; ask for minimal technical info.
-        const ncmMeta: any = product?.raw?.ncmMeta;
-        const candidates: Array<{ ncmCode: string; title?: string }> =
-          Array.isArray(ncmMeta?.pcramCandidates) ? ncmMeta.pcramCandidates : [];
-
+        const ncmMeta = (product?.raw as Record<string, unknown> | undefined)?.ncmMeta as Record<string, unknown> | undefined;
+        const candidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(ncmMeta?.pcramCandidates)
+          ? ncmMeta!.pcramCandidates as Array<{ ncmCode: string; title?: string }>
+          : [];
         const ncmUnresolved = !product?.ncm || ncmMeta?.ambiguous === true;
         const qsNowFromMeta: string[] = Array.isArray(ncmMeta?.missingInfoQuestions)
-          ? ncmMeta.missingInfoQuestions
-              .map((q: any) => String(q).trim())
-              .filter(Boolean)
-              .slice(0, 4)
+          ? (ncmMeta!.missingInfoQuestions as unknown[]).map((q) => String(q).trim()).filter(Boolean).slice(0, 4)
           : [];
-        const qsNow =
-          qsNowFromMeta.length
-            ? qsNowFromMeta
-            : deriveBasicNcmQuestions({
-                hsHeading: ncmMeta?.hsHeading,
-                kind: ncmMeta?.kind,
-                candidates,
-              });
-        if (false) {
-          const { hidden } = buildHiddenChoiceSet(candidates, product?.ncm, 5);
-          product.raw = {
-            ...(product.raw ?? {}),
-            ncmChoiceOptions: hidden,
-            ncmDisambiguationAsked: true,
-          };
-          await prisma.quote
-            .update({ where: { id: active!.id }, data: { productJson: product as any } })
-            .catch(() => null);
-          return ask(
-            [
-              "Para **clasificar el NCM** con precisión, necesito afinar 1–3 datos técnicos.",
-              "",
-              "Respondeme esto (una sola línea está perfecto):",
-              ...qsNow.map((q) => `- ${q}`),
-              "",
-              "Después seguimos con el precio y la cantidad.",
-            ].join("\n"),
-            product
-          );
-        }
+        const qsNow = qsNowFromMeta.length
+          ? qsNowFromMeta
+          : deriveBasicNcmQuestions({ hsHeading: ncmMeta?.hsHeading as string | undefined, kind: ncmMeta?.kind as string | undefined, candidates });
 
         if (candidates.length >= 2 && ncmUnresolved) {
-          // If AI already recognized the vehicle/product with decent confidence, don't stop here.
-          // We'll continue the flow and quote with conservative ranges if needed.
           if (shouldSkipTechnicalQuestions(product)) {
             if (typeof product.fobUsd !== "number") {
-              await prisma.quote
-                .update({ where: { id: active.id }, data: { stage: "awaiting_price" } })
-                .catch(() => null);
-              return ask(
-                "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
-                product
-              );
+              await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_price" } }).catch(() => null);
+              return ask("Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)", product);
             }
             if (typeof product.quantity !== "number") {
-              await prisma.quote
-                .update({ where: { id: active.id }, data: { stage: "awaiting_quantity" } })
-                .catch(() => null);
+              await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_quantity" } }).catch(() => null);
               return ask("Gracias. ¿Cuál es la **cantidad** a importar? (ej: `500`)", product);
             }
             return await quoteAndRespond(active.id, product);
@@ -1857,83 +566,43 @@ export async function POST(req: Request) {
             product.ncm = explicitNcm;
           } else {
             const t = userText.toLowerCase();
-            const pick = (pred: (title: string) => boolean) =>
-              candidates.find((c) => pred(String(c.title ?? "")));
-
+            const pick = (pred: (title: string) => boolean) => candidates.find((c) => pred(String(c.title ?? "")));
             const isParts = /(parte|partes|repuesto|repuestos|componente|componentes)/i.test(t);
             const isComplete = /(completo|equipo|maquina|máquina|unidad)/i.test(t);
-
             if (isParts) {
-              const c =
-                pick((title) => /partes?|repuestos?/i.test(title)) ??
-                pick((title) => /^de\s+ascensor/i.test(title));
+              const c = pick((title) => /partes?|repuestos?/i.test(title)) ?? pick((title) => /^de\s+ascensor/i.test(title));
               if (c) product.ncm = c.ncmCode;
             } else if (isComplete) {
-              const c =
-                pick((title) => /ascensor|montacarg|elevador/i.test(title) && !/partes?/i.test(title)) ??
-                candidates[0];
+              const c = pick((title) => /ascensor|montacarg|elevador/i.test(title) && !/partes?/i.test(title)) ?? candidates[0];
               if (c) product.ncm = c.ncmCode;
             }
           }
 
-          // Mark ambiguity resolved when user chooses or pastes a NCM.
-          if (product?.ncm && product?.raw?.ncmMeta) {
-            product.raw.ncmMeta.ambiguous = false;
-          }
+          if (product?.ncm && ncmMeta) ncmMeta.ambiguous = false;
 
           if (!product?.ncm) {
-            const { hidden } = buildHiddenChoiceSet(candidates, product?.ncm, 5);
-            product.raw = {
-              ...(product.raw ?? {}),
-              ncmChoiceOptions: hidden,
-              ncmDisambiguationAsked: true,
-            };
-            await prisma.quote
-              .update({ where: { id: active.id }, data: { productJson: product as any } })
-              .catch(() => null);
-
+            const { hidden } = buildHiddenChoiceSet(candidates, product?.ncm as string | undefined, 5);
+            product.raw = { ...((product.raw as Record<string, unknown>) ?? {}), ncmChoiceOptions: hidden, ncmDisambiguationAsked: true };
+            await prisma.quote.update({ where: { id: active.id }, data: { productJson: product as never } }).catch(() => null);
             const qs: string[] = Array.isArray(ncmMeta?.missingInfoQuestions)
-              ? ncmMeta.missingInfoQuestions
-                  .map((q: any) => String(q).trim())
-                  .filter(Boolean)
-                  .slice(0, 4)
+              ? (ncmMeta!.missingInfoQuestions as unknown[]).map((q) => String(q).trim()).filter(Boolean).slice(0, 4)
               : [];
             if (qs.length) {
               return ask(
-                [
-                  "Para estimar **impuestos** con precisión, necesito afinar 1–3 datos técnicos.",
-                  "",
-                  [
-                    "Respondeme esto (podés contestar en una sola línea, por ejemplo: `<=5t, no basculante, no frigorifico`):",
-                    ...qs.map((q) => `- ${q}`),
-                    "",
-                  ].join("\n"),
-                  "Con eso ajusto la clasificación internamente y seguimos con el precio/cantidad.",
-                ]
-                  .filter(Boolean)
-                  .join("\n")
+                ["Para estimar **impuestos** con precisión, necesito afinar 1–3 datos técnicos.", "", ["Respondeme esto (podés contestar en una sola línea, por ejemplo: `<=5t, no basculante, no frigorifico`):", ...qs.map((q) => `- ${q}`), ""].join("\n"), "Con eso ajusto la clasificación internamente y seguimos con el precio/cantidad."].filter(Boolean).join("\n")
               );
             }
           }
 
-          await prisma.quote
-            .update({ where: { id: active.id }, data: { productJson: product as any } })
-            .catch(() => null);
+          await prisma.quote.update({ where: { id: active.id }, data: { productJson: product as never } }).catch(() => null);
 
-          // If we resolved NCM via the disambiguation answer, continue the guided flow.
           if (product?.ncm && !(urlInText || (looksLikeProductText(userText) && !isTechAnswer))) {
             if (typeof product.fobUsd !== "number") {
-              await prisma.quote
-                .update({ where: { id: active.id }, data: { stage: "awaiting_price" } })
-                .catch(() => null);
-              return ask(
-                "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)"
-              );
+              await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_price" } }).catch(() => null);
+              return ask("Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)");
             }
             if (typeof product.quantity !== "number") {
-              await prisma.quote
-                .update({ where: { id: active.id }, data: { stage: "awaiting_quantity" } })
-                .catch(() => null);
+              await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_quantity" } }).catch(() => null);
               return ask("Gracias. ¿Cuál es la **cantidad** a importar? (ej: `500 unidades`)");
             }
             return await quoteAndRespond(active.id, product);
@@ -1941,435 +610,196 @@ export async function POST(req: Request) {
         }
 
         if (urlInText || looksLikeProductText(userText)) {
-          // If we are in the middle of the "technical questions" step, don't treat those answers
-          // as a new product description (otherwise we overwrite title and loop).
-          if (isTechAnswer) {
-            // No-op: we'll resolve via hints parsing / disambiguation below.
-          } else {
-          const built = await buildProductFromInput(userText);
-          // preserve previously captured price/qty, but ALWAYS let the new product overwrite title/details
-          const merged: any = { ...product, ...(built as any) };
-          if (typeof product?.fobUsd === "number") merged.fobUsd = product.fobUsd;
-          if (typeof product?.quantity === "number") merged.quantity = product.quantity;
-          if (typeof product?.currency === "string") merged.currency = product.currency;
-          await prisma.quote
-            .update({
-              where: { id: active.id },
-              data: { productJson: merged as any },
-            })
-            .catch(() => null);
+          if (!isTechAnswer) {
+            const built = await buildProductFromInput(userText);
+            const merged: Record<string, unknown> = { ...product, ...built };
+            if (typeof product?.fobUsd === "number") merged.fobUsd = product.fobUsd;
+            if (typeof product?.quantity === "number") merged.quantity = product.quantity;
+            if (typeof product?.currency === "string") merged.currency = product.currency;
+            await prisma.quote.update({ where: { id: active.id }, data: { productJson: merged as never } }).catch(() => null);
 
-          // If PCRAM candidates are ambiguous, ask before moving to price/qty.
-          const mergedMeta: any = (merged as any)?.raw?.ncmMeta;
-          const mergedCandidates: Array<{ ncmCode: string; title?: string }> =
-            Array.isArray(mergedMeta?.pcramCandidates) ? mergedMeta.pcramCandidates : [];
-          const qsMergedFromMeta: string[] = Array.isArray(mergedMeta?.missingInfoQuestions)
-            ? mergedMeta.missingInfoQuestions
-                .map((q: any) => String(q).trim())
-                .filter(Boolean)
-                .slice(0, 4)
-            : [];
-          const qsMerged =
-            qsMergedFromMeta.length
+            const mergedMeta = (merged?.raw as Record<string, unknown> | undefined)?.ncmMeta as Record<string, unknown> | undefined;
+            const mergedCandidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(mergedMeta?.pcramCandidates)
+              ? mergedMeta!.pcramCandidates as Array<{ ncmCode: string; title?: string }>
+              : [];
+            const qsMergedFromMeta: string[] = Array.isArray(mergedMeta?.missingInfoQuestions)
+              ? (mergedMeta!.missingInfoQuestions as unknown[]).map((q) => String(q).trim()).filter(Boolean).slice(0, 4)
+              : [];
+            const qsMerged = qsMergedFromMeta.length
               ? qsMergedFromMeta
-              : deriveBasicNcmQuestions({
-                  hsHeading: mergedMeta?.hsHeading,
-                  kind: mergedMeta?.kind,
-                  candidates: mergedCandidates,
-                });
-          if (false) {
-            const { hidden } = buildHiddenChoiceSet(mergedCandidates, (merged as any)?.ncm, 5);
-            (merged as any).raw = {
-              ...((merged as any).raw ?? {}),
-              ncmChoiceOptions: hidden,
-              ncmDisambiguationAsked: true,
-            };
-            await prisma.quote
-              .update({ where: { id: active!.id }, data: { productJson: merged as any } })
-              .catch(() => null);
+              : deriveBasicNcmQuestions({ hsHeading: mergedMeta?.hsHeading as string | undefined, kind: mergedMeta?.kind as string | undefined, candidates: mergedCandidates });
 
-            return ask(
-              [
-                "Para **clasificar el NCM** con precisión, necesito afinar 1–3 datos técnicos.",
-                "",
-                "Respondeme esto (una sola línea está perfecto):",
-                ...qsMerged.map((q) => `- ${q}`),
-                "",
-                "Después seguimos con el precio y la cantidad.",
-              ].join("\n"),
-              merged
-            );
-          }
-
-          // decide next step
-          if (typeof merged.fobUsd !== "number") {
-            await prisma.quote
-              .update({ where: { id: active.id }, data: { stage: "awaiting_price" } })
-              .catch(() => null);
-            return ask(
-              "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)"
-            );
-          }
-          if (typeof merged.quantity !== "number") {
-            await prisma.quote
-              .update({
-                where: { id: active.id },
-                data: { stage: "awaiting_quantity" },
-              })
-              .catch(() => null);
-            return ask(
-              "Gracias. ¿Cuál es la **cantidad** a importar? (ej: `500 unidades`)"
-            );
-          }
-          return await quoteAndRespond(active.id, merged);
+            if (typeof merged.fobUsd !== "number") {
+              await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_price" } }).catch(() => null);
+              return ask("Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)");
+            }
+            if (typeof merged.quantity !== "number") {
+              await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_quantity" } }).catch(() => null);
+              return ask("Gracias. ¿Cuál es la **cantidad** a importar? (ej: `500 unidades`)");
+            }
+            return await quoteAndRespond(active.id, merged);
           }
         }
 
-        // If we already have a product context (URL/title) and the user is clearly answering
-        // price/quantity, don't loop back to "qué producto".
         const hasContext =
           typeof product?.title === "string" ||
           typeof product?.url === "string" ||
           typeof product?.sourceUrl === "string";
         if (hasContext) {
-          await prisma.quote
-            .update({ where: { id: active.id }, data: { productJson: product as any } })
-            .catch(() => null);
-
+          await prisma.quote.update({ where: { id: active.id }, data: { productJson: product as never } }).catch(() => null);
           if (typeof product.fobUsd !== "number") {
-            await prisma.quote
-              .update({ where: { id: active.id }, data: { stage: "awaiting_price" } })
-              .catch(() => null);
-            return ask(
-              "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
-              product
-            );
+            await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_price" } }).catch(() => null);
+            return ask("Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)", product);
           }
           if (typeof product.quantity !== "number") {
-            await prisma.quote
-              .update({ where: { id: active.id }, data: { stage: "awaiting_quantity" } })
-              .catch(() => null);
+            await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_quantity" } }).catch(() => null);
             return ask("Gracias. ¿Cuál es la **cantidad** a importar? (ej: `500 unidades`)", product);
           }
           return await quoteAndRespond(active.id, product);
         }
 
-        return ask(
-          "Decime **qué producto** querés importar (o pegá el link del proveedor). Ej: `autoelevador eléctrico 3T`."
-        );
+        return ask("Decime **qué producto** querés importar (o pegá el link del proveedor). Ej: `autoelevador eléctrico 3T`.");
       }
 
       if (active.stage === "awaiting_price") {
-        // If the user types a NEW product while we were waiting for price (common when a previous
-        // quote is still active), treat it as a product switch and reset the flow.
         const hardPrice = parseUnitPriceUsdWithMode(userText, { allowBareNumber: false });
         const hardQty = parseQuantityWithMode(userText, { allowBareNumber: false });
         const looksLikeNewProduct =
-          (urlInText || looksLikeProductText(userText)) &&
-          !sameUrl &&
-          hardPrice == null &&
-          hardQty == null &&
-          !looksLikeJustNumber(userText);
+          (urlInText || looksLikeProductText(userText)) && !sameUrl && hardPrice == null && hardQty == null && !looksLikeJustNumber(userText);
+
         if (looksLikeNewProduct) {
           const built = await buildProductFromInput(userText);
-          // Reset prior captured fields to avoid mixing products.
-          // NOTE: if this was a URL, we keep scraped price/currency to avoid re-asking.
-          if (!urlInText) {
-            delete (built as any).fobUsd;
-            delete (built as any).currency;
+          if (!urlInText) { delete (built as Record<string, unknown>).fobUsd; delete (built as Record<string, unknown>).currency; }
+          delete (built as Record<string, unknown>).quantity;
+          await prisma.quote.update({
+            where: { id: active.id },
+            data: { productJson: built as never, stage: typeof (built as Record<string, unknown>).fobUsd === "number" ? "awaiting_quantity" : "awaiting_price" },
+          }).catch(() => null);
+          if (typeof (built as Record<string, unknown>).fobUsd === "number") {
+            if (typeof (built as Record<string, unknown>).quantity !== "number") return ask("Perfecto. ¿Cuál es la **cantidad** a importar? (ej: `500`)", built as Record<string, unknown>);
+            return await quoteAndRespond(active.id, built as Record<string, unknown>);
           }
-          delete (built as any).quantity;
-
-          const builtMeta: any = (built as any)?.raw?.ncmMeta;
-          const builtCandidates: Array<{ ncmCode: string; title?: string }> =
-            Array.isArray(builtMeta?.pcramCandidates) ? builtMeta.pcramCandidates : [];
-          // If the input is a supplier link, don't block the flow with technical questions yet.
-          // We'll continue with price/quantity first and refine classification later if needed.
-          if (
-            urlInText &&
-            builtCandidates.length >= 2 &&
-            (builtMeta?.ambiguous === true || !(built as any)?.ncm)
-          ) {
-            const { hidden } = buildHiddenChoiceSet(builtCandidates, (built as any)?.ncm, 5);
-            (built as any).raw = { ...((built as any).raw ?? {}), ncmChoiceOptions: hidden };
-          }
-
-          await prisma.quote
-            .update({
-              where: { id: active.id },
-              data: {
-                productJson: built as any,
-                stage: typeof (built as any).fobUsd === "number" ? "awaiting_quantity" : "awaiting_price",
-              },
-            })
-            .catch(() => null);
-          if (typeof (built as any).fobUsd === "number") {
-            if (typeof (built as any).quantity !== "number") {
-              return ask("Perfecto. ¿Cuál es la **cantidad** a importar? (ej: `500`)", built);
-            }
-            return await quoteAndRespond(active.id, built);
-          }
-          return ask(
-            "Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)",
-            built
-          );
+          return ask("Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)", built as Record<string, unknown>);
         }
 
-        // If they also provided product details now, enrich context.
         if (urlInText) {
           const built = await buildProductFromInput(userText);
           Object.assign(product, built);
         }
 
         if (typeof product.fobUsd !== "number") {
-          // In price stage, accept a bare number as USD price (as long as it's not a quantity message).
           const loosePrice = parseUnitPriceUsdWithMode(userText, { allowBareNumber: true });
-          if (typeof loosePrice === "number") {
-            product.fobUsd = loosePrice;
-            product.currency = "USD";
-          }
+          if (typeof loosePrice === "number") { product.fobUsd = loosePrice; product.currency = "USD"; }
         }
 
         if (typeof product.fobUsd !== "number") {
-          return ask(
-            "Necesito el **precio unitario en USD** para calcular el total. Ej: `USD 120` (si ponés solo el número, asumimos USD).",
-            product
-          );
+          return ask("Necesito el **precio unitario en USD** para calcular el total. Ej: `USD 120` (si ponés solo el número, asumimos USD).", product);
         }
-        await prisma.quote
-          .update({ where: { id: active.id }, data: { productJson: product as any } })
-          .catch(() => null);
+        await prisma.quote.update({ where: { id: active.id }, data: { productJson: product as never } }).catch(() => null);
 
         if (typeof product.quantity !== "number") {
-          await prisma.quote
-            .update({
-              where: { id: active.id },
-              data: { stage: "awaiting_quantity" },
-            })
-            .catch(() => null);
+          await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_quantity" } }).catch(() => null);
           return ask("Perfecto. ¿Cuál es la **cantidad** a importar? (ej: `500`)", product);
         }
         return await quoteAndRespond(active.id, product);
       }
 
       if (active.stage === "awaiting_quantity") {
-        // Allow user to provide product again (corrections) while awaiting quantity.
-        const qNow =
-          userProvidedUnitPrice(userTextSansUrl)
-            ? null
-            : parseQuantityWithMode(userTextSansUrl, { allowBareNumber: true });
-        if (
-          qNow == null &&
-          (urlInText || looksLikeProductText(userText)) &&
-          !sameUrl &&
-          !looksLikeJustNumber(userText)
-        ) {
-          // Treat as a product switch/correction. Reset captured fields to avoid mixing.
+        const qNow = userProvidedUnitPrice(userTextSansUrl)
+          ? null
+          : parseQuantityWithMode(userTextSansUrl, { allowBareNumber: true });
+
+        if (qNow == null && (urlInText || looksLikeProductText(userText)) && !sameUrl && !looksLikeJustNumber(userText)) {
           const built = await buildProductFromInput(userText);
-          // Keep scraped price/currency when the switch is coming from a URL.
-          if (!urlInText) {
-            delete (built as any).fobUsd;
-            delete (built as any).currency;
-          }
-          delete (built as any).quantity;
+          if (!urlInText) { delete (built as Record<string, unknown>).fobUsd; delete (built as Record<string, unknown>).currency; }
+          delete (built as Record<string, unknown>).quantity;
           Object.assign(product, built);
-          // If new product requires technical disambiguation, go back to that step.
-          const builtMeta: any = (built as any)?.raw?.ncmMeta;
-          const builtCandidates: Array<{ ncmCode: string; title?: string }> =
-            Array.isArray(builtMeta?.pcramCandidates) ? builtMeta.pcramCandidates : [];
-          // If the input is a supplier link, don't block the flow with technical questions yet.
-          if (
-            urlInText &&
-            builtCandidates.length >= 2 &&
-            (builtMeta?.ambiguous === true || !(product as any)?.ncm)
-          ) {
-            const { hidden } = buildHiddenChoiceSet(builtCandidates, (product as any)?.ncm, 5);
-            product.raw = { ...(product.raw ?? {}), ncmChoiceOptions: hidden };
-          } else if (
-            builtCandidates.length >= 2 &&
-            (builtMeta?.ambiguous === true || !(product as any)?.ncm)
-          ) {
-            const { hidden } = buildHiddenChoiceSet(builtCandidates, (product as any)?.ncm, 5);
-            product.raw = { ...(product.raw ?? {}), ncmChoiceOptions: hidden };
-            await prisma.quote
-              .update({
-                where: { id: active.id },
-                data: { productJson: product as any, stage: "awaiting_product" },
-              })
-              .catch(() => null);
+
+          const builtMeta = (built as Record<string, unknown>)?.raw && ((built as Record<string, unknown>).raw as Record<string, unknown>)?.ncmMeta as Record<string, unknown> | undefined;
+          const builtCandidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(builtMeta?.pcramCandidates)
+            ? builtMeta!.pcramCandidates as Array<{ ncmCode: string; title?: string }>
+            : [];
+
+          if (!urlInText && builtCandidates.length >= 2 && (builtMeta?.ambiguous === true || !product?.ncm)) {
+            const { hidden } = buildHiddenChoiceSet(builtCandidates, product?.ncm as string | undefined, 5);
+            product.raw = { ...((product.raw as Record<string, unknown>) ?? {}), ncmChoiceOptions: hidden };
+            await prisma.quote.update({ where: { id: active.id }, data: { productJson: product as never, stage: "awaiting_product" } }).catch(() => null);
             const qs: string[] = Array.isArray(builtMeta?.missingInfoQuestions)
-              ? builtMeta.missingInfoQuestions
-                  .map((q: any) => String(q).trim())
-                  .filter(Boolean)
-                  .slice(0, 4)
+              ? (builtMeta!.missingInfoQuestions as unknown[]).map((q) => String(q).trim()).filter(Boolean).slice(0, 4)
               : [];
             return ask(
-              [
-                "Ok. Cambiemos de producto.",
-                "",
-                "Para estimar **impuestos** con precisión, necesito afinar 1–3 datos técnicos.",
-                "",
-                qs.length
-                  ? [
-                      "Respondeme esto (podés contestar en una sola línea):",
-                      ...qs.map((q) => `- ${q}`),
-                      "",
-                    ].join("\n")
-                  : "",
-                "Con eso ajusto la clasificación internamente y seguimos con el precio/cantidad.",
-              ]
-                .filter(Boolean)
-                .join("\n"),
+              ["Ok. Cambiemos de producto.", "", "Para estimar **impuestos** con precisión, necesito afinar 1–3 datos técnicos.", "", qs.length ? ["Respondeme esto (podés contestar en una sola línea):", ...qs.map((q) => `- ${q}`), ""].join("\n") : "", "Con eso ajusto la clasificación internamente y seguimos con el precio/cantidad."].filter(Boolean).join("\n"),
               product
             );
           }
-          await prisma.quote
-            .update({ where: { id: active.id }, data: { productJson: product as any } })
-            .catch(() => null);
+          await prisma.quote.update({ where: { id: active.id }, data: { productJson: product as never } }).catch(() => null);
         }
 
-        // In this stage, allow bare numbers like "500" as quantity (but never if it's a USD price).
         if (typeof product.quantity !== "number" && !userProvidedUnitPrice(userText)) {
           const qLoose = parseQuantityWithMode(userText, { allowBareNumber: true });
           if (typeof qLoose === "number") product.quantity = qLoose;
         }
 
-        if (typeof product.quantity !== "number") {
-          return ask("Necesito la **cantidad**. Ej: `500 unidades`.", product);
-        }
+        if (typeof product.quantity !== "number") return ask("Necesito la **cantidad**. Ej: `500 unidades`.", product);
         if (typeof product.fobUsd !== "number") {
-          await prisma.quote
-            .update({ where: { id: active.id }, data: { stage: "awaiting_price" } })
-            .catch(() => null);
-          return ask(
-            "Antes de calcular, decime el **precio unitario en USD**. Ej: `USD 120`.",
-            product
-          );
+          await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_price" } }).catch(() => null);
+          return ask("Antes de calcular, decime el **precio unitario en USD**. Ej: `USD 120`.", product);
         }
         return await quoteAndRespond(active.id, product);
       }
     }
 
-    // If there's no active DB row (cookies blocked, refresh, etc.), reconstruct context from message history.
-    const seedText = looksLikeFreshProductIntent(userText) ? userText : seedForProduct ?? userText;
+    // ---------- Fresh start: no active quote row ----------
 
+    const seedText = looksLikeFreshProductIntent(userText) ? userText : seedForProduct ?? userText;
     const url = extractUrl(seedText);
     const initialProductProvided = url != null || looksLikeProductText(seedText);
-    const initial: any = {};
-    if (typeof priceUsd === "number") {
-      initial.fobUsd = priceUsd;
-      initial.currency = "USD";
-    }
+    const initial: Record<string, unknown> = {};
+    if (typeof priceUsd === "number") { initial.fobUsd = priceUsd; initial.currency = "USD"; }
     if (typeof quantity === "number") initial.quantity = quantity;
 
     if (!initialProductProvided) {
-      // User started with price/quantity only; ask for product.
-      const created = await prisma.quote
-        .create({
-          data: {
-            anonId,
-            mode: "quote",
-            userText,
-            productJson: initial as any,
-            quoteJson: { awaiting: "product" } as any,
-            stage: "awaiting_product",
-            userId: userId ?? undefined,
-          },
-        })
-        .catch(() => null);
-      return ask(
-        "Dale. Ahora decime **qué producto** querés importar (o pegá el link). Ej: `autoelevador eléctrico industrial`."
-      );
+      await prisma.quote.create({
+        data: { anonId, mode: "quote", userText, productJson: initial as never, quoteJson: { awaiting: "product" } as never, stage: "awaiting_product", userId: userId ?? undefined },
+      }).catch(() => null);
+      return ask("Dale. Ahora decime **qué producto** querés importar (o pegá el link). Ej: `autoelevador eléctrico industrial`.");
     }
 
     const built = await (async () => {
-      const b = await buildProductFromInput(seedText);
-      const merged: any = { ...(b as any), ...initial };
-      // If the URL scraper already found a price (single or range), don't let loose parsing
-      // from the user's mixed message overwrite it (e.g. "9,800" → "9.8").
-      if ((b as any)?.price && typeof (b as any).price === "object") {
-        merged.price = (b as any).price;
-      }
-      if (typeof (b as any)?.fobUsd === "number") merged.fobUsd = (b as any).fobUsd;
-      if (typeof (b as any)?.currency === "string") merged.currency = (b as any).currency;
+      const b = await buildProductFromInput(seedText) as Record<string, unknown>;
+      const merged: Record<string, unknown> = { ...b, ...initial };
+      if (b?.price && typeof b.price === "object") merged.price = b.price;
+      if (typeof b?.fobUsd === "number") merged.fobUsd = b.fobUsd;
+      if (typeof b?.currency === "string") merged.currency = b.currency;
       return merged;
     })();
 
-    // If PCRAM candidates are ambiguous, ask before moving to price/qty.
-    const builtMeta: any = (built as any)?.raw?.ncmMeta;
-    const builtCandidates: Array<{ ncmCode: string; title?: string }> =
-      Array.isArray(builtMeta?.pcramCandidates) ? builtMeta.pcramCandidates : [];
-    const qsBuiltFromMeta: string[] = Array.isArray(builtMeta?.missingInfoQuestions)
-      ? builtMeta.missingInfoQuestions
-          .map((q: any) => String(q).trim())
-          .filter(Boolean)
-          .slice(0, 4)
+    const builtMeta = (built?.raw as Record<string, unknown> | undefined)?.ncmMeta as Record<string, unknown> | undefined;
+    const builtCandidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(builtMeta?.pcramCandidates)
+      ? builtMeta!.pcramCandidates as Array<{ ncmCode: string; title?: string }>
       : [];
-    const qsBuilt =
-      qsBuiltFromMeta.length
-        ? qsBuiltFromMeta
-        : deriveBasicNcmQuestions({
-            hsHeading: builtMeta?.hsHeading,
-            kind: builtMeta?.kind,
-            candidates: builtCandidates,
-          });
-    if (!url && builtCandidates.length >= 2 && qsBuilt.length) {
-      const qs = qsBuilt;
-      if (qs.length) {
-        const { hidden } = buildHiddenChoiceSet(builtCandidates, built?.ncm, 5);
-        (built as any).raw = {
-          ...((built as any).raw ?? {}),
-          ncmChoiceOptions: hidden,
-          ncmDisambiguationAsked: true,
-        };
-        await prisma.quote
-          .create({
-            data: {
-              anonId,
-              mode: "quote",
-              userText,
-              sourceUrl: url ?? undefined,
-              productJson: built as any,
-              quoteJson: { awaiting: "ncm_disambiguation" } as any,
-              stage: "awaiting_product",
-              userId: userId ?? undefined,
-            },
-          })
-          .catch(() => null);
+    const qsBuiltFromMeta: string[] = Array.isArray(builtMeta?.missingInfoQuestions)
+      ? (builtMeta!.missingInfoQuestions as unknown[]).map((q) => String(q).trim()).filter(Boolean).slice(0, 4)
+      : [];
+    const qsBuilt = qsBuiltFromMeta.length
+      ? qsBuiltFromMeta
+      : deriveBasicNcmQuestions({ hsHeading: builtMeta?.hsHeading as string | undefined, kind: builtMeta?.kind as string | undefined, candidates: builtCandidates });
 
-        return ask(
-          [
-            "Para **clasificar el NCM** con precisión, necesito afinar 1–3 datos técnicos.",
-            "",
-            [
-              "Respondeme esto (podés contestar en una sola línea):",
-              ...qs.map((q) => `- ${q}`),
-              "",
-            ].join("\n"),
-            "Después seguimos con el precio y la cantidad.",
-          ]
-            .filter(Boolean)
-            .join("\n")
-        );
-      }
+    if (!url && builtCandidates.length >= 2 && qsBuilt.length) {
+      const { hidden } = buildHiddenChoiceSet(builtCandidates, built?.ncm as string | undefined, 5);
+      built.raw = { ...((built.raw as Record<string, unknown>) ?? {}), ncmChoiceOptions: hidden, ncmDisambiguationAsked: true };
+      await prisma.quote.create({
+        data: { anonId, mode: "quote", userText, sourceUrl: url ?? undefined, productJson: built as never, quoteJson: { awaiting: "ncm_disambiguation" } as never, stage: "awaiting_product", userId: userId ?? undefined },
+      }).catch(() => null);
+      return ask(
+        ["Para **clasificar el NCM** con precisión, necesito afinar 1–3 datos técnicos.", "", ["Respondeme esto (podés contestar en una sola línea):", ...qsBuilt.map((q) => `- ${q}`), ""].join("\n"), "Después seguimos con el precio y la cantidad."].filter(Boolean).join("\n")
+      );
     }
 
-    // Ask sequentially for missing fields
     if (typeof built.fobUsd !== "number") {
-      await prisma.quote
-        .create({
-          data: {
-            anonId,
-            mode: "quote",
-            userText,
-            sourceUrl: url ?? undefined,
-            productJson: built as any,
-            quoteJson: { awaiting: "unit_price" } as any,
-            stage: "awaiting_price",
-            userId: userId ?? undefined,
-          },
-        })
-        .catch(() => null);
+      await prisma.quote.create({
+        data: { anonId, mode: "quote", userText, sourceUrl: url ?? undefined, productJson: built as never, quoteJson: { awaiting: "unit_price" } as never, stage: "awaiting_price", userId: userId ?? undefined },
+      }).catch(() => null);
       return ask(
         "Para estimar el **total puesto en Argentina** necesito el **precio unitario** en **USD**.\n\n¿Cuál es el precio por unidad? (ej: `USD 120`)",
         built
@@ -2377,20 +807,9 @@ export async function POST(req: Request) {
     }
 
     if (typeof built.quantity !== "number") {
-      await prisma.quote
-        .create({
-          data: {
-            anonId,
-            mode: "quote",
-            userText,
-            sourceUrl: url ?? undefined,
-            productJson: built as any,
-            quoteJson: { awaiting: "quantity" } as any,
-            stage: "awaiting_quantity",
-            userId: userId ?? undefined,
-          },
-        })
-        .catch(() => null);
+      await prisma.quote.create({
+        data: { anonId, mode: "quote", userText, sourceUrl: url ?? undefined, productJson: built as never, quoteJson: { awaiting: "quantity" } as never, stage: "awaiting_quantity", userId: userId ?? undefined },
+      }).catch(() => null);
       return ask("Perfecto. ¿Cuál es la **cantidad** a importar? (ej: `500 unidades`)", built);
     }
 
@@ -2403,4 +822,3 @@ export async function POST(req: Request) {
     );
   }
 }
-

@@ -745,12 +745,14 @@ export class PcramClient {
     const MENU_NOISE = new Set([
       "NOMENCLATURAS", "NORMATIVAS", "CONSULTAS", "OPERACIONES", "LINKs",
       "Mercado de Cambios", "Precios FOB", "MENU", "BOLETIN", "CONTRASEÑA",
-      "Inicio", "Home", "Salir", "Cerrar", "Login",
+      "Inicio", "Home", "Salir", "Cerrar", "Login", "Descargas", "SALIR",
     ]);
+    // Strip Unicode private-use icons (e.g. \uf1ea, \uf011) that PCRAM injects before text
+    const stripIcons = (t: string) => t.replace(/[\ue000-\uf8ff]/g, "").trim();
     const breadcrumbs = $("nav a")
       .toArray()
-      .map((a) => $(a).text().trim())
-      .filter((t) => t && !MENU_NOISE.has(t) && t.length > 2 && !/^(https?:|javascript:)/i.test(t));
+      .map((a) => stripIcons($(a).text().trim()))
+      .filter((t) => t && t.length > 2 && !MENU_NOISE.has(t) && !MENU_NOISE.has(t.toUpperCase()) && !/^(https?:|javascript:)/i.test(t));
 
     const taxes: PcramTaxRates = {};
     const taxRows: PcramTaxRow[] = [];
@@ -877,7 +879,10 @@ export class PcramClient {
       const line = node.text();
       const idx = line.toLowerCase().indexOf(label.toLowerCase());
       if (idx === -1) return undefined;
-      return line.slice(idx + label.length).replace(/[:\s]+/, "").trim() || undefined;
+      // Take only the first word/token after the label (avoid capturing multi-line page text)
+      const raw = line.slice(idx + label.length).replace(/[:\s]+/, "").trim();
+      const firstToken = raw.split(/[\n\t\r]/)[0]?.trim() ?? "";
+      return firstToken.slice(0, 60) || undefined;
     };
 
     return {

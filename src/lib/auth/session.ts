@@ -9,7 +9,8 @@ export type SessionUser = {
 };
 
 function isRoleBypassEnabled() {
-  return process.env.NODE_ENV !== "production" && process.env.AUTH_ROLE_BYPASS !== "0";
+  // Requires explicit opt-in: AUTH_ROLE_BYPASS=1 (never active in production)
+  return process.env.NODE_ENV !== "production" && process.env.AUTH_ROLE_BYPASS === "1";
 }
 
 async function getOrCreateLocalBypassUser(): Promise<SessionUser | null> {

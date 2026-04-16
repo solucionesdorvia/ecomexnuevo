@@ -453,8 +453,10 @@ export async function classifyWithAI(
 
   try {
     const start = Date.now();
-    // eslint-disable-next-line no-console
-    console.log("[ncmClassifier] calling OpenAI for:", text.slice(0, 80), evidence.length ? "(evidence)" : "");
+    if (process.env.NCM_DEBUG === "1") {
+      // eslint-disable-next-line no-console
+      console.log("[ncmClassifier] calling OpenAI for:", text.slice(0, 80), evidence.length ? "(evidence)" : "");
+    }
 
     const r = await openaiJson<{
       ncm_code?: string;
@@ -485,8 +487,10 @@ export async function classifyWithAI(
 
     const elapsed = Date.now() - start;
     let ncm_code = formatNcm(String(r.ncm_code ?? ""));
-    // eslint-disable-next-line no-console
-    console.log(`[ncmClassifier] result: ${ncm_code} (confidence: ${r.confidence}, ${elapsed}ms)`);
+    if (process.env.NCM_DEBUG === "1") {
+      // eslint-disable-next-line no-console
+      console.log(`[ncmClassifier] result: ${ncm_code} (confidence: ${r.confidence}, ${elapsed}ms)`);
+    }
 
     if (evidence.length) {
       let rationaleEvidence = String(r.rationale ?? "Clasificación restringida a candidatos.").trim();

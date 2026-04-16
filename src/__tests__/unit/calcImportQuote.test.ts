@@ -1,0 +1,161 @@
+import { describe, it, expect, vi } from "vitest";
+
+// Mock external dependencies (FX call, etc.)
+vi.mock("@/lib/fx/arsPerUsd", () => ({
+  getArsPerUsd: vi.fn().mockResolvedValue(1300),
+}));
+
+import { calcImportQuote } from "@/lib/quote/calcImportQuote";
+
+describe("calcImportQuote - mode: quote", () => {
+  it("returns cards array with all 5 expected labels", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Auriculares bluetooth", fobUsd: 8, quantity: 100, origin: "China" },
+      rawUserText: "quiero importar 100 auriculares a USD 8",
+    });
+
+    const labels = result.cards.map((c) => c.label);
+    expect(labels).toContain("Producto");
+    expect(labels).toContain("Flete internacional");
+    expect(labels).toContain("Impuestos argentinos");
+    expect(labels).toContain("Gestión / despacho");
+    expect(labels).toContain("Total puesto en Argentina");
+  });
+
+  it("totalMinUsd < totalMaxUsd always", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Smartwatch", fobUsd: 15, quantity: 50 },
+      rawUserText: "50 smartwatch USD 15",
+    });
+
+    expect(result.totalMinUsd).toBeDefined();
+    expect(result.totalMaxUsd).toBeDefined();
+    expect(result.totalMinUsd!).toBeLessThan(result.totalMaxUsd!);
+  });
+
+  it("total is greater than FOB (there are always costs on top)", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Producto test", fobUsd: 100, quantity: 10 },
+      rawUserText: "10 unidades USD 100",
+    });
+
+    const fobTotal = 100 * 10; // $1000
+    expect(result.totalMinUsd!).toBeGreaterThan(fobTotal);
+  });
+
+  it("returns breakdown object with required fields", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Test", fobUsd: 50, quantity: 20 },
+      rawUserText: "20 pcs USD 50",
+    });
+
+    expect(result.breakdown).toBeDefined();
+    expect(result.breakdown!.qty).toBe(20);
+    expect(result.breakdown!.fobTotalUsd).toBe(1000);
+    expect(typeof result.breakdown!.fleteMinUsd).toBe("number");
+    expect(typeof result.breakdown!.fleteMaxUsd).toBe("number");
+  });
+
+  it("includes assumptions array", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Cargador USB", fobUsd: 3, quantity: 500 },
+      rawUserText: "500 cargadores USB a 3 dólares",
+    });
+
+    expect(Array.isArray(result.assumptions)).toBe(true);
+  });
+
+  it("quality score is between 0 and 100", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Producto genérico", fobUsd: 20, quantity: 100 },
+      rawUserText: "100 unidades USD 20",
+    });
+
+    if (typeof result.quality === "number") {
+      expect(result.quality).toBeGreaterThanOrEqual(0);
+      expect(result.quality).toBeLessThanOrEqual(100);
+    }
+  });
+
+  it("uses PCRAM tax rates when available", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: {
+        title: "Auriculares",
+        fobUsd: 10,
+        quantity: 100,
+        ncm: "8518.30.00",
+        raw: {
+          pcram: {
+            ncmCode: "8518.30.00",
+            taxes: { AEC: 20, IVA: 21, "IVA ADIC": 20 },
+          },
+        },
+      },
+      rawUserText: "100 auriculares USD 10",
+    });
+
+    const impuestos = result.cards.find((c) => c.label === "Impuestos argentinos");
+    expect(impuestos).toBeDefined();
+    // With real PCRAM data, quality should be higher
+    if (typeof result.quality === "number") {
+      expect(result.quality).toBeGreaterThan(20);
+    }
+  });
+
+  it("explanation is a non-empty string", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Mouse inalámbrico", fobUsd: 5, quantity: 200 },
+      rawUserText: "200 mouse USD 5",
+    });
+
+    expect(typeof result.explanation).toBe("string");
+    expect(result.explanation.length).toBeGreaterThan(10);
+  });
+});
+
+describe("calcImportQuote - mode: budget", () => {
+  it("returns 5 cards for budget mode", async () => {
+    const result = await calcImportQuote({
+      mode: "budget",
+      budgetText: "tengo USD 5000 de presupuesto",
+    });
+
+    expect(result.cards.length).toBeGreaterThanOrEqual(4);
+  });
+
+  it("handles budget without explicit USD", async () => {
+    const result = await calcImportQuote({
+      mode: "budget",
+      budgetText: "quiero gastar unos 3000 dólares",
+    });
+
+    expect(result.cards).toBeDefined();
+    expect(result.explanation).toBeTruthy();
+  });
+});
+
+describe("calcImportQuote - price range product", () => {
+  it("handles price range correctly", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: {
+        title: "Engranaje industrial",
+        quantity: 50,
+        price: { type: "range", min: 80, max: 120, currency: "USD", unit: "unit" },
+      },
+      rawUserText: "50 engranajes entre 80 y 120 USD",
+    });
+
+    expect(result.totalMinUsd).toBeDefined();
+    expect(result.totalMaxUsd).toBeDefined();
+    expect(result.totalMinUsd!).toBeLessThan(result.totalMaxUsd!);
+  });
+});

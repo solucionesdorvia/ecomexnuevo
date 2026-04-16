@@ -20,6 +20,27 @@ const STAGES = [
   "COMPLETADA",
 ] as const;
 
+type Stage = typeof STAGES[number];
+
+// Each stage can only advance to the next one, or stay the same (idempotent).
+// Admins can also move backwards one step for corrections.
+const STAGE_INDEX: Record<Stage, number> = {
+  INICIADA: 0,
+  ORDEN_COMPRA: 1,
+  EMBARQUE: 2,
+  ADUANA: 3,
+  ENTREGA: 4,
+  COMPLETADA: 5,
+};
+
+function isValidTransition(from: Stage, to: Stage, role: string): boolean {
+  const fromIdx = STAGE_INDEX[from];
+  const toIdx = STAGE_INDEX[to];
+  const diff = toIdx - fromIdx;
+  if (role === "admin") return Math.abs(diff) <= 1; // admins can go back one step
+  return diff >= 0 && diff <= 1; // operators can only advance
+}
+
 const patchSchema = z.object({
   stage: z.enum(STAGES),
 });
@@ -54,6 +75,7 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
   const newStage = parsed.data.stage;
 
   const where = operationWhereForUser(user, operationId);
+
   const existing = await prisma.operation.findFirst({
     where,
     select: {
@@ -65,6 +87,15 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
   });
   if (!existing) {
     return NextResponse.json({ error: "Operación no encontrada." }, { status: 404 });
+  }
+
+  if (!isValidTransition(existing.stage as Stage, newStage, user.role)) {
+    const fromLabel = OPERATION_STAGE_LABEL_ES[existing.stage as Stage] ?? existing.stage;
+    const toLabel = OPERATION_STAGE_LABEL_ES[newStage] ?? newStage;
+    return NextResponse.json(
+      { error: `Transición inválida: no se puede pasar de "${fromLabel}" a "${toLabel}".` },
+      { status: 422 }
+    );
   }
 
   const label = OPERATION_STAGE_LABEL_ES[newStage] ?? newStage;
