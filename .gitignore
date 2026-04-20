@@ -27,9 +27,6 @@ src/__tests__/e2e/.env.test
 # production
 /build
 
-# Local nested project / experiments (not part of app)
-/video/
-
 # misc
 .DS_Store
 *.pem
