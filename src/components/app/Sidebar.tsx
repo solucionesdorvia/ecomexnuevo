@@ -20,11 +20,11 @@ function SidebarContent({ userEmail, userRole, onNavigate }: { userEmail?: strin
 
   return (
     <>
-      <div className="flex h-14 items-center px-5 border-b border-white/[0.04]">
+      <div className="flex h-14 items-center border-b border-white/[0.04] px-5 pt-safe">
         <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-5 brightness-0 invert opacity-90" />
       </div>
 
-      <nav className="no-scrollbar flex-1 overflow-y-auto px-3 py-4">
+      <nav className="no-scrollbar flex-1 overflow-y-auto overscroll-y-contain px-3 py-4">
         <div className="space-y-5">
           {groups.map((groupKey) => {
             const groupItems = items.filter((item) => item.group === groupKey);
@@ -42,7 +42,7 @@ function SidebarContent({ userEmail, userRole, onNavigate }: { userEmail?: strin
                         key={item.href}
                         href={item.href}
                         onClick={onNavigate}
-                        className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] transition-colors duration-150 ${
+                        className={`flex min-h-[44px] items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] transition-colors duration-150 ${
                           active
                             ? "border-l-2 border-[#2b59ff] -ml-px bg-[#2b59ff]/8 font-medium text-white"
                             : item.primary
@@ -62,7 +62,7 @@ function SidebarContent({ userEmail, userRole, onNavigate }: { userEmail?: strin
         </div>
       </nav>
 
-      <div className="border-t border-white/[0.04] px-4 py-3">
+      <div className="border-t border-white/[0.04] px-4 py-3 pb-safe">
         <div className="flex items-center gap-3">
           <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#2b59ff]/10 text-[11px] font-bold text-[#2b59ff]">
             {(userEmail ?? "U")[0].toUpperCase()}
@@ -91,14 +91,26 @@ export default function Sidebar({ userEmail, userRole, mobileOpen, onClose }: { 
       </aside>
 
       {/* Mobile drawer */}
-      {mobileOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div className="absolute inset-0 bg-black/60" onClick={onClose} />
-          <aside className="absolute left-0 top-0 flex h-full w-[280px] flex-col bg-[#050d16] shadow-2xl">
-            <SidebarContent userEmail={userEmail} userRole={userRole} onNavigate={onClose} />
-          </aside>
-        </div>
-      )}
+      <div
+        className={`fixed inset-0 z-50 lg:hidden transition-[opacity,visibility] duration-200 ${
+          mobileOpen ? "pointer-events-auto visible opacity-100" : "pointer-events-none invisible opacity-0"
+        }`}
+        aria-hidden={!mobileOpen}
+      >
+        <button
+          type="button"
+          className={`absolute inset-0 bg-black/60 transition-opacity duration-200 ${mobileOpen ? "opacity-100" : "opacity-0"}`}
+          onClick={onClose}
+          aria-label="Cerrar menú"
+        />
+        <aside
+          className={`absolute left-0 top-0 flex h-full w-[min(300px,92vw)] flex-col border-r border-white/[0.06] bg-[#050d16] shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            mobileOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          <SidebarContent userEmail={userEmail} userRole={userRole} onNavigate={onClose} />
+        </aside>
+      </div>
     </>
   );
 }

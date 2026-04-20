@@ -132,7 +132,7 @@ export default async function DashboardPage() {
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 4v16m8-8H4" />
           </svg>
-          Nueva operacion
+          Nueva operación
         </Link>
       }
     >

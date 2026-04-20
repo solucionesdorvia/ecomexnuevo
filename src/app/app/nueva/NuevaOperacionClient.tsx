@@ -24,7 +24,8 @@ import { QuoteCostBreakdown, type QuoteCostPayload } from "./QuoteCostBreakdown"
 import { buildChatPrefillFromParams, stripNcmDigits } from "@/lib/quote/cotizarFromClassifier";
 
 function stripMessages(s: CaseState): CaseSnapshot {
-  const { messages: _m, ...rest } = s;
+  const { messages, ...rest } = s;
+  void messages;
   return rest;
 }
 
@@ -172,30 +173,33 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
         <div className="flex min-h-0 min-w-0 flex-1 flex-col">
           <div className="min-h-0 flex-1 overflow-y-auto">
             {caseState.messages.length === 0 ? (
-              <div className="flex flex-1 flex-col items-center justify-center px-4 py-8 sm:py-10">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#3b82f6]/20 bg-[#3b82f6]/10">
-                  <Sparkles className="h-7 w-7 text-[#60a5fa]" />
+              <div className="flex flex-1 flex-col items-center justify-center px-4 py-10 sm:py-14">
+                <div className="relative">
+                  <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-[#38bdf8]/15 via-transparent to-[#3b82f6]/10 blur-xl" aria-hidden />
+                  <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-[#38bdf8]/25 bg-[#0f172a]/90 shadow-[0_20px_50px_-24px_rgba(56,189,248,0.45)]">
+                    <Sparkles className="h-8 w-8 text-[#38bdf8]" strokeWidth={1.5} />
+                  </div>
                 </div>
                 <h1
-                  className="mt-6 max-w-lg text-center text-[22px] font-bold tracking-tight text-white sm:text-[24px]"
+                  className="mt-8 max-w-lg text-center text-[22px] font-bold tracking-tight text-white sm:text-[26px]"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {CLASIFICAR_NCM_LANDING_TITLE}
                 </h1>
-                <p className="mt-3 max-w-md text-center text-[14px] leading-relaxed text-slate-500">
+                <p className="mt-3 max-w-md text-center text-[15px] leading-relaxed text-slate-400 sm:text-[14px]">
                   {CLASIFICAR_NCM_LANDING_DESCRIPTION}
                 </p>
                 <p className="mt-2 max-w-md text-center text-[12px] leading-relaxed text-slate-600">
                   En la app: cuando el NCM esté listo, generá el presupuesto con el botón debajo del resultado.
                 </p>
-                <div className="mt-8 flex w-full max-w-xl flex-col gap-2 sm:flex-row sm:flex-wrap sm:justify-center">
+                <div className="mt-10 flex w-full max-w-xl flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:justify-center">
                   {CLASIFICAR_NCM_SUGGESTIONS.map((s) => (
                     <button
                       key={s}
                       type="button"
                       disabled={busy}
                       onClick={() => void sendMessage(s)}
-                      className="min-h-[48px] w-full touch-manipulation rounded-xl border border-white/[0.08] bg-[#0f172a]/80 px-4 py-3 text-left text-[14px] leading-snug text-slate-400 transition hover:border-[#3b82f6]/30 hover:text-slate-200 active:scale-[0.99] disabled:opacity-40 sm:min-h-0 sm:w-auto sm:px-3 sm:py-2 sm:text-[12px]"
+                      className="min-h-[48px] w-full touch-manipulation rounded-xl border border-white/[0.09] bg-[#0c1220]/90 px-4 py-3 text-left text-[14px] leading-snug text-slate-400 shadow-sm shadow-black/20 transition hover:border-[#38bdf8]/30 hover:text-slate-200 active:scale-[0.99] disabled:opacity-40 sm:min-h-0 sm:w-auto sm:px-3.5 sm:py-2.5 sm:text-[12px]"
                     >
                       {s}
                     </button>
@@ -304,6 +308,7 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
           ) : null}
 
           <ChatInput
+            key={messagePrefill || "chat-no-prefill"}
             onSend={handleSend}
             disabled={busy}
             canSubmitEmpty={invoiceFiles.length > 0}

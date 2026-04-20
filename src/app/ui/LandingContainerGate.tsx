@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -38,8 +39,8 @@ function Navbar() {
   const links = [["#servicios","Servicios"],["#como","Cómo trabajamos"],["#plataforma","Plataforma"],["#contacto","Contacto"]];
 
   return (
-    <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? "bg-[#07111A]/80 backdrop-blur-xl border-b" : "bg-transparent"}`} style={{ borderColor: scrolled ? P.border : "transparent" }}>
-      <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-5 lg:px-8">
+    <nav className={`fixed top-0 z-50 w-full pt-safe transition-all duration-300 ${scrolled ? "bg-[#07111A]/80 backdrop-blur-xl border-b" : "bg-transparent"}`} style={{ borderColor: scrolled ? P.border : "transparent" }}>
+      <div className="mx-auto flex min-h-14 max-w-[1200px] items-center justify-between px-4 sm:px-5 lg:px-8">
         <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-5 brightness-0 invert" />
 
         {/* Desktop */}
@@ -77,7 +78,7 @@ export default function LandingContainerGate() {
       <Navbar />
 
       {/* ══════════ HERO ══════════ */}
-      <section className="relative overflow-hidden px-5 pb-20 pt-28 lg:px-8 lg:pt-36" style={{ minHeight: "100vh" }}>
+      <section className="relative overflow-hidden px-4 pb-20 pt-24 sm:px-5 lg:px-8 lg:pb-20 lg:pt-36" style={{ minHeight: "100vh" }}>
         {/* 3D animated background */}
         <iframe
           src="/hero-3d.html"
@@ -136,53 +137,22 @@ export default function LandingContainerGate() {
               </R>
             </div>
 
-            {/* Mockup */}
-            <R d={300} cl="hidden lg:block">
-              <div className="relative">
-                <div className="absolute -inset-6 rounded-3xl opacity-50" style={{ background: `radial-gradient(circle at 50% 60%, ${P.blue}10, transparent 70%)` }} />
-                <div className="relative overflow-hidden rounded-2xl shadow-[0_40px_100px_-30px_rgba(0,0,0,0.6)]" style={{ background: P.bg2, border: `1px solid ${P.border}` }}>
-                  <div className="flex items-center border-b px-4 py-2.5" style={{ borderColor: P.border, background: `${P.bg}80` }}>
-                    <div className="flex gap-1.5">
-                      <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-                    </div>
-                    <div className="mx-auto flex items-center gap-2 rounded-md px-3 py-1" style={{ background: P.bg }}>
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#28c840]" />
-                      <span className="text-[10px]" style={{ color: P.t3 }}>e-comex.app/analisis</span>
-                    </div>
-                  </div>
-                  <div className="flex">
-                    <div className="hidden w-12 shrink-0 flex-col items-center gap-3 border-r py-4 sm:flex" style={{ borderColor: P.border }}>
-                      {[0,1,2,3].map(i=><div key={i} className="h-5 w-5 rounded" style={{ background: i===0 ? `${P.blue}15` : P.navy }} />)}
-                    </div>
-                    <div className="flex flex-1 gap-4 p-5">
-                      <div className="flex-1 space-y-2.5">
-                        <div className="flex items-center gap-3 rounded-lg p-3" style={{ background: P.bg }}>
-                          <div className="h-9 w-9 rounded-md" style={{ background: P.navy }} />
-                          <div className="flex-1"><div className="h-2.5 w-36 rounded" style={{ background: P.navy }} /><div className="mt-1.5 h-2 w-20 rounded" style={{ background: `${P.navy}80` }} /></div>
-                          <span className="rounded px-2 py-0.5 text-[8px] font-bold" style={{ background: `${P.cyan}15`, color: P.cyan }}>Analizado</span>
-                        </div>
-                        <div className="flex items-center justify-between rounded-lg px-4 py-2.5" style={{ background: P.bg }}>
-                          <span className="text-[10px]" style={{ color: P.t3 }}>NCM</span>
-                          <span className="font-mono text-[13px] font-bold" style={{ color: P.t1 }}>8703.23.10</span>
-                        </div>
-                        <div className="grid grid-cols-3 gap-1">
-                          {[["FOB","$2,400"],["Flete","$680"],["Impuestos","$1,920"]].map(([l,v])=>(
-                            <div key={l} className="rounded-lg p-2.5" style={{ background: P.bg }}>
-                              <p className="text-[7px] font-medium uppercase tracking-wider" style={{ color: P.t3 }}>{l}</p>
-                              <p className="mt-0.5 text-[13px] font-bold" style={{ color: P.t1 }}>{v}</p>
-                            </div>
-                          ))}
-                        </div>
-                        <div className="rounded-lg p-3" style={{ background: P.bg, borderLeft: "2px solid #d4a843" }}>
-                          <p className="text-[7px] font-medium uppercase tracking-wider" style={{ color: P.t3 }}>Total puesto en Argentina</p>
-                          <p className="mt-0.5 text-[18px] font-extrabold text-[#d4a843]" style={{ fontFamily: "var(--font-display)" }}>USD 6,840</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            {/* Captura real de la plataforma (asset en /public/landing) */}
+            <R d={300} cl="mt-12 lg:mt-0">
+              <div className="relative mx-auto max-w-[560px] lg:mx-0 lg:max-w-none">
+                <div className="pointer-events-none absolute -inset-6 rounded-3xl opacity-50 hidden lg:block" style={{ background: `radial-gradient(circle at 50% 60%, ${P.blue}14, transparent 70%)` }} />
+                <figure className="relative overflow-hidden rounded-2xl shadow-[0_40px_100px_-30px_rgba(0,0,0,0.6)] ring-1 ring-white/[0.06]" style={{ background: P.bg2 }}>
+                  <Image
+                    src="/landing/ecomex-platform-hero.png"
+                    alt="Panel E-COMEX: análisis de producto, código NCM y desglose de costos de importación"
+                    width={1376}
+                    height={768}
+                    className="h-auto w-full object-contain object-top"
+                    sizes="(max-width: 1024px) min(100vw, 560px), 480px"
+                    priority
+                  />
+                  <figcaption className="sr-only">Vista del análisis en la aplicación web E-COMEX</figcaption>
+                </figure>
               </div>
             </R>
           </div>

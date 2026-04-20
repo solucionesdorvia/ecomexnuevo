@@ -30,21 +30,24 @@ export default function LoginClient({ redirectTo }: { redirectTo?: string }) {
   }
 
   return (
-    <div className="w-full max-w-[380px]">
-      <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-6 brightness-0 invert" />
-      <h1 className="mt-8 text-[22px] font-extrabold tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
+    <div className="w-full max-w-[400px] rounded-2xl border border-white/[0.08] bg-[#0B1622]/50 p-6 shadow-[0_24px_80px_-32px_rgba(0,0,0,0.85)] backdrop-blur-sm sm:p-8">
+      <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-7 brightness-0 invert sm:h-8" />
+      <h1
+        className="mt-7 text-[clamp(1.25rem,4vw,1.5rem)] font-extrabold tracking-tight text-white sm:mt-8"
+        style={{ fontFamily: "var(--font-display)" }}
+      >
         Iniciar sesión
       </h1>
-      <p className="mt-2 text-[14px] text-[#555c6b]">Accedé a tu cuenta para ver tu historial y operaciones.</p>
+      <p className="mt-2 text-[14px] leading-relaxed text-[#555c6b]">Accedé a tu cuenta para ver tu historial y operaciones.</p>
 
-      <form className="mt-8 space-y-3" onSubmit={(e) => { e.preventDefault(); submit(); }}>
+      <form className="mt-7 space-y-3 sm:mt-8" onSubmit={(e) => { e.preventDefault(); submit(); }}>
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
           type="email"
           autoComplete="email"
-          className="w-full rounded-lg border border-white/[0.06] bg-[#0B1622] px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/40"
+          className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/50 focus:ring-1 focus:ring-[#2b59ff]/30 sm:min-h-0 sm:text-[14px]"
         />
         <input
           value={password}
@@ -52,21 +55,25 @@ export default function LoginClient({ redirectTo }: { redirectTo?: string }) {
           placeholder="Contraseña"
           type="password"
           autoComplete="current-password"
-          className="w-full rounded-lg border border-white/[0.06] bg-[#0B1622] px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/40"
+          className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/50 focus:ring-1 focus:ring-[#2b59ff]/30 sm:min-h-0 sm:text-[14px]"
         />
-        {error && <p className="rounded-lg bg-red-500/10 px-4 py-2 text-[13px] text-red-400">{error}</p>}
+        {error ? <p className="rounded-xl bg-red-500/10 px-4 py-3 text-[13px] leading-snug text-red-400">{error}</p> : null}
         <button
           type="submit"
           disabled={pending}
-          className="w-full rounded-lg bg-[#2b59ff] py-3 text-[14px] font-medium text-white transition-colors hover:bg-[#2348d4] disabled:opacity-50"
+          className="flex min-h-[48px] w-full items-center justify-center rounded-xl bg-[#2b59ff] py-3 text-[15px] font-medium text-white transition-colors hover:bg-[#2348d4] disabled:opacity-50 sm:min-h-[44px] sm:text-[14px]"
         >
           {pending ? "Entrando..." : "Entrar"}
         </button>
       </form>
 
-      <div className="mt-6 flex items-center justify-between text-[13px]">
-        <Link href="/register" className="text-[#555c6b] transition-colors hover:text-white">Crear cuenta</Link>
-        <Link href="/" className="text-[#555c6b] transition-colors hover:text-white">Volver al inicio</Link>
+      <div className="mt-6 flex flex-col gap-3 text-[13px] sm:flex-row sm:items-center sm:justify-between">
+        <Link href="/register" className="min-h-[44px] text-[#555c6b] transition-colors hover:text-white sm:min-h-0">
+          Crear cuenta
+        </Link>
+        <Link href="/" className="min-h-[44px] text-[#555c6b] transition-colors hover:text-white sm:min-h-0">
+          Volver al inicio
+        </Link>
       </div>
     </div>
   );

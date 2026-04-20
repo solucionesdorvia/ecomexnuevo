@@ -73,6 +73,15 @@ export default function NotificationsBell() {
     return () => document.removeEventListener("mousedown", onDocClick);
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   async function markAllRead() {
     try {
       const res = await fetch("/api/app/notifications/read", {
@@ -101,7 +110,7 @@ export default function NotificationsBell() {
         data-testid="notifications-bell"
         onClick={onToggle}
         aria-expanded={open}
-        className="relative rounded-lg border border-white/[0.04] p-2 text-[#4a5568] transition-colors hover:text-white"
+        className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/[0.06] text-[#4a5568] transition-colors hover:bg-white/[0.04] hover:text-white sm:h-9 sm:w-9"
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
@@ -117,15 +126,27 @@ export default function NotificationsBell() {
       </button>
 
       {open ? (
-        <div
-          ref={panelRef}
-          className="absolute right-0 top-[calc(100%+8px)] z-50 w-[min(100vw-2rem,380px)] rounded-xl border border-white/[0.08] bg-[#0B1622] shadow-2xl shadow-black/50"
-        >
-          <div className="border-b border-white/[0.06] px-4 py-3">
-            <p className="text-[12px] font-semibold text-white">Notificaciones</p>
+        <>
+          <button
+            type="button"
+            aria-label="Cerrar notificaciones"
+            className="fixed inset-0 z-40 bg-black/45 backdrop-blur-[2px] sm:hidden"
+            onClick={() => setOpen(false)}
+          />
+          <div
+            ref={panelRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="notifications-panel-title"
+            className="fixed left-3 right-3 top-[calc(3.75rem+env(safe-area-inset-top,0px))] z-50 flex max-h-[min(75vh,520px)] flex-col overflow-hidden rounded-xl border border-white/[0.08] bg-[#0B1622] pb-safe shadow-2xl shadow-black/50 sm:absolute sm:left-auto sm:right-0 sm:top-[calc(100%+8px)] sm:max-h-[min(85vh,560px)] sm:w-[min(100vw-2rem,380px)] sm:pb-0"
+          >
+          <div className="shrink-0 border-b border-white/[0.06] px-4 py-3">
+            <p id="notifications-panel-title" className="text-[12px] font-semibold text-white">
+              Notificaciones
+            </p>
             {loading ? <p className="mt-1 text-[11px] text-[#555c6b]">Cargando…</p> : null}
           </div>
-          <div className="max-h-[min(70vh,420px)] overflow-y-auto">
+          <div className="min-h-0 flex-1 overflow-y-auto overscroll-y-contain">
             {rows.length === 0 && !loading ? (
               <p className="px-4 py-8 text-center text-[13px] text-[#555c6b]">No hay notificaciones nuevas.</p>
             ) : (
@@ -156,6 +177,7 @@ export default function NotificationsBell() {
             )}
           </div>
         </div>
+        </>
       ) : null}
     </div>
   );

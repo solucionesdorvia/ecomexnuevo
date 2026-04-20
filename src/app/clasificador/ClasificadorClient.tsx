@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { ChatContainer } from "@/app/clasificarncm/components/ChatContainer";
+import { ChatInput } from "@/app/clasificarncm/components/ChatInput";
 
 type Msg = { role: "user" | "assistant"; content: string; ts: number };
 type ServerData = {
@@ -59,7 +61,6 @@ function fmtRange(a?: number, b?: number) {
 
 export default function ClasificadorClient() {
   const [msgs, setMsgs] = useState<Msg[]>([]);
-  const [input, setInput] = useState("");
   const [pending, setPending] = useState(false);
   const [ncm, setNcm] = useState<string | null>(null);
   const [data, setData] = useState<ServerData | null>(null);
@@ -69,11 +70,10 @@ export default function ClasificadorClient() {
   useEffect(() => { anonRef.current = getAnonId(); }, []);
   useEffect(() => { scrollRef.current?.scrollTo(0, scrollRef.current.scrollHeight); }, [msgs, pending]);
 
-  async function send() {
-    const text = input.trim();
-    if (!text || pending) return;
-    setInput("");
-    const next: Msg[] = [...msgs, { role: "user", content: text, ts: Date.now() }];
+  async function send(text: string) {
+    const trimmed = text.trim();
+    if (!trimmed || pending) return;
+    const next: Msg[] = [...msgs, { role: "user", content: trimmed, ts: Date.now() }];
     setMsgs(next);
     setPending(true);
 
@@ -104,10 +104,17 @@ export default function ClasificadorClient() {
   const product = data?.productPreview?.title ?? data?.analysis?.normalizedTitle;
   const confidence = data?.analysis?.ncmMeta?.confidence;
 
+  const chatMessages = msgs.map((m, i) => ({
+    id: `clasificador-${i}-${m.ts}`,
+    role: m.role,
+    content: m.content,
+    ts: m.ts,
+  }));
+
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[#07111A]" style={{ fontFamily: "var(--font-body, 'Inter', sans-serif)" }}>
+    <div className="flex min-h-[100dvh] flex-col bg-[#030712]" style={{ fontFamily: "var(--font-body, 'Inter', sans-serif)" }}>
       {/* Header */}
-      <header className="flex items-center justify-between border-b border-white/[0.06] px-4 py-3 sm:px-6">
+      <header className="flex items-center justify-between border-b border-white/[0.07] bg-[#030712]/90 px-4 py-3 backdrop-blur-md sm:px-6">
         <div className="flex items-center gap-3">
           <Link href="/"><img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-5 brightness-0 invert" /></Link>
           <div className="hidden h-4 w-px bg-white/[0.08] sm:block" />
@@ -118,75 +125,66 @@ export default function ClasificadorClient() {
 
       <div className="flex flex-1 overflow-hidden">
         {/* Chat */}
-        <div className="flex flex-1 flex-col">
-          <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-            <div className="mx-auto max-w-[640px] space-y-5">
-              {msgs.length === 0 && !pending && (
-                <div className="flex flex-col items-center py-16 text-center">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#2F80ED]/10">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F80ED" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
+        <div className="flex min-h-0 flex-1 flex-col">
+          <div
+            ref={scrollRef}
+            className="chat-thread-scroll min-h-0 flex-1 overflow-y-auto overscroll-y-contain scroll-smooth px-3 py-5 sm:px-6 sm:py-6"
+          >
+            <div className="mx-auto max-w-[min(100%,640px)]">
+              {msgs.length === 0 && !pending ? (
+                <div className="flex flex-col items-center px-2 py-12 text-center sm:py-16">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#2F80ED]/20 bg-[#2F80ED]/10 shadow-lg shadow-black/20">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="M21 21l-4.35-4.35" />
                     </svg>
                   </div>
-                  <h1 className="mt-5 text-[20px] font-bold text-white" style={{ fontFamily: "var(--font-display)" }}>Clasificador NCM</h1>
-                  <p className="mt-2 max-w-[380px] text-[14px] leading-relaxed text-[#5A6577]">
+                  <h1 className="mt-6 text-[22px] font-bold tracking-tight text-white sm:text-[24px]" style={{ fontFamily: "var(--font-display)" }}>
+                    Clasificador NCM
+                  </h1>
+                  <p className="mt-3 max-w-[400px] text-[14px] leading-relaxed text-slate-500">
                     Describí el producto que querés importar. El sistema te da la posición arancelaria, impuestos, intervenciones y costo estimado.
                   </p>
-                  <div className="mt-8 flex flex-wrap justify-center gap-2">
-                    {["Cargador USB-C 20W, USD 3, 500u, China", "Auriculares bluetooth, USD 8, 100u, China", "Remeras algodón, USD 4, 200u, China", "Mercedes SL600 1995, USD 25000, 1u, USA"].map((s) => (
-                      <button key={s} type="button" onClick={() => setInput(s)} className="rounded-lg border border-white/[0.06] px-3 py-2 text-[12px] text-[#5A6577] transition-colors hover:border-white/[0.12] hover:text-[#A7B3C2]">{s}</button>
+                  <div className="mt-8 flex w-full max-w-xl flex-col gap-2 sm:flex-row sm:flex-wrap sm:justify-center">
+                    {[
+                      "Cargador USB-C 20W, USD 3, 500u, China",
+                      "Auriculares bluetooth, USD 8, 100u, China",
+                      "Remeras algodón, USD 4, 200u, China",
+                      "Mercedes SL600 1995, USD 25000, 1u, USA",
+                    ].map((s) => (
+                      <button
+                        key={s}
+                        type="button"
+                        disabled={pending}
+                        onClick={() => void send(s)}
+                        className="min-h-[48px] w-full touch-manipulation rounded-xl border border-white/[0.08] bg-[#0f172a]/80 px-4 py-3 text-left text-[13px] leading-snug text-slate-400 transition hover:border-[#38bdf8]/25 hover:text-slate-200 active:scale-[0.99] disabled:opacity-40 sm:min-h-0 sm:w-auto sm:px-3 sm:py-2.5 sm:text-[12px]"
+                      >
+                        {s}
+                      </button>
                     ))}
                   </div>
                 </div>
-              )}
-
-              {msgs.map((m, i) => (
-                <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-                  <div className={`max-w-[85%] rounded-xl px-4 py-3 text-[14px] leading-[1.7] ${m.role === "user" ? "bg-[#2F80ED]/10 text-white border border-[#2F80ED]/10" : "bg-[#0B1622] text-[#A7B3C2] border border-white/[0.04]"}`}>
-                    {m.role === "assistant" && (
-                      <div className="mb-2 flex items-center gap-1.5">
-                        <div className="h-1.5 w-1.5 rounded-full bg-[#2F80ED]" />
-                        <span className="text-[10px] font-semibold uppercase tracking-wider text-[#5A6577]">E-COMEX</span>
-                      </div>
-                    )}
-                    {m.content.split("\n").map((line, j) => <p key={j} className={j > 0 ? "mt-2" : ""}>{line}</p>)}
-                  </div>
-                </div>
-              ))}
-
-              {pending && (
-                <div className="flex justify-start">
-                  <div className="flex items-center gap-2 rounded-xl border border-white/[0.04] bg-[#0B1622] px-4 py-3">
-                    <div className="h-2 w-2 animate-pulse rounded-full bg-[#2F80ED]" />
-                    <span className="text-[13px] text-[#5A6577]">Clasificando...</span>
-                  </div>
-                </div>
+              ) : (
+                <ChatContainer messages={chatMessages} pending={pending} embedded />
               )}
             </div>
           </div>
 
-          {/* Input */}
-          <div className="border-t border-white/[0.04] bg-[#060d16] px-4 py-3 sm:px-6">
-            <div className="mx-auto max-w-[640px]">
-              <div className="flex items-center gap-2 rounded-xl border border-white/[0.06] bg-[#0B1622] px-4 py-1.5 focus-within:border-[#2F80ED]/25">
-                <div className={`h-1.5 w-1.5 shrink-0 rounded-full ${pending ? "animate-pulse bg-[#2F80ED]" : "bg-emerald-500"}`} />
-                <input
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); } }}
-                  placeholder="Producto, precio USD, cantidad, origen (ej: Cargador USB, USD 5, 100u, China)"
-                  className="flex-1 bg-transparent py-2.5 text-[14px] text-white outline-none placeholder:text-[#5A6577]"
-                />
-                <button type="button" disabled={pending || !input.trim()} onClick={send} className="shrink-0 rounded-lg bg-[#2F80ED] px-4 py-2 text-[12px] font-medium text-white transition-colors hover:bg-[#2563eb] disabled:opacity-20">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" /></svg>
-                </button>
-              </div>
-            </div>
-          </div>
+          <ChatInput
+            onSend={(t) => void send(t)}
+            disabled={pending}
+            placeholder="Producto, precio USD, cantidad, origen (ej: Cargador USB, USD 5, 100u, China)"
+            helperText={
+              <span>
+                <span className="hidden sm:inline">Enter envía · Shift+Enter nueva línea</span>
+                <span className="sm:hidden">Enter envía · Shift+Enter salto de línea</span>
+              </span>
+            }
+          />
         </div>
 
         {/* Side panel — classification result */}
-        <aside className="hidden w-[300px] shrink-0 overflow-y-auto border-l border-white/[0.04] bg-[#0B1622] p-5 lg:block">
+        <aside className="hidden w-[300px] shrink-0 overflow-y-auto border-l border-white/[0.06] bg-[#0b1220]/95 p-5 shadow-[inset_1px_0_0_rgba(255,255,255,0.03)] lg:block">
           <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#5A6577]">Resultado de clasificación</p>
 
           {ncm ? (

@@ -9,7 +9,10 @@ export default async function LoginPage({
 }) {
   const sp = await searchParams;
   return (
-    <div className="flex min-h-[100dvh] items-center justify-center bg-[#07111A] px-4 sm:px-6" style={{ fontFamily: "var(--font-body)" }}>
+    <div
+      className="flex min-h-[100dvh] items-center justify-center bg-[#07111A] px-4 py-8 pt-safe pb-safe sm:px-6"
+      style={{ fontFamily: "var(--font-body)" }}
+    >
       <LoginClient redirectTo={sp.redirect} />
     </div>
   );
