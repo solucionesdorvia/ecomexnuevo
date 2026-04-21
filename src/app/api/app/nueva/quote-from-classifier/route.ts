@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { Prisma } from "@prisma/client";
+import type { InputJsonValue } from "@prisma/client/runtime/client";
 import { getSessionUser } from "@/lib/auth/session";
 import { prisma } from "@/lib/db";
 import { calcImportQuote } from "@/lib/quote/calcImportQuote";
@@ -67,8 +67,8 @@ export async function POST(req: Request) {
       anonId,
       mode: "quote",
       userText,
-      productJson: productJson as Prisma.InputJsonValue,
-      quoteJson: quote as unknown as Prisma.InputJsonValue,
+      productJson: productJson as unknown as InputJsonValue,
+      quoteJson: quote as unknown as InputJsonValue,
       totalMinUsd: quote.totalMinUsd ?? undefined,
       totalMaxUsd: quote.totalMaxUsd ?? undefined,
       stage: "quoted",
