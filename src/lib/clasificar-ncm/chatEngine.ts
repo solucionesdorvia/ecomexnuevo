@@ -301,6 +301,21 @@ export async function processClasificarTurn(opts: {
       snap.status = "needs_info";
     }
 
+    /**
+     * Si el usuario ya había respondido a una ambigüedad previa (hay mensaje
+     * de usuario posterior al último assistant), la damos por respondida:
+     * no volvemos a renderizar el mismo bloque con los mismos candidatos.
+     * Evita el bucle donde la UI pregunta una y otra vez lo mismo.
+     */
+    const prevAmbigKey = prev.ambiguity?.competingCandidates?.slice().sort().join("|");
+    const currAmbigKey = snap.ambiguity?.competingCandidates?.slice().sort().join("|");
+    const ambiguityIsRepeat = Boolean(
+      prevAmbigKey && currAmbigKey && prevAmbigKey === currAmbigKey
+    );
+    if (ambiguityIsRepeat) {
+      snap.ambiguity = undefined;
+    }
+
     const ambNorm: NormalizedAmbiguity | undefined =
       motor.engine.mode === "full"
         ? (motor.engine.pipeline.ncmMeta as { ambiguity?: NormalizedAmbiguity } | undefined)?.ambiguity
@@ -308,15 +323,14 @@ export async function processClasificarTurn(opts: {
 
     const pipeline = motor.engine.mode === "full" ? motor.engine.pipeline : null;
 
-    // Solo renderizar el bloque de ambigüedad si seguimos "abiertos".
+    // Solo renderizar el bloque de ambigüedad si:
+    // 1) seguimos abiertos, 2) hay ambiguity NUEVA, 3) no es repetición del turno anterior.
     const ambiguityParagraph =
-      snap.status !== "resolved" && snap.ambiguity && ambNorm
+      snap.status !== "resolved" && snap.ambiguity && ambNorm && !ambiguityIsRepeat
         ? `\n\n---\n**Ambigüedad:** ${buildAmbiguityAssistantParagraph(ambNorm)}\n\n**Pregunta:** ${ambNorm.primaryQuestion}${
             ambNorm.secondaryQuestion ? `\n\n**Si aplica:** ${ambNorm.secondaryQuestion}` : ""
           }`
-        : snap.status !== "resolved" && ambiguous && !pipeline?.pcram
-          ? `\n\n**Ambigüedad detectada** entre posiciones cercanas; conviene validar documentalmente.`
-          : "";
+        : "";
 
     const extraFull =
       motor.engine.mode === "full" && ncm && conf < 0.7 && !pipeline?.pcram
