@@ -1,42 +1,27 @@
-import { SystemPage, SystemSection } from "@/components/app/SystemPage";
+import Link from "next/link";
+import { SystemEmpty, SystemPage, SystemSection } from "@/components/app/SystemPage";
 
-const MOCK_REPORTS = [
-  { name: "Cotización - Componentes electrónicos", type: "Cotización", date: "15 Mar 2026", total: "$6,840" },
-  { name: "Presupuesto - Maquinaria industrial", type: "Presupuesto", date: "12 Mar 2026", total: "$24,500" },
-  { name: "Cotización - Textiles Turquía", type: "Cotización", date: "08 Mar 2026", total: "$3,200" },
-  { name: "Cotización - Autopartes Brasil", type: "Cotización", date: "28 Feb 2026", total: "$12,100" },
-];
+export const metadata = { title: "Reportes — E-COMEX" };
 
 export default function ReportesPage() {
   return (
-    <SystemPage title="Reportes" description="Historial de analisis y reportes exportados para trazabilidad.">
-      <SystemSection title="Registro de exportaciones">
-        <div className="overflow-x-auto rounded-xl border border-white/[0.04]">
-          <table className="w-full min-w-[600px] text-left">
-            <thead>
-              <tr className="border-b border-white/[0.04] bg-[#0B1622]">
-                <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Reporte</th>
-                <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Tipo</th>
-                <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Fecha</th>
-                <th className="px-4 py-3 text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Total</th>
-                <th className="px-4 py-3" />
-              </tr>
-            </thead>
-            <tbody>
-              {MOCK_REPORTS.map((r) => (
-                <tr key={r.name} className="border-b border-white/[0.04] hover:bg-white/[0.02]">
-                  <td className="px-4 py-3 text-[13px] font-medium text-white">{r.name}</td>
-                  <td className="px-4 py-3"><span className="rounded bg-white/[0.04] px-2 py-0.5 text-[10px] text-[#b0b8c9]">{r.type}</span></td>
-                  <td className="px-4 py-3 text-[13px] text-[#555c6b]">{r.date}</td>
-                  <td className="px-4 py-3 text-[13px] font-medium text-[#d4a843]">{r.total}</td>
-                  <td className="px-4 py-3 text-right">
-                    <button type="button" className="text-[12px] text-[#2b59ff] hover:text-white">PDF</button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+    <SystemPage
+      title="Reportes"
+      description="Historial de análisis y reportes exportados para trazabilidad."
+    >
+      <SystemSection title="Registro de reportes">
+        <SystemEmpty
+          title="Todavía no tenés reportes"
+          description="Cuando completes cotizaciones con PDF, vas a verlas acá con su fecha y total."
+          action={
+            <Link
+              href="/app/nueva"
+              className="inline-flex items-center justify-center rounded-lg bg-[#2b59ff] px-4 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+            >
+              Nueva operación
+            </Link>
+          }
+        />
       </SystemSection>
     </SystemPage>
   );

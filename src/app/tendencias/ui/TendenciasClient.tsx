@@ -287,8 +287,7 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
               <div className="text-xs leading-relaxed text-muted">
                 Detectamos una baja temporal del <span className="font-bold text-white">12%</span>{" "}
-                en el flete marítimo para el corredor Ningbo‑Buenos Aires entre Nov 15 y Dec 05
-                (demo).
+                en el flete marítimo para el corredor Ningbo‑Buenos Aires entre Nov 15 y Dec 05.
               </div>
             </div>
             <div className="mt-4 grid gap-3">

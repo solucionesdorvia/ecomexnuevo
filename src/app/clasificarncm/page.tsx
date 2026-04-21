@@ -1,9 +1,8 @@
 import ClasificarNcmClient from "./ClasificarNcmClient";
 
 export const metadata = {
-  title: "Clasificación NCM conversacional — E-COMEX",
-  description:
-    "Analista técnico para posición arancelaria NCM: preguntas, refinamiento y confianza.",
+  title: "Clasificación NCM — E-COMEX",
+  description: "Clasificá tu producto y obtené la posición arancelaria NCM.",
 };
 
 export default function ClasificarNcmPage() {

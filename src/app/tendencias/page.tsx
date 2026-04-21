@@ -107,9 +107,6 @@ export default function TendenciasPage() {
         <Badge tone="muted" icon="calendar_today">
           Últimos 30 días
         </Badge>
-        <Badge tone="primary" icon="download">
-          Descargar reporte (demo)
-        </Badge>
       </div>
 
       <TendenciasClient signals={signals} />
