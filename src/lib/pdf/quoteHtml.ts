@@ -356,10 +356,16 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
   const ivaToShow = (costs as any).iva ?? null;
   const fobLabel = quote.mode === "budget" ? "EXW" : "FOB";
 
-  // NOTE: Product requirement says don't show NCM. We keep the same layout but replace content.
+  // Código NCM real (se muestra en la plantilla como "9506.91.00.139W").
+  const productRaw = (quote.productJson ?? {}) as {
+    ncm?: unknown;
+    raw?: { ncm?: unknown; pcram?: { title?: unknown } };
+  };
+  const rawNcm = safeStr(productRaw?.ncm) || safeStr(productRaw?.raw?.ncm);
   const classificationDesc =
+    safeStr(productRaw?.raw?.pcram?.title) ||
     "Clasificación aduanera estimada internamente. Se valida con datos técnicos, origen, uso y requisitos antes de operar.";
-  const classificationCode = "—";
+  const classificationCode = rawNcm && rawNcm !== "9999.99.99" ? rawNcm : "—";
 
   const items: any[] = Array.isArray((costs as any).items) ? ((costs as any).items as any[]) : [];
   const hasItems = items.length > 0;
@@ -464,6 +470,8 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
     .cost-item.total { font-weight: 700; font-size: 15px; border-top: 2px solid var(--ecomex-blue); margin-top: 8px; padding-top: 8px; }
     .cost-item.iva-total { color: var(--ecomex-red); font-weight: 600; }
     .cost-item.grand-total { font-weight: 700; font-size: 16px; }
+    .cost-item .blue-mark { color: var(--ecomex-red); font-weight: 700; margin-left: 2px; }
+    .blue-footnote { font-size: 10px; color: var(--text-light); margin-top: 8px; font-style: italic; }
 
     .page-items { display:flex; flex-direction:column; }
     .items-table { width:100%; border-collapse: collapse; font-size: 11px; margin-top: 15px; }
@@ -561,27 +569,28 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
         <div class="ncm-code">${htmlEscape(classificationCode)}</div>
 
         <div class="cost-breakdown">
-          <div class="cost-item main"><span class="label">${htmlEscape(fobLabel)}:</span><span class="value">${costs.fobTotal != null ? fmtUsdEs(costs.fobTotal) : "—"}</span></div>
+          <div class="cost-item main"><span class="label">${htmlEscape(fobLabel)}<span class="blue-mark">*</span>:</span><span class="value">${costs.fobTotal != null ? fmtUsdEs(costs.fobTotal) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Flete marítimo internacional:</span><span class="value">${costs.flete != null ? fmtUsdEs(costs.flete) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Seguro internacional:</span><span class="value">${costs.seguro != null ? fmtUsdEs(costs.seguro) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Tributos aduaneros a pagar:</span><span class="value">${costs.impuestos != null ? fmtUsdEs(costs.impuestos) : "—"}</span></div>
-          <div class="cost-item sub"><span class="label">Derechos de importación:</span><span class="value">${showTax("Derechos")}</span></div>
-          <div class="cost-item sub"><span class="label">Tasa de Estadística:</span><span class="value">${showTax("Tasa de Estadistica")}</span></div>
-          <div class="cost-item sub iva-highlight"><span class="label">I.V.A.:</span><span class="value">${showTax("IVA")}</span></div>
+          <div class="cost-item sub"><span class="label">Derechos de importación (35%):</span><span class="value">${showTax("Derechos")}</span></div>
+          <div class="cost-item sub"><span class="label">Tasa de Estadística (3%):</span><span class="value">${showTax("Tasa de Estadistica")}</span></div>
+          <div class="cost-item sub iva-highlight"><span class="label">I.V.A. (21%):</span><span class="value">${showTax("IVA")}</span></div>
           <div class="cost-item sub"><span class="label">IVA Adicional:</span><span class="value">${showTax("IVA Adicional")}</span></div>
           <div class="cost-item sub"><span class="label">Impuesto a las Ganancias:</span><span class="value">${showTax("Impuesto a las Ganancias")}</span></div>
           <div class="cost-item sub"><span class="label">II.BB.:</span><span class="value">${showTax("IIBB")}</span></div>
-          <div class="cost-item sub"><span class="label">Arancel SIM:</span><span class="value">${
+          <div class="cost-item main"><span class="label">Arancel SIM:</span><span class="value">${
             (costs as any).arancelSimUsd != null ? fmtUsdEs((costs as any).arancelSimUsd) : showTax("Tasa SIM")
           }</span></div>
           <div class="cost-item main"><span class="label">Honorarios:</span><span class="value">${costs.honorarios != null ? fmtUsdEs(costs.honorarios) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Gastos de depósito y portuarios:</span><span class="value">${costs.deposito != null ? fmtUsdEs(costs.deposito) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Gastos transporte nacional:</span><span class="value">${costs.transporteNac != null ? fmtUsdEs(costs.transporteNac) : "—"}</span></div>
-          <div class="cost-item main"><span class="label">Gastos transferencia intl:</span><span class="value">${costs.transferencia != null ? fmtUsdEs(costs.transferencia) : "—"}</span></div>
+          <div class="cost-item main"><span class="label">Gastos transferencia intl<span class="blue-mark">*</span>:</span><span class="value">${costs.transferencia != null ? fmtUsdEs(costs.transferencia) : "—"}</span></div>
           <div class="cost-item total"><span class="label">TOTAL:</span><span class="value">${totalToShow != null ? fmtUsdEs(totalToShow) : "—"}</span></div>
           <div class="cost-item iva-total"><span class="label">IVA:</span><span class="value">${ivaToShow != null ? fmtUsdEs(ivaToShow) : "—"}</span></div>
           <div class="cost-item grand-total"><span class="label">TOTAL A PAGAR:</span><span class="value">${totalToPay != null ? fmtUsdEs(totalToPay) : "—"}</span></div>
         </div>
+        <p class="blue-footnote"><span class="blue-mark">*</span> Ítems a tipo de cambio informal (blue).</p>
       </div>
     </div>
   </div>
