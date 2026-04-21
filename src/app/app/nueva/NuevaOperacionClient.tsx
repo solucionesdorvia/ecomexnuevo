@@ -7,12 +7,8 @@ import { Paperclip, Sparkles } from "lucide-react";
 import { useClasificarChat } from "@/app/clasificarncm/hooks/useClasificarChat";
 import { ChatContainer } from "@/app/clasificarncm/components/ChatContainer";
 import { ChatInput } from "@/app/clasificarncm/components/ChatInput";
-import { CaseSummaryPanel } from "@/app/clasificarncm/components/CaseSummaryPanel";
 import { ClassificationCard } from "@/app/clasificarncm/components/ClassificationCard";
-import { DiscardedCandidatesBlock } from "@/app/clasificarncm/components/DiscardedCandidatesBlock";
 import { FollowUpQuestions } from "@/app/clasificarncm/components/FollowUpQuestions";
-import { SuggestedCandidatesList } from "@/app/clasificarncm/components/SuggestedCandidatesList";
-import { ClasificarNcmPipelineFooter } from "@/app/clasificarncm/components/ClasificarNcmPipelineFooter";
 import {
   CLASIFICAR_NCM_LANDING_DESCRIPTION,
   CLASIFICAR_NCM_LANDING_TITLE,
@@ -20,7 +16,7 @@ import {
 } from "@/app/clasificarncm/uiConstants";
 import { AMBIGUITY_REASON_LABELS } from "@/lib/clasificar-ncm/ncmAmbiguity";
 import type { CaseSnapshot, CaseState } from "@/lib/clasificar-ncm/types";
-import { QuoteCostBreakdown, type QuoteCostPayload } from "./QuoteCostBreakdown";
+import type { QuoteCostPayload } from "./QuoteCostBreakdown";
 import { buildChatPrefillFromParams, stripNcmDigits } from "@/lib/quote/cotizarFromClassifier";
 
 function stripMessages(s: CaseState): CaseSnapshot {
@@ -59,8 +55,6 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
     caseState.ambiguity && caseState.pendingQuestions?.length
       ? `${AMBIGUITY_REASON_LABELS[caseState.ambiguity.reason]} — falta definir: ${caseState.ambiguity.decisiveField}.`
       : undefined;
-
-  const hasConversation = caseState.messages.length > 0;
 
   const busy = pending || pendingExtract;
 
@@ -161,15 +155,7 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
         }}
       />
 
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.35]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(148,163,184,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.04) 1px, transparent 1px)`,
-          backgroundSize: "48px 48px",
-        }}
-      />
-
-      <div className="relative z-10 flex min-h-0 flex-1 flex-col overflow-hidden lg:flex-row">
+      <div className="relative z-10 flex min-h-0 flex-1 flex-col overflow-hidden">
         <div className="flex min-h-0 min-w-0 flex-1 flex-col">
           <div className="min-h-0 flex-1 overflow-y-auto">
             {caseState.messages.length === 0 ? (
@@ -210,7 +196,10 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
               <ChatContainer messages={caseState.messages} pending={busy} />
             )}
 
-            {caseState.messages.length > 0 && caseState.pendingQuestions && caseState.pendingQuestions.length > 0 ? (
+            {caseState.messages.length > 0 &&
+            caseState.pendingQuestions &&
+            caseState.pendingQuestions.length > 0 &&
+            !showResultCard ? (
               <div className="shrink-0 border-t border-white/[0.04] px-3 py-3 sm:px-6">
                 <div className="mx-auto max-w-[720px]">
                   <FollowUpQuestions questions={caseState.pendingQuestions} context={followUpContext} />
@@ -218,72 +207,75 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
               </div>
             ) : null}
 
-            {caseState.messages.length > 0 &&
-            (showResultCard ||
-              (caseState.candidates && caseState.candidates.length > 0) ||
-              (caseState.discardedCandidates && caseState.discardedCandidates.length > 0)) ? (
-              <div className="shrink-0 space-y-4 border-t border-white/[0.04] px-3 py-4 sm:px-6">
-                <div className="mx-auto flex max-w-[720px] flex-col gap-4">
-                  {showResultCard && caseState.recommendedNcm && typeof caseState.confidence === "number" ? (
-                    <ClassificationCard
-                      ncm={caseState.recommendedNcm}
-                      description={caseState.classificationRationale}
-                      confidence={caseState.confidence}
-                      rationale={
-                        caseState.status === "tentative"
-                          ? "Confianza por debajo del 70% o posición ambigua: validá con documentación y despachante."
-                          : undefined
-                      }
-                      discardedNotes={caseState.discardedNotes}
-                      discardedCandidates={caseState.discardedCandidates}
-                      variant={caseState.status === "resolved" && !caseState.ambiguity ? "resolved" : "tentative"}
-                    />
-                  ) : caseState.discardedCandidates && caseState.discardedCandidates.length > 0 ? (
-                    <div className="rounded-2xl border border-rose-500/15 bg-rose-500/[0.04] p-3 shadow-xl sm:p-4">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-rose-400/90">
-                        Sin NCM prioritaria
-                      </p>
-                      <p className="mt-1 text-[12px] leading-relaxed text-slate-400">
-                        El motor descartó las posiciones siguientes por incompatibilidad con el producto descrito.
-                      </p>
-                      <DiscardedCandidatesBlock items={caseState.discardedCandidates} variant="full" className="mt-3" />
-                    </div>
-                  ) : null}
-                  {caseState.candidates && caseState.candidates.length > 0 ? (
-                    <SuggestedCandidatesList candidates={caseState.candidates} />
-                  ) : null}
-
-                  {showResultCard ? (
-                    <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-                      <button
-                        type="button"
-                        disabled={pendingQuote}
-                        onClick={() => void createQuoteFromClassifier()}
-                        className="min-h-[48px] rounded-xl bg-[#2563eb] px-4 py-3 text-[13px] font-medium text-white shadow-lg shadow-[#2563eb]/20 transition hover:bg-[#1d4ed8] disabled:opacity-40 sm:min-h-0"
-                      >
-                        {pendingQuote ? "Creando presupuesto…" : "Crear presupuesto con este NCM"}
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          reset();
-                          setQuoteResult(null);
-                          setInvoiceFiles([]);
-                        }}
-                        className="min-h-[44px] rounded-xl border border-white/[0.08] px-4 py-3 text-[12px] text-slate-500 transition hover:border-white/[0.15] hover:text-slate-300 sm:min-h-0"
-                      >
-                        Nuevo caso
-                      </button>
-                    </div>
-                  ) : null}
+            {showResultCard && caseState.recommendedNcm && typeof caseState.confidence === "number" ? (
+              <div className="shrink-0 border-t border-white/[0.04] bg-[#0b1220]/60 px-3 py-4 sm:px-6 sm:py-5">
+                <div className="mx-auto flex max-w-[720px] flex-col gap-3">
+                  <ClassificationCard
+                    ncm={caseState.recommendedNcm}
+                    description={caseState.classificationRationale}
+                    confidence={caseState.confidence}
+                    rationale={
+                      caseState.status === "tentative"
+                        ? "Confianza por debajo del 70% o posición ambigua: validá con documentación y despachante."
+                        : undefined
+                    }
+                    variant={caseState.status === "resolved" && !caseState.ambiguity ? "resolved" : "tentative"}
+                  />
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                    <button
+                      type="button"
+                      disabled={pendingQuote}
+                      onClick={() => void createQuoteFromClassifier()}
+                      className="min-h-[48px] rounded-xl bg-[#2563eb] px-4 py-3 text-[13px] font-medium text-white shadow-lg shadow-[#2563eb]/20 transition hover:bg-[#1d4ed8] disabled:opacity-40 sm:min-h-0"
+                    >
+                      {pendingQuote ? "Creando presupuesto…" : "Crear presupuesto con este NCM"}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        reset();
+                        setQuoteResult(null);
+                        setInvoiceFiles([]);
+                      }}
+                      className="min-h-[44px] text-[12px] text-slate-500 transition hover:text-slate-300 sm:min-h-0"
+                    >
+                      Consultar otro producto
+                    </button>
+                  </div>
                 </div>
               </div>
             ) : null}
 
             {quoteResult ? (
-              <div className="shrink-0 border-t border-white/[0.04] px-3 py-4 sm:px-6">
-                <div className="mx-auto max-w-[720px]">
-                  <QuoteCostBreakdown quote={quoteResult} scrollIntoViewOnMount />
+              <div className="shrink-0 border-t border-white/[0.04] bg-[#0b1220]/60 px-3 py-4 sm:px-6">
+                <div className="mx-auto flex max-w-[720px] flex-col gap-3">
+                  {totalCard ? (
+                    <div className="rounded-xl border border-[#d4a843]/25 bg-[#d4a843]/[0.04] p-4">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#5A6577]">
+                        {totalCard.label}
+                      </p>
+                      <p
+                        className="mt-1 text-[22px] font-extrabold leading-tight text-[#d4a843] sm:text-[26px]"
+                        style={{ fontFamily: "var(--font-display)" }}
+                      >
+                        {totalCard.value}
+                      </p>
+                    </div>
+                  ) : null}
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                    <Link
+                      href="/app/operaciones"
+                      className="min-h-[44px] rounded-xl bg-[#2563eb] px-4 py-2.5 text-center text-[13px] font-medium text-white transition hover:bg-[#1d4ed8] sm:min-h-0"
+                    >
+                      Ver operaciones
+                    </Link>
+                    <Link
+                      href={`/api/quote/pdf?mode=quote&id=${encodeURIComponent(quoteResult.quoteId)}`}
+                      className="min-h-[44px] rounded-xl border border-white/[0.08] px-4 py-2.5 text-center text-[12px] text-slate-400 transition hover:border-white/[0.18] hover:text-slate-200 sm:min-h-0"
+                    >
+                      Descargar PDF
+                    </Link>
+                  </div>
                 </div>
               </div>
             ) : null}
@@ -354,85 +346,7 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
             }
           />
         </div>
-
-        <div
-          className={`relative z-10 shrink-0 border-t border-white/[0.06] px-3 py-3 lg:w-[320px] lg:border-l lg:border-t-0 lg:px-4 lg:py-5 ${!hasConversation && !quoteResult ? "hidden lg:block" : ""}`}
-        >
-          <div className="mb-3 flex items-center justify-between gap-2 lg:hidden">
-            <span className="text-[11px] font-medium uppercase tracking-wider text-slate-500">Caso y presupuesto</span>
-            {hasConversation ? (
-              <button
-                type="button"
-                onClick={() => {
-                  reset();
-                  setQuoteResult(null);
-                  setInvoiceFiles([]);
-                }}
-                className="text-[11px] text-slate-500 hover:text-slate-300"
-              >
-                Nuevo
-              </button>
-            ) : null}
-          </div>
-
-          <CaseSummaryPanel caseState={caseState} pending={busy} />
-
-          {quoteResult ? (
-            <div className="mt-6 space-y-3 border-t border-white/[0.06] pt-6">
-              <p className="text-[11px] font-medium uppercase tracking-wider text-slate-500">Acciones</p>
-              {totalCard ? (
-                <div className="rounded-lg border border-white/[0.06] bg-[#0f172a]/80 p-3">
-                  <p className="text-[9px] font-semibold uppercase tracking-wider text-slate-500">Total (resumen)</p>
-                  <p
-                    className="mt-1 text-[15px] font-bold leading-tight text-amber-200/90"
-                    style={{ fontFamily: "var(--font-display)" }}
-                  >
-                    {totalCard.value}
-                  </p>
-                </div>
-              ) : null}
-              <p className="text-[11px] leading-relaxed text-slate-600">
-                Desglose línea por línea y supuestos del cálculo: panel principal (arriba).
-              </p>
-              <Link
-                href="/app/operaciones"
-                className="flex w-full items-center justify-center rounded-lg bg-[#2563eb] py-2.5 text-[12px] font-medium text-white transition-colors hover:bg-[#1d4ed8]"
-              >
-                Ver operaciones
-              </Link>
-              <Link
-                href={`/api/quote/pdf?mode=quote&id=${encodeURIComponent(quoteResult.quoteId)}`}
-                className="flex w-full items-center justify-center rounded-lg border border-white/[0.06] py-2 text-[12px] text-slate-500 transition-colors hover:text-slate-300"
-              >
-                Descargar PDF
-              </Link>
-            </div>
-          ) : (
-            <p className="mt-6 text-[12px] leading-relaxed text-slate-600">
-              Cuando el NCM esté listo, tocá <span className="text-slate-400">Crear presupuesto con este NCM</span> para
-              guardar la operación y ver totales acá.
-            </p>
-          )}
-
-          <div className="mt-4 hidden lg:block">
-            {hasConversation ? (
-              <button
-                type="button"
-                onClick={() => {
-                  reset();
-                  setQuoteResult(null);
-                  setInvoiceFiles([]);
-                }}
-                className="w-full rounded-lg border border-white/[0.08] py-2 text-[12px] text-slate-500 transition hover:border-white/[0.15] hover:text-slate-300"
-              >
-                Nuevo caso
-              </button>
-            ) : null}
-          </div>
-        </div>
       </div>
-
-      <ClasificarNcmPipelineFooter />
     </div>
   );
 }
