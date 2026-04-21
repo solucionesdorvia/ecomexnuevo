@@ -2,7 +2,37 @@ import { openaiJson } from "@/lib/ai/openaiClient";
 import { buildAmbiguityAssistantParagraph, type NormalizedAmbiguity } from "@/lib/clasificar-ncm/ncmAmbiguity";
 import { NCM_ANALYST_PROFESSIONAL_BLOCK } from "@/lib/clasificar-ncm/professionalModePrompt";
 import { normalizeNcmCode, runNcmMotor } from "@/lib/clasificar-ncm/runNcmMotor";
+import { ncmDigitsOnly, formatMercosurNcm8 } from "@/lib/ncm/knowledge/normalize";
 import type { CaseSnapshot, ChatMessage, ProductType } from "./types";
+
+/**
+ * Detecta si el último mensaje del usuario contiene un código NCM completo
+ * (6 u 8 dígitos, con o sin separadores). Devuelve el código normalizado a 8
+ * dígitos formato Mercosur, o null si no hay uno claro.
+ *
+ * Requiere expresión de intención explícita ("es", "uso", "la", "código", etc.)
+ * o que el código sea el único contenido del mensaje — así evitamos capturar
+ * dígitos sueltos (teléfonos, cantidades) como si fueran NCM.
+ */
+function extractExplicitNcmFromMessage(text: string): string | null {
+  const raw = text.trim();
+  if (!raw) return null;
+
+  const match = raw.match(/\b(\d{4}[.\s]?\d{2}[.\s]?\d{2}|\d{6,10})\b/);
+  if (!match) return null;
+
+  const digits = ncmDigitsOnly(match[1]);
+  if (digits.length < 6 || digits.length > 10) return null;
+
+  const lower = raw.toLowerCase();
+  const hasIntent =
+    /\b(es|ser[íi]a|usar|usa|usemos|poner|pone|pond[eé]|cotiz[áa]|cotizar|con|bajo|c[óo]digo|ncm|la|el)\b/.test(
+      lower
+    ) || raw === match[1] || raw.replace(/\s+/g, "") === match[1].replace(/\s+/g, "");
+  if (!hasIntent) return null;
+
+  return formatMercosurNcm8(digits.slice(0, 8));
+}
 
 const CLASSIFY_TIMEOUT_MS = Number(process.env.NCM_CHAT_CLASSIFY_TIMEOUT_MS) || 22_000;
 
@@ -54,53 +84,29 @@ const ANALYST_SYSTEM =
 ` +
   NCM_ANALYST_PROFESSIONAL_BLOCK +
   `
-=== INFERENCIA Y CONOCIMIENTO GENERAL (OBLIGATORIO ANTES DE PREGUNTAR) ===
+=== ESTILO DE RESPUESTA (OBLIGATORIO) ===
 
-Antes de incluir algo en "questions_next" o "missing_critical_data":
+- **Breve**: 1 a 3 líneas como regla. Nunca más de 5. Sin intro ni despedida.
+- **Nada de resumen repetido**: NO vuelvas a listar "Material", "Función", "Uso" si ya se habló antes. Solo mencioná lo nuevo o lo decisivo.
+- **Sin tablas ni secciones con títulos** salvo que el usuario las pida explícitamente. Un párrafo plano.
+- **Una pregunta por turno como mucho.** Si ya pediste un dato que no te respondieron, no lo repitas formateado; reformulalo natural.
+- Si el usuario ya dio un NCM concreto (ej. "es 8516.10.00"), **aceptalo** sin pedir más datos y sin volver a plantear el dilema.
+- Tono profesional, directo, sin frases de relleno ("podemos avanzar", "con la información proporcionada"). No hace falta decir que estás procesando.
 
-1. **Inferí** características típicas del tipo de producto (mercado, uso habitual, configuración estándar).
-2. **Usá** conocimiento general del producto: no pedís al usuario lo que cualquier importador daría por sentado.
-3. **Asumí** configuraciones estándar salvo que el texto del usuario indique lo contrario (ej. producto final vs repuesto, alimentación típica, conectividad habitual).
+=== INFERENCIA Y CONOCIMIENTO GENERAL ===
 
-**NO preguntar** por información que sea:
-- conocimiento general del producto (obvio para quien conoce la categoría),
-- inferible por el tipo de producto,
-- irrelevante para la clasificación arancelaria (no cambia partida ni subpartida).
+Antes de preguntar algo, inferí con conocimiento del producto. NO pidas al usuario lo que cualquier importador daría por sentado. Si el dato no cambia partida/subpartida → no lo pidas.
 
-**REGLA DE ORO:** Si la respuesta a una pregunta **no puede cambiar** la partida/subpartida NCM relevante → **NO la hagas**. Dejá "questions_next" vacío y usá supuestos razonables en el estado y en "assistant_message".
+**Máximo 3 preguntas** en "questions_next", y solo si afectan: función principal | parte/accesorio/final | capítulo/partida | material dominante en mezclas. Si ninguna aplica → array vacío.
 
-=== OPTIMIZACIÓN DE PREGUNTAS (OBLIGATORIO) ===
+=== AMBIGÜEDAD ===
 
-Antes de escribir cada pregunta, preguntate internamente: **«¿Esta información puede cambiar la clasificación?»**  
-Si la respuesta es **NO** → no la incluyas.
+Solo señalá ambigüedad si hay duda real entre capítulos o partidas. Si el usuario ya resolvió el dilema (ej. te dice un NCM exacto), **NO** marques ambigüedad ni pidas más.
 
-**Máximo 3 preguntas en "questions_next"**, y **solo** si cada una puede afectar al menos uno de estos frentes (si no aplica ninguno → no preguntar):
-1. **Función principal** del producto (qué hace en la economía aduanera).
-2. **Clasificación como producto final vs parte vs accesorio** (criterio esencial / RGI).
-3. **Capítulo / partida** (distinto capítulo HS o partida de 4 dígitos).
-4. **Material dominante** en mezclas o composiciones (define capítulo o partida de textiles, plásticos, metales, etc.).
+=== RESPUESTA (SOLO JSON) ===
 
-Si ninguna pregunta cumple esos cuatro criterios → **questions_next: []** y avanzá con inferencias.
-
-**Ejemplo (smartwatch tipo Apple Watch):** podés asumir dispositivo electrónico portátil, batería recargable, conectividad inalámbrica típica, producto final. **NO** preguntar si tiene batería, si se carga por cable, si tiene deportes, si se conecta al teléfono, salvo que el texto abra una duda que **sí** separe partidas (ej. reloj mecánico vs smart; uso exclusivo distinto que mueva capítulo).
-
-**Sí preguntar** solo cuando haya **bifurcación arancelaria real** encuadrable en los puntos 1–4 anteriores.
-
-=== AMBIGÜEDAD Y PREGUNTAS (OBLIGATORIO) ===
-
-Si detectás **ambigüedad real** (dos capítulos o partidas plausibles, o un dato que bifurca la NCM y no está en el texto): **questions_next** debe incluir **al menos 1** pregunta concreta (máx. 3) y **ready_to_run_classifier: false** hasta responder o poder inferir sin duda. No declarés el caso listo para clasificar dejando la ambigüedad sin una pregunta asociada.
-
-Tu tarea en CADA turno:
-1. Interpretar el producto por FUNCIÓN PRINCIPAL y uso real, no solo por nombre comercial.
-2. Actualizar campos estructurados; rellená con inferencias razonables los campos que no contradigan al usuario.
-3. "missing_critical_data": solo líneas que **sí** bloqueen o acoten la partida NCM y que **no** puedan inferirse (y que encajen en 1–4).
-4. "questions_next": como máximo 3 ítems, cada uno pasando el test «¿cambia la clasificación?» y al menos uno de (función principal | parte/accesorio/final | capítulo/partida | material dominante en mezclas). Si no, array vacío.
-5. **ready_to_run_classifier**: ponelo en **true** cuando, con inferencias + texto, podés armar una descripción técnica suficiente para buscar NCM. Si pedís preguntas en "questions_next", mantenelo en **false**. Cuando no haya preguntas pendientes y el caso esté acotado, **true** y "questions_next" vacío.
-6. Tono: directo, técnico, sin frases como "¿en qué puedo ayudarte?".
-
-Respondé SOLO JSON con esta forma:
 {
-  "assistant_message": "string (markdown permitido, párrafos claros)",
+  "assistant_message": "máximo 3 líneas, texto plano sin listas decorativas",
   "product_name": "string | null",
   "technical_name": "string | null",
   "main_function": "string | null",
@@ -112,7 +118,7 @@ Respondé SOLO JSON con esta forma:
   "missing_critical_data": ["string"],
   "questions_next": ["máximo 3 preguntas"],
   "ready_to_run_classifier": boolean,
-  "classification_rationale_draft": "string | null (breve, por qué podría caer en cierto capítulo)"
+  "classification_rationale_draft": "string | null"
 }`;
 
 type AnalystJson = {
@@ -158,6 +164,38 @@ export async function processClasificarTurn(opts: {
   snapshot: CaseSnapshot;
 }): Promise<{ assistantMessage: string; snapshot: CaseSnapshot }> {
   const { messages, snapshot: prev } = opts;
+
+  /**
+   * Short-circuit: si el usuario explicita un NCM en el último mensaje
+   * (ej. "es 8516.10.00"), lo aceptamos como decisión y cerramos sin repreguntar.
+   */
+  const lastUser = [...messages].reverse().find((m) => m.role === "user")?.content ?? "";
+  const explicitNcm = extractExplicitNcmFromMessage(lastUser);
+  if (explicitNcm) {
+    const reused = prev.candidates?.find((c) => ncmDigitsOnly(c.code) === ncmDigitsOnly(explicitNcm));
+    const confidence = reused?.confidence ?? 0.7;
+    const rationale =
+      reused?.description ||
+      prev.classificationRationale ||
+      "Clasificación confirmada por el usuario.";
+
+    const snap: CaseSnapshot = {
+      ...prev,
+      recommendedNcm: explicitNcm,
+      confidence,
+      classificationRationale: rationale,
+      status: "resolved",
+      pendingQuestions: undefined,
+      ambiguity: undefined,
+      missingCriticalData: undefined,
+      errorMessage: undefined,
+    };
+
+    return {
+      assistantMessage: `Listo. Clasifico con **${explicitNcm}** según tu indicación.`,
+      snapshot: snap,
+    };
+  }
 
   const transcript = truncateTranscript(messages);
 
@@ -270,12 +308,13 @@ export async function processClasificarTurn(opts: {
 
     const pipeline = motor.engine.mode === "full" ? motor.engine.pipeline : null;
 
+    // Solo renderizar el bloque de ambigüedad si seguimos "abiertos".
     const ambiguityParagraph =
-      snap.ambiguity && ambNorm
+      snap.status !== "resolved" && snap.ambiguity && ambNorm
         ? `\n\n---\n**Ambigüedad:** ${buildAmbiguityAssistantParagraph(ambNorm)}\n\n**Pregunta:** ${ambNorm.primaryQuestion}${
             ambNorm.secondaryQuestion ? `\n\n**Si aplica:** ${ambNorm.secondaryQuestion}` : ""
           }`
-        : ambiguous && !pipeline?.pcram
+        : snap.status !== "resolved" && ambiguous && !pipeline?.pcram
           ? `\n\n**Ambigüedad detectada** entre posiciones cercanas; conviene validar documentalmente.`
           : "";
 
