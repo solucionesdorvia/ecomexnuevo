@@ -4,6 +4,7 @@ import type { InputJsonValue } from "@prisma/client/runtime/client";
 import { getSessionUser } from "@/lib/auth/session";
 import { prisma } from "@/lib/db";
 import { calcImportQuote } from "@/lib/quote/calcImportQuote";
+import { ensurePcram } from "@/lib/chat/chatProductBuilder";
 import {
   buildProductJsonFromClassifierSnapshot,
   buildUserTextFromClassifier,
@@ -50,10 +51,17 @@ export async function POST(req: Request) {
   const userText = buildUserTextFromClassifier(snapshot, messages);
   const productJson = buildProductJsonFromClassifierSnapshot(snapshot, messages);
 
+  // Enriquecer con PCRAM: usa el NCM que confirmó el usuario en el clasificador
+  // para traer tasas/intervenciones/descripción oficial. Si falla (sin creds o
+  // timeout), seguimos con tasas estimadas.
+  const enrichedProduct = await ensurePcram(productJson as Record<string, unknown>).catch(
+    () => productJson as Record<string, unknown>
+  );
+
   type QuoteProductInput = Extract<Parameters<typeof calcImportQuote>[0], { mode: "quote" }>["product"];
   const quote = await calcImportQuote({
     mode: "quote",
-    product: productJson as unknown as QuoteProductInput,
+    product: enrichedProduct as unknown as QuoteProductInput,
     rawUserText: userText,
   });
 
@@ -67,7 +75,7 @@ export async function POST(req: Request) {
       anonId,
       mode: "quote",
       userText,
-      productJson: productJson as unknown as InputJsonValue,
+      productJson: enrichedProduct as unknown as InputJsonValue,
       quoteJson: quote as unknown as InputJsonValue,
       totalMinUsd: quote.totalMinUsd ?? undefined,
       totalMaxUsd: quote.totalMaxUsd ?? undefined,
