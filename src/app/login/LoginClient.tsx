@@ -19,7 +19,7 @@ export default function LoginClient({ redirectTo }: { redirectTo?: string }) {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
-      const json = (await res.json()) as any;
+      const json = (await res.json()) as { ok?: boolean; error?: string };
       if (!res.ok || !json.ok) throw new Error(json.error || "Error.");
       window.location.href = safeInternalRedirectPath(redirectTo);
     } catch (e) {

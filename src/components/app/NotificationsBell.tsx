@@ -110,7 +110,13 @@ export default function NotificationsBell() {
         data-testid="notifications-bell"
         onClick={onToggle}
         aria-expanded={open}
-        className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/[0.06] text-[#4a5568] transition-colors hover:bg-white/[0.04] hover:text-white sm:h-9 sm:w-9"
+        aria-haspopup="dialog"
+        aria-label={
+          unreadCount > 0
+            ? `Ver notificaciones (${unreadCount} sin leer)`
+            : "Ver notificaciones"
+        }
+        className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/[0.06] text-[#4a5568] transition-colors hover:bg-white/[0.04] hover:text-white sm:h-9 sm:w-9"
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />

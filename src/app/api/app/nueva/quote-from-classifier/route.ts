@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
+import { Prisma } from "@prisma/client";
 import { getSessionUser } from "@/lib/auth/session";
 import { prisma } from "@/lib/db";
 import { calcImportQuote } from "@/lib/quote/calcImportQuote";
@@ -47,11 +48,12 @@ export async function POST(req: Request) {
   }
 
   const userText = buildUserTextFromClassifier(snapshot, messages);
-  const productJson = buildProductJsonFromClassifierSnapshot(snapshot, messages) as Record<string, unknown>;
+  const productJson = buildProductJsonFromClassifierSnapshot(snapshot, messages);
 
+  type QuoteProductInput = Extract<Parameters<typeof calcImportQuote>[0], { mode: "quote" }>["product"];
   const quote = await calcImportQuote({
     mode: "quote",
-    product: productJson as any,
+    product: productJson as unknown as QuoteProductInput,
     rawUserText: userText,
   });
 
@@ -65,8 +67,8 @@ export async function POST(req: Request) {
       anonId,
       mode: "quote",
       userText,
-      productJson: productJson as any,
-      quoteJson: quote as any,
+      productJson: productJson as Prisma.InputJsonValue,
+      quoteJson: quote as unknown as Prisma.InputJsonValue,
       totalMinUsd: quote.totalMinUsd ?? undefined,
       totalMaxUsd: quote.totalMaxUsd ?? undefined,
       stage: "quoted",

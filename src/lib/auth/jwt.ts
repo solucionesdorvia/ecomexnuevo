@@ -30,7 +30,8 @@ export async function verifyAuthToken(token: string): Promise<AuthPayload | null
   try {
     const { payload } = await jwtVerify(token, secretKey());
     const sub = typeof payload.sub === "string" ? payload.sub : null;
-    const email = typeof (payload as any).email === "string" ? (payload as any).email : null;
+    const emailClaim = (payload as { email?: unknown }).email;
+    const email = typeof emailClaim === "string" ? emailClaim : null;
     if (!sub || !email) return null;
     return { sub, email };
   } catch {

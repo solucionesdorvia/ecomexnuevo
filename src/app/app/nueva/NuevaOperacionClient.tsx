@@ -16,7 +16,7 @@ import {
 } from "@/app/clasificarncm/uiConstants";
 import { AMBIGUITY_REASON_LABELS } from "@/lib/clasificar-ncm/ncmAmbiguity";
 import type { CaseSnapshot, CaseState } from "@/lib/clasificar-ncm/types";
-import type { QuoteCostPayload } from "./QuoteCostBreakdown";
+import { QuoteCostBreakdown, type QuoteCostPayload } from "./QuoteCostBreakdown";
 import { buildChatPrefillFromParams, stripNcmDigits } from "@/lib/quote/cotizarFromClassifier";
 
 function stripMessages(s: CaseState): CaseSnapshot {
@@ -134,8 +134,6 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
     }
   }
 
-  const totalCard = quoteResult?.cards?.find((c) => c.label === "Total puesto en Argentina");
-
   return (
     <div
       className="relative flex h-full min-h-0 flex-1 flex-col overflow-hidden bg-[#030712]"
@@ -247,21 +245,12 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
             ) : null}
 
             {quoteResult ? (
-              <div className="shrink-0 border-t border-white/[0.04] bg-[#0b1220]/60 px-3 py-4 sm:px-6">
+              <div
+                className="shrink-0 border-t border-white/[0.06] bg-[#0b1220]/60 px-3 py-4 sm:px-6 sm:py-5"
+                aria-live="polite"
+              >
                 <div className="mx-auto flex max-w-[720px] flex-col gap-3">
-                  {totalCard ? (
-                    <div className="rounded-xl border border-[#d4a843]/25 bg-[#d4a843]/[0.04] p-4">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#5A6577]">
-                        {totalCard.label}
-                      </p>
-                      <p
-                        className="mt-1 text-[22px] font-extrabold leading-tight text-[#d4a843] sm:text-[26px]"
-                        style={{ fontFamily: "var(--font-display)" }}
-                      >
-                        {totalCard.value}
-                      </p>
-                    </div>
-                  ) : null}
+                  <QuoteCostBreakdown quote={quoteResult} scrollIntoViewOnMount />
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
                     <Link
                       href="/app/operaciones"
@@ -309,8 +298,9 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
               <button
                 type="button"
                 title="Adjuntar factura o proforma"
+                aria-label="Adjuntar factura o proforma"
                 onClick={() => invoiceInputRef.current?.click()}
-                className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-500 transition hover:bg-white/[0.04] hover:text-slate-300"
+                className="flex h-11 w-11 items-center justify-center rounded-lg text-slate-500 transition hover:bg-white/[0.04] hover:text-slate-300 sm:h-10 sm:w-10"
               >
                 <Paperclip className="h-5 w-5" />
               </button>

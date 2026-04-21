@@ -2,11 +2,17 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
 import { verifyAuthToken } from "@/lib/auth/jwt";
 
+export type SessionRole = "user" | "operator" | "admin";
+
 export type SessionUser = {
   id: string;
   email: string;
-  role: "user" | "operator" | "admin";
+  role: SessionRole;
 };
+
+function normalizeRole(value: unknown): SessionRole {
+  return value === "admin" || value === "operator" ? value : "user";
+}
 
 function isRoleBypassEnabled() {
   // Requires explicit opt-in: AUTH_ROLE_BYPASS=1 (never active in production)
@@ -25,15 +31,15 @@ async function getOrCreateLocalBypassUser(): Promise<SessionUser | null> {
       create: {
         email,
         passwordHash: "__local_bypass_only__",
-        role: "admin" as any,
+        role: "admin",
       },
-      update: { role: "admin" as any },
+      update: { role: "admin" },
       select: { id: true, email: true, role: true },
     });
     return {
       id: u.id,
       email: u.email,
-      role: (u as any).role || "admin",
+      role: normalizeRole(u.role),
     };
   } catch {
     // Last fallback to keep local UI testing unblocked if DB is temporarily unavailable.
@@ -60,7 +66,7 @@ export async function getSessionUser(): Promise<SessionUser | null> {
   return {
     id: u.id,
     email: u.email,
-    role: (u as any).role || "user",
+    role: normalizeRole(u.role),
   };
 }
 

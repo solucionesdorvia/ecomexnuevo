@@ -92,7 +92,8 @@ export default function Topbar({
         {/* New operation CTA */}
         <Link
           href="/app/nueva"
-          className="flex h-10 min-w-[2.5rem] items-center justify-center gap-1.5 rounded-xl bg-[#2b59ff] px-2.5 text-[12px] font-medium text-white transition-colors hover:bg-[#2348d4] sm:h-9 sm:px-3"
+          aria-label="Crear nueva operación"
+          className="flex h-11 min-w-[44px] items-center justify-center gap-1.5 rounded-xl bg-[#2b59ff] px-2.5 text-[12px] font-medium text-white transition-colors hover:bg-[#2348d4] sm:h-9 sm:min-w-0 sm:px-3"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
             <path d="M12 4v16m8-8H4" />

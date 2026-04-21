@@ -151,13 +151,13 @@ export default async function DashboardPage() {
               </Link>
             ) : null}
           </div>
-          <SystemKpi label="Cotizaciones sin importar" value={countPendingQuotes} hint="Pendientes de decision o inicio." />
-          <SystemKpi label="Importaciones completadas" value={countCompletedOps} hint="Historico cerrado del sistema." />
+          <SystemKpi label="Cotizaciones sin importar" value={countPendingQuotes} hint="Pendientes de decisión o inicio." />
+          <SystemKpi label="Importaciones completadas" value={countCompletedOps} hint="Histórico cerrado del sistema." />
         </div>
 
         <SystemSection
           title="Mapa del sistema"
-          subtitle="Estructura operativa basada en dominios para navegar el flujo completo de importacion."
+          subtitle="Estructura operativa basada en dominios para navegar el flujo completo de importación."
         >
           <div className="grid gap-3 md:grid-cols-2">
             {(["core", "operations", "intelligence", "workspace"] as const).map((group) => {
