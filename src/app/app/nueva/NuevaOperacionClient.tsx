@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useMemo, useRef, useState } from "react";
-import { ArrowRight, Paperclip, Sparkles, TrendingUp } from "lucide-react";
+import { ArrowRight, Paperclip, Sparkles } from "lucide-react";
 import { useClasificarChat } from "@/app/clasificarncm/hooks/useClasificarChat";
 import { ChatContainer } from "@/app/clasificarncm/components/ChatContainer";
 import { ChatInput } from "@/app/clasificarncm/components/ChatInput";
@@ -229,18 +229,16 @@ export default function NuevaOperacionClient({
                 <div
                   className="nueva-fade-in nueva-fade-in-delay-1 mt-6 inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.02] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400"
                 >
-                  <TrendingUp className="h-3 w-3 text-[#38bdf8]" />
                   Análisis inteligente de importación
                 </div>
                 <h1
                   className="nueva-fade-in nueva-fade-in-delay-2 mt-4 max-w-xl text-center text-[26px] font-extrabold leading-[1.1] tracking-tight text-white sm:text-[32px]"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
-                  ¿Qué vas a importar?
+                  Contanos qué vas a importar
                 </h1>
                 <p className="nueva-fade-in nueva-fade-in-delay-3 mt-4 max-w-md text-center text-[15px] leading-relaxed text-slate-400">
-                  Contanos qué querés traer, a qué precio y de dónde. Armamos la cotización
-                  completa en minutos.
+                  Producto, precio y país de origen. Con eso armamos tu cotización completa.
                 </p>
                 <div className="nueva-fade-in nueva-fade-in-delay-4 mt-10 grid w-full max-w-2xl gap-2 sm:grid-cols-2">
                   {HERO_SUGGESTIONS.map((s, i) => (
@@ -265,9 +263,6 @@ export default function NuevaOperacionClient({
                     </button>
                   ))}
                 </div>
-                <p className="nueva-fade-in nueva-fade-in-delay-4 mt-8 text-center text-[11px] text-slate-600">
-                  o escribí tu producto en el cuadro de abajo ↓
-                </p>
               </div>
             ) : (
               <ChatContainer messages={caseState.messages} pending={busy} />
