@@ -169,7 +169,8 @@ export function ambiguityQuestionsList(a: NormalizedAmbiguity): string[] {
 
 /** Texto para asistente: por qué hay duda + qué falta. */
 export function buildAmbiguityAssistantParagraph(a: NormalizedAmbiguity): string {
-  const intro = `Todavía no cierro la clasificación porque hay una duda entre **${AMBIGUITY_REASON_LABELS[a.reason]}**.`;
-  const need = `Necesito confirmar: **${a.decisiveField.toLowerCase()}**.`;
-  return `${intro} ${need}`;
+  // Mensaje pensado para el usuario final: habla de "afinar el presupuesto",
+  // no menciona NCM ni jerga aduanera. El código/candidatos quedan internos.
+  const need = a.decisiveField ? `sobre ${a.decisiveField.toLowerCase().trim()}` : "del producto";
+  return `Para afinar el presupuesto necesito un dato más ${need}.`;
 }

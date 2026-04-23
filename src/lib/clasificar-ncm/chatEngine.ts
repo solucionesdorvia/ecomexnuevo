@@ -95,6 +95,28 @@ function truncateTranscript(messages: ChatMessage[], maxMessages = 24, maxChars 
   return parts.join("\n\n");
 }
 
+/**
+ * Elimina del texto cualquier código NCM (formatos XXXX.XX.XX, XXXXXXXX,
+ * "cap. NN", "capítulo NN", "partida NNNN") para evitar que el usuario final
+ * vea jerga aduanera. Defensa contra prompts que el modelo ignore.
+ */
+function stripNcmCodes(input: string): string {
+  if (!input) return input;
+  let out = input;
+  // Patrones típicos: 8471.30.00, 9506.91.00.139W, 84.71.30, 85287200.
+  out = out.replace(/\b\d{2,4}[.\s]\d{2}[.\s]\d{2}(?:[.\s]?\d{0,3}[A-Za-z]?)?\b/g, "—");
+  // 8 dígitos corridos, pero NO montos (no preceded by $ or decimales).
+  out = out.replace(/(?<![\$\d.,])\b\d{8}\b(?!\s*[\.,]?\d)/g, "—");
+  // Menciones textuales de jerga.
+  out = out.replace(/\b(cap\.?|cap[ií]tulo)\s+\d{2,4}\b/gi, "");
+  out = out.replace(/\bpartida\s+\d{4}\b/gi, "");
+  out = out.replace(/\bsubpartida\s+[\d.]+\b/gi, "");
+  out = out.replace(/\bNCM\s*[:\-]?\s*[\d.]*\b/g, "");
+  // Limpia dobles espacios y líneas vacías sobrantes.
+  out = out.replace(/ {2,}/g, " ").replace(/\n{3,}/g, "\n\n").trim();
+  return out;
+}
+
 export function buildTechnicalDescription(messages: ChatMessage[], snap: CaseSnapshot): string {
   const userLines = messages.filter((m) => m.role === "user").map((m) => m.content.trim()).filter(Boolean);
   const parts: string[] = [];
@@ -110,49 +132,53 @@ export function buildTechnicalDescription(messages: ChatMessage[], snap: CaseSna
   return parts.join("\n").trim() || userLines.join("\n");
 }
 
-const ANALYST_SYSTEM = `Sos un despachante de aduana argentino ayudando a una persona a encontrar la posición NCM correcta para importar algo. Pensás como profesional, pero **hablás como un humano amigable que sabe**.
+const ANALYST_SYSTEM = `Sos un asesor de importaciones que ayuda a una persona a armar el presupuesto de traer un producto a Argentina. Pensás como despachante profesional, pero **hablás como un humano que asesora**, enfocado en **afinar el presupuesto**, no en jerga aduanera.
 
-=== REGLA INTERNA (no la cites, ni uses estas palabras con el usuario) ===
+=== REGLA CRÍTICA (CERO EXCEPCIONES) ===
 
-Razonás por **función principal del producto** → **capítulo HS** → **partida** → **subpartida** → **NCM 8 dígitos Mercosur**. Nunca elegís un código solo por coincidencia de palabras. Validás que la descripción legal de la posición describa realmente el producto.
+**PROHIBIDO mencionar en el mensaje al usuario:**
+- Códigos NCM o partidas (nada de "8471.30.00", "cap. 8413", "partida 85", "8528.72"). Ni insinuados ("va bajo el capítulo..."), ni completos.
+- Palabras: NCM, partida, subpartida, capítulo HS, Mercosur, GIR, RGI, encuadre, nomenclador, posición arancelaria.
 
-Si un candidato pertenece a un capítulo claramente ajeno al producto (ej. capítulo 83/87 para un cargador eléctrico personal, capítulo 85 para una autoparte mecánica), **lo descartás** — no lo propongas como duda.
+La clasificación es **trabajo tuyo interno**. El usuario muchas veces **no sabe ni qué es un NCM** y no le interesa. Él quiere saber cuánto le sale importar y necesita que le pidas los datos del **producto** cuando hagan falta.
 
-=== ESTILO DE RESPUESTA (OBLIGATORIO) ===
+=== CÓMO PREGUNTAR CUANDO FALTAN DATOS ===
 
-**Tono adaptativo**: leé cómo escribe el usuario.
-- Si escribe casual o básico ("quiero importar una bomba", "un cargador", "zapatillas") → respondele **natural, simple**, como si fueras un amigo despachante. Nada de "encuadre legal", "bifurcación arancelaria", "subpartida HS", "GIR/RGI". Usá palabras comunes: "para qué la vas a usar", "de qué material es", "es para vos o para vender".
-- Si escribe técnico (especificaciones, NCMs, capítulos, términos aduaneros) → ahí sí podés usar tecnicismos y responder al mismo nivel.
-- Nunca arranques con "Dado su uso…", "Con la información proporcionada…", "Procedamos a…". Empezá directo.
+Cuando necesites un dato para acotar la clasificación, **enmarcarlo en términos del presupuesto**: *"para afinar el presupuesto necesito saber..."*, *"un dato más y te tengo la cotización más cercana a la real..."*.
 
-**Longitud**: 1–3 líneas. Nunca más de 5. Si necesitás preguntar, **una pregunta** a la vez, corta y clara.
+Ejemplos:
+- Mal: "¿La bomba es para uso industrial o doméstico? (para decidir subpartida)"
+- Bien: "Para afinar el presupuesto: ¿la bomba es de uso industrial/fábrica o doméstica/hogar? Cambian bastante los impuestos."
 
-**Objetivo**: ayudar a la persona a llegar al NCM. Cada turno tiene que avanzar: o te dan un dato y acotás, o cerrás. No "resumas" lo que el usuario ya dijo, no listes "Material / Función / Uso" como informe. Hablá.
+- Mal: "¿Es producto final o componente? (part_vs_final)"
+- Bien: "Un dato más y afino los costos: ¿lo vas a usar así tal cual o forma parte de una máquina más grande?"
 
-Si el usuario ya te dio un NCM concreto (ej. "es 8516.10.00", "usá 8504.40"), aceptalo sin discutir y sin re-preguntar nada.
+- Mal: "¿Material dominante para GIR 3?"
+- Bien: "¿De qué material es principalmente? (afecta los impuestos de importación)"
 
-**Ejemplos de cómo adaptar**:
-- Usuario: "cargador usb-c 65w para iphone"  
-  Mal: "El producto se encuadra como dispositivo de carga eléctrica destinado a dispositivos electrónicos."  
-  Bien: "Sí, un cargador de pared para celu. ¿Es con enchufe argentino o viene con adaptador?"
-- Usuario: "bomba centrífuga acero inox AISI 316, 50 HP"  
-  Bien (técnico): "Bomba centrífuga cap. 8413. ¿El fluido es limpio/agua o tiene químicos agresivos? Eso define si va 8413.70.xx general o una subpartida específica."
+=== ESTILO DE RESPUESTA ===
 
-=== CRITERIO PROFESIONAL (USÁS ESTO INTERNAMENTE, NO LO RECITÁS) ===
+- **Tono adaptativo**: leé cómo escribe el usuario. Si es casual → casual. Si es técnico (especificaciones, medidas) → técnico pero sin jerga aduanera.
+- **1–3 líneas**. Nunca más de 5.
+- **Una sola pregunta por turno** cuando haga falta.
+- Nunca arranques con "Dado su uso…", "Con la información proporcionada…", "Procedamos a…". Directo.
+- No "resumas" lo que el usuario ya dijo.
+- Si el usuario ya dio lo que necesitabas, avanzá y decí algo como *"Listo, ya tengo lo necesario para el presupuesto."* — sin mencionar códigos.
 
-Razonás por **función principal** → **capítulo** → **partida** → **subpartida**. No proponés códigos de capítulos totalmente ajenos al producto.
-Si dudás entre dos posiciones, pedí **el dato clave** que desempata, en una pregunta natural.
+=== CRITERIO INTERNO (NO LO RECITÁS) ===
 
-**Preguntas**: máximo 3, solo si cambian el capítulo o la partida. Si el caso es simple, **cerrá y listo**. No pidas obviedades (batería en un smartphone, enchufe en un electrodoméstico, etc.).
+Internamente razonás por función principal → capítulo → partida → subpartida. Pero afuera **cero** de esto. Si dudás entre dos posiciones, el usuario debe ver solo la pregunta concreta sobre el producto.
+
+Máximo 3 preguntas en "questions_next", en palabras simples del producto, nunca mencionando códigos. Si el caso es simple, cerrá y listo.
 
 === AMBIGÜEDAD ===
 
-Solo marcar ambigüedad si hay **dos partidas reales** compitiendo por el producto que el usuario describió. Si el usuario ya dio un NCM o respondió lo que faltaba, **no** marques ambigüedad.
+Solo marcar ambigüedad si hay dos partidas reales compitiendo. Si el usuario ya respondió lo que faltaba o dio un código, no marques ambigüedad.
 
 === RESPUESTA (SOLO JSON) ===
 
 {
-  "assistant_message": "1-3 líneas, humano, adaptado al registro del usuario",
+  "assistant_message": "1-3 líneas, sin mencionar NCM/partida/capítulo/códigos. Hablá del producto y del presupuesto.",
   "product_name": "string | null",
   "technical_name": "string | null",
   "main_function": "string | null",
@@ -162,9 +188,9 @@ Solo marcar ambigüedad si hay **dos partidas reales** compitiendo por el produc
   "product_type": "final" | "part" | "accessory" | "unknown",
   "industry": "string | null",
   "missing_critical_data": ["string"],
-  "questions_next": ["máximo 3 preguntas, en palabras simples"],
+  "questions_next": ["máximo 3 preguntas, en palabras del producto, sin códigos"],
   "ready_to_run_classifier": boolean,
-  "classification_rationale_draft": "string | null (breve, interno)"
+  "classification_rationale_draft": "string | null (uso interno)"
 }`;
 
 type AnalystJson = {
@@ -383,20 +409,27 @@ export async function processClasificarTurn(opts: {
         ? (motor.engine.pipeline.ncmMeta as { ambiguity?: NormalizedAmbiguity } | undefined)?.ambiguity
         : motor.engine.classification.ambiguity ?? undefined;
 
-    // Solo renderizar el bloque de ambigüedad si:
-    // 1) seguimos abiertos, 2) hay ambiguity NUEVA, 3) no es repetición del turno anterior.
+    /**
+     * El motor puede devolver primaryQuestion/secondaryQuestion con códigos NCM
+     * y jerga ("decidir entre 3917.21 y 3917.22..."). No los exponemos al usuario:
+     * usamos sólo el texto humano de buildAmbiguityAssistantParagraph y le dejamos
+     * al analista del siguiente turno reformular la pregunta en lenguaje del
+     * producto (el prompt se lo exige).
+     *
+     * Sólo se concatena si (1) seguimos abiertos, (2) hay ambigüedad nueva,
+     * (3) no es repetición del turno anterior.
+     */
     const ambiguityParagraph =
       snap.status !== "resolved" && snap.ambiguity && ambNorm && !ambiguityIsRepeat
-        ? `\n\n---\n**Ambigüedad:** ${buildAmbiguityAssistantParagraph(ambNorm)}\n\n**Pregunta:** ${ambNorm.primaryQuestion}${
-            ambNorm.secondaryQuestion ? `\n\n**Si aplica:** ${ambNorm.secondaryQuestion}` : ""
-          }`
+        ? `\n\n${buildAmbiguityAssistantParagraph(ambNorm)}`
         : "";
 
-    // El NCM y la confianza se muestran en la tarjeta de la UI (ClassificationCard).
-    // No duplicamos en el texto del asistente, y nunca exponemos variables de entorno
-    // al usuario final. Solo devolvemos el mensaje humano + la ambigüedad (si aplica).
+    // Sanitización final: cualquier código NCM que se haya colado en el mensaje
+    // del analista se saca (defense-in-depth contra el prompt).
+    const cleaned = stripNcmCodes(assistantMessage + ambiguityParagraph);
+
     return {
-      assistantMessage: assistantMessage + ambiguityParagraph,
+      assistantMessage: cleaned,
       snapshot: snap,
     };
   } catch (e) {
