@@ -33,6 +33,39 @@ function extractExplicitNcmFromMessage(text: string): string | null {
   return formatMercosurNcm8(digits.slice(0, 8));
 }
 
+/**
+ * Extrae un único código NCM del mensaje del analista, si lo propuso con
+ * confianza (una sola aparición + palabras tipo "podés usar", "clasifica como",
+ * "va como", "ncm:").
+ *
+ * Sirve para evitar que el motor clasificador (IA paralela) devuelva candidatos
+ * absurdos y los concatene a la respuesta del analista que ya cerró bien.
+ */
+function extractDecisiveNcmFromAnalyst(message: string): string | null {
+  const text = message.trim();
+  if (!text) return null;
+
+  const matches = Array.from(text.matchAll(/\b(\d{4}[.\s]?\d{2}[.\s]?\d{2}|\d{8})\b/g));
+  if (matches.length !== 1) return null;
+
+  const raw = matches[0][1];
+  const digits = ncmDigitsOnly(raw);
+  if (digits.length !== 8) return null;
+
+  const lower = text.toLowerCase();
+  const hasCommit =
+    /\b(ncm|pod[eé]s? usar|us[aá]|clasif\w+|va\s+(como|bajo|con)|partida|posici[óo]n|c[óo]digo\s+\d)/.test(
+      lower
+    );
+  if (!hasCommit) return null;
+
+  // Evitar si el analista expresa duda en la misma oración.
+  const hasDoubt = /\b(duda|ambig|podr[íi]a ser|o bien|entre|depende)\b/.test(lower);
+  if (hasDoubt) return null;
+
+  return formatMercosurNcm8(digits);
+}
+
 const CLASSIFY_TIMEOUT_MS = Number(process.env.NCM_CHAT_CLASSIFY_TIMEOUT_MS) || 22_000;
 
 /** En la UI /clasificarncm priorizamos latencia: motor en modo rápido salvo env. */
@@ -270,6 +303,23 @@ export async function processClasificarTurn(opts: {
 
   if (!runPipeline) {
     snap.status = "needs_info";
+    return { assistantMessage, snapshot: snap };
+  }
+
+  /**
+   * Short-circuit: si el analista propuso un NCM de 8 dígitos de forma decisiva
+   * en su mensaje, usamos ese. Evita que el motor clasificador corra y meta
+   * ruido (candidatos de otros capítulos, ambigüedad irrelevante).
+   */
+  const analystNcm = extractDecisiveNcmFromAnalyst(assistantMessage);
+  if (analystNcm) {
+    snap.recommendedNcm = analystNcm;
+    snap.confidence = Math.max(snap.confidence ?? 0, 0.8);
+    snap.status = "resolved";
+    snap.pendingQuestions = undefined;
+    snap.ambiguity = undefined;
+    snap.classificationRationale =
+      analyst.classification_rationale_draft ?? snap.classificationRationale;
     return { assistantMessage, snapshot: snap };
   }
 
