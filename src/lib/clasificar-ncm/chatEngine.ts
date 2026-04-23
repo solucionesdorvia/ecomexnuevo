@@ -1,6 +1,6 @@
 import { openaiJson } from "@/lib/ai/openaiClient";
 import { buildAmbiguityAssistantParagraph, type NormalizedAmbiguity } from "@/lib/clasificar-ncm/ncmAmbiguity";
-import { normalizeNcmCode, runNcmMotor } from "@/lib/clasificar-ncm/runNcmMotor";
+import { runNcmMotor } from "@/lib/clasificar-ncm/runNcmMotor";
 import { ncmDigitsOnly, formatMercosurNcm8 } from "@/lib/ncm/knowledge/normalize";
 import type { CaseSnapshot, ChatMessage, ProductType } from "./types";
 
@@ -250,7 +250,7 @@ export async function processClasificarTurn(opts: {
     };
   }
 
-  let snap = mergeSnapshot(prev, analyst);
+  const snap = mergeSnapshot(prev, analyst);
   const assistantMessage = String(analyst.assistant_message ?? "").trim() || "Sin respuesta del modelo.";
   const questions = Array.isArray(analyst.questions_next)
     ? analyst.questions_next.map((q) => String(q).trim()).filter(Boolean).slice(0, 3)
@@ -290,7 +290,6 @@ export async function processClasificarTurn(opts: {
 
     const ncm = motor.ncm_code;
     const conf = motor.confidence;
-    const ambiguous = motor.engine.ambiguous;
 
     snap.candidates = motor.candidates.length ? motor.candidates : snap.candidates;
     snap.discardedNotes = motor.discardedNotes.length ? motor.discardedNotes : snap.discardedNotes;
@@ -334,8 +333,6 @@ export async function processClasificarTurn(opts: {
         ? (motor.engine.pipeline.ncmMeta as { ambiguity?: NormalizedAmbiguity } | undefined)?.ambiguity
         : motor.engine.classification.ambiguity ?? undefined;
 
-    const pipeline = motor.engine.mode === "full" ? motor.engine.pipeline : null;
-
     // Solo renderizar el bloque de ambigüedad si:
     // 1) seguimos abiertos, 2) hay ambiguity NUEVA, 3) no es repetición del turno anterior.
     const ambiguityParagraph =
@@ -345,26 +342,11 @@ export async function processClasificarTurn(opts: {
           }`
         : "";
 
-    const extraFull =
-      motor.engine.mode === "full" && ncm && conf < 0.7 && !pipeline?.pcram
-        ? `\n\n**Clasificación tentativa.** Confianza ${Math.round(conf * 100)}% (umbral recomendado ≥70% para dar por cerrado). Podés afinar datos o validar con despachante.`
-        : motor.engine.mode === "fast" && ncm && conf < 0.7
-          ? `\n\n**Clasificación tentativa.** Confianza ${Math.round(conf * 100)}% (umbral recomendado ≥70% para dar por cerrado). Podés afinar datos o validar con despachante.`
-          : "";
-
-    const definitiveFull =
-      ncm && motor.engine.mode === "full"
-        ? `\n\n---\n**NCM (8 dígitos, formato Mercosur):** \`${normalizeNcmCode(ncm) || ncm}\`${
-            pipeline?.pcram
-              ? "\n\n*Posición confirmada contra descripción en nomenclador (PCRAM).*"
-              : "\n\n*Validá la última posición estadística con el despachante si el producto tiene variante no descrita.*"
-          }`
-        : ncm && motor.engine.mode === "fast"
-          ? `\n\n---\n**NCM (8 dígitos, formato Mercosur):** \`${normalizeNcmCode(ncm) || ncm}\`\n\n*Clasificación rápida en chat. Para pipeline completo (nomenclador/PCRAM), configurá \`NCM_CLASIFICAR_CHAT_USE_FULL_PIPELINE=1\` en el servidor o validá con despachante.*`
-          : "";
-
+    // El NCM y la confianza se muestran en la tarjeta de la UI (ClassificationCard).
+    // No duplicamos en el texto del asistente, y nunca exponemos variables de entorno
+    // al usuario final. Solo devolvemos el mensaje humano + la ambigüedad (si aplica).
     return {
-      assistantMessage: assistantMessage + ambiguityParagraph + extraFull + definitiveFull,
+      assistantMessage: assistantMessage + ambiguityParagraph,
       snapshot: snap,
     };
   } catch (e) {
@@ -372,8 +354,7 @@ export async function processClasificarTurn(opts: {
     snap.status = "tentative";
     return {
       assistantMessage:
-        assistantMessage +
-        `\n\nEl motor de NCM no pudo completar la consulta (${msg}). El análisis previo sigue valiendo; probá agregar más datos técnicos.`,
+        assistantMessage + "\n\nNo pude completar la consulta del motor. Probá dar más detalles del producto.",
       snapshot: { ...snap, errorMessage: msg },
     };
   }
