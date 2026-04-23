@@ -450,6 +450,24 @@ export async function processClasificarTurn(opts: {
       snap.ambiguity = undefined;
     }
 
+    /**
+     * Si la única "ambigüedad" que emitió el motor es el fallback genérico
+     * (generic_low_confidence, sin decisiveField real), no tiene valor para
+     * el usuario: la descartamos y promovemos a tentativo/resuelto según lo
+     * que ya tengamos. Evita la frase "varias posiciones plausibles".
+     */
+    if (snap.ambiguity && snap.ambiguity.reason === "generic_low_confidence") {
+      const field = (snap.ambiguity.decisiveField ?? "").toLowerCase();
+      const genericLabels = ["varias posiciones", "afinar criterio", "posiciones plausibles"];
+      const isGenericFallback = !field || genericLabels.some((g) => field.includes(g));
+      if (isGenericFallback) {
+        snap.ambiguity = undefined;
+        if (snap.status === "needs_info" && snap.recommendedNcm) {
+          snap.status = "tentative";
+        }
+      }
+    }
+
     const ambNorm: NormalizedAmbiguity | undefined =
       motor.engine.mode === "full"
         ? (motor.engine.pipeline.ncmMeta as { ambiguity?: NormalizedAmbiguity } | undefined)?.ambiguity

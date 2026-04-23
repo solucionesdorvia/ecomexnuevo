@@ -167,10 +167,26 @@ export function ambiguityQuestionsList(a: NormalizedAmbiguity): string[] {
   return out.slice(0, 2);
 }
 
-/** Texto para asistente: por qué hay duda + qué falta. */
+/**
+ * Texto para asistente cuando la ambigüedad tiene un dato decisivo concreto.
+ * Devuelve "" cuando:
+ *  - No hay `decisiveField`, o
+ *  - El `decisiveField` coincide con el label genérico de su `reason` (es
+ *    decir, fallback sin información real que aportar).
+ *
+ * En esos casos, dejamos que el analista del próximo turno reformule en
+ * lenguaje natural si realmente hace falta; no mostramos una frase vacía.
+ */
 export function buildAmbiguityAssistantParagraph(a: NormalizedAmbiguity): string {
-  // Mensaje pensado para el usuario final: habla de "afinar el presupuesto",
-  // no menciona NCM ni jerga aduanera. El código/candidatos quedan internos.
-  const need = a.decisiveField ? `sobre ${a.decisiveField.toLowerCase().trim()}` : "del producto";
-  return `Para afinar el presupuesto necesito un dato más ${need}.`;
+  const field = (a.decisiveField ?? "").trim();
+  if (!field) return "";
+  const reasonLabel = AMBIGUITY_REASON_LABELS[a.reason] ?? "";
+  // Si el decisive_field vino vacío y se rellenó con el label del reason,
+  // no tenemos info útil: no mostramos nada.
+  if (reasonLabel && field.toLowerCase() === reasonLabel.toLowerCase()) return "";
+  // Descartamos fallbacks textuales que no son "datos" (ej. "afinar criterio").
+  const genericMarkers = ["afinar criterio", "posiciones plausibles", "encuadre legal"];
+  const low = field.toLowerCase();
+  if (genericMarkers.some((m) => low.includes(m))) return "";
+  return `Para afinar el presupuesto necesito un dato más sobre ${low}.`;
 }
