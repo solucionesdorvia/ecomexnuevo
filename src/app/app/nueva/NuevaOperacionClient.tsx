@@ -2,22 +2,26 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useCallback, useRef, useState } from "react";
-import { Paperclip, Sparkles } from "lucide-react";
+import { useCallback, useMemo, useRef, useState } from "react";
+import { ArrowRight, Paperclip, Sparkles, TrendingUp } from "lucide-react";
 import { useClasificarChat } from "@/app/clasificarncm/hooks/useClasificarChat";
 import { ChatContainer } from "@/app/clasificarncm/components/ChatContainer";
 import { ChatInput } from "@/app/clasificarncm/components/ChatInput";
 import { ClassificationCard } from "@/app/clasificarncm/components/ClassificationCard";
 import { FollowUpQuestions } from "@/app/clasificarncm/components/FollowUpQuestions";
-import {
-  CLASIFICAR_NCM_LANDING_DESCRIPTION,
-  CLASIFICAR_NCM_LANDING_TITLE,
-  CLASIFICAR_NCM_SUGGESTIONS,
-} from "@/app/clasificarncm/uiConstants";
 import { AMBIGUITY_REASON_LABELS } from "@/lib/clasificar-ncm/ncmAmbiguity";
 import type { CaseSnapshot, CaseState } from "@/lib/clasificar-ncm/types";
 import { QuoteCostBreakdown, type QuoteCostPayload } from "./QuoteCostBreakdown";
 import { buildChatPrefillFromParams, stripNcmDigits } from "@/lib/quote/cotizarFromClassifier";
+import { FlowStepper } from "./FlowStepper";
+import { QuickReplies } from "./QuickReplies";
+
+const HERO_SUGGESTIONS = [
+  { title: "MacBook Pro M2", hint: "1 unidad · USA · USD 1.200" },
+  { title: "Auriculares bluetooth", hint: "100u · China · USD 8" },
+  { title: "Cargador USB-C 65W", hint: "500u · China · USD 3" },
+  { title: "Remeras algodón básicas", hint: "200u · China · USD 4" },
+];
 
 function stripMessages(s: CaseState): CaseSnapshot {
   const { messages, ...rest } = s;
@@ -63,6 +67,33 @@ export default function NuevaOperacionClient({
       : undefined;
 
   const busy = pending || pendingExtract;
+
+  const hasProduct = Boolean(caseState.productName || caseState.technicalName);
+  const hasCommercialData = Boolean(
+    caseState.purchase?.fobUnitUsd &&
+      caseState.purchase?.quantity &&
+      caseState.purchase?.origin
+  );
+  const hasAnalysis = Boolean(showResultCard);
+  const hasBudget = Boolean(quoteResult);
+
+  const stepperStep: "product" | "data" | "analysis" | "budget" | "operation" = hasBudget
+    ? "operation"
+    : hasAnalysis
+      ? "budget"
+      : hasCommercialData
+        ? "analysis"
+        : hasProduct
+          ? "data"
+          : "product";
+
+  const lastAssistant = useMemo(() => {
+    for (let i = caseState.messages.length - 1; i >= 0; i--) {
+      const m = caseState.messages[i]!;
+      if (m.role === "assistant") return m.content;
+    }
+    return "";
+  }, [caseState.messages]);
 
   const handleSend = useCallback(
     async (text: string) => {
@@ -159,42 +190,70 @@ export default function NuevaOperacionClient({
         }}
       />
 
+      <FlowStepper
+        currentStep={stepperStep}
+        hasProduct={hasProduct}
+        hasCommercialData={hasCommercialData}
+        hasAnalysis={hasAnalysis}
+        hasBudget={hasBudget}
+      />
+
       <div className="relative z-10 flex min-h-0 flex-1 flex-col overflow-hidden">
         <div className="flex min-h-0 min-w-0 flex-1 flex-col">
           <div className="min-h-0 flex-1 overflow-y-auto">
             {caseState.messages.length === 0 ? (
               <div className="flex flex-1 flex-col items-center justify-center px-4 py-10 sm:py-14">
-                <div className="relative">
-                  <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-[#38bdf8]/15 via-transparent to-[#3b82f6]/10 blur-xl" aria-hidden />
-                  <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-[#38bdf8]/25 bg-[#0f172a]/90 shadow-[0_20px_50px_-24px_rgba(56,189,248,0.45)]">
-                    <Sparkles className="h-8 w-8 text-[#38bdf8]" strokeWidth={1.5} />
+                <div className="nueva-fade-in relative">
+                  <div
+                    className="absolute -inset-6 rounded-full bg-gradient-to-br from-[#38bdf8]/25 via-[#3b82f6]/15 to-transparent blur-2xl"
+                    aria-hidden
+                  />
+                  <div className="relative flex h-20 w-20 items-center justify-center rounded-3xl border border-[#38bdf8]/30 bg-gradient-to-br from-[#0f172a]/95 to-[#0b1220] shadow-[0_24px_60px_-18px_rgba(56,189,248,0.5)]">
+                    <Sparkles className="h-9 w-9 text-[#38bdf8]" strokeWidth={1.4} />
                   </div>
                 </div>
+                <div
+                  className="nueva-fade-in nueva-fade-in-delay-1 mt-6 inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.02] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400"
+                >
+                  <TrendingUp className="h-3 w-3 text-[#38bdf8]" />
+                  Análisis inteligente de importación
+                </div>
                 <h1
-                  className="mt-8 max-w-lg text-center text-[22px] font-bold tracking-tight text-white sm:text-[26px]"
+                  className="nueva-fade-in nueva-fade-in-delay-2 mt-4 max-w-xl text-center text-[26px] font-extrabold leading-[1.1] tracking-tight text-white sm:text-[32px]"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
-                  {CLASIFICAR_NCM_LANDING_TITLE}
+                  ¿Qué vas a importar?
                 </h1>
-                <p className="mt-3 max-w-md text-center text-[15px] leading-relaxed text-slate-400 sm:text-[14px]">
-                  {CLASIFICAR_NCM_LANDING_DESCRIPTION}
+                <p className="nueva-fade-in nueva-fade-in-delay-3 mt-4 max-w-md text-center text-[15px] leading-relaxed text-slate-400">
+                  Contanos qué querés traer, a qué precio y de dónde. Armamos la cotización
+                  completa en minutos.
                 </p>
-                <p className="mt-2 max-w-md text-center text-[12px] leading-relaxed text-slate-600">
-                  En la app: cuando el NCM esté listo, generá el presupuesto con el botón debajo del resultado.
-                </p>
-                <div className="mt-10 flex w-full max-w-xl flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:justify-center">
-                  {CLASIFICAR_NCM_SUGGESTIONS.map((s) => (
+                <div className="nueva-fade-in nueva-fade-in-delay-4 mt-10 grid w-full max-w-2xl gap-2 sm:grid-cols-2">
+                  {HERO_SUGGESTIONS.map((s, i) => (
                     <button
-                      key={s}
+                      key={s.title}
                       type="button"
                       disabled={busy}
-                      onClick={() => void sendMessage(s)}
-                      className="min-h-[48px] w-full touch-manipulation rounded-xl border border-white/[0.09] bg-[#0c1220]/90 px-4 py-3 text-left text-[14px] leading-snug text-slate-400 shadow-sm shadow-black/20 transition hover:border-[#38bdf8]/30 hover:text-slate-200 active:scale-[0.99] disabled:opacity-40 sm:min-h-0 sm:w-auto sm:px-3.5 sm:py-2.5 sm:text-[12px]"
+                      onClick={() => void sendMessage(`${s.title}, ${s.hint.replace(/\s·\s/g, ", ")}`)}
+                      className="group relative overflow-hidden rounded-xl border border-white/[0.08] bg-[#0c1220]/90 px-4 py-3 text-left shadow-sm shadow-black/20 transition-all hover:-translate-y-0.5 hover:border-[#38bdf8]/40 hover:shadow-[0_16px_40px_-16px_rgba(56,189,248,0.35)] disabled:pointer-events-none disabled:opacity-40"
+                      style={{ animationDelay: `${360 + i * 60}ms` }}
                     >
-                      {s}
+                      <span className="block text-[14px] font-semibold text-white transition-colors group-hover:text-[#7dd3fc]">
+                        {s.title}
+                      </span>
+                      <span className="mt-0.5 block text-[11px] font-medium text-slate-500">
+                        {s.hint}
+                      </span>
+                      <ArrowRight
+                        className="absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 translate-x-2 text-[#38bdf8] opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"
+                        aria-hidden
+                      />
                     </button>
                   ))}
                 </div>
+                <p className="nueva-fade-in nueva-fade-in-delay-4 mt-8 text-center text-[11px] text-slate-600">
+                  o escribí tu producto en el cuadro de abajo ↓
+                </p>
               </div>
             ) : (
               <ChatContainer messages={caseState.messages} pending={busy} />
@@ -212,7 +271,7 @@ export default function NuevaOperacionClient({
             ) : null}
 
             {showResultCard && caseState.recommendedNcm && typeof caseState.confidence === "number" ? (
-              <div className="shrink-0 border-t border-white/[0.04] bg-[#0b1220]/60 px-3 py-4 sm:px-6 sm:py-5">
+              <div className="nueva-reveal shrink-0 border-t border-white/[0.04] bg-[#0b1220]/60 px-3 py-4 sm:px-6 sm:py-5">
                 <div className="mx-auto flex max-w-[720px] flex-col gap-3">
                   {isOperator ? (
                     <ClassificationCard
@@ -227,12 +286,16 @@ export default function NuevaOperacionClient({
                       variant={caseState.status === "resolved" && !caseState.ambiguity ? "resolved" : "tentative"}
                     />
                   ) : (
-                    <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/[0.04] p-3 sm:p-4">
-                      <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-emerald-400/80">
-                        Producto analizado
+                    <div className="relative overflow-hidden rounded-2xl border border-emerald-500/25 bg-gradient-to-br from-emerald-500/[0.08] to-emerald-500/[0.02] p-4 sm:p-5">
+                      <div
+                        className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-emerald-500/20 blur-3xl"
+                        aria-hidden
+                      />
+                      <p className="relative text-[11px] font-semibold uppercase tracking-[0.14em] text-emerald-300/90">
+                        ✓ Producto analizado
                       </p>
-                      <p className="mt-1 text-[14px] leading-relaxed text-slate-200">
-                        Tenemos lo necesario para armarte el presupuesto.
+                      <p className="relative mt-2 text-[15px] font-medium leading-relaxed text-slate-100">
+                        Ya tenemos lo necesario para armarte el presupuesto completo.
                       </p>
                     </div>
                   )}
@@ -263,31 +326,48 @@ export default function NuevaOperacionClient({
 
             {quoteResult ? (
               <div
-                className="shrink-0 border-t border-white/[0.06] bg-[#0b1220]/60 px-3 py-4 sm:px-6 sm:py-5"
+                className="nueva-reveal shrink-0 border-t border-white/[0.06] bg-[#0b1220]/60 px-3 py-4 sm:px-6 sm:py-5"
                 aria-live="polite"
               >
                 <div className="mx-auto flex max-w-[720px] flex-col gap-4">
                   <QuoteCostBreakdown quote={quoteResult} scrollIntoViewOnMount />
-                  <div className="rounded-2xl border border-[#2563eb]/30 bg-gradient-to-br from-[#1e3a8a]/40 to-[#1e40af]/20 p-4 sm:p-5">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#93c5fd]">
-                      Listo para avanzar
-                    </p>
-                    <p className="mt-1 text-[14px] leading-relaxed text-slate-200 sm:text-[15px]">
-                      Cotización armada. Si querés que un operador coordine la importación (proveedor, flete, documentación), avanzá al siguiente paso.
-                    </p>
-                    <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
-                      <Link
-                        href={`/app/operaciones/${encodeURIComponent(quoteResult.quoteId)}/operation`}
-                        className="min-h-[48px] flex-1 rounded-xl bg-[#2563eb] px-4 py-3 text-center text-[14px] font-semibold text-white shadow-lg shadow-[#2563eb]/30 transition hover:bg-[#1d4ed8] sm:min-h-[44px]"
+                  <div className="relative overflow-hidden rounded-2xl border border-[#2563eb]/40 bg-gradient-to-br from-[#1e40af]/50 via-[#1e3a8a]/35 to-[#0b1220] p-5 sm:p-6">
+                    <div
+                      className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#3b82f6]/30 blur-3xl"
+                      aria-hidden
+                    />
+                    <div
+                      className="pointer-events-none absolute -left-16 -bottom-16 h-40 w-40 rounded-full bg-[#60a5fa]/20 blur-3xl"
+                      aria-hidden
+                    />
+                    <div className="relative">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#93c5fd]">
+                        Listo para avanzar
+                      </p>
+                      <p
+                        className="mt-2 text-[20px] font-extrabold leading-tight text-white sm:text-[22px]"
+                        style={{ fontFamily: "var(--font-display)" }}
                       >
-                        Avanzar con la importación
-                      </Link>
-                      <Link
-                        href={`/api/quote/pdf?mode=quote&id=${encodeURIComponent(quoteResult.quoteId)}`}
-                        className="min-h-[44px] rounded-xl border border-white/[0.08] px-4 py-2.5 text-center text-[12px] text-slate-400 transition hover:border-white/[0.18] hover:text-slate-200 sm:min-h-0"
-                      >
-                        Descargar PDF
-                      </Link>
+                        Cotización lista.
+                      </p>
+                      <p className="mt-1.5 text-[14px] leading-relaxed text-slate-300">
+                        El siguiente paso es que un operador coordine proveedor, flete y documentación.
+                      </p>
+                      <div className="mt-5 flex flex-col gap-2 sm:flex-row sm:items-center">
+                        <Link
+                          href={`/app/operaciones/${encodeURIComponent(quoteResult.quoteId)}/operation`}
+                          className="nueva-cta-pulse group flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#2563eb] to-[#3b82f6] px-5 py-3 text-center text-[15px] font-semibold text-white transition-all hover:from-[#1d4ed8] hover:to-[#2563eb] sm:min-h-[48px]"
+                        >
+                          Avanzar con la importación
+                          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                        </Link>
+                        <Link
+                          href={`/api/quote/pdf?mode=quote&id=${encodeURIComponent(quoteResult.quoteId)}`}
+                          className="min-h-[44px] rounded-xl border border-white/[0.12] px-4 py-2.5 text-center text-[13px] font-medium text-slate-300 transition hover:border-white/[0.22] hover:bg-white/[0.03] hover:text-white sm:min-h-0"
+                        >
+                          Descargar PDF
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -311,6 +391,14 @@ export default function NuevaOperacionClient({
                 Cerrar
               </button>
             </div>
+          ) : null}
+
+          {!showResultCard && !busy && lastAssistant ? (
+            <QuickReplies
+              lastAssistantText={lastAssistant}
+              disabled={busy}
+              onPick={(v) => void handleSend(v)}
+            />
           ) : null}
 
           <ChatInput

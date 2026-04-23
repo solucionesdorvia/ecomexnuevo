@@ -246,3 +246,76 @@ body {
 .chat-thread-scroll::-webkit-scrollbar-thumb:hover {
   background: rgba(148, 163, 184, 0.35);
 }
+
+/* ═══════════ UX premium — /app/nueva ═══════════ */
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translate3d(0, 14px, 0); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+.nueva-fade-in {
+  animation: fade-in-up 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.nueva-fade-in-delay-1 { animation-delay: 80ms; }
+.nueva-fade-in-delay-2 { animation-delay: 160ms; }
+.nueva-fade-in-delay-3 { animation-delay: 240ms; }
+.nueva-fade-in-delay-4 { animation-delay: 320ms; }
+
+@keyframes glow-ring {
+  0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4), 0 0 0 0 rgba(59, 130, 246, 0); }
+  60% { box-shadow: 0 0 0 18px rgba(56, 189, 248, 0), 0 0 32px -4px rgba(59, 130, 246, 0.45); }
+  100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0), 0 0 0 0 rgba(59, 130, 246, 0); }
+}
+
+.nueva-reveal {
+  animation: fade-in-up 480ms cubic-bezier(0.16, 1, 0.3, 1) both, glow-ring 2s ease-out both;
+}
+
+@keyframes cta-pulse {
+  0%, 100% {
+    box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.55), 0 0 0 0 rgba(96, 165, 250, 0.35);
+  }
+  50% {
+    box-shadow: 0 12px 36px -8px rgba(37, 99, 235, 0.7), 0 0 0 6px rgba(96, 165, 250, 0);
+  }
+}
+
+.nueva-cta-pulse {
+  animation: cta-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes counter-pop {
+  0% { transform: scale(0.92); opacity: 0; }
+  60% { transform: scale(1.04); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.nueva-counter-pop {
+  animation: counter-pop 640ms cubic-bezier(0.22, 1.4, 0.36, 1) both;
+}
+
+/* Stepper: efecto suave cuando un paso pasa a "done". */
+@keyframes step-done-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.nueva-step-pop {
+  animation: step-done-pop 500ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nueva-fade-in,
+  .nueva-reveal,
+  .nueva-counter-pop,
+  .nueva-step-pop {
+    animation: none;
+  }
+  .nueva-cta-pulse {
+    animation: none;
+    box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.55);
+  }
+}
