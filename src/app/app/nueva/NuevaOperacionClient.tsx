@@ -9,7 +9,6 @@ import { ChatContainer } from "@/app/clasificarncm/components/ChatContainer";
 import { ChatInput } from "@/app/clasificarncm/components/ChatInput";
 import { ClassificationCard } from "@/app/clasificarncm/components/ClassificationCard";
 import { FollowUpQuestions } from "@/app/clasificarncm/components/FollowUpQuestions";
-import { AMBIGUITY_REASON_LABELS } from "@/lib/clasificar-ncm/ncmAmbiguity";
 import type { CaseSnapshot, CaseState } from "@/lib/clasificar-ncm/types";
 import { QuoteCostBreakdown, type QuoteCostPayload } from "./QuoteCostBreakdown";
 import { buildChatPrefillFromParams, stripNcmDigits } from "@/lib/quote/cotizarFromClassifier";
@@ -61,10 +60,14 @@ export default function NuevaOperacionClient({
     typeof caseState.confidence === "number" &&
     (caseState.status === "resolved" || caseState.status === "tentative");
 
-  const followUpContext =
-    caseState.ambiguity && caseState.pendingQuestions?.length
-      ? `${AMBIGUITY_REASON_LABELS[caseState.ambiguity.reason]} — falta definir: ${caseState.ambiguity.decisiveField}.`
-      : undefined;
+  /**
+   * No exponer al usuario: etiquetas como "Varias posiciones plausibles (afinar
+   * criterio) — falta definir: Función principal / encuadre legal." son jerga
+   * aduanera interna. Las ocultamos siempre en el card de datos pendientes.
+   * Si hace falta pedir un dato, el analista lo pregunta en el mensaje
+   * (ya está en tono humano).
+   */
+  const followUpContext = undefined;
 
   const busy = pending || pendingExtract;
 
@@ -262,7 +265,8 @@ export default function NuevaOperacionClient({
             {caseState.messages.length > 0 &&
             caseState.pendingQuestions &&
             caseState.pendingQuestions.length > 0 &&
-            !showResultCard ? (
+            !showResultCard &&
+            !hasCommercialData ? (
               <div className="shrink-0 border-t border-white/[0.04] px-3 py-3 sm:px-6">
                 <div className="mx-auto max-w-[720px]">
                   <FollowUpQuestions questions={caseState.pendingQuestions} context={followUpContext} />

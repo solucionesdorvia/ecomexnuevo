@@ -420,7 +420,11 @@ export async function processClasificarTurn(opts: {
     }
     snap.recommendedNcm = ncm ?? undefined;
     snap.confidence = conf;
-    snap.pendingQuestions = motor.questions.length ? motor.questions : undefined;
+    // Sanitizamos las questions del motor: pueden traer códigos y jerga.
+    const motorQuestionsClean = motor.questions
+      .map((q) => stripNcmCodes(q).trim())
+      .filter((q) => q.length > 0);
+    snap.pendingQuestions = motorQuestionsClean.length ? motorQuestionsClean : undefined;
     snap.ambiguity = motor.ambiguity;
     snap.classificationRationale =
       motor.rationale || snap.classificationRationale || analyst.classification_rationale_draft || undefined;
@@ -465,6 +469,29 @@ export async function processClasificarTurn(opts: {
         if (snap.status === "needs_info" && snap.recommendedNcm) {
           snap.status = "tentative";
         }
+      }
+    }
+
+    /**
+     * Override del motor: si el analista YA cerró el turno (ready && sin
+     * preguntas propias) y los datos comerciales completos están presentes
+     * (FOB + cantidad + origen), confiamos en el analista y cerramos el caso.
+     * Aunque el motor quiera seguir pidiendo cosas, no lo exponemos al usuario.
+     * Esto corta el loop "ya tengo todo → pregunta técnica → ya tengo todo".
+     */
+    const dataComplete = Boolean(
+      snap.purchase?.fobUnitUsd && snap.purchase?.quantity && snap.purchase?.origin
+    );
+    if (ready && questions.length === 0 && dataComplete) {
+      snap.pendingQuestions = undefined;
+      snap.ambiguity = undefined;
+      if (snap.recommendedNcm && snap.status === "needs_info") {
+        snap.status = "tentative";
+      } else if (!snap.recommendedNcm) {
+        // El motor no dio NCM pero el analista cerró. Marcamos tentativo con
+        // confianza baja para que la UI siga al paso de presupuesto.
+        snap.status = "tentative";
+        snap.confidence = Math.max(snap.confidence ?? 0, 0.5);
       }
     }
 
