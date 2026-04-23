@@ -96,6 +96,87 @@ function truncateTranscript(messages: ChatMessage[], maxMessages = 24, maxChars 
 }
 
 /**
+ * Extrae FOB unitario (USD), cantidad y origen del texto libre del usuario.
+ * Heurísticas simples; se usa como complemento del analista IA (si éste no
+ * pobló `purchase`, acá lo rescatamos).
+ */
+function extractPurchaseFromText(text: string): {
+  fobUnitUsd?: number;
+  quantity?: number;
+  origin?: string;
+} {
+  const t = (text || "").toLowerCase();
+  if (!t) return {};
+
+  // Precio: "USD 1.200", "usd1200", "1200 usd", "u$s 200", "$ 50"
+  let fobUnitUsd: number | undefined;
+  const fobPatterns: RegExp[] = [
+    /(?:usd|u\$s|us\$|\$)\s*([\d]+(?:[.,]\d{1,3})*)/i,
+    /([\d]+(?:[.,]\d{1,3})*)\s*(?:usd|u\$s|us\$|d[oó]lares)/i,
+  ];
+  for (const re of fobPatterns) {
+    const m = t.match(re);
+    if (m) {
+      const raw = m[1];
+      const normalized = raw.includes(",")
+        ? raw.replace(/\./g, "").replace(",", ".")
+        : raw.replace(/\.(?=\d{3}(?:\D|$))/g, "");
+      const n = Number(normalized);
+      if (Number.isFinite(n) && n > 0) {
+        fobUnitUsd = n;
+        break;
+      }
+    }
+  }
+
+  // Cantidad: "500 unidades", "100 u", "2 pzs", "1 unidad"
+  let quantity: number | undefined;
+  const qtyMatch = t.match(
+    /\b(\d+(?:[.,]\d+)?)\s*(?:unidad(?:es)?|u\b|pzs?|piezas?|uds?|items?)/
+  );
+  if (qtyMatch) {
+    const n = Number(qtyMatch[1].replace(",", "."));
+    if (Number.isFinite(n) && n > 0) quantity = Math.max(1, Math.floor(n));
+  } else if (
+    /\b(?:solo\s+)?(?:una sola|un[a]?\s+sola|una\s+unidad|uno\s+solo|1\s+sola|1\s+unidad)\b/.test(t)
+  ) {
+    quantity = 1;
+  }
+
+  // Origen
+  const origins: Array<{ re: RegExp; name: string }> = [
+    { re: /\b(china|chino|chn)\b/, name: "China" },
+    { re: /\b(usa|ee\.?uu\.?|eeuu|estados\s+unidos|america)\b/, name: "Estados Unidos" },
+    { re: /\bbrasil\b/, name: "Brasil" },
+    { re: /\bespa[ñn]a\b/, name: "España" },
+    { re: /\bitalia\b/, name: "Italia" },
+    { re: /\balemania\b/, name: "Alemania" },
+    { re: /\bm[eé]xico\b/, name: "México" },
+    { re: /\b(uruguay|uy)\b/, name: "Uruguay" },
+    { re: /\b(paraguay|py)\b/, name: "Paraguay" },
+    { re: /\b(chile|cl)\b/, name: "Chile" },
+    { re: /\b(peru|pe)\b/, name: "Perú" },
+    { re: /\b(colombia|co)\b/, name: "Colombia" },
+    { re: /\bjap[oó]n\b/, name: "Japón" },
+    { re: /\bcorea( del sur)?\b/, name: "Corea del Sur" },
+    { re: /\btaiw[aá]n\b/, name: "Taiwán" },
+    { re: /\bturqu[ií]a\b/, name: "Turquía" },
+    { re: /\bhong\s*kong\b/, name: "Hong Kong" },
+    { re: /\bvietnam\b/, name: "Vietnam" },
+    { re: /\bindia\b/, name: "India" },
+  ];
+  let origin: string | undefined;
+  for (const { re, name } of origins) {
+    if (re.test(t)) {
+      origin = name;
+      break;
+    }
+  }
+
+  return { fobUnitUsd, quantity, origin };
+}
+
+/**
  * Elimina del texto cualquier código NCM (formatos XXXX.XX.XX, XXXXXXXX,
  * "cap. NN", "capítulo NN", "partida NNNN") para evitar que el usuario final
  * vea jerga aduanera. Defensa contra prompts que el modelo ignore.
@@ -357,6 +438,25 @@ export async function processClasificarTurn(opts: {
 
   const snap = mergeSnapshot(prev, analyst);
   const assistantMessage = String(analyst.assistant_message ?? "").trim() || "Sin respuesta del modelo.";
+
+  /**
+   * Complemento heurístico: si el analista no extrajo los datos comerciales,
+   * los parseamos del texto de todos los mensajes del usuario concatenados.
+   * No pisamos lo que ya trajo el analista.
+   */
+  const fullUserText = messages
+    .filter((m) => m.role === "user")
+    .map((m) => m.content)
+    .join(" \n ");
+  const heur = extractPurchaseFromText(fullUserText);
+  if (heur.fobUnitUsd || heur.quantity || heur.origin) {
+    const p = snap.purchase ?? {};
+    snap.purchase = {
+      fobUnitUsd: p.fobUnitUsd ?? heur.fobUnitUsd,
+      quantity: p.quantity ?? heur.quantity,
+      origin: p.origin ?? heur.origin,
+    };
+  }
   const questions = Array.isArray(analyst.questions_next)
     ? analyst.questions_next.map((q) => String(q).trim()).filter(Boolean).slice(0, 3)
     : [];

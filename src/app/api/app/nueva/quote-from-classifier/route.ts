@@ -33,16 +33,24 @@ export async function POST(req: Request) {
   }
 
   const ncm = typeof snapshot.recommendedNcm === "string" ? snapshot.recommendedNcm.trim() : "";
+  const hasPurchaseData = Boolean(
+    snapshot.purchase?.fobUnitUsd &&
+      snapshot.purchase?.quantity &&
+      snapshot.purchase?.origin
+  );
+  // Cotizamos si (a) hay NCM con status listo, o (b) tenemos los datos
+  // comerciales completos aunque el motor no haya cerrado NCM (caemos a
+  // estimación por capítulo usando los datos del usuario).
   const ready =
-    ncm.length >= 4 &&
-    (snapshot.status === "resolved" || snapshot.status === "tentative") &&
-    typeof snapshot.confidence === "number";
+    (ncm.length >= 4 &&
+      (snapshot.status === "resolved" || snapshot.status === "tentative")) ||
+    (hasPurchaseData &&
+      (snapshot.status === "resolved" || snapshot.status === "tentative"));
 
   if (!ready) {
     return NextResponse.json(
       {
-        error:
-          "Todavía no hay una posición NCM lista. Respondé las preguntas del analista o esperá a ver una recomendación con confianza.",
+        error: "Faltan datos para armar el presupuesto. Completá precio, cantidad y origen con el analista.",
       },
       { status: 400 }
     );

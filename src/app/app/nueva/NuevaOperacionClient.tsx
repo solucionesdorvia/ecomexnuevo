@@ -55,10 +55,25 @@ export default function NuevaOperacionClient({
   const messagePrefill = hasValidPrefillNcm ? buildChatPrefillFromParams(cleanNcm, productoDecoded || null) : "";
   const showNcmBanner = hasValidPrefillNcm && !ncmBannerDismissed;
 
+  /**
+   * Mostrar la tarjeta de resultado cuando:
+   *  (a) el motor dio NCM + confianza con status resolved/tentative, o
+   *  (b) el analista cerró el análisis y ya tenemos los datos comerciales
+   *      completos (FOB + cantidad + origen). Sirve para los casos donde
+   *      el motor no alcanza a dar NCM pero igual podemos seguir al
+   *      presupuesto (el endpoint resuelve NCM del lado del server).
+   */
+  const hasCommercialDataRaw = Boolean(
+    caseState.purchase?.fobUnitUsd &&
+      caseState.purchase?.quantity &&
+      caseState.purchase?.origin
+  );
   const showResultCard =
-    caseState.recommendedNcm &&
-    typeof caseState.confidence === "number" &&
-    (caseState.status === "resolved" || caseState.status === "tentative");
+    (caseState.recommendedNcm &&
+      typeof caseState.confidence === "number" &&
+      (caseState.status === "resolved" || caseState.status === "tentative")) ||
+    (hasCommercialDataRaw &&
+      (caseState.status === "resolved" || caseState.status === "tentative"));
 
   /**
    * No exponer al usuario: etiquetas como "Varias posiciones plausibles (afinar
@@ -72,11 +87,7 @@ export default function NuevaOperacionClient({
   const busy = pending || pendingExtract;
 
   const hasProduct = Boolean(caseState.productName || caseState.technicalName);
-  const hasCommercialData = Boolean(
-    caseState.purchase?.fobUnitUsd &&
-      caseState.purchase?.quantity &&
-      caseState.purchase?.origin
-  );
+  const hasCommercialData = hasCommercialDataRaw;
   const hasAnalysis = Boolean(showResultCard);
   const hasBudget = Boolean(quoteResult);
 
@@ -274,10 +285,10 @@ export default function NuevaOperacionClient({
               </div>
             ) : null}
 
-            {showResultCard && caseState.recommendedNcm && typeof caseState.confidence === "number" ? (
+            {showResultCard ? (
               <div className="nueva-reveal shrink-0 border-t border-white/[0.04] bg-[#0b1220]/60 px-3 py-4 sm:px-6 sm:py-5">
                 <div className="mx-auto flex max-w-[720px] flex-col gap-3">
-                  {isOperator ? (
+                  {isOperator && caseState.recommendedNcm && typeof caseState.confidence === "number" ? (
                     <ClassificationCard
                       ncm={caseState.recommendedNcm}
                       description={caseState.classificationRationale}
