@@ -19,11 +19,23 @@ export function buildProductJsonFromClassifierSnapshot(
     .slice(0, 8000);
 
   const ncm = snapshot.recommendedNcm?.trim() || undefined;
+  const fobUsd =
+    typeof snapshot.purchase?.fobUnitUsd === "number" && snapshot.purchase.fobUnitUsd > 0
+      ? snapshot.purchase.fobUnitUsd
+      : undefined;
+  const quantity =
+    typeof snapshot.purchase?.quantity === "number" && snapshot.purchase.quantity > 0
+      ? Math.max(1, Math.floor(snapshot.purchase.quantity))
+      : undefined;
+  const origin = snapshot.purchase?.origin?.trim() || undefined;
 
   return {
     title,
     ...(description ? { description } : {}),
     ...(ncm ? { ncm } : {}),
+    ...(fobUsd ? { fobUsd } : {}),
+    ...(quantity ? { quantity } : {}),
+    ...(origin ? { origin } : {}),
     raw: {
       classifier: {
         status: snapshot.status,

@@ -28,9 +28,15 @@ function stripMessages(s: CaseState): CaseSnapshot {
 type NuevaOperacionClientProps = {
   initialNcm?: string;
   initialProducto?: string;
+  /** Solo operadores/admin ven el código NCM y la tarjeta de clasificación. */
+  isOperator?: boolean;
 };
 
-export default function NuevaOperacionClient({ initialNcm, initialProducto }: NuevaOperacionClientProps = {}) {
+export default function NuevaOperacionClient({
+  initialNcm,
+  initialProducto,
+  isOperator = false,
+}: NuevaOperacionClientProps = {}) {
   const router = useRouter();
   const { caseState, sendMessage, pending, reset } = useClasificarChat({ credentials: "include" });
   const [invoiceFiles, setInvoiceFiles] = useState<File[]>([]);
@@ -208,17 +214,28 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
             {showResultCard && caseState.recommendedNcm && typeof caseState.confidence === "number" ? (
               <div className="shrink-0 border-t border-white/[0.04] bg-[#0b1220]/60 px-3 py-4 sm:px-6 sm:py-5">
                 <div className="mx-auto flex max-w-[720px] flex-col gap-3">
-                  <ClassificationCard
-                    ncm={caseState.recommendedNcm}
-                    description={caseState.classificationRationale}
-                    confidence={caseState.confidence}
-                    rationale={
-                      caseState.status === "tentative"
-                        ? "Confianza por debajo del 70% o posición ambigua: validá con documentación y despachante."
-                        : undefined
-                    }
-                    variant={caseState.status === "resolved" && !caseState.ambiguity ? "resolved" : "tentative"}
-                  />
+                  {isOperator ? (
+                    <ClassificationCard
+                      ncm={caseState.recommendedNcm}
+                      description={caseState.classificationRationale}
+                      confidence={caseState.confidence}
+                      rationale={
+                        caseState.status === "tentative"
+                          ? "Confianza por debajo del 70% o posición ambigua: validá con documentación y despachante."
+                          : undefined
+                      }
+                      variant={caseState.status === "resolved" && !caseState.ambiguity ? "resolved" : "tentative"}
+                    />
+                  ) : (
+                    <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/[0.04] p-3 sm:p-4">
+                      <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-emerald-400/80">
+                        Producto analizado
+                      </p>
+                      <p className="mt-1 text-[14px] leading-relaxed text-slate-200">
+                        Tenemos lo necesario para armarte el presupuesto.
+                      </p>
+                    </div>
+                  )}
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <button
                       type="button"
@@ -226,7 +243,7 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
                       onClick={() => void createQuoteFromClassifier()}
                       className="min-h-[48px] rounded-xl bg-[#2563eb] px-4 py-3 text-[13px] font-medium text-white shadow-lg shadow-[#2563eb]/20 transition hover:bg-[#1d4ed8] disabled:opacity-40 sm:min-h-0"
                     >
-                      {pendingQuote ? "Creando presupuesto…" : "Crear presupuesto con este NCM"}
+                      {pendingQuote ? "Calculando presupuesto…" : "Ver presupuesto"}
                     </button>
                     <button
                       type="button"
@@ -249,21 +266,29 @@ export default function NuevaOperacionClient({ initialNcm, initialProducto }: Nu
                 className="shrink-0 border-t border-white/[0.06] bg-[#0b1220]/60 px-3 py-4 sm:px-6 sm:py-5"
                 aria-live="polite"
               >
-                <div className="mx-auto flex max-w-[720px] flex-col gap-3">
+                <div className="mx-auto flex max-w-[720px] flex-col gap-4">
                   <QuoteCostBreakdown quote={quoteResult} scrollIntoViewOnMount />
-                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-                    <Link
-                      href="/app/operaciones"
-                      className="min-h-[44px] rounded-xl bg-[#2563eb] px-4 py-2.5 text-center text-[13px] font-medium text-white transition hover:bg-[#1d4ed8] sm:min-h-0"
-                    >
-                      Ver operaciones
-                    </Link>
-                    <Link
-                      href={`/api/quote/pdf?mode=quote&id=${encodeURIComponent(quoteResult.quoteId)}`}
-                      className="min-h-[44px] rounded-xl border border-white/[0.08] px-4 py-2.5 text-center text-[12px] text-slate-400 transition hover:border-white/[0.18] hover:text-slate-200 sm:min-h-0"
-                    >
-                      Descargar PDF
-                    </Link>
+                  <div className="rounded-2xl border border-[#2563eb]/30 bg-gradient-to-br from-[#1e3a8a]/40 to-[#1e40af]/20 p-4 sm:p-5">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#93c5fd]">
+                      Listo para avanzar
+                    </p>
+                    <p className="mt-1 text-[14px] leading-relaxed text-slate-200 sm:text-[15px]">
+                      Cotización armada. Si querés que un operador coordine la importación (proveedor, flete, documentación), avanzá al siguiente paso.
+                    </p>
+                    <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
+                      <Link
+                        href={`/app/operaciones/${encodeURIComponent(quoteResult.quoteId)}/operation`}
+                        className="min-h-[48px] flex-1 rounded-xl bg-[#2563eb] px-4 py-3 text-center text-[14px] font-semibold text-white shadow-lg shadow-[#2563eb]/30 transition hover:bg-[#1d4ed8] sm:min-h-[44px]"
+                      >
+                        Avanzar con la importación
+                      </Link>
+                      <Link
+                        href={`/api/quote/pdf?mode=quote&id=${encodeURIComponent(quoteResult.quoteId)}`}
+                        className="min-h-[44px] rounded-xl border border-white/[0.08] px-4 py-2.5 text-center text-[12px] text-slate-400 transition hover:border-white/[0.18] hover:text-slate-200 sm:min-h-0"
+                      >
+                        Descargar PDF
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

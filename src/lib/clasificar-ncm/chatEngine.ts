@@ -175,6 +175,19 @@ Máximo 3 preguntas en "questions_next", en palabras simples del producto, nunca
 
 Solo marcar ambigüedad si hay dos partidas reales compitiendo. Si el usuario ya respondió lo que faltaba o dio un código, no marques ambigüedad.
 
+=== DATOS COMERCIALES PARA EL PRESUPUESTO ===
+
+Además de clasificar el producto, necesitás recolectar 3 datos para poder cotizar:
+1. **Precio FOB unitario en USD** (cuánto sale cada unidad en origen).
+2. **Cantidad** a importar.
+3. **País de origen** (ej. China, USA, Brasil).
+
+Cuando ya tenés la clasificación clara y falta alguno de estos, **preguntalos** en una frase breve. Ejemplo:
+- *"¿Cuánto te sale cada uno en dólares y cuántos vas a traer?"*
+- *"¿De qué país lo traés? ¿Tenés el precio por unidad?"*
+
+Si el usuario escribió datos en el texto (ej. "500 unidades a USD 3 desde China"), extraelos a los campos \`purchase\`. No vuelvas a preguntar lo que ya te dio.
+
 === RESPUESTA (SOLO JSON) ===
 
 {
@@ -189,6 +202,11 @@ Solo marcar ambigüedad si hay dos partidas reales compitiendo. Si el usuario ya
   "industry": "string | null",
   "missing_critical_data": ["string"],
   "questions_next": ["máximo 3 preguntas, en palabras del producto, sin códigos"],
+  "purchase": {
+    "fob_unit_usd": number | null,
+    "quantity": number | null,
+    "origin": "string | null"
+  },
   "ready_to_run_classifier": boolean,
   "classification_rationale_draft": "string | null (uso interno)"
 }`;
@@ -205,14 +223,41 @@ type AnalystJson = {
   industry?: string | null;
   missing_critical_data?: string[];
   questions_next?: string[];
+  purchase?: {
+    fob_unit_usd?: number | null;
+    quantity?: number | null;
+    origin?: string | null;
+  } | null;
   ready_to_run_classifier?: boolean;
   classification_rationale_draft?: string | null;
 };
+
+function pickFiniteNumber(next: number | null | undefined, prev: number | undefined): number | undefined {
+  if (typeof next === "number" && Number.isFinite(next) && next > 0) return next;
+  return prev;
+}
+
+function pickNonEmptyString(next: string | null | undefined, prev: string | undefined): string | undefined {
+  const t = typeof next === "string" ? next.trim() : "";
+  return t.length > 0 ? t : prev;
+}
 
 function mergeSnapshot(prev: CaseSnapshot, a: AnalystJson): CaseSnapshot {
   const pt = (a.product_type ?? prev.productType) as ProductType | undefined;
   const productType: ProductType =
     pt === "final" || pt === "part" || pt === "accessory" ? pt : prev.productType ?? "unknown";
+
+  const mergedPurchase = {
+    fobUnitUsd: pickFiniteNumber(a.purchase?.fob_unit_usd ?? null, prev.purchase?.fobUnitUsd),
+    quantity: pickFiniteNumber(a.purchase?.quantity ?? null, prev.purchase?.quantity),
+    origin: pickNonEmptyString(a.purchase?.origin ?? null, prev.purchase?.origin),
+  };
+  const purchase =
+    mergedPurchase.fobUnitUsd !== undefined ||
+    mergedPurchase.quantity !== undefined ||
+    mergedPurchase.origin !== undefined
+      ? mergedPurchase
+      : undefined;
 
   return {
     ...prev,
@@ -228,6 +273,7 @@ function mergeSnapshot(prev: CaseSnapshot, a: AnalystJson): CaseSnapshot {
       ? a.missing_critical_data
       : prev.missingCriticalData,
     classificationRationale: a.classification_rationale_draft ?? prev.classificationRationale,
+    purchase,
   };
 }
 

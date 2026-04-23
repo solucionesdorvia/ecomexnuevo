@@ -1,3 +1,4 @@
+import { getSessionUser } from "@/lib/auth/session";
 import NuevaOperacionClient from "./NuevaOperacionClient";
 
 export const metadata = { title: "Nueva operación — E-COMEX" };
@@ -14,7 +15,13 @@ export default async function NuevaOperacionPage({
   searchParams: Promise<{ ncm?: string | string[]; producto?: string | string[] }>;
 }) {
   const sp = await searchParams;
+  const user = await getSessionUser();
+  const isOperator = user?.role === "operator" || user?.role === "admin";
   return (
-    <NuevaOperacionClient initialNcm={firstParam(sp.ncm)} initialProducto={firstParam(sp.producto)} />
+    <NuevaOperacionClient
+      initialNcm={firstParam(sp.ncm)}
+      initialProducto={firstParam(sp.producto)}
+      isOperator={isOperator}
+    />
   );
 }

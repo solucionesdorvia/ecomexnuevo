@@ -37,6 +37,16 @@ export type NcmAmbiguitySnapshot = {
   answered: boolean;
 };
 
+/** Datos de compra que el chat va recolectando para armar el presupuesto. */
+export type PurchaseSnapshot = {
+  /** Precio FOB por unidad en USD (o el precio unitario que dijo el usuario). */
+  fobUnitUsd?: number;
+  /** Cantidad total a importar. */
+  quantity?: number;
+  /** País de origen (ej. "China", "USA"). */
+  origin?: string;
+};
+
 /** Estado acumulativo del caso (sin mensajes en API; el cliente añade messages). */
 export type CaseSnapshot = {
   productName?: string;
@@ -65,6 +75,8 @@ export type CaseSnapshot = {
   pendingQuestions?: string[];
   /** Duda estructurada entre candidatos (bloquea “resuelto” hasta aclararse) */
   ambiguity?: NcmAmbiguitySnapshot;
+  /** Datos comerciales para la cotización (FOB, cantidad, origen). */
+  purchase?: PurchaseSnapshot;
   errorMessage?: string;
 };
 
