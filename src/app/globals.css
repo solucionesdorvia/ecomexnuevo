@@ -23,6 +23,17 @@
 
   --glow-blue: 0 0 40px -12px rgba(59, 130, 246, 0.5);
   --glow-gold: 0 0 30px -10px rgba(212, 168, 67, 0.4);
+
+  /* Semantic aliases used widely across components (back-compat for var(--xxx) lookups). */
+  --text: var(--ink);
+  --muted: var(--ink-muted);
+  --surface: var(--surface-1);
+  --surface2: var(--surface-2);
+  --accent: var(--blue);
+  --primary: var(--blue);
+  --primary2: var(--blue-dim);
+  --ring: color-mix(in oklab, var(--blue) 36%, transparent);
+  --shadowGlow: var(--glow-blue);
 }
 
 @theme inline {
@@ -44,9 +55,26 @@
   --color-violet: var(--blue);
   --color-violaceous: var(--blue-dim);
 
+  /* Semantic tokens — generan utilidades como text-strong, border-subtle, bg-app, etc. */
+  --color-strong: var(--ink);
+  --color-faint: var(--ink-faint);
+  --color-app: var(--surface-0);
+  --color-surface: var(--surface-1);
+  --color-surface2: var(--surface-2);
+  --color-subtle: var(--border);
+  --color-ink-faint: var(--ink-faint);
+
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-display: "Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+/* Glass panel base — usada por Card variant="glass" en muchas pantallas. */
+.panel {
+  background: rgba(18, 26, 35, 0.72);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px) saturate(1.1);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1);
 }
 
 html { scroll-behavior: smooth; }
