@@ -44,23 +44,68 @@ export default async function OperationDetailPage({ params }: { params: Promise<
 
   const title = productTitle(quote.productJson, quote.userText);
 
-  // NCM final (ya enriquecido con PCRAM cuando se creó la cotización).
-  // Se muestra como chip arriba del "Resumen de cotización" para que el
-  // operador y el cliente tengan a mano la posición arancelaria.
-  const productJson = (quote.productJson ?? null) as
-    | {
-        ncm?: string;
-        raw?: { ncm?: string; pcram?: { title?: string } };
-      }
-    | null;
-  const ncmRaw =
-    (typeof productJson?.ncm === "string" ? productJson.ncm.trim() : "") ||
-    (typeof productJson?.raw?.ncm === "string" ? productJson.raw.ncm.trim() : "");
-  const ncm = ncmRaw && ncmRaw !== "9999.99.99" ? ncmRaw : null;
-  const ncmDescription =
-    typeof productJson?.raw?.pcram?.title === "string"
-      ? productJson.raw.pcram.title.trim()
-      : "";
+  // NCM final: lo buscamos en varias rutas porque las cotizaciones viejas
+  // (pre-fix de runPipeline) pueden no tener `productJson.ncm` pero sí
+  // tener candidatos del clasificador o el assumption "ncm" en quoteJson.
+  const ncm = (() => {
+    const pj = (quote.productJson ?? null) as
+      | {
+          ncm?: string;
+          raw?: {
+            ncm?: string;
+            ncmMeta?: { ncm?: string; hsHeading?: string };
+            classifier?: { candidates?: Array<{ code?: string }> };
+          };
+        }
+      | null;
+
+    const norm = (s: unknown): string => {
+      if (typeof s !== "string") return "";
+      const t = s.trim();
+      if (!t) return "";
+      if (t === "9999.99.99" || t === "9999.99.99.999") return "";
+      return t;
+    };
+
+    // 1) productJson.ncm (lo más común)
+    let found = norm(pj?.ncm);
+    if (found) return found;
+
+    // 2) productJson.raw.ncm
+    found = norm(pj?.raw?.ncm);
+    if (found) return found;
+
+    // 3) productJson.raw.ncmMeta.ncm / hsHeading
+    found = norm(pj?.raw?.ncmMeta?.ncm) || norm(pj?.raw?.ncmMeta?.hsHeading);
+    if (found) return found;
+
+    // 4) Candidato top del clasificador (en flujos donde no hubo pick final)
+    const cand = pj?.raw?.classifier?.candidates;
+    if (Array.isArray(cand) && cand.length > 0) {
+      const top = norm(cand[0]?.code);
+      if (top) return top;
+    }
+
+    // 5) Fallback: assumption "ncm" del quoteJson — calcImportQuote guarda
+    //    siempre `{ id: "ncm", value: "NCM 1234.56.78.000A" | "Sin clasificar aún" }`.
+    const qj = quote.quoteJson as { assumptions?: Array<{ id?: string; value?: string }> } | null;
+    const ncmAssumption = qj?.assumptions?.find((a) => a?.id === "ncm");
+    const m = typeof ncmAssumption?.value === "string"
+      ? ncmAssumption.value.match(/NCM\s+([0-9.]{4,})/i)
+      : null;
+    if (m && m[1]) {
+      const stripped = norm(m[1]);
+      if (stripped) return stripped;
+    }
+
+    return null;
+  })();
+
+  const ncmDescription = (() => {
+    const pj = (quote.productJson ?? null) as { raw?: { pcram?: { title?: string } } } | null;
+    const t = pj?.raw?.pcram?.title;
+    return typeof t === "string" ? t.trim() : "";
+  })();
 
   const documentsForClient = operation.documents.map((d) => ({
     id: d.id,
