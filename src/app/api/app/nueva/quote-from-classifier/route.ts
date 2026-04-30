@@ -92,9 +92,24 @@ export async function POST(req: Request) {
     },
   });
 
+  // NCM final ya enriquecido por PCRAM. Lo devolvemos para que el cliente
+  // lo muestre en el card de "Cotización lista" sin tener que esperar a
+  // que el motor del chat lo cargue (en flujos donde el usuario cerró
+  // diciendo "calculalo" antes de que el motor corriera).
+  const finalNcm = (() => {
+    const p = enrichedProduct as Record<string, unknown> | null | undefined;
+    const fromTop = typeof p?.ncm === "string" ? (p.ncm as string).trim() : "";
+    if (fromTop && fromTop !== "9999.99.99") return fromTop;
+    const raw = (p?.raw as Record<string, unknown> | undefined) ?? undefined;
+    const fromRaw = typeof raw?.ncm === "string" ? (raw.ncm as string).trim() : "";
+    if (fromRaw && fromRaw !== "9999.99.99") return fromRaw;
+    return undefined;
+  })();
+
   const res = NextResponse.json({
     ok: true as const,
     quoteId: row.id,
+    ncm: finalNcm,
     cards: quote.cards,
     totalMinUsd: quote.totalMinUsd,
     totalMaxUsd: quote.totalMaxUsd,

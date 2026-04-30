@@ -522,11 +522,17 @@ export async function processClasificarTurn(opts: {
     [...messages].reverse().find((m) => m.role === "user")?.content ?? "";
   const userWantsToClose = detectClosureIntent(lastUserMessage);
 
-  /** No ejecutar motor NCM si faltan preguntas pendientes o el analista no liberó clasificación. */
+  /**
+   * Ejecutar motor NCM si:
+   *  (a) el analista marcó ready y no hay questions_next pendientes, o
+   *  (b) el usuario explícitamente pidió avanzar (calculalo/listo/etc.) y
+   *      ya tenemos los datos comerciales completos. Esto asegura que el
+   *      NCM se clasifique antes de cerrar — sino el card del cliente
+   *      queda sin NCM hasta que se calcula el presupuesto.
+   */
   const runPipeline =
     techText.length >= 12 &&
-    ready &&
-    questions.length === 0;
+    ((ready && questions.length === 0) || (userWantsToClose && dataComplete));
 
   if (!runPipeline) {
     // Cerramos como tentativo si:

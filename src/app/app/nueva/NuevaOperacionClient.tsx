@@ -171,6 +171,7 @@ export default function NuevaOperacionClient({
       if (json.quoteId && json.cards) {
         setQuoteResult({
           quoteId: json.quoteId,
+          ncm: (json as QuoteCostPayload).ncm,
           cards: json.cards,
           totalMinUsd: json.totalMinUsd,
           totalMaxUsd: json.totalMaxUsd,
@@ -412,9 +413,12 @@ export default function NuevaOperacionClient({
                         <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#93c5fd]">
                           Listo para avanzar
                         </p>
-                        {caseState.recommendedNcm ? (
+                        {(quoteResult.ncm || caseState.recommendedNcm) ? (
                           <span className="inline-flex items-center gap-1.5 rounded-md border border-[#3b82f6]/35 bg-[#0f172a]/70 px-2 py-0.5 font-mono text-[10.5px] font-semibold text-[#93c5fd]">
-                            NCM <span className="text-white">{caseState.recommendedNcm}</span>
+                            NCM{" "}
+                            <span className="text-white">
+                              {quoteResult.ncm || caseState.recommendedNcm}
+                            </span>
                           </span>
                         ) : null}
                       </div>

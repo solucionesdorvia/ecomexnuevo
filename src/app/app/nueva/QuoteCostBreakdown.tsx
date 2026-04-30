@@ -5,6 +5,9 @@ import { ChevronRight, Info } from "lucide-react";
 
 export type QuoteCostPayload = {
   quoteId: string;
+  /** NCM final ya enriquecido por PCRAM/motor (puede estar ausente si la
+   * cotización se creó sólo con datos comerciales sin clasificación firme). */
+  ncm?: string;
   cards: Array<{ label: string; value: string; detail?: string; highlight?: boolean }>;
   totalMinUsd?: number;
   totalMaxUsd?: number;
