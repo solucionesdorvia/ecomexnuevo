@@ -208,6 +208,13 @@ function detectClosureIntent(text: string): boolean {
     /\bdame (?:el|un|mi) presupuesto\b/,
     /\bpresupuestal?[ao]\b/, // presupuestalo
     /\bcotizal?[ao]\b/, // cotizalo, cotizá
+    // Frases de frustración / "y entonces":
+    /\bsin (?:darme|dar(?:le|me|se)?|el presupuesto)\b/, // "asi queda sin darme el presupuesto"
+    /\bno (?:me )?(?:da[sn]?|sale|aparece|sigue|llega)\b/, // "no me da", "no sale"
+    /\bque (?:pas[oóa]|hay|onda)\b/, // "que pasa", "que hay"
+    /\bmostr[áa](?:me)?l?[oa]\b/, // mostrame, mostralo
+    /\bd[áa](?:me)?(?:lo|melo)?\b/, // dame, damelo
+    /\bya[\s,!]/, // "ya," / "ya!" como urgencia (pero no "ya lo tengo" que ya está cubierto)
   ];
   return patterns.some((re) => re.test(t));
 }
@@ -521,6 +528,28 @@ export async function processClasificarTurn(opts: {
   const lastUserMessage =
     [...messages].reverse().find((m) => m.role === "user")?.content ?? "";
   const userWantsToClose = detectClosureIntent(lastUserMessage);
+
+  /**
+   * Origen faltante: el LLM analista a veces "olvida" preguntar por el país
+   * de origen y se queda confirmando datos parciales. Si tenemos FOB +
+   * cantidad pero NO origen, forzamos una pregunta directa por el país en
+   * lugar de delegar al LLM. Esto desbloquea conversaciones tipo:
+   *   user: "silla de plastico" → "doméstico" → "una sola" → "2 dolares"
+   *   analyst: "Listo, tengo toda la información..." (sin preguntar país)
+   *   user: (frustrado, no avanza)
+   */
+  const hasFob = Boolean(snap.purchase?.fobUnitUsd);
+  const hasQty = Boolean(snap.purchase?.quantity);
+  const hasOrigin = Boolean(snap.purchase?.origin);
+  if (hasFob && hasQty && !hasOrigin) {
+    snap.status = "needs_info";
+    snap.pendingQuestions = ["¿De qué país vas a importar?"];
+    return {
+      assistantMessage:
+        "Solo me falta un dato para armar el presupuesto: ¿de qué país vas a importar? (ej. China, Italia, EE.UU., Brasil…)",
+      snapshot: snap,
+    };
+  }
 
   /**
    * Ejecutar motor NCM si:
