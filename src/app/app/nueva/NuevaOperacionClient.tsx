@@ -47,6 +47,7 @@ export default function NuevaOperacionClient({
   const [pendingQuote, setPendingQuote] = useState(false);
   const [quoteResult, setQuoteResult] = useState<QuoteCostPayload | null>(null);
   const [ncmBannerDismissed, setNcmBannerDismissed] = useState(false);
+  const [pendingOperation, setPendingOperation] = useState(false);
   const invoiceInputRef = useRef<HTMLInputElement>(null);
 
   const cleanNcm = initialNcm?.trim() ? stripNcmDigits(initialNcm) : "";
@@ -185,6 +186,56 @@ export default function NuevaOperacionClient({
     }
   }
 
+  /**
+   * Crea la Operation a partir del Quote y redirige al detalle de la
+   * importación. El endpoint /api/app/operations exige stage="quoted" y un
+   * Quote sin Operation previa; la página /app/operaciones/[id]/operation
+   * espera un OPERATION ID, NO un quoteId — por eso hay que crear la
+   * Operation primero y usar el id devuelto para navegar.
+   */
+  async function startOperation() {
+    if (!quoteResult || pendingOperation) return;
+    setPendingOperation(true);
+    try {
+      const res = await fetch("/api/app/operations", {
+        method: "POST",
+        credentials: "include",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ quoteId: quoteResult.quoteId }),
+      });
+      const json = (await res.json()) as { operationId?: string; error?: string };
+      if (!res.ok || !json.operationId) {
+        // Si ya había una operación creada para este quote, redirigimos a la
+        // que existe (UX defensiva: el usuario clickeó dos veces o vino con
+        // backbutton).
+        if (res.status === 409) {
+          const detail = await fetch(
+            `/api/app/operations?ts=${Date.now()}`,
+            { credentials: "include" }
+          ).then((r) => r.json()).catch(() => null);
+          const existing =
+            Array.isArray(detail?.operations)
+              ? detail.operations.find(
+                  (op: { quoteId?: string; id?: string }) =>
+                    op.quoteId === quoteResult.quoteId
+                )
+              : null;
+          if (existing?.id) {
+            router.push(`/app/operaciones/${existing.id}/operation`);
+            return;
+          }
+        }
+        throw new Error(json.error || "No se pudo iniciar la importación.");
+      }
+      router.push(`/app/operaciones/${json.operationId}/operation`);
+    } catch (e) {
+      window.alert(e instanceof Error ? e.message : "Error al iniciar la importación.");
+      setPendingOperation(false);
+    }
+    // No reseteamos pendingOperation en el happy-path: el unmount al navegar
+    // se encarga; mantener el botón disabled previene doble-click.
+  }
+
   return (
     <div
       className="relative flex h-full min-h-0 flex-1 flex-col overflow-hidden bg-[#030712]"
@@ -283,7 +334,13 @@ export default function NuevaOperacionClient({
             {showResultCard ? (
               <div className="nueva-reveal shrink-0 border-t border-white/[0.04] bg-[#0b1220]/60 px-3 py-4 sm:px-6 sm:py-5">
                 <div className="mx-auto flex max-w-[720px] flex-col gap-3">
-                  {isOperator && caseState.recommendedNcm && typeof caseState.confidence === "number" ? (
+                  {/*
+                    NCM visible para todos (provisorio): antes estaba gated por
+                    isOperator, pero el cliente final también necesita verlo
+                    como referencia (queda explicado el carácter estimativo en
+                    el banner del reporte y en el PDF).
+                  */}
+                  {caseState.recommendedNcm && typeof caseState.confidence === "number" ? (
                     <ClassificationCard
                       ncm={caseState.recommendedNcm}
                       description={caseState.classificationRationale}
@@ -351,9 +408,16 @@ export default function NuevaOperacionClient({
                       aria-hidden
                     />
                     <div className="relative">
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#93c5fd]">
-                        Listo para avanzar
-                      </p>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#93c5fd]">
+                          Listo para avanzar
+                        </p>
+                        {caseState.recommendedNcm ? (
+                          <span className="inline-flex items-center gap-1.5 rounded-md border border-[#3b82f6]/35 bg-[#0f172a]/70 px-2 py-0.5 font-mono text-[10.5px] font-semibold text-[#93c5fd]">
+                            NCM <span className="text-white">{caseState.recommendedNcm}</span>
+                          </span>
+                        ) : null}
+                      </div>
                       <p
                         className="mt-2 text-[20px] font-extrabold leading-tight text-white sm:text-[22px]"
                         style={{ fontFamily: "var(--font-display)" }}
@@ -364,13 +428,15 @@ export default function NuevaOperacionClient({
                         El siguiente paso es que un operador coordine proveedor, flete y documentación.
                       </p>
                       <div className="mt-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-                        <Link
-                          href={`/app/operaciones/${encodeURIComponent(quoteResult.quoteId)}/operation`}
-                          className="nueva-cta-pulse group flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#2563eb] to-[#3b82f6] px-5 py-3 text-center text-[15px] font-semibold text-white transition-all hover:from-[#1d4ed8] hover:to-[#2563eb] sm:min-h-[48px]"
+                        <button
+                          type="button"
+                          onClick={() => void startOperation()}
+                          disabled={pendingOperation}
+                          className="nueva-cta-pulse group flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#2563eb] to-[#3b82f6] px-5 py-3 text-center text-[15px] font-semibold text-white transition-all hover:from-[#1d4ed8] hover:to-[#2563eb] disabled:cursor-not-allowed disabled:opacity-70 sm:min-h-[48px]"
                         >
-                          Avanzar con la importación
+                          {pendingOperation ? "Iniciando importación…" : "Avanzar con la importación"}
                           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                        </Link>
+                        </button>
                         <Link
                           href={`/api/quote/pdf?mode=quote&id=${encodeURIComponent(quoteResult.quoteId)}`}
                           className="min-h-[44px] rounded-xl border border-white/[0.12] px-4 py-2.5 text-center text-[13px] font-medium text-slate-300 transition hover:border-white/[0.22] hover:bg-white/[0.03] hover:text-white sm:min-h-0"
