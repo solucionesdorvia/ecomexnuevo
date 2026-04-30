@@ -44,6 +44,24 @@ export default async function OperationDetailPage({ params }: { params: Promise<
 
   const title = productTitle(quote.productJson, quote.userText);
 
+  // NCM final (ya enriquecido con PCRAM cuando se creó la cotización).
+  // Se muestra como chip arriba del "Resumen de cotización" para que el
+  // operador y el cliente tengan a mano la posición arancelaria.
+  const productJson = (quote.productJson ?? null) as
+    | {
+        ncm?: string;
+        raw?: { ncm?: string; pcram?: { title?: string } };
+      }
+    | null;
+  const ncmRaw =
+    (typeof productJson?.ncm === "string" ? productJson.ncm.trim() : "") ||
+    (typeof productJson?.raw?.ncm === "string" ? productJson.raw.ncm.trim() : "");
+  const ncm = ncmRaw && ncmRaw !== "9999.99.99" ? ncmRaw : null;
+  const ncmDescription =
+    typeof productJson?.raw?.pcram?.title === "string"
+      ? productJson.raw.pcram.title.trim()
+      : "";
+
   const documentsForClient = operation.documents.map((d) => ({
     id: d.id,
     name: d.name,
@@ -101,6 +119,11 @@ export default async function OperationDetailPage({ params }: { params: Promise<
               ) : (
                 <span className="rounded bg-white/[0.04] px-2 py-0.5 text-[10px] text-[#b0b8c9]">Cotización</span>
               )}
+              {ncm ? (
+                <span className="inline-flex items-center gap-1 rounded border border-[#2b59ff]/35 bg-[#2b59ff]/[0.08] px-2 py-0.5 font-mono text-[10px] font-bold tracking-tight text-[#7aa2ff]">
+                  NCM <span className="text-white">{ncm}</span>
+                </span>
+              ) : null}
             </div>
             <p className="mt-2 text-[13px] text-[#555c6b]">Iniciada el {fmtStarted(operation.createdAt)}</p>
           </div>
@@ -120,7 +143,21 @@ export default async function OperationDetailPage({ params }: { params: Promise<
           {/* Columna izquierda */}
           <div className="space-y-8">
             <section>
-              <h2 className="text-[13px] font-bold uppercase tracking-wider text-[#555c6b]">Resumen de cotización</h2>
+              <div className="flex flex-wrap items-center gap-3">
+                <h2 className="text-[13px] font-bold uppercase tracking-wider text-[#555c6b]">
+                  Resumen de cotización
+                </h2>
+                {ncm ? (
+                  <span className="inline-flex items-center gap-1.5 rounded-md border border-[#2b59ff]/30 bg-[#0f172a] px-2 py-0.5 font-mono text-[11px] font-semibold tracking-tight text-[#7aa2ff]">
+                    NCM <span className="text-white">{ncm}</span>
+                  </span>
+                ) : null}
+              </div>
+              {ncm && ncmDescription ? (
+                <p className="mt-1 text-[12px] leading-relaxed text-[#7c8597]">
+                  {ncmDescription}
+                </p>
+              ) : null}
               <div className="mt-3">
                 <QuoteCostBlocks
                   cards={cards}
