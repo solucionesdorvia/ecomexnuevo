@@ -177,6 +177,42 @@ function extractPurchaseFromText(text: string): {
 }
 
 /**
+ * Detecta intención explícita del usuario de cerrar el cuestionario y avanzar
+ * al presupuesto (frases como "calculalo", "listo", "dale", "avanzá",
+ * "ya tengo todo", "dame el presupuesto", etc.).
+ *
+ * Esto sirve como override cuando el LLM analista insiste en preguntar
+ * confirmaciones aunque ya tengamos FOB + cantidad + origen.
+ */
+function detectClosureIntent(text: string): boolean {
+  const t = (text || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+  if (!t) return false;
+
+  const patterns: RegExp[] = [
+    /\bcalcul(?:al?[ao]|emos|a)\b/, // calculalo, calculá, calculemos
+    /\bavanz[ae]?(?:mos|l[ao])?\b/, // avanza, avancemos, avanzalo
+    /\b(?:dale|listo|adelante|vamos)\b/, // dale, listo, adelante, vamos
+    /\b(?:hac|hag)[ea]m[oa]sl?[oa]\b/, // hagamoslo, haceloesto
+    /\bproced[ea]/, // procedé, procede, procedamos
+    /\bcontinu[ao]\b/, // continuá, continúa
+    /\bcerr[ae]l?[ao]\b/, // cerralo, cerrar
+    /\bgener[ae]l?[ao]\b/, // generalo, genera
+    /\bsacal[ao]\b/, // sacalo, sacala
+    /\bsegui\b/, // seguí
+    /\bya (?:lo )?ten[ge]o(?: todo)?\b/, // ya lo tengo, ya tengo todo
+    /\bquiero (?:el|mi|ver) (?:el )?presupuesto\b/,
+    /\bdame (?:el|un|mi) presupuesto\b/,
+    /\bpresupuestal?[ao]\b/, // presupuestalo
+    /\bcotizal?[ao]\b/, // cotizalo, cotizá
+  ];
+  return patterns.some((re) => re.test(t));
+}
+
+/**
  * Elimina del texto cualquier código NCM (formatos XXXX.XX.XX, XXXXXXXX,
  * "cap. NN", "capítulo NN", "partida NNNN") para evitar que el usuario final
  * vea jerga aduanera. Defensa contra prompts que el modelo ignore.
@@ -476,6 +512,16 @@ export async function processClasificarTurn(opts: {
     snap.purchase?.fobUnitUsd && snap.purchase?.quantity && snap.purchase?.origin
   );
 
+  /**
+   * Intención explícita del usuario de avanzar (último mensaje, p. ej.
+   * "calculalo", "listo", "dale"). Si el usuario lo pidió explícitamente y
+   * ya tenemos los datos comerciales, ignoramos las questions_next que el
+   * LLM analista pueda seguir devolviendo (típicamente confirmaciones).
+   */
+  const lastUserMessage =
+    [...messages].reverse().find((m) => m.role === "user")?.content ?? "";
+  const userWantsToClose = detectClosureIntent(lastUserMessage);
+
   /** No ejecutar motor NCM si faltan preguntas pendientes o el analista no liberó clasificación. */
   const runPipeline =
     techText.length >= 12 &&
@@ -483,9 +529,10 @@ export async function processClasificarTurn(opts: {
     questions.length === 0;
 
   if (!runPipeline) {
-    // Si el analista dijo "listo" de palabra pero no en el flag, y tenemos
-    // todos los datos comerciales, cerramos como tentativo igual.
-    if (dataComplete && questions.length === 0) {
+    // Cerramos como tentativo si:
+    //   (a) ya tenemos FOB+qty+origen y no hay preguntas pendientes, o
+    //   (b) ya tenemos FOB+qty+origen y el usuario explícitamente pidió avanzar.
+    if (dataComplete && (questions.length === 0 || userWantsToClose)) {
       snap.status = "tentative";
       snap.pendingQuestions = undefined;
       snap.ambiguity = undefined;
@@ -594,8 +641,12 @@ export async function processClasificarTurn(opts: {
      * Override del motor: cuando los datos comerciales están completos (FOB +
      * cantidad + origen) confiamos en el analista y cerramos el caso aunque
      * el motor quiera seguir pidiendo cosas. Corta el loop.
+     *
+     * También cerramos si el usuario explícitamente pidió avanzar
+     * ("calculalo", "listo", "dale", etc.) — aunque haya questions_next
+     * pendientes en el LLM analista (suelen ser confirmaciones).
      */
-    if (dataComplete && questions.length === 0) {
+    if (dataComplete && (questions.length === 0 || userWantsToClose)) {
       snap.pendingQuestions = undefined;
       snap.ambiguity = undefined;
       if (snap.recommendedNcm && snap.status === "needs_info") {
