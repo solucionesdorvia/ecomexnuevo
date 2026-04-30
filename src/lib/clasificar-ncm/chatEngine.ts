@@ -129,7 +129,8 @@ function extractPurchaseFromText(text: string): {
     }
   }
 
-  // Cantidad: "500 unidades", "100 u", "2 pzs", "1 unidad"
+  // Cantidad: "500 unidades", "100 u", "2 pzs", "1 unidad", "1 solo", "uno solo",
+  //           "una sola", "solo uno", "nada más uno", etc.
   let quantity: number | undefined;
   const qtyMatch = t.match(
     /\b(\d+(?:[.,]\d+)?)\s*(?:unidad(?:es)?|u\b|pzs?|piezas?|uds?|items?)/
@@ -138,7 +139,7 @@ function extractPurchaseFromText(text: string): {
     const n = Number(qtyMatch[1].replace(",", "."));
     if (Number.isFinite(n) && n > 0) quantity = Math.max(1, Math.floor(n));
   } else if (
-    /\b(?:solo\s+)?(?:una sola|un[a]?\s+sola|una\s+unidad|uno\s+solo|1\s+sola|1\s+unidad)\b/.test(t)
+    /\b(?:un[ao]?\s+sol[ao]|1\s+sol[ao]|uno\s+solo|una\s+sola|una\s+unidad|un[ao]?\s+unidad|1\s+unidad|sol[ao]\s+(?:1|un[ao]?|uno|una)|nada\s+m[áa]s\s+(?:1|un[ao]?|uno|una)|un[ao]?\s+(?:y\s+)?nada\s+m[áa]s|un[ao]?\s+ún?ic[ao])\b/.test(t)
   ) {
     quantity = 1;
   }
