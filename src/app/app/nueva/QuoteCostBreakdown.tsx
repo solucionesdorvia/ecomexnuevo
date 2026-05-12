@@ -20,6 +20,7 @@ export type QuoteCostPayload = {
     tone?: "muted" | "primary" | "gold" | "success";
   }>;
   quality?: number;
+  quantity?: number;
 };
 
 function toneBorder(tone?: string) {
@@ -78,6 +79,17 @@ export function QuoteCostBreakdown({
   }, [scrollIntoViewOnMount]);
 
   const q = typeof quote.quality === "number" ? Math.round(quote.quality) : null;
+  const qualityLabel =
+    q == null ? null : q >= 80 ? { text: "Datos completos", cls: "border-emerald-500/25 bg-emerald-500/[0.08] text-emerald-300" } : q >= 60 ? { text: "Estimación estándar", cls: "border-blue-500/25 bg-blue-500/[0.07] text-blue-300" } : { text: "Estimación preliminar", cls: "border-amber-500/25 bg-amber-500/[0.08] text-amber-300" };
+
+  const unitMin =
+    quote.quantity && quote.quantity > 1 && quote.totalMinUsd
+      ? (quote.totalMinUsd / quote.quantity).toFixed(0)
+      : null;
+  const unitMax =
+    quote.quantity && quote.quantity > 1 && quote.totalMaxUsd
+      ? (quote.totalMaxUsd / quote.quantity).toFixed(0)
+      : null;
 
   return (
     <div
@@ -97,13 +109,12 @@ export function QuoteCostBreakdown({
             y tu situación fiscal.
           </p>
         </div>
-        {q != null ? (
+        {qualityLabel ? (
           <div
-            className="flex shrink-0 items-center gap-1.5 rounded-lg border border-white/[0.08] bg-black/20 px-2.5 py-1.5"
-            title="Qué tan completos están los datos usados para estimar (FOB, NCM, PCRAM, origen, etc.)"
+            className={`flex shrink-0 items-center rounded-lg border px-2.5 py-1.5 text-[11px] font-semibold ${qualityLabel.cls}`}
+            title="Nivel de completitud de los datos usados para la estimación"
           >
-            <span className="text-[10px] font-medium uppercase tracking-wider text-slate-500">Calidad datos</span>
-            <span className="text-[13px] font-bold tabular-nums text-slate-200">{q}%</span>
+            {qualityLabel.text}
           </div>
         ) : null}
       </div>
@@ -137,17 +148,23 @@ export function QuoteCostBreakdown({
               {card.detail ? (
                 <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500 sm:text-[12px]">{card.detail}</p>
               ) : null}
+              {isTotal && unitMin && unitMax ? (
+                <p className="mt-1.5 text-[11px] leading-snug text-amber-300/60">
+                  ≈ USD {unitMin}–{unitMax} por unidad puesto en Argentina
+                </p>
+              ) : null}
             </div>
           );
         })}
       </div>
 
       {quote.assumptions && quote.assumptions.length > 0 ? (
-        <div className="mt-5 border-t border-white/[0.06] pt-5">
-          <p className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-slate-500">
-            <Info className="h-3.5 w-3.5 text-slate-600" aria-hidden />
+        <details className="group mt-5 border-t border-white/[0.06] pt-4">
+          <summary className="flex cursor-pointer list-none items-center gap-1 text-[12px] font-medium text-slate-400 transition hover:text-slate-200 [&::-webkit-details-marker]:hidden">
+            <ChevronRight className="h-4 w-4 shrink-0 transition group-open:rotate-90" aria-hidden />
+            <Info className="h-3.5 w-3.5 shrink-0 text-slate-600" aria-hidden />
             Supuestos del cálculo
-          </p>
+          </summary>
           <div className="mt-3 grid gap-2 sm:grid-cols-2">
             {quote.assumptions.map((a) => (
               <div
@@ -159,7 +176,7 @@ export function QuoteCostBreakdown({
               </div>
             ))}
           </div>
-        </div>
+        </details>
       ) : null}
 
       {quote.explanation ? (
@@ -170,13 +187,16 @@ export function QuoteCostBreakdown({
           </summary>
           <div className="mt-3 rounded-xl border border-white/[0.06] bg-black/25 p-4">
             <ExplanationLines text={quote.explanation} />
+            <p className="mt-4 border-t border-white/[0.06] pt-3 text-[10px] leading-relaxed text-slate-600">
+              ID: <code className="rounded bg-white/[0.06] px-1 py-0.5 font-mono text-[10px] text-slate-500">{quote.quoteId}</code>
+            </p>
           </div>
         </details>
-      ) : null}
-
-      <p className="mt-4 text-[10px] leading-relaxed text-slate-600">
-        ID cotización: <code className="rounded bg-white/[0.06] px-1 py-0.5 font-mono text-[10px] text-slate-400">{quote.quoteId}</code>
-      </p>
+      ) : (
+        <p className="mt-4 text-[10px] leading-relaxed text-slate-700">
+          ID: <code className="font-mono text-slate-600">{quote.quoteId}</code>
+        </p>
+      )}
     </div>
   );
 }

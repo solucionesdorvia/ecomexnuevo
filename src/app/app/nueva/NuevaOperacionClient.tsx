@@ -178,6 +178,7 @@ export default function NuevaOperacionClient({
           explanation: json.explanation,
           assumptions: json.assumptions,
           quality: json.quality,
+          quantity: caseState.purchase?.quantity,
         });
       }
     } catch (e) {
@@ -426,10 +427,10 @@ export default function NuevaOperacionClient({
                         className="mt-2 text-[20px] font-extrabold leading-tight text-white sm:text-[22px]"
                         style={{ fontFamily: "var(--font-display)" }}
                       >
-                        Cotización lista.
+                        Tu importación puede arrancar hoy.
                       </p>
                       <p className="mt-1.5 text-[14px] leading-relaxed text-slate-300">
-                        El siguiente paso es que un operador coordine proveedor, flete y documentación.
+                        Nuestro equipo toma el control desde acá: proveedor, flete, aduana y documentación.
                       </p>
                       <div className="mt-5 flex flex-col gap-2 sm:flex-row sm:items-center">
                         <button

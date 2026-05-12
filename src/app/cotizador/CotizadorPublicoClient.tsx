@@ -196,6 +196,7 @@ export default function CotizadorPublicoClient() {
           explanation: json.explanation,
           assumptions: json.assumptions,
           quality: json.quality,
+          quantity: caseState.purchase?.quantity,
         });
         incrementQuoteCount();
       }
