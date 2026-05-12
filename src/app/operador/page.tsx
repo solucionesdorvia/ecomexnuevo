@@ -10,7 +10,7 @@ export default async function OperadorPage() {
 
   return (
     <div className="min-h-screen bg-background-dark font-[var(--font-outfit)] text-slate-100">
-      <header className="sticky top-0 z-50 border-b border-[rgba(140,177,236,0.2)] bg-background-dark/95 backdrop-blur-md">
+      <header className="sticky top-0 z-50 border-b border-[rgba(24,195,214,0.15)] bg-background-dark/95 backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-[1320px] items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3 text-primary">
             <span className="material-symbols-outlined text-3xl">precision_manufacturing</span>
@@ -25,10 +25,10 @@ export default async function OperadorPage() {
       <main className="mx-auto w-full max-w-[1320px] px-6 py-8">
         <div className="mb-6">
           <h2 className="text-3xl font-black tracking-tight text-white">
-            Excel + fotos -&gt; borrador automatico -&gt; ajuste manual
+            Excel + fotos → borrador automático → ajuste manual
           </h2>
           <p className="mt-2 text-sm text-slate-400">
-            Carga operativa con trazabilidad de overrides y exportacion PDF.
+            Carga operativa con trazabilidad de overrides y exportación PDF.
           </p>
         </div>
         <OperatorBudgetClient />
