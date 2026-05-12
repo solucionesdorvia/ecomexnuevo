@@ -8,12 +8,11 @@ export function TypingIndicator() {
       aria-label="Procesando consulta"
     >
       <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-[#18C3D6]/20 bg-[#060f1a]">
-        <img
-          src="/brand/ecomex-logo.png"
-          alt=""
-          className="h-2 brightness-0 invert opacity-50"
-          aria-hidden
-        />
+        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden>
+          <rect x="0" y="0"   width="12" height="1.8" rx="0.9" fill="#18C3D6" opacity="0.7" />
+          <rect x="0" y="4.1" width="12" height="1.8" rx="0.9" fill="#18C3D6" opacity="0.7" />
+          <rect x="0" y="8.2" width="12" height="1.8" rx="0.9" fill="#18C3D6" opacity="0.7" />
+        </svg>
       </div>
       <div className="flex min-w-0 flex-1 items-stretch gap-3">
         <div className="mt-[3px] w-[2px] shrink-0 self-stretch rounded-full bg-[#18C3D6]/20">
