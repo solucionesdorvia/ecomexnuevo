@@ -76,15 +76,10 @@ export function ChatInput({
         </div>
       </div>
       {helperText != null ? (
-        <div className="mx-auto mt-2.5 max-w-[min(100%,720px)] px-1 text-center text-[11px] leading-snug text-slate-500 sm:text-[10px]">
+        <div className="mx-auto mt-2 max-w-[min(100%,720px)] px-1 text-center text-[10px] leading-snug text-slate-600">
           {helperText}
         </div>
-      ) : (
-        <p className="mx-auto mt-2.5 max-w-[min(100%,720px)] px-1 text-center text-[11px] leading-snug text-slate-500 sm:text-[10px]">
-          <span className="hidden sm:inline">Enter envía · Shift+Enter nueva línea</span>
-          <span className="sm:hidden">Enter envía · Shift+Enter salto de línea</span>
-        </p>
-      )}
+      ) : null}
     </div>
   );
 }

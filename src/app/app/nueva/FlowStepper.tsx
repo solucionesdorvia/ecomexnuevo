@@ -13,11 +13,11 @@ type FlowStepperProps = {
 };
 
 const STEPS: Array<{ key: StepKey; label: string }> = [
-  { key: "product", label: "Producto" },
-  { key: "data", label: "Precio y origen" },
+  { key: "product",  label: "Producto" },
+  { key: "data",     label: "Precio y origen" },
   { key: "analysis", label: "Análisis" },
-  { key: "budget", label: "Presupuesto" },
-  { key: "operation", label: "Operación" },
+  { key: "budget",   label: "Presupuesto" },
+  { key: "operation",label: "Operación" },
 ];
 
 function stepIndex(k: StepKey) {
@@ -43,58 +43,69 @@ export function FlowStepper({
   return (
     <nav
       aria-label="Progreso de la operación"
-      className="relative shrink-0 border-b border-white/[0.05] bg-[#030712]/60 px-3 py-3 backdrop-blur sm:px-6"
+      className="relative shrink-0 border-b border-white/[0.05] bg-[#030712]/70 px-4 py-2.5 backdrop-blur sm:px-6"
     >
-      <ol className="mx-auto flex max-w-[720px] items-center gap-1.5 sm:gap-2">
+      <ol className="mx-auto flex max-w-[720px] items-center">
         {STEPS.map((step, i) => {
           const isDone = done[step.key];
           const isActive = i === currIdx && !isDone;
           const isFuture = i > currIdx && !isDone;
+
           return (
             <li
               key={step.key}
-              className="flex min-w-0 flex-1 items-center gap-1.5 sm:gap-2"
+              className="flex min-w-0 flex-1 items-center"
               aria-current={isActive ? "step" : undefined}
             >
-              <span
-                className={[
-                  "flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-[10px] font-semibold transition-all duration-300 sm:h-7 sm:w-7 sm:text-[11px]",
-                  isDone
-                    ? "border-emerald-500/40 bg-emerald-500/15 text-emerald-300 shadow-[0_0_12px_rgba(16,185,129,0.25)]"
-                    : isActive
-                      ? "border-[#60a5fa]/50 bg-[#3b82f6]/15 text-[#93c5fd] shadow-[0_0_12px_rgba(59,130,246,0.35)]"
-                      : "border-white/[0.08] bg-white/[0.02] text-slate-600",
-                ].join(" ")}
-              >
-                {isDone ? (
-                  <Check className="h-3 w-3 sm:h-3.5 sm:w-3.5" strokeWidth={3} />
-                ) : (
-                  i + 1
+              {/* Circle */}
+              <div className="relative flex shrink-0 items-center justify-center">
+                {isActive && (
+                  <span className="absolute h-5 w-5 animate-ping rounded-full bg-[#18C3D6]/20 sm:h-6 sm:w-6" />
                 )}
-              </span>
+                <span
+                  className={[
+                    "relative flex h-5 w-5 shrink-0 items-center justify-center rounded-full border text-[9px] font-bold transition-all duration-500 sm:h-6 sm:w-6 sm:text-[10px]",
+                    isDone
+                      ? "border-emerald-500/50 bg-emerald-500/20 text-emerald-300"
+                      : isActive
+                        ? "border-[#18C3D6]/60 bg-[#18C3D6]/15 text-[#18C3D6]"
+                        : "border-white/[0.07] bg-white/[0.02] text-slate-700",
+                  ].join(" ")}
+                >
+                  {isDone ? (
+                    <Check className="h-2.5 w-2.5 sm:h-3 sm:w-3" strokeWidth={3} />
+                  ) : (
+                    i + 1
+                  )}
+                </span>
+              </div>
+
+              {/* Label — hidden on xs for future steps */}
               <span
                 className={[
-                  "min-w-0 truncate text-[11px] font-medium transition-colors sm:text-[12px]",
+                  "ml-1.5 truncate text-[10px] font-medium transition-colors sm:text-[11px]",
                   isDone
-                    ? "text-emerald-300/90"
+                    ? "text-emerald-400/80"
                     : isActive
                       ? "text-white"
                       : isFuture
-                        ? "text-slate-600"
+                        ? "hidden text-slate-700 sm:block"
                         : "text-slate-500",
                 ].join(" ")}
               >
                 {step.label}
               </span>
-              {i < STEPS.length - 1 ? (
+
+              {/* Connector */}
+              {i < STEPS.length - 1 && (
                 <span
                   className={[
-                    "h-px flex-1 transition-colors",
-                    isDone ? "bg-emerald-500/30" : "bg-white/[0.06]",
+                    "mx-2 h-px flex-1 rounded-full transition-all duration-700",
+                    isDone ? "bg-emerald-500/35" : isActive ? "bg-[#18C3D6]/20" : "bg-white/[0.05]",
                   ].join(" ")}
                   aria-hidden
                 />
-              ) : null}
+              )}
             </li>
           );
         })}

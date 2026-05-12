@@ -345,16 +345,9 @@ export default function NuevaOperacionClient({
                       variant={caseState.status === "resolved" && !caseState.ambiguity ? "resolved" : "tentative"}
                     />
                   ) : (
-                    <div className="relative overflow-hidden rounded-2xl border border-emerald-500/25 bg-gradient-to-br from-emerald-500/[0.08] to-emerald-500/[0.02] p-4 sm:p-5">
-                      <div
-                        className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-emerald-500/20 blur-3xl"
-                        aria-hidden
-                      />
-                      <p className="relative text-[11px] font-semibold uppercase tracking-[0.14em] text-emerald-300/90">
-                        ✓ Producto analizado
-                      </p>
-                      <p className="relative mt-2 text-[15px] font-medium leading-relaxed text-slate-100">
-                        Ya tenemos lo necesario para armarte el presupuesto completo.
+                    <div className="card-in rounded-xl border border-emerald-500/20 bg-emerald-500/[0.04] px-4 py-3.5">
+                      <p className="text-[13px] font-medium text-slate-200">
+                        Tenemos todo lo necesario para calcular el presupuesto.
                       </p>
                     </div>
                   )}
@@ -390,55 +383,36 @@ export default function NuevaOperacionClient({
               >
                 <div className="mx-auto flex max-w-[720px] flex-col gap-4">
                   <QuoteCostBreakdown quote={quoteResult} scrollIntoViewOnMount />
-                  <div className="relative overflow-hidden rounded-2xl border border-[#2563eb]/40 bg-gradient-to-br from-[#1e40af]/50 via-[#1e3a8a]/35 to-[#0b1220] p-5 sm:p-6">
-                    <div
-                      className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#3b82f6]/30 blur-3xl"
-                      aria-hidden
-                    />
-                    <div
-                      className="pointer-events-none absolute -left-16 -bottom-16 h-40 w-40 rounded-full bg-[#60a5fa]/20 blur-3xl"
-                      aria-hidden
-                    />
-                    <div className="relative">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#93c5fd]">
-                          Listo para avanzar
-                        </p>
-                        {(quoteResult.ncm || caseState.recommendedNcm) ? (
-                          <span className="inline-flex items-center gap-1.5 rounded-md border border-[#3b82f6]/35 bg-[#0f172a]/70 px-2 py-0.5 font-mono text-[10.5px] font-semibold text-[#93c5fd]">
-                            NCM{" "}
-                            <span className="text-white">
-                              {quoteResult.ncm || caseState.recommendedNcm}
-                            </span>
-                          </span>
-                        ) : null}
-                      </div>
-                      <p
-                        className="mt-2 text-[20px] font-extrabold leading-tight text-white sm:text-[22px]"
-                        style={{ fontFamily: "var(--font-display)" }}
-                      >
+                  <div className="card-in rounded-2xl border border-white/[0.09] bg-[#0a1422] p-5 sm:p-6">
+                    <div className="flex flex-wrap items-center gap-2 border-b border-white/[0.06] pb-4">
+                      <p className="text-[13px] font-semibold text-white">
                         Tu importación puede arrancar hoy.
                       </p>
-                      <p className="mt-1.5 text-[14px] leading-relaxed text-slate-300">
-                        Nuestro equipo toma el control desde acá: proveedor, flete, aduana y documentación.
-                      </p>
-                      <div className="mt-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-                        <button
-                          type="button"
-                          onClick={() => void startOperation()}
-                          disabled={pendingOperation}
-                          className="nueva-cta-pulse group flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#2563eb] to-[#3b82f6] px-5 py-3 text-center text-[15px] font-semibold text-white transition-all hover:from-[#1d4ed8] hover:to-[#2563eb] disabled:cursor-not-allowed disabled:opacity-70 sm:min-h-[48px]"
-                        >
-                          {pendingOperation ? "Iniciando importación…" : "Avanzar con la importación"}
-                          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                        </button>
-                        <Link
-                          href={`/api/quote/pdf?mode=quote&id=${encodeURIComponent(quoteResult.quoteId)}`}
-                          className="min-h-[44px] rounded-xl border border-white/[0.12] px-4 py-2.5 text-center text-[13px] font-medium text-slate-300 transition hover:border-white/[0.22] hover:bg-white/[0.03] hover:text-white sm:min-h-0"
-                        >
-                          Descargar PDF
-                        </Link>
-                      </div>
+                      {(quoteResult.ncm || caseState.recommendedNcm) ? (
+                        <span className="ml-auto rounded-md border border-white/[0.1] bg-white/[0.04] px-2 py-0.5 font-mono text-[10px] text-slate-400">
+                          NCM {quoteResult.ncm || caseState.recommendedNcm}
+                        </span>
+                      ) : null}
+                    </div>
+                    <p className="mt-3.5 text-[13px] leading-relaxed text-slate-400">
+                      Nuestro equipo coordina proveedor, flete, aduana y documentación — vos solo seguís el estado.
+                    </p>
+                    <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
+                      <button
+                        type="button"
+                        onClick={() => void startOperation()}
+                        disabled={pendingOperation}
+                        className="group flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl bg-[#18C3D6] px-5 py-3 text-center text-[14px] font-semibold text-[#030712] transition hover:bg-[#15afc1] disabled:cursor-not-allowed disabled:opacity-60 sm:min-h-[44px]"
+                      >
+                        {pendingOperation ? "Iniciando…" : "Avanzar con la importación"}
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                      </button>
+                      <Link
+                        href={`/api/quote/pdf?mode=quote&id=${encodeURIComponent(quoteResult.quoteId)}`}
+                        className="min-h-[44px] rounded-xl border border-white/[0.1] px-4 py-2.5 text-center text-[13px] font-medium text-slate-400 transition hover:border-white/[0.18] hover:text-slate-200 sm:min-h-0"
+                      >
+                        Descargar PDF
+                      </Link>
                     </div>
                   </div>
                 </div>
