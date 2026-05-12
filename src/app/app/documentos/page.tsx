@@ -52,20 +52,20 @@ export default async function DocumentosPage() {
   const opsWithDocs = orderedOpIds.length;
 
   return (
-    <SystemPage title="Documentos" description="Indice de archivos subidos en tus importaciones.">
+    <SystemPage title="Documentos" description="Índice de archivos subidos en tus importaciones.">
       <div className="mt-8 grid gap-3 sm:grid-cols-3">
         <SystemKpi label="Documentos" value={docs.length} hint="Archivos totales indexados." />
         <SystemKpi label="Operaciones con archivos" value={opsWithDocs} hint="Importaciones con evidencia documental." />
         <SystemKpi
-          label="Promedio por operacion"
+          label="Promedio por operación"
           value={opsWithDocs > 0 ? (docs.length / opsWithDocs).toFixed(1) : "0"}
-          hint="Documentos por importacion."
+          hint="Documentos por importación."
         />
       </div>
 
       <p className="mt-3 text-[12px] leading-relaxed text-[#555c6b]">
-        Los archivos se cargan desde cada importacion en{" "}
-        <Link href="/app/operaciones" className="text-[#2b59ff] hover:underline">
+        Los archivos se cargan desde cada importación en{" "}
+        <Link href="/app/operaciones" className="text-[#18C3D6] hover:underline">
           Operaciones
         </Link>
         . Esta pantalla funciona como una vista global.
@@ -74,12 +74,12 @@ export default async function DocumentosPage() {
       {docs.length === 0 ? (
         <SystemSection title="Repositorio">
           <SystemEmpty
-            title="Todavia no hay documentos cargados."
-            description="Cuando subas archivos desde una importacion, apareceran listados aqui por operacion."
+            title="Todavía no hay documentos cargados."
+            description="Cuando subas archivos desde una importación, aparecerán listados acá por operación."
             action={
               <Link
                 href="/app/operaciones"
-                className="inline-flex rounded-lg bg-[#2b59ff] px-4 py-2 text-[13px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+                className="inline-flex rounded-lg bg-[#18C3D6] px-4 py-2 text-[13px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
               >
                 Ir a operaciones
               </Link>
@@ -88,8 +88,8 @@ export default async function DocumentosPage() {
         </SystemSection>
       ) : (
         <SystemSection
-          title="Documentacion por operacion"
-          subtitle="Cada bloque agrupa archivos por importacion y estado de avance."
+          title="Documentación por operación"
+          subtitle="Cada bloque agrupa archivos por importación y estado de avance."
         >
           <div className="space-y-12">
             {orderedOpIds.map((opId) => {
@@ -120,7 +120,7 @@ export default async function DocumentosPage() {
                               href={d.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-[13px] font-medium text-[#2b59ff] hover:underline [overflow-wrap:anywhere]"
+                              className="text-[13px] font-medium text-[#18C3D6] hover:underline [overflow-wrap:anywhere]"
                             >
                               {d.name}
                             </a>
@@ -133,9 +133,9 @@ export default async function DocumentosPage() {
                         </div>
                         <Link
                           href={`/app/operaciones/${opId}/operation`}
-                          className="shrink-0 text-[12px] text-[#2b59ff] hover:underline sm:ml-4"
+                          className="shrink-0 text-[12px] text-[#18C3D6] hover:underline sm:ml-4"
                         >
-                          Ver importacion
+                          Ver importación
                         </Link>
                       </li>
                     ))}

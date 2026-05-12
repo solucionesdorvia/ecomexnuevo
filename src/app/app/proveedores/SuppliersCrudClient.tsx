@@ -141,7 +141,7 @@ export function SuppliersCrudClient({ initialSuppliers }: { initialSuppliers: Su
             <input
               value={newName}
               onChange={(e) => setNewName(e.target.value)}
-              className="mt-1 w-full rounded-lg border border-white/[0.08] bg-[#07111A] px-3 py-2 text-[13px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/40"
+              className="mt-1 w-full rounded-lg border border-white/[0.08] bg-[#07111A] px-3 py-2 text-[13px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#18C3D6]/40"
               placeholder="Ej. Shenzhen Yifang Tech"
             />
           </label>
@@ -150,7 +150,7 @@ export function SuppliersCrudClient({ initialSuppliers }: { initialSuppliers: Su
             <input
               value={newCountry}
               onChange={(e) => setNewCountry(e.target.value)}
-              className="mt-1 w-full rounded-lg border border-white/[0.08] bg-[#07111A] px-3 py-2 text-[13px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/40"
+              className="mt-1 w-full rounded-lg border border-white/[0.08] bg-[#07111A] px-3 py-2 text-[13px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#18C3D6]/40"
               placeholder="China"
             />
           </label>
@@ -159,7 +159,7 @@ export function SuppliersCrudClient({ initialSuppliers }: { initialSuppliers: Su
             <input
               value={newContact}
               onChange={(e) => setNewContact(e.target.value)}
-              className="mt-1 w-full rounded-lg border border-white/[0.08] bg-[#07111A] px-3 py-2 text-[13px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/40"
+              className="mt-1 w-full rounded-lg border border-white/[0.08] bg-[#07111A] px-3 py-2 text-[13px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#18C3D6]/40"
               placeholder="Email o WhatsApp"
             />
           </label>
@@ -171,7 +171,7 @@ export function SuppliersCrudClient({ initialSuppliers }: { initialSuppliers: Su
           type="button"
           disabled={creating || !newName.trim() || !newCountry.trim()}
           onClick={() => void submitCreate()}
-          className="mt-4 rounded-lg bg-[#2b59ff] px-4 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-[#2348d4] disabled:opacity-40"
+          className="mt-4 rounded-lg bg-[#18C3D6] px-4 py-2.5 text-[13px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9] disabled:opacity-40"
         >
           {creating ? "Guardando…" : "Agregar proveedor"}
         </button>
@@ -221,7 +221,7 @@ export function SuppliersCrudClient({ initialSuppliers }: { initialSuppliers: Su
                         type="button"
                         disabled={patchingId === s.id || !editName.trim() || !editCountry.trim()}
                         onClick={() => void submitPatch(s.id)}
-                        className="rounded-lg bg-[#2b59ff] px-3 py-2 text-[12px] font-medium text-white disabled:opacity-40"
+                        className="rounded-lg bg-[#18C3D6] px-3 py-2 text-[12px] font-medium text-[#030d18] disabled:opacity-40"
                       >
                         {patchingId === s.id ? "Guardando…" : "Guardar"}
                       </button>

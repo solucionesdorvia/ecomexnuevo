@@ -99,7 +99,7 @@ export function OperationDocumentsClient({
         <button
           type="button"
           onClick={() => setOpen((o) => !o)}
-          className="rounded-lg border border-white/[0.08] px-3 py-1.5 text-[12px] text-[#b0b8c9] transition hover:border-[#2b59ff]/30 hover:text-white"
+          className="rounded-lg border border-white/[0.08] px-3 py-1.5 text-[12px] text-[#b0b8c9] transition hover:border-[#18C3D6]/30 hover:text-white"
         >
           {open ? "Cerrar" : "Subir documento"}
         </button>
@@ -115,7 +115,7 @@ export function OperationDocumentsClient({
                 setError(null);
               }}
               className={`rounded-lg px-3 py-1.5 text-[11px] font-medium ${
-                mode === "file" ? "bg-[#2b59ff] text-white" : "border border-white/[0.08] text-[#b0b8c9]"
+                mode === "file" ? "bg-[#18C3D6] text-[#030d18]" : "border border-white/[0.08] text-[#b0b8c9]"
               }`}
             >
               Subir archivo
@@ -127,7 +127,7 @@ export function OperationDocumentsClient({
                 setError(null);
               }}
               className={`rounded-lg px-3 py-1.5 text-[11px] font-medium ${
-                mode === "url" ? "bg-[#2b59ff] text-white" : "border border-white/[0.08] text-[#b0b8c9]"
+                mode === "url" ? "bg-[#18C3D6] text-[#030d18]" : "border border-white/[0.08] text-[#b0b8c9]"
               }`}
             >
               Agregar por URL
@@ -140,7 +140,7 @@ export function OperationDocumentsClient({
                 ref={fileInputRef}
                 type="file"
                 accept=".pdf,.jpg,.jpeg,.png,.xlsx,.docx,application/pdf,image/jpeg,image/png,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                className="block w-full text-[12px] text-[#b0b8c9] file:mr-3 file:rounded-lg file:border-0 file:bg-[#2b59ff]/20 file:px-3 file:py-1.5 file:text-[12px] file:text-[#2b59ff]"
+                className="block w-full text-[12px] text-[#b0b8c9] file:mr-3 file:rounded-lg file:border-0 file:bg-[#18C3D6]/20 file:px-3 file:py-1.5 file:text-[12px] file:text-[#18C3D6]"
                 onChange={(e) => onPickFile(e.target.files?.[0] ?? null)}
               />
               <p className="text-[10px] text-[#555c6b]">Máx. 10MB · PDF, JPG, PNG, XLSX, DOCX</p>
@@ -173,14 +173,14 @@ export function OperationDocumentsClient({
 
           {pending ? (
             <div className="h-1 w-full overflow-hidden rounded-full bg-white/[0.06]">
-              <div className="h-full w-full animate-pulse rounded-full bg-[#2b59ff]/50" />
+              <div className="h-full w-full animate-pulse rounded-full bg-[#18C3D6]/50" />
             </div>
           ) : null}
 
           <button
             type="submit"
             disabled={pending || (mode === "file" ? !canSubmitFile : !canSubmitUrl)}
-            className="rounded-lg bg-[#2b59ff] px-4 py-2 text-[12px] font-medium text-white disabled:opacity-40"
+            className="rounded-lg bg-[#18C3D6] px-4 py-2 text-[12px] font-medium text-[#030d18] disabled:opacity-40"
           >
             {pending ? "Subiendo…" : mode === "file" ? "Subir" : "Guardar"}
           </button>
@@ -195,7 +195,7 @@ export function OperationDocumentsClient({
         <ul className="mt-3 space-y-2">
           {initialDocuments.map((d) => (
             <li key={d.id} className="rounded-lg border border-white/[0.04] bg-[#0B1622] px-3 py-2.5">
-              <a href={d.url} target="_blank" rel="noreferrer" className="text-[13px] font-medium text-[#2b59ff] hover:underline">
+              <a href={d.url} target="_blank" rel="noreferrer" className="text-[13px] font-medium text-[#18C3D6] hover:underline">
                 {d.name}
               </a>
               <p className="mt-1 text-[11px] text-[#555c6b]">

@@ -80,7 +80,7 @@ export function OperationCommentsClient({ quoteId, initialComments }: { quoteId:
         <button
           type="submit"
           disabled={pending || !message.trim()}
-          className="rounded-lg bg-[#2b59ff] px-4 py-2 text-[12px] font-medium text-white disabled:opacity-40"
+          className="rounded-lg bg-[#18C3D6] px-4 py-2 text-[12px] font-medium text-[#030d18] disabled:opacity-40"
         >
           {pending ? "Enviando…" : "Enviar comentario"}
         </button>

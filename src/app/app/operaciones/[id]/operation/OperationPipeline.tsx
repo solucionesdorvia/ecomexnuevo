@@ -21,7 +21,7 @@ export function OperationPipeline({ currentStage }: { currentStage: string }) {
                   isPast
                     ? "border-emerald-500/60 bg-emerald-500/20 text-emerald-200"
                     : isCurrent
-                      ? `border-[#2b59ff] bg-[#2b59ff]/20 text-white ring-2 ring-[#2b59ff]/30`
+                      ? `border-[#18C3D6] bg-[#18C3D6]/20 text-[#18C3D6] ring-2 ring-[#18C3D6]/30`
                       : "border-white/[0.08] bg-[#0B1622] text-[#555c6b]"
                 }`}
               >

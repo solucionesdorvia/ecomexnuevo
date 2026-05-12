@@ -165,7 +165,7 @@ export default function NotificationsBell() {
                       <Link
                         href={href}
                         onClick={() => setOpen(false)}
-                        className={`block px-4 py-3 transition-colors hover:bg-white/[0.04] ${unread ? "bg-[#2b59ff]/[0.06]" : ""}`}
+                        className={`block px-4 py-3 transition-colors hover:bg-white/[0.04] ${unread ? "bg-[#18C3D6]/[0.06]" : ""}`}
                       >
                         <div className="flex items-start justify-between gap-2">
                           <p className="text-[13px] font-medium leading-snug text-white">{n.title}</p>

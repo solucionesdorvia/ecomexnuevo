@@ -17,10 +17,10 @@ const WIDTH_CLASS: Record<NonNullable<SystemPageProps["maxWidth"]>, string> = {
 export function SystemPage({ title, description, action, children, maxWidth = "normal" }: SystemPageProps) {
   return (
     <div className="relative px-safe pb-6 pt-4 sm:p-6 sm:pb-8 lg:p-8">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 sm:h-48 bg-[radial-gradient(ellipse_at_top,rgba(43,89,255,0.14),transparent_65%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 sm:h-48 bg-[radial-gradient(ellipse_at_top,rgba(24,195,214,0.10),transparent_65%)]" />
       <div className={`mx-auto w-full ${WIDTH_CLASS[maxWidth]}`}>
         <div className="relative overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0B1622]/80 px-4 py-5 backdrop-blur sm:px-6 sm:py-6">
-          <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#2b59ff]/10 blur-2xl" />
+          <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#18C3D6]/10 blur-2xl" />
           <div className="pointer-events-none absolute -left-10 -bottom-10 h-20 w-20 rounded-full bg-[#d4a843]/10 blur-2xl" />
           <div className="relative flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div className="min-w-0">

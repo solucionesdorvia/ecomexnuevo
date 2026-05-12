@@ -165,7 +165,7 @@ export default async function OperationDetailPage({ params }: { params: Promise<
                 <span className="rounded bg-white/[0.04] px-2 py-0.5 text-[10px] text-[#b0b8c9]">Cotización</span>
               )}
               {ncm ? (
-                <span className="inline-flex items-center gap-1 rounded border border-[#2b59ff]/35 bg-[#2b59ff]/[0.08] px-2 py-0.5 font-mono text-[10px] font-bold tracking-tight text-[#7aa2ff]">
+                <span className="inline-flex items-center gap-1 rounded border border-[#18C3D6]/35 bg-[#18C3D6]/[0.08] px-2 py-0.5 font-mono text-[10px] font-bold tracking-tight text-[#7aa2ff]">
                   NCM <span className="text-white">{ncm}</span>
                 </span>
               ) : null}
@@ -174,7 +174,7 @@ export default async function OperationDetailPage({ params }: { params: Promise<
           </div>
           <a
             href={`/api/quote/pdf?mode=${encodeURIComponent(quote.mode)}&id=${encodeURIComponent(quote.id)}`}
-            className="shrink-0 rounded-lg bg-[#2b59ff] px-4 py-2 text-[12px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+            className="shrink-0 rounded-lg bg-[#18C3D6] px-4 py-2 text-[12px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
           >
             PDF cotización
           </a>
@@ -193,7 +193,7 @@ export default async function OperationDetailPage({ params }: { params: Promise<
                   Resumen de cotización
                 </h2>
                 {ncm ? (
-                  <span className="inline-flex items-center gap-1.5 rounded-md border border-[#2b59ff]/30 bg-[#0f172a] px-2 py-0.5 font-mono text-[11px] font-semibold tracking-tight text-[#7aa2ff]">
+                  <span className="inline-flex items-center gap-1.5 rounded-md border border-[#18C3D6]/30 bg-[#0f172a] px-2 py-0.5 font-mono text-[11px] font-semibold tracking-tight text-[#7aa2ff]">
                     NCM <span className="text-white">{ncm}</span>
                   </span>
                 ) : null}
@@ -229,7 +229,7 @@ export default async function OperationDetailPage({ params }: { params: Promise<
                   {operation.timeline.map((ev, i) => (
                     <li key={ev.id} className="flex gap-3">
                       <div className="flex flex-col items-center pt-1">
-                        <div className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#2b59ff]" aria-hidden />
+                        <div className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#18C3D6]" aria-hidden />
                         {i < operation.timeline.length - 1 ? (
                           <div className="min-h-[28px] w-px flex-1 bg-white/[0.08]" aria-hidden />
                         ) : null}

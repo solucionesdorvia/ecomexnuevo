@@ -116,9 +116,9 @@ export default async function OperacionesPage() {
       action={
         <Link
           href="/app/nueva"
-          className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#2b59ff] px-4 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-[#2348d4] sm:w-auto"
+          className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#18C3D6] px-4 py-2.5 text-[13px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9] sm:w-auto"
         >
-          Nueva operacion
+          Nueva operación
         </Link>
       }
     >
@@ -131,19 +131,19 @@ export default async function OperacionesPage() {
         <SystemKpi
           label="Cotizaciones pendientes"
           value={quotesSinOperation.length}
-          hint="Aun no convertidas en importacion."
+          hint="Aún no convertidas en importación."
         />
         <SystemKpi
           label="Cobertura operativa"
           value={`${operations.length}/${operations.length + quotesSinOperation.length || 1}`}
-          hint="Relacion entre operaciones y oportunidades."
+          hint="Relación entre operaciones y oportunidades."
         />
       </div>
 
       {operations.length > 0 ? (
         <SystemSection
           title="Importaciones activas"
-          subtitle="Cada tarjeta representa una importacion con su estado y ultimo evento."
+          subtitle="Cada tarjeta representa una importación con su estado y último evento."
         >
             <div className="grid gap-4 sm:grid-cols-2">
               {operations.map((op) => {
@@ -175,7 +175,7 @@ export default async function OperacionesPage() {
                     <div className="mt-4 flex flex-wrap gap-2">
                       <Link
                         href={`/app/operaciones/${op.id}/operation`}
-                        className="inline-flex flex-1 items-center justify-center rounded-lg bg-[#2b59ff] px-3 py-2 text-center text-[12px] font-medium text-white transition-colors hover:bg-[#2348d4] sm:flex-none"
+                        className="inline-flex flex-1 items-center justify-center rounded-lg bg-[#18C3D6] px-3 py-2 text-center text-[12px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9] sm:flex-none"
                       >
                         Ver importación
                       </Link>
@@ -195,7 +195,7 @@ export default async function OperacionesPage() {
 
       <SystemSection
         title="Cotizaciones"
-        subtitle="Backlog de cotizaciones listas para iniciar importacion."
+        subtitle="Backlog de cotizaciones listas para iniciar importación."
         className={operations.length > 0 ? "mt-12" : ""}
       >
 
@@ -237,7 +237,7 @@ export default async function OperacionesPage() {
                         <td className="px-4 py-3 text-right">
                           <Link
                             href={`/app/operaciones/${q.id}`}
-                            className="text-[12px] text-[#2b59ff] transition-colors hover:text-white"
+                            className="text-[12px] text-[#18C3D6] transition-colors hover:text-white"
                           >
                             Detalle
                           </Link>
@@ -252,13 +252,13 @@ export default async function OperacionesPage() {
             <div className="mt-4">
               <SystemEmpty
                 title="No hay cotizaciones pendientes."
-                description="Inicia una nueva cotizacion para comenzar el flujo de importacion."
+                description="Iniciá una nueva cotización para comenzar el flujo de importación."
                 action={
                   <Link
                     href="/app/nueva"
-                    className="inline-flex rounded-lg bg-[#2b59ff] px-4 py-2 text-[13px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+                    className="inline-flex rounded-lg bg-[#18C3D6] px-4 py-2 text-[13px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
                   >
-                    Nueva cotizacion
+                    Nueva cotización
                   </Link>
                 }
               />

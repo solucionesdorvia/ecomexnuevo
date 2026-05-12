@@ -7,7 +7,6 @@ import {
   operationStageBadgeClass,
 } from "@/app/app/operaciones/[id]/operation/operationStageUi";
 import { SystemKpi, SystemPage, SystemSection } from "@/components/app/SystemPage";
-import { APP_NAV_GROUP_LABELS, APP_NAV_ITEMS } from "@/components/app/navConfig";
 
 export const runtime = "nodejs";
 
@@ -127,7 +126,7 @@ export default async function DashboardPage() {
       action={
         <Link
           href="/app/nueva"
-          className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#2b59ff] px-4 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-[#2348d4] sm:w-auto"
+          className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#18C3D6] px-4 py-2.5 text-[13px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9] sm:w-auto"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 4v16m8-8H4" />
@@ -146,7 +145,7 @@ export default async function DashboardPage() {
               hint={countActiveOps > 0 ? "Hay operaciones en curso en el pipeline." : "No hay operaciones activas."}
             />
             {countActiveOps > 0 ? (
-              <Link href="/app/operaciones" className="mt-2 inline-block text-[12px] font-medium text-[#2b59ff] hover:underline">
+              <Link href="/app/operaciones" className="mt-2 inline-block text-[12px] font-medium text-[#18C3D6] hover:underline">
                 Ver todas
               </Link>
             ) : null}
@@ -154,34 +153,6 @@ export default async function DashboardPage() {
           <SystemKpi label="Cotizaciones sin importar" value={countPendingQuotes} hint="Pendientes de decisión o inicio." />
           <SystemKpi label="Importaciones completadas" value={countCompletedOps} hint="Histórico cerrado del sistema." />
         </div>
-
-        <SystemSection
-          title="Mapa del sistema"
-          subtitle="Estructura operativa basada en dominios para navegar el flujo completo de importación."
-        >
-          <div className="grid gap-3 md:grid-cols-2">
-            {(["core", "operations", "intelligence", "workspace"] as const).map((group) => {
-              const modules = APP_NAV_ITEMS.filter((item) => item.group === group && item.href !== "/app");
-              return (
-                <div key={group} className="rounded-xl border border-white/[0.05] bg-[#0B1622] p-4">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#4a5568]">{APP_NAV_GROUP_LABELS[group]}</p>
-                  <div className="mt-3 space-y-2">
-                    {modules.map((module) => (
-                      <Link
-                        key={module.href}
-                        href={module.href}
-                        className="block rounded-lg border border-white/[0.04] bg-[#07111A] px-3 py-2 transition-colors hover:border-[#2b59ff]/30 hover:bg-[#0c1827]"
-                      >
-                        <p className="text-[13px] font-medium text-white">{module.label}</p>
-                        <p className="mt-1 text-[11px] text-[#555c6b]">{module.description}</p>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </SystemSection>
 
         {showWelcomeEmpty ? (
           <div className="mt-12 rounded-xl border border-dashed border-white/[0.08] bg-[#0B1622]/50 px-6 py-14 text-center sm:py-16">
@@ -192,7 +163,7 @@ export default async function DashboardPage() {
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
                 href="/app/nueva"
-                className="inline-flex min-h-[44px] w-full max-w-xs items-center justify-center rounded-lg bg-[#2b59ff] px-5 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-[#2348d4] sm:w-auto"
+                className="inline-flex min-h-[44px] w-full max-w-xs items-center justify-center rounded-lg bg-[#18C3D6] px-5 py-2.5 text-[13px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9] sm:w-auto"
               >
                 Nueva cotización
               </Link>
@@ -239,7 +210,7 @@ export default async function DashboardPage() {
                     <div className="mt-4">
                       <Link
                         href={`/app/operaciones/${op.id}/operation`}
-                        className="inline-flex rounded-lg bg-[#2b59ff] px-4 py-2 text-[12px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+                        className="inline-flex rounded-lg bg-[#18C3D6] px-4 py-2 text-[12px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
                       >
                         Ver importación
                       </Link>
@@ -275,7 +246,7 @@ export default async function DashboardPage() {
                     </div>
                     <Link
                       href={`/app/operaciones/${q.id}`}
-                      className="shrink-0 text-[13px] font-medium text-[#2b59ff] hover:underline sm:pl-4"
+                      className="shrink-0 text-[13px] font-medium text-[#18C3D6] hover:underline sm:pl-4"
                     >
                       Ver
                     </Link>
@@ -285,7 +256,7 @@ export default async function DashboardPage() {
             </ul>
             {quotesSinOp.length > 3 ? (
               <div className="mt-4 text-right">
-                <Link href="/app/operaciones" className="text-[12px] font-medium text-[#2b59ff] hover:underline">
+                <Link href="/app/operaciones" className="text-[12px] font-medium text-[#18C3D6] hover:underline">
                   Ver todas
                 </Link>
               </div>

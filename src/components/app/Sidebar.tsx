@@ -44,9 +44,9 @@ function SidebarContent({ userEmail, userRole, onNavigate }: { userEmail?: strin
                         onClick={onNavigate}
                         className={`flex min-h-[44px] items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] transition-colors duration-150 ${
                           active
-                            ? "border-l-2 border-[#2b59ff] -ml-px bg-[#2b59ff]/8 font-medium text-white"
+                            ? "-ml-px border-l-2 border-[#18C3D6] bg-[#18C3D6]/[0.08] font-medium text-white"
                             : item.primary
-                              ? "text-[#2b59ff] hover:bg-[#2b59ff]/5"
+                              ? "text-[#18C3D6] hover:bg-[#18C3D6]/[0.05]"
                               : "text-[#4a5568] hover:bg-white/[0.02] hover:text-[#94a3b8]"
                         }`}
                       >
@@ -64,7 +64,7 @@ function SidebarContent({ userEmail, userRole, onNavigate }: { userEmail?: strin
 
       <div className="border-t border-white/[0.04] px-4 py-3 pb-safe">
         <div className="flex items-center gap-3">
-          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#2b59ff]/10 text-[11px] font-bold text-[#2b59ff]">
+          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#18C3D6]/10 text-[11px] font-bold text-[#18C3D6]">
             {(userEmail ?? "U")[0].toUpperCase()}
           </div>
           <div className="min-w-0 flex-1">

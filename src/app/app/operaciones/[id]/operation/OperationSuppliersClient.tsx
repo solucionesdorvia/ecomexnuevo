@@ -99,7 +99,7 @@ export function OperationSuppliersClient({
           <button
             type="submit"
             disabled={pending || !selectedId}
-            className="min-h-[44px] rounded-lg border border-[#2b59ff]/40 bg-[#2b59ff]/15 px-4 text-[12px] font-medium text-[#2b59ff] disabled:opacity-40"
+            className="min-h-[44px] rounded-lg border border-[#18C3D6]/40 bg-[#18C3D6]/15 px-4 text-[12px] font-medium text-[#18C3D6] disabled:opacity-40"
           >
             {pending ? "…" : "Vincular"}
           </button>
@@ -110,7 +110,7 @@ export function OperationSuppliersClient({
         {catalog.length === 0 ? (
           <p className="text-[11px] text-[#555c6b]">
             No tenés proveedores en el directorio. Creá uno en{" "}
-            <a href="/app/proveedores" className="text-[#2b59ff] hover:underline">
+            <a href="/app/proveedores" className="text-[#18C3D6] hover:underline">
               Proveedores
             </a>
             .

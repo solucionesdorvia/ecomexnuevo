@@ -146,7 +146,7 @@ export default async function CostosPage() {
       title="Costos"
       description="Desglose de cotizaciones recientes e importaciones."
       action={
-        <Link href="/app/nueva" className="rounded-lg bg-[#2b59ff] px-4 py-2 text-[13px] font-medium text-white hover:bg-[#2348d4]">
+        <Link href="/app/nueva" className="rounded-lg bg-[#18C3D6] px-4 py-2 text-[13px] font-medium text-[#030d18] hover:bg-[#0ea5b9]">
           Simular operacion
         </Link>
       }
@@ -169,13 +169,13 @@ export default async function CostosPage() {
           <SystemSection title="Estado">
             <SystemEmpty
               title="Todavia no hay costos para mostrar."
-              description="Cuando generes cotizaciones u operaciones, vas a ver aca su desglose economico."
+              description="Cuando generes cotizaciones u operaciones, vas a ver acá su desglose económico."
               action={
                 <Link
                   href="/app/nueva"
-                  className="inline-flex rounded-lg bg-[#2b59ff] px-4 py-2 text-[13px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+                  className="inline-flex rounded-lg bg-[#18C3D6] px-4 py-2 text-[13px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
                 >
-                  Nueva cotizacion
+                  Nueva cotización
                 </Link>
               }
             />
@@ -184,7 +184,7 @@ export default async function CostosPage() {
           <>
             <SystemSection
               title="Desglose por entidad"
-              subtitle="Detalle de costos por operacion o cotizacion en orden cronologico."
+              subtitle="Detalle de costos por operación o cotización en orden cronológico."
             >
               <div className="space-y-0">
               {rows.map((r, i) => (
@@ -203,12 +203,12 @@ export default async function CostosPage() {
                     {r.kind === "operation" ? (
                       <Link
                         href={`/app/operaciones/${r.operationId}/operation`}
-                        className="text-[13px] font-medium text-[#2b59ff] hover:underline"
+                        className="text-[13px] font-medium text-[#18C3D6] hover:underline"
                       >
                         Ver operación
                       </Link>
                     ) : (
-                      <Link href={`/app/operaciones/${r.quoteId}`} className="text-[13px] font-medium text-[#2b59ff] hover:underline">
+                      <Link href={`/app/operaciones/${r.quoteId}`} className="text-[13px] font-medium text-[#18C3D6] hover:underline">
                         Ver cotización
                       </Link>
                     )}

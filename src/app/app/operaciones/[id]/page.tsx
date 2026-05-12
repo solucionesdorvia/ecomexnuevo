@@ -73,7 +73,7 @@ export default async function OperacionDetallePage({ params }: { params: Promise
               <span className="rounded bg-white/[0.04] px-2 py-0.5 text-[10px] font-medium text-[#b0b8c9]">
                 {quote.stage}
               </span>
-              {ncm && <span className="rounded bg-[#2b59ff]/10 px-2 py-0.5 text-[10px] font-bold text-[#2b59ff]">NCM {ncm}</span>}
+              {ncm && <span className="rounded bg-[#18C3D6]/10 px-2 py-0.5 text-[10px] font-bold text-[#18C3D6]">NCM {ncm}</span>}
               {origin && <span className="rounded bg-white/[0.04] px-2 py-0.5 text-[10px] text-[#555c6b]">Origen: {origin}</span>}
             </div>
             <p className="mt-2 text-[12px] text-[#555c6b]">
@@ -82,7 +82,7 @@ export default async function OperacionDetallePage({ params }: { params: Promise
           </div>
           <a
             href={pdfHref}
-            className="shrink-0 rounded-lg bg-[#2b59ff] px-4 py-2 text-[12px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+            className="shrink-0 rounded-lg bg-[#18C3D6] px-4 py-2 text-[12px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
           >
             Descargar PDF
           </a>
@@ -129,7 +129,7 @@ export default async function OperacionDetallePage({ params }: { params: Promise
               <div className="mt-3 rounded-xl border border-white/[0.04] bg-[#0B1622] p-4">
                 <p className="text-[13px] leading-[1.7] text-[#b0b8c9]">{quote.userText}</p>
                 {quote.sourceUrl && (
-                  <a href={quote.sourceUrl} target="_blank" rel="noreferrer" className="mt-2 inline-block text-[12px] text-[#2b59ff] hover:underline">
+                  <a href={quote.sourceUrl} target="_blank" rel="noreferrer" className="mt-2 inline-block text-[12px] text-[#18C3D6] hover:underline">
                     {quote.sourceUrl.slice(0, 60)}...
                   </a>
                 )}
@@ -158,7 +158,7 @@ export default async function OperacionDetallePage({ params }: { params: Promise
                     Ver importación
                   </Link>
                 ) : null}
-                <a href={pdfHref} className="flex w-full items-center justify-center rounded-lg bg-[#2b59ff] py-2 text-[12px] font-medium text-white transition-colors hover:bg-[#2348d4]">
+                <a href={pdfHref} className="flex w-full items-center justify-center rounded-lg bg-[#18C3D6] py-2 text-[12px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9]">
                   PDF
                 </a>
                 <Link href="/app/operaciones" className="flex w-full items-center justify-center rounded-lg border border-white/[0.04] py-2 text-[12px] text-[#555c6b] transition-colors hover:text-white">

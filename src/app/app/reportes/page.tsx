@@ -16,7 +16,7 @@ export default function ReportesPage() {
           action={
             <Link
               href="/app/nueva"
-              className="inline-flex items-center justify-center rounded-lg bg-[#2b59ff] px-4 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+              className="inline-flex items-center justify-center rounded-lg bg-[#18C3D6] px-4 py-2.5 text-[13px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
             >
               Nueva operación
             </Link>

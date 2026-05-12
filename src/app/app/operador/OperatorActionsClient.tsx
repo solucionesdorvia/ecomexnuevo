@@ -191,7 +191,7 @@ export function OperatorActionsClient() {
                 <div className="mt-3 flex flex-wrap gap-2">
                   <Link
                     href={`/app/operaciones/${op.id}/operation`}
-                    className="inline-flex rounded-lg bg-[#2b59ff] px-3 py-2 text-[12px] font-medium text-white"
+                    className="inline-flex rounded-lg bg-[#18C3D6] px-3 py-2 text-[12px] font-medium text-[#030d18]"
                   >
                     Ver detalle
                   </Link>
@@ -267,7 +267,7 @@ export function OperatorActionsClient() {
                       type="button"
                       disabled={eventPending === op.id || !eventText.trim()}
                       onClick={() => void submitEvent(op.id)}
-                      className="rounded-lg bg-[#2b59ff] px-3 py-2 text-[12px] text-white disabled:opacity-50"
+                      className="rounded-lg bg-[#18C3D6] px-3 py-2 text-[12px] text-[#030d18] disabled:opacity-50"
                     >
                       {eventPending === op.id ? "…" : "Registrar evento"}
                     </button>
@@ -312,7 +312,7 @@ export function OperatorActionsClient() {
                         <div className="flex flex-wrap gap-2">
                           <Link
                             href={`/app/operaciones/${op.id}/operation`}
-                            className="text-[12px] font-medium text-[#2b59ff] hover:underline"
+                            className="text-[12px] font-medium text-[#18C3D6] hover:underline"
                           >
                             Ver detalle
                           </Link>
@@ -397,7 +397,7 @@ export function OperatorActionsClient() {
                             type="button"
                             disabled={eventPending === op.id || !eventText.trim()}
                             onClick={() => void submitEvent(op.id)}
-                            className="mt-2 rounded-lg bg-[#2b59ff] px-4 py-2 text-[12px] font-medium text-white disabled:opacity-50"
+                            className="mt-2 rounded-lg bg-[#18C3D6] px-4 py-2 text-[12px] font-medium text-[#030d18] disabled:opacity-50"
                           >
                             {eventPending === op.id ? "Enviando…" : "Registrar evento"}
                           </button>

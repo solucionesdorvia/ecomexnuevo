@@ -52,7 +52,7 @@ export default function Topbar({
           <div className="flex items-center gap-2">
             {current ? (
               <>
-                <span className="rounded-full border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.13em] text-[#2b59ff]">
+                <span className="rounded-full border border-[#18C3D6]/20 bg-[#18C3D6]/[0.06] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.13em] text-[#18C3D6]">
                   {APP_NAV_GROUP_LABELS[current.group]}
                 </span>
                 <p className="truncate text-[12px] text-[#4a5568]">{current.description}</p>
@@ -80,20 +80,11 @@ export default function Topbar({
       </div>
 
       <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
-        {/* Search — desktop only */}
-        <div className="hidden items-center gap-2 rounded-lg border border-white/[0.04] bg-[#0B1622] px-3 py-1.5 md:flex">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4a5568" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
-          </svg>
-          <span className="text-[12px] text-[#4a5568]">Buscar...</span>
-          <kbd className="ml-4 rounded border border-white/[0.06] bg-white/[0.02] px-1.5 py-0.5 text-[10px] text-[#4a5568]">⌘K</kbd>
-        </div>
-
         {/* New operation CTA */}
         <Link
           href="/app/nueva"
           aria-label="Crear nueva operación"
-          className="flex h-11 min-w-[44px] items-center justify-center gap-1.5 rounded-xl bg-[#2b59ff] px-2.5 text-[12px] font-medium text-white transition-colors hover:bg-[#2348d4] sm:h-9 sm:min-w-0 sm:px-3"
+          className="flex h-11 min-w-[44px] items-center justify-center gap-1.5 rounded-xl bg-[#18C3D6] px-2.5 text-[12px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9] sm:h-9 sm:min-w-0 sm:px-3"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
             <path d="M12 4v16m8-8H4" />

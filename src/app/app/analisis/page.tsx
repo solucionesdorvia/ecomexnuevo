@@ -150,7 +150,7 @@ export default async function AnalisisPage({
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/app/nueva"
-              className="inline-flex rounded-lg bg-[#2b59ff] px-4 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+              className="inline-flex rounded-lg bg-[#18C3D6] px-4 py-2.5 text-[13px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
             >
               Nueva operación
             </Link>
@@ -212,7 +212,7 @@ export default async function AnalisisPage({
               )}
             </div>
             <div className="mt-3 flex flex-wrap gap-2">
-              {ncm && <span className="rounded bg-[#2b59ff]/10 px-2 py-0.5 text-[10px] font-bold text-[#2b59ff]">NCM {ncm}</span>}
+              {ncm && <span className="rounded bg-[#18C3D6]/10 px-2 py-0.5 text-[10px] font-bold text-[#18C3D6]">NCM {ncm}</span>}
               {origin && <span className="rounded bg-white/[0.04] px-2 py-0.5 text-[10px] text-[#555c6b]">Origen: {origin}</span>}
               {quality != null && (
                 <span className="rounded bg-white/[0.04] px-2 py-0.5 text-[10px] text-[#555c6b]">Calidad del análisis: {quality}%</span>
@@ -225,7 +225,7 @@ export default async function AnalisisPage({
           <div className="flex shrink-0 flex-wrap gap-2 lg:flex-col lg:items-stretch">
             <a
               href={pdfHref}
-              className="inline-flex items-center justify-center rounded-lg bg-[#2b59ff] px-4 py-2.5 text-[12px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+              className="inline-flex items-center justify-center rounded-lg bg-[#18C3D6] px-4 py-2.5 text-[12px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
             >
               Descargar PDF
             </a>
@@ -258,7 +258,7 @@ export default async function AnalisisPage({
                       href={active ? "/app/analisis" : `/app/analisis?id=${encodeURIComponent(q.id)}`}
                       className={`block rounded-lg border px-3 py-2 transition-colors sm:min-w-[200px] sm:max-w-[280px] ${
                         active
-                          ? "border-[#2b59ff]/40 bg-[#2b59ff]/10 text-white"
+                          ? "border-[#18C3D6]/40 bg-[#18C3D6]/10 text-[#18C3D6]"
                           : "border-white/[0.06] bg-[#0B1622] text-[#b0b8c9] hover:border-white/[0.12] hover:text-white"
                       }`}
                     >
@@ -397,7 +397,7 @@ export default async function AnalisisPage({
             <div className="space-y-2 rounded-xl border border-white/[0.04] bg-[#0B1622] p-5">
               <a
                 href={pdfHref}
-                className="flex w-full items-center justify-center rounded-lg bg-[#2b59ff] py-2.5 text-[12px] font-medium text-white transition-colors hover:bg-[#2348d4]"
+                className="flex w-full items-center justify-center rounded-lg bg-[#18C3D6] py-2.5 text-[12px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
               >
                 Descargar PDF
               </a>

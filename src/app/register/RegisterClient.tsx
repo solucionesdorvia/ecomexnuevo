@@ -56,7 +56,7 @@ export default function RegisterClient() {
             placeholder="Nombre (opcional)"
             type="text"
             autoComplete="given-name"
-            className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/50 focus:ring-1 focus:ring-[#2b59ff]/30 sm:min-h-0 sm:text-[14px]"
+            className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#18C3D6]/50 focus:ring-1 focus:ring-[#18C3D6]/30 sm:min-h-0 sm:text-[14px]"
           />
           <input
             value={company}
@@ -64,7 +64,7 @@ export default function RegisterClient() {
             placeholder="Empresa (opcional)"
             type="text"
             autoComplete="organization"
-            className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/50 focus:ring-1 focus:ring-[#2b59ff]/30 sm:min-h-0 sm:text-[14px]"
+            className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#18C3D6]/50 focus:ring-1 focus:ring-[#18C3D6]/30 sm:min-h-0 sm:text-[14px]"
           />
         </div>
         <input
@@ -73,7 +73,7 @@ export default function RegisterClient() {
           placeholder="Email"
           type="email"
           autoComplete="email"
-          className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/50 focus:ring-1 focus:ring-[#2b59ff]/30 sm:min-h-0 sm:text-[14px]"
+          className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#18C3D6]/50 focus:ring-1 focus:ring-[#18C3D6]/30 sm:min-h-0 sm:text-[14px]"
         />
         <input
           value={password}
@@ -81,20 +81,20 @@ export default function RegisterClient() {
           placeholder="Contraseña"
           type="password"
           autoComplete="new-password"
-          className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/50 focus:ring-1 focus:ring-[#2b59ff]/30 sm:min-h-0 sm:text-[14px]"
+          className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#18C3D6]/50 focus:ring-1 focus:ring-[#18C3D6]/30 sm:min-h-0 sm:text-[14px]"
         />
         <input
           value={importInterest}
           onChange={(e) => setImportInterest(e.target.value)}
           placeholder="¿Qué te interesa importar? (opcional)"
           type="text"
-          className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/50 focus:ring-1 focus:ring-[#2b59ff]/30 sm:min-h-0 sm:text-[14px]"
+          className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#18C3D6]/50 focus:ring-1 focus:ring-[#18C3D6]/30 sm:min-h-0 sm:text-[14px]"
         />
         {error ? <p className="rounded-xl bg-red-500/10 px-4 py-3 text-[13px] leading-snug text-red-400">{error}</p> : null}
         <button
           type="submit"
           disabled={pending}
-          className="flex min-h-[48px] w-full items-center justify-center rounded-xl bg-[#2b59ff] py-3 text-[15px] font-medium text-white transition-colors hover:bg-[#2348d4] disabled:opacity-50 sm:min-h-[44px] sm:text-[14px]"
+          className="flex min-h-[48px] w-full items-center justify-center rounded-xl bg-[#18C3D6] py-3 text-[15px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9] disabled:opacity-50 sm:min-h-[44px] sm:text-[14px]"
         >
           {pending ? "Creando..." : "Crear cuenta"}
         </button>
