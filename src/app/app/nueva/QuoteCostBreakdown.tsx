@@ -120,14 +120,15 @@ export function QuoteCostBreakdown({
       </div>
 
       <div className="mt-4 space-y-0">
-        {quote.cards.map((card) => {
+        {quote.cards.map((card, i) => {
           const isTotal = card.highlight || card.label === "Total puesto en Argentina";
           return (
             <div
               key={card.label}
-              className={`border-b border-white/[0.05] py-3 last:border-0 ${
+              className={`card-in border-b border-white/[0.05] py-3 last:border-0 ${
                 isTotal ? "-mx-1 rounded-lg border border-amber-500/20 bg-amber-500/[0.06] px-3 py-3.5" : ""
               }`}
+              style={{ animationDelay: `${i * 55}ms` }}
             >
               <div className="flex items-baseline justify-between gap-3">
                 <span

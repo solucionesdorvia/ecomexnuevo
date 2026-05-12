@@ -243,6 +243,37 @@ body {
   40% { opacity: 0.9; transform: scale(1); }
 }
 
+@keyframes msg-in-assistant {
+  from { opacity: 0; transform: translateX(-6px) translateY(4px); }
+  to   { opacity: 1; transform: translateX(0) translateY(0); }
+}
+
+@keyframes msg-in-user {
+  from { opacity: 0; transform: translateX(6px) translateY(4px); }
+  to   { opacity: 1; transform: translateX(0) translateY(0); }
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.msg-in-assistant {
+  animation: msg-in-assistant 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.msg-in-user {
+  animation: msg-in-user 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.card-in {
+  animation: card-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .msg-in-assistant, .msg-in-user, .card-in { animation: none; }
+}
+
 .chat-typing-dot {
   animation: chat-typing-dot 1.05s ease-in-out infinite;
 }
