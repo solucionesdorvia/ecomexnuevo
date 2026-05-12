@@ -101,14 +101,14 @@ function EmailModal({
               if (e.key === "Enter") void submit();
             }}
             placeholder="tu@email.com"
-            className="min-h-[44px] flex-1 rounded-xl border border-white/[0.08] bg-[#07111A] px-3 text-[14px] text-white outline-none placeholder:text-slate-600 focus:border-[#2563eb]/40"
+            className="min-h-[44px] flex-1 rounded-xl border border-white/[0.08] bg-[#07111A] px-3 text-[14px] text-white outline-none placeholder:text-slate-600 focus:border-[#18C3D6]/40"
             autoFocus
           />
           <button
             type="button"
             onClick={() => void submit()}
             disabled={pending || !email.includes("@")}
-            className="min-h-[44px] rounded-xl bg-[#2563eb] px-4 text-[13px] font-medium text-white transition hover:bg-[#1d4ed8] disabled:opacity-50"
+            className="min-h-[44px] rounded-xl bg-[#18C3D6] px-4 text-[13px] font-medium text-[#030d18] transition hover:bg-[#0ea5b9] disabled:opacity-50"
           >
             {pending ? "..." : reason === "pdf" ? "Enviar" : "Continuar"}
           </button>
@@ -371,7 +371,7 @@ export default function CotizadorPublicoClient() {
                       type="button"
                       disabled={pendingQuote}
                       onClick={() => void createQuote()}
-                      className="min-h-[48px] rounded-xl bg-[#2563eb] px-4 py-3 text-[13px] font-medium text-white shadow-lg shadow-[#2563eb]/20 transition hover:bg-[#1d4ed8] disabled:opacity-40 sm:min-h-0"
+                      className="min-h-[48px] rounded-xl bg-[#18C3D6] px-4 py-3 text-[13px] font-medium text-[#030d18] shadow-lg shadow-[#18C3D6]/20 transition hover:bg-[#0ea5b9] disabled:opacity-40 sm:min-h-0"
                     >
                       {pendingQuote ? "Calculando presupuesto…" : "Ver presupuesto"}
                     </button>

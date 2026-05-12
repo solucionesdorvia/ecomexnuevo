@@ -46,14 +46,14 @@ function CotizarEsteProductoCta({ caseState }: { caseState: CaseState }) {
         <button
           type="button"
           disabled
-          className="min-h-[48px] w-full touch-manipulation rounded-xl bg-[#2563eb]/50 px-4 py-3 text-[13px] font-medium text-white shadow-lg shadow-[#2563eb]/20 sm:min-h-0 sm:w-auto"
+          className="min-h-[48px] w-full touch-manipulation rounded-xl bg-[#18C3D6]/50 px-4 py-3 text-[13px] font-medium text-white shadow-lg shadow-[#18C3D6]/20 sm:min-h-0 sm:w-auto"
         >
           Cotizar este producto
         </button>
       ) : (
         <Link
           href={href}
-          className="flex min-h-[48px] w-full touch-manipulation items-center justify-center rounded-xl bg-[#2563eb] px-4 py-3 text-center text-[13px] font-medium text-white shadow-lg shadow-[#2563eb]/20 transition hover:bg-[#1d4ed8] sm:min-h-0 sm:w-auto"
+          className="flex min-h-[48px] w-full touch-manipulation items-center justify-center rounded-xl bg-[#18C3D6] px-4 py-3 text-center text-[13px] font-medium text-[#030d18] shadow-lg shadow-[#18C3D6]/20 transition hover:bg-[#0ea5b9] sm:min-h-0 sm:w-auto"
         >
           Cotizar este producto
         </Link>

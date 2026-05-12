@@ -12,8 +12,8 @@
   --ink-faint: #4a5568;
 
   --blue: #3b82f6;
-  --blue-dim: #2563eb;
-  --cyan: #22d3ee;
+  --blue-dim: #0ea5b9;
+  --cyan: #18C3D6;
   --gold: #d4a843;
   --red: #ef4444;
   --green: #22c55e;
@@ -21,7 +21,7 @@
   --border: rgba(138, 149, 168, 0.12);
   --border-strong: rgba(138, 149, 168, 0.22);
 
-  --glow-blue: 0 0 40px -12px rgba(59, 130, 246, 0.5);
+  --glow-blue: 0 0 40px -12px rgba(24, 195, 214, 0.4);
   --glow-gold: 0 0 30px -10px rgba(212, 168, 67, 0.4);
 
   /* Semantic aliases used widely across components (back-compat for var(--xxx) lookups). */
@@ -29,15 +29,15 @@
   --muted: var(--ink-muted);
   --surface: var(--surface-1);
   --surface2: var(--surface-2);
-  --accent: var(--blue);
-  --primary: var(--blue);
+  --accent: var(--cyan);
+  --primary: var(--cyan);
   --primary2: var(--blue-dim);
-  --ring: color-mix(in oklab, var(--blue) 36%, transparent);
+  --ring: color-mix(in oklab, var(--cyan) 36%, transparent);
   --shadowGlow: var(--glow-blue);
 }
 
 @theme inline {
-  --color-primary: var(--blue);
+  --color-primary: var(--cyan);
   --color-primary-2: var(--blue-dim);
   --color-sky: var(--cyan);
   --color-gold: var(--gold);
@@ -50,9 +50,9 @@
   --color-border-dark: var(--border);
   --color-panel: var(--surface-2);
   --color-panel-border: var(--border);
-  --color-accent: var(--blue);
+  --color-accent: var(--cyan);
   --color-accent-2: var(--cyan);
-  --color-violet: var(--blue);
+  --color-violet: var(--cyan);
   --color-violaceous: var(--blue-dim);
 
   /* Semantic tokens — generan utilidades como text-strong, border-subtle, bg-app, etc. */
@@ -105,7 +105,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-::selection { background: rgba(59, 130, 246, 0.3); }
+::selection { background: rgba(24, 195, 214, 0.25); }
 
 /* Surfaces */
 .s0 { background: var(--surface-0); }
