@@ -495,7 +495,7 @@ export default function LandingContainerGate() {
                 </div>
                 <input type="email" placeholder="Email" className="w-full rounded-lg px-4 py-3 text-[14px] outline-none transition-colors focus:border-[#18C3D6]/40" style={{ background: P.bg, border: `1px solid ${P.border}`, color: P.t1 }} />
                 <textarea rows={3} placeholder="Mensaje" className="w-full resize-none rounded-lg px-4 py-3 text-[14px] outline-none transition-colors focus:border-[#18C3D6]/40" style={{ background: P.bg, border: `1px solid ${P.border}`, color: P.t1 }} />
-                <button type="button" className="w-full rounded-lg py-3 text-[14px] font-medium text-white transition-all hover:shadow-[0_0_20px_-4px_rgba(47,128,237,0.3)]" style={{ background: P.blue }}>
+                <button type="button" className="w-full rounded-lg py-3 text-[14px] font-medium text-[#030d18] transition-all hover:opacity-90" style={{ background: P.cyan }}>
                   Enviar
                 </button>
               </form>
