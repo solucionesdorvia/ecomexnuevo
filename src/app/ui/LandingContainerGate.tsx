@@ -18,6 +18,10 @@ function R({ children, cl = "", d = 0 }: { children: React.ReactNode; cl?: strin
   return <div ref={ref} className={cl} style={{ opacity: v ? 1 : 0, transform: v ? "none" : "translateY(18px)", transition: `opacity .65s cubic-bezier(.16,1,.3,1) ${d}ms, transform .65s cubic-bezier(.16,1,.3,1) ${d}ms` }}>{children}</div>;
 }
 
+/* ── WhatsApp number — update here ── */
+const WA_NUMBER = "5491100000000"; // TODO: reemplazar con el número real (formato: 54 + código área sin 0 + número)
+const WA_MSG = encodeURIComponent("Hola, quiero consultar sobre una importación.");
+
 /* ── Palette ── */
 const P = {
   bg: "#07111A", bg2: "#0B1622", navy: "#102235",
@@ -46,9 +50,14 @@ function Navbar() {
         {/* Desktop */}
         <div className="hidden items-center gap-8 md:flex">
           {links.map(([h,l]) => <a key={l} href={h} className="text-[13px] text-[#A7B3C2] transition-colors hover:text-white">{l}</a>)}
-          <a href="#contacto" className="rounded-lg px-5 py-2 text-[13px] font-medium text-white transition-all hover:shadow-[0_0_20px_-4px_rgba(47,128,237,0.4)]" style={{ background: P.blue }}>
-            Hablar con un especialista
-          </a>
+          <div className="flex items-center gap-2">
+            <a href="/cotizador" className="rounded-lg px-5 py-2 text-[13px] font-semibold text-white transition-all hover:opacity-90" style={{ background: P.cyan }}>
+              Cotizá gratis →
+            </a>
+            <a href="#contacto" className="rounded-lg px-5 py-2 text-[13px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
+              Hablar con especialista
+            </a>
+          </div>
         </div>
 
         {/* Mobile hamburger */}
@@ -62,7 +71,10 @@ function Navbar() {
         <div className="border-t bg-[#07111A]/95 backdrop-blur-xl px-5 pb-6 pt-4 md:hidden" style={{ borderColor: P.border }}>
           <div className="flex flex-col gap-4">
             {links.map(([h,l]) => <a key={l} href={h} onClick={() => setMenuOpen(false)} className="text-[14px] text-[#A7B3C2]">{l}</a>)}
-            <a href="#contacto" onClick={() => setMenuOpen(false)} className="mt-2 rounded-lg py-3 text-center text-[14px] font-medium text-white" style={{ background: P.blue }}>
+            <a href="/cotizador" onClick={() => setMenuOpen(false)} className="mt-2 rounded-lg py-3 text-center text-[14px] font-semibold text-white" style={{ background: P.cyan }}>
+              Cotizá gratis →
+            </a>
+            <a href="#contacto" onClick={() => setMenuOpen(false)} className="rounded-lg py-3 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
               Hablar con un especialista
             </a>
           </div>
@@ -116,11 +128,11 @@ export default function LandingContainerGate() {
 
               <R d={180}>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <a href="#contacto" className="rounded-lg px-6 py-3 text-center text-[14px] font-medium text-white transition-all hover:shadow-[0_0_30px_-6px_rgba(47,128,237,0.4)]" style={{ background: P.blue }}>
-                    Hablar con un especialista
+                  <a href="/cotizador" className="rounded-lg px-6 py-3 text-center text-[14px] font-semibold text-white transition-all hover:opacity-90" style={{ background: P.cyan }}>
+                    Cotizá gratis →
                   </a>
-                  <a href="#como" className="rounded-lg px-6 py-3 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
-                    Ver cómo funciona
+                  <a href="#contacto" className="rounded-lg px-6 py-3 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
+                    Hablar con un especialista
                   </a>
                 </div>
               </R>
@@ -321,8 +333,8 @@ export default function LandingContainerGate() {
 
           <R d={160}>
             <div className="mt-8">
-              <Link href="/app/nueva" className="rounded-lg px-6 py-3 text-[14px] font-medium text-white transition-all hover:shadow-[0_0_30px_-6px_rgba(47,128,237,0.4)]" style={{ background: P.blue }}>
-                Probar la plataforma
+              <Link href="/cotizador" className="rounded-lg px-6 py-3 text-[14px] font-semibold text-white transition-all hover:opacity-90" style={{ background: P.cyan }}>
+                Cotizá gratis →
               </Link>
             </div>
           </R>
@@ -396,6 +408,44 @@ export default function LandingContainerGate() {
         </div>
       </section>
 
+      {/* ══════════ CASOS ══════════ */}
+      <section className="px-5 py-24 lg:px-8">
+        <div className="mx-auto max-w-[1200px]">
+          <R>
+            <p className="text-[12px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.cyan }}>Casos gestionados</p>
+            <h2 className="mt-4 max-w-[560px] text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.02em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
+              Importaciones que ya hicimos realidad
+            </h2>
+            <p className="mt-4 max-w-[460px] text-[15px] leading-[1.75]" style={{ color: P.t2 }}>
+              Desde maquinaria agrícola hasta electrónica. Cada operación clasificada, regulada y gestionada con precisión.
+            </p>
+          </R>
+          <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { cat: "Cáñamo industrial", loc: "Santa Cruz", desc: "Materia prima medicinal con intervenciones SENASA y ANMAT.", val: "+USD 180k" },
+              { cat: "Maquinaria agrícola", loc: "Buenos Aires", desc: "Tractores e implementos con tramitación de licencias previas.", val: "+USD 95k" },
+              { cat: "Electrónica de consumo", loc: "CABA", desc: "Accesorios y gadgets con certificación ENACOM.", val: "+USD 240k" },
+              { cat: "Textil e indumentaria", loc: "Rosario", desc: "Prendas básicas con etiquetado según Ley de Textiles.", val: "+USD 60k" },
+              { cat: "Equipos médicos", loc: "Córdoba", desc: "Dispositivos con registro ANMAT y habilitación INAME.", val: "+USD 320k" },
+              { cat: "Insumos industriales", loc: "Mendoza", desc: "Repuestos y materiales de proceso sin licencia previa.", val: "+USD 75k" },
+            ].map(({ cat, loc, desc, val }, i) => (
+              <R key={cat} d={i * 50}>
+                <div className="group flex h-full flex-col rounded-xl p-6 transition-all duration-300 hover:translate-y-[-2px]" style={{ background: P.bg, border: `1px solid ${P.border}` }}>
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h4 className="text-[14px] font-semibold" style={{ color: P.t1 }}>{cat}</h4>
+                      <p className="mt-0.5 text-[11px]" style={{ color: P.t3 }}>{loc}</p>
+                    </div>
+                    <span className="shrink-0 rounded-md px-2 py-0.5 text-[11px] font-semibold" style={{ background: `${P.cyan}18`, color: P.cyan }}>{val}</span>
+                  </div>
+                  <p className="mt-3 text-[13px] leading-[1.7]" style={{ color: P.t3 }}>{desc}</p>
+                </div>
+              </R>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ══════════ CTA FINAL ══════════ */}
       <section className="relative px-5 py-28 lg:px-8 overflow-hidden">
         <div className="pointer-events-none absolute -top-20 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full opacity-[0.04] blur-[160px]" style={{ background: P.blue }} />
@@ -408,12 +458,12 @@ export default function LandingContainerGate() {
               Unite a las empresas que ya transformaron sus operaciones con E-COMEX.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-              <a href="#contacto" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-medium text-white transition-all hover:shadow-[0_0_30px_-6px_rgba(47,128,237,0.4)]" style={{ background: P.blue }}>
+              <Link href="/cotizador" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-semibold text-white transition-all hover:opacity-90" style={{ background: P.cyan }}>
+                Cotizá gratis →
+              </Link>
+              <a href="#contacto" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
                 Hablar con un especialista
               </a>
-              <Link href="/app/nueva" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
-                Probar la plataforma
-              </Link>
             </div>
           </R>
         </div>
@@ -453,6 +503,20 @@ export default function LandingContainerGate() {
           </div>
         </div>
       </section>
+
+      {/* ══════════ WHATSAPP FLOTANTE ══════════ */}
+      <a
+        href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp"
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-[0_8px_30px_-6px_rgba(37,211,102,0.6)] transition-transform hover:scale-110"
+        style={{ background: "#25D366" }}
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-white" aria-hidden>
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+        </svg>
+      </a>
 
       {/* ══════════ FOOTER ══════════ */}
       <footer className="px-5 py-8 lg:px-8" style={{ borderTop: `1px solid ${P.border}` }}>

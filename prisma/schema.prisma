@@ -89,6 +89,10 @@ model User {
   email        String   @unique
   passwordHash String
 
+  name           String?
+  company        String?
+  importInterest String?
+
   role               UserRole @default(user)
   onboardingSeenAt   DateTime?
 

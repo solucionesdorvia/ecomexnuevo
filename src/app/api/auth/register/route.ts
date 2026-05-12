@@ -33,7 +33,13 @@ export async function POST(req: Request) {
       );
     }
 
-    const body = (await req.json()) as { email?: string; password?: string };
+    const body = (await req.json()) as {
+      email?: string;
+      password?: string;
+      name?: string;
+      company?: string;
+      importInterest?: string;
+    };
     const email = String(body.email ?? "")
       .trim()
       .toLowerCase();
@@ -64,9 +70,13 @@ export async function POST(req: Request) {
       );
     }
 
+    const name = typeof body.name === "string" ? body.name.trim().slice(0, 120) || undefined : undefined;
+    const company = typeof body.company === "string" ? body.company.trim().slice(0, 120) || undefined : undefined;
+    const importInterest = typeof body.importInterest === "string" ? body.importInterest.trim().slice(0, 200) || undefined : undefined;
+
     const passwordHash = await hashPassword(password);
     const user = await prisma.user.create({
-      data: { email, passwordHash },
+      data: { email, passwordHash, name, company, importInterest },
     });
 
     // Claim anonymous history (quotes/leads) if present.

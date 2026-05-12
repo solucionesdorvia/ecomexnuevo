@@ -28,13 +28,22 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "E-COMEX — Inteligencia de importación",
+  title: "E-COMEX — Calculadora de costos de importación a Argentina",
   description:
-    "Analizá, clasificá y cotizá importaciones a Argentina con claridad total. Tecnología + experiencia profesional.",
+    "Calculá gratis cuánto cuesta importar a Argentina. Clasificación NCM, aranceles, flete e impuestos en minutos. La mejor calculadora de importaciones del país.",
   metadataBase: new URL("https://e-comex.app"),
+  keywords: [
+    "cuánto cuesta importar a argentina",
+    "calculadora costos importación argentina",
+    "calculadora importaciones",
+    "costos importación argentina",
+    "clasificación NCM argentina",
+    "aranceles importación argentina",
+    "cotizar importación",
+  ],
   openGraph: {
-    title: "E-COMEX",
-    description: "Inteligencia de importación para Argentina.",
+    title: "E-COMEX — Calculadora de importaciones a Argentina",
+    description: "Calculá gratis cuánto cuesta importar a Argentina. NCM, aranceles y landed cost en minutos.",
     type: "website",
   },
 };

@@ -6,6 +6,9 @@ import { useState } from "react";
 export default function RegisterClient() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [importInterest, setImportInterest] = useState("");
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -16,7 +19,13 @@ export default function RegisterClient() {
       const res = await fetch("/api/auth/register", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({
+          email,
+          password,
+          name: name.trim() || undefined,
+          company: company.trim() || undefined,
+          importInterest: importInterest.trim() || undefined,
+        }),
       });
       const json = (await res.json()) as { ok?: boolean; error?: string };
       if (!res.ok || !json.ok) throw new Error(json.error || "Error.");
@@ -40,6 +49,24 @@ export default function RegisterClient() {
       <p className="mt-2 text-[14px] leading-relaxed text-[#555c6b]">Registrate para guardar tu historial de operaciones.</p>
 
       <form className="mt-7 space-y-3 sm:mt-8" onSubmit={(e) => { e.preventDefault(); submit(); }}>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Nombre (opcional)"
+            type="text"
+            autoComplete="given-name"
+            className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/50 focus:ring-1 focus:ring-[#2b59ff]/30 sm:min-h-0 sm:text-[14px]"
+          />
+          <input
+            value={company}
+            onChange={(e) => setCompany(e.target.value)}
+            placeholder="Empresa (opcional)"
+            type="text"
+            autoComplete="organization"
+            className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/50 focus:ring-1 focus:ring-[#2b59ff]/30 sm:min-h-0 sm:text-[14px]"
+          />
+        </div>
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -54,6 +81,13 @@ export default function RegisterClient() {
           placeholder="Contraseña"
           type="password"
           autoComplete="new-password"
+          className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/50 focus:ring-1 focus:ring-[#2b59ff]/30 sm:min-h-0 sm:text-[14px]"
+        />
+        <input
+          value={importInterest}
+          onChange={(e) => setImportInterest(e.target.value)}
+          placeholder="¿Qué te interesa importar? (opcional)"
+          type="text"
           className="min-h-[48px] w-full rounded-xl border border-white/[0.08] bg-[#07111A]/80 px-4 py-3 text-[16px] text-white outline-none placeholder:text-[#555c6b] focus:border-[#2b59ff]/50 focus:ring-1 focus:ring-[#2b59ff]/30 sm:min-h-0 sm:text-[14px]"
         />
         {error ? <p className="rounded-xl bg-red-500/10 px-4 py-3 text-[13px] leading-snug text-red-400">{error}</p> : null}
