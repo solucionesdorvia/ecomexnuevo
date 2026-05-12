@@ -19,7 +19,7 @@ function R({ children, cl = "", d = 0 }: { children: React.ReactNode; cl?: strin
 }
 
 /* ── WhatsApp number — update here ── */
-const WA_NUMBER = "5491100000000"; // TODO: reemplazar con el número real (formato: 54 + código área sin 0 + número)
+const WA_NUMBER = "5491126268316";
 const WA_MSG = encodeURIComponent("Hola, quiero consultar sobre una importación.");
 
 /* ── Palette ── */
@@ -482,7 +482,7 @@ export default function LandingContainerGate() {
                 <p className="mt-4" style={{ color: P.t2 }}>Dejá tus datos y un especialista se comunica con vos.</p>
                 <div className="mt-8 space-y-3 text-[14px]" style={{ color: P.t3 }}>
                   <p>inteligencia@e-comex.com</p>
-                  <p>Buenos Aires, Argentina</p>
+                  <p>Av. Pte. Julio A. Roca 771, 6° Piso Of. 10 — CABA</p>
                 </div>
               </div>
             </R>
