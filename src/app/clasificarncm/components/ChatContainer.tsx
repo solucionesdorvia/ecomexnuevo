@@ -24,7 +24,7 @@ export function ChatContainer({
 
   const inner = (
     <div
-      className="mx-auto flex w-full min-w-0 max-w-[min(100%,720px)] flex-col gap-4 sm:gap-5"
+      className="mx-auto flex w-full min-w-0 max-w-[min(100%,720px)] flex-col gap-5 sm:gap-6"
       role="log"
       aria-live="polite"
       aria-relevant="additions"

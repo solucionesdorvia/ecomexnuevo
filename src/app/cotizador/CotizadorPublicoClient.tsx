@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
-import { ArrowRight, Sparkles, Download, UserPlus, X } from "lucide-react";
+import { ArrowRight, Download, UserPlus, X } from "lucide-react";
 import { useClasificarChat } from "@/app/clasificarncm/hooks/useClasificarChat";
 import { ChatContainer } from "@/app/clasificarncm/components/ChatContainer";
 import { ChatInput } from "@/app/clasificarncm/components/ChatInput";
@@ -281,53 +281,44 @@ export default function CotizadorPublicoClient() {
         <div className="flex min-h-0 min-w-0 flex-1 flex-col">
           <div className="min-h-0 flex-1 overflow-y-auto">
             {caseState.messages.length === 0 ? (
-              <div className="flex flex-1 flex-col items-center justify-center px-4 py-10 sm:py-14">
-                <div className="nueva-fade-in relative">
-                  <div
-                    className="absolute -inset-6 rounded-full bg-gradient-to-br from-[#38bdf8]/25 via-[#3b82f6]/15 to-transparent blur-2xl"
-                    aria-hidden
-                  />
-                  <div className="relative flex h-20 w-20 items-center justify-center rounded-3xl border border-[#38bdf8]/30 bg-gradient-to-br from-[#0f172a]/95 to-[#0b1220] shadow-[0_24px_60px_-18px_rgba(56,189,248,0.5)]">
-                    <Sparkles className="h-9 w-9 text-[#38bdf8]" strokeWidth={1.4} />
+              <div className="flex flex-1 flex-col items-center justify-center px-4 py-10 sm:py-12">
+                <div className="w-full max-w-2xl">
+                  <h1
+                    className="nueva-fade-in text-[26px] font-extrabold leading-[1.1] tracking-tight text-white sm:text-[30px]"
+                    style={{ fontFamily: "var(--font-display)" }}
+                  >
+                    ¿Cuánto cuesta importar<br className="hidden sm:block" /> a Argentina?
+                  </h1>
+                  <p className="nueva-fade-in nueva-fade-in-delay-1 mt-3 text-[14px] leading-relaxed text-slate-500">
+                    Decinos qué producto, precio y país de origen. Calculamos NCM, aranceles, flete, impuestos y landed cost.
+                  </p>
+                  <div className="nueva-fade-in nueva-fade-in-delay-2 mt-7 grid gap-2 sm:grid-cols-2">
+                    {HERO_SUGGESTIONS.map((s, i) => (
+                      <button
+                        key={s.title}
+                        type="button"
+                        disabled={pending}
+                        onClick={() =>
+                          void sendMessage(`${s.title}, ${s.hint.replace(/\s·\s/g, ", ")}`)
+                        }
+                        className="group flex items-center justify-between rounded-lg border border-white/[0.07] bg-[#0a1422]/80 px-4 py-3 text-left transition hover:border-white/[0.14] hover:bg-[#0d1a2e] disabled:pointer-events-none disabled:opacity-40"
+                        style={{ animationDelay: `${240 + i * 50}ms` }}
+                      >
+                        <div>
+                          <span className="block text-[13px] font-semibold text-slate-200 transition-colors group-hover:text-white">
+                            {s.title}
+                          </span>
+                          <span className="mt-0.5 block text-[11px] text-slate-500">
+                            {s.hint}
+                          </span>
+                        </div>
+                        <ArrowRight
+                          className="h-4 w-4 shrink-0 text-slate-600 transition group-hover:text-slate-400"
+                          aria-hidden
+                        />
+                      </button>
+                    ))}
                   </div>
-                </div>
-                <div className="nueva-fade-in nueva-fade-in-delay-1 mt-6 inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.02] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400">
-                  Calculadora de importaciones gratuita
-                </div>
-                <h1
-                  className="nueva-fade-in nueva-fade-in-delay-2 mt-4 max-w-xl text-center text-[26px] font-extrabold leading-[1.1] tracking-tight text-white sm:text-[32px]"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  ¿Cuánto cuesta importar a Argentina?
-                </h1>
-                <p className="nueva-fade-in nueva-fade-in-delay-3 mt-4 max-w-md text-center text-[15px] leading-relaxed text-slate-400">
-                  Producto, precio y país de origen. Con eso armamos tu cotización completa: NCM,
-                  aranceles, flete, impuestos y landed cost.
-                </p>
-                <div className="nueva-fade-in nueva-fade-in-delay-4 mt-10 grid w-full max-w-2xl gap-2 sm:grid-cols-2">
-                  {HERO_SUGGESTIONS.map((s, i) => (
-                    <button
-                      key={s.title}
-                      type="button"
-                      disabled={pending}
-                      onClick={() =>
-                        void sendMessage(`${s.title}, ${s.hint.replace(/\s·\s/g, ", ")}`)
-                      }
-                      className="group relative overflow-hidden rounded-xl border border-white/[0.08] bg-[#0c1220]/90 px-4 py-3 text-left shadow-sm shadow-black/20 transition-all hover:-translate-y-0.5 hover:border-[#38bdf8]/40 hover:shadow-[0_16px_40px_-16px_rgba(56,189,248,0.35)] disabled:pointer-events-none disabled:opacity-40"
-                      style={{ animationDelay: `${360 + i * 60}ms` }}
-                    >
-                      <span className="block text-[14px] font-semibold text-white transition-colors group-hover:text-[#7dd3fc]">
-                        {s.title}
-                      </span>
-                      <span className="mt-0.5 block text-[11px] font-medium text-slate-500">
-                        {s.hint}
-                      </span>
-                      <ArrowRight
-                        className="absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 translate-x-2 text-[#38bdf8] opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"
-                        aria-hidden
-                      />
-                    </button>
-                  ))}
                 </div>
               </div>
             ) : (

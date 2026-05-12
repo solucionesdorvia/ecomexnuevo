@@ -7,7 +7,7 @@ import { SendHorizontal } from "lucide-react";
 export function ChatInput({
   onSend,
   disabled,
-  placeholder = "Describí el producto o respondé al analista…",
+  placeholder = "Escribí acá tu consulta…",
   leading,
   extraAboveField,
   /** Si hay adjuntos (ej. factura), permite enviar sin texto. */
