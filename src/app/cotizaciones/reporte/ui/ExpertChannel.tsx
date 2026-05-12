@@ -109,7 +109,7 @@ export function ExpertChannel({
                   "mt-1 rounded-2xl border p-4 text-sm leading-relaxed shadow-xl",
                   row.authorRole === "expert"
                     ? "rounded-bl-none border-slate-700 bg-[#101D34] text-slate-200"
-                    : "rounded-br-none border-primary/40 bg-primary text-white",
+                    : "rounded-br-none border-primary/40 bg-primary text-[#030d18]",
                 ].join(" ")}
               >
                 {row.message}

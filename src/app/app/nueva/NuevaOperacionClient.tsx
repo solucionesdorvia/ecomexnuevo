@@ -421,8 +421,8 @@ export default function NuevaOperacionClient({
           </div>
 
           {showNcmBanner ? (
-            <div className="flex shrink-0 flex-wrap items-center gap-2 border-t border-white/[0.06] bg-[#3b82f6]/10 px-3 py-2.5 text-[12px] text-slate-300 sm:px-5">
-              <span className="rounded-md border border-[#3b82f6]/25 bg-[#0f172a]/80 px-2 py-0.5 font-mono text-[11px] text-slate-200">
+            <div className="flex shrink-0 flex-wrap items-center gap-2 border-t border-white/[0.06] bg-[#18C3D6]/10 px-3 py-2.5 text-[12px] text-slate-300 sm:px-5">
+              <span className="rounded-md border border-[#18C3D6]/25 bg-[#0f172a]/80 px-2 py-0.5 font-mono text-[11px] text-slate-200">
                 NCM precargado: {cleanNcm}
               </span>
               <button
@@ -431,7 +431,7 @@ export default function NuevaOperacionClient({
                   setNcmBannerDismissed(true);
                   router.replace("/app/nueva");
                 }}
-                className="ml-auto text-[11px] font-medium text-[#60a5fa] underline-offset-2 hover:text-white hover:underline"
+                className="ml-auto text-[11px] font-medium text-[#18C3D6] underline-offset-2 hover:text-white hover:underline"
               >
                 Cerrar
               </button>
@@ -465,7 +465,7 @@ export default function NuevaOperacionClient({
             }
             extraAboveField={
               invoiceFiles.length > 0 ? (
-                <div className="flex flex-wrap items-center gap-2 rounded-lg border border-[#3b82f6]/20 bg-[#3b82f6]/5 px-3 py-2 text-[12px] text-slate-400">
+                <div className="flex flex-wrap items-center gap-2 rounded-lg border border-[#18C3D6]/20 bg-[#18C3D6]/5 px-3 py-2 text-[12px] text-slate-400">
                   <span className="text-slate-500">Factura:</span>
                   {invoiceFiles.map((f) => (
                     <span
@@ -477,7 +477,7 @@ export default function NuevaOperacionClient({
                   ))}
                   <button
                     type="button"
-                    className="ml-auto text-[11px] text-[#60a5fa] underline hover:text-white"
+                    className="ml-auto text-[11px] text-[#18C3D6] underline hover:text-white"
                     onClick={() => setInvoiceFiles([])}
                   >
                     Quitar

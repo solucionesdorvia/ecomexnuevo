@@ -15,7 +15,7 @@ export default async function OperadorPage() {
       title="Panel operador"
       description="Presupuestos internos e importaciones acompañadas por el equipo."
       action={
-        <span className="rounded bg-[#7c3aed]/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#7c3aed]">
+        <span className="rounded bg-[#18C3D6]/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#18C3D6]">
           {gate.user.role}
         </span>
       }

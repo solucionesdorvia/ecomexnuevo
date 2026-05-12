@@ -43,7 +43,7 @@ export function ChatInput({
       {extraAboveField ? (
         <div className="mx-auto mb-3 max-w-[min(100%,720px)]">{extraAboveField}</div>
       ) : null}
-      <div className="mx-auto max-w-[min(100%,720px)] rounded-2xl border border-white/[0.09] bg-[#0b1220]/95 p-1.5 shadow-[0_-8px_40px_-18px_rgba(0,0,0,0.85),inset_0_1px_0_rgba(255,255,255,0.04)] focus-within:border-[#38bdf8]/25 focus-within:shadow-[0_0_0_1px_rgba(56,189,248,0.12),0_-8px_40px_-18px_rgba(0,0,0,0.85)]">
+      <div className="mx-auto max-w-[min(100%,720px)] rounded-2xl border border-white/[0.09] bg-[#0b1220]/95 p-1.5 shadow-[0_-8px_40px_-18px_rgba(0,0,0,0.85),inset_0_1px_0_rgba(255,255,255,0.04)] focus-within:border-[#18C3D6]/25 focus-within:shadow-[0_0_0_1px_rgba(24,195,214,0.12),0_-8px_40px_-18px_rgba(0,0,0,0.85)]">
         <div className="flex items-end gap-2 pl-1 sm:pl-1.5">
           {leading ? (
             <div className="flex shrink-0 items-center self-stretch pb-1 pt-0.5">{leading}</div>

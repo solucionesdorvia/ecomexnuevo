@@ -122,8 +122,8 @@ export default function ClasificadorClient() {
           <div className="mx-auto max-w-[min(100%,640px)]">
             {msgs.length === 0 && !pending ? (
               <div className="flex flex-col items-center px-2 py-10 text-center sm:py-14">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#2F80ED]/20 bg-[#2F80ED]/10 shadow-lg shadow-black/20">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#18C3D6]/20 bg-[#18C3D6]/10 shadow-lg shadow-black/20">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#18C3D6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="11" cy="11" r="8" />
                     <path d="M21 21l-4.35-4.35" />
                   </svg>
@@ -144,7 +144,7 @@ export default function ClasificadorClient() {
                       type="button"
                       disabled={pending}
                       onClick={() => void send(s)}
-                      className="min-h-[48px] w-full touch-manipulation rounded-xl border border-white/[0.08] bg-[#0f172a]/80 px-4 py-3 text-left text-[13px] leading-snug text-slate-400 transition hover:border-[#38bdf8]/25 hover:text-slate-200 active:scale-[0.99] disabled:opacity-40 sm:min-h-0 sm:w-auto sm:px-3 sm:py-2.5 sm:text-[12px]"
+                      className="min-h-[48px] w-full touch-manipulation rounded-xl border border-white/[0.08] bg-[#0f172a]/80 px-4 py-3 text-left text-[13px] leading-snug text-slate-400 transition hover:border-[#18C3D6]/25 hover:text-slate-200 active:scale-[0.99] disabled:opacity-40 sm:min-h-0 sm:w-auto sm:px-3 sm:py-2.5 sm:text-[12px]"
                     >
                       {s}
                     </button>
@@ -160,7 +160,7 @@ export default function ClasificadorClient() {
         {ncm ? (
           <div className="shrink-0 border-t border-white/[0.04] bg-[#0b1220]/60 px-3 py-4 sm:px-6 sm:py-5">
             <div className="mx-auto flex max-w-[640px] flex-col gap-3">
-              <div className="rounded-2xl border border-[#2F80ED]/25 bg-[#2F80ED]/[0.06] p-4 sm:p-5">
+              <div className="rounded-2xl border border-[#18C3D6]/25 bg-[#18C3D6]/[0.06] p-4 sm:p-5">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#5A6577]">Posición NCM</p>
                 <p className="mt-1 font-mono text-[24px] font-bold leading-tight text-white sm:text-[28px]">{ncm}</p>
                 {ncmTitle ? (
@@ -170,7 +170,7 @@ export default function ClasificadorClient() {
                   <div className="mt-3 flex items-center gap-2">
                     <div className="h-1 flex-1 overflow-hidden rounded-full bg-white/[0.06]">
                       <div
-                        className="h-full rounded-full bg-[#38bdf8]"
+                        className="h-full rounded-full bg-[#18C3D6]"
                         style={{ width: `${Math.round(confidence * 100)}%` }}
                       />
                     </div>

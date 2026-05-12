@@ -43,7 +43,7 @@ export default function AuthForm({
   }
 
   return (
-    <div className="glass-panel rounded-2xl p-8 shadow-[0_28px_90px_-60px_rgba(124,58,237,0.65)]">
+    <div className="glass-panel rounded-2xl p-8 shadow-[0_28px_90px_-60px_rgba(24,195,214,0.30)]">
       <div className="text-[10px] font-black uppercase tracking-[0.22em] text-white/70">
         E‑COMEX Account
       </div>
@@ -83,7 +83,7 @@ export default function AuthForm({
           type="button"
           disabled={pending}
           onClick={() => void submit()}
-          className="inline-flex h-11 flex-1 items-center justify-center rounded-xl bg-primary px-6 text-sm font-extrabold tracking-tight text-white shadow-[0_18px_60px_-40px_rgba(124,58,237,0.75)] transition-all active:scale-[0.98] active:-translate-y-[1px] disabled:opacity-60"
+          className="inline-flex h-11 flex-1 items-center justify-center rounded-xl bg-primary px-6 text-sm font-extrabold tracking-tight text-[#030d18] shadow-[0_18px_60px_-40px_rgba(24,195,214,0.55)] transition-all active:scale-[0.98] active:-translate-y-[1px] disabled:opacity-60"
         >
           {submitLabel}
         </button>

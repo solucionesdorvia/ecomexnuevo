@@ -83,7 +83,7 @@ export function GuidedOnboarding() {
             <div
               className={[
                 "flex size-14 items-center justify-center rounded-lg",
-                idx === 0 ? "bg-primary text-white shadow-lg shadow-primary/30" : "bg-slate-800 text-slate-300",
+                idx === 0 ? "bg-primary text-[#030d18] shadow-lg shadow-primary/30" : "bg-slate-800 text-slate-300",
               ].join(" ")}
             >
               <span className="material-symbols-outlined text-3xl">
@@ -139,7 +139,7 @@ export function GuidedOnboarding() {
             </p>
             <Link
               href="/cotizar"
-              className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3 font-bold text-white transition-all hover:bg-primary/90"
+              className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3 font-bold text-[#030d18] transition-all hover:bg-primary/90"
             >
               <span className="material-symbols-outlined">add</span>
               Nueva Cotización

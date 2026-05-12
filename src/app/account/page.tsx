@@ -70,7 +70,7 @@ export default async function AccountPage() {
               </Link>
               <Link
                 href="/account/register"
-                className="inline-flex h-11 items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-transform active:scale-95"
+                className="inline-flex h-11 items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-[#030d18] shadow-lg shadow-primary/20 transition-transform active:scale-95"
               >
                 Crear cuenta
               </Link>

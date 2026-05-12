@@ -23,7 +23,7 @@ export default async function AjustesPage() {
 
       <main className="mx-auto w-full max-w-[1200px] px-6 py-10">
         <div className="mb-8">
-          <h2 className="text-4xl font-black tracking-tight text-strong">Centro de Configuracion</h2>
+          <h2 className="text-4xl font-black tracking-tight text-strong">Centro de Configuración</h2>
           <p className="mt-2 max-w-2xl text-muted">
             Ajusta perfil, datos de empresa y controles de seguridad.
           </p>
@@ -48,7 +48,7 @@ export default async function AjustesPage() {
             <h3 className="mb-4 text-sm font-black uppercase tracking-widest text-muted">Empresa</h3>
             <div className="space-y-3">
               <label className="block text-xs text-muted">
-                Razon social
+                Razón social
                 <input className="field mt-1" defaultValue="E-COMEX S.A." />
               </label>
               <label className="block text-xs text-muted">
@@ -62,7 +62,7 @@ export default async function AjustesPage() {
             <h3 className="mb-4 text-sm font-black uppercase tracking-widest text-muted">Preferencias</h3>
             <div className="space-y-2 text-sm text-muted">
               <label className="flex items-center gap-2"><input type="checkbox" defaultChecked /> Notificar cambios de riesgo</label>
-              <label className="flex items-center gap-2"><input type="checkbox" defaultChecked /> Exportacion PDF verificada</label>
+              <label className="flex items-center gap-2"><input type="checkbox" defaultChecked /> Exportación PDF verificada</label>
               <label className="flex items-center gap-2"><input type="checkbox" /> Modo compacto</label>
             </div>
           </section>
@@ -81,7 +81,7 @@ export default async function AjustesPage() {
             className="rounded-xl border border-primary/30 bg-primary/10 p-5 transition-colors hover:bg-primary/20"
           >
             <div className="text-sm font-bold text-white">Trust & Compliance</div>
-            <div className="mt-1 text-xs text-slate-300">Auditoria operativa, firmas y trazabilidad.</div>
+            <div className="mt-1 text-xs text-slate-300">Auditoría operativa, firmas y trazabilidad.</div>
           </Link>
         </div>
 

@@ -45,7 +45,7 @@ export function CaseSummaryPanel({
     <>
       <div className="flex items-center justify-between gap-2 border-b border-white/[0.06] pb-3">
         <div className="flex items-center gap-2">
-          <PanelLeft className="h-4 w-4 text-[#3b82f6]" />
+          <PanelLeft className="h-4 w-4 text-[#18C3D6]" />
           <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">
             Resumen del caso
           </span>
@@ -56,7 +56,7 @@ export function CaseSummaryPanel({
             displayStatus === "resolved" && "bg-emerald-500/15 text-emerald-400",
             displayStatus === "tentative" && "bg-amber-500/15 text-amber-400",
             displayStatus === "needs_info" && "bg-sky-500/15 text-sky-400",
-            displayStatus === "analyzing" && "bg-[#3b82f6]/15 text-[#93c5fd]",
+            displayStatus === "analyzing" && "bg-[#18C3D6]/15 text-[#18C3D6]",
             displayStatus === "error" && "bg-rose-500/15 text-rose-400",
             displayStatus === "idle" && "bg-slate-700/40 text-slate-400"
           )}

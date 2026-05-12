@@ -334,9 +334,9 @@ export function OperatorBudgetClient() {
                   <button
                     type="button"
                     onClick={() => xlsxInputRef.current?.click()}
-                    className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-primary/30 bg-primary px-4 text-xs font-black uppercase tracking-[0.22em] text-white hover:bg-primary/90"
+                    className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-primary/30 bg-primary px-4 text-xs font-black uppercase tracking-[0.22em] text-[#030d18] hover:bg-primary/90"
                   >
-                    <Icon name="upload_file" size={16} className="text-white/90" />
+                    <Icon name="upload_file" size={16} className="text-[#030d18]/80" />
                     Seleccionar XLSX
                   </button>
                   <div className="text-xs text-white/70">{xlsx?.name ?? "Ningún archivo seleccionado"}</div>

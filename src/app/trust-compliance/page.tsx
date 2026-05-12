@@ -61,7 +61,7 @@ export default async function TrustCompliancePage() {
             <button className="rounded-lg border border-subtle px-4 py-2 text-sm font-semibold text-muted">
               Export PDF
             </button>
-            <button className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white">External Audit</button>
+            <button className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-[#030d18]">External Audit</button>
           </div>
         </div>
 

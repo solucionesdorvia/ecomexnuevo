@@ -10,8 +10,8 @@ export default function LoginPage() {
       <header className="sticky top-0 z-50 border-b border-border-dark bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 py-3 md:px-10">
           <Link href="/" className="flex items-center gap-3 text-primary">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
-              <Icon name="bolt" size={18} className="text-white" />
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-[#030d18]">
+              <Icon name="bolt" size={18} className="text-[#030d18]" />
             </div>
             <h2 className="text-xl font-black tracking-tight text-white">
               E‑COMEX

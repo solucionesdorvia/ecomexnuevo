@@ -255,7 +255,7 @@ export function CotizacionesClient({ quotes }: { quotes: QuoteRow[] }) {
             <button className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-white/55 hover:bg-white/10">
               <Icon name="chevron_left" size={18} className="text-current" />
             </button>
-            <button className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white shadow shadow-primary/20">
+            <button className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-[#030d18] shadow shadow-primary/20">
               1
             </button>
             <button className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-sm font-medium text-white/55 hover:bg-white/10">
