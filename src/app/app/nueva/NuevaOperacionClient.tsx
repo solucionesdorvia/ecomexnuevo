@@ -356,7 +356,7 @@ export default function NuevaOperacionClient({
                       type="button"
                       disabled={pendingQuote}
                       onClick={() => void createQuoteFromClassifier()}
-                      className="min-h-[48px] rounded-xl bg-[#2563eb] px-4 py-3 text-[13px] font-medium text-white shadow-lg shadow-[#2563eb]/20 transition hover:bg-[#1d4ed8] disabled:opacity-40 sm:min-h-0"
+                      className="min-h-[48px] rounded-xl bg-[#18C3D6] px-4 py-3 text-[13px] font-semibold text-[#030d18] shadow-lg shadow-[#18C3D6]/20 transition hover:bg-[#0ea5b9] disabled:opacity-40 sm:min-h-0"
                     >
                       {pendingQuote ? "Calculando presupuesto…" : "Ver presupuesto"}
                     </button>

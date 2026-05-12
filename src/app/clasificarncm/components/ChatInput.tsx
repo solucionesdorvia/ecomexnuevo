@@ -68,7 +68,7 @@ export function ChatInput({
             type="button"
             disabled={disabled || !canSend}
             onClick={submit}
-            className="mb-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#3b82f6] to-[#2563eb] text-white shadow-lg shadow-[#2563eb]/25 transition hover:from-[#60a5fa] hover:to-[#3b82f6] hover:shadow-[#3b82f6]/30 active:scale-[0.97] disabled:pointer-events-none disabled:opacity-25 sm:h-11 sm:w-11"
+            className="mb-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#18C3D6] text-[#030d18] shadow-lg shadow-[#18C3D6]/20 transition hover:bg-[#0ea5b9] active:scale-[0.97] disabled:pointer-events-none disabled:opacity-25 sm:h-11 sm:w-11"
             aria-label="Enviar mensaje"
           >
             <SendHorizontal className="h-5 w-5" strokeWidth={2} />

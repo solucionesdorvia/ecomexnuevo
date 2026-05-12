@@ -198,7 +198,7 @@ export default async function AnalisisPage({
       <div className="mx-auto max-w-[1100px]">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
           <div className="min-w-0 flex-1">
-            <p className="text-[11px] font-medium uppercase tracking-wider text-[#7c3aed]">Análisis</p>
+            <p className="text-[11px] font-medium uppercase tracking-wider text-[#18C3D6]">Análisis</p>
             <h1 className="mt-2 text-[20px] font-extrabold tracking-tight text-white sm:text-[22px]" style={{ fontFamily: "var(--font-display)" }}>
               {String(title).slice(0, 90)}
             </h1>

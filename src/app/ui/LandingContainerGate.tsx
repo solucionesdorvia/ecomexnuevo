@@ -51,7 +51,7 @@ function Navbar() {
         <div className="hidden items-center gap-8 md:flex">
           {links.map(([h,l]) => <a key={l} href={h} className="text-[13px] text-[#A7B3C2] transition-colors hover:text-white">{l}</a>)}
           <div className="flex items-center gap-2">
-            <a href="/cotizador" className="rounded-lg px-5 py-2 text-[13px] font-semibold text-white transition-all hover:opacity-90" style={{ background: P.cyan }}>
+            <a href="/cotizador" className="rounded-lg px-5 py-2 text-[13px] font-semibold text-[#030d18] transition-all hover:opacity-90" style={{ background: P.cyan }}>
               Cotizá gratis →
             </a>
             <a href="#contacto" className="rounded-lg px-5 py-2 text-[13px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
@@ -71,7 +71,7 @@ function Navbar() {
         <div className="border-t bg-[#07111A]/95 backdrop-blur-xl px-5 pb-6 pt-4 md:hidden" style={{ borderColor: P.border }}>
           <div className="flex flex-col gap-4">
             {links.map(([h,l]) => <a key={l} href={h} onClick={() => setMenuOpen(false)} className="text-[14px] text-[#A7B3C2]">{l}</a>)}
-            <a href="/cotizador" onClick={() => setMenuOpen(false)} className="mt-2 rounded-lg py-3 text-center text-[14px] font-semibold text-white" style={{ background: P.cyan }}>
+            <a href="/cotizador" onClick={() => setMenuOpen(false)} className="mt-2 rounded-lg py-3 text-center text-[14px] font-semibold text-[#030d18]" style={{ background: P.cyan }}>
               Cotizá gratis →
             </a>
             <a href="#contacto" onClick={() => setMenuOpen(false)} className="rounded-lg py-3 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
@@ -128,7 +128,7 @@ export default function LandingContainerGate() {
 
               <R d={180}>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <a href="/cotizador" className="rounded-lg px-6 py-3 text-center text-[14px] font-semibold text-white transition-all hover:opacity-90" style={{ background: P.cyan }}>
+                  <a href="/cotizador" className="rounded-lg px-6 py-3 text-center text-[14px] font-semibold text-[#030d18] transition-all hover:opacity-90" style={{ background: P.cyan }}>
                     Cotizá gratis →
                   </a>
                   <a href="#contacto" className="rounded-lg px-6 py-3 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
@@ -333,7 +333,7 @@ export default function LandingContainerGate() {
 
           <R d={160}>
             <div className="mt-8">
-              <Link href="/cotizador" className="rounded-lg px-6 py-3 text-[14px] font-semibold text-white transition-all hover:opacity-90" style={{ background: P.cyan }}>
+              <Link href="/cotizador" className="rounded-lg px-6 py-3 text-[14px] font-semibold text-[#030d18] transition-all hover:opacity-90" style={{ background: P.cyan }}>
                 Cotizá gratis →
               </Link>
             </div>
@@ -458,7 +458,7 @@ export default function LandingContainerGate() {
               Unite a las empresas que ya transformaron sus operaciones con E-COMEX.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-              <Link href="/cotizador" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-semibold text-white transition-all hover:opacity-90" style={{ background: P.cyan }}>
+              <Link href="/cotizador" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-semibold text-[#030d18] transition-all hover:opacity-90" style={{ background: P.cyan }}>
                 Cotizá gratis →
               </Link>
               <a href="#contacto" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>

@@ -105,8 +105,8 @@ export default function ClasificarNcmClient() {
         <div className="flex min-h-0 min-w-0 flex-1 flex-col">
           {caseState.messages.length === 0 ? (
             <div className="flex flex-1 flex-col items-center justify-center px-4 py-10">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#3b82f6]/20 bg-[#3b82f6]/10">
-                <Sparkles className="h-7 w-7 text-[#60a5fa]" />
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#18C3D6]/20 bg-[#18C3D6]/10">
+                <Sparkles className="h-7 w-7 text-[#18C3D6]" />
               </div>
               <h1
                 className="mt-6 max-w-lg text-center text-[22px] font-bold tracking-tight text-white sm:text-[24px]"
@@ -124,7 +124,7 @@ export default function ClasificarNcmClient() {
                     type="button"
                     disabled={pending}
                     onClick={() => sendMessage(s)}
-                    className="min-h-[48px] w-full touch-manipulation rounded-xl border border-white/[0.08] bg-[#0f172a]/80 px-4 py-3 text-left text-[14px] leading-snug text-slate-400 transition hover:border-[#3b82f6]/30 hover:text-slate-200 active:scale-[0.99] disabled:opacity-40 sm:min-h-0 sm:w-auto sm:px-3 sm:py-2 sm:text-[12px]"
+                    className="min-h-[48px] w-full touch-manipulation rounded-xl border border-white/[0.08] bg-[#0f172a]/80 px-4 py-3 text-left text-[14px] leading-snug text-slate-400 transition hover:border-[#18C3D6]/30 hover:text-slate-200 active:scale-[0.99] disabled:opacity-40 sm:min-h-0 sm:w-auto sm:px-3 sm:py-2 sm:text-[12px]"
                   >
                     {s}
                   </button>
