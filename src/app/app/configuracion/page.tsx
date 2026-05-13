@@ -1,61 +1,60 @@
 import { getSessionUser } from "@/lib/auth/session";
-import { SystemPage, SystemSection } from "@/components/app/SystemPage";
+import { DocumentUploader } from "./DocumentUploader";
 
 export const runtime = "nodejs";
+export const metadata = { title: "Configuración — E-COMEX" };
 
 export default async function ConfiguracionPage() {
   const user = await getSessionUser();
+  const u = user as { email?: string; role?: string; name?: string; company?: string } | null;
 
   return (
-    <SystemPage maxWidth="narrow" title="Configuración" description="Datos de cuenta, empresa y preferencias del sistema.">
-      <div className="mt-8 space-y-6">
-        <SystemSection title="Empresa" className="mt-0">
-          <div className="rounded-xl border border-white/[0.04] bg-[#0B1622] p-6">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <label className="block">
-                <span className="text-[12px] text-[#555c6b]">Nombre</span>
-                <input defaultValue="Mi Empresa S.A." className="mt-1 w-full rounded-lg border border-white/[0.06] bg-[#07111A] px-4 py-2.5 text-[14px] text-white outline-none focus:border-[#18C3D6]/40" />
-              </label>
-              <label className="block">
-                <span className="text-[12px] text-[#555c6b]">CUIT</span>
-                <input defaultValue="30-12345678-9" className="mt-1 w-full rounded-lg border border-white/[0.06] bg-[#07111A] px-4 py-2.5 text-[14px] text-white outline-none focus:border-[#18C3D6]/40" />
-              </label>
+    <div className="relative px-safe pb-10 pt-4 sm:p-6 lg:p-8">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(ellipse_at_top,rgba(24,195,214,0.07),transparent_60%)]" />
+
+      <div className="relative mx-auto w-full max-w-[780px]">
+        {/* Header */}
+        <div className="mb-8">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#4a5568]">Sistema E-COMEX</p>
+          <h1 className="mt-1 text-[22px] font-extrabold tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
+            Configuración
+          </h1>
+          <p className="mt-1 text-[13px] text-[#555c6b]">Datos de cuenta, empresa y documentación.</p>
+        </div>
+
+        {/* Account info (read-only) */}
+        <section className="mb-6 overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0B1622]">
+          <div className="border-b border-white/[0.04] px-5 py-3.5">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#4a5568]">Cuenta</p>
+          </div>
+          <div className="grid gap-px bg-white/[0.03] sm:grid-cols-3">
+            {[
+              { label: "Email", value: u?.email ?? "—" },
+              { label: "Nombre", value: u?.name ?? "—" },
+              { label: "Rol", value: u?.role ?? "user" },
+            ].map((f) => (
+              <div key={f.label} className="bg-[#0B1622] px-5 py-4">
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-[#4a5568]">{f.label}</p>
+                <p className="mt-1 truncate text-[13px] text-[#c8d0dc]">{f.value}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Documents */}
+        <section>
+          <div className="mb-4 flex items-end justify-between gap-2">
+            <div>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#4a5568]">Documentación</p>
+              <h2 className="mt-1 text-[16px] font-bold text-white">Documentos de la empresa</h2>
+              <p className="mt-1 text-[12px] text-[#555c6b]">
+                Cargá los documentos que apliquen. Quedan disponibles para tus operaciones.
+              </p>
             </div>
           </div>
-        </SystemSection>
-
-        <SystemSection title="Cuenta" className="mt-0">
-          <div className="rounded-xl border border-white/[0.04] bg-[#0B1622] p-6">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <label className="block">
-                <span className="text-[12px] text-[#555c6b]">Email</span>
-                <input defaultValue={user?.email ?? ""} readOnly className="mt-1 w-full rounded-lg border border-white/[0.06] bg-[#07111A] px-4 py-2.5 text-[14px] text-[#555c6b] outline-none" />
-              </label>
-              <label className="block">
-                <span className="text-[12px] text-[#555c6b]">Rol</span>
-                <input defaultValue={user?.role ?? "user"} readOnly className="mt-1 w-full rounded-lg border border-white/[0.06] bg-[#07111A] px-4 py-2.5 text-[14px] text-[#555c6b] outline-none" />
-              </label>
-            </div>
-          </div>
-        </SystemSection>
-
-        <SystemSection title="Preferencias" className="mt-0">
-          <div className="rounded-xl border border-white/[0.04] bg-[#0B1622] p-6">
-            <div className="space-y-3">
-              {["Notificaciones por email", "Resumen semanal", "Modo marítimo por defecto"].map((pref) => (
-                <label key={pref} className="flex items-center gap-3">
-                  <input type="checkbox" defaultChecked className="h-4 w-4 rounded border-white/10 bg-[#07111A]" />
-                  <span className="text-[13px] text-[#b0b8c9]">{pref}</span>
-                </label>
-              ))}
-            </div>
-          </div>
-        </SystemSection>
-
-        <button type="button" className="rounded-lg bg-[#18C3D6] px-6 py-2.5 text-[13px] font-medium text-[#030d18] hover:bg-[#0ea5b9]">
-          Guardar cambios
-        </button>
+          <DocumentUploader />
+        </section>
       </div>
-    </SystemPage>
+    </div>
   );
 }

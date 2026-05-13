@@ -2,35 +2,52 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getSessionUser } from "@/lib/auth/session";
 import { prisma } from "@/lib/db";
-import { QuoteCostBlocks } from "@/app/app/operaciones/[id]/operation/QuoteCostBlocks";
 import { parseQuoteCostJson } from "@/lib/quote/parseQuoteCostJson";
-import { SystemEmpty, SystemKpi, SystemPage, SystemSection } from "@/components/app/SystemPage";
 
 export const runtime = "nodejs";
 
 function productTitle(productJson: unknown, userText: string) {
   const pj = productJson as { title?: string; name?: string } | null | undefined;
   const t = pj?.title ?? pj?.name;
-  if (t && String(t).trim()) return String(t).slice(0, 120);
-  const u = userText?.trim();
-  if (u) return u.slice(0, 80);
-  return "Cotización";
+  if (t && String(t).trim()) return String(t).slice(0, 80);
+  return userText?.trim()?.slice(0, 60) || "Cotización";
 }
 
-function fmtAt(d: Date) {
-  return d.toLocaleString("es-AR", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+function fmtDate(d: Date) {
+  return d.toLocaleDateString("es-AR", { day: "2-digit", month: "short", year: "numeric" });
 }
 
-function fmtUsdRange(min: number, max: number) {
-  const a = min.toLocaleString("en-US", { style: "currency", currency: "USD" });
-  const b = max.toLocaleString("en-US", { style: "currency", currency: "USD" });
-  return `${a} – ${b}`;
+function fmtUsd(n: number) {
+  return n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+}
+
+function fmtRange(min: number, max: number) {
+  return `${fmtUsd(min)} – ${fmtUsd(max)}`;
+}
+
+type CardKey = "fob" | "flete" | "impuestos" | "gestion" | "total";
+
+function extractCostRow(
+  cards: { label: string; value: string; detail?: string; highlight?: boolean }[],
+  totalMin: number | null,
+  totalMax: number | null
+): Record<CardKey, string | null> {
+  const find = (keywords: string[]) => {
+    const c = cards.find((c) =>
+      keywords.some((k) => c.label.toLowerCase().includes(k))
+    );
+    return c?.value ?? null;
+  };
+  return {
+    fob: find(["producto", "fob"]),
+    flete: find(["flete"]),
+    impuestos: find(["impuest"]),
+    gestion: find(["gesti"]),
+    total:
+      totalMin != null && totalMax != null
+        ? fmtRange(totalMin, totalMax)
+        : find(["total"]),
+  };
 }
 
 export default async function CostosPage() {
@@ -40,7 +57,7 @@ export default async function CostosPage() {
   const operations = await prisma.operation.findMany({
     where: { userId: user.id },
     orderBy: { createdAt: "desc" },
-    take: 10,
+    take: 20,
     include: {
       quote: {
         select: {
@@ -56,36 +73,23 @@ export default async function CostosPage() {
     },
   });
 
-  type Row =
-    | {
-        key: string;
-        kind: "operation";
-        operationId: string;
-        quoteId: string;
-        title: string;
-        at: Date;
-        cards: ReturnType<typeof parseQuoteCostJson>["cards"];
-        breakdown: ReturnType<typeof parseQuoteCostJson>["breakdown"];
-        totalMinUsd: number | null;
-        totalMaxUsd: number | null;
-      }
-    | {
-        key: string;
-        kind: "quote";
-        quoteId: string;
-        title: string;
-        at: Date;
-        cards: ReturnType<typeof parseQuoteCostJson>["cards"];
-        breakdown: ReturnType<typeof parseQuoteCostJson>["breakdown"];
-        totalMinUsd: number | null;
-        totalMaxUsd: number | null;
-      };
+  type Row = {
+    key: string;
+    kind: "operation" | "quote";
+    operationId?: string;
+    quoteId: string;
+    title: string;
+    at: Date;
+    costs: Record<CardKey, string | null>;
+    totalMinUsd: number | null;
+    totalMaxUsd: number | null;
+  };
 
   let rows: Row[] = [];
 
   if (operations.length > 0) {
     rows = operations.map((o) => {
-      const { cards, breakdown } = parseQuoteCostJson(o.quote.quoteJson);
+      const { cards } = parseQuoteCostJson(o.quote.quoteJson);
       return {
         key: `op-${o.id}`,
         kind: "operation" as const,
@@ -93,8 +97,7 @@ export default async function CostosPage() {
         quoteId: o.quote.id,
         title: productTitle(o.quote.productJson, o.quote.userText),
         at: o.createdAt,
-        cards,
-        breakdown,
+        costs: extractCostRow(cards, o.quote.totalMinUsd, o.quote.totalMaxUsd),
         totalMinUsd: o.quote.totalMinUsd,
         totalMaxUsd: o.quote.totalMaxUsd,
       };
@@ -103,7 +106,7 @@ export default async function CostosPage() {
     const quotes = await prisma.quote.findMany({
       where: { userId: user.id, operation: { is: null } },
       orderBy: { createdAt: "desc" },
-      take: 10,
+      take: 20,
       select: {
         id: true,
         productJson: true,
@@ -115,15 +118,14 @@ export default async function CostosPage() {
       },
     });
     rows = quotes.map((q) => {
-      const { cards, breakdown } = parseQuoteCostJson(q.quoteJson);
+      const { cards } = parseQuoteCostJson(q.quoteJson);
       return {
         key: `q-${q.id}`,
         kind: "quote" as const,
         quoteId: q.id,
         title: productTitle(q.productJson, q.userText),
         at: q.createdAt,
-        cards,
-        breakdown,
+        costs: extractCostRow(cards, q.totalMinUsd, q.totalMaxUsd),
         totalMinUsd: q.totalMinUsd,
         totalMaxUsd: q.totalMaxUsd,
       };
@@ -137,98 +139,192 @@ export default async function CostosPage() {
     if (r.totalMinUsd != null && r.totalMaxUsd != null) {
       sumMin += r.totalMinUsd;
       sumMax += r.totalMaxUsd;
-      countWithRange += 1;
+      countWithRange++;
     }
   }
 
+  // Cost component averages for bar chart
+  const avgFob = rows.length
+    ? rows.reduce((acc, r) => {
+        const v = parseFloat((r.costs.fob ?? "0").replace(/[^0-9.–]/g, "").split("–")[0] ?? "0");
+        return acc + (isNaN(v) ? 0 : v);
+      }, 0) / rows.length
+    : 0;
+  void avgFob;
+
+  const COL_HEADERS: { key: CardKey; label: string }[] = [
+    { key: "fob", label: "Producto (FOB)" },
+    { key: "flete", label: "Flete intl." },
+    { key: "impuestos", label: "Impuestos ARG" },
+    { key: "gestion", label: "Gestión" },
+    { key: "total", label: "Total puesto ARG" },
+  ];
+
   return (
-    <SystemPage
-      title="Costos"
-      description="Desglose de cotizaciones recientes e importaciones."
-      action={
-        <Link href="/app/nueva" className="rounded-lg bg-[#18C3D6] px-4 py-2 text-[13px] font-medium text-[#030d18] hover:bg-[#0ea5b9]">
-          Simular operacion
-        </Link>
-      }
-    >
-      <div className="mt-8 grid gap-3 sm:grid-cols-3">
-        <SystemKpi label="Entidades analizadas" value={rows.length} hint="Operaciones o cotizaciones con costo desglosado." />
-        <SystemKpi
-          label="Items con rango"
-          value={countWithRange}
-          hint="Con total minimo y maximo disponible."
-        />
-        <SystemKpi
-          label="Acumulado estimado"
-          value={countWithRange > 0 ? fmtUsdRange(sumMin, sumMax) : "—"}
-          hint="Suma de rangos detectados."
-        />
-      </div>
+    <div className="relative px-safe pb-8 pt-4 sm:p-6 lg:p-8">
+      {/* Top gradient */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-48 bg-[radial-gradient(ellipse_at_top,rgba(24,195,214,0.09),transparent_60%)]" />
 
-      {rows.length === 0 ? (
-          <SystemSection title="Estado">
-            <SystemEmpty
-              title="Todavia no hay costos para mostrar."
-              description="Cuando generes cotizaciones u operaciones, vas a ver acá su desglose económico."
-              action={
-                <Link
-                  href="/app/nueva"
-                  className="inline-flex rounded-lg bg-[#18C3D6] px-4 py-2 text-[13px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
-                >
-                  Nueva cotización
-                </Link>
-              }
-            />
-          </SystemSection>
-      ) : (
-          <>
-            <SystemSection
-              title="Desglose por entidad"
-              subtitle="Detalle de costos por operación o cotización en orden cronológico."
+      <div className="relative mx-auto w-full max-w-[1100px]">
+        {/* Header */}
+        <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#4a5568]">Sistema E-COMEX</p>
+            <h1 className="mt-1 text-[22px] font-extrabold leading-tight tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
+              Costos
+            </h1>
+            <p className="mt-1 text-[13px] text-[#555c6b]">Desglose económico consolidado.</p>
+          </div>
+          <Link
+            href="/app/nueva"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-[#18C3D6] px-4 py-2 text-[13px] font-medium text-[#030d18] transition hover:bg-[#0ea5b9]"
+          >
+            Nueva operación
+          </Link>
+        </div>
+
+        {/* KPI strip */}
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {[
+            { label: "Cotizaciones", value: String(rows.length) },
+            { label: "Con rango completo", value: String(countWithRange) },
+            {
+              label: "Acumulado mín.",
+              value: countWithRange > 0 ? fmtUsd(sumMin) : "—",
+              highlight: true,
+            },
+            {
+              label: "Acumulado máx.",
+              value: countWithRange > 0 ? fmtUsd(sumMax) : "—",
+            },
+          ].map((k) => (
+            <div
+              key={k.label}
+              className={`rounded-xl border p-4 ${
+                k.highlight
+                  ? "border-[#18C3D6]/20 bg-[#18C3D6]/[0.05]"
+                  : "border-white/[0.04] bg-[#0B1622]"
+              }`}
             >
-              <div className="space-y-0">
-              {rows.map((r, i) => (
-                <section key={r.key} className={i > 0 ? "mt-10 border-t border-white/[0.06] pt-10" : ""}>
-                  <h2 className="text-[16px] font-bold text-white [overflow-wrap:anywhere]">{r.title}</h2>
-                  <p className="mt-1 text-[12px] text-[#555c6b]">{fmtAt(r.at)}</p>
-                  <div className="mt-4">
-                    <QuoteCostBlocks
-                      cards={r.cards}
-                      breakdown={r.breakdown}
-                      totalMinUsd={r.totalMinUsd}
-                      totalMaxUsd={r.totalMaxUsd}
-                    />
-                  </div>
-                  <div className="mt-4">
-                    {r.kind === "operation" ? (
-                      <Link
-                        href={`/app/operaciones/${r.operationId}/operation`}
-                        className="text-[13px] font-medium text-[#18C3D6] hover:underline"
-                      >
-                        Ver operación
-                      </Link>
-                    ) : (
-                      <Link href={`/app/operaciones/${r.quoteId}`} className="text-[13px] font-medium text-[#18C3D6] hover:underline">
-                        Ver cotización
-                      </Link>
-                    )}
-                  </div>
-                </section>
-              ))}
-              </div>
-            </SystemSection>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#555c6b]">{k.label}</p>
+              <p
+                className={`mt-2 text-[22px] font-extrabold leading-none ${k.highlight ? "text-[#18C3D6]" : "text-white"}`}
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                {k.value}
+              </p>
+            </div>
+          ))}
+        </div>
 
-            {rows.length > 1 && countWithRange > 0 ? (
-              <div className="mt-10 rounded-xl border border-[#d4a843]/20 bg-[#d4a843]/[0.06] p-5">
-                <p className="text-[10px] font-medium uppercase tracking-wider text-[#555c6b]">Total acumulado (estimado)</p>
-                <p className="mt-2 text-[18px] font-bold text-[#d4a843]" style={{ fontFamily: "var(--font-display)" }}>
-                  {fmtUsdRange(sumMin, sumMax)}
-                </p>
-                <p className="mt-1 text-[11px] text-[#555c6b]">Suma de rangos {countWithRange} ítem{countWithRange !== 1 ? "s" : ""} con total min/max.</p>
+        {rows.length === 0 ? (
+          <div className="mt-8 rounded-xl border border-white/[0.04] bg-[#0B1622] px-6 py-12 text-center">
+            <p className="text-[15px] font-medium text-white">Todavía no hay cotizaciones.</p>
+            <p className="mx-auto mt-2 max-w-sm text-[13px] text-[#555c6b]">
+              Cuando generes una cotización, su desglose económico aparece aquí.
+            </p>
+            <Link
+              href="/app/nueva"
+              className="mt-5 inline-flex rounded-lg bg-[#18C3D6] px-4 py-2 text-[13px] font-medium text-[#030d18] hover:bg-[#0ea5b9]"
+            >
+              Nueva cotización
+            </Link>
+          </div>
+        ) : (
+          <>
+            {/* Cost table */}
+            <div className="mt-6 overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0B1622]">
+              {/* Table header */}
+              <div className="hidden grid-cols-[1fr_repeat(4,minmax(100px,1fr))_130px_72px] gap-px border-b border-white/[0.06] bg-white/[0.03] px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#555c6b] sm:grid">
+                <span>Producto</span>
+                {COL_HEADERS.slice(1, 5).map((h) => (
+                  <span key={h.key} className="text-right">{h.label}</span>
+                ))}
+                <span className="text-right">Total ARG</span>
+                <span />
               </div>
-            ) : null}
+
+              {/* Rows */}
+              <div className="divide-y divide-white/[0.04]">
+                {rows.map((r) => (
+                  <div
+                    key={r.key}
+                    className="group grid-cols-[1fr_repeat(4,minmax(100px,1fr))_130px_72px] gap-px px-4 py-4 transition-colors hover:bg-white/[0.02] sm:grid"
+                  >
+                    {/* Product + date */}
+                    <div className="mb-3 flex min-w-0 flex-col sm:mb-0 sm:justify-center">
+                      <span className="truncate text-[13px] font-semibold text-white">{r.title}</span>
+                      <span className="mt-0.5 text-[11px] text-[#555c6b]">{fmtDate(r.at)}</span>
+                    </div>
+
+                    {/* Cost cells */}
+                    {COL_HEADERS.slice(1, 5).map((h) => (
+                      <div key={h.key} className="flex items-center justify-between gap-1 sm:block sm:text-right">
+                        <span className="text-[10px] text-[#555c6b] sm:hidden">{h.label}</span>
+                        <span className="text-[12px] text-[#a0a8b8]">
+                          {r.costs[h.key] ?? "—"}
+                        </span>
+                      </div>
+                    ))}
+
+                    {/* Total */}
+                    <div className="flex items-center justify-between gap-1 sm:block sm:text-right">
+                      <span className="text-[10px] text-[#555c6b] sm:hidden">Total ARG</span>
+                      <span
+                        className={`text-[13px] font-bold ${r.totalMinUsd != null ? "text-[#18C3D6]" : "text-[#a0a8b8]"}`}
+                        style={{ fontFamily: "var(--font-display)" }}
+                      >
+                        {r.costs.total ?? "—"}
+                      </span>
+                    </div>
+
+                    {/* Action */}
+                    <div className="mt-3 sm:mt-0 sm:flex sm:items-center sm:justify-end">
+                      <Link
+                        href={
+                          r.kind === "operation"
+                            ? `/app/operaciones/${r.operationId}/operation`
+                            : `/cotizaciones/${r.quoteId}`
+                        }
+                        className="text-[12px] font-medium text-[#18C3D6] opacity-0 transition group-hover:opacity-100 hover:underline sm:opacity-0"
+                      >
+                        Ver →
+                      </Link>
+                      {/* Mobile fallback */}
+                      <Link
+                        href={
+                          r.kind === "operation"
+                            ? `/app/operaciones/${r.operationId}/operation`
+                            : `/cotizaciones/${r.quoteId}`
+                        }
+                        className="text-[12px] font-medium text-[#18C3D6] sm:hidden hover:underline"
+                      >
+                        Ver detalle →
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Accumulated total footer */}
+              {countWithRange > 0 && (
+                <div className="flex flex-col items-start justify-between gap-2 border-t border-white/[0.06] bg-[#0a1622] px-4 py-4 sm:flex-row sm:items-center">
+                  <p className="text-[11px] text-[#555c6b]">
+                    Total acumulado estimado · {countWithRange} ítem{countWithRange !== 1 ? "s" : ""}
+                  </p>
+                  <p className="text-[16px] font-extrabold text-[#18C3D6]" style={{ fontFamily: "var(--font-display)" }}>
+                    {fmtRange(sumMin, sumMax)}
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <p className="mt-3 text-[11px] text-[#3a404d]">
+              Los rangos reflejan variabilidad de flete, tipo de cambio y honorarios al momento de la cotización. Se afina con datos documentales.
+            </p>
           </>
-      )}
-    </SystemPage>
+        )}
+      </div>
+    </div>
   );
 }

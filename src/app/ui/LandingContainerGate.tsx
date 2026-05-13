@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { ContactForm } from "./ContactForm";
 
 /* ── Scroll reveal ── */
 function R({ children, cl = "", d = 0 }: { children: React.ReactNode; cl?: string; d?: number }) {
@@ -487,18 +488,7 @@ export default function LandingContainerGate() {
               </div>
             </R>
             <R d={80}>
-              <form className="space-y-3">
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {["Nombre","Empresa"].map(ph => (
-                    <input key={ph} type="text" placeholder={ph} className="w-full rounded-lg px-4 py-3 text-[14px] outline-none transition-colors focus:border-[#18C3D6]/40" style={{ background: P.bg, border: `1px solid ${P.border}`, color: P.t1 }} />
-                  ))}
-                </div>
-                <input type="email" placeholder="Email" className="w-full rounded-lg px-4 py-3 text-[14px] outline-none transition-colors focus:border-[#18C3D6]/40" style={{ background: P.bg, border: `1px solid ${P.border}`, color: P.t1 }} />
-                <textarea rows={3} placeholder="Mensaje" className="w-full resize-none rounded-lg px-4 py-3 text-[14px] outline-none transition-colors focus:border-[#18C3D6]/40" style={{ background: P.bg, border: `1px solid ${P.border}`, color: P.t1 }} />
-                <button type="button" className="w-full rounded-lg py-3 text-[14px] font-medium text-[#030d18] transition-all hover:opacity-90" style={{ background: P.cyan }}>
-                  Enviar
-                </button>
-              </form>
+              <ContactForm />
             </R>
           </div>
         </div>

@@ -394,9 +394,9 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      --ecomex-blue: #1a3a5c;
-      --ecomex-light-blue: #2c5282;
-      --ecomex-gray: #e2e8f0;
+      --ecomex-blue: #1B3464;
+      --ecomex-light-blue: #264D8C;
+      --ecomex-gray: #D8DCE3;
       --ecomex-red: #e53e3e;
       --text-dark: #1a202c;
       --text-light: #718096;
@@ -413,41 +413,57 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     .page:last-child { page-break-after: auto; }
-    .page-cover { display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; overflow:hidden; }
-    .cover-decoration { position:absolute; top:0; right:0; width:50%; height:100%; overflow:hidden; }
-    .cover-decoration .shape { position:absolute; background: var(--ecomex-gray); opacity: 0.6; border-radius: 10px; }
-    .cover-decoration .shape-1 { width: 140px; height: 45px; top: 30px; right: 250px; }
-    .cover-decoration .shape-2 { width: 90px; height: 45px; top: 30px; right: 90px; }
-    .cover-decoration .shape-3 { width: 70px; height: 35px; top: 90px; right: 180px; }
-    .cover-decoration .shape-4 { width: 120px; height: 40px; top: 90px; right: 30px; }
-    .cover-decoration .shape-5 { width: 160px; height: 50px; top: 150px; right: 200px; }
-    .cover-decoration .shape-6 { width: 80px; height: 40px; top: 150px; right: 20px; }
-    .cover-decoration .shape-7 { width: 100px; height: 45px; top: 210px; right: 120px; }
+    .page-cover { display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; overflow:hidden; background:#fff; }
 
-    .cover-content { text-align:center; z-index:10; margin-top: -30px; }
-    .cover-content h1 { font-size: 42px; font-weight: 700; color: var(--ecomex-blue); margin-bottom: 15px; }
-    .cover-content h2 { font-size: 28px; font-weight: 500; color: var(--ecomex-blue); margin-bottom: 50px; }
-    .cover-content .date { font-size: 18px; color: var(--ecomex-blue); }
-    .cover-logo { position:absolute; bottom: 20mm; right: 25mm; }
-    .logo { display:flex; align-items:center; gap:12px; }
-    .logo-icon { display:flex; flex-direction:column; gap:4px; }
-    .logo-icon span { height:5px; background: var(--ecomex-blue); border-radius:3px; }
-    .logo-icon span:nth-child(1){ width:30px; } .logo-icon span:nth-child(2){ width:24px; } .logo-icon span:nth-child(3){ width:30px; }
-    .logo-text { font-size: 32px; font-weight: 700; color: var(--ecomex-blue); letter-spacing: 1px; }
-    .logo-tagline { font-size: 10px; color: var(--ecomex-blue); margin-top: 3px; letter-spacing: 0.5px; }
-    .cover-footer { position:absolute; bottom:0; left:0; right:0; background: var(--ecomex-blue); color:white; padding: 12px 25mm; display:flex; justify-content:space-between; align-items:center; font-size: 11px; }
-    .cover-footer-item { display:flex; align-items:center; gap:8px; }
+    /* ── Left geometric decoration (grey background + navy arrow) ── */
+    .cover-left-deco { position:absolute; left:0; top:0; width:42%; height:100%; overflow:hidden; pointer-events:none; }
+    .cover-left-deco .grey-layer {
+      position:absolute; left:-50px; top:-5%; width:100%; height:110%;
+      background:#DDE1E8;
+      clip-path: polygon(0 0, 78% 0, 90% 100%, 0 100%);
+    }
+    .cover-left-deco .navy-layer {
+      position:absolute; left:12px; top:17%; width:84%; height:66%;
+      background: var(--ecomex-blue);
+      clip-path: polygon(0 0, 58% 0, 100% 50%, 58% 100%, 0 100%);
+    }
+
+    /* ── Right capsule decoration ── */
+    .cover-decoration { position:absolute; top:0; right:0; width:48%; height:100%; overflow:hidden; pointer-events:none; }
+    .cover-decoration .shape { position:absolute; background: var(--ecomex-gray); opacity: 0.55; border-radius: 50px; }
+    .cover-decoration .shape-1 { width: 155px; height: 44px; top: 38px; right: 270px; }
+    .cover-decoration .shape-2 { width: 100px; height: 44px; top: 38px; right: 95px; }
+    .cover-decoration .shape-3 { width: 75px; height: 36px; top: 100px; right: 195px; }
+    .cover-decoration .shape-4 { width: 130px; height: 40px; top: 100px; right: 35px; }
+    .cover-decoration .shape-5 { width: 175px; height: 48px; top: 162px; right: 215px; }
+    .cover-decoration .shape-6 { width: 85px; height: 42px; top: 162px; right: 22px; }
+    .cover-decoration .shape-7 { width: 110px; height: 44px; top: 224px; right: 130px; }
+    .cover-decoration .shape-8 { width: 60px; height: 38px; top: 286px; right: 80px; }
+
+    .cover-content { text-align:center; z-index:10; margin-left: 50px; }
+    .cover-content h1 { font-size: 44px; font-weight: 700; color: var(--ecomex-blue); margin-bottom: 14px; }
+    .cover-content h2 { font-size: 28px; font-weight: 500; color: var(--ecomex-blue); margin-bottom: 54px; }
+    .cover-content .date { font-size: 17px; font-weight: 600; color: var(--ecomex-blue); }
+    .cover-logo { position:absolute; bottom: 22mm; right: 26mm; z-index:10; }
+    .logo { display:flex; align-items:center; gap:10px; }
+    .logo-icon { display:flex; flex-direction:column; gap:5px; }
+    .logo-icon span { height:5px; background: var(--ecomex-blue); border-radius:3px; display:block; }
+    .logo-icon span:nth-child(1){ width:32px; } .logo-icon span:nth-child(2){ width:26px; } .logo-icon span:nth-child(3){ width:32px; }
+    .logo-text { font-size: 34px; font-weight: 700; color: var(--ecomex-blue); letter-spacing: 0.5px; }
+    .cover-footer { position:absolute; bottom:0; left:0; right:0; background: var(--ecomex-blue); color:white; padding: 11px 22mm; display:flex; justify-content:space-between; align-items:center; font-size: 11px; z-index:20; }
+    .cover-footer-item { display:flex; align-items:center; gap:7px; }
 
     .page-detail { display:flex; flex-direction:column; }
-    .detail-header { display:flex; justify-content:space-between; align-items:flex-start; border-bottom: 2px dashed var(--ecomex-gray); padding-bottom: 12px; margin-bottom: 15px; }
-    .detail-header-left { display:flex; gap:50px; }
-    .detail-header .rubro { font-size: 13px; }
+    .detail-header { display:flex; justify-content:space-between; align-items:center; border-bottom: 2px dashed #BFC5D0; padding-bottom: 10px; margin-bottom: 14px; }
+    .detail-header-left { display:flex; gap:55px; }
+    .detail-header .rubro { font-size: 14px; font-weight: 600; }
     .detail-header .rubro strong { color: var(--ecomex-blue); }
-    .detail-header .rubro em { font-style: italic; color: var(--ecomex-light-blue); }
-    .header-logo { display:flex; align-items:center; gap:8px; }
-    .header-logo .logo-icon span { height: 4px; }
-    .header-logo .logo-icon span:nth-child(1){ width:22px; } .header-logo .logo-icon span:nth-child(2){ width:18px; } .header-logo .logo-icon span:nth-child(3){ width:22px; }
-    .header-logo .logo-text { font-size: 22px; }
+    .detail-header .rubro em { font-style: normal; font-weight: 400; color: var(--ecomex-light-blue); }
+    .header-logo { display:flex; align-items:center; gap:7px; }
+    .header-logo .logo-icon span { height: 4px; display:block; background: var(--ecomex-blue); border-radius:2px; }
+    .header-logo .logo-icon span:nth-child(1){ width:22px; } .header-logo .logo-icon span:nth-child(2){ width:17px; } .header-logo .logo-icon span:nth-child(3){ width:22px; }
+    .header-logo .logo-icon { display:flex; flex-direction:column; gap:4px; }
+    .header-logo .logo-text { font-size: 23px; font-weight: 700; color: var(--ecomex-blue); }
 
     .detail-body { display:flex; gap:25px; flex:1; }
     .detail-images { flex:0.9; display:flex; flex-direction:column; gap:15px; }
@@ -456,22 +472,22 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
     .product-image-placeholder { width:100%; max-width:260px; height:180px; border:2px dashed var(--ecomex-gray); border-radius:8px; display:flex; align-items:center; justify-content:center; color: var(--text-light); font-size:12px; background:#fafafa; text-align:center; padding: 8px; }
     .image-disclaimer { font-size: 10px; color: var(--text-light); font-style: italic; margin-top: 10px; max-width: 260px; }
 
-    .detail-info { flex: 1.1; border-left: 3px solid var(--ecomex-blue); padding-left: 20px; }
-    .product-title { font-size: 22px; font-weight: 600; color: var(--ecomex-blue); margin-bottom: 15px; }
-    .ncm-description { font-size: 11px; color: var(--text-light); text-align: center; margin-bottom: 10px; line-height: 1.6; }
-    .ncm-code { font-size: 12px; font-weight: 700; color: var(--ecomex-blue); text-align: center; margin-bottom: 20px; }
+    .detail-info { flex: 1.1; border-left: 3px solid var(--ecomex-blue); padding-left: 22px; }
+    .product-title { font-size: 18px; font-weight: 600; color: var(--ecomex-blue); margin-bottom: 10px; }
+    .ncm-description { font-size: 10.5px; color: var(--text-light); margin-bottom: 6px; line-height: 1.55; }
+    .ncm-code { font-size: 13px; font-weight: 700; color: var(--ecomex-blue); margin-bottom: 16px; }
 
     .cost-breakdown { font-size: 13px; }
-    .cost-item { display:flex; justify-content:space-between; padding: 5px 0; }
-    .cost-item.main { font-weight: 500; }
-    .cost-item.sub { padding-left: 15px; font-size: 11px; color: var(--text-light); }
-    .cost-item.sub .label::before { content: "•"; margin-right: 6px; color: var(--ecomex-blue); }
+    .cost-item { display:flex; justify-content:space-between; align-items:baseline; padding: 4px 0; }
+    .cost-item.main { font-weight: 500; color: var(--ecomex-blue); }
+    .cost-item.sub { padding-left: 14px; font-size: 11.5px; color: var(--ecomex-light-blue); }
+    .cost-item.sub .label::before { content: "• "; color: var(--ecomex-blue); }
     .cost-item.iva-highlight { color: var(--ecomex-red); font-weight: 500; }
-    .cost-item.total { font-weight: 700; font-size: 15px; border-top: 2px solid var(--ecomex-blue); margin-top: 8px; padding-top: 8px; }
-    .cost-item.iva-total { color: var(--ecomex-red); font-weight: 600; }
-    .cost-item.grand-total { font-weight: 700; font-size: 16px; }
+    .cost-item.total { font-weight: 700; font-size: 15px; border-top: 2px solid var(--ecomex-blue); margin-top: 10px; padding-top: 8px; color: var(--ecomex-blue); }
+    .cost-item.iva-total { color: var(--ecomex-red); font-weight: 700; font-size: 14px; }
+    .cost-item.grand-total { font-weight: 700; font-size: 15px; color: var(--ecomex-blue); }
     .cost-item .blue-mark { color: var(--ecomex-red); font-weight: 700; margin-left: 2px; }
-    .blue-footnote { font-size: 10px; color: var(--text-light); margin-top: 8px; font-style: italic; }
+    .blue-footnote { font-size: 10px; color: var(--text-light); margin-top: 10px; font-style: italic; }
 
     .page-items { display:flex; flex-direction:column; }
     .items-table { width:100%; border-collapse: collapse; font-size: 11px; margin-top: 15px; }
@@ -508,6 +524,13 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
 </head>
 <body>
   <div class="page page-cover">
+    <!-- Left geometric decoration -->
+    <div class="cover-left-deco">
+      <div class="grey-layer"></div>
+      <div class="navy-layer"></div>
+    </div>
+
+    <!-- Right capsule decoration -->
     <div class="cover-decoration">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
@@ -516,6 +539,7 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
       <div class="shape shape-5"></div>
       <div class="shape shape-6"></div>
       <div class="shape shape-7"></div>
+      <div class="shape shape-8"></div>
     </div>
 
     <div class="cover-content">
@@ -529,18 +553,27 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
         <div class="logo-icon">
           <span></span><span></span><span></span>
         </div>
-        <div>
-          <div class="logo-text">E-COMEX</div>
-          <div class="logo-tagline">La Evolución del Comercio Exterior</div>
-        </div>
+        <div class="logo-text">E-COMEX</div>
       </div>
     </div>
 
     <div class="cover-footer">
-      <div class="cover-footer-item"><span>✉</span><span>info@e-comex.com.ar</span></div>
-      <div class="cover-footer-item"><span>📱</span><span>(+54) 115353 0536</span></div>
-      <div class="cover-footer-item"><span>🌐</span><span>www.e-comex.com.ar</span></div>
-      <div class="cover-footer-item"><span>📍</span><span>Av. Pres. Julio Roca 771, 7mo 12, CABA, Bs. As., Argentina</span></div>
+      <div class="cover-footer-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+        <span>+54 9 11 5353 0536</span>
+      </div>
+      <div class="cover-footer-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="flex-shrink:0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>info@e-comex.com.ar</span>
+      </div>
+      <div class="cover-footer-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span>www.e-comex.com.ar</span>
+      </div>
+      <div class="cover-footer-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="flex-shrink:0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Av. Pte. Julio A. Roca 771, 6° Piso — CABA</span>
+      </div>
     </div>
   </div>
 

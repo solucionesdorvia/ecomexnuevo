@@ -165,7 +165,7 @@ export async function generateQuotePdf(params: {
   const font = await pdf.embedFont(StandardFonts.Helvetica);
   const fontBold = await pdf.embedFont(StandardFonts.HelveticaBold);
 
-  const primary = rgb(0.0588, 0.286, 0.741); // #0f49bd
+  const primary = rgb(0.094, 0.765, 0.839); // #18C3D6
   const gold = rgb(0.831, 0.686, 0.216); // #d4af37
   const slate = rgb(0.18, 0.2, 0.24);
 

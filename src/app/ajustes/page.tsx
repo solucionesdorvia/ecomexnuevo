@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getSessionUser } from "@/lib/auth/session";
 import { roleLabel } from "@/lib/auth/permissions";
+import { AjustesClient } from "./AjustesClient";
 
 export default async function AjustesPage() {
   const user = await getSessionUser();
@@ -27,46 +28,15 @@ export default async function AjustesPage() {
           <p className="mt-2 max-w-2xl text-muted">
             Ajusta perfil, datos de empresa y controles de seguridad.
           </p>
+          <p className="mt-1 text-xs text-slate-600">
+            Email: {user?.email ?? "—"}
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          <section className="panel p-5">
-            <h3 className="mb-4 text-sm font-black uppercase tracking-widest text-muted">Perfil</h3>
-            <div className="space-y-3">
-              <label className="block text-xs text-muted">
-                Nombre
-                <input className="field mt-1" defaultValue={user?.email?.split("@")[0] ?? "Usuario"} />
-              </label>
-              <label className="block text-xs text-muted">
-                Email
-                <input className="field mt-1" defaultValue={user?.email ?? "sin-sesion@e-comex.app"} />
-              </label>
-            </div>
-          </section>
-
-          <section className="panel p-5">
-            <h3 className="mb-4 text-sm font-black uppercase tracking-widest text-muted">Empresa</h3>
-            <div className="space-y-3">
-              <label className="block text-xs text-muted">
-                Razón social
-                <input className="field mt-1" defaultValue="E-COMEX S.A." />
-              </label>
-              <label className="block text-xs text-muted">
-                CUIT
-                <input className="field mt-1" defaultValue="30-71234567-9" />
-              </label>
-            </div>
-          </section>
-
-          <section className="panel p-5">
-            <h3 className="mb-4 text-sm font-black uppercase tracking-widest text-muted">Preferencias</h3>
-            <div className="space-y-2 text-sm text-muted">
-              <label className="flex items-center gap-2"><input type="checkbox" defaultChecked /> Notificar cambios de riesgo</label>
-              <label className="flex items-center gap-2"><input type="checkbox" defaultChecked /> Exportación PDF verificada</label>
-              <label className="flex items-center gap-2"><input type="checkbox" /> Modo compacto</label>
-            </div>
-          </section>
-        </div>
+        <AjustesClient
+          initialName={(user as { name?: string | null } | null)?.name ?? ""}
+          initialCompany={(user as { company?: string | null } | null)?.company ?? ""}
+        />
 
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           <Link
@@ -84,14 +54,7 @@ export default async function AjustesPage() {
             <div className="mt-1 text-xs text-slate-300">Auditoría operativa, firmas y trazabilidad.</div>
           </Link>
         </div>
-
-        <div className="mt-6">
-          <button type="button" className="button button-primary">
-            Guardar ajustes
-          </button>
-        </div>
       </main>
     </div>
   );
 }
-
