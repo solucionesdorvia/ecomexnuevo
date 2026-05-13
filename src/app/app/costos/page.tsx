@@ -167,20 +167,24 @@ export default async function CostosPage() {
 
       <div className="relative mx-auto w-full max-w-[1100px]">
         {/* Header */}
-        <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#4a5568]">Sistema E-COMEX</p>
-            <h1 className="mt-1 text-[22px] font-extrabold leading-tight tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
-              Costos
-            </h1>
-            <p className="mt-1 text-[13px] text-[#555c6b]">Desglose económico consolidado.</p>
+        <div className="relative mb-6 overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0B1622]/80 px-5 py-5 backdrop-blur sm:px-6">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#18C3D6]/25 to-transparent" />
+          <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[#18C3D6]/[0.06] blur-3xl" />
+          <div className="relative flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#3d4a5a]">Sistema E-COMEX</p>
+              <h1 className="mt-1 text-[22px] font-extrabold leading-tight tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
+                Costos
+              </h1>
+              <p className="mt-1 text-[13px] text-[#5a6577]">Desglose económico consolidado.</p>
+            </div>
+            <Link
+              href="/app/nueva"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-[#18C3D6] px-4 py-2.5 text-[13px] font-semibold text-[#030d18] transition hover:bg-[#0ea5b9]"
+            >
+              Nueva operación
+            </Link>
           </div>
-          <Link
-            href="/app/nueva"
-            className="inline-flex items-center gap-1.5 rounded-lg bg-[#18C3D6] px-4 py-2 text-[13px] font-medium text-[#030d18] transition hover:bg-[#0ea5b9]"
-          >
-            Nueva operación
-          </Link>
         </div>
 
         {/* KPI strip */}
@@ -200,15 +204,16 @@ export default async function CostosPage() {
           ].map((k) => (
             <div
               key={k.label}
-              className={`rounded-xl border p-4 ${
+              className={`relative overflow-hidden rounded-xl border p-4 ${
                 k.highlight
-                  ? "border-[#18C3D6]/20 bg-[#18C3D6]/[0.05]"
+                  ? "border-[#18C3D6]/20 bg-[#18C3D6]/[0.04]"
                   : "border-white/[0.04] bg-[#0B1622]"
               }`}
             >
-              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#555c6b]">{k.label}</p>
+              <div className={`absolute left-0 top-3 bottom-3 w-[3px] rounded-r-full ${k.highlight ? "bg-[#18C3D6]/60" : "bg-[#18C3D6]/20"}`} />
+              <p className="pl-3 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#555c6b]">{k.label}</p>
               <p
-                className={`mt-2 text-[22px] font-extrabold leading-none ${k.highlight ? "text-[#18C3D6]" : "text-white"}`}
+                className={`mt-2 pl-3 text-[22px] font-extrabold leading-none ${k.highlight ? "text-[#18C3D6]" : "text-white"}`}
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {k.value}

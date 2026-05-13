@@ -20,18 +20,21 @@ export function SystemPage({ title, description, action, children, maxWidth = "n
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 sm:h-48 bg-[radial-gradient(ellipse_at_top,rgba(24,195,214,0.10),transparent_65%)]" />
       <div className={`mx-auto w-full ${WIDTH_CLASS[maxWidth]}`}>
         <div className="relative overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0B1622]/80 px-4 py-5 backdrop-blur sm:px-6 sm:py-6">
-          <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#18C3D6]/10 blur-2xl" />
-          <div className="pointer-events-none absolute -left-10 -bottom-10 h-20 w-20 rounded-full bg-[#d4a843]/10 blur-2xl" />
+          {/* Glow accents */}
+          <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#18C3D6]/[0.07] blur-3xl" />
+          <div className="pointer-events-none absolute -left-6 -bottom-6 h-20 w-20 rounded-full bg-[#d4a843]/[0.06] blur-2xl" />
+          {/* Subtle top line */}
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#18C3D6]/30 to-transparent" />
           <div className="relative flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div className="min-w-0">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#4a5568]">Sistema E-COMEX</p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#3d4a5a]">Sistema E-COMEX</p>
               <h1
                 className="mt-1 text-[clamp(1.25rem,4.5vw,1.5rem)] font-extrabold leading-tight tracking-tight text-white sm:text-[22px]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {title}
               </h1>
-              <p className="mt-2 text-[13px] leading-relaxed text-[#555c6b] sm:mt-1 sm:text-[14px]">{description}</p>
+              <p className="mt-2 text-[13px] leading-relaxed text-[#5a6577] sm:mt-1 sm:text-[14px]">{description}</p>
             </div>
             {action ? <div className="shrink-0 sm:max-w-[min(100%,280px)] sm:text-right">{action}</div> : null}
           </div>
@@ -46,21 +49,24 @@ export function SystemKpi({
   label,
   value,
   hint,
+  accent = false,
 }: {
   label: string;
   value: ReactNode;
   hint?: string;
+  accent?: boolean;
 }) {
   return (
-    <div className="rounded-xl border border-white/[0.04] bg-[#0B1622] p-4 sm:p-5">
-      <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#555c6b]">{label}</p>
+    <div className={`relative overflow-hidden rounded-xl border p-4 sm:p-5 ${accent ? "border-[#18C3D6]/20 bg-[#18C3D6]/[0.04]" : "border-white/[0.04] bg-[#0B1622]"}`}>
+      <div className={`absolute left-0 top-3 bottom-3 w-[3px] rounded-r-full ${accent ? "bg-[#18C3D6]/60" : "bg-[#18C3D6]/20"}`} />
+      <p className="pl-3 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#555c6b]">{label}</p>
       <p
-        className="mt-2 text-[clamp(1.35rem,5vw,1.75rem)] font-extrabold leading-none text-white sm:text-[28px]"
+        className={`mt-2 pl-3 text-[clamp(1.35rem,5vw,1.75rem)] font-extrabold leading-none sm:text-[28px] ${accent ? "text-[#18C3D6]" : "text-white"}`}
         style={{ fontFamily: "var(--font-display)" }}
       >
         {value}
       </p>
-      {hint ? <p className="mt-2 text-[11px] text-[#4a5568]">{hint}</p> : null}
+      {hint ? <p className="mt-2 pl-3 text-[11px] text-[#4a5568]">{hint}</p> : null}
     </div>
   );
 }
@@ -78,8 +84,11 @@ export function SystemSection({
 }) {
   return (
     <section className={`mt-10 ${className}`}>
-      <h2 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#555c6b]">{title}</h2>
-      {subtitle ? <p className="mt-2 text-[13px] text-[#4a5568]">{subtitle}</p> : null}
+      <div className="flex items-center gap-2">
+        <div className="h-px w-3 bg-[#18C3D6]/40" />
+        <h2 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7a8599]">{title}</h2>
+      </div>
+      {subtitle ? <p className="mt-1.5 text-[12px] text-[#4a5568]">{subtitle}</p> : null}
       <div className="mt-4">{children}</div>
     </section>
   );

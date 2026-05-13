@@ -155,8 +155,9 @@ export default async function OperacionesPage() {
                 return (
                   <div
                     key={op.id}
-                    className="rounded-xl border border-white/[0.06] bg-[#0B1622] p-4 transition-colors hover:border-white/[0.1]"
+                    className="group relative overflow-hidden rounded-xl border border-white/[0.06] bg-[#0B1622] p-4 transition-all duration-200 hover:border-white/[0.12] hover:bg-[#0d1929]"
                   >
+                    <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#18C3D6]/25 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <p className="text-[14px] font-semibold leading-snug text-white [overflow-wrap:anywhere]">{title}</p>
                     <div className="mt-2 flex flex-wrap items-center gap-2">
                       <span
@@ -167,21 +168,21 @@ export default async function OperacionesPage() {
                       <span className="text-[11px] text-[#555c6b]">Act. {fmtActivity(op.updatedAt)}</span>
                     </div>
                     {lastEv ? (
-                      <p className="mt-2 line-clamp-2 text-[12px] leading-relaxed text-[#b0b8c9]">
-                        <span className="text-[#555c6b]">Último evento: </span>
+                      <p className="mt-2 line-clamp-2 text-[12px] leading-relaxed text-[#8a96a8]">
+                        <span className="text-[#4a5568]">Último evento: </span>
                         {lastEv.description.length > 120 ? `${lastEv.description.slice(0, 120)}…` : lastEv.description}
                       </p>
                     ) : null}
                     <div className="mt-4 flex flex-wrap gap-2">
                       <Link
                         href={`/app/operaciones/${op.id}/operation`}
-                        className="inline-flex flex-1 items-center justify-center rounded-lg bg-[#18C3D6] px-3 py-2 text-center text-[12px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9] sm:flex-none"
+                        className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#18C3D6] px-3 py-2 text-center text-[12px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9] sm:flex-none"
                       >
                         Ver importación
                       </Link>
                       <Link
                         href={`/app/operaciones/${q.id}`}
-                        className="inline-flex flex-1 items-center justify-center rounded-lg border border-white/[0.1] px-3 py-2 text-center text-[12px] font-medium text-[#b0b8c9] transition-colors hover:border-white/[0.2] hover:text-white sm:flex-none"
+                        className="inline-flex flex-1 items-center justify-center rounded-lg border border-white/[0.08] px-3 py-2 text-center text-[12px] font-medium text-[#6b7a8d] transition-colors hover:border-white/[0.15] hover:text-[#aab4c2] sm:flex-none"
                       >
                         Ver cotización
                       </Link>

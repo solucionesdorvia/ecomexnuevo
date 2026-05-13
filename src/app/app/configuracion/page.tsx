@@ -14,18 +14,20 @@ export default async function ConfiguracionPage() {
 
       <div className="relative mx-auto w-full max-w-[780px]">
         {/* Header */}
-        <div className="mb-8">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#4a5568]">Sistema E-COMEX</p>
+        <div className="relative mb-6 overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0B1622]/80 px-5 py-5 backdrop-blur sm:px-6">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#18C3D6]/25 to-transparent" />
+          <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[#18C3D6]/[0.06] blur-3xl" />
+          <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#3d4a5a]">Sistema E-COMEX</p>
           <h1 className="mt-1 text-[22px] font-extrabold tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
             Configuración
           </h1>
-          <p className="mt-1 text-[13px] text-[#555c6b]">Datos de cuenta, empresa y documentación.</p>
+          <p className="mt-1 text-[13px] text-[#5a6577]">Datos de cuenta, empresa y documentación.</p>
         </div>
 
         {/* Account info (read-only) */}
-        <section className="mb-6 overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0B1622]">
+        <section className="mb-5 overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0B1622]">
           <div className="border-b border-white/[0.04] px-5 py-3.5">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#4a5568]">Cuenta</p>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#3d4a5a]">Cuenta</p>
           </div>
           <div className="grid gap-px bg-white/[0.03] sm:grid-cols-3">
             {[

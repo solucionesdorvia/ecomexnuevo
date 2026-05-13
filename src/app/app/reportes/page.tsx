@@ -49,13 +49,14 @@ export default function ReportesPage() {
           {FEATURES.map((f) => (
             <div
               key={f.title}
-              className="rounded-xl border border-white/[0.05] bg-[#0B1622] p-4"
+              className="relative overflow-hidden rounded-xl border border-white/[0.05] bg-[#0B1622] p-4 pl-5"
             >
-              <svg className="mb-3 h-5 w-5 text-[#18C3D6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden>
+              <div className="absolute left-0 top-4 bottom-4 w-[3px] rounded-r-full bg-[#18C3D6]/25" />
+              <svg className="mb-2.5 h-5 w-5 text-[#18C3D6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" d={f.icon} />
               </svg>
               <p className="text-[13px] font-semibold text-white">{f.title}</p>
-              <p className="mt-1 text-[12px] leading-relaxed text-[#555c6b]">{f.desc}</p>
+              <p className="mt-1 text-[12px] leading-relaxed text-[#5a6577]">{f.desc}</p>
             </div>
           ))}
         </div>

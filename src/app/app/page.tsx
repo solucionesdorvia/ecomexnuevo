@@ -190,8 +190,9 @@ export default async function DashboardPage() {
                 return (
                   <div
                     key={op.id}
-                    className="rounded-xl border border-white/[0.06] bg-[#0B1622] p-4 transition-colors hover:border-white/[0.1]"
+                    className="group relative overflow-hidden rounded-xl border border-white/[0.06] bg-[#0B1622] p-4 transition-all duration-200 hover:border-white/[0.12] hover:bg-[#0d1929]"
                   >
+                    <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#18C3D6]/25 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <p className="text-[14px] font-semibold leading-snug text-white [overflow-wrap:anywhere]">{title}</p>
                     <div className="mt-2 flex flex-wrap items-center gap-2">
                       <span
@@ -202,17 +203,18 @@ export default async function DashboardPage() {
                       <span className="text-[11px] text-[#555c6b]">Act. {fmtActivity(op.updatedAt)}</span>
                     </div>
                     {lastEv ? (
-                      <p className="mt-2 line-clamp-2 text-[12px] leading-relaxed text-[#b0b8c9]">
-                        <span className="text-[#555c6b]">Último evento: </span>
+                      <p className="mt-2 line-clamp-2 text-[12px] leading-relaxed text-[#8a96a8]">
+                        <span className="text-[#4a5568]">Último evento: </span>
                         {lastEv.description.length > 120 ? `${lastEv.description.slice(0, 120)}…` : lastEv.description}
                       </p>
                     ) : null}
                     <div className="mt-4">
                       <Link
                         href={`/app/operaciones/${op.id}/operation`}
-                        className="inline-flex rounded-lg bg-[#18C3D6] px-4 py-2 text-[12px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-[#18C3D6] px-4 py-2 text-[12px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
                       >
                         Ver importación
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                       </Link>
                     </div>
                   </div>

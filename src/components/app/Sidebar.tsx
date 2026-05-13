@@ -31,10 +31,10 @@ function SidebarContent({ userEmail, userRole, onNavigate }: { userEmail?: strin
             if (groupItems.length === 0) return null;
             return (
               <section key={groupKey}>
-                <p className="px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#4a5568]">
+                <p className="px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#3d4a5a]">
                   {APP_NAV_GROUP_LABELS[groupKey]}
                 </p>
-                <div className="mt-2 space-y-0.5">
+                <div className="mt-1.5 space-y-0.5">
                   {groupItems.map((item) => {
                     const active = item.href === "/app" ? pathname === "/app" : pathname === item.href || pathname.startsWith(`${item.href}/`);
                     return (
@@ -42,12 +42,12 @@ function SidebarContent({ userEmail, userRole, onNavigate }: { userEmail?: strin
                         key={item.href}
                         href={item.href}
                         onClick={onNavigate}
-                        className={`flex min-h-[44px] items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] transition-colors duration-150 ${
+                        className={`flex min-h-[40px] items-center gap-3 rounded-lg px-3 py-2 text-[13px] transition-colors duration-150 ${
                           active
-                            ? "-ml-px border-l-2 border-[#18C3D6] bg-[#18C3D6]/[0.08] font-medium text-white"
+                            ? "-ml-px border-l-2 border-[#18C3D6] bg-[#18C3D6]/[0.08] font-semibold text-white"
                             : item.primary
-                              ? "text-[#18C3D6] hover:bg-[#18C3D6]/[0.05]"
-                              : "text-[#4a5568] hover:bg-white/[0.02] hover:text-[#94a3b8]"
+                              ? "font-medium text-[#18C3D6] hover:bg-[#18C3D6]/[0.06] hover:text-[#3dd5e8]"
+                              : "text-[#6b7a8d] hover:bg-white/[0.03] hover:text-[#aab4c2]"
                         }`}
                       >
                         <NavIcon d={item.icon} />
@@ -62,21 +62,27 @@ function SidebarContent({ userEmail, userRole, onNavigate }: { userEmail?: strin
         </div>
       </nav>
 
-      <div className="border-t border-white/[0.04] px-4 py-3 pb-safe">
-        <div className="flex items-center gap-3">
-          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#18C3D6]/10 text-[11px] font-bold text-[#18C3D6]">
+      <div className="border-t border-white/[0.04] px-3 py-3 pb-safe">
+        <div className="flex items-center gap-2.5 rounded-lg px-2 py-2">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#18C3D6]/20 to-[#18C3D6]/[0.06] text-[12px] font-bold text-[#18C3D6] ring-1 ring-[#18C3D6]/20">
             {(userEmail ?? "U")[0].toUpperCase()}
           </div>
           <div className="min-w-0 flex-1">
-            <p className="truncate text-[12px] font-medium text-[#94a3b8]">{userEmail ?? "Usuario"}</p>
-            <p className="text-[10px] text-[#4a5568]">{userRole ?? "user"}</p>
+            <p className="truncate text-[12px] font-medium text-[#a0aab8]">{userEmail ?? "Usuario"}</p>
+            <p className="text-[10px] capitalize text-[#4a5568]">{userRole ?? "user"}</p>
           </div>
+          <form action="/api/auth/logout" method="post">
+            <button
+              type="submit"
+              title="Cerrar sesión"
+              className="flex h-7 w-7 items-center justify-center rounded-md text-[#4a5568] transition-colors hover:bg-white/[0.04] hover:text-[#94a3b8]"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9" />
+              </svg>
+            </button>
+          </form>
         </div>
-        <form action="/api/auth/logout" method="post" className="mt-2">
-          <button type="submit" className="text-[11px] text-[#4a5568] transition-colors hover:text-white">
-            Cerrar sesión
-          </button>
-        </form>
       </div>
     </>
   );
