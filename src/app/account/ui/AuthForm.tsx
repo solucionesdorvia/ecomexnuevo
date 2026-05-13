@@ -22,6 +22,7 @@ export default function AuthForm({
   const [error, setError] = useState<string | null>(null);
 
   async function submit() {
+    if (!email || !password) return;
     setPending(true);
     setError(null);
     try {
@@ -32,9 +33,9 @@ export default function AuthForm({
       });
       const json = (await res.json()) as { ok?: boolean; error?: string };
       if (!res.ok || !json.ok) {
-        throw new Error(json.error || "Error.");
+        throw new Error(json.error ?? "Error al iniciar sesión.");
       }
-      window.location.href = "/account";
+      window.location.href = "/app";
     } catch (e) {
       setError(e instanceof Error ? e.message : "Error.");
     } finally {
@@ -43,65 +44,77 @@ export default function AuthForm({
   }
 
   return (
-    <div className="glass-panel rounded-2xl p-8 shadow-[0_28px_90px_-60px_rgba(24,195,214,0.30)]">
-      <div className="text-[10px] font-black uppercase tracking-[0.22em] text-white/70">
-        E‑COMEX Account
-      </div>
-      <div className="mt-2 text-2xl font-black tracking-tight">
-        {title}
-      </div>
-      <p className="mt-2 text-sm leading-7 text-muted">
-        La cuenta es opcional. La usamos para historial y seguimiento después de
-        cotizar.
-      </p>
+    <div className="relative overflow-hidden rounded-2xl border border-white/[0.07] bg-[#0B1622] p-7 shadow-[0_32px_80px_-40px_rgba(0,0,0,0.6)]">
+      {/* Top shimmer */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#18C3D6]/30 to-transparent" />
+      {/* Glow */}
+      <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#18C3D6]/[0.06] blur-3xl" />
 
-      <div className="mt-6 grid gap-3">
-        <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="email@empresa.com"
-          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] focus:border-primary/40 focus:ring-2 focus:ring-primary/20"
-          autoComplete="email"
-        />
-        <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Contraseña"
-          type="password"
-          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] focus:border-primary/40 focus:ring-2 focus:ring-primary/20"
-          autoComplete={endpoint === "/api/auth/register" ? "new-password" : "current-password"}
-        />
-        {error ? (
-          <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/85 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-            {error}
-          </div>
-        ) : null}
-      </div>
+      <div className="relative">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#3d4a5a]">Sistema E-COMEX</p>
+        <h1 className="mt-2 text-[22px] font-extrabold tracking-tight text-white" style={{ fontFamily: "var(--font-display, 'Manrope', sans-serif)" }}>
+          {title}
+        </h1>
+        <p className="mt-1.5 text-[13px] leading-relaxed text-[#5a6577]">
+          Accedé a tu panel de importaciones.
+        </p>
 
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-        <button
-          type="button"
-          disabled={pending}
-          onClick={() => void submit()}
-          className="inline-flex h-11 flex-1 items-center justify-center rounded-xl bg-primary px-6 text-sm font-extrabold tracking-tight text-[#030d18] shadow-[0_18px_60px_-40px_rgba(24,195,214,0.55)] transition-all active:scale-[0.98] active:-translate-y-[1px] disabled:opacity-60"
-        >
-          {submitLabel}
-        </button>
-        <Link
-          href={alternateHref}
-          className="inline-flex h-11 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-6 text-sm font-extrabold tracking-tight text-white transition-colors hover:bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
-        >
-          {alternateLabel}
-        </Link>
-      </div>
+        <div className="mt-6 space-y-3">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            onKeyDown={(e) => { if (e.key === "Enter") void submit(); }}
+            placeholder="email@empresa.com"
+            className="w-full rounded-xl border border-white/[0.08] bg-[#07111A] px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#3d4a5a] transition focus:border-[#18C3D6]/40 focus:ring-2 focus:ring-[#18C3D6]/15"
+            autoComplete="email"
+          />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            onKeyDown={(e) => { if (e.key === "Enter") void submit(); }}
+            placeholder="Contraseña"
+            className="w-full rounded-xl border border-white/[0.08] bg-[#07111A] px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#3d4a5a] transition focus:border-[#18C3D6]/40 focus:ring-2 focus:ring-[#18C3D6]/15"
+            autoComplete={endpoint === "/api/auth/register" ? "new-password" : "current-password"}
+          />
 
-      <div className="mt-4 text-xs text-muted">
-        Volver al análisis:{" "}
-        <Link href="/chat" className="text-white hover:underline">
-          /chat
-        </Link>
+          {error && (
+            <div className="rounded-xl border border-rose-500/20 bg-rose-500/[0.06] px-4 py-3 text-[13px] text-rose-400">
+              {error}
+            </div>
+          )}
+        </div>
+
+        <div className="mt-5 flex flex-col gap-2.5 sm:flex-row">
+          <button
+            type="button"
+            disabled={pending || !email || !password}
+            onClick={() => void submit()}
+            className="inline-flex h-11 flex-1 items-center justify-center rounded-xl bg-[#18C3D6] px-6 text-[14px] font-semibold text-[#030d18] transition-all hover:bg-[#0ea5b9] disabled:opacity-50"
+          >
+            {pending ? (
+              <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              </svg>
+            ) : submitLabel}
+          </button>
+          <Link
+            href={alternateHref}
+            className="inline-flex h-11 flex-1 items-center justify-center rounded-xl border border-white/[0.08] px-6 text-[14px] font-medium text-[#6b7a8d] transition-colors hover:border-white/[0.15] hover:text-[#aab4c2]"
+          >
+            {alternateLabel}
+          </Link>
+        </div>
+
+        <p className="mt-5 text-[12px] text-[#3d4a5a]">
+          ¿Sin cuenta todavía?{" "}
+          <Link href="/cotizador" className="text-[#18C3D6] hover:underline">
+            Cotizá gratis sin registrarte →
+          </Link>
+        </p>
       </div>
     </div>
   );
 }
-

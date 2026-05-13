@@ -1,41 +1,38 @@
 import Link from "next/link";
 import AuthForm from "../ui/AuthForm";
-import { Icon } from "@/components/ui/Icon";
 
 export const runtime = "nodejs";
+export const metadata = { title: "Iniciar sesión — E-COMEX" };
 
 export default function LoginPage() {
   return (
-    <div className="min-h-screen app-background text-white">
-      <header className="sticky top-0 z-50 border-b border-border-dark bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 py-3 md:px-10">
-          <Link href="/" className="flex items-center gap-3 text-primary">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-[#030d18]">
-              <Icon name="bolt" size={18} className="text-[#030d18]" />
-            </div>
-            <h2 className="text-xl font-black tracking-tight text-white">
-              E‑COMEX
-            </h2>
+    <div className="min-h-screen bg-[#07111A] text-white" style={{ fontFamily: "var(--font-body, 'Inter', sans-serif)" }}>
+      {/* Navbar */}
+      <header className="sticky top-0 z-50 border-b border-white/[0.05] bg-[#07111A]/90 backdrop-blur">
+        <div className="mx-auto flex min-h-14 w-full max-w-[1200px] items-center justify-between px-5 lg:px-8">
+          <Link href="/" className="flex items-center gap-2.5">
+            <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-5 brightness-0 invert" />
           </Link>
           <Link
-            href="/chat"
-            className="rounded-lg border border-border-dark bg-white/5 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-white/10"
+            href="/cotizador"
+            className="rounded-lg border border-white/[0.08] px-4 py-2 text-[13px] font-medium text-[#94a3b8] transition-colors hover:text-white"
           >
-            Ir al análisis
+            Cotizá gratis →
           </Link>
         </div>
       </header>
 
-      <main className="mx-auto w-full max-w-3xl px-6 py-10">
-        <AuthForm
-          title="Iniciar sesión"
-          endpoint="/api/auth/login"
-          submitLabel="Entrar"
-          alternateHref="/account/register"
-          alternateLabel="Crear cuenta"
-        />
+      <main className="flex min-h-[calc(100dvh-56px)] items-center justify-center px-4 py-12">
+        <div className="w-full max-w-[420px]">
+          <AuthForm
+            title="Iniciar sesión"
+            endpoint="/api/auth/login"
+            submitLabel="Entrar"
+            alternateHref="/account/register"
+            alternateLabel="Crear cuenta"
+          />
+        </div>
       </main>
     </div>
   );
 }
-
