@@ -132,25 +132,10 @@ export default async function CostosPage() {
     });
   }
 
-  let sumMin = 0;
-  let sumMax = 0;
   let countWithRange = 0;
   for (const r of rows) {
-    if (r.totalMinUsd != null && r.totalMaxUsd != null) {
-      sumMin += r.totalMinUsd;
-      sumMax += r.totalMaxUsd;
-      countWithRange++;
-    }
+    if (r.totalMinUsd != null && r.totalMaxUsd != null) countWithRange++;
   }
-
-  // Cost component averages for bar chart
-  const avgFob = rows.length
-    ? rows.reduce((acc, r) => {
-        const v = parseFloat((r.costs.fob ?? "0").replace(/[^0-9.–]/g, "").split("–")[0] ?? "0");
-        return acc + (isNaN(v) ? 0 : v);
-      }, 0) / rows.length
-    : 0;
-  void avgFob;
 
   const COL_HEADERS: { key: CardKey; label: string }[] = [
     { key: "fob", label: "Producto (FOB)" },
@@ -188,19 +173,11 @@ export default async function CostosPage() {
         </div>
 
         {/* KPI strip */}
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
           {[
             { label: "Cotizaciones", value: String(rows.length) },
-            { label: "Con rango completo", value: String(countWithRange) },
-            {
-              label: "Acumulado mín.",
-              value: countWithRange > 0 ? fmtUsd(sumMin) : "—",
-              highlight: true,
-            },
-            {
-              label: "Acumulado máx.",
-              value: countWithRange > 0 ? fmtUsd(sumMax) : "—",
-            },
+            { label: "Con desglose completo", value: String(countWithRange) },
+            { label: "Listas para tramitar", value: String(countWithRange), highlight: true },
           ].map((k) => (
             <div
               key={k.label}
@@ -311,17 +288,6 @@ export default async function CostosPage() {
                 ))}
               </div>
 
-              {/* Accumulated total footer */}
-              {countWithRange > 0 && (
-                <div className="flex flex-col items-start justify-between gap-2 border-t border-white/[0.06] bg-[#0a1622] px-4 py-4 sm:flex-row sm:items-center">
-                  <p className="text-[11px] text-[#555c6b]">
-                    Total acumulado estimado · {countWithRange} ítem{countWithRange !== 1 ? "s" : ""}
-                  </p>
-                  <p className="text-[16px] font-extrabold text-[#18C3D6]" style={{ fontFamily: "var(--font-display)" }}>
-                    {fmtRange(sumMin, sumMax)}
-                  </p>
-                </div>
-              )}
             </div>
 
             <p className="mt-3 text-[11px] text-[#3a404d]">
