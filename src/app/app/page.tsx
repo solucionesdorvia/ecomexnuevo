@@ -35,10 +35,26 @@ function fmtQuoteDate(d: Date) {
 }
 
 /** Mismo fallback que /app/operaciones (productJson title/name, userText). */
-function productLabel(productJson: unknown, userText: string, max = 60): string {
-  const pj = productJson as { title?: string; name?: string } | null | undefined;
-  const t = pj?.title ?? pj?.name;
-  if (t && String(t).trim()) return String(t).slice(0, max);
+function productLabel(productJson: unknown, quoteJson: unknown, userText: string, max = 72): string {
+  const pj = productJson as { title?: string; name?: string; origin?: string; country?: string } | null | undefined;
+  const qj = quoteJson as { assumptions?: { id?: string; label?: string; value?: string }[] } | null | undefined;
+  const name = pj?.title ?? pj?.name ?? "";
+  const assumptions = Array.isArray(qj?.assumptions) ? qj.assumptions : [];
+  const findVal = (keys: string[]) => {
+    const hit = assumptions.find((a) =>
+      keys.some((k) => (a.id ?? "").toLowerCase().includes(k) || (a.label ?? "").toLowerCase().includes(k))
+    );
+    return hit?.value?.trim() ?? null;
+  };
+  const qty = findVal(["cantidad", "quantity", "units", "unidades"]);
+  const origin = pj?.origin ?? pj?.country ?? findVal(["origen", "origin", "país", "pais", "country"]);
+  if (name) {
+    const parts: string[] = [];
+    if (qty) parts.push(qty);
+    parts.push(name);
+    if (origin) parts.push(`de ${origin}`);
+    return parts.join(" · ").slice(0, max);
+  }
   if (userText?.trim()) return userText.trim().slice(0, max);
   return "—";
 }
@@ -71,6 +87,7 @@ export default async function DashboardPage() {
             select: {
               id: true,
               productJson: true,
+              quoteJson: true,
               userText: true,
               totalMinUsd: true,
               totalMaxUsd: true,
@@ -92,6 +109,7 @@ export default async function DashboardPage() {
         select: {
           id: true,
           productJson: true,
+          quoteJson: true,
           userText: true,
           totalMinUsd: true,
           totalMaxUsd: true,
@@ -183,7 +201,7 @@ export default async function DashboardPage() {
             <div className="grid gap-4 sm:grid-cols-2">
               {operations.map((op) => {
                 const q = op.quote;
-                const title = productLabel(q.productJson, q.userText, 60);
+                const title = productLabel(q.productJson, q.quoteJson, q.userText, 72);
                 const lastEv = op.timeline[0];
                 const stageKey = op.stage as keyof typeof OPERATION_STAGE_LABEL_ES;
                 const stageLabel = OPERATION_STAGE_LABEL_ES[stageKey] ?? op.stage;
@@ -229,7 +247,7 @@ export default async function DashboardPage() {
           <SystemSection title="Cotizaciones recientes" className="mt-12">
             <ul className="divide-y divide-white/[0.06] rounded-xl border border-white/[0.04] bg-[#0B1622]">
               {quotesSinOp.map((q) => {
-                const title = productLabel(q.productJson, q.userText, 80);
+                const title = productLabel(q.productJson, q.quoteJson, q.userText, 80);
                 const total =
                   q.totalMinUsd != null && q.totalMaxUsd != null
                     ? `${fmtUsd(q.totalMinUsd)} – ${fmtUsd(q.totalMaxUsd)}`

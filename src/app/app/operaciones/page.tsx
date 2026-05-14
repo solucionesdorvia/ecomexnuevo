@@ -28,10 +28,32 @@ function fmtQuoteDate(d: Date) {
   return d.toLocaleDateString("es-AR", { day: "2-digit", month: "short", year: "numeric" });
 }
 
-function productLabel(productJson: unknown, userText: string, max = 60): string {
-  const pj = productJson as { title?: string; name?: string } | null | undefined;
-  const t = pj?.title ?? pj?.name;
-  if (t && String(t).trim()) return String(t).slice(0, max);
+function productLabel(productJson: unknown, quoteJson: unknown, userText: string, max = 72): string {
+  const pj = productJson as { title?: string; name?: string; origin?: string; country?: string } | null | undefined;
+  const qj = quoteJson as { assumptions?: { id?: string; label?: string; value?: string }[] } | null | undefined;
+
+  const name = pj?.title ?? pj?.name ?? "";
+
+  // Try to find quantity and origin from assumptions
+  const assumptions = Array.isArray(qj?.assumptions) ? qj.assumptions : [];
+  const findVal = (keywords: string[]) => {
+    const hit = assumptions.find((a) =>
+      keywords.some((k) => (a.id ?? "").toLowerCase().includes(k) || (a.label ?? "").toLowerCase().includes(k))
+    );
+    return hit?.value?.trim() ?? null;
+  };
+
+  const qty = findVal(["cantidad", "quantity", "units", "unidades"]);
+  const origin = pj?.origin ?? pj?.country ?? findVal(["origen", "origin", "país", "pais", "country"]);
+
+  if (name) {
+    const parts: string[] = [];
+    if (qty) parts.push(qty);
+    parts.push(name);
+    if (origin) parts.push(`de ${origin}`);
+    return parts.join(" · ").slice(0, max);
+  }
+
   if (userText?.trim()) return userText.trim().slice(0, max);
   return "—";
 }
@@ -60,6 +82,7 @@ export default async function OperacionesPage() {
             select: {
               id: true,
               productJson: true,
+              quoteJson: true,
               userText: true,
               totalMinUsd: true,
               totalMaxUsd: true,
@@ -87,6 +110,7 @@ export default async function OperacionesPage() {
           createdAt: true,
           userText: true,
           productJson: true,
+          quoteJson: true,
           totalMinUsd: true,
           totalMaxUsd: true,
           stage: true,
@@ -148,7 +172,7 @@ export default async function OperacionesPage() {
             <div className="grid gap-4 sm:grid-cols-2">
               {operations.map((op) => {
                 const q = op.quote;
-                const title = productLabel(q.productJson, q.userText, 60);
+                const title = productLabel(q.productJson, q.quoteJson, q.userText, 72);
                 const lastEv = op.timeline[0];
                 const stageKey = op.stage as keyof typeof OPERATION_STAGE_LABEL_ES;
                 const stageLabel = OPERATION_STAGE_LABEL_ES[stageKey] ?? op.stage;
@@ -196,7 +220,7 @@ export default async function OperacionesPage() {
 
       <SystemSection
         title="Cotizaciones"
-        subtitle="Backlog de cotizaciones listas para iniciar importación."
+        subtitle="Tus cotizaciones recientes. Desde acá podés ver el detalle e iniciar una importación."
         className={operations.length > 0 ? "mt-12" : ""}
       >
 
@@ -215,7 +239,7 @@ export default async function OperacionesPage() {
                 </thead>
                 <tbody>
                   {quotesSinOperation.map((q) => {
-                    const t = productLabel(q.productJson, q.userText, 60);
+                    const t = productLabel(q.productJson, q.quoteJson, q.userText, 72);
                     const total =
                       q.totalMinUsd != null && q.totalMaxUsd != null
                         ? `${fmtUsd(q.totalMinUsd)} – ${fmtUsd(q.totalMaxUsd)}`
