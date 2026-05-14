@@ -140,7 +140,7 @@ export default async function DashboardPage() {
   return (
     <SystemPage
       title="Inicio"
-      description="Resumen ejecutivo de actividad en E-COMEX."
+      description="Tus cotizaciones e importaciones en un solo lugar."
       action={
         <Link
           href="/app/nueva"
@@ -176,7 +176,7 @@ export default async function DashboardPage() {
           <div className="mt-12 rounded-xl border border-dashed border-white/[0.08] bg-[#0B1622]/50 px-6 py-14 text-center sm:py-16">
             <p className="text-[17px] font-semibold text-white">Bienvenido a E-COMEX</p>
             <p className="mx-auto mt-2 max-w-md text-[14px] leading-relaxed text-[#555c6b]">
-              Empezá cotizando un producto o clasificando el NCM antes de importar.
+              Desde acá podés seguir tus cotizaciones e importaciones en un solo lugar.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
