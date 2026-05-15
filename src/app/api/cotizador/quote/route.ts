@@ -26,11 +26,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Falta snapshot del clasificador." }, { status: 400 });
   }
 
-  const ncm = typeof snapshot.recommendedNcm === "string" ? snapshot.recommendedNcm.trim() : "";
   const hasPrice = typeof snapshot.purchase?.fobUnitUsd === "number" && (snapshot.purchase.fobUnitUsd as number) > 0;
   const hasQuantity = typeof snapshot.purchase?.quantity === "number" && (snapshot.purchase.quantity as number) > 0;
   const hasOrigin = Boolean(snapshot.purchase?.origin);
-  const hasNcm = ncm.length >= 4 && (snapshot.status === "resolved" || snapshot.status === "tentative");
+  const statusOk = snapshot.status === "resolved" || snapshot.status === "tentative";
 
   if (!hasPrice) {
     return NextResponse.json(
@@ -50,9 +49,9 @@ export async function POST(req: Request) {
       { status: 400 }
     );
   }
-  if (!hasNcm) {
+  if (!statusOk) {
     return NextResponse.json(
-      { error: "Faltan datos para armar el presupuesto. Completá la clasificación NCM con el analista." },
+      { error: "Todavía estamos clasificando el producto. Esperá un momento." },
       { status: 400 }
     );
   }

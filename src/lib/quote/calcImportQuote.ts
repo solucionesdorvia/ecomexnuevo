@@ -416,7 +416,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     derechosMax = cifMax2 * estimRate;
     impuestosMin = derechosMin;
     impuestosMax = derechosMax;
-    impuestosDetail = "Estimación fija del 18% sobre CIF (sin tasas oficiales PCRAM disponibles).";
+    impuestosDetail = "Estimación orientativa. Se confirma con la clasificación arancelaria definitiva.";
   }
 
   // Local/operational costs in destination (USD). Your PDFs include these explicitly.
