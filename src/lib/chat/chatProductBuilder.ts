@@ -19,8 +19,34 @@ import {
   extractVehicleInferenceFromText,
   vehicleInferenceToHintsText,
 } from "@/lib/ai/vehicleExtractor";
+import { estimateProductWeight } from "@/lib/ai/productWeightEstimator";
+
+// Umbral de confianza para auto-completar el peso sin preguntarle al usuario.
+const WEIGHT_AUTO_FILL_CONFIDENCE = 0.7;
 
 type ProductLike = Record<string, unknown>;
+
+async function tryAutoFillWeight(product: ProductLike): Promise<void> {
+  // Si ya tiene peso (del scraper o del usuario), no sobreescribir.
+  if (typeof product.weightKgPerUnit === "number" && (product.weightKgPerUnit as number) > 0) return;
+
+  const title = String(product.title ?? "").trim();
+  if (!title) return;
+
+  const ncm = typeof product.ncm === "string" ? (product.ncm as string) : undefined;
+
+  const estimate = await estimateProductWeight(title, ncm).catch(() => null);
+  if (!estimate) return;
+
+  if (estimate.confidence >= WEIGHT_AUTO_FILL_CONFIDENCE) {
+    product.weightKgPerUnit = estimate.weightKgPerUnit;
+    product.raw = {
+      ...((product.raw as ProductLike) ?? {}),
+      weightSource: estimate.source,
+      weightConfidence: estimate.confidence,
+    };
+  }
+}
 
 export async function buildProductFromInput(inputText: string): Promise<ProductLike> {
   const url = extractUrl(inputText);
@@ -57,6 +83,7 @@ export async function buildProductFromInput(inputText: string): Promise<ProductL
       p.quantity = 1;
     }
 
+    await tryAutoFillWeight(p);
     return p;
   }
 
@@ -127,6 +154,7 @@ export async function buildProductFromInput(inputText: string): Promise<ProductL
   }
 
   maybeAutoResolveKnownVehicle(base);
+  await tryAutoFillWeight(base);
   return base;
 }
 

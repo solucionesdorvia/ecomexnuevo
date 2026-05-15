@@ -174,7 +174,7 @@ export function inferVehicleDefaultsFromTitle(title: string) {
   const isPickup =
     /\b(pickup|pick up|pick-up)\b/.test(t) ||
     /\b(camioneta|utilitario)\b/.test(t) ||
-    /\b(hilux|ranger|amarok|frontier|navara|np300|l200|triton|dmax|d max|s10|s 10)\b/.test(t);
+    /\b(hilux|ranger|amarok|frontier|navara|np300|l200|triton|dmax|d max|s10|s 10|maverick|f-150|f150|f 150|toro|oroch|alaskan|montana|strada)\b/.test(t);
 
   if (!isPickup) return null;
   if (mentionsVolquete || mentionsChasis) return null;
