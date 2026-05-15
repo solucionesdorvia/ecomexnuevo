@@ -1,4 +1,5 @@
 import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
+import { detectOriginZone, estimateUnitDimensions, calcFreightCost } from "./freightRates";
 
 export type QuoteCard = {
   label:
@@ -21,6 +22,7 @@ type ScrapedProduct = {
   ncm?: string;
   fobUsd?: number;
   quantity?: number;
+  weightKgPerUnit?: number;
   currency?: string;
   price?: {
     type: "single" | "range" | "unknown";
@@ -66,17 +68,6 @@ function parseBudgetUsd(text: string): number | null {
   return n;
 }
 
-function estimateFobFromText(text: string): number | null {
-  // If user mentions a unit price, capture it as FOB-ish baseline.
-  const t = text.replaceAll(".", "").replaceAll(",", ".");
-  const m =
-    t.match(/(?:usd|\$)\s*([0-9]+(?:\.[0-9]+)?)/i) ??
-    t.match(/([0-9]+(?:\.[0-9]+)?)\s*(?:usd|dolares|dólares)/i);
-  if (!m) return null;
-  const n = Number(m[1]);
-  if (!Number.isFinite(n) || n <= 0) return null;
-  return n;
-}
 
 function clamp(n: number, a: number, b: number) {
   return Math.max(a, Math.min(b, n));
@@ -265,8 +256,11 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   const fobGuess =
     (explicitRange ? (explicitRange.min + explicitRange.max) / 2 : undefined) ??
     fobUsdFromProduct ??
-    estimateFobFromText(inputs.rawUserText) ??
-    120; // default unit FOB
+    null;
+
+  if (fobGuess === null) {
+    throw new Error("NO_PRICE: no se proporcionó precio unitario.");
+  }
 
   const fobUnitMin = explicitRange ? explicitRange.min : fobGuess;
   const fobUnitMax = explicitRange ? explicitRange.max : fobGuess;
@@ -275,14 +269,19 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   const fobTotalMax = fobUnitMax * qty;
   const fobTotal = fobGuess * qty;
 
-  // Freight: calculated on TOTAL FOB, not per-unit
-  // Typical maritime freight: 15%-35% of FOB for most goods, with minimums for small shipments
-  const shippingProfile = String((inputs.product.raw as any)?.shippingProfile ?? "").toLowerCase();
-  const freightPctMin = shippingProfile === "light" ? 0.12 : shippingProfile === "heavy" ? 0.25 : 0.15;
-  const freightPctMax = shippingProfile === "light" ? 0.25 : shippingProfile === "heavy" ? 0.50 : 0.35;
-
-  const fleteMin = clamp(fobTotalMin * freightPctMin, 200, 15000);
-  const fleteMax = clamp(fobTotalMax * freightPctMax, 400, 35000);
+  // Freight: real rates from freight table
+  const zone = detectOriginZone(origin);
+  const unitDim = estimateUnitDimensions(ncm, title);
+  const userWeightKg = typeof inputs.product.weightKgPerUnit === "number" && inputs.product.weightKgPerUnit > 0
+    ? inputs.product.weightKgPerUnit
+    : null;
+  const totalKg = userWeightKg != null ? userWeightKg * qty : unitDim.kg * qty;
+  // Escala m3 proporcionalmente al peso real si el usuario lo proveyó
+  const m3Scale = userWeightKg != null && unitDim.kg > 0 ? userWeightKg / unitDim.kg : 1;
+  const totalM3 = unitDim.m3 * qty * m3Scale;
+  const freight = calcFreightCost(zone, totalKg, totalM3);
+  const fleteMin = freight.totalUsd;
+  const fleteMax = freight.totalUsd;
 
   const cifMin = fobTotalMin + fleteMin;
   const cifMax = fobTotalMax + fleteMax;
@@ -411,22 +410,13 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       .filter(Boolean)
       .join(" ");
   } else {
-    // Taxes: simplified heuristic when we don't have official rates.
-    const dutyRateMin = ncm ? 0.08 : 0.12;
-    const dutyRateMax = ncm ? 0.18 : 0.28;
-
-    derechosMin = cifMin * dutyRateMin;
-    derechosMax = cifMax * dutyRateMax;
-
-    // VAT-like layer over CIF+duty (simplified)
-    ivaMin = (cifMin + derechosMin) * 0.21;
-    ivaMax = (cifMax + derechosMax) * 0.31; // incl. additional/perceptions estimate
-
-    impuestosMin = derechosMin + ivaMin;
-    impuestosMax = derechosMax + ivaMax;
-
-    impuestosDetail =
-      "Estimación preliminar. Se afina con datos técnicos del producto, origen y documentación.";
+    // Sin tasas PCRAM: estimación fija del 18% sobre CIF.
+    const estimRate = 0.18;
+    derechosMin = cifMin2 * estimRate;
+    derechosMax = cifMax2 * estimRate;
+    impuestosMin = derechosMin;
+    impuestosMax = derechosMax;
+    impuestosDetail = "Estimación fija del 18% sobre CIF (sin tasas oficiales PCRAM disponibles).";
   }
 
   // Local/operational costs in destination (USD). Your PDFs include these explicitly.
@@ -438,23 +428,20 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     (typeof hsNum === "number" && hsNum >= 8400 && hsNum <= 8999) ||
     /\b(maquin|machine|industrial|cnc|cortad|cortadora|sierra|stone|piedra)\b/i.test(titleNorm);
 
-  // Defaults tuned to match real-world “presupuestos armados”.
-  const honorariosMin = isIndustrialMachinery ? 700 : 350;
-  const honorariosMax = isIndustrialMachinery ? 700 : 700;
+  // Tasas reales de gestión/despacho (provistas por el encargado de CE).
+  // Honorarios: 1% del valor FOB total. Gastos operativos: USD 200 fijo.
+  const GASTOS_OPERATIVOS = 200;
+  const honorariosMin = round2(fobTotalMin * 0.01);
+  const honorariosMax = round2(fobTotalMax * 0.01);
+  const depositoMin = GASTOS_OPERATIVOS;
+  const depositoMax = GASTOS_OPERATIVOS;
+  const transporteNacMin = 0;
+  const transporteNacMax = 0;
+  const transferenciaMin = 0;
+  const transferenciaMax = 0;
 
-  const depositoMin = isIndustrialMachinery ? 1500 : 450;
-  const depositoMax = isIndustrialMachinery ? 1500 : 1800;
-
-  const transporteNacMin = isIndustrialMachinery ? 600 : 200;
-  const transporteNacMax = isIndustrialMachinery ? 600 : 1000;
-
-  const transferenciaMin = isIndustrialMachinery ? 350 : 120;
-  const transferenciaMax = isIndustrialMachinery ? 350 : 600;
-
-  const gestionMin =
-    honorariosMin + depositoMin + transporteNacMin + transferenciaMin;
-  const gestionMax =
-    honorariosMax + depositoMax + transporteNacMax + transferenciaMax;
+  const gestionMin = honorariosMin + GASTOS_OPERATIVOS;
+  const gestionMax = honorariosMax + GASTOS_OPERATIVOS;
 
   const totalMin = cifMin + impuestosMin + gestionMin;
   const totalMax = cifMax + impuestosMax + gestionMax;
@@ -498,24 +485,17 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     },
     {
       id: "freight",
-      label: "Flete marítimo",
-      value:
-        shippingProfile === "light"
-          ? "Estimado (perfil liviano)"
-          : shippingProfile === "heavy"
-            ? "Estimado (perfil pesado)"
-            : "Estimado (perfil medio)",
+      label: "Flete",
+      value: freight.label,
       source: "estimate",
-      tone: "muted",
+      tone: "primary",
     },
     {
       id: "ops",
-      label: "Operativos locales",
-      value: isIndustrialMachinery
-        ? "Defaults industriales (puerto + transporte + transferencia)"
-        : "Defaults (puerto + transporte + transferencia)",
-      source: "estimate",
-      tone: "muted",
+      label: "Gestión",
+      value: "1% FOB honorarios + USD 200 gastos operativos",
+      source: "user",
+      tone: "success",
     },
   ];
 
@@ -526,8 +506,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     if (ncm) q += 18;
     if (pcramTaxes) q += 18;
     if (origin !== "Origen a confirmar") q += 8;
-    if (shippingProfile === "light" || shippingProfile === "heavy") q += 6;
-    // If we detected industrial machinery, we at least applied more realistic ops defaults.
+    if (zone !== "OTHER") q += 6;
     if (isIndustrialMachinery) q += 6;
     return Math.max(0, Math.min(100, q));
   })();
@@ -574,11 +553,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     },
     {
       label: "Flete internacional",
-      value: moneyRange(round2(fleteMin), round2(fleteMax)),
-      detail:
-        qty === 1
-          ? "Estimación marítima por unidad. Depende de peso/volumen y ruta."
-          : `Estimación marítima total para ${qty} unidades (depende de CBM/peso).`,
+      value: money(round2(freight.totalUsd)),
+      detail: freight.detail,
     },
     {
       label: "Impuestos argentinos",
@@ -587,11 +563,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     },
     {
       label: "Gestión / despacho",
-      value: moneyRange(gestionMin, gestionMax),
-      detail:
-        isIndustrialMachinery
-          ? "Incluye honorarios, depósito/puerto, transporte nacional y transferencia internacional."
-          : "Incluye honorarios, documental y operativos típicos (depósito/puerto, transporte local, transferencia).",
+      value: moneyRange(round2(gestionMin), round2(gestionMax)),
+      detail: `Honorarios (1% FOB = ${money(round2((honorariosMin + honorariosMax) / 2))}) + Gastos operativos (USD ${GASTOS_OPERATIVOS} fijo).`,
     },
     {
       label: "Total puesto en Argentina",
@@ -601,7 +574,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     },
     {
       label: "Tiempos estimados",
-      value: "Marítimo: 35–55 días",
+      value: freight.mode.startsWith("air") ? "Aéreo: 7–14 días" : "Marítimo: 35–55 días",
       detail: "Incluye origen, consolidación, tránsito y aduana (rango típico).",
     },
   ];

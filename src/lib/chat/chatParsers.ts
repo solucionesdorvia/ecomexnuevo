@@ -250,6 +250,22 @@ export function looksLikeContact(text: string) {
   return email || phone;
 }
 
+export function parseWeightKg(text: string): number | null {
+  const raw = String(text || "").trim();
+  if (!raw) return null;
+  const mKg = raw.match(/([0-9]+(?:[.,][0-9]+)?)\s*(?:kg|kilos?|kilogramos?)\b/i);
+  if (mKg) {
+    const n = parseFloat(mKg[1]!.replace(",", "."));
+    return Number.isFinite(n) && n > 0 ? n : null;
+  }
+  const mG = raw.match(/([0-9]+(?:[.,][0-9]+)?)\s*(?:gr?|gramos?)\b/i);
+  if (mG) {
+    const n = parseFloat(mG[1]!.replace(",", ".")) / 1000;
+    return Number.isFinite(n) && n > 0 ? n : null;
+  }
+  return null;
+}
+
 export function contactChannel(text: string): "email" | "whatsapp" | "unknown" {
   const t = text.trim();
   if (/[^\s@]+@[^\s@]+\.[^\s@]+/.test(t)) return "email";

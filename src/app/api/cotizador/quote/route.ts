@@ -27,16 +27,32 @@ export async function POST(req: Request) {
   }
 
   const ncm = typeof snapshot.recommendedNcm === "string" ? snapshot.recommendedNcm.trim() : "";
-  const hasPurchaseData = Boolean(
-    snapshot.purchase?.fobUnitUsd && snapshot.purchase?.quantity && snapshot.purchase?.origin
-  );
-  const ready =
-    (ncm.length >= 4 && (snapshot.status === "resolved" || snapshot.status === "tentative")) ||
-    (hasPurchaseData && (snapshot.status === "resolved" || snapshot.status === "tentative"));
+  const hasPrice = typeof snapshot.purchase?.fobUnitUsd === "number" && (snapshot.purchase.fobUnitUsd as number) > 0;
+  const hasQuantity = typeof snapshot.purchase?.quantity === "number" && (snapshot.purchase.quantity as number) > 0;
+  const hasOrigin = Boolean(snapshot.purchase?.origin);
+  const hasNcm = ncm.length >= 4 && (snapshot.status === "resolved" || snapshot.status === "tentative");
 
-  if (!ready) {
+  if (!hasPrice) {
     return NextResponse.json(
-      { error: "Faltan datos para armar el presupuesto. Completá precio, cantidad y origen con el analista." },
+      { error: "Falta el precio unitario (FOB). Ingresalo antes de cotizar." },
+      { status: 400 }
+    );
+  }
+  if (!hasQuantity) {
+    return NextResponse.json(
+      { error: "Falta la cantidad a importar. Ingresala antes de cotizar." },
+      { status: 400 }
+    );
+  }
+  if (!hasOrigin) {
+    return NextResponse.json(
+      { error: "Falta el origen del producto. Ingresalo antes de cotizar." },
+      { status: 400 }
+    );
+  }
+  if (!hasNcm) {
+    return NextResponse.json(
+      { error: "Faltan datos para armar el presupuesto. Completá la clasificación NCM con el analista." },
       { status: 400 }
     );
   }
@@ -48,11 +64,20 @@ export async function POST(req: Request) {
   );
 
   type QuoteProductInput = Extract<Parameters<typeof calcImportQuote>[0], { mode: "quote" }>["product"];
-  const quote = await calcImportQuote({
-    mode: "quote",
-    product: enrichedProduct as unknown as QuoteProductInput,
-    rawUserText: userText,
-  });
+  let quote: Awaited<ReturnType<typeof calcImportQuote>>;
+  try {
+    quote = await calcImportQuote({
+      mode: "quote",
+      product: enrichedProduct as unknown as QuoteProductInput,
+      rawUserText: userText,
+    });
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "Error inesperado.";
+    if (msg.startsWith("NO_PRICE")) {
+      return NextResponse.json({ error: "Falta el precio unitario. Ingresalo antes de cotizar." }, { status: 400 });
+    }
+    throw e;
+  }
 
   const cookieStore = await cookies();
   const secure = process.env.NODE_ENV === "production";

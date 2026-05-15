@@ -25,6 +25,7 @@ import {
   isAffirmative,
   consultingPostQuoteMessage,
   cleanProductTitleFromMixedInput,
+  parseWeightKg,
 } from "@/lib/chat/chatParsers";
 
 import {
@@ -217,7 +218,7 @@ export async function POST(req: Request) {
         where: {
           anonId,
           mode: "quote",
-          stage: { in: ["awaiting_product", "awaiting_price", "awaiting_quantity"] },
+          stage: { in: ["awaiting_product", "awaiting_price", "awaiting_quantity", "awaiting_weight"] },
         },
         orderBy: { createdAt: "desc" },
       })
@@ -242,6 +243,8 @@ export async function POST(req: Request) {
       const qLoose = parseQuantityWithMode(userTextSansUrl, { allowBareNumber: true });
       if (typeof qLoose === "number") quantity = qLoose;
     }
+
+    const weightKg = parseWeightKg(userTextSansUrl);
 
     const disagreesWithNcm = looksLikeNcmDisagreement(userTextSansUrl);
     const explicitNcm = disagreesWithNcm ? null : extractNcmFromText(userTextSansUrl);
@@ -314,6 +317,15 @@ export async function POST(req: Request) {
           product2,
           { stage: "needs_verified_inputs", questions: noGuessGate.questions }
         );
+      }
+
+      if (typeof product2.weightKgPerUnit !== "number") {
+        if (quoteRowId) {
+          await prisma.quote.update({ where: { id: quoteRowId }, data: { productJson: product2 as never, stage: "awaiting_weight" } }).catch(() => null);
+        } else {
+          await prisma.quote.create({ data: { anonId, mode: "quote", userText, sourceUrl: urlInText ?? undefined, productJson: product2 as never, quoteJson: { awaiting: "weight" } as never, stage: "awaiting_weight", userId: userId ?? undefined } }).catch(() => null);
+        }
+        return ask("¿Cuál es el **peso aproximado** de la mercadería por unidad? (ej: `2 kg`, `500 gramos`)", product2);
       }
 
       const quote = await calcImportQuote({ mode: "quote", product: product2, rawUserText: userText });
@@ -441,6 +453,7 @@ export async function POST(req: Request) {
 
       if (typeof priceUsd === "number") { product.fobUsd = priceUsd; product.currency = "USD"; }
       if (typeof quantity === "number") { product.quantity = quantity; }
+      if (typeof weightKg === "number") { product.weightKgPerUnit = weightKg; }
 
       if (active.stage === "awaiting_product") {
         if (disagreesWithNcm) {
@@ -704,6 +717,15 @@ export async function POST(req: Request) {
         return await quoteAndRespond(active.id, product);
       }
 
+      if (active.stage === "awaiting_weight") {
+        if (typeof weightKg === "number") {
+          product.weightKgPerUnit = weightKg;
+          await prisma.quote.update({ where: { id: active.id }, data: { productJson: product as never } }).catch(() => null);
+          return await quoteAndRespond(active.id, product);
+        }
+        return ask("Necesito el **peso aproximado por unidad** para calcular el flete. Ej: `2 kg`, `500 gramos`.", product);
+      }
+
       if (active.stage === "awaiting_quantity") {
         const qNow = userProvidedUnitPrice(userTextSansUrl)
           ? null
@@ -745,6 +767,10 @@ export async function POST(req: Request) {
         if (typeof product.fobUsd !== "number") {
           await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_price" } }).catch(() => null);
           return ask("Antes de calcular, decime el **precio unitario en USD**. Ej: `USD 120`.", product);
+        }
+        if (typeof product.weightKgPerUnit !== "number") {
+          await prisma.quote.update({ where: { id: active.id }, data: { productJson: product as never, stage: "awaiting_weight" } }).catch(() => null);
+          return ask("Perfecto. ¿Cuál es el **peso aproximado** de la mercadería por unidad? (ej: `2 kg`, `500 gramos`)", product);
         }
         return await quoteAndRespond(active.id, product);
       }
@@ -814,9 +840,22 @@ export async function POST(req: Request) {
       return ask("Perfecto. ¿Cuál es la **cantidad** a importar? (ej: `500 unidades`)", built);
     }
 
+    if (typeof built.weightKgPerUnit !== "number") {
+      await prisma.quote.create({
+        data: { anonId, mode: "quote", userText, sourceUrl: url ?? undefined, productJson: built as never, quoteJson: { awaiting: "weight" } as never, stage: "awaiting_weight", userId: userId ?? undefined },
+      }).catch(() => null);
+      return ask("Perfecto. ¿Cuál es el **peso aproximado** de la mercadería por unidad? (ej: `2 kg`, `500 gramos`)", built);
+    }
+
     return await quoteAndRespond(null, built);
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Error inesperado.";
+    if (msg.startsWith("NO_PRICE")) {
+      return NextResponse.json({
+        assistantMessage: "Para calcular el total necesito el **precio unitario en USD**. ¿Cuánto vale cada unidad? (ej: `USD 120`)",
+        requestContact: false,
+      });
+    }
     return NextResponse.json(
       { assistantMessage: `No pude procesar tu solicitud. ${msg}` },
       { status: 500 }
