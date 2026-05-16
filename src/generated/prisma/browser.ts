@@ -33,6 +33,12 @@ export type Lead = Prisma.LeadModel
  */
 export type User = Prisma.UserModel
 /**
+ * Model UserDocument
+ * Documentos subidos por el usuario en la sección Configuración.
+ * Quedan disponibles para ser adjuntados a sus operaciones.
+ */
+export type UserDocument = Prisma.UserDocumentModel
+/**
  * Model OperatorBudget
  * 
  */

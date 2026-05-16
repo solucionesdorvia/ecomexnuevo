@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type DocCategory = {
   id: string;
@@ -169,6 +169,24 @@ function FileRow({
 export function DocumentUploader() {
   const [uploaded, setUploaded] = useState<Record<string, UploadedDoc>>({});
   const [openCat, setOpenCat] = useState<string>(CATEGORIES[0]!.id);
+  const [loading, setLoading] = useState(true);
+
+  // Carga los documentos ya subidos al montar el componente.
+  useEffect(() => {
+    fetch("/api/user/documents", { credentials: "include" })
+      .then((r) => r.json())
+      .then((json: { ok?: boolean; documents?: Array<{ docType: string; name: string; url: string; createdAt: string }> }) => {
+        if (json.ok && Array.isArray(json.documents)) {
+          const map: Record<string, UploadedDoc> = {};
+          for (const d of json.documents) {
+            map[d.docType] = { docType: d.docType, name: d.name, url: d.url, at: new Date(d.createdAt).getTime() };
+          }
+          setUploaded(map);
+        }
+      })
+      .catch(() => {/* silencioso */})
+      .finally(() => setLoading(false));
+  }, []);
 
   async function handleUpload(docType: string, file: File) {
     const fd = new FormData();
@@ -189,6 +207,18 @@ export function DocumentUploader() {
 
   const totalUploaded = Object.keys(uploaded).length;
   const totalDocs = CATEGORIES.reduce((a, c) => a + c.docs.length, 0);
+
+  if (loading) {
+    return (
+      <div className="flex items-center gap-2 py-6 text-[13px] text-[#555c6b]">
+        <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden>
+          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+        </svg>
+        Cargando documentos…
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-3">

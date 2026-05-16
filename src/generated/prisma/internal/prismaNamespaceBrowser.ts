@@ -54,6 +54,7 @@ export const ModelName = {
   Quote: 'Quote',
   Lead: 'Lead',
   User: 'User',
+  UserDocument: 'UserDocument',
   OperatorBudget: 'OperatorBudget',
   QuoteComment: 'QuoteComment',
   AuditLog: 'AuditLog',
@@ -125,6 +126,18 @@ export const UserScalarFieldEnum = {
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+
+
+export const UserDocumentScalarFieldEnum = {
+  id: 'id',
+  createdAt: 'createdAt',
+  userId: 'userId',
+  docType: 'docType',
+  name: 'name',
+  url: 'url'
+} as const
+
+export type UserDocumentScalarFieldEnum = (typeof UserDocumentScalarFieldEnum)[keyof typeof UserDocumentScalarFieldEnum]
 
 
 export const OperatorBudgetScalarFieldEnum = {

@@ -108,6 +108,22 @@ model User {
   suppliers  Supplier[]
 
   notifications Notification[]
+  userDocuments UserDocument[]
+}
+
+/// Documentos subidos por el usuario en la sección Configuración.
+/// Quedan disponibles para ser adjuntados a sus operaciones.
+model UserDocument {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  docType   String   // id del tipo de documento (ej. "cuit", "factura_proforma")
+  name      String   // nombre original del archivo
+  url       String   // URL en Blob o ruta local
+
+  @@index([userId, docType])
 }
 
 model OperatorBudget {

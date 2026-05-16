@@ -8,13 +8,34 @@ import {
 import { mkdir, writeFile } from "fs/promises";
 import path from "path";
 import { Buffer } from "node:buffer";
+import { prisma } from "@/lib/db";
 
 export const runtime = "nodejs";
 
-export async function POST(req: Request) {
+async function getAuth() {
   const cookieStore = await cookies();
   const token = cookieStore.get("ecomex_auth")?.value ?? null;
   const auth = token ? await verifyAuthToken(token) : null;
+  return auth;
+}
+
+export async function GET() {
+  const auth = await getAuth();
+  if (!auth?.sub) {
+    return NextResponse.json({ ok: false, error: "No autenticado." }, { status: 401 });
+  }
+
+  const docs = await prisma.userDocument.findMany({
+    where: { userId: auth.sub },
+    orderBy: { createdAt: "asc" },
+    select: { docType: true, name: true, url: true, createdAt: true },
+  });
+
+  return NextResponse.json({ ok: true, documents: docs });
+}
+
+export async function POST(req: Request) {
+  const auth = await getAuth();
   if (!auth?.sub) {
     return NextResponse.json({ ok: false, error: "No autenticado." }, { status: 401 });
   }
@@ -59,6 +80,10 @@ export async function POST(req: Request) {
   } else {
     url = await saveLocal(auth.sub, docType, unique, bytes);
   }
+
+  // Reemplaza si ya existe uno del mismo tipo (un doc por tipo por usuario).
+  await prisma.userDocument.deleteMany({ where: { userId: auth.sub, docType } });
+  await prisma.userDocument.create({ data: { userId: auth.sub, docType, name: file.name, url } });
 
   return NextResponse.json({ ok: true, url, name: file.name, docType });
 }

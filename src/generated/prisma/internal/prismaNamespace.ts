@@ -387,6 +387,7 @@ export const ModelName = {
   Quote: 'Quote',
   Lead: 'Lead',
   User: 'User',
+  UserDocument: 'UserDocument',
   OperatorBudget: 'OperatorBudget',
   QuoteComment: 'QuoteComment',
   AuditLog: 'AuditLog',
@@ -410,7 +411,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "quote" | "lead" | "user" | "operatorBudget" | "quoteComment" | "auditLog" | "operation" | "notification" | "supplier" | "operationDocument" | "operationEvent"
+    modelProps: "quote" | "lead" | "user" | "userDocument" | "operatorBudget" | "quoteComment" | "auditLog" | "operation" | "notification" | "supplier" | "operationDocument" | "operationEvent"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -633,6 +634,80 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         count: {
           args: Prisma.UserCountArgs<ExtArgs>
           result: runtime.Types.Utils.Optional<Prisma.UserCountAggregateOutputType> | number
+        }
+      }
+    }
+    UserDocument: {
+      payload: Prisma.$UserDocumentPayload<ExtArgs>
+      fields: Prisma.UserDocumentFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.UserDocumentFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$UserDocumentPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.UserDocumentFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$UserDocumentPayload>
+        }
+        findFirst: {
+          args: Prisma.UserDocumentFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$UserDocumentPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.UserDocumentFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$UserDocumentPayload>
+        }
+        findMany: {
+          args: Prisma.UserDocumentFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$UserDocumentPayload>[]
+        }
+        create: {
+          args: Prisma.UserDocumentCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$UserDocumentPayload>
+        }
+        createMany: {
+          args: Prisma.UserDocumentCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.UserDocumentCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$UserDocumentPayload>[]
+        }
+        delete: {
+          args: Prisma.UserDocumentDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$UserDocumentPayload>
+        }
+        update: {
+          args: Prisma.UserDocumentUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$UserDocumentPayload>
+        }
+        deleteMany: {
+          args: Prisma.UserDocumentDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.UserDocumentUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.UserDocumentUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$UserDocumentPayload>[]
+        }
+        upsert: {
+          args: Prisma.UserDocumentUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$UserDocumentPayload>
+        }
+        aggregate: {
+          args: Prisma.UserDocumentAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateUserDocument>
+        }
+        groupBy: {
+          args: Prisma.UserDocumentGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.UserDocumentGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.UserDocumentCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.UserDocumentCountAggregateOutputType> | number
         }
       }
     }
@@ -1314,6 +1389,18 @@ export const UserScalarFieldEnum = {
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
 
 
+export const UserDocumentScalarFieldEnum = {
+  id: 'id',
+  createdAt: 'createdAt',
+  userId: 'userId',
+  docType: 'docType',
+  name: 'name',
+  url: 'url'
+} as const
+
+export type UserDocumentScalarFieldEnum = (typeof UserDocumentScalarFieldEnum)[keyof typeof UserDocumentScalarFieldEnum]
+
+
 export const OperatorBudgetScalarFieldEnum = {
   id: 'id',
   createdAt: 'createdAt',
@@ -1698,6 +1785,7 @@ export type GlobalOmitConfig = {
   quote?: Prisma.QuoteOmit
   lead?: Prisma.LeadOmit
   user?: Prisma.UserOmit
+  userDocument?: Prisma.UserDocumentOmit
   operatorBudget?: Prisma.OperatorBudgetOmit
   quoteComment?: Prisma.QuoteCommentOmit
   auditLog?: Prisma.AuditLogOmit
