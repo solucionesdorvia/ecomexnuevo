@@ -9,12 +9,14 @@ export default function AuthForm({
   alternateHref,
   alternateLabel,
   submitLabel,
+  redirectTo,
 }: {
   title: string;
   endpoint: "/api/auth/login" | "/api/auth/register";
   submitLabel: string;
   alternateHref: string;
   alternateLabel: string;
+  redirectTo?: string;
 }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -35,7 +37,12 @@ export default function AuthForm({
       if (!res.ok || !json.ok) {
         throw new Error(json.error ?? "Error al iniciar sesión.");
       }
-      window.location.href = "/app";
+      // Si hay redirectTo válido (path interno), usarlo; sino /app
+      const dest =
+        redirectTo && redirectTo.startsWith("/") && !redirectTo.startsWith("//")
+          ? redirectTo
+          : "/app";
+      window.location.href = dest;
     } catch (e) {
       setError(e instanceof Error ? e.message : "Error.");
     } finally {

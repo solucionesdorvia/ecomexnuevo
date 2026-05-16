@@ -4,7 +4,17 @@ import AuthForm from "../ui/AuthForm";
 export const runtime = "nodejs";
 export const metadata = { title: "Iniciar sesión — E-COMEX" };
 
-export default function LoginPage() {
+export default function LoginPage({
+  searchParams,
+}: {
+  searchParams?: Record<string, string | string[] | undefined>;
+}) {
+  const nextPath =
+    typeof searchParams?.next === "string" && searchParams.next.startsWith("/")
+      ? searchParams.next
+      : typeof searchParams?.redirect === "string" && searchParams.redirect.startsWith("/")
+        ? searchParams.redirect
+        : undefined;
   return (
     <div className="min-h-screen bg-[#07111A] text-white" style={{ fontFamily: "var(--font-body, 'Inter', sans-serif)" }}>
       {/* Navbar */}
@@ -28,8 +38,9 @@ export default function LoginPage() {
             title="Iniciar sesión"
             endpoint="/api/auth/login"
             submitLabel="Entrar"
-            alternateHref="/account/register"
+            alternateHref={nextPath ? `/account/register?next=${encodeURIComponent(nextPath)}` : "/account/register"}
             alternateLabel="Crear cuenta"
+            redirectTo={nextPath}
           />
         </div>
       </main>

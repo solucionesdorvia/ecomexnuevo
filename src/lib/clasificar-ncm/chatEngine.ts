@@ -585,23 +585,17 @@ export async function processClasificarTurn(opts: {
 
   /**
    * Ejecutar motor NCM si:
-   *  (a) el analista marcó ready y no hay questions_next pendientes,
-   *  (b) el analista marcó ready Y tenemos todos los datos comerciales
-   *      (aunque haya questions secundarias como "¿uso personal o venta?"
-   *      que no afectan la clasificación arancelaria),
-   *  (c) tenemos todos los datos comerciales y el analista no generó
-   *      preguntas de clasificación (ready = false pero olvidó marcarlo),
-   *  (d) el usuario explícitamente pidió avanzar (calculalo/listo/etc.)
-   *      y ya tenemos los datos comerciales completos.
+   *  (a) tenemos todos los datos comerciales (FOB + cantidad + origen) — esto
+   *      es suficiente por sí solo, el analista ya hizo su trabajo,
+   *  (b) o el analista marcó ready y no hay questions_next pendientes.
+   *
+   * La regla de oro: dataComplete es la señal definitiva. No importa que el
+   * analista todavía devuelva ready=false o questions_next=[...]: cuando los
+   * tres datos comerciales están disponibles, avanzamos al clasificador.
    */
   const runPipeline =
     techText.length >= 12 &&
-    (
-      (ready && questions.length === 0) ||
-      (ready && dataComplete) ||
-      (dataComplete && questions.length === 0) ||
-      (userWantsToClose && dataComplete)
-    );
+    (dataComplete || (ready && questions.length === 0));
 
   if (!runPipeline) {
     // Cerramos como tentativo SÓLO si ya tenemos NCM + datos comerciales completos.
@@ -723,10 +717,10 @@ export async function processClasificarTurn(opts: {
      * ("calculalo", "listo", "dale", etc.) — aunque haya questions_next
      * pendientes en el LLM analista (suelen ser confirmaciones).
      */
-    if (dataComplete && (questions.length === 0 || userWantsToClose || ready)) {
-      // Cuando tenemos todos los datos comerciales y el analista está listo (o el
-      // usuario cerró explícitamente), descartamos las preguntas secundarias del
-      // analista (uso personal, venta, etc.) que no afectan la clasificación NCM.
+    if (dataComplete) {
+      // Con todos los datos comerciales ya disponibles, descartamos preguntas
+      // secundarias del analista (uso personal, venta, confirmaciones) que no
+      // afectan la clasificación NCM. El usuario ya aportó lo necesario.
       snap.pendingQuestions = undefined;
       snap.ambiguity = undefined;
       if (snap.recommendedNcm) {

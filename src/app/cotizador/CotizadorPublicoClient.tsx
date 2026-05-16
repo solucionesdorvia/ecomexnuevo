@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useMemo, useState } from "react";
-import { ArrowRight, Check, CheckCircle, Download, Phone, X } from "lucide-react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { ArrowRight, Check, CheckCircle, Download, LogIn, Phone, UserPlus, X } from "lucide-react";
 import { useClasificarChat } from "@/app/clasificarncm/hooks/useClasificarChat";
 import { ChatContainer } from "@/app/clasificarncm/components/ChatContainer";
 import { ChatInput } from "@/app/clasificarncm/components/ChatInput";
@@ -144,6 +144,15 @@ export default function CotizadorPublicoClient() {
   const [expertError, setExpertError] = useState<string | null>(null);
   const [qualChecked, setQualChecked] = useState(QUALIFICATIONS.map(() => false));
   const allQualified = qualChecked.every(Boolean);
+  // null = loading, true = logged in, false = anonymous
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    fetch("/api/auth/session", { credentials: "include" })
+      .then((r) => r.json())
+      .then((json: { ok?: boolean }) => setIsLoggedIn(Boolean(json?.ok)))
+      .catch(() => setIsLoggedIn(false));
+  }, []);
 
   function toggleQual(i: number) {
     setQualChecked((prev) => prev.map((v, idx) => (idx === i ? !v : v)));
@@ -499,22 +508,54 @@ export default function CotizadorPublicoClient() {
                               <p className="text-[12px] leading-relaxed text-red-300">{expertError}</p>
                             </div>
                           ) : null}
-                          <button
-                            type="button"
-                            onClick={() => { setExpertError(null); void handleSendExpert(); }}
-                            disabled={!allQualified || expertSending}
-                            className="group flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#18C3D6] px-5 py-3 text-center text-[14px] font-semibold text-[#030712] transition hover:bg-[#15afc1] disabled:cursor-not-allowed disabled:opacity-40 sm:min-h-[44px]"
-                          >
-                            <Phone className="h-4 w-4" aria-hidden />
-                            {expertSending ? "Enviando…" : "Solicitar revisión formal de mi caso"}
-                            {!expertSending && (
-                              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
-                            )}
-                          </button>
-                          {!allQualified && (
-                            <p className="text-center text-[11px] text-slate-600">
-                              Confirmá los puntos anteriores para habilitar el envío
-                            </p>
+
+                          {/* Auth gate: si no está logueado y marcó todo → pedimos cuenta */}
+                          {allQualified && isLoggedIn === false ? (
+                            <div className="rounded-xl border border-[#18C3D6]/20 bg-[#18C3D6]/[0.06] px-4 py-4">
+                              <p className="text-[13px] font-semibold text-white">
+                                Necesitás una cuenta para continuar
+                              </p>
+                              <p className="mt-1 text-[12px] leading-relaxed text-slate-400">
+                                Tu cotización queda guardada y se vincula automáticamente a tu cuenta al registrarte o iniciar sesión.
+                              </p>
+                              <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+                                <Link
+                                  href={`/account/register?next=${encodeURIComponent("/cotizador")}`}
+                                  className="group flex min-h-[44px] flex-1 items-center justify-center gap-2 rounded-xl bg-[#18C3D6] px-4 py-2.5 text-[13px] font-semibold text-[#030712] transition hover:bg-[#15afc1]"
+                                >
+                                  <UserPlus className="h-4 w-4" aria-hidden />
+                                  Registrarme gratis
+                                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                                </Link>
+                                <Link
+                                  href={`/account/login?next=${encodeURIComponent("/cotizador")}`}
+                                  className="flex min-h-[44px] flex-1 items-center justify-center gap-2 rounded-xl border border-white/[0.12] px-4 py-2.5 text-[13px] font-medium text-slate-300 transition hover:border-white/[0.22] hover:text-white"
+                                >
+                                  <LogIn className="h-4 w-4" aria-hidden />
+                                  Ya tengo cuenta
+                                </Link>
+                              </div>
+                            </div>
+                          ) : (
+                            <>
+                              <button
+                                type="button"
+                                onClick={() => { setExpertError(null); void handleSendExpert(); }}
+                                disabled={!allQualified || expertSending || isLoggedIn === null}
+                                className="group flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#18C3D6] px-5 py-3 text-center text-[14px] font-semibold text-[#030712] transition hover:bg-[#15afc1] disabled:cursor-not-allowed disabled:opacity-40 sm:min-h-[44px]"
+                              >
+                                <Phone className="h-4 w-4" aria-hidden />
+                                {expertSending ? "Enviando…" : "Solicitar revisión formal de mi caso"}
+                                {!expertSending && (
+                                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                                )}
+                              </button>
+                              {!allQualified && (
+                                <p className="text-center text-[11px] text-slate-600">
+                                  Confirmá los puntos anteriores para habilitar el envío
+                                </p>
+                              )}
+                            </>
                           )}
                           <div className="flex gap-2">
                             <a
