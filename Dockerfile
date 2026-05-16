@@ -19,6 +19,8 @@ RUN npm run build
 ENV NODE_ENV=production
 
 # Railway sets PORT (often 8080). Next needs -p.
-# prisma migrate deploy aplica migraciones pendientes antes de arrancar.
-CMD ["sh", "-c", "npx prisma migrate deploy && npm run start -- -H 0.0.0.0 -p ${PORT:-3000}"]
+# Nota: las migraciones se aplican manualmente con "npx prisma db execute" o
+# "npx prisma migrate resolve" — NO bloquear el arranque con migrate deploy
+# porque Neon (serverless) agota el pg_advisory_lock antes de despertar.
+CMD ["sh", "-c", "npm run start -- -H 0.0.0.0 -p ${PORT:-3000}"]
 
