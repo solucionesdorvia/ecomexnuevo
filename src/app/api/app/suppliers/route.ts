@@ -27,7 +27,7 @@ function mapSupplier(s: {
     name: s.name,
     country: s.country,
     contact: s.contact,
-    createdAt: s.createdAt,
+    createdAt: s.createdAt.toISOString(),
     operationsCount: s._count.operations,
   };
 }

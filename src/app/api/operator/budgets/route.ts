@@ -66,7 +66,7 @@ export async function GET(req: Request) {
         ok: true,
         budget: {
           id: row.id,
-          createdAt: row.createdAt,
+          createdAt: row.createdAt.toISOString(),
           filename: row.filename,
           rubro: row.rubro,
           productTitle: row.productTitle,
@@ -97,7 +97,7 @@ export async function GET(req: Request) {
       const overrides = parsed?._overrides ?? {};
       return {
         id: r.id,
-        createdAt: r.createdAt,
+        createdAt: r.createdAt.toISOString(),
         filename: r.filename,
         rubro: r.rubro,
         productTitle: r.productTitle,
