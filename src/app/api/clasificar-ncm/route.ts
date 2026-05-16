@@ -1,11 +1,13 @@
 import { NextResponse } from "next/server";
 import { motorResultToTextPipelineResult } from "@/lib/clasificar-ncm/motorResultToTextPipelineResult";
 import { runNcmMotor } from "@/lib/clasificar-ncm/runNcmMotor";
+import { rateLimitByIp, RATE_LIMIT_MESSAGE } from "@/lib/rateLimit";
 import type { CaseSnapshot } from "@/lib/clasificar-ncm/types";
 
 export const runtime = "nodejs";
 
 const MAX_LEN = 60_000;
+const HOUR_MS = 60 * 60 * 1000;
 
 const idleSnapshot = (): CaseSnapshot => ({
   productType: "unknown",
@@ -17,6 +19,11 @@ const idleSnapshot = (): CaseSnapshot => ({
  * y devuelve el mismo shape histórico que `productFromTextPipeline` (`result`).
  */
 export async function POST(req: Request) {
+  const rl = rateLimitByIp(req, "ncm-sandbox", 20, HOUR_MS);
+  if (!rl.ok) {
+    return NextResponse.json({ ok: false, error: RATE_LIMIT_MESSAGE }, { status: 429 });
+  }
+
   try {
     const body = (await req.json().catch(() => null)) as { text?: unknown } | null;
     const text = typeof body?.text === "string" ? body.text.trim() : "";

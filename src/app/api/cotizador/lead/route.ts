@@ -1,10 +1,18 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
+import { rateLimitByIp } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
 
+const HOUR_MS = 60 * 60 * 1000;
+
 export async function POST(req: Request) {
+  const rl = rateLimitByIp(req, "lead", 10, HOUR_MS);
+  if (!rl.ok) {
+    return NextResponse.json({ ok: true }); // silencioso para no revelar el límite
+  }
+
   try {
     const body = (await req.json().catch(() => null)) as { email?: string } | null;
     const email = String(body?.email ?? "").trim().toLowerCase();

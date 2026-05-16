@@ -359,30 +359,71 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
   // Código NCM real (se muestra en la plantilla como "9506.91.00.139W").
   const productRaw = (quote.productJson ?? {}) as {
     ncm?: unknown;
-    raw?: { ncm?: unknown; pcram?: { title?: unknown } };
+    raw?: { ncm?: unknown; pcram?: { title?: unknown; breadcrumbs?: unknown; ramo?: unknown } };
   };
   const rawNcm = safeStr(productRaw?.ncm) || safeStr(productRaw?.raw?.ncm);
-  const classificationDesc =
-    safeStr(productRaw?.raw?.pcram?.title) ||
-    "Clasificación aduanera estimada internamente. Se valida con datos técnicos, origen, uso y requisitos antes de operar.";
   const classificationCode = rawNcm && rawNcm !== "9999.99.99" ? rawNcm : "—";
+
+  // Jerarquía de posición NCM desde PCRAM breadcrumbs
+  const pcramBreadcrumbs: string[] = Array.isArray(productRaw?.raw?.pcram?.breadcrumbs)
+    ? (productRaw.raw!.pcram!.breadcrumbs as string[]).filter((s) => typeof s === "string" && s.trim())
+    : [];
+  const pcramTitle = safeStr(productRaw?.raw?.pcram?.title);
+  // Armar lista de líneas descriptivas (sin repetir el title si ya está en breadcrumbs)
+  const ncmDescLines = [
+    ...pcramBreadcrumbs,
+    pcramTitle && !pcramBreadcrumbs.includes(pcramTitle) ? pcramTitle : "",
+  ].filter(Boolean).slice(0, 7);
+  const fallbackDesc =
+    "Clasificación aduanera estimada internamente. Se valida con datos técnicos, origen, uso y requisitos antes de operar.";
+  const classificationDesc = ncmDescLines.length
+    ? ncmDescLines[ncmDescLines.length - 1]!
+    : fallbackDesc;
 
   const items: any[] = Array.isArray((costs as any).items) ? ((costs as any).items as any[]) : [];
   const hasItems = items.length > 0;
   const fmtMaybe = (n: any) => (typeof n === "number" && Number.isFinite(n) ? fmtUsdEs(n) : "—");
-  const taxLines: Array<{ label: string; amountUsd: number }> = Array.isArray((costs as any).taxLines)
+  const taxLines: Array<{ label: string; ratePct?: number | null; amountUsd: number }> = Array.isArray((costs as any).taxLines)
     ? ((costs as any).taxLines as any[])
     : [];
+
+  // taxMap por label (clave exacta que usa el render)
   const taxMap = new Map<string, number>();
+  const rateMap = new Map<string, number | null>();
   for (const tl of taxLines) {
     const label = safeStr((tl as any)?.label);
     const amt = (tl as any)?.amountUsd;
-    if (label && typeof amt === "number" && Number.isFinite(amt)) taxMap.set(label, amt);
+    const ratePct = (tl as any)?.ratePct;
+    if (label && typeof amt === "number" && Number.isFinite(amt)) {
+      taxMap.set(label, amt);
+      rateMap.set(label, typeof ratePct === "number" ? ratePct : null);
+    }
   }
-  const showTax = (label: string) => {
-    const amt = taxMap.get(label);
-    return amt != null ? fmtUsdEs(amt) : "Incluido";
+
+  // También leer de breakdown directamente cuando taxLines es vacío (auto-quote path)
+  const bd: any = (quote.quoteJson as any)?.breakdown ?? null;
+  const showTax = (label: string, fallbackAmt?: number | null): string => {
+    const amt = taxMap.get(label) ?? fallbackAmt;
+    if (amt == null || !Number.isFinite(amt) || amt === 0) return "—";
+    return fmtUsdEs(amt);
   };
+  const taxAmt = (label: string, fallbackAmt?: number | null): number => {
+    const amt = taxMap.get(label) ?? fallbackAmt;
+    return typeof amt === "number" && Number.isFinite(amt) ? amt : 0;
+  };
+  const getRatePct = (label: string, fallback: number): number => {
+    const r = rateMap.get(label);
+    if (r != null) return r;
+    if (label === "Derechos" && bd?.derechosRatePct != null) return bd.derechosRatePct;
+    if (label === "Tasa de Estadistica" && bd?.teRatePct != null) return bd.teRatePct;
+    if (label === "IVA" && bd?.ivaRatePct != null) return bd.ivaRatePct;
+    if (label === "IVA Adicional" && bd?.ivaAdicRatePct != null) return bd.ivaAdicRatePct;
+    return fallback;
+  };
+
+  // Flete label según modo (aéreo vs marítimo)
+  const fleteModeStr = safeStr(bd?.fleteMode ?? "");
+  const fleteLabel = fleteModeStr.startsWith("air") ? "Flete aéreo internacional" : "Flete marítimo internacional";
 
   return `<!DOCTYPE html>
 <html lang="es">
@@ -391,6 +432,8 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cotización E-Comex</title>
   <style>
+    /* Montserrat desde Google Fonts. En producción Playwright tiene acceso a internet;
+       si falla (red bloqueada) degrada a sans-serif system font sin romper el layout. */
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
@@ -598,27 +641,34 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
       <div class="detail-info">
         <h2 class="product-title">${htmlEscape(title)}</h2>
 
+        ${ncmDescLines.length > 1
+          ? ncmDescLines.slice(0, -1).map(line => `<div class="ncm-description">${htmlEscape(line)}</div>`).join("\n        ")
+          : ""}
         <div class="ncm-description">${htmlEscape(classificationDesc)}</div>
         <div class="ncm-code">${htmlEscape(classificationCode)}</div>
 
         <div class="cost-breakdown">
           <div class="cost-item main"><span class="label">${htmlEscape(fobLabel)}<span class="blue-mark">*</span>:</span><span class="value">${costs.fobTotal != null ? fmtUsdEs(costs.fobTotal) : "—"}</span></div>
-          <div class="cost-item main"><span class="label">Flete marítimo internacional:</span><span class="value">${costs.flete != null ? fmtUsdEs(costs.flete) : "—"}</span></div>
+          <div class="cost-item main"><span class="label">${htmlEscape(fleteLabel)}:</span><span class="value">${costs.flete != null ? fmtUsdEs(costs.flete) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Seguro internacional:</span><span class="value">${costs.seguro != null ? fmtUsdEs(costs.seguro) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Tributos aduaneros a pagar:</span><span class="value">${costs.impuestos != null ? fmtUsdEs(costs.impuestos) : "—"}</span></div>
-          <div class="cost-item sub"><span class="label">Derechos de importación (35%):</span><span class="value">${showTax("Derechos")}</span></div>
-          <div class="cost-item sub"><span class="label">Tasa de Estadística (3%):</span><span class="value">${showTax("Tasa de Estadistica")}</span></div>
-          <div class="cost-item sub iva-highlight"><span class="label">I.V.A. (21%):</span><span class="value">${showTax("IVA")}</span></div>
-          <div class="cost-item sub"><span class="label">IVA Adicional:</span><span class="value">${showTax("IVA Adicional")}</span></div>
-          <div class="cost-item sub"><span class="label">Impuesto a las Ganancias:</span><span class="value">${showTax("Impuesto a las Ganancias")}</span></div>
-          <div class="cost-item sub"><span class="label">II.BB.:</span><span class="value">${showTax("IIBB")}</span></div>
+          <div class="cost-item sub"><span class="label">Derechos de importación (${getRatePct("Derechos", 14)}%):</span><span class="value">${showTax("Derechos", bd?.derechosImportacionMinUsd)}</span></div>
+          <div class="cost-item sub"><span class="label">Tasa de Estadística (${getRatePct("Tasa de Estadistica", 3)}%):</span><span class="value">${showTax("Tasa de Estadistica", bd?.tasaEstadisticaMinUsd)}</span></div>
+          <div class="cost-item sub iva-highlight"><span class="label">I.V.A. (${getRatePct("IVA", 21)}%):</span><span class="value">${showTax("IVA", bd?.ivaMinUsd)}</span></div>
+          <div class="cost-item sub"><span class="label">IVA Adicional (${getRatePct("IVA Adicional", 20)}%):</span><span class="value">${showTax("IVA Adicional", bd?.ivaAdicionalMinUsd)}</span></div>
+          ${taxAmt("Impuesto a las Ganancias", bd?.gananciasMinUsd ?? null) > 0
+            ? `<div class="cost-item sub"><span class="label">Impuesto a las Ganancias:</span><span class="value">${showTax("Impuesto a las Ganancias", bd?.gananciasMinUsd ?? null)}</span></div>`
+            : ""}
+          ${taxAmt("IIBB", bd?.iibbMinUsd ?? null) > 0
+            ? `<div class="cost-item sub"><span class="label">II.BB.:</span><span class="value">${showTax("IIBB", bd?.iibbMinUsd ?? null)}</span></div>`
+            : ""}
           <div class="cost-item main"><span class="label">Arancel SIM:</span><span class="value">${
-            (costs as any).arancelSimUsd != null ? fmtUsdEs((costs as any).arancelSimUsd) : showTax("Tasa SIM")
+            (costs as any).arancelSimUsd != null ? fmtUsdEs((costs as any).arancelSimUsd) : "—"
           }</span></div>
           <div class="cost-item main"><span class="label">Honorarios:</span><span class="value">${costs.honorarios != null ? fmtUsdEs(costs.honorarios) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Gastos de depósito y portuarios:</span><span class="value">${costs.deposito != null ? fmtUsdEs(costs.deposito) : "—"}</span></div>
-          <div class="cost-item main"><span class="label">Gastos transporte nacional:</span><span class="value">${costs.transporteNac != null ? fmtUsdEs(costs.transporteNac) : "—"}</span></div>
-          <div class="cost-item main"><span class="label">Gastos transferencia intl<span class="blue-mark">*</span>:</span><span class="value">${costs.transferencia != null ? fmtUsdEs(costs.transferencia) : "—"}</span></div>
+          <div class="cost-item main"><span class="label">Gastos transporte nacional:</span><span class="value">${costs.transporteNac != null && costs.transporteNac > 0 ? fmtUsdEs(costs.transporteNac) : "—"}</span></div>
+          <div class="cost-item main"><span class="label">Gastos transferencia intl<span class="blue-mark">*</span>:</span><span class="value">${costs.transferencia != null && costs.transferencia > 0 ? fmtUsdEs(costs.transferencia) : "—"}</span></div>
           <div class="cost-item total"><span class="label">TOTAL:</span><span class="value">${totalToShow != null ? fmtUsdEs(totalToShow) : "—"}</span></div>
           <div class="cost-item iva-total"><span class="label">IVA:</span><span class="value">${ivaToShow != null ? fmtUsdEs(ivaToShow) : "—"}</span></div>
           <div class="cost-item grand-total"><span class="label">TOTAL A PAGAR:</span><span class="value">${totalToPay != null ? fmtUsdEs(totalToPay) : "—"}</span></div>
@@ -725,9 +775,12 @@ export async function generateQuotePdfViaHtml(quote: QuoteLike) {
     });
     const enriched = await ensurePdfDisplayFields(quote).catch(() => quote);
     const html = renderQuotePdfHtml(enriched);
-    // Be resilient in production: external images/fonts can prevent "networkidle".
-    await page.setContent(html, { waitUntil: "domcontentloaded" });
-    await page.waitForTimeout(600);
+    // "networkidle" asegura que Google Fonts termine de cargarse antes de capturar.
+    // Timeout de 10 s para evitar colgar si algún recurso externo no responde.
+    await page
+      .setContent(html, { waitUntil: "networkidle", timeout: 10_000 })
+      .catch(() => page.setContent(html, { waitUntil: "domcontentloaded" }));
+    await page.waitForTimeout(400);
     await page.emulateMedia({ media: "print" });
     // Wait for web fonts (best-effort).
     await page

@@ -2,10 +2,17 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { sendEmail } from "@/lib/email/sendEmail";
 import { cookies } from "next/headers";
+import { rateLimitByIp } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
 
+const HOUR_MS = 60 * 60 * 1000;
+
 export async function POST(req: Request) {
+  const rl = rateLimitByIp(req, "contact", 5, HOUR_MS);
+  if (!rl.ok) {
+    return NextResponse.json({ ok: false, error: "Demasiados envíos. Intentá en una hora." }, { status: 429 });
+  }
   const body = (await req.json().catch(() => null)) as {
     nombre?: string;
     empresa?: string;

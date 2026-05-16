@@ -66,7 +66,7 @@ function extractDecisiveNcmFromAnalyst(message: string): string | null {
   return formatMercosurNcm8(digits);
 }
 
-const CLASSIFY_TIMEOUT_MS = Number(process.env.NCM_CHAT_CLASSIFY_TIMEOUT_MS) || 22_000;
+const CLASSIFY_TIMEOUT_MS = Number(process.env.NCM_CHAT_CLASSIFY_TIMEOUT_MS) || 15_000;
 
 /** En la UI /clasificarncm priorizamos latencia: motor en modo rápido salvo env. */
 const CLASIFICAR_CHAT_USE_FULL_MOTOR_PIPELINE =
@@ -78,7 +78,7 @@ const CLASIFICAR_CLASSIFY_TIMEOUT_MS =
 const CLASIFICAR_ANALYST_TIMEOUT_MS =
   Number(process.env.NCM_CLASIFICAR_ANALYST_TIMEOUT_MS) ||
   Number(process.env.NCM_CHAT_ANALYST_TIMEOUT_MS) ||
-  24_000;
+  12_000;
 
 /** Respuesta más rápida: últimos turnos y tope de caractereres para el analista. */
 function truncateTranscript(messages: ChatMessage[], maxMessages = 24, maxChars = 12_000): string {
@@ -257,66 +257,63 @@ export function buildTechnicalDescription(messages: ChatMessage[], snap: CaseSna
   return parts.join("\n").trim() || userLines.join("\n");
 }
 
-const ANALYST_SYSTEM = `Sos un asesor de importaciones que ayuda a una persona a armar el presupuesto de traer un producto a Argentina. Pensás como despachante profesional, pero **hablás como un humano que asesora**, enfocado en **afinar el presupuesto**, no en jerga aduanera.
+const ANALYST_SYSTEM = `Sos un asesor de importaciones. Tu trabajo es armar el presupuesto de traer un producto a Argentina lo más rápido posible.
 
-=== REGLA CRÍTICA (CERO EXCEPCIONES) ===
+=== FILOSOFÍA: INFERIR PRIMERO, PREGUNTAR SOLO SI ES IMPOSIBLE ===
 
-**PROHIBIDO mencionar en el mensaje al usuario:**
-- Códigos NCM o partidas (nada de "8471.30.00", "cap. 8413", "partida 85", "8528.72"). Ni insinuados ("va bajo el capítulo..."), ni completos.
-- Palabras: NCM, partida, subpartida, capítulo HS, Mercosur, GIR, RGI, encuadre, nomenclador, posición arancelaria.
+**Antes de hacer cualquier pregunta, intentá clasificar el producto con lo que ya tenés.**
+Si la función del producto es clara por su nombre, descripción, marca o modelo → clasificá directamente, marcá 'ready_to_run_classifier: true' y pedí solo los datos comerciales que falten.
 
-La clasificación es **trabajo tuyo interno**. El usuario muchas veces **no sabe ni qué es un NCM** y no le interesa. Él quiere saber cuánto le sale importar y necesita que le pidas los datos del **producto** cuando hagan falta.
+Solo preguntás cuando existen **dos o más partidas arancelarias realmente distintas** que requieren un dato específico para elegir entre ellas. Ese dato debe ser la única razón para preguntar.
 
-=== CÓMO PREGUNTAR CUANDO FALTAN DATOS ===
+**Nunca preguntes por:**
+- Material del producto (salvo que el material sea LO ÚNICO que distingue dos partidas, ej: envase de vidrio vs plástico)
+- Marca, modelo, especificaciones técnicas que no cambian la categoría
+- Información que ya se puede inferir del nombre o contexto
+- Cosas que no afectan los impuestos
 
-Cuando necesites un dato para acotar la clasificación, **enmarcarlo en términos del presupuesto**: *"para afinar el presupuesto necesito saber..."*, *"un dato más y te tengo la cotización más cercana a la real..."*.
+=== REGLA CRÍTICA: PROHIBIDO ===
 
-Ejemplos:
-- Mal: "¿La bomba es para uso industrial o doméstico? (para decidir subpartida)"
-- Bien: "Para afinar el presupuesto: ¿la bomba es de uso industrial/fábrica o doméstica/hogar? Cambian bastante los impuestos."
+No menciones nunca: códigos NCM, partidas, subpartidas, capítulos HS, Mercosur, GIR, RGI, encuadre, nomenclador, posición arancelaria. La clasificación es trabajo interno tuyo.
 
-- Mal: "¿Es producto final o componente? (part_vs_final)"
-- Bien: "Un dato más y afino los costos: ¿lo vas a usar así tal cual o forma parte de una máquina más grande?"
+=== CUÁNDO NO PREGUNTAR NADA ===
 
-- Mal: "¿Material dominante para GIR 3?"
-- Bien: "¿De qué material es principalmente? (afecta los impuestos de importación)"
+Si el producto tiene función inequívoca → clasificá y pasá directo a pedir precio/cantidad/origen si faltan:
+- Cualquier electrónica de consumo (laptops, phones, tablets, auriculares, cargadores, cables, cámaras, consolas, monitores, etc.)
+- Ropa y textiles (remeras, pantalones, zapatillas, etc.)
+- Alimentos envasados con marca/descripción clara
+- Herramientas con uso claro (taladro, sierra, llave inglesa, etc.)
+- Vehículos con marca y modelo conocido
+- Muebles con descripción clara
+- Cualquier producto cuya categoría no tenga subpartidas que dependan de un dato que el usuario no dio
 
-=== ESTILO DE RESPUESTA ===
+=== CUÁNDO SÍ PREGUNTAR (GENUINA AMBIGÜEDAD) ===
 
-- **Tono adaptativo**: leé cómo escribe el usuario. Si es casual → casual. Si es técnico (especificaciones, medidas) → técnico pero sin jerga aduanera.
-- **1–3 líneas**. Nunca más de 5.
-- **Una sola pregunta por turno** cuando haga falta.
-- Nunca arranques con "Dado su uso…", "Con la información proporcionada…", "Procedamos a…". Directo.
-- No "resumas" lo que el usuario ya dijo.
-- Si el usuario ya dio lo que necesitabas, avanzá y decí algo como *"Listo, ya tengo lo necesario para el presupuesto."* — sin mencionar códigos.
+Solo si el producto puede encuadrar en dos categorías con **aranceles diferentes** y no hay forma de inferirlo:
+- Una bomba: ¿industrial o doméstica? (cambian los aranceles realmente)
+- Un motor: ¿eléctrico o combustión interna?
+- Un envase: ¿vidrio o plástico?
+- Un tejido: ¿sintético o natural?
 
-=== CRITERIO INTERNO (NO LO RECITÁS) ===
+En ese caso, **una sola pregunta**, enmarcada en términos del presupuesto: "Para darte el costo exacto, ¿la bomba es para uso doméstico o industrial?"
 
-Internamente razonás por función principal → capítulo → partida → subpartida. Pero afuera **cero** de esto. Si dudás entre dos posiciones, el usuario debe ver solo la pregunta concreta sobre el producto.
+=== DATOS COMERCIALES ===
 
-Máximo 3 preguntas en "questions_next", en palabras simples del producto, nunca mencionando códigos. Si el caso es simple, cerrá y listo.
+Necesitás 3 datos para cotizar: precio FOB unitario (USD), cantidad y país de origen.
+Si ya los dio en su mensaje → extraelos, no los vuelvas a preguntar.
+Si faltan → pediselos en una frase, juntos cuando sea posible: "¿Cuánto sale cada uno en dólares, cuántos vas a traer y de qué país?"
 
-=== AMBIGÜEDAD ===
+=== ESTILO ===
 
-Solo marcar ambigüedad si hay dos partidas reales compitiendo. Si el usuario ya respondió lo que faltaba o dio un código, no marques ambigüedad.
-
-=== DATOS COMERCIALES PARA EL PRESUPUESTO ===
-
-Además de clasificar el producto, necesitás recolectar 3 datos para poder cotizar:
-1. **Precio FOB unitario en USD** (cuánto sale cada unidad en origen).
-2. **Cantidad** a importar.
-3. **País de origen** (ej. China, USA, Brasil).
-
-Cuando ya tenés la clasificación clara y falta alguno de estos, **preguntalos** en una frase breve. Ejemplo:
-- *"¿Cuánto te sale cada uno en dólares y cuántos vas a traer?"*
-- *"¿De qué país lo traés? ¿Tenés el precio por unidad?"*
-
-Si el usuario escribió datos en el texto (ej. "500 unidades a USD 3 desde China"), extraelos a los campos \`purchase\`. No vuelvas a preguntar lo que ya te dio.
+- Directo. 1-2 líneas máximo.
+- Una sola pregunta por turno, nunca más.
+- Sin preámbulos ("Con la información provista…", "Procedamos a…"). Arrancá de una.
+- Tono del usuario: si es casual → casual. Si es técnico → técnico.
 
 === RESPUESTA (SOLO JSON) ===
 
 {
-  "assistant_message": "1-3 líneas, sin mencionar NCM/partida/capítulo/códigos. Hablá del producto y del presupuesto.",
+  "assistant_message": "1-2 líneas máximo. Sin códigos ni jerga aduanera.",
   "product_name": "string | null",
   "technical_name": "string | null",
   "main_function": "string | null",
@@ -326,7 +323,7 @@ Si el usuario escribió datos en el texto (ej. "500 unidades a USD 3 desde China
   "product_type": "final" | "part" | "accessory" | "unknown",
   "industry": "string | null",
   "missing_critical_data": ["string"],
-  "questions_next": ["máximo 3 preguntas, en palabras del producto, sin códigos"],
+  "questions_next": ["máximo 1 pregunta, solo si hay ambigüedad real de partida. Si no hay ambigüedad: array vacío []"],
   "purchase": {
     "fob_unit_usd": number | null,
     "quantity": number | null,
@@ -460,6 +457,40 @@ export async function processClasificarTurn(opts: {
 
   const userPayload = `CONVERSACIÓN:\n${transcript}\n\nESTADO_ACUMULADO_JSON:\n${stateJson}\n\nProcesá el último turno, actualizá el estado y redactá assistant_message.`;
 
+  // Opciones del motor compartidas entre la llamada especulativa y la definitiva.
+  const motorCallOptions = {
+    preferFullPipeline: CLASIFICAR_CHAT_USE_FULL_MOTOR_PIPELINE,
+    classifyOptions: {
+      timeoutMs: CLASIFICAR_CLASSIFY_TIMEOUT_MS,
+      model: process.env.NCM_CHAT_CLASSIFY_MODEL ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
+      skipNcmKnowledge:
+        process.env.NCM_CHAT_SKIP_KNOWLEDGE === "1" || process.env.NCM_CHAT_SKIP_KNOWLEDGE === "true",
+    },
+  };
+
+  /**
+   * Motor especulativo: si el snapshot previo ya tiene datos del producto
+   * (turnos posteriores al primero), lanzamos el motor en paralelo con el
+   * analista usando los datos ya acumulados. Si el analista concluye que no
+   * hay que correr el motor, el resultado se descarta silenciosamente.
+   * En el primer turno (prev vacío) no hay suficiente información → no lo lanzamos.
+   */
+  type MotorResult = Awaited<ReturnType<typeof runNcmMotor>>;
+  const speculativeTechText = buildTechnicalDescription(messages, prev);
+  const canSpeculate = Boolean(
+    (prev.productName || prev.mainFunction || prev.technicalName) &&
+      speculativeTechText.length >= 30
+  );
+  const speculativeMotorPromise: Promise<MotorResult | null> = canSpeculate
+    ? runNcmMotor({
+        text: speculativeTechText,
+        snapshot: prev,
+        prevSnapshot: prev,
+        messages,
+        ...motorCallOptions,
+      }).catch(() => null)
+    : Promise.resolve(null);
+
   let analyst: AnalystJson;
   try {
     analyst = await openaiJson<AnalystJson>({
@@ -565,10 +596,9 @@ export async function processClasificarTurn(opts: {
     ((ready && questions.length === 0) || (userWantsToClose && dataComplete));
 
   if (!runPipeline) {
-    // Cerramos como tentativo si:
-    //   (a) ya tenemos FOB+qty+origen y no hay preguntas pendientes, o
-    //   (b) ya tenemos FOB+qty+origen y el usuario explícitamente pidió avanzar.
-    if (dataComplete && (questions.length === 0 || userWantsToClose)) {
+    // Cerramos como tentativo SÓLO si ya tenemos NCM + datos comerciales completos.
+    // Sin NCM, el clasificador debe seguir corriendo aunque el usuario pida avanzar.
+    if (dataComplete && snap.recommendedNcm && (questions.length === 0 || userWantsToClose)) {
       snap.status = "tentative";
       snap.pendingQuestions = undefined;
       snap.ambiguity = undefined;
@@ -597,19 +627,21 @@ export async function processClasificarTurn(opts: {
   }
 
   try {
-    const motor = await runNcmMotor({
-      text: techText,
-      snapshot: snap,
-      prevSnapshot: prev,
-      messages,
-      preferFullPipeline: CLASIFICAR_CHAT_USE_FULL_MOTOR_PIPELINE,
-      classifyOptions: {
-        timeoutMs: CLASIFICAR_CLASSIFY_TIMEOUT_MS,
-        model: process.env.NCM_CHAT_CLASSIFY_MODEL ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
-        skipNcmKnowledge:
-          process.env.NCM_CHAT_SKIP_KNOWLEDGE === "1" || process.env.NCM_CHAT_SKIP_KNOWLEDGE === "true",
-      },
-    });
+    /**
+     * Usamos el motor especulativo si ya terminó (corrió en paralelo con el
+     * analista). Si aún está en vuelo esperamos — siempre será menos tiempo
+     * que arrancar desde cero. Si no se lanzó (primer turno o sin datos),
+     * hacemos la llamada definitiva con el techText enriquecido por el analista.
+     */
+    const motor =
+      (await speculativeMotorPromise) ??
+      (await runNcmMotor({
+        text: techText,
+        snapshot: snap,
+        prevSnapshot: prev,
+        messages,
+        ...motorCallOptions,
+      }));
 
     const ncm = motor.ncm_code;
     const conf = motor.confidence;
@@ -630,13 +662,14 @@ export async function processClasificarTurn(opts: {
     snap.classificationRationale =
       motor.rationale || snap.classificationRationale || analyst.classification_rationale_draft || undefined;
 
-    if (motor.statusHint === "resolved") {
+    if (motor.statusHint === "resolved" && snap.recommendedNcm) {
       snap.status = "resolved";
       snap.pendingQuestions = undefined;
       snap.ambiguity = undefined;
-    } else if (motor.statusHint === "tentative") {
+    } else if (motor.statusHint === "tentative" && snap.recommendedNcm) {
       snap.status = "tentative";
     } else {
+      // Sin NCM nunca podemos pasar de needs_info, sin importar lo que diga el motor
       snap.status = "needs_info";
     }
 
@@ -685,12 +718,15 @@ export async function processClasificarTurn(opts: {
     if (dataComplete && (questions.length === 0 || userWantsToClose)) {
       snap.pendingQuestions = undefined;
       snap.ambiguity = undefined;
-      if (snap.recommendedNcm && snap.status === "needs_info") {
-        snap.status = "tentative";
-      } else if (!snap.recommendedNcm) {
-        snap.status = "tentative";
-        snap.confidence = Math.max(snap.confidence ?? 0, 0.5);
+      if (snap.recommendedNcm) {
+        // Sólo avanzamos a "tentative" si ya tenemos NCM clasificado
+        const st = snap.status as string;
+        if (st === "needs_info" || st === "analyzing") {
+          snap.status = "tentative";
+        }
+        // Si ya estaba en "tentative" o "resolved" lo dejamos como está
       }
+      // Sin NCM: NO avanzamos. El clasificador debe seguir trabajando.
     }
 
     const ambNorm: NormalizedAmbiguity | undefined =
@@ -723,7 +759,8 @@ export async function processClasificarTurn(opts: {
     };
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
-    snap.status = "tentative";
+    // Si ya tenemos NCM podemos marcar tentative; si no, quedamos en needs_info
+    snap.status = snap.recommendedNcm ? "tentative" : "needs_info";
     return {
       assistantMessage:
         assistantMessage + "\n\nNo pude completar la consulta del motor. Probá dar más detalles del producto.",

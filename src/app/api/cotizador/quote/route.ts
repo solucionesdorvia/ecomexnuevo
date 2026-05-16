@@ -4,6 +4,7 @@ import type { InputJsonValue } from "@prisma/client/runtime/client";
 import { prisma } from "@/lib/db";
 import { calcImportQuote } from "@/lib/quote/calcImportQuote";
 import { ensurePcram } from "@/lib/chat/chatProductBuilder";
+import { rateLimitByIp, RATE_LIMIT_MESSAGE } from "@/lib/rateLimit";
 import {
   buildProductJsonFromClassifierSnapshot,
   buildUserTextFromClassifier,
@@ -12,12 +13,19 @@ import type { CaseSnapshot, ChatMessage } from "@/lib/clasificar-ncm/types";
 
 export const runtime = "nodejs";
 
+const HOUR_MS = 60 * 60 * 1000;
+
 type Body = {
   snapshot?: CaseSnapshot;
   messages?: ChatMessage[];
 };
 
 export async function POST(req: Request) {
+  const rl = rateLimitByIp(req, "cotizador-quote", 15, HOUR_MS);
+  if (!rl.ok) {
+    return NextResponse.json({ error: RATE_LIMIT_MESSAGE }, { status: 429 });
+  }
+
   const body = (await req.json().catch(() => null)) as Body | null;
   const snapshot = body?.snapshot;
   const messages = Array.isArray(body?.messages) ? body!.messages! : [];
@@ -30,6 +38,11 @@ export async function POST(req: Request) {
   const hasQuantity = typeof snapshot.purchase?.quantity === "number" && (snapshot.purchase.quantity as number) > 0;
   const hasOrigin = Boolean(snapshot.purchase?.origin);
   const statusOk = snapshot.status === "resolved" || snapshot.status === "tentative";
+  const rawNcm = snapshot.recommendedNcm ?? (snapshot as Record<string, unknown>).ncm;
+  const hasNcm =
+    typeof rawNcm === "string" &&
+    rawNcm.trim().length >= 4 &&
+    rawNcm.trim() !== "9999.99.99";
 
   if (!hasPrice) {
     return NextResponse.json(
@@ -52,6 +65,12 @@ export async function POST(req: Request) {
   if (!statusOk) {
     return NextResponse.json(
       { error: "Todavía estamos clasificando el producto. Esperá un momento." },
+      { status: 400 }
+    );
+  }
+  if (!hasNcm) {
+    return NextResponse.json(
+      { error: "El clasificador todavía no pudo determinar el código NCM. Respondé las preguntas del analista para continuar." },
       { status: 400 }
     );
   }
@@ -116,6 +135,7 @@ export async function POST(req: Request) {
     explanation: quote.explanation,
     assumptions: quote.assumptions ?? [],
     quality: quote.quality,
+    breakdown: quote.breakdown ?? null,
   });
 
   res.cookies.set("ecomex_anon", anonId, {

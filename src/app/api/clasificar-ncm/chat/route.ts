@@ -1,13 +1,20 @@
 import { NextResponse } from "next/server";
 import { processClasificarTurn } from "@/lib/clasificar-ncm/chatEngine";
+import { rateLimitByIp, RATE_LIMIT_MESSAGE } from "@/lib/rateLimit";
 import type { CaseSnapshot, ChatMessage } from "@/lib/clasificar-ncm/types";
 
 export const runtime = "nodejs";
 
 const MAX_MESSAGES = 80;
 const MAX_MSG_LEN = 12_000;
+const HOUR_MS = 60 * 60 * 1000;
 
 export async function POST(req: Request) {
+  const rl = rateLimitByIp(req, "chat", 60, HOUR_MS);
+  if (!rl.ok) {
+    return NextResponse.json({ error: RATE_LIMIT_MESSAGE }, { status: 429 });
+  }
+
   try {
     const body = (await req.json().catch(() => null)) as {
       messages?: unknown;

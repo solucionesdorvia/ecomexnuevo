@@ -91,6 +91,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     fobUnitMaxUsd?: number;
     fleteMinUsd: number;
     fleteMaxUsd: number;
+    fleteMode: string;
     seguroMinUsd: number;
     seguroMaxUsd: number;
     cifMinUsd: number;
@@ -125,6 +126,13 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     transferenciaIntlMaxUsd: number;
     totalMinUsd: number;
     totalMaxUsd: number;
+    /** Tasas reales de PCRAM — usadas en el PDF y en la vista web */
+    derechosRatePct: number;
+    teRatePct: number;
+    ivaRatePct: number;
+    ivaAdicRatePct: number;
+    /** Líneas de impuestos individuales con monto y tasa */
+    taxLines: Array<{ label: string; ratePct: number | null; amountUsd: number }>;
   };
   assumptions?: Array<{
     id: string;
@@ -329,6 +337,13 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   let internosMin = 0;
   let internosMax = 0;
 
+  // Tasas reales — se populan desde PCRAM; defaults orientativos si no hay datos
+  let derechosRatePct = 14;
+  let teRatePct = 3;
+  let ivaRatePct = 21;
+  let ivaAdicRatePct = 20;
+  let taxLines: Array<{ label: string; ratePct: number | null; amountUsd: number }> = [];
+
   if (pcramTaxes) {
     const teRate = pct("TE") ?? 0.03;
     const dieRate = pct("DIE") ?? pct("AEC") ?? 0.14;
@@ -336,6 +351,12 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     const ivaAdicRate = pct("IVA ADIC") ?? 0.2;
     const gananciasRate = pct("GANANCIAS") ?? 0;
     const iibbRate = pct("IIBB") ?? 0;
+
+    // Guardar tasas reales para el PDF y la vista web
+    derechosRatePct = Math.round(dieRate * 100);
+    teRatePct = Math.round(teRate * 100);
+    ivaRatePct = Math.round(ivaRate * 100);
+    ivaAdicRatePct = Math.round(ivaAdicRate * 100);
 
     teMin = cifMin2 * teRate;
     teMax = cifMax2 * teRate;
@@ -397,6 +418,17 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
 
     impuestosMin = teMin + derechosMin + ivaMin + ivaAdicMin + gananciasMin + iibbMin + internosMin;
     impuestosMax = teMax + derechosMax + ivaMax + ivaAdicMax + gananciasMax + iibbMax + internosMax;
+
+    // Líneas individuales de impuestos (para PDF y web)
+    taxLines = [
+      ...(teMin > 0 ? [{ label: "Tasa de Estadistica", ratePct: teRatePct, amountUsd: round2(teMin) }] : []),
+      ...(derechosMin > 0 ? [{ label: "Derechos", ratePct: derechosRatePct, amountUsd: round2(derechosMin) }] : []),
+      ...(ivaMin > 0 ? [{ label: "IVA", ratePct: ivaRatePct, amountUsd: round2(ivaMin) }] : []),
+      ...(ivaAdicMin > 0 ? [{ label: "IVA Adicional", ratePct: ivaAdicRatePct, amountUsd: round2(ivaAdicMin) }] : []),
+      ...(gananciasMin > 0 ? [{ label: "Impuesto a las Ganancias", ratePct: Math.round(gananciasRate * 100), amountUsd: round2(gananciasMin) }] : []),
+      ...(iibbMin > 0 ? [{ label: "IIBB", ratePct: Math.round(iibbRate * 100), amountUsd: round2(iibbMin) }] : []),
+      ...(internosMin > 0 ? [{ label: "Impuestos Internos", ratePct: null, amountUsd: round2(internosMin) }] : []),
+    ];
 
     const hasPerceptions = gananciasRate > 0 || iibbRate > 0;
     impuestosDetail = [
@@ -554,7 +586,9 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     {
       label: "Flete internacional",
       value: money(round2(freight.totalUsd)),
-      detail: freight.detail,
+      detail: freight.mode.startsWith("air")
+        ? "Estimación aérea. Se confirma con peso y volumen real."
+        : "Estimación marítima. Se confirma con peso y volumen real.",
     },
     {
       label: "Impuestos argentinos",
@@ -597,6 +631,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
         : {}),
       fleteMinUsd: round2(fleteMin),
       fleteMaxUsd: round2(fleteMax),
+      fleteMode: freight.mode,
       seguroMinUsd: round2(seguroMin),
       seguroMaxUsd: round2(seguroMax),
       cifMinUsd: round2(cifMin),
@@ -631,6 +666,11 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       transferenciaIntlMaxUsd: round2(transferenciaMax),
       totalMinUsd: round2(totalMin),
       totalMaxUsd: round2(totalMax),
+      derechosRatePct,
+      teRatePct,
+      ivaRatePct,
+      ivaAdicRatePct,
+      taxLines,
     },
     assumptions,
     quality,

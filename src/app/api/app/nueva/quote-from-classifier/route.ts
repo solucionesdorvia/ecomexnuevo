@@ -33,24 +33,27 @@ export async function POST(req: Request) {
   }
 
   const ncm = typeof snapshot.recommendedNcm === "string" ? snapshot.recommendedNcm.trim() : "";
+  const hasNcm = ncm.length >= 4 && ncm !== "9999.99.99";
   const hasPurchaseData = Boolean(
     snapshot.purchase?.fobUnitUsd &&
       snapshot.purchase?.quantity &&
       snapshot.purchase?.origin
   );
-  // Cotizamos si (a) hay NCM con status listo, o (b) tenemos los datos
-  // comerciales completos aunque el motor no haya cerrado NCM (caemos a
-  // estimación por capítulo usando los datos del usuario).
-  const ready =
-    (ncm.length >= 4 &&
-      (snapshot.status === "resolved" || snapshot.status === "tentative")) ||
-    (hasPurchaseData &&
-      (snapshot.status === "resolved" || snapshot.status === "tentative"));
+  const statusOk = snapshot.status === "resolved" || snapshot.status === "tentative";
 
-  if (!ready) {
+  if (!hasPurchaseData || !statusOk) {
     return NextResponse.json(
       {
         error: "Faltan datos para armar el presupuesto. Completá precio, cantidad y origen con el analista.",
+      },
+      { status: 400 }
+    );
+  }
+
+  if (!hasNcm) {
+    return NextResponse.json(
+      {
+        error: "El clasificador todavía no pudo determinar el código NCM. Respondé las preguntas del analista para continuar.",
       },
       { status: 400 }
     );
@@ -117,6 +120,7 @@ export async function POST(req: Request) {
     explanation: quote.explanation,
     assumptions: quote.assumptions ?? [],
     quality: quote.quality,
+    breakdown: quote.breakdown ?? null,
   });
 
   res.cookies.set("ecomex_anon", anonId, {

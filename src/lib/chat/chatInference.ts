@@ -232,9 +232,11 @@ export function shouldSkipTechnicalQuestions(product: Record<string, unknown>) {
     | { kind?: string; confidence?: number }
     | undefined;
   const nm = (product?.raw as Record<string, unknown> | undefined)?.ncmMeta as Record<string, unknown> | undefined;
-  if (nm?.ambiguous === true) return false;
   if (!product?.ncm) return false;
+  // Vehículos con alta confianza: saltear preguntas técnicas incluso si hay ambigüedad menor
   if (vi && typeof vi.confidence === "number" && vi.confidence >= 0.75) return true;
+  // Ambigüedad activa (no resuelta): preguntar siempre
+  if (nm?.ambiguous === true) return false;
   const hs = String(nm?.hsHeading ?? "").replace(/\D/g, "");
   if (hs.startsWith("87")) return true;
   return false;

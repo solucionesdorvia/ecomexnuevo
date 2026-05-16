@@ -57,8 +57,36 @@ export function rateLimitAuth(
   return { ok: true };
 }
 
-/** Mensaje unificado para respuestas 429 en rutas autenticadas. */
+/** Mensaje unificado para respuestas 429. */
 export const RATE_LIMIT_MESSAGE = "Demasiadas solicitudes. Intentá en unos minutos.";
+
+/**
+ * Ventana fija por IP. Úsala en endpoints públicos costosos (IA, PCRAM).
+ */
+export function rateLimitByIp(
+  req: Request,
+  routeKey: string,
+  max: number,
+  windowMs: number
+): { ok: true } | { ok: false; retryAfterSec: number } {
+  const ip = getClientIp(req);
+  const key = `ip:${ip}:${routeKey}`;
+  const now = Date.now();
+  pruneExpired(now);
+
+  let bucket = store.get(key);
+  if (!bucket || now >= bucket.resetAt) {
+    bucket = { count: 0, resetAt: now + windowMs };
+    store.set(key, bucket);
+  }
+
+  bucket.count += 1;
+  if (bucket.count > max) {
+    const retryAfterSec = Math.ceil((bucket.resetAt - now) / 1000);
+    return { ok: false, retryAfterSec: Math.max(1, retryAfterSec) };
+  }
+  return { ok: true };
+}
 
 /**
  * Ventana fija por usuario (userId). Misma limitación in-memory que auth: no compartida entre réplicas.

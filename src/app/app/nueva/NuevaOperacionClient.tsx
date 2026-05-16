@@ -45,6 +45,8 @@ export default function NuevaOperacionClient({
   const [invoiceFiles, setInvoiceFiles] = useState<File[]>([]);
   const [pendingExtract, setPendingExtract] = useState(false);
   const [pendingQuote, setPendingQuote] = useState(false);
+  const [quoteError, setQuoteError] = useState<string | null>(null);
+  const [operationError, setOperationError] = useState<string | null>(null);
   const [quoteResult, setQuoteResult] = useState<QuoteCostPayload | null>(null);
   const [ncmBannerDismissed, setNcmBannerDismissed] = useState(false);
   const [pendingOperation, setPendingOperation] = useState(false);
@@ -142,7 +144,7 @@ export default function NuevaOperacionClient({
         await sendMessage(payload);
         if (hasInvoices) setInvoiceFiles([]);
       } catch (e) {
-        window.alert(e instanceof Error ? e.message : "Error al enviar.");
+        setQuoteError(e instanceof Error ? e.message : "Error al enviar el mensaje.");
       } finally {
         setPendingExtract(false);
       }
@@ -154,6 +156,7 @@ export default function NuevaOperacionClient({
     if (pendingQuote || !showResultCard) return;
     setPendingQuote(true);
     setQuoteResult(null);
+    setQuoteError(null);
     try {
       const res = await fetch("/api/app/nueva/quote-from-classifier", {
         method: "POST",
@@ -166,7 +169,8 @@ export default function NuevaOperacionClient({
       });
       const json = (await res.json()) as QuoteCostPayload & { ok?: boolean; error?: string };
       if (!res.ok) {
-        throw new Error(json.error || "No se pudo crear el presupuesto.");
+        setQuoteError(json.error || "No se pudo crear el presupuesto.");
+        return;
       }
       if (json.quoteId && json.cards) {
         setQuoteResult({
@@ -179,10 +183,11 @@ export default function NuevaOperacionClient({
           assumptions: json.assumptions,
           quality: json.quality,
           quantity: caseState.purchase?.quantity,
+          breakdown: (json as any).breakdown ?? undefined,
         });
       }
     } catch (e) {
-      window.alert(e instanceof Error ? e.message : "Error inesperado.");
+      setQuoteError(e instanceof Error ? e.message : "Error inesperado.");
     } finally {
       setPendingQuote(false);
     }
@@ -231,7 +236,7 @@ export default function NuevaOperacionClient({
       }
       router.push(`/app/operaciones/${json.operationId}/operation`);
     } catch (e) {
-      window.alert(e instanceof Error ? e.message : "Error al iniciar la importación.");
+      setOperationError(e instanceof Error ? e.message : "Error al iniciar la importación. Intentá de nuevo.");
       setPendingOperation(false);
     }
     // No reseteamos pendingOperation en el happy-path: el unmount al navegar
@@ -366,12 +371,18 @@ export default function NuevaOperacionClient({
                         reset();
                         setQuoteResult(null);
                         setInvoiceFiles([]);
+                        setQuoteError(null);
                       }}
                       className="min-h-[44px] text-[12px] text-slate-500 transition hover:text-slate-300 sm:min-h-0"
                     >
                       Consultar otro producto
                     </button>
                   </div>
+                  {quoteError ? (
+                    <div className="rounded-xl border border-red-500/20 bg-red-500/[0.07] px-3.5 py-3">
+                      <p className="text-[12px] leading-relaxed text-red-300">{quoteError}</p>
+                    </div>
+                  ) : null}
                 </div>
               </div>
             ) : null}
@@ -386,7 +397,7 @@ export default function NuevaOperacionClient({
                   <div className="card-in rounded-2xl border border-white/[0.09] bg-[#0a1422] p-5 sm:p-6">
                     <div className="flex flex-wrap items-center gap-2 border-b border-white/[0.06] pb-4">
                       <p className="text-[13px] font-semibold text-white">
-                        Tu importación puede arrancar hoy.
+                        ¿Listo para avanzar con esta importación?
                       </p>
                       {(quoteResult.ncm || caseState.recommendedNcm) ? (
                         <span className="ml-auto rounded-md border border-white/[0.1] bg-white/[0.04] px-2 py-0.5 font-mono text-[10px] text-slate-400">
@@ -394,18 +405,25 @@ export default function NuevaOperacionClient({
                         </span>
                       ) : null}
                     </div>
-                    <p className="mt-3.5 text-[13px] leading-relaxed text-slate-400">
-                      Nuestro equipo coordina proveedor, flete, aduana y documentación — vos solo seguís el estado.
-                    </p>
+                    <div className="mt-3.5 space-y-2 text-[12px] leading-relaxed text-slate-400">
+                      <p>
+                        Al confirmar, abrís una operación formal en el sistema. Nuestro equipo revisa la
+                        clasificación aduanera, verifica los costos reales y te prepara un presupuesto
+                        definitivo para ejecutar.
+                      </p>
+                      <p className="text-slate-500">
+                        Hacelo solo si ya definiste qué importar, de dónde y en qué cantidades aproximadas.
+                      </p>
+                    </div>
                     <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
                       <button
                         type="button"
-                        onClick={() => void startOperation()}
+                        onClick={() => { setOperationError(null); void startOperation(); }}
                         disabled={pendingOperation}
                         className="group flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl bg-[#18C3D6] px-5 py-3 text-center text-[14px] font-semibold text-[#030712] transition hover:bg-[#15afc1] disabled:cursor-not-allowed disabled:opacity-60 sm:min-h-[44px]"
                       >
-                        {pendingOperation ? "Iniciando…" : "Avanzar con la importación"}
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                        {pendingOperation ? "Abriendo operación…" : "Abrir operación y solicitar revisión"}
+                        {!pendingOperation && <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />}
                       </button>
                       <Link
                         href={`/api/quote/pdf?mode=quote&id=${encodeURIComponent(quoteResult.quoteId)}`}
@@ -414,6 +432,11 @@ export default function NuevaOperacionClient({
                         Descargar PDF
                       </Link>
                     </div>
+                    {operationError ? (
+                      <div className="mt-1 rounded-xl border border-red-500/20 bg-red-500/[0.07] px-3.5 py-3">
+                        <p className="text-[12px] leading-relaxed text-red-300">{operationError}</p>
+                      </div>
+                    ) : null}
                   </div>
                 </div>
               </div>
