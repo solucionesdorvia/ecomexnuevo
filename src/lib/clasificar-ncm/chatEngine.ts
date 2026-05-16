@@ -585,15 +585,23 @@ export async function processClasificarTurn(opts: {
 
   /**
    * Ejecutar motor NCM si:
-   *  (a) el analista marcó ready y no hay questions_next pendientes, o
-   *  (b) el usuario explícitamente pidió avanzar (calculalo/listo/etc.) y
-   *      ya tenemos los datos comerciales completos. Esto asegura que el
-   *      NCM se clasifique antes de cerrar — sino el card del cliente
-   *      queda sin NCM hasta que se calcula el presupuesto.
+   *  (a) el analista marcó ready y no hay questions_next pendientes,
+   *  (b) el analista marcó ready Y tenemos todos los datos comerciales
+   *      (aunque haya questions secundarias como "¿uso personal o venta?"
+   *      que no afectan la clasificación arancelaria),
+   *  (c) tenemos todos los datos comerciales y el analista no generó
+   *      preguntas de clasificación (ready = false pero olvidó marcarlo),
+   *  (d) el usuario explícitamente pidió avanzar (calculalo/listo/etc.)
+   *      y ya tenemos los datos comerciales completos.
    */
   const runPipeline =
     techText.length >= 12 &&
-    ((ready && questions.length === 0) || (userWantsToClose && dataComplete));
+    (
+      (ready && questions.length === 0) ||
+      (ready && dataComplete) ||
+      (dataComplete && questions.length === 0) ||
+      (userWantsToClose && dataComplete)
+    );
 
   if (!runPipeline) {
     // Cerramos como tentativo SÓLO si ya tenemos NCM + datos comerciales completos.
@@ -715,7 +723,10 @@ export async function processClasificarTurn(opts: {
      * ("calculalo", "listo", "dale", etc.) — aunque haya questions_next
      * pendientes en el LLM analista (suelen ser confirmaciones).
      */
-    if (dataComplete && (questions.length === 0 || userWantsToClose)) {
+    if (dataComplete && (questions.length === 0 || userWantsToClose || ready)) {
+      // Cuando tenemos todos los datos comerciales y el analista está listo (o el
+      // usuario cerró explícitamente), descartamos las preguntas secundarias del
+      // analista (uso personal, venta, etc.) que no afectan la clasificación NCM.
       snap.pendingQuestions = undefined;
       snap.ambiguity = undefined;
       if (snap.recommendedNcm) {
