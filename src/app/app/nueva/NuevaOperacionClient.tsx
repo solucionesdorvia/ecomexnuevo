@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useMemo, useRef, useState } from "react";
-import { ArrowRight, Paperclip } from "lucide-react";
+import { ArrowRight, Check, Paperclip } from "lucide-react";
 import { useClasificarChat } from "@/app/clasificarncm/hooks/useClasificarChat";
 import { ChatContainer } from "@/app/clasificarncm/components/ChatContainer";
 import { ChatInput } from "@/app/clasificarncm/components/ChatInput";
@@ -14,6 +14,13 @@ import { QuoteCostBreakdown, type QuoteCostPayload } from "./QuoteCostBreakdown"
 import { buildChatPrefillFromParams, stripNcmDigits } from "@/lib/quote/cotizarFromClassifier";
 import { FlowStepper } from "./FlowStepper";
 import { QuickReplies } from "./QuickReplies";
+
+const QUALIFICATIONS = [
+  "Ya definí el producto que quiero importar",
+  "Sé cuántas unidades (o cuánto peso) necesito",
+  "Tengo identificado el proveedor o el país de origen",
+  "Estoy listo para abrir la operación y que el equipo me contacte",
+] as const;
 
 const HERO_SUGGESTIONS = [
   { title: "MacBook Pro M2", hint: "1 unidad · USA · USD 1.200" },
@@ -48,6 +55,12 @@ export default function NuevaOperacionClient({
   const [quoteError, setQuoteError] = useState<string | null>(null);
   const [operationError, setOperationError] = useState<string | null>(null);
   const [quoteResult, setQuoteResult] = useState<QuoteCostPayload | null>(null);
+  const [qualChecked, setQualChecked] = useState(QUALIFICATIONS.map(() => false));
+  const allQualified = qualChecked.every(Boolean);
+
+  function toggleQual(i: number) {
+    setQualChecked((prev) => prev.map((v, idx) => (idx === i ? !v : v)));
+  }
   const [ncmBannerDismissed, setNcmBannerDismissed] = useState(false);
   const [pendingOperation, setPendingOperation] = useState(false);
   const invoiceInputRef = useRef<HTMLInputElement>(null);
@@ -372,6 +385,7 @@ export default function NuevaOperacionClient({
                         setQuoteResult(null);
                         setInvoiceFiles([]);
                         setQuoteError(null);
+                        setQualChecked(QUALIFICATIONS.map(() => false));
                       }}
                       className="min-h-[44px] text-[12px] text-slate-500 transition hover:text-slate-300 sm:min-h-0"
                     >
@@ -397,7 +411,7 @@ export default function NuevaOperacionClient({
                   <div className="card-in rounded-2xl border border-white/[0.09] bg-[#0a1422] p-5 sm:p-6">
                     <div className="flex flex-wrap items-center gap-2 border-b border-white/[0.06] pb-4">
                       <p className="text-[13px] font-semibold text-white">
-                        ¿Listo para avanzar con esta importación?
+                        Abrir operación formal
                       </p>
                       {(quoteResult.ncm || caseState.recommendedNcm) ? (
                         <span className="ml-auto rounded-md border border-white/[0.1] bg-white/[0.04] px-2 py-0.5 font-mono text-[10px] text-slate-400">
@@ -405,38 +419,79 @@ export default function NuevaOperacionClient({
                         </span>
                       ) : null}
                     </div>
-                    <div className="mt-3.5 space-y-2 text-[12px] leading-relaxed text-slate-400">
-                      <p>
-                        Al confirmar, abrís una operación formal en el sistema. Nuestro equipo revisa la
-                        clasificación aduanera, verifica los costos reales y te prepara un presupuesto
-                        definitivo para ejecutar.
-                      </p>
-                      <p className="text-slate-500">
-                        Hacelo solo si ya definiste qué importar, de dónde y en qué cantidades aproximadas.
-                      </p>
+
+                    <p className="mt-3.5 text-[12px] leading-relaxed text-slate-500">
+                      Al confirmar, abrís la operación en el sistema. El equipo revisa la clasificación
+                      aduanera, verifica los costos reales y te contacta con el presupuesto definitivo.
+                      Confirmá que estás en condiciones de avanzar:
+                    </p>
+
+                    <div className="mt-4 space-y-3">
+                      {QUALIFICATIONS.map((q, i) => (
+                        <label
+                          key={i}
+                          className="flex cursor-pointer items-start gap-3 select-none"
+                        >
+                          <input
+                            type="checkbox"
+                            checked={qualChecked[i]}
+                            onChange={() => toggleQual(i)}
+                            className="sr-only"
+                          />
+                          <div
+                            className={`mt-0.5 flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded border transition-all ${
+                              qualChecked[i]
+                                ? "border-[#18C3D6] bg-[#18C3D6]"
+                                : "border-white/20 bg-white/[0.03] hover:border-white/30"
+                            }`}
+                            aria-hidden
+                          >
+                            {qualChecked[i] && (
+                              <Check className="h-3 w-3 text-[#030712]" strokeWidth={3} />
+                            )}
+                          </div>
+                          <span
+                            className={`text-[12.5px] leading-snug transition-colors ${
+                              qualChecked[i] ? "text-slate-200" : "text-slate-500"
+                            }`}
+                          >
+                            {q}
+                          </span>
+                        </label>
+                      ))}
                     </div>
-                    <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
-                      <button
-                        type="button"
-                        onClick={() => { setOperationError(null); void startOperation(); }}
-                        disabled={pendingOperation}
-                        className="group flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl bg-[#18C3D6] px-5 py-3 text-center text-[14px] font-semibold text-[#030712] transition hover:bg-[#15afc1] disabled:cursor-not-allowed disabled:opacity-60 sm:min-h-[44px]"
-                      >
-                        {pendingOperation ? "Abriendo operación…" : "Abrir operación y solicitar revisión"}
-                        {!pendingOperation && <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />}
-                      </button>
-                      <Link
-                        href={`/api/quote/pdf?mode=quote&id=${encodeURIComponent(quoteResult.quoteId)}`}
-                        className="min-h-[44px] rounded-xl border border-white/[0.1] px-4 py-2.5 text-center text-[13px] font-medium text-slate-400 transition hover:border-white/[0.18] hover:text-slate-200 sm:min-h-0"
-                      >
-                        Descargar PDF
-                      </Link>
-                    </div>
-                    {operationError ? (
-                      <div className="mt-1 rounded-xl border border-red-500/20 bg-red-500/[0.07] px-3.5 py-3">
-                        <p className="text-[12px] leading-relaxed text-red-300">{operationError}</p>
+
+                    <div className="mt-5 flex flex-col gap-2">
+                      {operationError ? (
+                        <div className="rounded-xl border border-red-500/20 bg-red-500/[0.07] px-3.5 py-3">
+                          <p className="text-[12px] leading-relaxed text-red-300">{operationError}</p>
+                        </div>
+                      ) : null}
+                      <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                        <button
+                          type="button"
+                          onClick={() => { setOperationError(null); void startOperation(); }}
+                          disabled={!allQualified || pendingOperation}
+                          className="group flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl bg-[#18C3D6] px-5 py-3 text-center text-[14px] font-semibold text-[#030712] transition hover:bg-[#15afc1] disabled:cursor-not-allowed disabled:opacity-40 sm:min-h-[44px]"
+                        >
+                          {pendingOperation ? "Abriendo operación…" : "Confirmar y abrir operación"}
+                          {!pendingOperation && (
+                            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                          )}
+                        </button>
+                        <Link
+                          href={`/api/quote/pdf?mode=quote&id=${encodeURIComponent(quoteResult.quoteId)}`}
+                          className="min-h-[44px] rounded-xl border border-white/[0.1] px-4 py-2.5 text-center text-[13px] font-medium text-slate-400 transition hover:border-white/[0.18] hover:text-slate-200 sm:min-h-0"
+                        >
+                          Descargar PDF
+                        </Link>
                       </div>
-                    ) : null}
+                      {!allQualified && (
+                        <p className="text-center text-[11px] text-slate-600">
+                          Confirmá los puntos anteriores para habilitar la operación
+                        </p>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
-import { ArrowRight, CheckCircle, Download, Phone, X } from "lucide-react";
+import { ArrowRight, Check, CheckCircle, Download, Phone, X } from "lucide-react";
 import { useClasificarChat } from "@/app/clasificarncm/hooks/useClasificarChat";
 import { ChatContainer } from "@/app/clasificarncm/components/ChatContainer";
 import { ChatInput } from "@/app/clasificarncm/components/ChatInput";
@@ -13,6 +13,13 @@ import { QuoteCostBreakdown, type QuoteCostPayload } from "@/app/app/nueva/Quote
 import { QuickReplies } from "@/app/app/nueva/QuickReplies";
 
 const ANON_QUOTE_KEY = "ecomex_pq";
+
+const QUALIFICATIONS = [
+  "Ya definí el producto que quiero importar",
+  "Sé cuántas unidades (o cuánto peso) necesito",
+  "Tengo identificado el proveedor o el país de origen",
+  "Estoy evaluando esta operación concretamente, no solo explorando",
+] as const;
 
 const HERO_SUGGESTIONS = [
   { title: "MacBook Pro M4", hint: "1 unidad · EE.UU. · USD 1.600" },
@@ -135,6 +142,12 @@ export default function CotizadorPublicoClient() {
   const [expertSent, setExpertSent] = useState(false);
   const [quoteError, setQuoteError] = useState<string | null>(null);
   const [expertError, setExpertError] = useState<string | null>(null);
+  const [qualChecked, setQualChecked] = useState(QUALIFICATIONS.map(() => false));
+  const allQualified = qualChecked.every(Boolean);
+
+  function toggleQual(i: number) {
+    setQualChecked((prev) => prev.map((v, idx) => (idx === i ? !v : v)));
+  }
 
   const hasProduct = Boolean(caseState.productName || caseState.technicalName);
   const hasCommercialData = Boolean(
@@ -203,6 +216,7 @@ export default function CotizadorPublicoClient() {
   }
 
   function handleNewQuote() {
+    setQualChecked(QUALIFICATIONS.map(() => false));
     if (getQuoteCount() >= 1 && !capturedEmail) {
       setPendingAction("new_quote");
       setEmailModal("second_quote");
@@ -409,7 +423,7 @@ export default function CotizadorPublicoClient() {
                   <div className="card-in rounded-2xl border border-white/[0.09] bg-[#0a1422] p-5 sm:p-6">
                     <div className="flex flex-wrap items-center gap-2 border-b border-white/[0.06] pb-4">
                       <p className="text-[13px] font-semibold text-white">
-                        ¿Estás evaluando esta importación en serio?
+                        Presupuesto formal con asesor
                       </p>
                       {(quoteResult.ncm || caseState.recommendedNcm) ? (
                         <span className="ml-auto rounded-md border border-white/[0.1] bg-white/[0.04] px-2 py-0.5 font-mono text-[10px] text-slate-400">
@@ -424,8 +438,8 @@ export default function CotizadorPublicoClient() {
                         <div>
                           <p className="text-[14px] font-semibold text-emerald-300">¡Caso recibido!</p>
                           <p className="mt-1 text-[12px] leading-relaxed text-slate-400">
-                            Un asesor del equipo revisa tu caso y te contacta a la brevedad con un presupuesto
-                            detallado y los pasos a seguir. También podés escribirnos:{" "}
+                            Un asesor revisa tu clasificación aduanera y te contacta con el presupuesto
+                            definitivo y los pasos a seguir. También podés escribirnos:{" "}
                             <a
                               href="https://wa.me/5491153530536"
                               target="_blank"
@@ -439,17 +453,47 @@ export default function CotizadorPublicoClient() {
                       </div>
                     ) : (
                       <>
-                        <div className="mt-3.5 space-y-2 text-[12px] leading-relaxed text-slate-400">
-                          <p>
-                            Al solicitar, un asesor del equipo revisa tu clasificación aduanera, verifica
-                            costos reales y te prepara un presupuesto formal. <strong className="text-slate-300">No es una consulta
-                            general</strong> — es para importadores que están decidiendo concretamente.
-                          </p>
-                          <p className="text-slate-500">
-                            Tenés que tener definido qué traer, de dónde y en qué cantidades aproximadas.
-                          </p>
+                        <p className="mt-3.5 text-[12px] leading-relaxed text-slate-500">
+                          Un asesor revisa tu clasificación aduanera, verifica costos reales y prepara
+                          el presupuesto definitivo. Confirmá que estás en condiciones de avanzar:
+                        </p>
+
+                        <div className="mt-4 space-y-3">
+                          {QUALIFICATIONS.map((q, i) => (
+                            <label
+                              key={i}
+                              className="flex cursor-pointer items-start gap-3 select-none"
+                            >
+                              <input
+                                type="checkbox"
+                                checked={qualChecked[i]}
+                                onChange={() => toggleQual(i)}
+                                className="sr-only"
+                              />
+                              <div
+                                className={`mt-0.5 flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded border transition-all ${
+                                  qualChecked[i]
+                                    ? "border-[#18C3D6] bg-[#18C3D6]"
+                                    : "border-white/20 bg-white/[0.03] hover:border-white/30"
+                                }`}
+                                aria-hidden
+                              >
+                                {qualChecked[i] && (
+                                  <Check className="h-3 w-3 text-[#030712]" strokeWidth={3} />
+                                )}
+                              </div>
+                              <span
+                                className={`text-[12.5px] leading-snug transition-colors ${
+                                  qualChecked[i] ? "text-slate-200" : "text-slate-500"
+                                }`}
+                              >
+                                {q}
+                              </span>
+                            </label>
+                          ))}
                         </div>
-                        <div className="mt-4 flex flex-col gap-2">
+
+                        <div className="mt-5 flex flex-col gap-2">
                           {expertError ? (
                             <div className="rounded-xl border border-red-500/20 bg-red-500/[0.07] px-3.5 py-3">
                               <p className="text-[12px] leading-relaxed text-red-300">{expertError}</p>
@@ -458,13 +502,20 @@ export default function CotizadorPublicoClient() {
                           <button
                             type="button"
                             onClick={() => { setExpertError(null); void handleSendExpert(); }}
-                            disabled={expertSending}
-                            className="group flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#18C3D6] px-5 py-3 text-center text-[14px] font-semibold text-[#030712] transition hover:bg-[#15afc1] disabled:opacity-50 sm:min-h-[44px]"
+                            disabled={!allQualified || expertSending}
+                            className="group flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#18C3D6] px-5 py-3 text-center text-[14px] font-semibold text-[#030712] transition hover:bg-[#15afc1] disabled:cursor-not-allowed disabled:opacity-40 sm:min-h-[44px]"
                           >
                             <Phone className="h-4 w-4" aria-hidden />
                             {expertSending ? "Enviando…" : "Solicitar revisión formal de mi caso"}
-                            {!expertSending && <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />}
+                            {!expertSending && (
+                              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                            )}
                           </button>
+                          {!allQualified && (
+                            <p className="text-center text-[11px] text-slate-600">
+                              Confirmá los puntos anteriores para habilitar el envío
+                            </p>
+                          )}
                           <div className="flex gap-2">
                             <a
                               href="https://wa.me/5491153530536?text=Hola%2C%20quiero%20consultar%20sobre%20una%20importaci%C3%B3n"
@@ -498,7 +549,7 @@ export default function CotizadorPublicoClient() {
                     <button
                       type="button"
                       onClick={handleNewQuote}
-                      className="mt-3 w-full text-center text-[12px] text-slate-600 transition hover:text-slate-400"
+                      className="mt-4 w-full text-center text-[12px] text-slate-600 transition hover:text-slate-400"
                     >
                       Cotizar otro producto
                     </button>
