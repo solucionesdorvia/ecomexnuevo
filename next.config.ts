@@ -24,6 +24,12 @@ const nextConfig: NextConfig = {
         source: "/(.*)",
         headers: securityHeaders,
       },
+      {
+        // hero-3d.html se carga como iframe dentro de la landing desde el mismo origen.
+        // X-Frame-Options: SAMEORIGIN lo permite; DENY lo bloquea y rompe la animación.
+        source: "/hero-3d.html",
+        headers: [{ key: "X-Frame-Options", value: "SAMEORIGIN" }],
+      },
     ];
   },
 };
