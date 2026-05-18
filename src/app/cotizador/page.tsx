@@ -53,7 +53,7 @@ export default function CotizadorPage() {
           </Link>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <Link
-              href="/login"
+              href="/account/login?next=%2Fcotizador"
               style={{
                 fontSize: 13,
                 color: "#A7B3C2",
@@ -63,7 +63,7 @@ export default function CotizadorPage() {
               Iniciar sesión
             </Link>
             <Link
-              href="/register"
+              href="/account/register?next=%2Fcotizador"
               style={{
                 fontSize: 13,
                 fontWeight: 600,

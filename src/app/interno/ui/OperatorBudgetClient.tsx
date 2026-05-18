@@ -133,11 +133,11 @@ export function OperatorBudgetClient() {
         category: detail.rubro ?? undefined,
       },
       breakdown: {
-        totalMinUsd: detail.effective.totalToShowUsd ?? undefined,
-        totalMaxUsd: detail.effective.totalToShowUsd ?? undefined,
-        fobTotalUsd: detail.effective.fobUsd ?? undefined,
-        fleteMinUsd: detail.effective.fleteUsd ?? undefined,
-        fleteMaxUsd: detail.effective.fleteUsd ?? undefined,
+        totalMinUsd: detail.effective?.totalToShowUsd ?? undefined,
+        totalMaxUsd: detail.effective?.totalToShowUsd ?? undefined,
+        fobTotalUsd: detail.effective?.fobUsd ?? undefined,
+        fleteMinUsd: detail.effective?.fleteUsd ?? undefined,
+        fleteMaxUsd: detail.effective?.fleteUsd ?? undefined,
       },
     };
   }, [detail]);
