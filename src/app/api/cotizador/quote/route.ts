@@ -38,11 +38,6 @@ export async function POST(req: Request) {
   const hasQuantity = typeof snapshot.purchase?.quantity === "number" && (snapshot.purchase.quantity as number) > 0;
   const hasOrigin = Boolean(snapshot.purchase?.origin);
   const statusOk = snapshot.status === "resolved" || snapshot.status === "tentative";
-  const rawNcm = snapshot.recommendedNcm ?? (snapshot as Record<string, unknown>).ncm;
-  const hasNcm =
-    typeof rawNcm === "string" &&
-    rawNcm.trim().length >= 4 &&
-    rawNcm.trim() !== "9999.99.99";
 
   if (!hasPrice) {
     return NextResponse.json(
@@ -68,13 +63,7 @@ export async function POST(req: Request) {
       { status: 400 }
     );
   }
-  if (!hasNcm) {
-    return NextResponse.json(
-      { error: "El clasificador todavía no pudo determinar el código NCM. Respondé las preguntas del analista para continuar." },
-      { status: 400 }
-    );
-  }
-
+  // NCM not required: when absent, calcImportQuote uses flat/default tariff rates.
   const userText = buildUserTextFromClassifier(snapshot, messages);
   const productJson = buildProductJsonFromClassifierSnapshot(snapshot, messages);
   const enrichedProduct = await ensurePcram(productJson as Record<string, unknown>).catch(
