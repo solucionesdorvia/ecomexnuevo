@@ -7,6 +7,7 @@ import { DiscardedCandidatesBlock } from "./DiscardedCandidatesBlock";
 import { ConfidenceBadge } from "./ConfidenceBadge";
 import { ChevronDown, Cpu, Package, PanelLeft, Target } from "lucide-react";
 import { cn } from "@/components/ui/cn";
+import { ncmToPartida } from "@/lib/ncmDisplay";
 
 const STATUS_LABEL: Record<string, string> = {
   idle: "Listo",
@@ -89,8 +90,10 @@ export function CaseSummaryPanel({
         ) : null}
         {s.recommendedNcm ? (
           <div className="rounded-lg border border-white/[0.06] bg-black/25 px-2.5 py-2">
-            <p className="text-[9px] font-semibold uppercase tracking-wider text-slate-500">NCM prioritaria</p>
-            <p className="mt-0.5 break-all font-mono text-[15px] font-semibold leading-tight text-white">{s.recommendedNcm}</p>
+            <p className="text-[9px] font-semibold uppercase tracking-wider text-slate-500">Pos. arancelaria estimada</p>
+            <p className="mt-0.5 break-all font-mono text-[15px] font-semibold leading-tight text-white">
+              {ncmToPartida(s.recommendedNcm) || s.recommendedNcm}
+            </p>
           </div>
         ) : null}
         {s.discardedCandidates && s.discardedCandidates.length > 0 ? (

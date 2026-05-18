@@ -12,6 +12,7 @@ import { FollowUpQuestions } from "@/app/clasificarncm/components/FollowUpQuesti
 import type { CaseSnapshot, CaseState } from "@/lib/clasificar-ncm/types";
 import { QuoteCostBreakdown, type QuoteCostPayload } from "./QuoteCostBreakdown";
 import { buildChatPrefillFromParams, stripNcmDigits } from "@/lib/quote/cotizarFromClassifier";
+import { ncmToPartida } from "@/lib/ncmDisplay";
 import { FlowStepper } from "./FlowStepper";
 import { QuickReplies } from "./QuickReplies";
 
@@ -415,7 +416,7 @@ export default function NuevaOperacionClient({
                       </p>
                       {(quoteResult.ncm || caseState.recommendedNcm) ? (
                         <span className="ml-auto rounded-md border border-white/[0.1] bg-white/[0.04] px-2 py-0.5 font-mono text-[10px] text-slate-400">
-                          NCM {quoteResult.ncm || caseState.recommendedNcm}
+                          Pos. {ncmToPartida(quoteResult.ncm || caseState.recommendedNcm || "") || quoteResult.ncm || caseState.recommendedNcm}
                         </span>
                       ) : null}
                     </div>

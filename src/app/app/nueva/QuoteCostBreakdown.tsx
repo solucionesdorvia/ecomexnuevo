@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { ChevronRight, Info } from "lucide-react";
+import { ncmToPartida } from "@/lib/ncmDisplay";
 
 // ─── Tipos ──────────────────────────────────────────────────────────────────
 
@@ -213,7 +214,7 @@ function TemplateBreakdown({
           )}
           {quote.ncm && (
             <div className="rounded-md border border-amber-500/25 bg-amber-500/[0.08] px-2 py-1 font-mono text-[10px] font-semibold text-amber-300">
-              NCM {quote.ncm}
+              Pos. {ncmToPartida(quote.ncm) || quote.ncm}
             </div>
           )}
         </div>
