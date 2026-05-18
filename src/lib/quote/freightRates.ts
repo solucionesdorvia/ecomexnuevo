@@ -143,7 +143,9 @@ export function estimateUnitDimensions(ncm?: string, title?: string): UnitDimens
 export type ShippingMode = "air_usa" | "air_china" | "lcl_china" | "lcl_europe" | "lcl_usa" | "fcl20_china" | "fcl20_europe";
 
 export function selectShippingMode(zone: OriginZone, totalKg: number): ShippingMode {
-  if (zone === "USA") return "air_usa";
+  // USA: air para envíos ligeros (≤30 kg), marítimo LCL para cargas mayores
+  if (zone === "USA" && totalKg <= 30) return "air_usa";
+  if (zone === "USA") return "lcl_usa";
   if (zone === "EUROPE") return "lcl_europe";
   // China: air si es liviano y pequeño, maritimo si es volumen
   if (zone === "CHINA" && totalKg <= 30) return "air_china";
