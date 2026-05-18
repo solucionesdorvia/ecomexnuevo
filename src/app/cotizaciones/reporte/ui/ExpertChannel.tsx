@@ -83,7 +83,7 @@ export function ExpertChannel({
           </div>
           <div>
             <div className="text-sm font-bold text-strong">Consultor Experto</div>
-            <div className="text-[11px] text-emerald-400">Online · Specialist in Industrial Logistics</div>
+            <div className="text-[11px] text-emerald-400">Disponible · Asesor de comercio exterior</div>
           </div>
         </div>
         <Badge tone="muted" icon="chat_bubble">Comentarios</Badge>
@@ -100,7 +100,7 @@ export function ExpertChannel({
             >
               <div className={row.authorRole === "expert" ? "" : "text-right"}>
                 <span className="text-[11px] font-bold text-slate-400">
-                  {row.authorRole === "expert" ? "CONSULTOR EXPERTO" : "YOU"} ·{" "}
+                  {row.authorRole === "expert" ? "CONSULTOR EXPERTO" : "VOS"} ·{" "}
                   {new Date(row.createdAt).toLocaleTimeString("es-AR", { hour: "2-digit", minute: "2-digit" })}
                 </span>
               </div>

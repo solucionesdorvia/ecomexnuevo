@@ -84,8 +84,8 @@ export default function TendenciasPage() {
       subtitle="Radar de oportunidades"
       right={
         <div className="flex items-center gap-2">
-          <Badge tone="success" icon="sensors">
-            En vivo
+          <Badge tone="primary" icon="auto_awesome">
+            Señales curadas
           </Badge>
           <SealVerified />
           <ButtonLink href="/chat" variant="primary">

@@ -56,8 +56,10 @@ export async function GET(req: Request) {
   }
 
   const out = await generateQuotePdf({ quote: quote as any });
-  // eslint-disable-next-line no-console
-  console.log(`[pdf] renderer=${out.renderer} quoteId=${quote.id} bytes=${out.bytes.byteLength}`);
+  if (process.env.NODE_ENV !== "production") {
+    // eslint-disable-next-line no-console
+    console.log(`[pdf] renderer=${out.renderer} quoteId=${quote.id} bytes=${out.bytes.byteLength}`);
+  }
   const filename =
     mode === "budget" ? "E-COMEX - Presupuesto.pdf" : "E-COMEX - Cotizacion.pdf";
 

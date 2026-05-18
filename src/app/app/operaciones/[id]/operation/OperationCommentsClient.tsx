@@ -13,6 +13,7 @@ type Comment = {
 
 export function OperationCommentsClient({ quoteId, initialComments }: { quoteId: string; initialComments: Comment[] }) {
   const router = useRouter();
+  const [comments, setComments] = useState<Comment[]>(initialComments);
   const [message, setMessage] = useState("");
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -30,8 +31,17 @@ export function OperationCommentsClient({ quoteId, initialComments }: { quoteId:
         credentials: "include",
         body: JSON.stringify({ message: t }),
       });
-      const json = (await res.json()) as { ok?: boolean; error?: string };
+      const json = (await res.json()) as { ok?: boolean; error?: string; comment?: Comment };
       if (!res.ok || !json.ok) throw new Error(json.error || "Error al enviar.");
+      // Optimistic: add to local state immediately, then refresh in background
+      const newComment: Comment = json.comment ?? {
+        id: `temp-${Date.now()}`,
+        createdAt: new Date().toISOString(),
+        authorRole: "user",
+        authorLabel: "Vos",
+        message: t,
+      };
+      setComments((prev) => [...prev, newComment]);
       setMessage("");
       router.refresh();
     } catch (err) {
@@ -55,10 +65,10 @@ export function OperationCommentsClient({ quoteId, initialComments }: { quoteId:
     <div>
       <p className="text-[11px] font-medium uppercase tracking-wider text-[#555c6b]">Comentarios (cotización)</p>
       <ul className="mt-3 max-h-[280px] space-y-3 overflow-y-auto rounded-lg border border-white/[0.04] bg-[#0B1622] p-3">
-        {initialComments.length === 0 ? (
+        {comments.length === 0 ? (
           <li className="text-[13px] text-[#555c6b]">Sin mensajes aún.</li>
         ) : (
-          initialComments.map((c) => (
+          comments.map((c) => (
             <li key={c.id} className="border-b border-white/[0.04] pb-3 last:border-0 last:pb-0">
               <p className="text-[10px] text-[#555c6b]">
                 {fmtDate(c.createdAt)} · {c.authorLabel ?? c.authorRole}

@@ -170,6 +170,7 @@ export function DocumentUploader() {
   const [uploaded, setUploaded] = useState<Record<string, UploadedDoc>>({});
   const [openCat, setOpenCat] = useState<string>(CATEGORIES[0]!.id);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
 
   // Carga los documentos ya subidos al montar el componente.
   useEffect(() => {
@@ -184,7 +185,7 @@ export function DocumentUploader() {
           setUploaded(map);
         }
       })
-      .catch(() => {/* silencioso */})
+      .catch(() => setLoadError(true))
       .finally(() => setLoading(false));
   }, []);
 
@@ -216,6 +217,14 @@ export function DocumentUploader() {
           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
         </svg>
         Cargando documentos…
+      </div>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <div className="rounded-xl border border-rose-500/20 bg-rose-500/[0.06] px-4 py-4 text-[13px] text-rose-300">
+        No se pudieron cargar tus documentos. Recargá la página o intentalo más tarde.
       </div>
     );
   }

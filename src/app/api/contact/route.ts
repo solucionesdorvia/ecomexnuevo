@@ -79,11 +79,18 @@ export async function POST(req: Request) {
 </body>
 </html>`;
 
-  await sendEmail({
+  const emailResult = await sendEmail({
     to: operatorEmail,
     subject: `Nuevo contacto desde la web — ${nombre || body.email}`,
     html,
   });
+
+  if (!emailResult.ok && !emailResult.skipped) {
+    return NextResponse.json(
+      { ok: false, error: "No se pudo enviar el mensaje. Escribinos directamente a info@e-comex.com.ar" },
+      { status: 500 }
+    );
+  }
 
   return NextResponse.json({ ok: true });
 }

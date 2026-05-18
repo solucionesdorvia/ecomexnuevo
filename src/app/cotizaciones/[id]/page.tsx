@@ -14,7 +14,7 @@ export const runtime = "nodejs";
 /* ───────────────────────── Helpers de derive ───────────────────────── */
 
 const DEFAULT_WHATSAPP =
-  process.env.NEXT_PUBLIC_ECOMEX_WHATSAPP?.replace(/\D/g, "") || "5491100000000";
+  process.env.NEXT_PUBLIC_ECOMEX_WHATSAPP?.replace(/\D/g, "") || "5491153530536";
 
 function safeStr(v: unknown): string {
   if (typeof v !== "string") return "";

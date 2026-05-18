@@ -121,7 +121,7 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
             icon="trending_up"
             right={
               <Badge tone="primary" icon="update">
-                Actualizado hace 14 min
+                Señales de mercado
               </Badge>
             }
           />
@@ -286,8 +286,7 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
           <CardContent>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
               <div className="text-xs leading-relaxed text-muted">
-                Detectamos una baja temporal del <span className="font-bold text-white">12%</span>{" "}
-                en el flete marítimo para el corredor Ningbo‑Buenos Aires entre Nov 15 y Dec 05.
+                Oportunidad de flete marítimo en el corredor Ningbo‑Buenos Aires. Cotizá ahora para fijar precio con la señal actual y evitar ajustes de temporada.
               </div>
             </div>
             <div className="mt-4 grid gap-3">

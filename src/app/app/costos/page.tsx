@@ -133,9 +133,17 @@ export default async function CostosPage() {
   }
 
   let countWithRange = 0;
+  let sumAvgUsd = 0;
   for (const r of rows) {
-    if (r.totalMinUsd != null && r.totalMaxUsd != null) countWithRange++;
+    if (r.totalMinUsd != null && r.totalMaxUsd != null) {
+      countWithRange++;
+      sumAvgUsd += (r.totalMinUsd + r.totalMaxUsd) / 2;
+    }
   }
+  const totalEstimadoLabel =
+    sumAvgUsd > 0
+      ? `USD ${Math.round(sumAvgUsd).toLocaleString("es-AR")}`
+      : "—";
 
   const COL_HEADERS: { key: CardKey; label: string }[] = [
     { key: "fob", label: "Producto (FOB)" },
@@ -177,7 +185,7 @@ export default async function CostosPage() {
           {[
             { label: "Cotizaciones", value: String(rows.length) },
             { label: "Con desglose completo", value: String(countWithRange) },
-            { label: "Listas para tramitar", value: String(countWithRange), highlight: true },
+            { label: "Total estimado acumulado", value: totalEstimadoLabel, highlight: true },
           ].map((k) => (
             <div
               key={k.label}
