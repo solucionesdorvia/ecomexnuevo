@@ -723,15 +723,14 @@ export async function processClasificarTurn(opts: {
       // afectan la clasificación NCM. El usuario ya aportó lo necesario.
       snap.pendingQuestions = undefined;
       snap.ambiguity = undefined;
-      if (snap.recommendedNcm) {
-        // Sólo avanzamos a "tentative" si ya tenemos NCM clasificado
-        const st = snap.status as string;
-        if (st === "needs_info" || st === "analyzing") {
-          snap.status = "tentative";
-        }
-        // Si ya estaba en "tentative" o "resolved" lo dejamos como está
+      // Avanzamos siempre a "tentative" cuando tenemos FOB + cantidad + origen,
+      // aunque el motor no haya podido clasificar el NCM. El presupuesto puede
+      // calcularse con tarifa por defecto. Esto evita que el usuario quede
+      // bloqueado en "needs_info" cuando el motor falla o devuelve null.
+      const st = snap.status as string;
+      if (st === "needs_info" || st === "analyzing") {
+        snap.status = "tentative";
       }
-      // Sin NCM: NO avanzamos. El clasificador debe seguir trabajando.
     }
 
     const ambNorm: NormalizedAmbiguity | undefined =
