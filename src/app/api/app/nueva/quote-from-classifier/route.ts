@@ -32,8 +32,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Falta snapshot del clasificador." }, { status: 400 });
   }
 
-  const ncm = typeof snapshot.recommendedNcm === "string" ? snapshot.recommendedNcm.trim() : "";
-  const hasNcm = ncm.length >= 4 && ncm !== "9999.99.99";
   const hasPurchaseData = Boolean(
     snapshot.purchase?.fobUnitUsd &&
       snapshot.purchase?.quantity &&
@@ -50,15 +48,9 @@ export async function POST(req: Request) {
     );
   }
 
-  if (!hasNcm) {
-    return NextResponse.json(
-      {
-        error: "El clasificador todavía no pudo determinar el código NCM. Respondé las preguntas del analista para continuar.",
-      },
-      { status: 400 }
-    );
-  }
-
+  // NCM not required: cuando está ausente, calcImportQuote usa tasas planas/default.
+  // No bloqueamos la cotización — el usuario ve "Sin clasificar aún" en los supuestos
+  // y puede igualmente obtener el presupuesto estimado.
   const userText = buildUserTextFromClassifier(snapshot, messages);
   const productJson = buildProductJsonFromClassifierSnapshot(snapshot, messages);
 
