@@ -656,9 +656,12 @@ export async function processClasificarTurn(opts: {
     snap.recommendedNcm = ncm ?? undefined;
     snap.confidence = conf;
     // Sanitizamos las questions del motor: pueden traer códigos y jerga.
+    // Después del stripping, cualquier "—" indica que había un NCM en la
+    // pregunta (ej. "decidir entre **8471.30.00** y **…**" → "decidir entre **—** y **—**").
+    // Esas preguntas no tienen sentido para el usuario → se descartan.
     const motorQuestionsClean = motor.questions
       .map((q) => stripNcmCodes(q).trim())
-      .filter((q) => q.length > 0);
+      .filter((q) => q.length > 0 && !q.includes("—"));
     snap.pendingQuestions = motorQuestionsClean.length ? motorQuestionsClean : undefined;
     snap.ambiguity = motor.ambiguity;
     snap.classificationRationale =
