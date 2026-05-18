@@ -188,5 +188,13 @@ export function buildAmbiguityAssistantParagraph(a: NormalizedAmbiguity): string
   const genericMarkers = ["afinar criterio", "posiciones plausibles", "encuadre legal"];
   const low = field.toLowerCase();
   if (genericMarkers.some((m) => low.includes(m))) return "";
+
+  // Si el campo es una oración completa (demasiado largo, o el AI devolvió un
+  // mensaje narrativo en lugar de un nombre de campo corto), silenciamos para
+  // evitar frases rotas del estilo "necesito un dato más sobre no hay candidatos...".
+  if (field.length > 60) return "";
+  const sentenceStarters = ["no hay", "no se ", "no existe", "ningún", "ninguna", "no aplica"];
+  if (sentenceStarters.some((m) => low.startsWith(m) || low.includes(` ${m}`))) return "";
+
   return `Para afinar el presupuesto necesito un dato más sobre ${low}.`;
 }
