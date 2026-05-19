@@ -23,10 +23,30 @@ const QUALIFICATIONS = [
 ] as const;
 
 const HERO_SUGGESTIONS = [
-  { title: "MacBook Pro M4", hint: "1 unidad · EE.UU. · USD 1.600" },
-  { title: "Auriculares Bluetooth", hint: "1 unidad · China · USD 12" },
-  { title: "Cargador USB-C 65W", hint: "500 unidades · China · USD 3" },
-  { title: "Remeras algodón básicas", hint: "200 unidades · China · USD 4" },
+  {
+    title: "iPhone 16 Pro",
+    hint: "1 unidad · EE.UU. · USD 1.200",
+    message:
+      "Quiero importar un iPhone 16 Pro, smartphone Apple con pantalla Super Retina XDR OLED 6.3\", chip A18 Pro, cámara triple 48MP con zoom óptico 5×, 5G. 1 unidad desde EE.UU., precio FOB USD 1.200.",
+  },
+  {
+    title: "Proyector Full HD para PC",
+    hint: "1 unidad · China · USD 175",
+    message:
+      "Quiero importar un proyector de video Full HD 1080p para conectar a PC o laptop, 3800 lúmenes, entrada HDMI y USB, sin sintonizador de TV incorporado. 1 unidad desde China, precio FOB USD 175.",
+  },
+  {
+    title: "Notebook Intel Core i5",
+    hint: "1 unidad · China · USD 440",
+    message:
+      "Quiero importar una notebook computadora portátil con procesador Intel Core i5 de 12ª generación, 16 GB RAM DDR4, SSD 512 GB, pantalla 15.6\", teclado retroiluminado, sin sistema operativo. 1 unidad desde China, precio FOB USD 440.",
+  },
+  {
+    title: "Smart TV 55\" 4K",
+    hint: "1 unidad · China · USD 310",
+    message:
+      "Quiero importar un televisor Smart TV LED 55 pulgadas 4K UHD con sistema Android TV, Wi-Fi, Bluetooth, acceso a Netflix y YouTube, sintonizador TDT integrado. 1 unidad desde China, precio FOB USD 310.",
+  },
 ];
 
 function stripMessages(s: CaseState): CaseSnapshot {
@@ -336,7 +356,11 @@ export default function CotizadorPublicoClient() {
                         type="button"
                         disabled={pending}
                         onClick={() =>
-                          void sendMessage(`${s.title}, ${s.hint.replace(/\s·\s/g, ", ")}`)
+                          void sendMessage(
+                            "message" in s
+                              ? s.message
+                              : `${s.title}, ${s.hint.replace(/\s·\s/g, ", ")}`
+                          )
                         }
                         className="group flex items-center justify-between rounded-lg border border-white/[0.07] bg-[#0a1422]/80 px-4 py-3 text-left transition hover:border-white/[0.14] hover:bg-[#0d1a2e] disabled:pointer-events-none disabled:opacity-40"
                         style={{ animationDelay: `${240 + i * 50}ms` }}
