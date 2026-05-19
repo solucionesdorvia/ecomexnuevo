@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import CotizadorPublicoClient from "./CotizadorPublicoClient";
 
 export const metadata: Metadata = {
@@ -8,71 +9,35 @@ export const metadata: Metadata = {
     "Calculá gratis cuánto sale importar a Argentina. NCM, aranceles, flete, impuestos y landed cost en minutos. Sin registro.",
 };
 
-const NAV_BG = "#07111A";
-const BORDER = "rgba(255,255,255,0.06)";
-const CYAN = "#18C3D6";
-
 export default function CotizadorPage() {
   return (
     <div
-      style={{
-        background: NAV_BG,
-        height: "100dvh",
-        display: "flex",
-        flexDirection: "column",
-        fontFamily: "var(--font-body, 'Inter', sans-serif)",
-      }}
+      className="flex h-[100dvh] flex-col bg-[#07111A]"
+      style={{ fontFamily: "var(--font-body, 'Inter', sans-serif)" }}
     >
       {/* Minimal navbar */}
-      <nav
-        style={{
-          borderBottom: `1px solid ${BORDER}`,
-          background: `${NAV_BG}e6`,
-          backdropFilter: "blur(12px)",
-          WebkitBackdropFilter: "blur(12px)",
-          flexShrink: 0,
-        }}
-      >
-        <div
-          style={{
-            maxWidth: 1200,
-            margin: "0 auto",
-            padding: "0 20px",
-            height: 56,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <Link href="/">
-            <img
+      <nav className="shrink-0 border-b border-white/[0.06] bg-[#07111A]/90 backdrop-blur-sm">
+        <div className="mx-auto flex h-14 max-w-[1200px] items-center justify-between px-5">
+          <Link href="/" aria-label="E-COMEX — Inicio">
+            <Image
               src="/brand/ecomex-logo.png"
               alt="E-COMEX"
-              style={{ height: 18, filter: "brightness(0) invert(1)" }}
+              width={90}
+              height={18}
+              className="h-[18px] w-auto brightness-0 invert"
+              priority
             />
           </Link>
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <div className="flex items-center gap-3">
             <Link
               href="/account/login?next=%2Fcotizador"
-              style={{
-                fontSize: 13,
-                color: "#A7B3C2",
-                textDecoration: "none",
-              }}
+              className="text-[13px] text-[#a7b3c2] transition-colors hover:text-white"
             >
               Iniciar sesión
             </Link>
             <Link
               href="/account/register?next=%2Fcotizador"
-              style={{
-                fontSize: 13,
-                fontWeight: 600,
-                color: "#fff",
-                background: CYAN,
-                borderRadius: 8,
-                padding: "6px 14px",
-                textDecoration: "none",
-              }}
+              className="rounded-lg bg-[#18C3D6] px-3.5 py-1.5 text-[13px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
             >
               Crear cuenta
             </Link>
@@ -81,7 +46,7 @@ export default function CotizadorPage() {
       </nav>
 
       {/* Chat area */}
-      <main style={{ flex: 1, overflow: "hidden", display: "flex", flexDirection: "column" }}>
+      <main className="flex min-h-0 flex-1 flex-col overflow-hidden">
         <CotizadorPublicoClient />
       </main>
     </div>

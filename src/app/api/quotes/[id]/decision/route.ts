@@ -5,6 +5,7 @@ import { verifyAuthToken } from "@/lib/auth/jwt";
 import { writeAuditLog } from "@/lib/audit/log";
 import { sendEmail } from "@/lib/email/sendEmail";
 import { operatorNotificationHtml, userConfirmationHtml } from "@/lib/email/templates";
+import { rateLimitByIp, RATE_LIMIT_MESSAGE } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
 
@@ -12,6 +13,12 @@ export async function POST(
   req: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  // Rate limit: max 5 expert requests per IP per hour to prevent spam
+  const rl = rateLimitByIp(req, "quote-decision", 5, 60 * 60 * 1000);
+  if (!rl.ok) {
+    return NextResponse.json({ ok: false, error: RATE_LIMIT_MESSAGE }, { status: 429 });
+  }
+
   const { id } = await params;
   const body = (await req.json().catch(() => null)) as { action?: "send_expert" | "save_draft" } | null;
   const action = body?.action === "send_expert" ? "send_expert" : "save_draft";

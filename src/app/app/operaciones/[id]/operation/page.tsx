@@ -9,25 +9,9 @@ import { OperationDocumentsClient } from "./OperationDocumentsClient";
 import { OperationSuppliersClient } from "./OperationSuppliersClient";
 import { OperationCommentsClient } from "./OperationCommentsClient";
 import { operationStageBadgeClass } from "./operationStageUi";
+import { fmtDate, productLabel } from "@/lib/ui/quoteDisplay";
 
 export const runtime = "nodejs";
-
-function fmtStarted(d: Date) {
-  return d.toLocaleString("es-AR", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  });
-}
-
-function productTitle(productJson: unknown, userText: string) {
-  const pj = productJson as { title?: string; name?: string } | null | undefined;
-  const t = pj?.title ?? pj?.name;
-  if (t && String(t).trim()) return String(t).slice(0, 120);
-  const u = userText?.trim();
-  if (u) return u.slice(0, 60);
-  return "Importación";
-}
 
 /** [id] en la URL = operationId */
 export default async function OperationDetailPage({ params }: { params: Promise<{ id: string }> }) {
@@ -42,7 +26,7 @@ export default async function OperationDetailPage({ params }: { params: Promise<
   const quote = operation.quote;
   const { cards, breakdown } = parseQuoteCostJson(quote.quoteJson);
 
-  const title = productTitle(quote.productJson, quote.userText);
+  const title = productLabel(quote.productJson, null, quote.userText, 120);
 
   // NCM final: lo buscamos en varias rutas porque las cotizaciones viejas
   // (pre-fix de runPipeline) pueden no tener `productJson.ncm` pero sí
@@ -170,7 +154,7 @@ export default async function OperationDetailPage({ params }: { params: Promise<
                 </span>
               ) : null}
             </div>
-            <p className="mt-2 text-[13px] text-[#555c6b]">Iniciada el {fmtStarted(operation.createdAt)}</p>
+            <p className="mt-2 text-[13px] text-[#555c6b]">Iniciada el {fmtDate(operation.createdAt)}</p>
           </div>
           <a
             href={`/api/quote/pdf?mode=${encodeURIComponent(quote.mode)}&id=${encodeURIComponent(quote.id)}`}

@@ -101,26 +101,34 @@ function EmailModal({
       : "Es gratis. Te avisamos cuando tengamos novedades para tu operación.";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 backdrop-blur-sm">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="email-modal-title"
+    >
       <div
         className="w-full max-w-sm rounded-2xl border p-6 shadow-2xl"
         style={{ background: "#0d1826", borderColor: "rgba(255,255,255,0.1)" }}
       >
         <div className="flex items-start justify-between gap-3">
           <div>
-            <h3 className="text-[16px] font-bold text-white">{title}</h3>
+            <h3 id="email-modal-title" className="text-[16px] font-bold text-white">{title}</h3>
             <p className="mt-1.5 text-[13px] leading-relaxed text-slate-400">{desc}</p>
           </div>
           <button
             type="button"
             onClick={onSkip}
+            aria-label="Cerrar"
             className="mt-0.5 text-slate-500 transition hover:text-slate-300"
           >
-            <X className="h-5 w-5" />
+            <X className="h-5 w-5" aria-hidden />
           </button>
         </div>
         <div className="mt-4 flex gap-2">
+          <label htmlFor="email-modal-input" className="sr-only">Tu email</label>
           <input
+            id="email-modal-input"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -128,6 +136,7 @@ function EmailModal({
               if (e.key === "Enter") void submit();
             }}
             placeholder="tu@email.com"
+            autoComplete="email"
             className="min-h-[44px] flex-1 rounded-xl border border-white/[0.08] bg-[#07111A] px-3 text-[14px] text-white outline-none placeholder:text-slate-600 focus:border-[#18C3D6]/40"
             autoFocus
           />
@@ -355,13 +364,7 @@ export default function CotizadorPublicoClient() {
                         key={s.title}
                         type="button"
                         disabled={pending}
-                        onClick={() =>
-                          void sendMessage(
-                            "message" in s
-                              ? s.message
-                              : `${s.title}, ${s.hint.replace(/\s·\s/g, ", ")}`
-                          )
-                        }
+                        onClick={() => void sendMessage(s.message)}
                         className="group flex items-center justify-between rounded-lg border border-white/[0.07] bg-[#0a1422]/80 px-4 py-3 text-left transition hover:border-white/[0.14] hover:bg-[#0d1a2e] disabled:pointer-events-none disabled:opacity-40"
                         style={{ animationDelay: `${240 + i * 50}ms` }}
                       >

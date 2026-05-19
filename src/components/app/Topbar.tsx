@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import NotificationsBell from "./NotificationsBell";
 import { APP_NAV_GROUP_LABELS, buildBreadcrumbs, matchNavItem } from "./navConfig";
@@ -38,7 +39,7 @@ export default function Topbar({
 
         <div className="min-w-0 flex-1 lg:flex-none">
           <div className="flex min-w-0 items-center gap-2 lg:hidden">
-            <img src="/brand/ecomex-logo.png" alt="" className="h-4 w-auto shrink-0 brightness-0 invert opacity-80" />
+            <Image src="/brand/ecomex-logo.png" alt="" width={64} height={16} className="h-4 w-auto shrink-0 brightness-0 invert opacity-80" />
             <div className="min-w-0">
               <p className="truncate text-[13px] font-semibold text-white">{mobileTitle}</p>
               {current?.description ? (
