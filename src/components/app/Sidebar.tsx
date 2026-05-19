@@ -75,6 +75,7 @@ function SidebarContent({ userEmail, userRole, onNavigate }: { userEmail?: strin
             <button
               type="submit"
               title="Cerrar sesión"
+              aria-label="Cerrar sesión"
               className="flex h-7 w-7 items-center justify-center rounded-md text-[#4a5568] transition-colors hover:bg-white/[0.04] hover:text-[#94a3b8]"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
