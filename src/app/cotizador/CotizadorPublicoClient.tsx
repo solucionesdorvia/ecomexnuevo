@@ -227,6 +227,8 @@ export default function CotizadorPublicoClient() {
 
   function handleNewQuote() {
     setQualChecked(QUALIFICATIONS.map(() => false));
+    setExpertSent(false);
+    setExpertError(null);
     if (getQuoteCount() >= 1 && !capturedEmail) {
       setPendingAction("new_quote");
       setEmailModal("second_quote");
@@ -262,6 +264,8 @@ export default function CotizadorPublicoClient() {
     if (action === "new_quote") {
       reset();
       setQuoteResult(null);
+      setExpertSent(false);
+      setExpertError(null);
     } else if (action === "pdf") {
       triggerDownload();
     }
@@ -274,6 +278,8 @@ export default function CotizadorPublicoClient() {
     if (action === "new_quote") {
       reset();
       setQuoteResult(null);
+      setExpertSent(false);
+      setExpertError(null);
     } else if (action === "pdf") {
       triggerDownload();
     }
