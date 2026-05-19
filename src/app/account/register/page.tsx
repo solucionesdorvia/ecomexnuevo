@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import AuthForm from "../ui/AuthForm";
 
 export const runtime = "nodejs";
@@ -19,7 +20,7 @@ export default function RegisterPage({
       <header className="sticky top-0 z-50 border-b border-white/[0.05] bg-[#07111A]/90 backdrop-blur">
         <div className="mx-auto flex min-h-14 w-full max-w-[1200px] items-center justify-between px-5 lg:px-8">
           <Link href="/" className="flex items-center gap-2.5">
-            <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-5 brightness-0 invert" />
+            <Image src="/brand/ecomex-logo.png" alt="E-COMEX" width={100} height={24} className="h-5 w-auto brightness-0 invert opacity-90" />
           </Link>
           <Link
             href="/cotizador"

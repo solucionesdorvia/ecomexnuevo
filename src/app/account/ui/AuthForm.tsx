@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function AuthForm({
@@ -18,10 +19,13 @@ export default function AuthForm({
   alternateLabel: string;
   redirectTo?: string;
 }) {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const isRegister = endpoint === "/api/auth/register";
 
   async function submit() {
     if (!email || !password) return;
@@ -42,7 +46,7 @@ export default function AuthForm({
         redirectTo && redirectTo.startsWith("/") && !redirectTo.startsWith("//")
           ? redirectTo
           : "/app";
-      window.location.href = dest;
+      router.push(dest);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Error.");
     } finally {
@@ -66,54 +70,66 @@ export default function AuthForm({
           Accedé a tu panel de importaciones.
         </p>
 
-        <div className="mt-6 space-y-3">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            onKeyDown={(e) => { if (e.key === "Enter") void submit(); }}
-            placeholder="email@empresa.com"
-            className="w-full rounded-xl border border-white/[0.08] bg-[#07111A] px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#3d4a5a] transition focus:border-[#18C3D6]/40 focus:ring-2 focus:ring-[#18C3D6]/15"
-            autoComplete="email"
-          />
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            onKeyDown={(e) => { if (e.key === "Enter") void submit(); }}
-            placeholder="Contraseña"
-            className="w-full rounded-xl border border-white/[0.08] bg-[#07111A] px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#3d4a5a] transition focus:border-[#18C3D6]/40 focus:ring-2 focus:ring-[#18C3D6]/15"
-            autoComplete={endpoint === "/api/auth/register" ? "new-password" : "current-password"}
-          />
+        <form
+          onSubmit={(e) => { e.preventDefault(); void submit(); }}
+          noValidate
+        >
+          <div className="mt-6 space-y-3">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="email@empresa.com"
+              className="w-full rounded-xl border border-white/[0.08] bg-[#07111A] px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#3d4a5a] transition focus:border-[#18C3D6]/40 focus:ring-2 focus:ring-[#18C3D6]/15"
+              autoComplete="email"
+              autoFocus
+              aria-invalid={!!error}
+              aria-describedby={error ? "auth-error" : undefined}
+            />
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Contraseña"
+              className="w-full rounded-xl border border-white/[0.08] bg-[#07111A] px-4 py-3 text-[14px] text-white outline-none placeholder:text-[#3d4a5a] transition focus:border-[#18C3D6]/40 focus:ring-2 focus:ring-[#18C3D6]/15"
+              autoComplete={isRegister ? "new-password" : "current-password"}
+              minLength={isRegister ? 8 : undefined}
+              aria-invalid={!!error}
+              aria-describedby={error ? "auth-error" : undefined}
+            />
 
-          {error && (
-            <div className="rounded-xl border border-rose-500/20 bg-rose-500/[0.06] px-4 py-3 text-[13px] text-rose-400">
-              {error}
-            </div>
-          )}
-        </div>
+            {error && (
+              <div
+                id="auth-error"
+                role="alert"
+                className="rounded-xl border border-rose-500/20 bg-rose-500/[0.06] px-4 py-3 text-[13px] text-rose-400"
+              >
+                {error}
+              </div>
+            )}
+          </div>
 
-        <div className="mt-5 flex flex-col gap-2.5 sm:flex-row">
-          <button
-            type="button"
-            disabled={pending || !email || !password}
-            onClick={() => void submit()}
-            className="inline-flex h-11 flex-1 items-center justify-center rounded-xl bg-[#18C3D6] px-6 text-[14px] font-semibold text-[#030d18] transition-all hover:bg-[#0ea5b9] disabled:opacity-50"
-          >
-            {pending ? (
-              <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-              </svg>
-            ) : submitLabel}
-          </button>
-          <Link
-            href={alternateHref}
-            className="inline-flex h-11 flex-1 items-center justify-center rounded-xl border border-white/[0.08] px-6 text-[14px] font-medium text-[#6b7a8d] transition-colors hover:border-white/[0.15] hover:text-[#aab4c2]"
-          >
-            {alternateLabel}
-          </Link>
-        </div>
+          <div className="mt-5 flex flex-col gap-2.5 sm:flex-row">
+            <button
+              type="submit"
+              disabled={pending || !email || !password}
+              className="inline-flex h-11 flex-1 items-center justify-center rounded-xl bg-[#18C3D6] px-6 text-[14px] font-semibold text-[#030d18] transition-all hover:bg-[#0ea5b9] disabled:opacity-50"
+            >
+              {pending ? (
+                <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                </svg>
+              ) : submitLabel}
+            </button>
+            <Link
+              href={alternateHref}
+              className="inline-flex h-11 flex-1 items-center justify-center rounded-xl border border-white/[0.08] px-6 text-[14px] font-medium text-[#6b7a8d] transition-colors hover:border-white/[0.15] hover:text-[#aab4c2]"
+            >
+              {alternateLabel}
+            </Link>
+          </div>
+        </form>
 
         <p className="mt-5 text-[12px] text-[#3d4a5a]">
           ¿Sin cuenta todavía?{" "}
