@@ -32,6 +32,11 @@ export async function POST(req: Request) {
       );
     }
 
+    const ct = req.headers.get("content-type") ?? "";
+    if (!ct.includes("application/json")) {
+      return NextResponse.json({ ok: false, error: "Bad request." }, { status: 400 });
+    }
+
     const body = (await req.json()) as { email?: string; password?: string };
     const email = String(body.email ?? "")
       .trim()
