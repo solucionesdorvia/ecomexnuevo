@@ -75,7 +75,7 @@ export function detectOriginZone(origin: string): OriginZone {
   const o = origin.toLowerCase();
   if (/chin|shenzhen|guangzhou|yiwu|hangzhou|shanghai|hong.?kong|taiw/.test(o))
     return "CHINA";
-  if (/usa|estados unidos|eeuu|new york|miami|los angeles|california|florida/.test(o))
+  if (/usa|estados unidos|eeuu|ee\.?uu|new york|miami|los angeles|california|florida|united states/.test(o))
     return "USA";
   if (/europa|europe|aleman|german|espa[ñn]|spain|italia|italy|france|francia|holand|nether|belg|portug|uk|reino unido/.test(o))
     return "EUROPE";
