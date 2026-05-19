@@ -24,7 +24,6 @@ import {
   hasQuoteSignals,
   isAffirmative,
   consultingPostQuoteMessage,
-  cleanProductTitleFromMixedInput,
   parseWeightKg,
 } from "@/lib/chat/chatParsers";
 
@@ -32,7 +31,6 @@ import {
   inferStageHintFromMessages,
   inferSeedForProductFromMessages,
   extractNcmFromText,
-  isValidNcmCode,
   parseAssumptionUpdate,
   applyAssumptionUpdate,
   validateNoGuessQuoteInputs,
@@ -555,12 +553,6 @@ export async function POST(req: Request) {
           ? ncmMeta!.pcramCandidates as Array<{ ncmCode: string; title?: string }>
           : [];
         const ncmUnresolved = !product?.ncm || ncmMeta?.ambiguous === true;
-        const qsNowFromMeta: string[] = Array.isArray(ncmMeta?.missingInfoQuestions)
-          ? (ncmMeta!.missingInfoQuestions as unknown[]).map((q) => String(q).trim()).filter(Boolean).slice(0, 4)
-          : [];
-        const qsNow = qsNowFromMeta.length
-          ? qsNowFromMeta
-          : deriveBasicNcmQuestions({ hsHeading: ncmMeta?.hsHeading as string | undefined, kind: ncmMeta?.kind as string | undefined, candidates });
 
         if (candidates.length >= 2 && ncmUnresolved) {
           if (shouldSkipTechnicalQuestions(product)) {
@@ -635,13 +627,6 @@ export async function POST(req: Request) {
             const mergedCandidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(mergedMeta?.pcramCandidates)
               ? mergedMeta!.pcramCandidates as Array<{ ncmCode: string; title?: string }>
               : [];
-            const qsMergedFromMeta: string[] = Array.isArray(mergedMeta?.missingInfoQuestions)
-              ? (mergedMeta!.missingInfoQuestions as unknown[]).map((q) => String(q).trim()).filter(Boolean).slice(0, 4)
-              : [];
-            const qsMerged = qsMergedFromMeta.length
-              ? qsMergedFromMeta
-              : deriveBasicNcmQuestions({ hsHeading: mergedMeta?.hsHeading as string | undefined, kind: mergedMeta?.kind as string | undefined, candidates: mergedCandidates });
-
             if (typeof merged.fobUsd !== "number") {
               await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_price" } }).catch(() => null);
               return ask("Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)");
