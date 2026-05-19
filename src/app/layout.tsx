@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   title: "E-COMEX — Calculadora de costos de importación a Argentina",
   description:
     "Calculá gratis cuánto cuesta importar a Argentina. Clasificación NCM, aranceles, flete e impuestos en minutos. La mejor calculadora de importaciones del país.",
-  metadataBase: new URL("https://e-comex.app"),
+  metadataBase: new URL("https://e-comex.com.ar"),
   keywords: [
     "cuánto cuesta importar a argentina",
     "calculadora costos importación argentina",
