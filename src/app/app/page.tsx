@@ -7,67 +7,10 @@ import {
   operationStageBadgeClass,
 } from "@/app/app/operaciones/[id]/operation/operationStageUi";
 import { SystemKpi, SystemPage, SystemSection } from "@/components/app/SystemPage";
+import { fmtUsd, fmtActivity, fmtDate, productLabel } from "@/lib/ui/quoteDisplay";
+import { quoteStageLabel } from "@/lib/ui/stageLabels";
 
 export const runtime = "nodejs";
-
-function fmtUsd(n: number) {
-  return n.toLocaleString("en-US", { style: "currency", currency: "USD" });
-}
-
-function fmtActivity(d: Date) {
-  return d.toLocaleString("es-AR", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-}
-
-function fmtQuoteDate(d: Date) {
-  return d.toLocaleString("es-AR", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-}
-
-/** Mismo fallback que /app/operaciones (productJson title/name, userText). */
-function productLabel(productJson: unknown, quoteJson: unknown, userText: string, max = 72): string {
-  const pj = productJson as { title?: string; name?: string; origin?: string; country?: string } | null | undefined;
-  const qj = quoteJson as { assumptions?: { id?: string; label?: string; value?: string }[] } | null | undefined;
-  const name = pj?.title ?? pj?.name ?? "";
-  const assumptions = Array.isArray(qj?.assumptions) ? qj.assumptions : [];
-  const findVal = (keys: string[]) => {
-    const hit = assumptions.find((a) =>
-      keys.some((k) => (a.id ?? "").toLowerCase().includes(k) || (a.label ?? "").toLowerCase().includes(k))
-    );
-    return hit?.value?.trim() ?? null;
-  };
-  const qty = findVal(["cantidad", "quantity", "units", "unidades"]);
-  const origin = pj?.origin ?? pj?.country ?? findVal(["origen", "origin", "país", "pais", "country"]);
-  if (name) {
-    const parts: string[] = [];
-    if (qty) parts.push(qty);
-    parts.push(name);
-    if (origin) parts.push(`de ${origin}`);
-    return parts.join(" · ").slice(0, max);
-  }
-  if (userText?.trim()) return userText.trim().slice(0, max);
-  return "—";
-}
-
-const STAGE_LABELS: Record<string, string> = {
-  quoted: "Cotizado",
-  refined: "Refinado",
-  decision_requested: "Decisión",
-  lead_captured: "Lead",
-  awaiting_product: "Esperando producto",
-  awaiting_price: "Esperando precio",
-  awaiting_quantity: "Esperando cantidad",
-};
 
 export default async function DashboardPage() {
   const user = await getSessionUser();
@@ -258,9 +201,9 @@ export default async function DashboardPage() {
                       <p className="text-[13px] font-medium text-white [overflow-wrap:anywhere]">{title}</p>
                       <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-[#555c6b]">
                         <span className="font-medium text-[#d4a843]">{total}</span>
-                        <span>{fmtQuoteDate(q.createdAt)}</span>
+                        <span>{fmtDate(q.createdAt)}</span>
                         <span className="rounded-full bg-white/[0.04] px-2 py-0.5 text-[10px] text-[#b0b8c9]">
-                          {STAGE_LABELS[q.stage] ?? q.stage}
+                          {quoteStageLabel(q.stage)}
                         </span>
                       </div>
                     </div>
