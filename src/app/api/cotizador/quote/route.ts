@@ -79,11 +79,12 @@ export async function POST(req: Request) {
       rawUserText: userText,
     });
   } catch (e) {
-    const msg = e instanceof Error ? e.message : "Error inesperado.";
+    const msg = e instanceof Error ? e.message : "";
     if (msg.startsWith("NO_PRICE")) {
       return NextResponse.json({ error: "Falta el precio unitario. Ingresalo antes de cotizar." }, { status: 400 });
     }
-    throw e;
+    console.error("[cotizador/quote] calcImportQuote error", e);
+    return NextResponse.json({ error: "No se pudo calcular la cotización. Intentá de nuevo." }, { status: 500 });
   }
 
   const cookieStore = await cookies();
@@ -91,18 +92,24 @@ export async function POST(req: Request) {
   const existing = cookieStore.get("ecomex_anon")?.value;
   const anonId = existing && existing.length >= 8 ? existing : crypto.randomUUID();
 
-  const row = await prisma.quote.create({
-    data: {
-      anonId,
-      mode: "quote",
-      userText,
-      productJson: enrichedProduct as unknown as InputJsonValue,
-      quoteJson: quote as unknown as InputJsonValue,
-      totalMinUsd: quote.totalMinUsd ?? undefined,
-      totalMaxUsd: quote.totalMaxUsd ?? undefined,
-      stage: "quoted",
-    },
-  });
+  let row: Awaited<ReturnType<typeof prisma.quote.create>>;
+  try {
+    row = await prisma.quote.create({
+      data: {
+        anonId,
+        mode: "quote",
+        userText,
+        productJson: enrichedProduct as unknown as InputJsonValue,
+        quoteJson: quote as unknown as InputJsonValue,
+        totalMinUsd: quote.totalMinUsd ?? undefined,
+        totalMaxUsd: quote.totalMaxUsd ?? undefined,
+        stage: "quoted",
+      },
+    });
+  } catch (e) {
+    console.error("[cotizador/quote] db create error", e);
+    return NextResponse.json({ error: "No se pudo guardar la cotización. Intentá de nuevo." }, { status: 500 });
+  }
 
   const finalNcm = (() => {
     const p = enrichedProduct as Record<string, unknown> | null | undefined;

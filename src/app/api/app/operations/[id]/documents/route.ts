@@ -101,18 +101,17 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
           ? nameOverride.trim().slice(0, 500)
           : saved.displayName;
     } catch (e) {
-      const msg = e instanceof Error ? e.message : "Error al subir.";
-      return NextResponse.json({ error: msg }, { status: 400 });
+      console.error("[documents/POST] file upload failed", e);
+      return NextResponse.json({ error: "No se pudo subir el archivo. Intentá de nuevo." }, { status: 400 });
     }
 
-    const doc = await createDocumentWithNotification(operation, user, displayName, publicUrl);
-
-    return NextResponse.json({
-      document: {
-        ...doc,
-        createdAt: doc.createdAt.toISOString(),
-      },
-    });
+    try {
+      const doc = await createDocumentWithNotification(operation, user, displayName, publicUrl);
+      return NextResponse.json({ document: { ...doc, createdAt: doc.createdAt.toISOString() } });
+    } catch (e) {
+      console.error("[documents/POST] db error after upload", e);
+      return NextResponse.json({ error: "No se pudo guardar el documento." }, { status: 500 });
+    }
   }
 
   const raw = await req.json().catch(() => null);
@@ -123,12 +122,11 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
     return NextResponse.json({ error: msg }, { status: 400 });
   }
 
-  const doc = await createDocumentWithNotification(operation, user, parsed.data.name, parsed.data.url);
-
-  return NextResponse.json({
-    document: {
-      ...doc,
-      createdAt: doc.createdAt.toISOString(),
-    },
-  });
+  try {
+    const doc = await createDocumentWithNotification(operation, user, parsed.data.name, parsed.data.url);
+    return NextResponse.json({ document: { ...doc, createdAt: doc.createdAt.toISOString() } });
+  } catch (e) {
+    console.error("[documents/POST] db error", e);
+    return NextResponse.json({ error: "No se pudo guardar el documento." }, { status: 500 });
+  }
 }
