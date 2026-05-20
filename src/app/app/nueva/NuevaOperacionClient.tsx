@@ -66,7 +66,7 @@ type NuevaOperacionClientProps = {
 export default function NuevaOperacionClient({
   initialNcm,
   initialProducto,
-  isOperator = false,
+  isOperator: _isOperator = false, // eslint-disable-line @typescript-eslint/no-unused-vars
 }: NuevaOperacionClientProps = {}) {
   const router = useRouter();
   const { caseState, sendMessage, pending, reset } = useClasificarChat({ credentials: "include" });
@@ -217,7 +217,7 @@ export default function NuevaOperacionClient({
           assumptions: json.assumptions,
           quality: json.quality,
           quantity: caseState.purchase?.quantity,
-          breakdown: (json as any).breakdown ?? undefined,
+          breakdown: json.breakdown ?? undefined,
         });
       }
     } catch (e) {

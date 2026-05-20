@@ -30,7 +30,7 @@ function normText(s: string) {
   return String(s || "")
     .toLowerCase()
     .normalize("NFD")
-    // eslint-disable-next-line no-control-regex
+     
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();

@@ -623,10 +623,6 @@ export async function POST(req: Request) {
             if (typeof product?.currency === "string") merged.currency = product.currency;
             await prisma.quote.update({ where: { id: active.id }, data: { productJson: merged as never } }).catch(() => null);
 
-            const mergedMeta = (merged?.raw as Record<string, unknown> | undefined)?.ncmMeta as Record<string, unknown> | undefined;
-            const mergedCandidates: Array<{ ncmCode: string; title?: string }> = Array.isArray(mergedMeta?.pcramCandidates)
-              ? mergedMeta!.pcramCandidates as Array<{ ncmCode: string; title?: string }>
-              : [];
             if (typeof merged.fobUsd !== "number") {
               await prisma.quote.update({ where: { id: active.id }, data: { stage: "awaiting_price" } }).catch(() => null);
               return ask("Perfecto. ¿Cuál es el **precio unitario** del producto en **USD**? (ej: `USD 120`)");

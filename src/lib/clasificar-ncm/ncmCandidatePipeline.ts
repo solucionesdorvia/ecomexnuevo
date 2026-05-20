@@ -296,7 +296,7 @@ export function resolveAmbiguityDecision(
   pool = sortByConfidence(pool);
 
   if (process.env.NCM_DEBUG_CANDIDATES === "1" || process.env.NCM_DEBUG_CANDIDATES === "true") {
-    // eslint-disable-next-line no-console
+     
     console.log("Ambiguity resolved:", {
       reason: ambiguity.reason,
       answer: userAnswer.slice(0, 200),

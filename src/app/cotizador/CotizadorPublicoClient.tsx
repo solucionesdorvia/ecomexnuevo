@@ -188,7 +188,6 @@ export default function CotizadorPublicoClient() {
     setQualChecked((prev) => prev.map((v, idx) => (idx === i ? !v : v)));
   }
 
-  const hasProduct = Boolean(caseState.productName || caseState.technicalName);
   const hasCommercialData = Boolean(
     caseState.purchase?.fobUnitUsd && caseState.purchase?.quantity && caseState.purchase?.origin
   );
@@ -197,8 +196,6 @@ export default function CotizadorPublicoClient() {
       typeof caseState.confidence === "number" &&
       (caseState.status === "resolved" || caseState.status === "tentative")) ||
     (hasCommercialData && (caseState.status === "resolved" || caseState.status === "tentative"));
-  const hasBudget = Boolean(quoteResult);
-
   const lastAssistant = useMemo(() => {
     for (let i = caseState.messages.length - 1; i >= 0; i--) {
       const m = caseState.messages[i]!;
@@ -243,7 +240,7 @@ export default function CotizadorPublicoClient() {
           assumptions: json.assumptions,
           quality: json.quality,
           quantity: caseState.purchase?.quantity,
-          breakdown: (json as any).breakdown ?? undefined,
+          breakdown: json.breakdown ?? undefined,
         });
         incrementQuoteCount();
       }

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Operator-only internal route — Prisma JsonValue casts are intentional here.
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { requireRole } from "@/lib/auth/session";
@@ -114,7 +116,7 @@ export async function GET(req: Request) {
 
     return NextResponse.json({ ok: true, budgets });
   } catch (e) {
-    // eslint-disable-next-line no-console
+     
     console.error("[operator/budgets] list error", e);
     return NextResponse.json(
       { ok: false, error: "No se pudo cargar presupuestos." },
@@ -177,7 +179,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ ok: true, budget: created });
   } catch (e) {
-    // eslint-disable-next-line no-console
+     
     console.error("[operator/budgets] upload error", e);
     return NextResponse.json(
       { ok: false, error: "No se pudo subir el archivo." },

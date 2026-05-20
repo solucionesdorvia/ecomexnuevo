@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { APP_NAV_GROUP_LABELS, APP_NAV_ITEMS, type AppNavItem } from "./navConfig";
@@ -21,7 +22,7 @@ function SidebarContent({ userEmail, userRole, onNavigate }: { userEmail?: strin
   return (
     <>
       <div className="flex h-14 items-center border-b border-white/[0.04] px-5 pt-safe">
-        <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-5 brightness-0 invert opacity-90" />
+        <Image src="/brand/ecomex-logo.png" alt="E-COMEX" width={90} height={20} className="h-5 brightness-0 invert opacity-90" />
       </div>
 
       <nav className="no-scrollbar flex-1 overflow-y-auto overscroll-y-contain px-3 py-4">

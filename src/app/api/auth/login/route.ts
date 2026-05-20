@@ -91,7 +91,7 @@ export async function POST(req: Request) {
     });
     return res;
   } catch (e) {
-    // eslint-disable-next-line no-console
+     
     console.error("[auth/login] error", e);
     return NextResponse.json(
       { ok: false, error: "No se pudo iniciar sesión." },
