@@ -82,11 +82,24 @@ export function OperationCommentsClient({ quoteId, initialComments }: { quoteId:
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) {
+              e.preventDefault();
+              if (!pending && message.trim()) void submit(e as unknown as React.FormEvent);
+            }
+          }}
           rows={3}
-          placeholder="Escribí un comentario…"
+          maxLength={2000}
+          placeholder="Escribí un comentario… (Ctrl+Enter para enviar)"
           className="w-full rounded-lg border border-white/[0.08] bg-[#07111A] px-3 py-2 text-[13px] text-white outline-none placeholder:text-[#555c6b]"
+          aria-label="Escribí un comentario"
         />
-        {error ? <p className="text-[11px] text-rose-400">{error}</p> : null}
+        <div className="flex items-center justify-between gap-3">
+          {error ? <p className="text-[11px] text-rose-400">{error}</p> : <span />}
+          <p className={`shrink-0 text-[10px] ${message.length > 1800 ? "text-amber-400" : "text-[#555c6b]"}`}>
+            {message.length}/2000
+          </p>
+        </div>
         <button
           type="submit"
           disabled={pending || !message.trim()}
