@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ChatContainer } from "@/app/clasificarncm/components/ChatContainer";
@@ -102,7 +103,7 @@ export default function ClasificadorClient() {
     <div className="flex min-h-[100dvh] flex-col bg-[#030712]" style={{ fontFamily: "var(--font-body, 'Inter', sans-serif)" }}>
       <header className="flex items-center justify-between border-b border-white/[0.07] bg-[#030712]/90 px-3 py-3 pt-safe backdrop-blur-md sm:px-6">
         <Link href="/" className="flex min-h-[44px] items-center gap-2 sm:min-h-0">
-          <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-5 brightness-0 invert" />
+          <Image src="/brand/ecomex-logo.png" alt="E-COMEX" width={90} height={20} className="h-5 brightness-0 invert" />
           <span className="hidden text-[13px] font-medium text-[#A7B3C2] sm:inline">Clasificador NCM</span>
         </Link>
         <button

@@ -18,7 +18,8 @@ export async function writeAuditLog(params: LogParams) {
         entityType: params.entityType,
         entityId: params.entityId,
         action: params.action,
-        payload: (params.payload ?? null) as any,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        payload: (params.payload ?? null) as any, // Prisma JsonValue cast
         actorUserId: params.actorUserId ?? null,
         actorRole: params.actorRole ?? null,
         quoteId: params.quoteId ?? null,

@@ -9,11 +9,12 @@ export function GuidedOnboarding() {
   const [firstUse, setFirstUse] = useState(false);
 
   useEffect(() => {
+    // SSR-safe localStorage read: useEffect is the correct place to access window.localStorage in Next.js
     try {
       const seen = window.localStorage.getItem(FIRST_USE_KEY);
-      if (!seen) {
-        setFirstUse(true);
-      }
+      // SSR-safe: useEffect only runs client-side; localStorage is unavailable during SSR.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      if (!seen) setFirstUse(true);
     } catch {
       setFirstUse(false);
     }

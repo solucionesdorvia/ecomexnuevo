@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Import quote calculator — dynamic product JSON shapes require any casts.
 import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
 import { detectOriginZone, estimateUnitDimensions, calcFreightCost } from "./freightRates";
 

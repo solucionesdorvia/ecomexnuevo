@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// PDF HTML template — dynamic quote data and Playwright page API require any casts.
 import "dotenv/config";
 
 import type { QuoteCard } from "@/lib/quote/calcImportQuote";
@@ -785,9 +787,7 @@ export async function generateQuotePdfViaHtml(quote: QuoteLike) {
     // Wait for web fonts (best-effort).
     await page
       .evaluate(async () => {
-        // @ts-ignore
         if (document.fonts?.ready) {
-          // @ts-ignore
           await document.fonts.ready;
         }
       })

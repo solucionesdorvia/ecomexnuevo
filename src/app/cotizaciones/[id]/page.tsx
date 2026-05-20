@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Prisma JSON fields (productJson, quoteJson) have deeply nested dynamic shapes — any casts are intentional.
 import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/db";

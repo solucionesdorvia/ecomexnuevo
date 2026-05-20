@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { requireRole } from "@/lib/auth/session";
+import type { UserRole } from "@/generated/prisma/enums";
 
 export const runtime = "nodejs";
 
@@ -27,7 +28,7 @@ export async function POST(req: Request) {
 
     const updated = await prisma.user.update({
       where: { id: userId },
-      data: { role: role as any },
+      data: { role: role as UserRole },
       select: { id: true, email: true, role: true },
     });
     return NextResponse.json({ ok: true, user: updated });

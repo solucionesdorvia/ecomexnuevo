@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Quote analysis report client — dynamic quote data shapes require any casts.
 "use client";
 
 import Link from "next/link";

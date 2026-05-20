@@ -3,6 +3,7 @@
  */
 
 import type { IncomingMessage } from "./chatParsers";
+import { looksLikeFreshProductIntent } from "./chatParsers";
 
 export type StageHint = "awaiting_product" | "awaiting_price" | "awaiting_quantity" | null;
 
@@ -31,7 +32,6 @@ export function inferStageHintFromMessages(messages: IncomingMessage[]): StageHi
 }
 
 export function inferSeedForProductFromMessages(messages: IncomingMessage[]): string | null {
-  const { looksLikeFreshProductIntent } = require("./chatParsers");
   for (let i = messages.length - 1; i >= 0; i--) {
     const m = messages[i];
     if (!m || m.role !== "user") continue;
@@ -107,6 +107,7 @@ export function applyAssumptionUpdate(product: Record<string, unknown>, upd: { o
   return product;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function validateNoGuessQuoteInputs(product: Record<string, unknown>, _opts?: { requireNcm?: boolean }) {
   const missing: string[] = [];
   const questions: string[] = [];
@@ -275,13 +276,12 @@ export function tryPickNcmCandidateFromHints(
   return null;
 }
 
-export function deriveBasicNcmQuestions(_opts: {
-  hsHeading?: string;
-  kind?: string;
-  candidates: Array<{ ncmCode: string; title?: string }>;
-}) {
-  // Disabled: system auto-picks the best NCM without asking users technical questions.
-  return [] as string[];
+// Disabled: system auto-picks the best NCM without asking users technical questions.
+export function deriveBasicNcmQuestions(
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  _opts: { hsHeading?: string; kind?: string; candidates: Array<{ ncmCode: string; title?: string }> }
+): string[] {
+  return [];
 }
 
 export function looksLikeNcmDisagreement(text: string) {

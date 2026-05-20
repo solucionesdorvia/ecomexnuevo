@@ -85,7 +85,8 @@ export function TendenciasClient({ signals }: { signals: Signal[] }) {
       const raw = localStorage.getItem(LS_KEY);
       if (!raw) return;
       const obj = JSON.parse(raw);
-      if (Array.isArray(obj?.rubros)) setRubros(obj.rubros.filter((x: any) => typeof x === "string"));
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      if (Array.isArray(obj?.rubros)) setRubros((obj.rubros as unknown[]).filter((x): x is string => typeof x === "string"));
     } catch {
       // ignore
     }

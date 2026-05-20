@@ -8,7 +8,6 @@ type DolarApiBlue = {
 };
 
 declare global {
-  // eslint-disable-next-line no-var
   var __ecomex_fx_cache:
     | {
         arsPerUsd: number;

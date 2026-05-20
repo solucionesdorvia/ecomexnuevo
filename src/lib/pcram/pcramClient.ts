@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// PCRAM API client — dynamic scraped data and cheerio results require any casts.
 import "dotenv/config";
 import * as cheerio from "cheerio";
 import { CacheManager } from "@/lib/pcram/cache";
@@ -78,23 +80,6 @@ function requireEnv(name: string) {
   return v;
 }
 
-function withTimeout<T>(p: Promise<T>, timeoutMs: number, label = "timeout"): Promise<T> {
-  const ms = Math.max(1000, Math.floor(timeoutMs));
-  return new Promise<T>((resolve, reject) => {
-    const t = setTimeout(() => reject(new Error(label)), ms);
-    p.then(
-      (v) => {
-        clearTimeout(t);
-        resolve(v);
-      },
-      (e) => {
-        clearTimeout(t);
-        reject(e);
-      }
-    );
-  });
-}
-
 function fmtNcm(ncmRaw: string) {
   const digits = (ncmRaw || "").replace(/\D/g, "");
   if (digits.length < 6) return "9999.99.99";
@@ -140,7 +125,6 @@ function normLabel(s: string) {
   return String(s || "")
     .toUpperCase()
     .normalize("NFD")
-    // eslint-disable-next-line no-control-regex
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[.()]/g, " ")
     .replace(/[^A-Z0-9]+/g, " ")

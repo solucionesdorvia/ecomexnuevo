@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// StoredBudgetParsed serialization helpers — Prisma JsonValue casts are intentional here.
 import type { ParsedBudget } from "@/lib/operatorBudget/xlsxParse";
 
 export type BudgetOverrides = Partial<
@@ -28,7 +30,8 @@ function hasOwn(o: any, k: string) {
 }
 
 export function stripBudgetMeta(parsed: StoredBudgetParsed): ParsedBudget {
-  const { _original: _o, _overrides: _ov, ...rest } = parsed as any;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { _original, _overrides, ...rest } = parsed as any;
   return rest as ParsedBudget;
 }
 

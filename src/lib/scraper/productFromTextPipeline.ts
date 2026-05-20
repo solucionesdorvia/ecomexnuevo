@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Product text pipeline — dynamic AI JSON responses require any casts.
 import { classifyWithAI, type NcmClassification } from "@/lib/ai/ncmClassifier";
 import { wearablePcramQueryBoost } from "@/lib/ncm/wearablePcramBoost";
 import { PcramClient } from "@/lib/pcram/pcramClient";
@@ -25,28 +27,6 @@ export type TextPipelineResult = {
     ambiguity?: NonNullable<NcmClassification["ambiguity"]>;
   };
 };
-
-const STOPWORDS = new Set([
-  "de",
-  "del",
-  "la",
-  "las",
-  "el",
-  "los",
-  "y",
-  "o",
-  "para",
-  "con",
-  "sin",
-  "por",
-  "un",
-  "una",
-  "unos",
-  "unas",
-  "en",
-  "al",
-  "a",
-]);
 
 function withTimeout<T>(p: Promise<T>, timeoutMs: number): Promise<T> {
   const ms = Math.max(1000, Math.floor(timeoutMs));
@@ -101,46 +81,13 @@ function expandSearchQueries(input: string) {
   return uniqueStrings(queries).slice(0, 4);
 }
 
-const GENERIC_TOKENS = new Set(["elevador", "montacargas", "maquina", "equipo", "producto"]);
-
 function normText(s: string) {
   return String(s || "")
     .toLowerCase()
     .normalize("NFD")
-    // eslint-disable-next-line no-control-regex
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
-}
-
-function tokensFrom(s: string) {
-  const t = normText(s);
-  if (!t) return [];
-  const toks = t
-    .split(/\s+/g)
-    .map((x) => x.trim())
-    .filter(Boolean)
-    .filter((x) => x.length >= 4)
-    .filter((x) => !STOPWORDS.has(x));
-  // de-dupe while keeping order
-  return [...new Set(toks)].slice(0, 12);
-}
-
-function tokenMatchesTitle(token: string, titleNorm: string) {
-  // Prefer word-boundary-ish matches and prefix matches ("ascensor" ~ "ascensores")
-  const words = titleNorm.split(/\s+/g);
-  return words.some((w) => w === token || w.startsWith(token) || token.startsWith(w));
-}
-
-function scoreCandidate(query: string, title?: string) {
-  const qTokens = tokensFrom(query);
-  const tNorm = normText(title ?? "");
-  if (!qTokens.length || !tNorm) return { score: 0, qTokens };
-  let hits = 0;
-  for (const tok of qTokens) {
-    if (tokenMatchesTitle(tok, tNorm)) hits++;
-  }
-  return { score: hits / qTokens.length, qTokens };
 }
 
 function extractNcmFromText(input: string): string | undefined {
@@ -157,60 +104,6 @@ function extractNcmFromText(input: string): string | undefined {
   }
 
   return undefined;
-}
-
-function deriveDisambiguationQuestions(opts: {
-  hsHeading?: string;
-  kind?: string;
-  candidates: Array<{ ncmCode: string; title?: string }>;
-}) {
-  const hs = (opts.hsHeading ?? "").replace(/\D/g, "");
-  const kind = normText(opts.kind ?? "");
-  const titles = opts.candidates
-    .map((c) => normText(c.title ?? ""))
-    .filter(Boolean)
-    .slice(0, 10);
-
-  const has = (re: RegExp) => titles.some((t) => re.test(t));
-  const questions: string[] = [];
-
-  // Vehicles / tractors (chapter 87) frequently require a couple of hard attributes.
-  if (hs === "8704") {
-    if (has(/\binferior o igual a 5 t\b/) && has(/\bsuperior a 5 t\b/)) {
-      questions.push("¿El **peso total con carga máxima** es **≤ 5 t** o **> 5 t**?");
-    } else if (kind.includes("camioneta") || kind.includes("pickup")) {
-      questions.push("¿El **peso total con carga máxima** es **≤ 5 t**? (sí/no)");
-    }
-    if (has(/\bcaja basculante\b/)) {
-      questions.push("¿Es una camioneta/camión con **caja basculante**? (sí/no)");
-    }
-    if (has(/\bfrigorif|isoterm/)) {
-      questions.push("¿Es **frigorífico/isotérmico**? (sí/no)");
-    }
-    if (has(/\bchasis con motor\b/)) {
-      questions.push("¿Es **chasis con motor y cabina** o vehículo completo?");
-    }
-  } else if (hs === "8703") {
-    if (has(/\bchispa\b/) && has(/\bcompresion\b/)) {
-      questions.push("¿El motor es **nafta (chispa)** o **diésel (compresión)**?");
-    }
-    if (has(/\bcilindrada\b/)) {
-      questions.push("¿Cuál es la **cilindrada (cm³)**? (ej: `2800 cm3`)");
-    }
-    questions.push("¿Es para **transporte de personas** (auto/SUV) o es **utilitario/carga**?");
-  } else if (hs === "8701") {
-    if (has(/\btractor(?:es)? de carretera para semirremolques\b/)) {
-      questions.push("¿Es **tractor de carretera para semirremolques** (tipo camión) o **tractor agrícola**?");
-    }
-    if (has(/\borugas\b/)) {
-      questions.push("¿Es **tractor de orugas**? (sí/no)");
-    }
-    if (has(/\bun solo eje\b/)) {
-      questions.push("¿Es un **tractor de un solo eje**? (sí/no)");
-    }
-  }
-
-  return questions.filter(Boolean).slice(0, 4);
 }
 
 export async function productFromTextPipeline(text: string): Promise<TextPipelineResult> {

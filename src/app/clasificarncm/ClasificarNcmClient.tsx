@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -89,7 +90,7 @@ export default function ClasificarNcmClient() {
     >
       <header className="relative z-10 flex min-h-[52px] items-center justify-between gap-2 border-b border-white/[0.06] px-3 py-2 pt-safe sm:gap-3 sm:px-6 sm:py-3">
         <Link href="/" className="flex min-h-[44px] min-w-[44px] shrink-0 items-center gap-2 sm:min-h-0 sm:min-w-0">
-          <img src="/brand/ecomex-logo.png" alt="E-COMEX" className="h-5 brightness-0 invert" />
+          <Image src="/brand/ecomex-logo.png" alt="E-COMEX" width={90} height={20} className="h-5 brightness-0 invert" />
           <span className="hidden text-[13px] font-medium text-slate-400 sm:inline">Clasificación NCM</span>
         </Link>
         <button

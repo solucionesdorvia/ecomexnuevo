@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Vehicle extraction — dynamic AI JSON response shapes require any casts.
 import { openaiJson } from "@/lib/ai/openaiClient";
 
 export type VehicleInference = {

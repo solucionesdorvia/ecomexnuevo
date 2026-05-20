@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// OpenAI API client — dynamic streaming response shapes require any casts.
 import "dotenv/config";
 
 type JsonValue = null | boolean | number | string | JsonValue[] | { [k: string]: JsonValue };

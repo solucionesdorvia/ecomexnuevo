@@ -27,7 +27,7 @@ export default async function RolesAccessPage() {
           </nav>
         </div>
         <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
-          {roleLabel(currentRole as any)}
+          {roleLabel(currentRole as import("@/lib/auth/permissions").AppRole)}
         </span>
       </header>
 

@@ -454,7 +454,6 @@ export async function classifyWithAI(
   try {
     const start = Date.now();
     if (process.env.NCM_DEBUG === "1") {
-      // eslint-disable-next-line no-console
       console.log("[ncmClassifier] calling OpenAI for:", text.slice(0, 80), evidence.length ? "(evidence)" : "");
     }
 
@@ -488,7 +487,6 @@ export async function classifyWithAI(
     const elapsed = Date.now() - start;
     let ncm_code = formatNcm(String(r.ncm_code ?? ""));
     if (process.env.NCM_DEBUG === "1") {
-      // eslint-disable-next-line no-console
       console.log(`[ncmClassifier] result: ${ncm_code} (confidence: ${r.confidence}, ${elapsed}ms)`);
     }
 
@@ -769,7 +767,6 @@ export async function classifyWithAI(
         : undefined,
     };
   } catch (err) {
-    // eslint-disable-next-line no-console
     console.error("[ncmClassifier] FAILED:", err instanceof Error ? err.message : err);
     return {
       ncm_code: "9999.99.99",

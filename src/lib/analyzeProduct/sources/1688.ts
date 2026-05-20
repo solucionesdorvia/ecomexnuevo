@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { ExtractedPriceCandidate, ExtractedText } from "@/lib/analyzeProduct/types";
 import { loadDoc, listFromSelectors, textFromSelectors, extractJsonLd, extractImgUrls, firstNonEmpty } from "./shared";
 

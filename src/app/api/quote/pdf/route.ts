@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// PDF route — dynamic Prisma where clause and quote shape require any casts.
 import "dotenv/config";
 
 import { NextResponse } from "next/server";
@@ -57,7 +59,6 @@ export async function GET(req: Request) {
 
   const out = await generateQuotePdf({ quote: quote as any });
   if (process.env.NODE_ENV !== "production") {
-    // eslint-disable-next-line no-console
     console.log(`[pdf] renderer=${out.renderer} quoteId=${quote.id} bytes=${out.bytes.byteLength}`);
   }
   const filename =

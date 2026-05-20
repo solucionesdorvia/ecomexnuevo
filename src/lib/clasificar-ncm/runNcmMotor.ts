@@ -15,7 +15,7 @@ import {
   type DiscardedCandidate,
 } from "@/lib/clasificar-ncm/ncmCandidatePipeline";
 import { NCM_AMBIGUITY_FALLBACK_QUESTION } from "@/lib/clasificar-ncm/professionalModePrompt";
-import type { CaseSnapshot, ChatMessage, NcmCandidateItem, ProductType } from "./types";
+import type { CaseSnapshot, ChatMessage, NcmCandidateItem } from "./types";
 
 const AMBIGUITY_UI_CONF_CAP = 0.68;
 
@@ -295,7 +295,7 @@ export async function runNcmMotor(input: RunNcmMotorInput): Promise<NcmMotorResu
       pcramTitle || "Clasificación desde pipeline completo (IA + nomenclador / PCRAM).";
 
     const ambFromMeta = meta?.ambiguity as NcmClassification["ambiguity"] | undefined;
-    let ambiguitySnap: CaseSnapshot["ambiguity"] =
+    const ambiguitySnap: CaseSnapshot["ambiguity"] =
       pipeline.pcram && ncmPipeline ? undefined : mapClassifierAmbiguityToSnapshot(ambFromMeta, prev.ambiguity);
 
     if (ambiguitySnap) {
@@ -400,7 +400,7 @@ export async function runNcmMotor(input: RunNcmMotorInput): Promise<NcmMotorResu
     recommendedNcm = ncmFromCls || recommendedNcm;
   }
 
-  let ambiguitySnap = mapClassifierAmbiguityToSnapshot(cls.ambiguity, prev.ambiguity);
+  const ambiguitySnap = mapClassifierAmbiguityToSnapshot(cls.ambiguity, prev.ambiguity);
   if (ambiguitySnap) {
     conf = Math.min(conf, AMBIGUITY_UI_CONF_CAP);
   }

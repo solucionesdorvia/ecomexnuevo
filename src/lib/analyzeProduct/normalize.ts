@@ -2,10 +2,8 @@ function stripEmojis(input: string) {
   const s = String(input || "");
   // Extended_Pictographic is supported on modern Node; fallback to broad range if not.
   try {
-    // eslint-disable-next-line no-control-regex
     return s.replace(/\p{Extended_Pictographic}+/gu, " ");
   } catch {
-    // eslint-disable-next-line no-control-regex
     return s.replace(/[\u{1F300}-\u{1FAFF}]+/gu, " ");
   }
 }
@@ -82,7 +80,6 @@ function dedupeLines(lines: string[]) {
     const key = l
       .toLowerCase()
       .normalize("NFD")
-      // eslint-disable-next-line no-control-regex
       .replace(/[\u0300-\u036f]/g, "")
       .replace(/\s+/g, " ")
       .trim();

@@ -112,6 +112,23 @@ export function CotizacionesClient({ quotes }: { quotes: QuoteRow[] }) {
       </div>
 
       <div className="flex flex-wrap gap-3">
+        <div className="flex items-center gap-2 rounded-xl border border-subtle bg-[var(--surface)] px-3 py-2 text-muted focus-within:border-[#18C3D6]/40 focus-within:bg-[var(--surface2)]">
+          <Icon name="search" size={16} className="shrink-0 text-white/40" />
+          <input
+            type="search"
+            placeholder="Buscar producto, NCM…"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="w-36 min-w-0 bg-transparent text-sm text-strong placeholder-white/30 outline-none sm:w-48"
+            aria-label="Buscar cotizaciones"
+          />
+          {query && (
+            <button type="button" onClick={() => setQuery("")} aria-label="Limpiar búsqueda" className="shrink-0 text-white/30 hover:text-white/60">
+              <Icon name="close" size={14} className="text-current" />
+            </button>
+          )}
+        </div>
+
         <div className="flex items-center gap-2 rounded-xl border border-subtle bg-[var(--surface)] px-4 py-2 text-muted hover:bg-[var(--surface2)]">
           <span className="text-sm font-medium">
             Estado: {status === "all" ? "Todos" : status === "draft" ? "Draft" : status === "verified" ? "Verified" : "Sent"}

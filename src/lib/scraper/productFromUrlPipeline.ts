@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Product URL pipeline — dynamic AI JSON responses require any casts.
 import { analyzeUrl } from "@/lib/url/urlAnalyzer";
 import { openaiJson } from "@/lib/ai/openaiClient";
 import { classifyWithAI } from "@/lib/ai/ncmClassifier";
@@ -459,28 +461,6 @@ function hasOpenAiKey() {
   return Boolean(process.env.OPENAI_API_KEY);
 }
 
-const STOPWORDS = new Set([
-  "de",
-  "del",
-  "la",
-  "las",
-  "el",
-  "los",
-  "y",
-  "o",
-  "para",
-  "con",
-  "sin",
-  "por",
-  "un",
-  "una",
-  "unos",
-  "unas",
-  "en",
-  "al",
-  "a",
-]);
-
 function uniqueStrings(items: string[]) {
   const out: string[] = [];
   const seen = new Set<string>();
@@ -515,44 +495,13 @@ function expandSearchQueries(input: string) {
   return uniqueStrings(queries).slice(0, 4);
 }
 
-const GENERIC_TOKENS = new Set(["elevador", "montacargas", "maquina", "equipo", "producto"]);
-
 function normText(s: string) {
   return String(s || "")
     .toLowerCase()
     .normalize("NFD")
-    // eslint-disable-next-line no-control-regex
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
-}
-
-function tokensFrom(s: string) {
-  const t = normText(s);
-  if (!t) return [];
-  const toks = t
-    .split(/\s+/g)
-    .map((x) => x.trim())
-    .filter(Boolean)
-    .filter((x) => x.length >= 4)
-    .filter((x) => !STOPWORDS.has(x));
-  return [...new Set(toks)].slice(0, 12);
-}
-
-function tokenMatchesTitle(token: string, titleNorm: string) {
-  const words = titleNorm.split(/\s+/g);
-  return words.some((w) => w === token || w.startsWith(token) || token.startsWith(w));
-}
-
-function scoreCandidate(query: string, title?: string) {
-  const qTokens = tokensFrom(query);
-  const tNorm = normText(title ?? "");
-  if (!qTokens.length || !tNorm) return { score: 0, qTokens };
-  let hits = 0;
-  for (const tok of qTokens) {
-    if (tokenMatchesTitle(tok, tNorm)) hits++;
-  }
-  return { score: hits / qTokens.length, qTokens };
 }
 
 const idleNcmSnapshot = (): CaseSnapshot => ({

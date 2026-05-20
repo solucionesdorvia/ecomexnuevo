@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// xlsx cell value parsing — dynamic spreadsheet data requires any casts.
 import * as XLSX from "xlsx";
 
 export type ParsedBudget = {

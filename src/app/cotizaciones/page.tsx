@@ -21,7 +21,7 @@ export default async function CotizacionesPage() {
     : [];
 
   const rows: QuoteRow[] = quotes.map((q) => {
-    const pj: any = q.productJson ?? {};
+    const pj = (q.productJson ?? {}) as Record<string, unknown>;
     const stage = String(q.stage ?? "").toLowerCase();
     const status: QuoteRow["status"] =
       stage.includes("refined") || stage.includes("lead")
@@ -30,18 +30,18 @@ export default async function CotizacionesPage() {
           ? "verified"
           : "draft";
     const productTitle =
-      typeof pj?.title === "string" && pj.title.trim() ? pj.title.trim() : q.userText;
-    const ncm = typeof pj?.ncm === "string" && pj.ncm.trim() ? pj.ncm.trim() : null;
+      typeof pj.title === "string" && pj.title.trim() ? pj.title.trim() : q.userText;
+    const ncm = typeof pj.ncm === "string" && pj.ncm.trim() ? pj.ncm.trim() : null;
     const origin =
-      typeof pj?.origin === "string" && pj.origin.trim() ? pj.origin.trim() : null;
+      typeof pj.origin === "string" && pj.origin.trim() ? pj.origin.trim() : null;
     const shippingProfile =
-      typeof pj?.shippingProfile === "string" && pj.shippingProfile.trim()
+      typeof pj.shippingProfile === "string" && pj.shippingProfile.trim()
         ? pj.shippingProfile.trim()
         : null;
     const rubro =
-      typeof pj?.category === "string" && pj.category.trim() ? pj.category.trim() : null;
-    const qj: any = q.quoteJson ?? {};
-    const quality = typeof qj?.quality === "number" && Number.isFinite(qj.quality) ? qj.quality : null;
+      typeof pj.category === "string" && pj.category.trim() ? pj.category.trim() : null;
+    const qj = (q.quoteJson ?? {}) as Record<string, unknown>;
+    const quality = typeof qj.quality === "number" && Number.isFinite(qj.quality) ? qj.quality : null;
 
     return {
       id: q.id,

@@ -21,7 +21,6 @@ import {
   GearSix,
   Gavel,
   Globe,
-  Handshake,
   Headset,
   House,
   ImageSquare,
@@ -54,6 +53,8 @@ import {
   FolderOpen,
   ChartLineUp,
   FilePdf,
+  MagnifyingGlass,
+  ArrowsLeftRight,
   X,
 } from "@phosphor-icons/react/ssr";
 
@@ -61,7 +62,8 @@ import { cn } from "./cn";
 
 export type IconName = string;
 
-const MAP: Record<string, React.ComponentType<{ size?: number; weight?: any; className?: string }>> =
+type PhosphorWeight = "thin" | "light" | "regular" | "bold" | "fill" | "duotone";
+const MAP: Record<string, React.ComponentType<{ size?: number; weight?: PhosphorWeight; className?: string }>> =
   {
     arrow_forward: ArrowRight,
     bolt: Lightning,
@@ -136,6 +138,9 @@ const MAP: Record<string, React.ComponentType<{ size?: number; weight?: any; cla
     wifi_off: WifiSlash,
     precision_manufacturing: Cpu,
     help: Info,
+    search: MagnifyingGlass,
+    compare_arrows: ArrowsLeftRight,
+    filter_list: FunnelSimple,
   };
 
 export function Icon({

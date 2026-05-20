@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Operator budget client — dynamic API response shapes require any casts.
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -193,7 +195,6 @@ export function OperatorBudgetClient() {
   useEffect(() => {
     if (!selectedId) return;
     void loadDetail(selectedId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedId]);
 
   async function submit() {

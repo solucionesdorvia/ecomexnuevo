@@ -5,7 +5,8 @@ import type { CaseSnapshot, CaseState, ChatMessage } from "@/lib/clasificar-ncm/
 import { initialCaseState } from "@/lib/clasificar-ncm/types";
 
 function stripMessages(s: CaseState): CaseSnapshot {
-  const { messages: _m, ...rest } = s;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { messages: _, ...rest } = s;
   return rest;
 }
 

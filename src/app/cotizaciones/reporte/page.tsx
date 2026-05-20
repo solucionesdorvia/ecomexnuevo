@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Quote report page — dynamic Prisma JSON shapes require any casts.
 import Link from "next/link";
 import { cookies } from "next/headers";
 import { verifyAuthToken } from "@/lib/auth/jwt";

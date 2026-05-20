@@ -25,7 +25,7 @@ export default function ContainerVideo({
   loop?: boolean;
   preload?: "none" | "metadata" | "auto";
   onEnded?: () => void;
-  videoRef?: React.RefObject<HTMLVideoElement | null>;
+  videoRef?: React.RefObject<HTMLVideoElement>;
 }) {
   const src = useMemo(() => {
     const v = process.env.NEXT_PUBLIC_CONTAINER_VIDEO;
@@ -44,7 +44,7 @@ export default function ContainerVideo({
   return (
     <div className="absolute inset-0">
       <video
-        ref={videoRef as any}
+        ref={videoRef}
         className={classNames("h-full w-full object-cover", className)}
         autoPlay={autoPlay}
         muted={muted}

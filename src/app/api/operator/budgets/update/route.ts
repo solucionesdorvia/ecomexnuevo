@@ -125,7 +125,6 @@ export async function PATCH(req: Request) {
       },
     });
   } catch (e) {
-    // eslint-disable-next-line no-console
     console.error("[operator/budgets/update] patch error", e);
     return NextResponse.json(
       { ok: false, error: "No se pudo guardar ajustes." },

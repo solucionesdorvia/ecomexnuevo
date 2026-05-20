@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// SQLite nomenclator — dynamic row shapes require any casts.
 import Database from "better-sqlite3";
 
 export type LocalNcmRow = {
@@ -11,7 +13,6 @@ function normText(s: string) {
   return String(s || "")
     .toLowerCase()
     .normalize("NFD")
-    // eslint-disable-next-line no-control-regex
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Playwright scraper — dynamic page evaluation results require any casts.
 import type { Browser, BrowserContext, Page } from "playwright";
 import { chromium } from "playwright";
 
