@@ -7,27 +7,9 @@ import {
   operationStageBadgeClass,
 } from "@/app/app/operaciones/[id]/operation/operationStageUi";
 import { SystemEmpty, SystemKpi, SystemPage, SystemSection } from "@/components/app/SystemPage";
+import { fmtActivity, productLabel } from "@/lib/ui/quoteDisplay";
 
 export const runtime = "nodejs";
-
-function productTitle(productJson: unknown, userText: string) {
-  const pj = productJson as { title?: string; name?: string } | null | undefined;
-  const t = pj?.title ?? pj?.name;
-  if (t && String(t).trim()) return String(t).slice(0, 120);
-  const u = userText?.trim();
-  if (u) return u.slice(0, 80);
-  return "Importación";
-}
-
-function fmtUploaded(d: Date) {
-  return d.toLocaleString("es-AR", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-}
 
 function isHttpUrl(url: string) {
   return /^https?:\/\//i.test(url.trim());
@@ -95,7 +77,7 @@ export default async function DocumentosPage() {
             {orderedOpIds.map((opId) => {
               const opDocs = byOp.get(opId)!;
               const op = opDocs[0].operation;
-              const title = productTitle(op.quote.productJson, op.quote.userText);
+              const title = productLabel(op.quote.productJson, null, op.quote.userText, 120);
               const stageKey = op.stage as keyof typeof OPERATION_STAGE_LABEL_ES;
               const stageLabel = OPERATION_STAGE_LABEL_ES[stageKey] ?? op.stage;
               return (
@@ -128,7 +110,7 @@ export default async function DocumentosPage() {
                             <span className="text-[13px] font-medium text-white [overflow-wrap:anywhere]">{d.name}</span>
                           )}
                           <p className="mt-1 text-[11px] text-[#555c6b]">
-                            {fmtUploaded(d.createdAt)} · Subido por {d.uploadedBy}
+                            {fmtActivity(d.createdAt)} · Subido por {d.uploadedBy}
                           </p>
                         </div>
                         <Link
