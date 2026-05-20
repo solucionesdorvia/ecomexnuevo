@@ -10,40 +10,45 @@ export async function GET() {
     return NextResponse.json({ error: "No autorizado." }, { status: 401 });
   }
 
-  const [notifications, unreadCount] = await Promise.all([
-    prisma.notification.findMany({
-      where: { userId: user.id },
-      orderBy: { createdAt: "desc" },
-      take: 20,
-      include: {
-        operation: {
-          select: {
-            id: true,
-            quote: { select: { productJson: true, userText: true } },
+  try {
+    const [notifications, unreadCount] = await Promise.all([
+      prisma.notification.findMany({
+        where: { userId: user.id },
+        orderBy: { createdAt: "desc" },
+        take: 20,
+        include: {
+          operation: {
+            select: {
+              id: true,
+              quote: { select: { productJson: true, userText: true } },
+            },
           },
         },
-      },
-    }),
-    prisma.notification.count({
-      where: { userId: user.id, readAt: null },
-    }),
-  ]);
+      }),
+      prisma.notification.count({
+        where: { userId: user.id, readAt: null },
+      }),
+    ]);
 
-  return NextResponse.json({
-    notifications: notifications.map((n) => ({
-      id: n.id,
-      type: n.type,
-      title: n.title,
-      body: n.body,
-      readAt: n.readAt?.toISOString() ?? null,
-      createdAt: n.createdAt.toISOString(),
-      operation: n.operation
-        ? {
-            id: n.operation.id,
-            quote: n.operation.quote,
-          }
-        : null,
-    })),
-    unreadCount,
-  });
+    return NextResponse.json({
+      notifications: notifications.map((n) => ({
+        id: n.id,
+        type: n.type,
+        title: n.title,
+        body: n.body,
+        readAt: n.readAt?.toISOString() ?? null,
+        createdAt: n.createdAt.toISOString(),
+        operation: n.operation
+          ? {
+              id: n.operation.id,
+              quote: n.operation.quote,
+            }
+          : null,
+      })),
+      unreadCount,
+    });
+  } catch (e) {
+    console.error("[notifications/GET] error", e);
+    return NextResponse.json({ error: "No se pudieron cargar las notificaciones." }, { status: 500 });
+  }
 }
