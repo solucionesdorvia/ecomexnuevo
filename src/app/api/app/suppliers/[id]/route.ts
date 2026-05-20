@@ -40,10 +40,16 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
     return NextResponse.json({ error: "Falta id." }, { status: 400 });
   }
 
-  const existing = await prisma.supplier.findFirst({
-    where: { id, userId: user.id },
-    select: { id: true },
-  });
+  let existing: { id: string } | null = null;
+  try {
+    existing = await prisma.supplier.findFirst({
+      where: { id, userId: user.id },
+      select: { id: true },
+    });
+  } catch (e) {
+    console.error("[suppliers/PATCH] error finding supplier", e);
+    return NextResponse.json({ error: "No se pudo verificar el proveedor." }, { status: 500 });
+  }
   if (!existing) {
     return NextResponse.json({ error: "Proveedor no encontrado." }, { status: 404 });
   }
@@ -66,20 +72,25 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
     return NextResponse.json({ error: "Nada que actualizar." }, { status: 400 });
   }
 
-  const supplier = await prisma.supplier.update({
-    where: { id },
-    data: update,
-    select: {
-      id: true,
-      name: true,
-      country: true,
-      contact: true,
-      createdAt: true,
-      _count: { select: { operations: true } },
-    },
-  });
+  try {
+    const supplier = await prisma.supplier.update({
+      where: { id },
+      data: update,
+      select: {
+        id: true,
+        name: true,
+        country: true,
+        contact: true,
+        createdAt: true,
+        _count: { select: { operations: true } },
+      },
+    });
 
-  return NextResponse.json({ supplier: mapSupplier(supplier) });
+    return NextResponse.json({ supplier: mapSupplier(supplier) });
+  } catch (e) {
+    console.error("[suppliers/PATCH] error updating supplier", e);
+    return NextResponse.json({ error: "No se pudo actualizar el proveedor." }, { status: 500 });
+  }
 }
 
 export async function DELETE(_req: Request, { params }: { params: Promise<{ id: string }> }) {
@@ -93,15 +104,26 @@ export async function DELETE(_req: Request, { params }: { params: Promise<{ id: 
     return NextResponse.json({ error: "Falta id." }, { status: 400 });
   }
 
-  const existing = await prisma.supplier.findFirst({
-    where: { id, userId: user.id },
-    select: { id: true },
-  });
-  if (!existing) {
+  let existing2: { id: string } | null = null;
+  try {
+    existing2 = await prisma.supplier.findFirst({
+      where: { id, userId: user.id },
+      select: { id: true },
+    });
+  } catch (e) {
+    console.error("[suppliers/DELETE] error finding supplier", e);
+    return NextResponse.json({ error: "No se pudo verificar el proveedor." }, { status: 500 });
+  }
+  if (!existing2) {
     return NextResponse.json({ error: "Proveedor no encontrado." }, { status: 404 });
   }
 
-  await prisma.supplier.delete({ where: { id } });
+  try {
+    await prisma.supplier.delete({ where: { id } });
+  } catch (e) {
+    console.error("[suppliers/DELETE] error deleting supplier", e);
+    return NextResponse.json({ error: "No se pudo eliminar el proveedor." }, { status: 500 });
+  }
 
   return NextResponse.json({ ok: true });
 }

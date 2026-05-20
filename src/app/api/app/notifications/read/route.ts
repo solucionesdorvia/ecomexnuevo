@@ -24,17 +24,22 @@ export async function POST(req: Request) {
 
   const now = new Date();
 
-  if ("all" in parsed.data) {
-    await prisma.notification.updateMany({
-      where: { userId: user.id, readAt: null },
-      data: { readAt: now },
-    });
-  } else {
-    const ids = parsed.data.ids;
-    await prisma.notification.updateMany({
-      where: { userId: user.id, id: { in: ids } },
-      data: { readAt: now },
-    });
+  try {
+    if ("all" in parsed.data) {
+      await prisma.notification.updateMany({
+        where: { userId: user.id, readAt: null },
+        data: { readAt: now },
+      });
+    } else {
+      const ids = parsed.data.ids;
+      await prisma.notification.updateMany({
+        where: { userId: user.id, id: { in: ids } },
+        data: { readAt: now },
+      });
+    }
+  } catch (e) {
+    console.error("[notifications/read/POST] error marking notifications read", e);
+    return NextResponse.json({ error: "No se pudieron marcar las notificaciones." }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true as const });

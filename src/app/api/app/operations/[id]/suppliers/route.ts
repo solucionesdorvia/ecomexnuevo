@@ -27,15 +27,27 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
   }
 
   const where = operationWhereForUser(user, operationId);
-  const operation = await prisma.operation.findFirst({ where, select: { id: true } });
+  let operation: { id: string } | null = null;
+  try {
+    operation = await prisma.operation.findFirst({ where, select: { id: true } });
+  } catch (e) {
+    console.error("[op-suppliers/POST] error finding operation", e);
+    return NextResponse.json({ error: "No se pudo verificar la operación." }, { status: 500 });
+  }
   if (!operation) {
     return NextResponse.json({ error: "Operación no encontrada." }, { status: 404 });
   }
 
-  const supplier = await prisma.supplier.findFirst({
-    where: { id: parsed.data.supplierId, userId: user.id },
-    select: { id: true },
-  });
+  let supplier: { id: string } | null = null;
+  try {
+    supplier = await prisma.supplier.findFirst({
+      where: { id: parsed.data.supplierId, userId: user.id },
+      select: { id: true },
+    });
+  } catch (e) {
+    console.error("[op-suppliers/POST] error finding supplier", e);
+    return NextResponse.json({ error: "No se pudo verificar el proveedor." }, { status: 500 });
+  }
   if (!supplier) {
     return NextResponse.json({ error: "Proveedor no encontrado o no te pertenece." }, { status: 404 });
   }

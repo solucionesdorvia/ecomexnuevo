@@ -50,10 +50,16 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
     return NextResponse.json({ error: msg }, { status: 400 });
   }
 
-  const operation = await prisma.operation.findFirst({
-    where: { id: operationId },
-    select: { id: true, stage: true, userId: true },
-  });
+  let operation: Awaited<ReturnType<typeof prisma.operation.findFirst<{ select: { id: true; stage: true; userId: true } }>>> = null;
+  try {
+    operation = await prisma.operation.findFirst({
+      where: { id: operationId },
+      select: { id: true, stage: true, userId: true },
+    });
+  } catch (e) {
+    console.error("[op-events/POST] error finding operation", e);
+    return NextResponse.json({ error: "No se pudo verificar la operación." }, { status: 500 });
+  }
   if (!operation) {
     return NextResponse.json({ error: "Operación no encontrada." }, { status: 404 });
   }
@@ -62,42 +68,47 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
   const desc = parsed.data.description.trim();
   const bodyShort = desc.length > 120 ? `${desc.slice(0, 120)}…` : desc;
 
-  const ev = await prisma.$transaction(async (tx) => {
-    const e = await tx.operationEvent.create({
-      data: {
-        operationId: operation.id,
-        stage: eventStage,
-        description: desc,
-        actor: actor.email,
-      },
-      select: {
-        id: true,
-        operationId: true,
-        stage: true,
-        description: true,
-        actor: true,
-        createdAt: true,
-      },
+  try {
+    const ev = await prisma.$transaction(async (tx) => {
+      const e = await tx.operationEvent.create({
+        data: {
+          operationId: operation.id,
+          stage: eventStage,
+          description: desc,
+          actor: actor.email,
+        },
+        select: {
+          id: true,
+          operationId: true,
+          stage: true,
+          description: true,
+          actor: true,
+          createdAt: true,
+        },
+      });
+
+      await tx.notification.create({
+        data: {
+          userId: operation.userId,
+          operationId: operation.id,
+          type: "EVENT_ADDED",
+          title: "Nuevo evento en tu importación",
+          body: bodyShort,
+        },
+      });
+
+      return e;
     });
 
-    await tx.notification.create({
-      data: {
-        userId: operation.userId,
-        operationId: operation.id,
-        type: "EVENT_ADDED",
-        title: "Nuevo evento en tu importación",
-        body: bodyShort,
+    return NextResponse.json({
+      ok: true as const,
+      event: {
+        ...ev,
+        createdAt: ev.createdAt.toISOString(),
       },
     });
-
-    return e;
-  });
-
-  return NextResponse.json({
-    ok: true as const,
-    event: {
-      ...ev,
-      createdAt: ev.createdAt.toISOString(),
-    },
-  });
+  } catch (e) {
+    console.error("[op-events/POST] error creating event", e);
+    return NextResponse.json({ error: "No se pudo registrar el evento." }, { status: 500 });
+  }
 }

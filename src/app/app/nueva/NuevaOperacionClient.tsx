@@ -151,6 +151,10 @@ export default function NuevaOperacionClient({
       const hasInvoices = invoiceFiles.length > 0;
       const trimmed = text.trim();
       if (!trimmed && !hasInvoices) return;
+      if (trimmed.length > 10_000) {
+        setQuoteError("El mensaje es demasiado largo. Por favor resumí tu consulta en menos de 10.000 caracteres.");
+        return;
+      }
 
       setPendingExtract(true);
       try {

@@ -76,15 +76,26 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
 
   const where = operationWhereForUser(user, operationId);
 
-  const existing = await prisma.operation.findFirst({
-    where,
-    select: {
-      id: true,
-      userId: true,
-      stage: true,
-      quote: { select: { productJson: true, userText: true } },
-    },
-  });
+  let existing: {
+    id: string;
+    userId: string;
+    stage: string;
+    quote: { productJson: unknown; userText: string };
+  } | null = null;
+  try {
+    existing = await prisma.operation.findFirst({
+      where,
+      select: {
+        id: true,
+        userId: true,
+        stage: true,
+        quote: { select: { productJson: true, userText: true } },
+      },
+    });
+  } catch (e) {
+    console.error("[op-stage/PATCH] error finding operation", e);
+    return NextResponse.json({ error: "No se pudo verificar la operación." }, { status: 500 });
+  }
   if (!existing) {
     return NextResponse.json({ error: "Operación no encontrada." }, { status: 404 });
   }
@@ -101,40 +112,45 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
   const label = OPERATION_STAGE_LABEL_ES[newStage] ?? newStage;
   const productLine = operationProductLine(existing.quote.productJson, existing.quote.userText);
 
-  const updated = await prisma.$transaction(async (tx) => {
-    const op = await tx.operation.update({
-      where: { id: existing.id },
-      data: { stage: newStage },
-      select: { id: true, stage: true, updatedAt: true },
-    });
+  try {
+    const updated = await prisma.$transaction(async (tx) => {
+      const op = await tx.operation.update({
+        where: { id: existing.id },
+        data: { stage: newStage },
+        select: { id: true, stage: true, updatedAt: true },
+      });
 
-    await tx.operationEvent.create({
-      data: {
-        operationId: op.id,
-        stage: newStage,
-        description: `Etapa actualizada a ${label}`,
-        actor: user.email,
-      },
-    });
-
-    if (existing.userId !== user.id) {
-      await tx.notification.create({
+      await tx.operationEvent.create({
         data: {
-          userId: existing.userId,
           operationId: op.id,
-          type: "STAGE_CHANGED",
-          title: `Tu importación avanzó a ${label}`,
-          body: `${productLine} pasó a etapa ${label}`,
+          stage: newStage,
+          description: `Etapa actualizada a ${label}`,
+          actor: user.email,
         },
       });
-    }
 
-    return op;
-  });
+      if (existing.userId !== user.id) {
+        await tx.notification.create({
+          data: {
+            userId: existing.userId,
+            operationId: op.id,
+            type: "STAGE_CHANGED",
+            title: `Tu importación avanzó a ${label}`,
+            body: `${productLine} pasó a etapa ${label}`,
+          },
+        });
+      }
 
-  return NextResponse.json({
-    ok: true as const,
-    stage: updated.stage,
-    updatedAt: updated.updatedAt.toISOString(),
-  });
+      return op;
+    });
+
+    return NextResponse.json({
+      ok: true as const,
+      stage: updated.stage,
+      updatedAt: updated.updatedAt.toISOString(),
+    });
+  } catch (e) {
+    console.error("[op-stage/PATCH] error updating stage", e);
+    return NextResponse.json({ error: "No se pudo actualizar la etapa." }, { status: 500 });
+  }
 }

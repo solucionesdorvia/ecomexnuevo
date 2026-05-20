@@ -39,22 +39,27 @@ export async function GET() {
     return NextResponse.json({ error: "No autorizado." }, { status: 401 });
   }
 
-  const suppliers = await prisma.supplier.findMany({
-    where: { userId: user.id },
-    orderBy: { name: "asc" },
-    select: {
-      id: true,
-      name: true,
-      country: true,
-      contact: true,
-      createdAt: true,
-      _count: { select: { operations: true } },
-    },
-  });
+  try {
+    const suppliers = await prisma.supplier.findMany({
+      where: { userId: user.id },
+      orderBy: { name: "asc" },
+      select: {
+        id: true,
+        name: true,
+        country: true,
+        contact: true,
+        createdAt: true,
+        _count: { select: { operations: true } },
+      },
+    });
 
-  return NextResponse.json({
-    suppliers: suppliers.map(mapSupplier),
-  });
+    return NextResponse.json({
+      suppliers: suppliers.map(mapSupplier),
+    });
+  } catch (e) {
+    console.error("[suppliers/GET] error fetching suppliers", e);
+    return NextResponse.json({ error: "No se pudieron obtener los proveedores." }, { status: 500 });
+  }
 }
 
 export async function POST(req: Request) {
@@ -75,22 +80,27 @@ export async function POST(req: Request) {
   }
 
   const { name, country, contact } = parsed.data;
-  const supplier = await prisma.supplier.create({
-    data: {
-      userId: user.id,
-      name: name.trim(),
-      country: country.trim(),
-      contact: contact?.trim() ? contact.trim() : null,
-    },
-    select: {
-      id: true,
-      name: true,
-      country: true,
-      contact: true,
-      createdAt: true,
-      _count: { select: { operations: true } },
-    },
-  });
+  try {
+    const supplier = await prisma.supplier.create({
+      data: {
+        userId: user.id,
+        name: name.trim(),
+        country: country.trim(),
+        contact: contact?.trim() ? contact.trim() : null,
+      },
+      select: {
+        id: true,
+        name: true,
+        country: true,
+        contact: true,
+        createdAt: true,
+        _count: { select: { operations: true } },
+      },
+    });
 
-  return NextResponse.json({ supplier: mapSupplier(supplier) });
+    return NextResponse.json({ supplier: mapSupplier(supplier) });
+  } catch (e) {
+    console.error("[suppliers/POST] error creating supplier", e);
+    return NextResponse.json({ error: "No se pudo crear el proveedor." }, { status: 500 });
+  }
 }

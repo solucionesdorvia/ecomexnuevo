@@ -12,10 +12,16 @@ async function loadContext(quoteId: string) {
   const token = cookieStore.get("ecomex_auth")?.value ?? null;
   const auth = token ? await verifyAuthToken(token) : null;
 
-  const quote = await prisma.quote.findUnique({
-    where: { id: quoteId },
-    select: { id: true, anonId: true, userId: true },
-  });
+  let quote: { id: string; anonId: string | null; userId: string | null } | null = null;
+  try {
+    quote = await prisma.quote.findUnique({
+      where: { id: quoteId },
+      select: { id: true, anonId: true, userId: true },
+    });
+  } catch (e) {
+    console.error("[quote-comments] error finding quote", e);
+    return { ok: false as const, status: 500 as const, error: "No se pudo verificar la cotización." };
+  }
   if (!quote) return { ok: false as const, status: 404 as const, error: "Cotización no encontrada." };
 
   const canByUser = Boolean(auth?.sub && quote.userId && quote.userId === auth.sub);
@@ -24,12 +30,18 @@ async function loadContext(quoteId: string) {
     return { ok: false as const, status: 403 as const, error: "Sin permisos para esta cotización." };
   }
 
-  const user = canByUser
-    ? await prisma.user.findUnique({
+  let user: { id: string; email: string; role: string } | null = null;
+  if (canByUser) {
+    try {
+      user = await prisma.user.findUnique({
         where: { id: auth!.sub },
         select: { id: true, email: true, role: true },
-      })
-    : null;
+      });
+    } catch (e) {
+      console.error("[quote-comments] error finding user", e);
+      return { ok: false as const, status: 500 as const, error: "No se pudo verificar el usuario." };
+    }
+  }
 
   return { ok: true as const, quote, auth, user, anonId };
 }
@@ -42,19 +54,24 @@ export async function GET(
   const ctx = await loadContext(id);
   if (!ctx.ok) return NextResponse.json({ ok: false, error: ctx.error }, { status: ctx.status });
 
-  const comments = await prisma.quoteComment.findMany({
-    where: { quoteId: id },
-    orderBy: { createdAt: "asc" },
-    select: {
-      id: true,
-      createdAt: true,
-      authorRole: true,
-      authorLabel: true,
-      message: true,
-    },
-  });
+  try {
+    const comments = await prisma.quoteComment.findMany({
+      where: { quoteId: id },
+      orderBy: { createdAt: "asc" },
+      select: {
+        id: true,
+        createdAt: true,
+        authorRole: true,
+        authorLabel: true,
+        message: true,
+      },
+    });
 
-  return NextResponse.json({ ok: true, comments });
+    return NextResponse.json({ ok: true, comments });
+  } catch (e) {
+    console.error("[quote-comments/GET] error fetching comments", e);
+    return NextResponse.json({ ok: false, error: "No se pudieron obtener los comentarios." }, { status: 500 });
+  }
 }
 
 export async function POST(
@@ -79,33 +96,38 @@ export async function POST(
   const authorRole = asExpert ? "expert" : "client";
   const authorLabel = asExpert ? "Experto E-COMEX" : ctx.user?.email ?? "Cliente";
 
-  const created = await prisma.quoteComment.create({
-    data: {
+  try {
+    const created = await prisma.quoteComment.create({
+      data: {
+        quoteId: id,
+        authorUserId: ctx.user?.id ?? null,
+        authorRole,
+        authorLabel,
+        message,
+      },
+      select: {
+        id: true,
+        createdAt: true,
+        authorRole: true,
+        authorLabel: true,
+        message: true,
+      },
+    });
+
+    await writeAuditLog({
+      entityType: "quote",
+      entityId: id,
+      action: "comment_created",
+      actorUserId: ctx.user?.id ?? null,
+      actorRole: role,
       quoteId: id,
-      authorUserId: ctx.user?.id ?? null,
-      authorRole,
-      authorLabel,
-      message,
-    },
-    select: {
-      id: true,
-      createdAt: true,
-      authorRole: true,
-      authorLabel: true,
-      message: true,
-    },
-  });
+      payload: { authorRole, length: message.length },
+    });
 
-  await writeAuditLog({
-    entityType: "quote",
-    entityId: id,
-    action: "comment_created",
-    actorUserId: ctx.user?.id ?? null,
-    actorRole: role,
-    quoteId: id,
-    payload: { authorRole, length: message.length },
-  });
-
-  return NextResponse.json({ ok: true, comment: created });
+    return NextResponse.json({ ok: true, comment: created });
+  } catch (e) {
+    console.error("[quote-comments/POST] error creating comment", e);
+    return NextResponse.json({ ok: false, error: "No se pudo enviar el comentario." }, { status: 500 });
+  }
 }
 

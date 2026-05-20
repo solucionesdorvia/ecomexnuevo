@@ -28,22 +28,40 @@ export async function POST(
   const token = cookieStore.get("ecomex_auth")?.value ?? null;
   const auth = token ? await verifyAuthToken(token) : null;
 
-  const quote = await prisma.quote.findUnique({
-    where: { id },
-    select: {
-      id: true,
-      anonId: true,
-      userId: true,
-      stage: true,
-      userText: true,
-      productJson: true,
-      totalMinUsd: true,
-      totalMaxUsd: true,
-      leadId: true,
-      user: { select: { email: true } },
-      lead: { select: { contact: true, channel: true } },
-    },
-  });
+  let quote: {
+    id: string;
+    anonId: string | null;
+    userId: string | null;
+    stage: string;
+    userText: string;
+    productJson: unknown;
+    totalMinUsd: number | null;
+    totalMaxUsd: number | null;
+    leadId: string | null;
+    user: { email: string } | null;
+    lead: { contact: string; channel: string } | null;
+  } | null = null;
+  try {
+    quote = await prisma.quote.findUnique({
+      where: { id },
+      select: {
+        id: true,
+        anonId: true,
+        userId: true,
+        stage: true,
+        userText: true,
+        productJson: true,
+        totalMinUsd: true,
+        totalMaxUsd: true,
+        leadId: true,
+        user: { select: { email: true } },
+        lead: { select: { contact: true, channel: true } },
+      },
+    });
+  } catch (e) {
+    console.error("[quote-decision/POST] error finding quote", e);
+    return NextResponse.json({ ok: false, error: "No se pudo verificar la cotización." }, { status: 500 });
+  }
   if (!quote) {
     return NextResponse.json({ ok: false, error: "Cotización no encontrada." }, { status: 404 });
   }
@@ -55,11 +73,17 @@ export async function POST(
   }
 
   const nextStage = action === "send_expert" ? "decision_requested" : "refined";
-  const updated = await prisma.quote.update({
-    where: { id },
-    data: { stage: nextStage },
-    select: { id: true, stage: true, updatedAt: true },
-  });
+  let updated: { id: string; stage: string; updatedAt: Date };
+  try {
+    updated = await prisma.quote.update({
+      where: { id },
+      data: { stage: nextStage },
+      select: { id: true, stage: true, updatedAt: true },
+    });
+  } catch (e) {
+    console.error("[quote-decision/POST] error updating quote stage", e);
+    return NextResponse.json({ ok: false, error: "No se pudo actualizar la cotización." }, { status: 500 });
+  }
 
   await writeAuditLog({
     entityType: "quote",
