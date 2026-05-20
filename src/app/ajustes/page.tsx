@@ -1,12 +1,23 @@
 import Link from "next/link";
 import { getSessionUser } from "@/lib/auth/session";
 import { roleLabel } from "@/lib/auth/permissions";
+import { prisma } from "@/lib/db";
 import { AjustesClient } from "./AjustesClient";
 
 export default async function AjustesPage() {
-  const user = await getSessionUser();
+  const session = await getSessionUser();
+  const profile = session
+    ? await prisma.user
+        .findUnique({
+          where: { id: session.id },
+          select: { email: true, name: true, company: true, role: true },
+        })
+        .catch(() => null)
+    : null;
   const currentRole =
-    (user?.role as "user" | "operator" | "admin" | "expert" | undefined) ?? "user";
+    (profile?.role as "user" | "operator" | "admin" | "expert" | undefined) ??
+    session?.role ??
+    "user";
 
   return (
     <div className="bg-app min-h-screen text-strong">
@@ -29,13 +40,13 @@ export default async function AjustesPage() {
             Ajusta perfil, datos de empresa y controles de seguridad.
           </p>
           <p className="mt-1 text-xs text-slate-600">
-            Email: {user?.email ?? "—"}
+            Email: {profile?.email ?? session?.email ?? "—"}
           </p>
         </div>
 
         <AjustesClient
-          initialName={(user as { name?: string | null } | null)?.name ?? ""}
-          initialCompany={(user as { company?: string | null } | null)?.company ?? ""}
+          initialName={profile?.name ?? ""}
+          initialCompany={profile?.company ?? ""}
         />
 
         <div className="mt-8 grid gap-4 md:grid-cols-2">
