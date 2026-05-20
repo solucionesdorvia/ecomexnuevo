@@ -3,27 +3,9 @@ import { redirect } from "next/navigation";
 import { getSessionUser } from "@/lib/auth/session";
 import { prisma } from "@/lib/db";
 import { parseQuoteCostJson } from "@/lib/quote/parseQuoteCostJson";
+import { fmtDate, productLabel, fmtUsdRange } from "@/lib/ui/quoteDisplay";
 
 export const runtime = "nodejs";
-
-function productTitle(productJson: unknown, userText: string) {
-  const pj = productJson as { title?: string; name?: string } | null | undefined;
-  const t = pj?.title ?? pj?.name;
-  if (t && String(t).trim()) return String(t).slice(0, 80);
-  return userText?.trim()?.slice(0, 60) || "Cotización";
-}
-
-function fmtDate(d: Date) {
-  return d.toLocaleDateString("es-AR", { day: "2-digit", month: "short", year: "numeric" });
-}
-
-function fmtUsd(n: number) {
-  return n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
-}
-
-function fmtRange(min: number, max: number) {
-  return `${fmtUsd(min)} – ${fmtUsd(max)}`;
-}
 
 type CardKey = "fob" | "flete" | "impuestos" | "gestion" | "total";
 
@@ -45,7 +27,7 @@ function extractCostRow(
     gestion: find(["gesti"]),
     total:
       totalMin != null && totalMax != null
-        ? fmtRange(totalMin, totalMax)
+        ? fmtUsdRange(totalMin, totalMax)
         : find(["total"]),
   };
 }
@@ -88,19 +70,21 @@ export default async function CostosPage() {
   let rows: Row[] = [];
 
   if (operations.length > 0) {
-    rows = operations.map((o) => {
-      const { cards } = parseQuoteCostJson(o.quote.quoteJson);
-      return {
+    rows = operations.flatMap((o) => {
+      const q = o.quote;
+      if (!q) return [];
+      const { cards } = parseQuoteCostJson(q.quoteJson);
+      return [{
         key: `op-${o.id}`,
         kind: "operation" as const,
         operationId: o.id,
-        quoteId: o.quote.id,
-        title: productTitle(o.quote.productJson, o.quote.userText),
+        quoteId: q.id,
+        title: productLabel(q.productJson, q.quoteJson, q.userText, 80),
         at: o.createdAt,
-        costs: extractCostRow(cards, o.quote.totalMinUsd, o.quote.totalMaxUsd),
-        totalMinUsd: o.quote.totalMinUsd,
-        totalMaxUsd: o.quote.totalMaxUsd,
-      };
+        costs: extractCostRow(cards, q.totalMinUsd, q.totalMaxUsd),
+        totalMinUsd: q.totalMinUsd,
+        totalMaxUsd: q.totalMaxUsd,
+      }];
     });
   } else {
     const quotes = await prisma.quote.findMany({
@@ -123,7 +107,7 @@ export default async function CostosPage() {
         key: `q-${q.id}`,
         kind: "quote" as const,
         quoteId: q.id,
-        title: productTitle(q.productJson, q.userText),
+        title: productLabel(q.productJson, q.quoteJson, q.userText, 80),
         at: q.createdAt,
         costs: extractCostRow(cards, q.totalMinUsd, q.totalMaxUsd),
         totalMinUsd: q.totalMinUsd,

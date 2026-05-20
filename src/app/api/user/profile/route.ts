@@ -1,15 +1,12 @@
-import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
-import { verifyAuthToken } from "@/lib/auth/jwt";
+import { getSessionUser } from "@/lib/auth/session";
 
 export const runtime = "nodejs";
 
 export async function PUT(req: Request) {
-  const cookieStore = await cookies();
-  const token = cookieStore.get("ecomex_auth")?.value ?? null;
-  const auth = token ? await verifyAuthToken(token) : null;
-  if (!auth?.sub) {
+  const user = await getSessionUser();
+  if (!user) {
     return NextResponse.json({ ok: false, error: "No autenticado." }, { status: 401 });
   }
 
@@ -25,11 +22,15 @@ export async function PUT(req: Request) {
   if (typeof body.name === "string") data.name = body.name.trim().slice(0, 120);
   if (typeof body.company === "string") data.company = body.company.trim().slice(0, 120);
 
-  const updated = await prisma.user.update({
-    where: { id: auth.sub },
-    data,
-    select: { id: true, name: true, company: true, email: true },
-  });
-
-  return NextResponse.json({ ok: true, user: updated });
+  try {
+    const updated = await prisma.user.update({
+      where: { id: user.id },
+      data,
+      select: { id: true, name: true, company: true, email: true },
+    });
+    return NextResponse.json({ ok: true, user: updated });
+  } catch (e) {
+    console.error("[user/profile] error updating profile", e);
+    return NextResponse.json({ ok: false, error: "No se pudo actualizar el perfil." }, { status: 500 });
+  }
 }

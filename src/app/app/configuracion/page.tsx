@@ -1,12 +1,20 @@
 import { getSessionUser } from "@/lib/auth/session";
+import { prisma } from "@/lib/db";
 import { DocumentUploader } from "./DocumentUploader";
 
 export const runtime = "nodejs";
 export const metadata = { title: "Configuración — E-COMEX" };
 
 export default async function ConfiguracionPage() {
-  const user = await getSessionUser();
-  const u = user as { email?: string; role?: string; name?: string; company?: string } | null;
+  const session = await getSessionUser();
+  const u = session
+    ? await prisma.user
+        .findUnique({
+          where: { id: session.id },
+          select: { email: true, name: true, company: true, role: true },
+        })
+        .catch(() => null)
+    : null;
 
   return (
     <div className="relative px-safe pb-10 pt-4 sm:p-6 lg:p-8">

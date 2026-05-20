@@ -148,7 +148,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ operationId: result.id });
   } catch (e) {
-    const msg = e instanceof Error ? e.message : "Error al crear la operación.";
-    return NextResponse.json({ error: msg }, { status: 500 });
+    console.error("[operations/POST] error creating operation", e);
+    return NextResponse.json({ error: "No se pudo crear la operación." }, { status: 500 });
   }
 }
