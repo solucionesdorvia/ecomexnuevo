@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { CompareQuotes } from "@/components/analysis/CompareQuotes";
 import { cn } from "@/components/ui/cn";
@@ -50,12 +50,15 @@ function StatusPill({ status }: { status: QuoteRow["status"] }) {
   );
 }
 
+const PAGE_SIZE = 10;
+
 export function CotizacionesClient({ quotes }: { quotes: QuoteRow[] }) {
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState<"all" | QuoteRow["status"]>("all");
   const [rubro, setRubro] = useState<string>("all");
   const [range, setRange] = useState<"all" | "7" | "30" | "90">("all");
   const [selected, setSelected] = useState<string[]>([]);
+  const [page, setPage] = useState(1);
 
   const rubros = useMemo(
     () => ["all", ...new Set(quotes.map((q) => q.rubro).filter(Boolean) as string[])],
@@ -78,6 +81,19 @@ export function CotizacionesClient({ quotes }: { quotes: QuoteRow[] }) {
       return hay.includes(query.trim().toLowerCase());
     });
   }, [quotes, status, rubro, range, query]);
+
+  // Reset to page 1 whenever filters change
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => { setPage(1); }, [query, status, rubro, range]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const clampedPage = Math.min(page, totalPages);
+  const pageStart = (clampedPage - 1) * PAGE_SIZE;
+  const pageRows = filtered.slice(pageStart, pageStart + PAGE_SIZE);
+
+  function goToPage(p: number) {
+    setPage(Math.max(1, Math.min(p, totalPages)));
+  }
 
   const selectedRows = useMemo(
     () => (quotes ?? []).filter((r) => selected.includes(r.id)),
@@ -195,8 +211,8 @@ export function CotizacionesClient({ quotes }: { quotes: QuoteRow[] }) {
               </tr>
             </thead>
             <tbody className="divide-y divide-[var(--border)]">
-              {filtered.length ? (
-                filtered.map((row) => {
+              {pageRows.length ? (
+                pageRows.map((row) => {
                   const isSelected = selected.includes(row.id);
                   const total = row.totalMaxUsd ?? row.totalMinUsd;
                   return (
@@ -255,8 +271,10 @@ export function CotizacionesClient({ quotes }: { quotes: QuoteRow[] }) {
                 })
               ) : (
                 <tr>
-                  <td colSpan={6} className="px-6 py-10 text-sm text-muted">
-                    No hay cotizaciones para mostrar con estos filtros.
+                  <td colSpan={6} className="px-6 py-10 text-center text-sm text-muted">
+                    {filtered.length === 0
+                      ? "No hay cotizaciones que coincidan con los filtros aplicados."
+                      : "No hay resultados en esta página."}
                   </td>
                 </tr>
               )}
@@ -266,25 +284,60 @@ export function CotizacionesClient({ quotes }: { quotes: QuoteRow[] }) {
 
         <div className="flex items-center justify-between border-t border-subtle bg-[var(--surface)] px-6 py-4">
           <p className="text-sm text-muted">
-            Mostrando {filtered.length ? `1-${Math.min(filtered.length, 10)}` : "0"} de {filtered.length} cotizaciones
+            {filtered.length === 0
+              ? "0 cotizaciones"
+              : `${pageStart + 1}–${Math.min(pageStart + PAGE_SIZE, filtered.length)} de ${filtered.length}`}
           </p>
-          <div className="flex items-center gap-1">
-            <button className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-white/55 hover:bg-white/10">
-              <Icon name="chevron_left" size={18} className="text-current" />
-            </button>
-            <button className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-[#030d18] shadow shadow-primary/20">
-              1
-            </button>
-            <button className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-sm font-medium text-white/55 hover:bg-white/10">
-              2
-            </button>
-            <button className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-sm font-medium text-white/55 hover:bg-white/10">
-              3
-            </button>
-            <button className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-white/55 hover:bg-white/10">
-              <Icon name="chevron_right" size={18} className="text-current" />
-            </button>
-          </div>
+          {totalPages > 1 && (
+            <div className="flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => goToPage(clampedPage - 1)}
+                disabled={clampedPage <= 1}
+                className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-white/55 transition hover:bg-white/10 disabled:pointer-events-none disabled:opacity-30"
+                aria-label="Página anterior"
+              >
+                <Icon name="chevron_left" size={18} className="text-current" />
+              </button>
+              {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
+                // Show pages around current page
+                let p: number;
+                if (totalPages <= 5) {
+                  p = i + 1;
+                } else if (clampedPage <= 3) {
+                  p = i + 1;
+                } else if (clampedPage >= totalPages - 2) {
+                  p = totalPages - 4 + i;
+                } else {
+                  p = clampedPage - 2 + i;
+                }
+                return (
+                  <button
+                    key={p}
+                    type="button"
+                    onClick={() => goToPage(p)}
+                    className={cn(
+                      "flex h-8 w-8 items-center justify-center rounded-lg text-sm font-medium transition",
+                      p === clampedPage
+                        ? "bg-primary font-bold text-[#030d18] shadow shadow-primary/20"
+                        : "border border-white/10 text-white/55 hover:bg-white/10"
+                    )}
+                  >
+                    {p}
+                  </button>
+                );
+              })}
+              <button
+                type="button"
+                onClick={() => goToPage(clampedPage + 1)}
+                disabled={clampedPage >= totalPages}
+                className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-white/55 transition hover:bg-white/10 disabled:pointer-events-none disabled:opacity-30"
+                aria-label="Página siguiente"
+              >
+                <Icon name="chevron_right" size={18} className="text-current" />
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
