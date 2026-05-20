@@ -144,6 +144,7 @@ export default async function DashboardPage() {
             <div className="grid gap-4 sm:grid-cols-2">
               {operations.map((op) => {
                 const q = op.quote;
+                if (!q) return null;
                 const title = productLabel(q.productJson, q.quoteJson, q.userText, 72);
                 const lastEv = op.timeline[0];
                 const stageKey = op.stage as keyof typeof OPERATION_STAGE_LABEL_ES;

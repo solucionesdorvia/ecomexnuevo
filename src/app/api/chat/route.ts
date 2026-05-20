@@ -123,6 +123,20 @@ export async function POST(req: Request) {
       );
     }
 
+    // Guard against oversized payloads that would stress the AI backend.
+    if (userText.length > 8_000) {
+      return NextResponse.json(
+        { assistantMessage: "El mensaje es demasiado largo. Por favor resumí tu consulta en menos de 8.000 caracteres." },
+        { status: 400 }
+      );
+    }
+    if (messages.length > 60) {
+      return NextResponse.json(
+        { assistantMessage: "La conversación es muy larga. Iniciá una nueva consulta para continuar." },
+        { status: 400 }
+      );
+    }
+
     const setAnonCookie = (res: NextResponse) => {
       res.cookies.set("ecomex_anon", anonId, {
         httpOnly: true,
@@ -831,14 +845,26 @@ export async function POST(req: Request) {
     return await quoteAndRespond(null, built);
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Error inesperado.";
+
     if (msg.startsWith("NO_PRICE")) {
       return NextResponse.json({
         assistantMessage: "Para calcular el total necesito el **precio unitario en USD**. ¿Cuánto vale cada unidad? (ej: `USD 120`)",
         requestContact: false,
       });
     }
+
+    // OpenAI / upstream rate-limit
+    const statusCode = (e as { status?: number })?.status ?? (e as { statusCode?: number })?.statusCode;
+    if (statusCode === 429 || msg.toLowerCase().includes("rate limit") || msg.toLowerCase().includes("too many requests")) {
+      return NextResponse.json(
+        { assistantMessage: "El servicio está muy ocupado en este momento. Intentá de nuevo en 30 segundos." },
+        { status: 503 }
+      );
+    }
+
+    console.error("[chat/route] unhandled error", e);
     return NextResponse.json(
-      { assistantMessage: `No pude procesar tu solicitud. ${msg}` },
+      { assistantMessage: "No pude procesar tu solicitud. Intentá de nuevo en unos segundos." },
       { status: 500 }
     );
   }

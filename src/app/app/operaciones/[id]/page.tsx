@@ -4,6 +4,7 @@ import { verifyAuthToken } from "@/lib/auth/jwt";
 import { prisma } from "@/lib/db";
 import { notFound } from "next/navigation";
 import { IniciarImportacionButton } from "./IniciarImportacionButton";
+import { PdfDownloadButton } from "./PdfDownloadButton";
 import { fmtUsdRange, fmtActivity } from "@/lib/ui/quoteDisplay";
 import { quoteStageLabel } from "@/lib/ui/stageLabels";
 
@@ -99,16 +100,7 @@ export default async function OperacionDetallePage({ params }: { params: Promise
                 <span className="font-mono">{quote.id.slice(-8)}</span>
               </p>
             </div>
-            <a
-              href={pdfHref}
-              aria-label="Descargar cotización en PDF"
-              className="flex shrink-0 items-center gap-1.5 rounded-lg bg-[#18C3D6] px-4 py-2.5 text-[12px] font-semibold text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
-            >
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              Descargar PDF
-            </a>
+            <PdfDownloadButton href={pdfHref} />
           </div>
         </div>
 
