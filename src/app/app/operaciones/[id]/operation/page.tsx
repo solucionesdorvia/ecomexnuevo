@@ -10,6 +10,7 @@ import { OperationSuppliersClient } from "./OperationSuppliersClient";
 import { OperationCommentsClient } from "./OperationCommentsClient";
 import { operationStageBadgeClass } from "./operationStageUi";
 import { fmtDate, productLabel } from "@/lib/ui/quoteDisplay";
+import { PdfDownloadButton } from "../PdfDownloadButton";
 
 export const runtime = "nodejs";
 
@@ -156,12 +157,10 @@ export default async function OperationDetailPage({ params }: { params: Promise<
             </div>
             <p className="mt-2 text-[13px] text-[#555c6b]">Iniciada el {fmtDate(operation.createdAt)}</p>
           </div>
-          <a
+          <PdfDownloadButton
             href={`/api/quote/pdf?mode=${encodeURIComponent(quote.mode)}&id=${encodeURIComponent(quote.id)}`}
-            className="shrink-0 rounded-lg bg-[#18C3D6] px-4 py-2 text-[12px] font-medium text-[#030d18] transition-colors hover:bg-[#0ea5b9]"
-          >
-            PDF cotización
-          </a>
+            filename="E-COMEX - Cotizacion.pdf"
+          />
         </div>
 
         <div className="mt-8 rounded-xl border border-white/[0.06] bg-[#0B1622] p-4 sm:p-5">

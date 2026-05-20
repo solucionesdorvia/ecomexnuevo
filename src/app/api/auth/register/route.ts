@@ -4,21 +4,9 @@ import { hashPassword } from "@/lib/auth/password";
 import { signAuthToken } from "@/lib/auth/jwt";
 import { Prisma } from "@/generated/prisma/client";
 import { rateLimitAuth } from "@/lib/rateLimit";
+import { parseCookies } from "@/lib/http/parseCookies";
 
 export const runtime = "nodejs";
-
-function parseCookies(header: string | null) {
-  const out: Record<string, string> = {};
-  if (!header) return out;
-  for (const part of header.split(";")) {
-    const idx = part.indexOf("=");
-    if (idx === -1) continue;
-    const k = part.slice(0, idx).trim();
-    const v = part.slice(idx + 1).trim();
-    out[k] = decodeURIComponent(v);
-  }
-  return out;
-}
 
 export async function POST(req: Request) {
   try {

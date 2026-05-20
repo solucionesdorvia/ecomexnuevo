@@ -3,21 +3,9 @@ import { prisma } from "@/lib/db";
 import { verifyPassword } from "@/lib/auth/password";
 import { signAuthToken } from "@/lib/auth/jwt";
 import { rateLimitAuth } from "@/lib/rateLimit";
+import { parseCookies } from "@/lib/http/parseCookies";
 
 export const runtime = "nodejs";
-
-function parseCookies(header: string | null) {
-  const out: Record<string, string> = {};
-  if (!header) return out;
-  for (const part of header.split(";")) {
-    const idx = part.indexOf("=");
-    if (idx === -1) continue;
-    const k = part.slice(0, idx).trim();
-    const v = part.slice(idx + 1).trim();
-    out[k] = decodeURIComponent(v);
-  }
-  return out;
-}
 
 export async function POST(req: Request) {
   try {
@@ -91,7 +79,6 @@ export async function POST(req: Request) {
     });
     return res;
   } catch (e) {
-     
     console.error("[auth/login] error", e);
     return NextResponse.json(
       { ok: false, error: "No se pudo iniciar sesión." },
