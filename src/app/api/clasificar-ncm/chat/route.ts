@@ -50,7 +50,10 @@ export async function POST(req: Request) {
       snapshot: outSnap,
     });
   } catch (e) {
-    const msg = e instanceof Error ? e.message : "Error inesperado.";
-    return NextResponse.json({ error: msg }, { status: 500 });
+    console.error("[clasificar-ncm/chat] error", e);
+    return NextResponse.json(
+      { error: "No se pudo procesar el mensaje. Intentá de nuevo." },
+      { status: 500 }
+    );
   }
 }

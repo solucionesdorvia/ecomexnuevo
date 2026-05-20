@@ -47,8 +47,9 @@ export async function POST(req: Request) {
     const result = motorResultToTextPipelineResult(motor);
     return NextResponse.json({ ok: true, ms: Date.now() - started, result });
   } catch (e) {
+    console.error("[clasificar-ncm] motor error", e);
     return NextResponse.json(
-      { ok: false, error: e instanceof Error ? e.message : String(e) },
+      { ok: false, error: "No se pudo clasificar el producto. Intentá de nuevo." },
       { status: 500 }
     );
   }

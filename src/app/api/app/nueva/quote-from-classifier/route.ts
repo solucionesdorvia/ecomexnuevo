@@ -62,30 +62,46 @@ export async function POST(req: Request) {
   );
 
   type QuoteProductInput = Extract<Parameters<typeof calcImportQuote>[0], { mode: "quote" }>["product"];
-  const quote = await calcImportQuote({
-    mode: "quote",
-    product: enrichedProduct as unknown as QuoteProductInput,
-    rawUserText: userText,
-  });
+  let quote: Awaited<ReturnType<typeof calcImportQuote>>;
+  try {
+    quote = await calcImportQuote({
+      mode: "quote",
+      product: enrichedProduct as unknown as QuoteProductInput,
+      rawUserText: userText,
+    });
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "";
+    if (msg.startsWith("NO_PRICE")) {
+      return NextResponse.json({ error: "Falta el precio unitario. Ingresalo antes de cotizar." }, { status: 400 });
+    }
+    console.error("[quote-from-classifier] calcImportQuote error", e);
+    return NextResponse.json({ error: "No se pudo calcular la cotización. Intentá de nuevo." }, { status: 500 });
+  }
 
   const cookieStore = await cookies();
   const secure = process.env.NODE_ENV === "production";
   const existing = cookieStore.get("ecomex_anon")?.value;
   const anonId = existing && existing.length >= 8 ? existing : crypto.randomUUID();
 
-  const row = await prisma.quote.create({
-    data: {
-      anonId,
-      mode: "quote",
-      userText,
-      productJson: enrichedProduct as unknown as InputJsonValue,
-      quoteJson: quote as unknown as InputJsonValue,
-      totalMinUsd: quote.totalMinUsd ?? undefined,
-      totalMaxUsd: quote.totalMaxUsd ?? undefined,
-      stage: "quoted",
-      userId: user.id,
-    },
-  });
+  let row: Awaited<ReturnType<typeof prisma.quote.create>>;
+  try {
+    row = await prisma.quote.create({
+      data: {
+        anonId,
+        mode: "quote",
+        userText,
+        productJson: enrichedProduct as unknown as InputJsonValue,
+        quoteJson: quote as unknown as InputJsonValue,
+        totalMinUsd: quote.totalMinUsd ?? undefined,
+        totalMaxUsd: quote.totalMaxUsd ?? undefined,
+        stage: "quoted",
+        userId: user.id,
+      },
+    });
+  } catch (e) {
+    console.error("[quote-from-classifier] db create error", e);
+    return NextResponse.json({ error: "No se pudo guardar la cotización. Intentá de nuevo." }, { status: 500 });
+  }
 
   // NCM final ya enriquecido por PCRAM. Lo devolvemos para que el cliente
   // lo muestre en el card de "Cotización lista" sin tener que esperar a

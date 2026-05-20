@@ -8,6 +8,16 @@ export const runtime = "nodejs";
 
 const HOUR_MS = 60 * 60 * 1000;
 
+/** Escape HTML special chars to prevent injection in email body. */
+function esc(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+
 export async function POST(req: Request) {
   const rl = rateLimitByIp(req, "contact", 5, HOUR_MS);
   if (!rl.ok) {
@@ -41,9 +51,10 @@ export async function POST(req: Request) {
   }
 
   const operatorEmail = process.env.OPERATOR_EMAIL ?? "info@e-comex.com.ar";
-  const nombre = body.nombre?.trim() ?? "";
-  const empresa = body.empresa?.trim() ?? "";
-  const mensaje = body.mensaje?.trim() ?? "";
+  const nombre = esc(body.nombre?.trim() ?? "");
+  const empresa = esc(body.empresa?.trim() ?? "");
+  const mensaje = esc(body.mensaje?.trim() ?? "");
+  const emailDisplay = esc(body.email.trim());
 
   const html = `<!DOCTYPE html>
 <html lang="es">
@@ -63,9 +74,9 @@ export async function POST(req: Request) {
             <table width="100%" cellpadding="0" cellspacing="0" style="border:1px solid rgba(255,255,255,0.06);border-radius:10px;overflow:hidden;margin-bottom:20px;">
               ${nombre ? `<tr style="background:rgba(255,255,255,0.03);"><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;" width="30%">Nombre</td><td style="padding:10px 16px;font-size:13px;color:#e2e8f0;">${nombre}</td></tr>` : ""}
               ${empresa ? `<tr><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;border-top:1px solid rgba(255,255,255,0.04);">Empresa</td><td style="padding:10px 16px;font-size:13px;color:#e2e8f0;border-top:1px solid rgba(255,255,255,0.04);">${empresa}</td></tr>` : ""}
-              <tr><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;border-top:1px solid rgba(255,255,255,0.04);">Email</td><td style="padding:10px 16px;font-size:13px;color:#18C3D6;border-top:1px solid rgba(255,255,255,0.04);"><a href="mailto:${body.email}" style="color:#18C3D6;">${body.email}</a></td></tr>
+              <tr><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;border-top:1px solid rgba(255,255,255,0.04);">Email</td><td style="padding:10px 16px;font-size:13px;color:#18C3D6;border-top:1px solid rgba(255,255,255,0.04);"><a href="mailto:${emailDisplay}" style="color:#18C3D6;">${emailDisplay}</a></td></tr>
             </table>
-            ${mensaje ? `<p style="margin:0 0 8px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;">Mensaje</p><p style="margin:0;font-size:13px;color:#94a3b8;line-height:1.6;background:rgba(255,255,255,0.03);border-radius:8px;padding:12px 16px;border-left:3px solid #18C3D6;">${mensaje.replace(/\n/g, "<br>")}</p>` : ""}
+            ${mensaje ? `<p style="margin:0 0 8px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;">Mensaje</p><p style="margin:0;font-size:13px;color:#94a3b8;line-height:1.6;background:rgba(255,255,255,0.03);border-radius:8px;padding:12px 16px;border-left:3px solid #18C3D6;">${mensaje.replace(/&#x27;/g, "'").replace(/\n/g, "<br>")}</p>` : ""}
           </td>
         </tr>
         <tr>
@@ -81,7 +92,7 @@ export async function POST(req: Request) {
 
   const emailResult = await sendEmail({
     to: operatorEmail,
-    subject: `Nuevo contacto desde la web — ${nombre || body.email}`,
+    subject: `Nuevo contacto desde la web — ${nombre || emailDisplay}`,
     html,
   });
 
