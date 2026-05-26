@@ -468,7 +468,7 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
       clip-path: polygon(0 0, 78% 0, 90% 100%, 0 100%);
     }
     .cover-left-deco .navy-layer {
-      position:absolute; left:12px; top:17%; width:84%; height:66%;
+      position:absolute; left:12px; top:17%; width:72%; height:66%;
       background: var(--ecomex-blue);
       clip-path: polygon(0 0, 58% 0, 100% 50%, 58% 100%, 0 100%);
     }

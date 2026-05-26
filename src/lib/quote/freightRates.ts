@@ -9,14 +9,14 @@ export const AIR_RATES = {
     awbFlat: 40,
     airTransferPerKg: 0.15,
     airTransferMinUsd: 50,
-    freightPerKg: 3.5,
+    freightPerKg: 250,
     destination: {
       corteGuia: 220 * (1 + IVA), // 266.20
       handling: 50 * (1 + IVA),   //  60.50
     },
   },
   CHINA_FOB: {
-    freightPerKg: 9,
+    freightPerKg: 250,
     destination: {
       corteGuia: 220 * (1 + IVA),
       handling: 50 * (1 + IVA),
@@ -37,31 +37,31 @@ export const ALMACENAJE_RATES = {
 
 export const FCL_RATES = {
   CHINA: {
-    flete20: 5300,
-    flete40: 5500,
+    flete20: 4000,
+    flete40: 6000,
     destination: 890 * (1 + IVA), // 1076.90
   },
   EUROPE: {
-    flete20: 550,
-    flete40: 650,
+    flete20: 2500,
+    flete40: 3800,
     destination: 890 * (1 + IVA),
   },
 } as const;
 
-// ── Marítimo LCL (por T/M3 — el mayor entre toneladas y m3) ─────────────────
+// ── Marítimo LCL (tarifa plana por embarque) ─────────────────────────────────
 
 export const LCL_RATES = {
   CHINA: {
-    freightPerTM3: 50,
-    destination: { handling: 50, desconsolidacionPerTM3: 25 },
+    fleteFlat: 1500,
+    destination: { handling: 50 },
   },
   EUROPE: {
-    freightPerTM3Eur: 20, // EUR — se convierte a USD con EUR_USD_APPROX
-    destination: { handling: 50, desconsolidacionPerTM3: 25 },
+    fleteFlat: 1500,
+    destination: { handling: 50 },
   },
   USA: {
-    freightPerTM3: 30,
-    destination: { handling: 50, desconsolidacionPerTM3: 25 },
+    fleteFlat: 1500,
+    destination: { handling: 50 },
   },
 } as const;
 
@@ -169,13 +169,10 @@ export type FreightResult = {
 export function calcFreightCost(
   zone: OriginZone,
   totalKg: number,
-  totalM3: number,
+  _totalM3: number,
   mode?: ShippingMode
 ): FreightResult {
   const m = mode ?? selectShippingMode(zone, totalKg);
-
-  // T/M3: el mayor entre toneladas y m3
-  const tM3 = Math.max(totalKg / 1000, totalM3);
 
   const alm = ALMACENAJE_RATES;
 
@@ -208,47 +205,37 @@ export function calcFreightCost(
     }
     case "lcl_china": {
       const r = LCL_RATES.CHINA;
-      const tm3Charged = Math.max(tM3, 0.01);
-      const flete = tm3Charged * r.freightPerTM3;
-      const desconsolid = tm3Charged * r.destination.desconsolidacionPerTM3;
-      const subtotal = flete + r.destination.handling + desconsolid;
+      const subtotal = r.fleteFlat + r.destination.handling;
       return {
         mode: m,
-        totalUsd: Math.round(subtotal) + alm.lclFlat,
+        totalUsd: subtotal + alm.lclFlat,
         almacenajeUsd: alm.lclFlat,
         label: "Marítimo LCL — China",
-        detail: `Flete $${Math.round(flete)} (${tM3.toFixed(3)} T/M3 × USD ${r.freightPerTM3}) + handling $${r.destination.handling} + desconsolidación $${Math.round(desconsolid)} + almacenaje $${alm.lclFlat}`,
+        detail: `Flete USD ${r.fleteFlat} (tarifa plana) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
         estimatedKg: totalKg,
       };
     }
     case "lcl_europe": {
       const r = LCL_RATES.EUROPE;
-      const tm3Charged = Math.max(tM3, 0.01);
-      const fleteEur = tm3Charged * r.freightPerTM3Eur;
-      const fleteUsd = fleteEur * EUR_USD_APPROX;
-      const desconsolid = tm3Charged * r.destination.desconsolidacionPerTM3;
-      const subtotal = fleteUsd + r.destination.handling + desconsolid;
+      const subtotal = r.fleteFlat + r.destination.handling;
       return {
         mode: m,
-        totalUsd: Math.round(subtotal) + alm.lclFlat,
+        totalUsd: subtotal + alm.lclFlat,
         almacenajeUsd: alm.lclFlat,
         label: "Marítimo LCL — Europa",
-        detail: `Flete EUR ${Math.round(fleteEur)} (≈ USD ${Math.round(fleteUsd)}) + handling $${r.destination.handling} + desconsolidación $${Math.round(desconsolid)} + almacenaje $${alm.lclFlat}`,
+        detail: `Flete USD ${r.fleteFlat} (tarifa plana) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
         estimatedKg: totalKg,
       };
     }
     case "lcl_usa": {
       const r = LCL_RATES.USA;
-      const tm3Charged = Math.max(tM3, 0.01);
-      const flete = tm3Charged * r.freightPerTM3;
-      const desconsolid = tm3Charged * r.destination.desconsolidacionPerTM3;
-      const subtotal = flete + r.destination.handling + desconsolid;
+      const subtotal = r.fleteFlat + r.destination.handling;
       return {
         mode: m,
-        totalUsd: Math.round(subtotal) + alm.lclFlat,
+        totalUsd: subtotal + alm.lclFlat,
         almacenajeUsd: alm.lclFlat,
         label: "Marítimo LCL — EE.UU.",
-        detail: `Flete $${Math.round(flete)} (${tM3.toFixed(3)} T/M3 × USD ${r.freightPerTM3}) + handling $${r.destination.handling} + desconsolidación $${Math.round(desconsolid)} + almacenaje $${alm.lclFlat}`,
+        detail: `Flete USD ${r.fleteFlat} (tarifa plana) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
         estimatedKg: totalKg,
       };
     }

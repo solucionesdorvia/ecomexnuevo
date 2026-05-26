@@ -21,7 +21,7 @@ export default async function ProveedoresPage() {
       createdAt: true,
       _count: { select: { operations: true } },
     },
-  });
+  }).catch(() => []);
 
   const initialSuppliers: SupplierRow[] = rows.map((s) => ({
     id: s.id,

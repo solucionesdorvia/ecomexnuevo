@@ -25,13 +25,18 @@ export async function GET() {
     return NextResponse.json({ ok: false, error: "No autenticado." }, { status: 401 });
   }
 
-  const docs = await prisma.userDocument.findMany({
-    where: { userId: auth.sub },
-    orderBy: { createdAt: "asc" },
-    select: { docType: true, name: true, url: true, createdAt: true },
-  });
+  try {
+    const docs = await prisma.userDocument.findMany({
+      where: { userId: auth.sub },
+      orderBy: { createdAt: "asc" },
+      select: { docType: true, name: true, url: true, createdAt: true },
+    });
 
-  return NextResponse.json({ ok: true, documents: docs });
+    return NextResponse.json({ ok: true, documents: docs });
+  } catch (e) {
+    console.error("[user/documents/GET] error fetching documents", e);
+    return NextResponse.json({ ok: false, error: "No se pudieron obtener los documentos." }, { status: 500 });
+  }
 }
 
 export async function POST(req: Request) {
@@ -82,8 +87,13 @@ export async function POST(req: Request) {
   }
 
   // Reemplaza si ya existe uno del mismo tipo (un doc por tipo por usuario).
-  await prisma.userDocument.deleteMany({ where: { userId: auth.sub, docType } });
-  await prisma.userDocument.create({ data: { userId: auth.sub, docType, name: file.name, url } });
+  try {
+    await prisma.userDocument.deleteMany({ where: { userId: auth.sub, docType } });
+    await prisma.userDocument.create({ data: { userId: auth.sub, docType, name: file.name, url } });
+  } catch (e) {
+    console.error("[user/documents/POST] error saving document record", e);
+    return NextResponse.json({ ok: false, error: "No se pudo registrar el documento." }, { status: 500 });
+  }
 
   return NextResponse.json({ ok: true, url, name: file.name, docType });
 }
