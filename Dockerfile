@@ -8,7 +8,7 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY . .
-RUN npm run build
+RUN rm -rf .next && npm run build
 
 # ── Stage 2: runtime ─────────────────────────────────────────────────────────
 # Usamos node slim + instalamos SOLO Chromium de Playwright (~130 MB vs ~2.5 GB
