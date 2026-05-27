@@ -5,16 +5,17 @@ import AuthForm from "../ui/AuthForm";
 export const runtime = "nodejs";
 export const metadata = { title: "Iniciar sesión — E-COMEX" };
 
-export default function LoginPage({
+export default async function LoginPage({
   searchParams,
 }: {
-  searchParams?: Record<string, string | string[] | undefined>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
+  const sp = await searchParams;
   const nextPath =
-    typeof searchParams?.next === "string" && searchParams.next.startsWith("/")
-      ? searchParams.next
-      : typeof searchParams?.redirect === "string" && searchParams.redirect.startsWith("/")
-        ? searchParams.redirect
+    typeof sp?.next === "string" && sp.next.startsWith("/")
+      ? sp.next
+      : typeof sp?.redirect === "string" && sp.redirect.startsWith("/")
+        ? sp.redirect
         : undefined;
   return (
     <div className="min-h-screen bg-[#07111A] text-white" style={{ fontFamily: "var(--font-body, 'Inter', sans-serif)" }}>
