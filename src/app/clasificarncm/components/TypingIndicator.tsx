@@ -9,9 +9,9 @@ export function TypingIndicator() {
     >
       <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-[#18C3D6]/20 bg-[#060f1a]">
         <svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden>
-          <rect x="0" y="0"   width="12" height="1.8" rx="0.9" fill="#18C3D6" opacity="0.7" />
-          <rect x="0" y="4.1" width="12" height="1.8" rx="0.9" fill="#18C3D6" opacity="0.7" />
-          <rect x="0" y="8.2" width="12" height="1.8" rx="0.9" fill="#18C3D6" opacity="0.7" />
+          <rect x="0" y="0"   width="4"  height="1.8" rx="0.9" fill="#18C3D6" opacity="0.8" />
+          <rect x="0" y="4.1" width="8"  height="1.8" rx="0.9" fill="#18C3D6" opacity="0.9" />
+          <rect x="0" y="8.2" width="12" height="1.8" rx="0.9" fill="#18C3D6" opacity="1"   />
         </svg>
       </div>
       <div className="flex min-w-0 flex-1 items-stretch gap-3">
