@@ -251,7 +251,7 @@ export default function LandingContainerGate() {
 
           <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { t: "Clasificación de productos", d: "Evaluamos viabilidad técnica y posición arancelaria antes de operar.", c: P.blue },
+              { t: "Desarrollo de Productos y Proveedores", d: "Contamos con Agentes de compras y Proveedores auditados por rubro, convirtiendo tu necesidad en un proyecto real.", c: P.blue },
               { t: "Regulaciones", d: "Identificamos intervenciones, permisos y requisitos anticipadamente.", c: P.cyan },
               { t: "Costos", d: "Desglose completo: FOB, flete, impuestos, gastos operativos, landed cost.", c: P.blue },
               { t: "Logística", d: "Rutas, tiempos y modalidades optimizadas para cada operación.", c: P.cyan },
