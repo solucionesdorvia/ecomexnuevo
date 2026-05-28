@@ -46,7 +46,7 @@ function Navbar() {
   return (
     <nav className={`fixed top-0 z-50 w-full pt-safe transition-all duration-300 ${scrolled ? "bg-[#07111A]/80 backdrop-blur-xl border-b" : "bg-transparent"}`} style={{ borderColor: scrolled ? P.border : "transparent" }}>
       <div className="mx-auto flex min-h-14 max-w-[1200px] items-center justify-between px-4 sm:px-5 lg:px-8">
-        <Image src="/brand/ecomex-logo.png" alt="E-COMEX" width={90} height={20} className="h-5 brightness-0 invert" />
+        <Image src="/brand/ecomex-logo.png" alt="E-COMEX" width={577} height={77} className="h-7 w-auto brightness-0 invert" />
 
         {/* Desktop */}
         <div className="hidden items-center gap-8 md:flex">
