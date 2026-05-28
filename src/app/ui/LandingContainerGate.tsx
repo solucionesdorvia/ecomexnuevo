@@ -178,15 +178,15 @@ export default function LandingContainerGate() {
           <R>
             <p className="text-[12px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.cyan }}>El problema</p>
             <h2 className="mt-4 max-w-[600px] text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.02em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
-              El problema no es importar. Es cómo lo estás gestionando.
+              En la era de los cursos y los viajes sin foco, E-COMEX unifica todo lo necesario para que tu compra internacional sea un éxito.
             </h2>
           </R>
           <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ["Información dispersa","Datos en mails, excels y llamadas que nunca se consolidan."],
-              ["Procesos manuales","Carga repetitiva y burocracia que consume el tiempo del equipo."],
+              ["Información en tiempo real","Contamos con red de agentes y proveedores validados que brindan cotización e información precisa en tiempo real."],
+              ["Procesos","Cada proceso es auditado en cada eslabón del servicio. Si el error es nuestro, la responsabilidad es nuestra."],
               ["Falta de claridad","Dificultad para conocer el estado real de costos y tiempos."],
-              ["Dependencia de terceros","Sentir que no tenés el control de tus propios flujos comerciales."],
+              ["Dependencia","Lograr optimizar tus compras potencia tu negocio. Ser eficiente no se logra con un viaje o un curso."],
             ].map(([t,d],i) => (
               <R key={t} d={i*60}>
                 <div className="group flex h-full flex-col rounded-xl p-6 transition-all duration-300 hover:bg-white/[0.02]" style={{ border: `1px solid ${P.border}` }}>
@@ -284,10 +284,10 @@ export default function LandingContainerGate() {
             <div className="hidden lg:block absolute top-[30px] left-[12.5%] right-[12.5%] h-px" style={{ background: `linear-gradient(90deg, ${P.cyan}30, ${P.blue}30)` }} />
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { n: "01", t: "Entendemos tu operación", d: "Mapeamos necesidades y desafíos específicos de tu industria.", c: P.cyan },
-                { n: "02", t: "Analizamos la información", d: "Procesamos datos para encontrar patrones de mejora.", c: P.blue },
-                { n: "03", t: "Organizamos los datos", d: "Estructuramos el flujo de trabajo en nuestra plataforma.", c: P.cyan },
-                { n: "04", t: "Ejecutamos con claridad", d: "Reportes y estados en tiempo real para decidir con seguridad.", c: P.blue },
+                { n: "01", t: "Entendemos tu operación", d: "Mapeamos necesidades y desafíos específicos de tu operación.", c: P.cyan },
+                { n: "02", t: "Analizamos la información", d: "Procesamos, desarrollamos, proyectamos y presentamos proyectos.", c: P.blue },
+                { n: "03", t: "Organizamos", d: "Cada proceso cuenta con su especialista, y lo podés ver en tiempo real a través de nuestra plataforma.", c: P.cyan },
+                { n: "04", t: "Ejecutamos", d: "Convertir en realidad lo propuesto es nuestro mejor marketing.", c: P.blue },
               ].map((s, i) => (
                 <R key={s.n} d={i*80}>
                   <div className="group flex flex-col items-center text-center">
@@ -356,7 +356,7 @@ export default function LandingContainerGate() {
               <div className="p-8 sm:p-10" style={{ background: P.bg }}>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.t3 }}>Antes</p>
                 <div className="mt-6 space-y-5">
-                  {["Caos documental","Cero previsibilidad","Gestión reactiva"].map(t => (
+                  {["Indecisión","Dudas","Falta de acompañamiento"].map(t => (
                     <div key={t} className="flex items-start gap-3">
                       <span className="mt-0.5 text-[16px] leading-none text-red-400/60">✕</span>
                       <span className="text-[14px]" style={{ color: P.t2 }}>{t}</span>
@@ -367,7 +367,7 @@ export default function LandingContainerGate() {
               <div className="p-8 sm:p-10" style={{ background: P.navy }}>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.cyan }}>Con E-COMEX</p>
                 <div className="mt-6 space-y-5">
-                  {["Flujo unificado","Control de costos","Gestión proactiva"].map(t => (
+                  {["Previsión","Control","Información"].map(t => (
                     <div key={t} className="flex items-start gap-3">
                       <span className="mt-0.5 text-[16px] leading-none" style={{ color: P.cyan }}>✓</span>
                       <span className="text-[14px]" style={{ color: P.t1 }}>{t}</span>
@@ -415,7 +415,7 @@ export default function LandingContainerGate() {
           <R>
             <p className="text-[12px] font-semibold uppercase tracking-[0.15em]" style={{ color: P.cyan }}>Casos gestionados</p>
             <h2 className="mt-4 max-w-[560px] text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.02em]" style={{ fontFamily: "var(--font-display)", color: P.t1 }}>
-              Importaciones que ya hicimos realidad
+              Proyectos que ya hicimos realidad
             </h2>
             <p className="mt-4 max-w-[460px] text-[15px] leading-[1.75]" style={{ color: P.t2 }}>
               Desde maquinaria agrícola hasta electrónica. Cada operación clasificada, regulada y gestionada con precisión.
@@ -482,7 +482,7 @@ export default function LandingContainerGate() {
                 </h2>
                 <p className="mt-4" style={{ color: P.t2 }}>Dejá tus datos y un especialista se comunica con vos.</p>
                 <div className="mt-8 space-y-3 text-[14px]" style={{ color: P.t3 }}>
-                  <p>inteligencia@e-comex.com</p>
+                  <p>info@e-comex.com.ar</p>
                   <p>Av. Pte. Julio A. Roca 771, 6° Piso Of. 10 — CABA</p>
                 </div>
               </div>
