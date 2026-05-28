@@ -1,7 +1,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // Import quote calculator — dynamic product JSON shapes require any casts.
 import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
-import { detectOriginZone, estimateUnitDimensions, calcFreightCost } from "./freightRates";
+import { detectOriginZone, estimateUnitDimensions, calcFreightCost, ShippingMode, OriginZone } from "./freightRates";
+
+/** Detecta si el usuario mencionó explícitamente un modo de transporte. */
+function detectUserShippingMode(userText: string, zone: OriginZone): ShippingMode | undefined {
+  const t = userText.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+
+  const wantsAir = /\b(aereo|aerea|avion|aero|airfreight|air\s*freight|por\s*aire|via\s*aerea)\b/.test(t);
+  const wantsFcl = /\b(fcl|full\s*container|contenedor\s*completo)\b/.test(t);
+  const wantsSea = /\b(maritimo|maritima|barco|buque|navio|sea\s*freight|ocean\s*freight|lcl|maritim)\b/.test(t);
+
+  if (wantsAir) {
+    if (zone === "CHINA") return "air_china";
+    return "air_usa"; // USA y EUROPE usan misma tabla aérea
+  }
+  if (wantsFcl) {
+    if (zone === "EUROPE") return "fcl20_europe";
+    return "fcl20_china"; // China y resto
+  }
+  if (wantsSea) {
+    if (zone === "EUROPE") return "lcl_europe";
+    if (zone === "USA") return "lcl_usa";
+    return "lcl_china";
+  }
+  return undefined; // sin preferencia explícita → auto-selección
+}
 
 export type QuoteCard = {
   label:
@@ -289,7 +313,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   // Escala m3 proporcionalmente al peso real si el usuario lo proveyó
   const m3Scale = userWeightKg != null && unitDim.kg > 0 ? userWeightKg / unitDim.kg : 1;
   const totalM3 = unitDim.m3 * qty * m3Scale;
-  const freight = calcFreightCost(zone, totalKg, totalM3);
+  const userMode = detectUserShippingMode(inputs.rawUserText ?? "", zone);
+  const freight = calcFreightCost(zone, totalKg, totalM3, userMode);
   const fleteMin = freight.totalUsd;
   const fleteMax = freight.totalUsd;
 

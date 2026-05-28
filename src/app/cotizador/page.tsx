@@ -4,9 +4,9 @@ import Image from "next/image";
 import CotizadorPublicoClient from "./CotizadorPublicoClient";
 
 export const metadata: Metadata = {
-  title: "Calculadora de importaciones gratis — E-COMEX",
+  title: "Agente IA cotizador — E-COMEX",
   description:
-    "Calculá gratis cuánto sale importar a Argentina. NCM, aranceles, flete, impuestos y landed cost en minutos. Sin registro.",
+    "Cotizá gratis cuánto sale importar a Argentina. NCM, aranceles, flete, impuestos y landed cost en minutos. Sin registro.",
 };
 
 export default function CotizadorPage() {
