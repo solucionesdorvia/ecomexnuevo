@@ -33,6 +33,13 @@ export const metadata: Metadata = {
   description:
     "Calculá gratis cuánto cuesta importar a Argentina. Clasificación NCM, aranceles, flete e impuestos en minutos. La mejor calculadora de importaciones del país.",
   metadataBase: new URL("https://e-comex.com.ar"),
+  icons: {
+    icon: [
+      { url: "/favicon-ecomex.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-ecomex-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: "/favicon-ecomex-192.png",
+  },
   keywords: [
     "cuánto cuesta importar a argentina",
     "calculadora costos importación argentina",
