@@ -13,6 +13,8 @@ export function ContactForm() {
   const [nombre, setNombre] = useState("");
   const [empresa, setEmpresa] = useState("");
   const [email, setEmail] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [web, setWeb] = useState("");
   const [mensaje, setMensaje] = useState("");
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -21,13 +23,14 @@ export function ContactForm() {
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     if (!email.includes("@")) { setError("Ingresá un email válido."); return; }
+    if (!telefono.trim()) { setError("El teléfono es obligatorio."); return; }
     setSending(true);
     setError(null);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ nombre, empresa, email, mensaje }),
+        body: JSON.stringify({ nombre, empresa, email, telefono, web, mensaje }),
       });
       const json = (await res.json()) as { ok?: boolean; error?: string };
       if (!res.ok || !json.ok) throw new Error(json.error || "Error al enviar.");
@@ -82,6 +85,25 @@ export function ContactForm() {
         className="w-full rounded-lg px-4 py-3 text-[14px] outline-none transition-colors focus:border-[#18C3D6]/40"
         style={{ background: P.bg, border: `1px solid ${P.border}`, color: P.t1 }}
       />
+      <div className="grid gap-3 sm:grid-cols-2">
+        <input
+          type="tel"
+          placeholder="Teléfono *"
+          required
+          value={telefono}
+          onChange={(e) => setTelefono(e.target.value)}
+          className="w-full rounded-lg px-4 py-3 text-[14px] outline-none transition-colors focus:border-[#18C3D6]/40"
+          style={{ background: P.bg, border: `1px solid ${P.border}`, color: P.t1 }}
+        />
+        <input
+          type="text"
+          placeholder="Sitio web"
+          value={web}
+          onChange={(e) => setWeb(e.target.value)}
+          className="w-full rounded-lg px-4 py-3 text-[14px] outline-none transition-colors focus:border-[#18C3D6]/40"
+          style={{ background: P.bg, border: `1px solid ${P.border}`, color: P.t1 }}
+        />
+      </div>
       <textarea
         rows={3}
         placeholder="Mensaje"

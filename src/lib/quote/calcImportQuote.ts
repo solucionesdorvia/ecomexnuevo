@@ -144,6 +144,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     gestionMaxUsd: number;
     honorariosMinUsd: number;
     honorariosMaxUsd: number;
+    arancelSimUsd: number;
     depositoPortuarioMinUsd: number;
     depositoPortuarioMaxUsd: number;
     transporteNacionalMinUsd: number;
@@ -488,10 +489,11 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     /\b(maquin|machine|industrial|cnc|cortad|cortadora|sierra|stone|piedra)\b/i.test(titleNorm);
 
   // Tasas reales de gestión/despacho (provistas por el encargado de CE).
-  // Honorarios: 1% del valor FOB total. Gastos operativos: USD 200 fijo.
+  // Honorarios: 1% del valor FOB total, mínimo USD 300. Gastos operativos: USD 200 fijo. Arancel SIM: USD 10 fijo.
   const GASTOS_OPERATIVOS = 200;
-  const honorariosMin = round2(fobTotalMin * 0.01);
-  const honorariosMax = round2(fobTotalMax * 0.01);
+  const ARANCEL_SIM = 10;
+  const honorariosMin = Math.max(300, round2(fobTotalMin * 0.01));
+  const honorariosMax = Math.max(300, round2(fobTotalMax * 0.01));
   const depositoMin = GASTOS_OPERATIVOS;
   const depositoMax = GASTOS_OPERATIVOS;
   const transporteNacMin = 0;
@@ -499,8 +501,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   const transferenciaMin = 0;
   const transferenciaMax = 0;
 
-  const gestionMin = honorariosMin + GASTOS_OPERATIVOS;
-  const gestionMax = honorariosMax + GASTOS_OPERATIVOS;
+  const gestionMin = honorariosMin + GASTOS_OPERATIVOS + ARANCEL_SIM;
+  const gestionMax = honorariosMax + GASTOS_OPERATIVOS + ARANCEL_SIM;
 
   const totalMin = cifMin + impuestosMin + gestionMin;
   const totalMax = cifMax + impuestosMax + gestionMax;
@@ -552,7 +554,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     {
       id: "ops",
       label: "Gestión",
-      value: "1% FOB honorarios + USD 200 gastos operativos",
+      value: "Honorarios 1% FOB (mín. USD 300) + Gastos operativos USD 200 + Arancel SIM USD 10",
       source: "user",
       tone: "success",
     },
@@ -574,7 +576,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   // pero no se menciona ni se imprime en el chat.
 
   const explanation = [
-    `Listo. Esta es una **estimación** para: **${title}**.`,
+    `Esta es una **estimación** para: **${title}**.`,
     "",
     `- **Cantidad**: ${qty} ${qty === 1 ? "unidad" : "unidades"}`,
     `- **FOB unitario**: ${
@@ -685,6 +687,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       gestionMaxUsd: round2(gestionMax),
       honorariosMinUsd: round2(honorariosMin),
       honorariosMaxUsd: round2(honorariosMax),
+      arancelSimUsd: ARANCEL_SIM,
       depositoPortuarioMinUsd: round2(depositoMin),
       depositoPortuarioMaxUsd: round2(depositoMax),
       transporteNacionalMinUsd: round2(transporteNacMin),

@@ -27,6 +27,8 @@ export async function POST(req: Request) {
     nombre?: string;
     empresa?: string;
     email?: string;
+    telefono?: string;
+    web?: string;
     mensaje?: string;
   } | null;
 
@@ -53,6 +55,8 @@ export async function POST(req: Request) {
   const operatorEmail = process.env.OPERATOR_EMAIL ?? "info@e-comex.com.ar";
   const nombre = esc(body.nombre?.trim() ?? "");
   const empresa = esc(body.empresa?.trim() ?? "");
+  const telefono = esc(body.telefono?.trim() ?? "");
+  const web = esc(body.web?.trim() ?? "");
   const mensaje = esc(body.mensaje?.trim() ?? "");
   const emailDisplay = esc(body.email.trim());
 
@@ -75,6 +79,8 @@ export async function POST(req: Request) {
               ${nombre ? `<tr style="background:rgba(255,255,255,0.03);"><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;" width="30%">Nombre</td><td style="padding:10px 16px;font-size:13px;color:#e2e8f0;">${nombre}</td></tr>` : ""}
               ${empresa ? `<tr><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;border-top:1px solid rgba(255,255,255,0.04);">Empresa</td><td style="padding:10px 16px;font-size:13px;color:#e2e8f0;border-top:1px solid rgba(255,255,255,0.04);">${empresa}</td></tr>` : ""}
               <tr><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;border-top:1px solid rgba(255,255,255,0.04);">Email</td><td style="padding:10px 16px;font-size:13px;color:#18C3D6;border-top:1px solid rgba(255,255,255,0.04);"><a href="mailto:${emailDisplay}" style="color:#18C3D6;">${emailDisplay}</a></td></tr>
+              ${telefono ? `<tr><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;border-top:1px solid rgba(255,255,255,0.04);">Teléfono</td><td style="padding:10px 16px;font-size:13px;color:#e2e8f0;border-top:1px solid rgba(255,255,255,0.04);"><a href="tel:${telefono}" style="color:#e2e8f0;">${telefono}</a></td></tr>` : ""}
+              ${web ? `<tr><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;border-top:1px solid rgba(255,255,255,0.04);">Web</td><td style="padding:10px 16px;font-size:13px;color:#18C3D6;border-top:1px solid rgba(255,255,255,0.04);"><a href="${web}" target="_blank" style="color:#18C3D6;">${web}</a></td></tr>` : ""}
             </table>
             ${mensaje ? `<p style="margin:0 0 8px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;">Mensaje</p><p style="margin:0;font-size:13px;color:#94a3b8;line-height:1.6;background:rgba(255,255,255,0.03);border-radius:8px;padding:12px 16px;border-left:3px solid #18C3D6;">${mensaje.replace(/&#x27;/g, "'").replace(/\n/g, "<br>")}</p>` : ""}
           </td>

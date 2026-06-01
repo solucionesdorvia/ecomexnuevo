@@ -22,6 +22,7 @@ export type QuoteBreakdown = {
   seguroMinUsd: number;
   impuestosTotalMinUsd: number;
   honorariosMinUsd: number;
+  arancelSimUsd?: number;
   depositoPortuarioMinUsd: number;
   transporteNacionalMinUsd: number;
   transferenciaIntlMinUsd: number;
@@ -223,7 +224,7 @@ function TemplateBreakdown({
       {/* Cost breakdown — estilo plantilla */}
       <div className="px-5 py-4 text-[12px]">
         {/* FOB */}
-        <CostRow label={`FOB (${b.qty} ${b.qty === 1 ? "ud." : "uds."}) *`} value={fmtUsd(b.fobTotalUsd)} isBlue />
+        <CostRow label={`FOB (${b.qty} ${b.qty === 1 ? "un." : "uns."}) *`} value={fmtUsd(b.fobTotalUsd)} isBlue />
 
         {/* Flete */}
         <CostRow label={fleteLabel} value={fmtUsd(b.fleteMinUsd)} />
@@ -251,9 +252,9 @@ function TemplateBreakdown({
 
         {/* Gestión */}
         <div className="mt-2">
-          <CostRow label="Arancel SIM" value="—" />
-          <CostRow label="Honorarios (1% FOB)" value={fmtUsd(b.honorariosMinUsd)} />
-          <CostRow label="Gastos de depósito y portuarios" value={fmtUsd(b.depositoPortuarioMinUsd)} />
+          <CostRow label="Arancel SIM" value={fmtUsd(b.arancelSimUsd ?? 10)} />
+          <CostRow label="Honorarios (1% FOB, mín. USD 300)" value={fmtUsd(b.honorariosMinUsd)} />
+          <CostRow label="Gastos operativos" value={fmtUsd(b.depositoPortuarioMinUsd)} />
           <CostRow
             label="Gastos transporte nacional"
             value={b.transporteNacionalMinUsd > 0 ? fmtUsd(b.transporteNacionalMinUsd) : "—"}
