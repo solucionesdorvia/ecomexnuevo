@@ -18,7 +18,13 @@ export function buildProductJsonFromClassifierSnapshot(
     .join("\n\n")
     .slice(0, 8000);
 
-  const ncm = snapshot.recommendedNcm?.trim() || undefined;
+  // Usar recommendedNcm si existe; si no, el candidato top como fallback para PCRAM.
+  const ncm =
+    snapshot.recommendedNcm?.trim() ||
+    (Array.isArray(snapshot.candidates) && snapshot.candidates[0]?.ncmCode?.trim()
+      ? snapshot.candidates[0].ncmCode.trim()
+      : undefined) ||
+    undefined;
   const fobUsd =
     typeof snapshot.purchase?.fobUnitUsd === "number" && snapshot.purchase.fobUnitUsd > 0
       ? snapshot.purchase.fobUnitUsd

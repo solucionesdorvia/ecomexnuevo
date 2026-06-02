@@ -160,15 +160,37 @@ export async function buildProductFromInput(inputText: string): Promise<ProductL
 
 export async function ensurePcram(product: ProductLike): Promise<ProductLike> {
   if ((product?.raw as ProductLike | undefined)?.pcram) return product;
-  if (!product?.ncm) return product;
   if (!(process.env.PCRAM_USER && process.env.PCRAM_PASS)) return product;
 
   const { PcramClient } = await import("@/lib/pcram/pcramClient");
   const client = new PcramClient();
   const pcramTimeoutMs = Number(process.env.PCRAM_CALL_TIMEOUT_MS ?? "45000");
 
+  let ncmToUse = product?.ncm ? String(product.ncm).trim() : "";
+
+  // Sin NCM: intentar resolver por búsqueda de título en PCRAM antes de rendirse.
+  if (!ncmToUse) {
+    const searchText = String(product?.title ?? "").trim().slice(0, 200);
+    if (searchText) {
+      const results = await withTimeout(
+        client.searchNcm(searchText, { limit: 3 }),
+        pcramTimeoutMs
+      ).catch(() => [] as Array<{ ncmCode: string; title?: string }>);
+      if (results.length && results[0]?.ncmCode) {
+        ncmToUse = results[0].ncmCode;
+        product.ncm = ncmToUse;
+      }
+    }
+  }
+
+  // Si aún no hay NCM no podemos hacer nada más.
+  if (!ncmToUse) {
+    product.raw = { ...((product.raw as ProductLike) ?? {}), pcramError: true };
+    return product;
+  }
+
   const pcram = await withTimeout(
-    client.getDetail(String(product.ncm)),
+    client.getDetail(ncmToUse),
     pcramTimeoutMs
   ).catch(() => undefined);
 
