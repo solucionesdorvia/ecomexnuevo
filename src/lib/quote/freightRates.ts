@@ -98,7 +98,7 @@ export function estimateUnitDimensions(ncm?: string, title?: string): UnitDimens
   if (heading === 8471 || /laptop|notebook|macbook|computer/.test(t))  return { kg: 2.0, m3: 0.006 };
   if (heading === 8517 || /iphone|smartphone|celular|phone/.test(t))   return { kg: 0.2, m3: 0.0006 };
   if (heading === 8518 || /auricular|headphone|earphone/.test(t))      return { kg: 0.3, m3: 0.002 };
-  if (heading === 8528 || /televisor|monitor|tv\b/.test(t))            return { kg: 5.0, m3: 0.04 };
+  if (heading === 8528 || /televisor|monitor|tv\b/.test(t))            return { kg: 12.0, m3: 0.12 };
   if (heading === 8516 || /cargador|charger|usb/.test(t))              return { kg: 0.3, m3: 0.001 };
   if (heading >= 8501 && heading <= 8543)                              return { kg: 1.0, m3: 0.003 };
 
