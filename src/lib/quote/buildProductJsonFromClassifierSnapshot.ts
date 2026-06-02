@@ -21,8 +21,8 @@ export function buildProductJsonFromClassifierSnapshot(
   // Usar recommendedNcm si existe; si no, el candidato top como fallback para PCRAM.
   const ncm =
     snapshot.recommendedNcm?.trim() ||
-    (Array.isArray(snapshot.candidates) && snapshot.candidates[0]?.ncmCode?.trim()
-      ? snapshot.candidates[0].ncmCode.trim()
+    (Array.isArray(snapshot.candidates) && snapshot.candidates[0]?.code?.trim()
+      ? snapshot.candidates[0].code.trim()
       : undefined) ||
     undefined;
   const fobUsd =
