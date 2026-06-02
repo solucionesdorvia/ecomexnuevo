@@ -143,16 +143,21 @@ export function estimateUnitDimensions(ncm?: string, title?: string): UnitDimens
 export type ShippingMode = "air_usa" | "air_china" | "lcl_china" | "lcl_europe" | "lcl_usa" | "fcl20_china" | "fcl20_europe";
 
 export function selectShippingMode(zone: OriginZone, totalKg: number): ShippingMode {
-  // USA: air para envíos ligeros (≤30 kg), marítimo LCL para cargas mayores
-  if (zone === "USA" && totalKg <= 30) return "air_usa";
-  if (zone === "USA") return "lcl_usa";
-  if (zone === "EUROPE") return "lcl_europe";
-  // China: air si es liviano y pequeño, maritimo si es volumen
-  if (zone === "CHINA" && totalKg <= 30) return "air_china";
-  if (zone === "CHINA") return "lcl_china";
-  // Otros orígenes: usar tarifas China como proxy
-  if (totalKg <= 30) return "air_china";
-  return "lcl_china";
+  // La gran mayoría de importaciones comerciales van por vía marítima.
+  // Aéreo se selecciona automáticamente SOLO para envíos muy pequeños (<= 5 kg)
+  // que típicamente son muestras o repuestos urgentes.
+  // Si el usuario quiere aéreo, lo debe indicar explícitamente en el chat.
+  const AIR_AUTO_MAX_KG = 5;
+
+  if (zone === "USA") {
+    return totalKg <= AIR_AUTO_MAX_KG ? "air_usa" : "lcl_usa";
+  }
+  if (zone === "EUROPE") return "lcl_europe"; // Europa siempre marítimo
+  if (zone === "CHINA") {
+    return totalKg <= AIR_AUTO_MAX_KG ? "air_china" : "lcl_china";
+  }
+  // Otros orígenes: marítimo como proxy de China
+  return totalKg <= AIR_AUTO_MAX_KG ? "air_china" : "lcl_china";
 }
 
 // ── Cálculo de flete real ────────────────────────────────────────────────────
