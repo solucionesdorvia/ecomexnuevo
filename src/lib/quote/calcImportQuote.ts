@@ -470,13 +470,43 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       .filter(Boolean)
       .join(" ");
   } else {
-    // Sin tasas PCRAM: estimación fija del 18% sobre CIF.
-    const estimRate = 0.18;
-    derechosMin = cifMin2 * estimRate;
-    derechosMax = cifMax2 * estimRate;
-    impuestosMin = derechosMin;
-    impuestosMax = derechosMax;
-    impuestosDetail = "Estimación orientativa. Se confirma con la clasificación arancelaria definitiva.";
+    // Sin tasas PCRAM: usar estructura real de impuestos argentina con tasas promedio.
+    // Esto evita mostrar un monto único sin desglose y da una estimación más realista.
+    const dieRateEst   = 0.14;   // Derechos de importación — promedio general
+    const teRateEst    = 0.03;   // Tasa estadística — fija
+    const ivaRateEst   = 0.21;   // IVA — estándar
+    const ivaAdicRateEst = 0.20; // Percepción IVA adicional — promedio
+
+    derechosRatePct = 14;
+    teRatePct       = 3;
+    ivaRatePct      = 21;
+    ivaAdicRatePct  = 20;
+
+    teMin      = cifMin2 * teRateEst;
+    teMax      = cifMax2 * teRateEst;
+    derechosMin = cifMin2 * dieRateEst;
+    derechosMax = cifMax2 * dieRateEst;
+
+    const baseIvaMin = cifMin2 + teMin + derechosMin;
+    const baseIvaMax = cifMax2 + teMax + derechosMax;
+
+    ivaMin     = baseIvaMin * ivaRateEst;
+    ivaMax     = baseIvaMax * ivaRateEst;
+    ivaAdicMin = baseIvaMin * ivaAdicRateEst;
+    ivaAdicMax = baseIvaMax * ivaAdicRateEst;
+
+    impuestosMin = teMin + derechosMin + ivaMin + ivaAdicMin;
+    impuestosMax = teMax + derechosMax + ivaMax + ivaAdicMax;
+    impuestosDetail =
+      "Estimación con tasas promedio (TE 3% + DI 14% + IVA 21% + IVA Adic. 20%). " +
+      "Se ajusta con la clasificación arancelaria definitiva.";
+
+    taxLines = [
+      { label: "Tasa de Estadística",     ratePct: teRatePct,       amountUsd: round2(teMin) },
+      { label: "Derechos (estimado)",      ratePct: derechosRatePct, amountUsd: round2(derechosMin) },
+      { label: "IVA",                      ratePct: ivaRatePct,      amountUsd: round2(ivaMin) },
+      { label: "IVA Adicional",            ratePct: ivaAdicRatePct,  amountUsd: round2(ivaAdicMin) },
+    ];
   }
 
   // Local/operational costs in destination (USD). Your PDFs include these explicitly.
