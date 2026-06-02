@@ -88,7 +88,11 @@ export type UnitDimensions = { kg: number; m3: number };
 
 export function estimateUnitDimensions(ncm?: string, title?: string): UnitDimensions {
   const heading = ncm ? parseInt(ncm.replace(/\D/g, "").slice(0, 4), 10) : NaN;
-  const t = (title ?? "").toLowerCase();
+  // Normalizar: minúsculas + quitar tildes para que "máquina" matchee "maquin", etc.
+  const t = (title ?? "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "");
 
   // Electrónica / tecnología
   if (heading === 8471 || /laptop|notebook|macbook|computer/.test(t))  return { kg: 2.0, m3: 0.006 };
