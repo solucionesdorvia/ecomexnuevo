@@ -205,10 +205,11 @@ export default function CotizadorPublicoClient() {
   }, [caseState.messages]);
 
   const handleSend = useCallback(
-    async (text: string) => {
+    async (text: string, files?: File[]) => {
       const t = text.trim();
-      if (!t) return;
-      await sendMessage(t);
+      const hasFiles = Array.isArray(files) && files.length > 0;
+      if (!t && !hasFiles) return;
+      await sendMessage(t, files);
     },
     [sendMessage]
   );
@@ -657,11 +658,11 @@ export default function CotizadorPublicoClient() {
           <ChatInput
             onSend={handleSend}
             disabled={pending}
-            canSubmitEmpty={false}
+            canSubmitEmpty={true}
             helperText={
               <span>
-                <span className="hidden sm:inline">Enter envía · Shift+Enter nueva línea</span>
-                <span className="sm:hidden">Enter envía · Shift+Enter salto de línea</span>
+                <span className="hidden sm:inline">Enter envía · Shift+Enter nueva línea · 📎 Adjuntá factura o foto</span>
+                <span className="sm:hidden">Enter envía · 📎 Adjuntá factura o foto</span>
               </span>
             }
           />

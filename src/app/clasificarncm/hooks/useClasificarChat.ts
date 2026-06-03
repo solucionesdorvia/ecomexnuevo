@@ -18,14 +18,16 @@ export function useClasificarChat(opts?: { credentials?: RequestCredentials }) {
   const pendingRef = useRef(false);
   stateRef.current = caseState;
 
-  const sendMessage = useCallback(async (text: string) => {
+  const sendMessage = useCallback(async (text: string, files?: File[]) => {
     const t = text.trim();
-    if (!t || pendingRef.current) return;
+    const hasFiles = Array.isArray(files) && files.length > 0;
+    if (!t && !hasFiles) return;
+    if (pendingRef.current) return;
 
     const userMsg: ChatMessage = {
       id: crypto.randomUUID(),
       role: "user",
-      content: t,
+      content: t || "(archivos adjuntos)",
       ts: Date.now(),
     };
 
@@ -44,15 +46,31 @@ export function useClasificarChat(opts?: { credentials?: RequestCredentials }) {
     const snapshot = stripMessages(prev);
 
     try {
-      const res = await fetch("/api/clasificar-ncm/chat", {
-        method: "POST",
-        credentials,
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          messages: nextMessages,
-          snapshot,
-        }),
-      });
+      let res: Response;
+
+      if (hasFiles) {
+        // Multipart: send files + JSON body
+        const form = new FormData();
+        form.append(
+          "json",
+          JSON.stringify({ messages: nextMessages, snapshot })
+        );
+        for (const f of files!) {
+          form.append("invoice", f);
+        }
+        res = await fetch("/api/clasificar-ncm/chat", {
+          method: "POST",
+          credentials,
+          body: form,
+        });
+      } else {
+        res = await fetch("/api/clasificar-ncm/chat", {
+          method: "POST",
+          credentials,
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ messages: nextMessages, snapshot }),
+        });
+      }
 
       const json = (await res.json()) as {
         assistantMessage?: string;
