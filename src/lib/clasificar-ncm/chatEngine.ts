@@ -667,8 +667,10 @@ export async function processClasificarTurn(opts: {
     if (motor.discardedCandidates?.length) {
       snap.discardedCandidates = motor.discardedCandidates;
     }
-    snap.recommendedNcm = ncm ?? undefined;
-    snap.confidence = conf;
+    // Preservar el NCM previo si el motor no devolvió uno nuevo.
+    // Sin esto, un turno donde el motor devuelve null borra el NCM ya clasificado.
+    snap.recommendedNcm = ncm ?? snap.recommendedNcm;
+    snap.confidence = ncm ? conf : (snap.confidence ?? conf);
     // Sanitizamos las questions del motor: pueden traer códigos y jerga.
     // Después del stripping, cualquier "—" indica que había un NCM en la
     // pregunta (ej. "decidir entre **8471.30.00** y **…**" → "decidir entre **—** y **—**").

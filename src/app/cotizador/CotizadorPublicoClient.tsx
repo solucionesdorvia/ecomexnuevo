@@ -191,11 +191,13 @@ export default function CotizadorPublicoClient() {
   const hasCommercialData = Boolean(
     caseState.purchase?.fobUnitUsd && caseState.purchase?.quantity && caseState.purchase?.origin
   );
+  // Mostrar botón cuando tenemos los 3 datos comerciales + clasificación resuelta.
+  // También mostramos si tenemos datos completos y status tentativo aunque no haya NCM
+  // (puede pasar si el motor falló; el backend igual calcula con tarifas por defecto).
   const showResultCard =
     hasCommercialData &&
-    caseState.recommendedNcm &&
-    typeof caseState.confidence === "number" &&
-    (caseState.status === "resolved" || caseState.status === "tentative");
+    (caseState.status === "resolved" || caseState.status === "tentative") &&
+    (caseState.recommendedNcm || typeof caseState.confidence === "number");
   const lastAssistant = useMemo(() => {
     for (let i = caseState.messages.length - 1; i >= 0; i--) {
       const m = caseState.messages[i]!;
