@@ -192,10 +192,10 @@ export default function CotizadorPublicoClient() {
     caseState.purchase?.fobUnitUsd && caseState.purchase?.quantity && caseState.purchase?.origin
   );
   const showResultCard =
-    (caseState.recommendedNcm &&
-      typeof caseState.confidence === "number" &&
-      (caseState.status === "resolved" || caseState.status === "tentative")) ||
-    (hasCommercialData && (caseState.status === "resolved" || caseState.status === "tentative"));
+    hasCommercialData &&
+    caseState.recommendedNcm &&
+    typeof caseState.confidence === "number" &&
+    (caseState.status === "resolved" || caseState.status === "tentative");
   const lastAssistant = useMemo(() => {
     for (let i = caseState.messages.length - 1; i >= 0; i--) {
       const m = caseState.messages[i]!;
