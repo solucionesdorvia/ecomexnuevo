@@ -87,7 +87,7 @@ export async function POST(req: Request) {
         </tr>
         <tr>
           <td style="padding:16px 32px;border-top:1px solid rgba(255,255,255,0.05);">
-            <p style="margin:0;font-size:11px;color:#475569;text-align:center;">E-COMEX · info@e-comex.com.ar · (+54) 115353 0536</p>
+            <p style="margin:0;font-size:11px;color:#475569;text-align:center;">E-COMEX · info@e-comex.com.ar · (+54) 11 2626-8316</p>
           </td>
         </tr>
       </table>

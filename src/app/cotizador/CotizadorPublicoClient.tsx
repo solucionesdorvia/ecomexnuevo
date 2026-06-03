@@ -497,12 +497,12 @@ export default function CotizadorPublicoClient() {
                             Un asesor revisa tu clasificación aduanera y te contacta con el presupuesto
                             definitivo y los pasos a seguir. También podés escribirnos:{" "}
                             <a
-                              href="https://wa.me/5491153530536"
+                              href="https://wa.me/5491126268316"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-[#18C3D6] hover:underline"
                             >
-                              WhatsApp +54 9 11 5353 0536
+                              WhatsApp +54 9 11 2626-8316
                             </a>
                           </p>
                         </div>
@@ -606,7 +606,7 @@ export default function CotizadorPublicoClient() {
                           )}
                           <div className="flex gap-2">
                             <a
-                              href="https://wa.me/5491153530536?text=Hola%2C%20quiero%20consultar%20sobre%20una%20importaci%C3%B3n"
+                              href="https://wa.me/5491126268316?text=Hola%2C%20quiero%20consultar%20sobre%20una%20importaci%C3%B3n"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/[0.1] px-4 py-2.5 text-center text-[13px] font-medium text-slate-400 transition hover:border-white/[0.18] hover:text-slate-200 sm:min-h-0"

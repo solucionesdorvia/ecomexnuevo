@@ -58,7 +58,7 @@ export function operatorNotificationHtml({
         </tr>
         <tr>
           <td style="padding:16px 32px;border-top:1px solid rgba(255,255,255,0.05);">
-            <p style="margin:0;font-size:11px;color:#475569;text-align:center;">E-COMEX · info@e-comex.com.ar · (+54) 115353 0536</p>
+            <p style="margin:0;font-size:11px;color:#475569;text-align:center;">E-COMEX · info@e-comex.com.ar · (+54) 11 2626-8316</p>
           </td>
         </tr>
       </table>
@@ -106,13 +106,13 @@ export function userConfirmationHtml({
             ${range ? `<p style="margin:0 0 4px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;">Estimación preliminar</p><p style="margin:0 0 20px;font-size:18px;font-weight:700;color:#18C3D6;">${range}</p>` : ""}
             <a href="${quoteUrl}" style="display:inline-block;background:#18C3D6;color:#030d18;font-size:14px;font-weight:700;padding:12px 24px;border-radius:8px;text-decoration:none;margin-bottom:24px;">Ver mi cotización →</a>
             <p style="margin:0;font-size:13px;color:#64748b;line-height:1.6;">
-              Si tenés alguna pregunta, podés escribirnos a <a href="mailto:info@e-comex.com.ar" style="color:#18C3D6;text-decoration:none;">info@e-comex.com.ar</a> o por WhatsApp al <a href="https://wa.me/5491153530536" style="color:#18C3D6;text-decoration:none;">+54 9 11 5353 0536</a>.
+              Si tenés alguna pregunta, podés escribirnos a <a href="mailto:info@e-comex.com.ar" style="color:#18C3D6;text-decoration:none;">info@e-comex.com.ar</a> o por WhatsApp al <a href="https://wa.me/5491126268316" style="color:#18C3D6;text-decoration:none;">+54 9 11 2626-8316</a>.
             </p>
           </td>
         </tr>
         <tr>
           <td style="padding:16px 32px;border-top:1px solid rgba(255,255,255,0.05);">
-            <p style="margin:0;font-size:11px;color:#475569;text-align:center;">E-COMEX · info@e-comex.com.ar · (+54) 115353 0536</p>
+            <p style="margin:0;font-size:11px;color:#475569;text-align:center;">E-COMEX · info@e-comex.com.ar · (+54) 11 2626-8316</p>
           </td>
         </tr>
       </table>
