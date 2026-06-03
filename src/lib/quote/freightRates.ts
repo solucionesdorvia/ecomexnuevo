@@ -146,22 +146,31 @@ export function estimateUnitDimensions(ncm?: string, title?: string): UnitDimens
 
 export type ShippingMode = "air_usa" | "air_china" | "lcl_china" | "lcl_europe" | "lcl_usa" | "fcl20_china" | "fcl20_europe";
 
-export function selectShippingMode(zone: OriginZone, totalKg: number): ShippingMode {
+// Factor IATA: 1 m³ = 167 kg de peso volumétrico (6.000 cm³/kg)
+export const AIR_VOL_FACTOR = 167;
+// Factor marítimo: 1 CBM = 1.000 kg (revenue ton estándar)
+export const SEA_VOL_FACTOR = 1000;
+
+export function selectShippingMode(zone: OriginZone, totalKg: number, totalM3 = 0): ShippingMode {
   // La gran mayoría de importaciones comerciales van por vía marítima.
-  // Aéreo se selecciona automáticamente SOLO para envíos muy pequeños (<= 5 kg)
+  // Aéreo se selecciona automáticamente SOLO para envíos muy pequeños
   // que típicamente son muestras o repuestos urgentes.
-  // Si el usuario quiere aéreo, lo debe indicar explícitamente en el chat.
+  // Se usa el "peso cobrable" = max(peso real, peso volumétrico IATA).
   const AIR_AUTO_MAX_KG = 5;
 
+  // Peso cobrable: el mayor entre peso real y peso volumétrico (criterio IATA)
+  const volKgAir = totalM3 * AIR_VOL_FACTOR;
+  const chargeableKg = Math.max(totalKg, volKgAir);
+
   if (zone === "USA") {
-    return totalKg <= AIR_AUTO_MAX_KG ? "air_usa" : "lcl_usa";
+    return chargeableKg <= AIR_AUTO_MAX_KG ? "air_usa" : "lcl_usa";
   }
   if (zone === "EUROPE") return "lcl_europe"; // Europa siempre marítimo
   if (zone === "CHINA") {
-    return totalKg <= AIR_AUTO_MAX_KG ? "air_china" : "lcl_china";
+    return chargeableKg <= AIR_AUTO_MAX_KG ? "air_china" : "lcl_china";
   }
   // Otros orígenes: marítimo como proxy de China
-  return totalKg <= AIR_AUTO_MAX_KG ? "air_china" : "lcl_china";
+  return chargeableKg <= AIR_AUTO_MAX_KG ? "air_china" : "lcl_china";
 }
 
 // ── Cálculo de flete real ────────────────────────────────────────────────────
@@ -178,74 +187,85 @@ export type FreightResult = {
 export function calcFreightCost(
   zone: OriginZone,
   totalKg: number,
-  _totalM3: number,
+  totalM3: number,
   mode?: ShippingMode
 ): FreightResult {
-  const m = mode ?? selectShippingMode(zone, totalKg);
+  const m = mode ?? selectShippingMode(zone, totalKg, totalM3);
 
   const alm = ALMACENAJE_RATES;
+
+  // Peso cobrable según modalidad
+  const volKgAir = totalM3 * AIR_VOL_FACTOR;   // IATA: 1 m³ = 167 kg
+  const volKgSea = totalM3 * SEA_VOL_FACTOR;   // Marítimo: 1 CBM = 1.000 kg
 
   switch (m) {
     case "air_usa": {
       const r = AIR_RATES.USA_FCA;
-      const airTransfer = Math.max(r.airTransferMinUsd, totalKg * r.airTransferPerKg);
-      const flete = r.awbFlat + airTransfer + totalKg * r.freightPerKg + r.destination.corteGuia + r.destination.handling;
+      const chargeableKg = Math.max(totalKg, volKgAir);
+      const volNote = volKgAir > totalKg ? ` (peso vol. ${Math.round(volKgAir)} kg)` : "";
+      const airTransfer = Math.max(r.airTransferMinUsd, chargeableKg * r.airTransferPerKg);
+      const flete = r.awbFlat + airTransfer + chargeableKg * r.freightPerKg + r.destination.corteGuia + r.destination.handling;
       return {
         mode: m,
         totalUsd: Math.round(flete) + alm.airFlat,
         almacenajeUsd: alm.airFlat,
         label: "Aéreo — EE.UU. (FCA)",
-        detail: `AWB $${r.awbFlat} + Air Transfer $${Math.round(airTransfer)} + flete $${Math.round(totalKg * r.freightPerKg)} (${Math.round(totalKg)} kg × USD ${r.freightPerKg}/kg) + destino $${Math.round(r.destination.corteGuia + r.destination.handling)} + almacenaje $${alm.airFlat}`,
-        estimatedKg: totalKg,
+        detail: `AWB $${r.awbFlat} + Air Transfer $${Math.round(airTransfer)} + flete $${Math.round(chargeableKg * r.freightPerKg)} (${Math.round(chargeableKg)} kg${volNote} × USD ${r.freightPerKg}/kg) + destino $${Math.round(r.destination.corteGuia + r.destination.handling)} + almacenaje $${alm.airFlat}`,
+        estimatedKg: chargeableKg,
       };
     }
     case "air_china": {
       const r = AIR_RATES.CHINA_FOB;
-      const flete = totalKg * r.freightPerKg;
+      const chargeableKg = Math.max(totalKg, volKgAir);
+      const volNote = volKgAir > totalKg ? ` (peso vol. ${Math.round(volKgAir)} kg)` : "";
+      const flete = chargeableKg * r.freightPerKg;
       const dest = r.destination.corteGuia + r.destination.handling;
       return {
         mode: m,
         totalUsd: Math.round(flete + dest) + alm.airFlat,
         almacenajeUsd: alm.airFlat,
         label: "Aéreo — China (FOB)",
-        detail: `Flete $${Math.round(flete)} (${Math.round(totalKg)} kg × USD ${r.freightPerKg}/kg) + destino $${Math.round(dest)} + almacenaje $${alm.airFlat}`,
-        estimatedKg: totalKg,
+        detail: `Flete $${Math.round(flete)} (${Math.round(chargeableKg)} kg${volNote} × USD ${r.freightPerKg}/kg) + destino $${Math.round(dest)} + almacenaje $${alm.airFlat}`,
+        estimatedKg: chargeableKg,
       };
     }
     case "lcl_china": {
       const r = LCL_RATES.CHINA;
+      const chargeableSea = Math.max(totalKg, volKgSea);
       const subtotal = r.fleteFlat + r.destination.handling;
       return {
         mode: m,
         totalUsd: subtotal + alm.lclFlat,
         almacenajeUsd: alm.lclFlat,
         label: "Marítimo LCL — China",
-        detail: `Flete USD ${r.fleteFlat} (tarifa plana) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
-        estimatedKg: totalKg,
+        detail: `Flete USD ${r.fleteFlat} (tarifa plana, carga cobrable ${Math.round(chargeableSea)} kg) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
+        estimatedKg: chargeableSea,
       };
     }
     case "lcl_europe": {
       const r = LCL_RATES.EUROPE;
+      const chargeableSea = Math.max(totalKg, volKgSea);
       const subtotal = r.fleteFlat + r.destination.handling;
       return {
         mode: m,
         totalUsd: subtotal + alm.lclFlat,
         almacenajeUsd: alm.lclFlat,
         label: "Marítimo LCL — Europa",
-        detail: `Flete USD ${r.fleteFlat} (tarifa plana) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
-        estimatedKg: totalKg,
+        detail: `Flete USD ${r.fleteFlat} (tarifa plana, carga cobrable ${Math.round(chargeableSea)} kg) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
+        estimatedKg: chargeableSea,
       };
     }
     case "lcl_usa": {
       const r = LCL_RATES.USA;
+      const chargeableSea = Math.max(totalKg, volKgSea);
       const subtotal = r.fleteFlat + r.destination.handling;
       return {
         mode: m,
         totalUsd: subtotal + alm.lclFlat,
         almacenajeUsd: alm.lclFlat,
         label: "Marítimo LCL — EE.UU.",
-        detail: `Flete USD ${r.fleteFlat} (tarifa plana) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
-        estimatedKg: totalKg,
+        detail: `Flete USD ${r.fleteFlat} (tarifa plana, carga cobrable ${Math.round(chargeableSea)} kg) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
+        estimatedKg: chargeableSea,
       };
     }
     case "fcl20_china": {

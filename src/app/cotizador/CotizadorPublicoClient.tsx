@@ -427,12 +427,27 @@ export default function CotizadorPublicoClient() {
                       </p>
                     </div>
                   )}
+                  {!hasCommercialData && (
+                    <div className="rounded-xl border border-amber-500/20 bg-amber-500/[0.06] px-3.5 py-2.5">
+                      <p className="text-[12px] leading-relaxed text-amber-300">
+                        Para cotizar necesito saber:{" "}
+                        {[
+                          !caseState.purchase?.fobUnitUsd && "precio FOB (USD)",
+                          !caseState.purchase?.quantity && "cantidad",
+                          !caseState.purchase?.origin && "país de origen",
+                        ]
+                          .filter(Boolean)
+                          .join(", ")}
+                        . Respondé en el chat.
+                      </p>
+                    </div>
+                  )}
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <button
                       type="button"
-                      disabled={pendingQuote}
+                      disabled={pendingQuote || !hasCommercialData}
                       onClick={() => void createQuote()}
-                      className="min-h-[48px] rounded-xl bg-[#18C3D6] px-4 py-3 text-[13px] font-medium text-[#030d18] shadow-lg shadow-[#18C3D6]/20 transition hover:bg-[#0ea5b9] disabled:opacity-40 sm:min-h-0"
+                      className="min-h-[48px] rounded-xl bg-[#18C3D6] px-4 py-3 text-[13px] font-medium text-[#030d18] shadow-lg shadow-[#18C3D6]/20 transition hover:bg-[#0ea5b9] disabled:cursor-not-allowed disabled:opacity-40 sm:min-h-0"
                     >
                       {pendingQuote ? "Calculando presupuesto…" : "Ver presupuesto"}
                     </button>
