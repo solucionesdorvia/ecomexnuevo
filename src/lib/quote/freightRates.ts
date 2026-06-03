@@ -209,7 +209,7 @@ export function calcFreightCost(
         mode: m,
         totalUsd: Math.round(flete) + alm.airFlat,
         almacenajeUsd: alm.airFlat,
-        label: "Aéreo — EE.UU. (FCA)",
+        label: "Flete internacional",
         detail: `AWB $${r.awbFlat} + Air Transfer $${Math.round(airTransfer)} + flete $${Math.round(chargeableKg * r.freightPerKg)} (${Math.round(chargeableKg)} kg${volNote} × USD ${r.freightPerKg}/kg) + destino $${Math.round(r.destination.corteGuia + r.destination.handling)} + almacenaje $${alm.airFlat}`,
         estimatedKg: chargeableKg,
       };
@@ -224,7 +224,7 @@ export function calcFreightCost(
         mode: m,
         totalUsd: Math.round(flete + dest) + alm.airFlat,
         almacenajeUsd: alm.airFlat,
-        label: "Aéreo — China (FOB)",
+        label: "Flete internacional",
         detail: `Flete $${Math.round(flete)} (${Math.round(chargeableKg)} kg${volNote} × USD ${r.freightPerKg}/kg) + destino $${Math.round(dest)} + almacenaje $${alm.airFlat}`,
         estimatedKg: chargeableKg,
       };
@@ -237,7 +237,7 @@ export function calcFreightCost(
         mode: m,
         totalUsd: subtotal + alm.lclFlat,
         almacenajeUsd: alm.lclFlat,
-        label: "Marítimo LCL — China",
+        label: "Flete internacional",
         detail: `Flete USD ${r.fleteFlat} (tarifa plana, carga cobrable ${Math.round(chargeableSea)} kg) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
         estimatedKg: chargeableSea,
       };
@@ -250,7 +250,7 @@ export function calcFreightCost(
         mode: m,
         totalUsd: subtotal + alm.lclFlat,
         almacenajeUsd: alm.lclFlat,
-        label: "Marítimo LCL — Europa",
+        label: "Flete internacional",
         detail: `Flete USD ${r.fleteFlat} (tarifa plana, carga cobrable ${Math.round(chargeableSea)} kg) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
         estimatedKg: chargeableSea,
       };
@@ -263,7 +263,7 @@ export function calcFreightCost(
         mode: m,
         totalUsd: subtotal + alm.lclFlat,
         almacenajeUsd: alm.lclFlat,
-        label: "Marítimo LCL — EE.UU.",
+        label: "Flete internacional",
         detail: `Flete USD ${r.fleteFlat} (tarifa plana, carga cobrable ${Math.round(chargeableSea)} kg) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
         estimatedKg: chargeableSea,
       };
@@ -275,7 +275,7 @@ export function calcFreightCost(
         mode: m,
         totalUsd: Math.round(subtotal) + alm.fcl20,
         almacenajeUsd: alm.fcl20,
-        label: "Marítimo FCL 20' — China",
+        label: "Flete internacional",
         detail: `Flete $${r.flete20} + gastos destino $${Math.round(r.destination)} + almacenaje $${alm.fcl20}`,
         estimatedKg: totalKg,
       };
@@ -287,7 +287,7 @@ export function calcFreightCost(
         mode: m,
         totalUsd: Math.round(subtotal) + alm.fcl20,
         almacenajeUsd: alm.fcl20,
-        label: "Marítimo FCL 20' — Europa",
+        label: "Flete internacional",
         detail: `Flete $${r.flete20} + gastos destino $${Math.round(r.destination)} + almacenaje $${alm.fcl20}`,
         estimatedKg: totalKg,
       };

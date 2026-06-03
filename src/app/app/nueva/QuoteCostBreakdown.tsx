@@ -170,7 +170,7 @@ function TemplateBreakdown({
   b: QuoteBreakdown;
 }) {
   const isAir = (b.fleteMode ?? "").startsWith("air");
-  const fleteLabel = isAir ? "Flete aéreo internacional" : "Flete marítimo internacional";
+  const fleteLabel = "Flete internacional";
   const taxLines = b.taxLines ?? [];
 
   const ivaTotal = taxLines
