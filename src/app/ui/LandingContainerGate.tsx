@@ -251,18 +251,56 @@ export default function LandingContainerGate() {
 
           <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { t: "Desarrollo de Productos y Proveedores", d: "Contamos con Agentes de compras y Proveedores auditados por rubro, convirtiendo tu necesidad en un proyecto real.", c: P.blue },
-              { t: "Regulaciones", d: "Identificamos intervenciones, permisos y requisitos anticipadamente.", c: P.cyan },
-              { t: "Costos", d: "Desglose completo: FOB, flete, impuestos, gastos operativos, landed cost.", c: P.blue },
-              { t: "Logística", d: "Rutas, tiempos y modalidades optimizadas para cada operación.", c: P.cyan },
-              { t: "Documentación", d: "Centralización y gestión de toda la documentación operativa.", c: P.blue },
-              { t: "Acompañamiento", d: "Consultoría estratégica continua para importadores recurrentes.", c: P.cyan },
+              {
+                t: "Consultoría & Servicio Integral",
+                sub: "Te asesoramos en tus operaciones de comercio internacional.",
+                items: ["Coordinación documental", "Importá sin ser importador"],
+                c: P.cyan,
+              },
+              {
+                t: "Maquinaria agrícola usada",
+                items: ["Consultoría", "Viabilidad legal, sanitaria y técnica", "Análisis de costos y reacondicionamiento"],
+                c: P.blue,
+              },
+              {
+                t: "Bienes de Capital",
+                sub: "Líneas de producción, envasado, enlatado, láseres, corte, robots.",
+                items: ["Consultoría", "Análisis integral del proyecto de inversión", "Evaluación técnica y económica de maquinaria"],
+                c: P.cyan,
+              },
+              {
+                t: "Vehículos Clásicos y 0km",
+                sub: "Importación patrimonial.",
+                items: ["Autos de colección", "Alta gama", "Flotas ejecutivas"],
+                c: P.blue,
+              },
+              {
+                t: "Financiamiento para importaciones",
+                items: ["Estructuración financiera de la operación", "Análisis de fuentes de financiamiento", "Evaluación de riesgo y plazos", "Diseño del esquema de repago"],
+                c: P.cyan,
+              },
+              {
+                t: "Ómnibus",
+                sub: "Renovación de flotas a nivel nacional.",
+                items: ["Evaluación normativa, técnica y fiscal", "Análisis de costos, amortización y financiamiento", "Estrategia de importación por proyecto o flota", "Importación llave en mano", "Logística de gran porte", "Coordinación técnica con fabricantes", "Seguimiento post-arribo"],
+                c: P.blue,
+              },
             ].map((s, i) => (
               <R key={s.t} d={i*50}>
                 <div className="group relative flex h-full flex-col overflow-hidden rounded-xl p-7 transition-all duration-300 hover:translate-y-[-2px]" style={{ background: P.bg, border: `1px solid ${P.border}` }}>
                   <div className="absolute top-0 left-0 right-0 h-px opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ background: `linear-gradient(90deg, transparent, ${s.c}40, transparent)` }} />
-                  <h4 className="text-[14px] font-semibold" style={{ color: P.t1 }}>{s.t}</h4>
-                  <p className="mt-3 text-[13px] leading-[1.75]" style={{ color: P.t3 }}>{s.d}</p>
+                  <h4 className="text-[15px] font-semibold" style={{ color: P.t1 }}>{s.t}</h4>
+                  {s.sub ? (
+                    <p className="mt-2 text-[13px] leading-[1.65]" style={{ color: P.t3 }}>{s.sub}</p>
+                  ) : null}
+                  <ul className="mt-4 flex flex-col gap-2">
+                    {s.items.map((it) => (
+                      <li key={it} className="flex items-start gap-2.5 text-[13px] leading-[1.55]" style={{ color: P.t2 }}>
+                        <span className="mt-[6px] h-[5px] w-[5px] shrink-0 rounded-full" style={{ background: s.c }} />
+                        <span>{it}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </R>
             ))}
