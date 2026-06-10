@@ -832,8 +832,26 @@ export class PcramClient {
       .text()
       .replace(/\s+/g, " ");
     const searchIn = contentText.length > 50 ? contentText : text;
-    for (const k of ["ANMAT", "SENASA", "ENACOM", "INAL", "INTI"]) {
-      if (new RegExp(`\\b${k}\\b`, "i").test(searchIn)) interventions.add(k);
+    // Detección ampliada de intervenciones/restricciones (Fase 5). Patrones precisos
+    // para no sobre-disparar; cualquiera de estas fuerza régimen general (no courier).
+    const interventionDetectors: Array<{ label: string; re: RegExp }> = [
+      { label: "ANMAT", re: /\bANMAT\b/i },
+      { label: "SENASA", re: /\bSENASA\b/i },
+      { label: "ENACOM", re: /\bENACOM\b/i },
+      { label: "INAL", re: /\bINAL\b/i },
+      { label: "INTI", re: /\bINTI\b/i },
+      { label: "IRAM", re: /\bIRAM\b/i },
+      { label: "Seguridad Eléctrica", re: /seguridad\s+el[eé]ctrica/i },
+      { label: "LCM (config. de modelo)", re: /\bLCM\b|licencia\s+de\s+configuraci[oó]n/i },
+      { label: "Licencia automática", re: /\bLCA\b|licencia\s+autom[aá]tica/i },
+      { label: "Licencia no automática", re: /\bLNA\b|licencia\s+no\s+autom[aá]tica/i },
+      { label: "Antidumping", re: /anti[-\s]?dumping/i },
+      { label: "Certificado de origen", re: /certificad[oa]\s+de\s+origen/i },
+      { label: "SEDRONAR", re: /\bSEDRONAR\b/i },
+      { label: "RENAR / ANMaC", re: /\bRENAR\b|\bANMAC\b/i },
+    ];
+    for (const d of interventionDetectors) {
+      if (d.re.test(searchIn)) interventions.add(d.label);
     }
 
     const reclassifications: Array<{ label: string; href: string }> = [];

@@ -87,9 +87,10 @@ Brechas vs el documento de 12 pasos:
 ## FASE 4 — Beneficios fiscales (Paso 6)
 - [ ] Modificadores de alícuota por beneficio (TdF exime tributos, Bien de Capital reduce DI, RIGI, etc.)
 
-## FASE 5 — Validación normativa real (Paso 3)
-- [ ] Ampliar detección de organismos (Seg. Eléctrica, LCM/LCA, antidumping, licencias, cert. origen)
-- [ ] Una restricción detectada **fuerza** régimen general (no courier)
+## FASE 5 — Validación normativa real (Paso 3) ✅ (detección ampliada)
+- [x] Detección ampliada en `pcramClient.ts`: ANMAT, SENASA, ENACOM, INAL, INTI, IRAM, Seguridad Eléctrica, LCM, LCA, LNA, antidumping, certificado de origen, SEDRONAR, RENAR/ANMaC (patrones precisos).
+- [x] Una restricción detectada **fuerza régimen general** (ya implementado en Fase 2 vía `assessImportRegime`).
+- Pendiente futuro: consulta normativa "real" (no por keyword) si se quiere más precisión.
 
 ---
 

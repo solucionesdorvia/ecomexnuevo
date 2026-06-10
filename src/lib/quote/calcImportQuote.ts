@@ -548,6 +548,9 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     : freight.mode.startsWith("fcl")
       ? "Marítimo FCL"
       : "Marítimo LCL";
+  // Peso facturable legible: 1 decimal para cargas chicas (evita mostrar "0 kg").
+  const fmtChargeableKg =
+    freight.estimatedKg < 10 ? freight.estimatedKg.toFixed(1) : String(Math.round(freight.estimatedKg));
 
   // Tasas reales de gestión/despacho (provistas por el encargado de CE).
   // Honorarios: 1% del valor FOB total, mínimo USD 300. Gastos operativos: USD 200 fijo. Arancel SIM: USD 10 fijo.
@@ -635,7 +638,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     {
       id: "freight",
       label: "Flete",
-      value: `${freightModeLabel} · ${Math.round(freight.estimatedKg)} kg facturable`,
+      value: `${freightModeLabel} · ${fmtChargeableKg} kg facturable`,
       source: "estimate",
       tone: "primary",
     },
