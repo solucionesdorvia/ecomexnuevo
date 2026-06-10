@@ -534,8 +534,10 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   const gestionMin = honorariosMin + GASTOS_OPERATIVOS + ARANCEL_SIM;
   const gestionMax = honorariosMax + GASTOS_OPERATIVOS + ARANCEL_SIM;
 
-  const totalMin = cifMin + impuestosMin + gestionMin;
-  const totalMax = cifMax + impuestosMax + gestionMax;
+  // CIF + seguro (cifMin2/cifMax2) ya incluye el seguro que también es base imponible.
+  // Antes el total usaba cifMin (sin seguro), subestimando el costo. Corregido.
+  const totalMin = cifMin2 + impuestosMin + gestionMin;
+  const totalMax = cifMax2 + impuestosMax + gestionMax;
 
   const assumptions: Array<{
     id: string;
