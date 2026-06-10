@@ -93,6 +93,16 @@ model User {
   company        String?
   importInterest String?
 
+  /// Perfil de importador persistente (Fase 0.b). Se inyecta al contexto del chatbot.
+  /// PERSONA_FISICA | MONOTRIBUTO | RESPONSABLE_INSCRIPTO | SOCIEDAD | ORGANISMO_PUBLICO
+  importerProfile String?
+  /// CUIT/CUIL del importador.
+  taxId           String?
+  /// Provincia de inscripción en Ingresos Brutos (IIBB).
+  iibbProvince    String?
+  /// Beneficios fiscales habituales: TDF | BIEN_DE_CAPITAL | RIGI | MINERIA | ENERGIA | OTROS
+  fiscalBenefits  String[] @default([])
+
   role               UserRole @default(user)
   onboardingSeenAt   DateTime?
 

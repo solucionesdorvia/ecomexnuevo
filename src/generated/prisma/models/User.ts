@@ -32,6 +32,9 @@ export type UserMinAggregateOutputType = {
   name: string | null
   company: string | null
   importInterest: string | null
+  importerProfile: string | null
+  taxId: string | null
+  iibbProvince: string | null
   role: $Enums.UserRole | null
   onboardingSeenAt: Date | null
 }
@@ -44,6 +47,9 @@ export type UserMaxAggregateOutputType = {
   name: string | null
   company: string | null
   importInterest: string | null
+  importerProfile: string | null
+  taxId: string | null
+  iibbProvince: string | null
   role: $Enums.UserRole | null
   onboardingSeenAt: Date | null
 }
@@ -56,6 +62,10 @@ export type UserCountAggregateOutputType = {
   name: number
   company: number
   importInterest: number
+  importerProfile: number
+  taxId: number
+  iibbProvince: number
+  fiscalBenefits: number
   role: number
   onboardingSeenAt: number
   _all: number
@@ -70,6 +80,9 @@ export type UserMinAggregateInputType = {
   name?: true
   company?: true
   importInterest?: true
+  importerProfile?: true
+  taxId?: true
+  iibbProvince?: true
   role?: true
   onboardingSeenAt?: true
 }
@@ -82,6 +95,9 @@ export type UserMaxAggregateInputType = {
   name?: true
   company?: true
   importInterest?: true
+  importerProfile?: true
+  taxId?: true
+  iibbProvince?: true
   role?: true
   onboardingSeenAt?: true
 }
@@ -94,6 +110,10 @@ export type UserCountAggregateInputType = {
   name?: true
   company?: true
   importInterest?: true
+  importerProfile?: true
+  taxId?: true
+  iibbProvince?: true
+  fiscalBenefits?: true
   role?: true
   onboardingSeenAt?: true
   _all?: true
@@ -179,6 +199,10 @@ export type UserGroupByOutputType = {
   name: string | null
   company: string | null
   importInterest: string | null
+  importerProfile: string | null
+  taxId: string | null
+  iibbProvince: string | null
+  fiscalBenefits: string[]
   role: $Enums.UserRole
   onboardingSeenAt: Date | null
   _count: UserCountAggregateOutputType | null
@@ -212,6 +236,10 @@ export type UserWhereInput = {
   name?: Prisma.StringNullableFilter<"User"> | string | null
   company?: Prisma.StringNullableFilter<"User"> | string | null
   importInterest?: Prisma.StringNullableFilter<"User"> | string | null
+  importerProfile?: Prisma.StringNullableFilter<"User"> | string | null
+  taxId?: Prisma.StringNullableFilter<"User"> | string | null
+  iibbProvince?: Prisma.StringNullableFilter<"User"> | string | null
+  fiscalBenefits?: Prisma.StringNullableListFilter<"User">
   role?: Prisma.EnumUserRoleFilter<"User"> | $Enums.UserRole
   onboardingSeenAt?: Prisma.DateTimeNullableFilter<"User"> | Date | string | null
   quotes?: Prisma.QuoteListRelationFilter
@@ -233,6 +261,10 @@ export type UserOrderByWithRelationInput = {
   name?: Prisma.SortOrderInput | Prisma.SortOrder
   company?: Prisma.SortOrderInput | Prisma.SortOrder
   importInterest?: Prisma.SortOrderInput | Prisma.SortOrder
+  importerProfile?: Prisma.SortOrderInput | Prisma.SortOrder
+  taxId?: Prisma.SortOrderInput | Prisma.SortOrder
+  iibbProvince?: Prisma.SortOrderInput | Prisma.SortOrder
+  fiscalBenefits?: Prisma.SortOrder
   role?: Prisma.SortOrder
   onboardingSeenAt?: Prisma.SortOrderInput | Prisma.SortOrder
   quotes?: Prisma.QuoteOrderByRelationAggregateInput
@@ -257,6 +289,10 @@ export type UserWhereUniqueInput = Prisma.AtLeast<{
   name?: Prisma.StringNullableFilter<"User"> | string | null
   company?: Prisma.StringNullableFilter<"User"> | string | null
   importInterest?: Prisma.StringNullableFilter<"User"> | string | null
+  importerProfile?: Prisma.StringNullableFilter<"User"> | string | null
+  taxId?: Prisma.StringNullableFilter<"User"> | string | null
+  iibbProvince?: Prisma.StringNullableFilter<"User"> | string | null
+  fiscalBenefits?: Prisma.StringNullableListFilter<"User">
   role?: Prisma.EnumUserRoleFilter<"User"> | $Enums.UserRole
   onboardingSeenAt?: Prisma.DateTimeNullableFilter<"User"> | Date | string | null
   quotes?: Prisma.QuoteListRelationFilter
@@ -278,6 +314,10 @@ export type UserOrderByWithAggregationInput = {
   name?: Prisma.SortOrderInput | Prisma.SortOrder
   company?: Prisma.SortOrderInput | Prisma.SortOrder
   importInterest?: Prisma.SortOrderInput | Prisma.SortOrder
+  importerProfile?: Prisma.SortOrderInput | Prisma.SortOrder
+  taxId?: Prisma.SortOrderInput | Prisma.SortOrder
+  iibbProvince?: Prisma.SortOrderInput | Prisma.SortOrder
+  fiscalBenefits?: Prisma.SortOrder
   role?: Prisma.SortOrder
   onboardingSeenAt?: Prisma.SortOrderInput | Prisma.SortOrder
   _count?: Prisma.UserCountOrderByAggregateInput
@@ -296,6 +336,10 @@ export type UserScalarWhereWithAggregatesInput = {
   name?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
   company?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
   importInterest?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
+  importerProfile?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
+  taxId?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
+  iibbProvince?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
+  fiscalBenefits?: Prisma.StringNullableListFilter<"User">
   role?: Prisma.EnumUserRoleWithAggregatesFilter<"User"> | $Enums.UserRole
   onboardingSeenAt?: Prisma.DateTimeNullableWithAggregatesFilter<"User"> | Date | string | null
 }
@@ -308,6 +352,10 @@ export type UserCreateInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteCreateNestedManyWithoutUserInput
@@ -329,6 +377,10 @@ export type UserUncheckedCreateInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteUncheckedCreateNestedManyWithoutUserInput
@@ -350,6 +402,10 @@ export type UserUpdateInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUpdateManyWithoutUserNestedInput
@@ -371,6 +427,10 @@ export type UserUncheckedUpdateInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUncheckedUpdateManyWithoutUserNestedInput
@@ -392,6 +452,10 @@ export type UserCreateManyInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
 }
@@ -404,6 +468,10 @@ export type UserUpdateManyMutationInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
 }
@@ -416,6 +484,10 @@ export type UserUncheckedUpdateManyInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
 }
@@ -423,6 +495,14 @@ export type UserUncheckedUpdateManyInput = {
 export type UserNullableScalarRelationFilter = {
   is?: Prisma.UserWhereInput | null
   isNot?: Prisma.UserWhereInput | null
+}
+
+export type StringNullableListFilter<$PrismaModel = never> = {
+  equals?: string[] | Prisma.ListStringFieldRefInput<$PrismaModel> | null
+  has?: string | Prisma.StringFieldRefInput<$PrismaModel> | null
+  hasEvery?: string[] | Prisma.ListStringFieldRefInput<$PrismaModel>
+  hasSome?: string[] | Prisma.ListStringFieldRefInput<$PrismaModel>
+  isEmpty?: boolean
 }
 
 export type UserCountOrderByAggregateInput = {
@@ -433,6 +513,10 @@ export type UserCountOrderByAggregateInput = {
   name?: Prisma.SortOrder
   company?: Prisma.SortOrder
   importInterest?: Prisma.SortOrder
+  importerProfile?: Prisma.SortOrder
+  taxId?: Prisma.SortOrder
+  iibbProvince?: Prisma.SortOrder
+  fiscalBenefits?: Prisma.SortOrder
   role?: Prisma.SortOrder
   onboardingSeenAt?: Prisma.SortOrder
 }
@@ -445,6 +529,9 @@ export type UserMaxOrderByAggregateInput = {
   name?: Prisma.SortOrder
   company?: Prisma.SortOrder
   importInterest?: Prisma.SortOrder
+  importerProfile?: Prisma.SortOrder
+  taxId?: Prisma.SortOrder
+  iibbProvince?: Prisma.SortOrder
   role?: Prisma.SortOrder
   onboardingSeenAt?: Prisma.SortOrder
 }
@@ -457,6 +544,9 @@ export type UserMinOrderByAggregateInput = {
   name?: Prisma.SortOrder
   company?: Prisma.SortOrder
   importInterest?: Prisma.SortOrder
+  importerProfile?: Prisma.SortOrder
+  taxId?: Prisma.SortOrder
+  iibbProvince?: Prisma.SortOrder
   role?: Prisma.SortOrder
   onboardingSeenAt?: Prisma.SortOrder
 }
@@ -496,6 +586,15 @@ export type UserUpdateOneWithoutLeadsNestedInput = {
   delete?: Prisma.UserWhereInput | boolean
   connect?: Prisma.UserWhereUniqueInput
   update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutLeadsInput, Prisma.UserUpdateWithoutLeadsInput>, Prisma.UserUncheckedUpdateWithoutLeadsInput>
+}
+
+export type UserCreatefiscalBenefitsInput = {
+  set: string[]
+}
+
+export type UserUpdatefiscalBenefitsInput = {
+  set?: string[]
+  push?: string | string[]
 }
 
 export type EnumUserRoleFieldUpdateOperationsInput = {
@@ -616,6 +715,10 @@ export type UserCreateWithoutQuotesInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   leads?: Prisma.LeadCreateNestedManyWithoutUserInput
@@ -636,6 +739,10 @@ export type UserUncheckedCreateWithoutQuotesInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   leads?: Prisma.LeadUncheckedCreateNestedManyWithoutUserInput
@@ -672,6 +779,10 @@ export type UserUpdateWithoutQuotesInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   leads?: Prisma.LeadUpdateManyWithoutUserNestedInput
@@ -692,6 +803,10 @@ export type UserUncheckedUpdateWithoutQuotesInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   leads?: Prisma.LeadUncheckedUpdateManyWithoutUserNestedInput
@@ -712,6 +827,10 @@ export type UserCreateWithoutLeadsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteCreateNestedManyWithoutUserInput
@@ -732,6 +851,10 @@ export type UserUncheckedCreateWithoutLeadsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteUncheckedCreateNestedManyWithoutUserInput
@@ -768,6 +891,10 @@ export type UserUpdateWithoutLeadsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUpdateManyWithoutUserNestedInput
@@ -788,6 +915,10 @@ export type UserUncheckedUpdateWithoutLeadsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUncheckedUpdateManyWithoutUserNestedInput
@@ -808,6 +939,10 @@ export type UserCreateWithoutUserDocumentsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteCreateNestedManyWithoutUserInput
@@ -828,6 +963,10 @@ export type UserUncheckedCreateWithoutUserDocumentsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteUncheckedCreateNestedManyWithoutUserInput
@@ -864,6 +1003,10 @@ export type UserUpdateWithoutUserDocumentsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUpdateManyWithoutUserNestedInput
@@ -884,6 +1027,10 @@ export type UserUncheckedUpdateWithoutUserDocumentsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUncheckedUpdateManyWithoutUserNestedInput
@@ -904,6 +1051,10 @@ export type UserCreateWithoutOperatorBudgetsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteCreateNestedManyWithoutUserInput
@@ -924,6 +1075,10 @@ export type UserUncheckedCreateWithoutOperatorBudgetsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteUncheckedCreateNestedManyWithoutUserInput
@@ -960,6 +1115,10 @@ export type UserUpdateWithoutOperatorBudgetsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUpdateManyWithoutUserNestedInput
@@ -980,6 +1139,10 @@ export type UserUncheckedUpdateWithoutOperatorBudgetsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUncheckedUpdateManyWithoutUserNestedInput
@@ -1000,6 +1163,10 @@ export type UserCreateWithoutQuoteCommentsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteCreateNestedManyWithoutUserInput
@@ -1020,6 +1187,10 @@ export type UserUncheckedCreateWithoutQuoteCommentsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteUncheckedCreateNestedManyWithoutUserInput
@@ -1056,6 +1227,10 @@ export type UserUpdateWithoutQuoteCommentsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUpdateManyWithoutUserNestedInput
@@ -1076,6 +1251,10 @@ export type UserUncheckedUpdateWithoutQuoteCommentsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUncheckedUpdateManyWithoutUserNestedInput
@@ -1096,6 +1275,10 @@ export type UserCreateWithoutAuditsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteCreateNestedManyWithoutUserInput
@@ -1116,6 +1299,10 @@ export type UserUncheckedCreateWithoutAuditsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteUncheckedCreateNestedManyWithoutUserInput
@@ -1152,6 +1339,10 @@ export type UserUpdateWithoutAuditsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUpdateManyWithoutUserNestedInput
@@ -1172,6 +1363,10 @@ export type UserUncheckedUpdateWithoutAuditsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUncheckedUpdateManyWithoutUserNestedInput
@@ -1192,6 +1387,10 @@ export type UserCreateWithoutOperationsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteCreateNestedManyWithoutUserInput
@@ -1212,6 +1411,10 @@ export type UserUncheckedCreateWithoutOperationsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteUncheckedCreateNestedManyWithoutUserInput
@@ -1248,6 +1451,10 @@ export type UserUpdateWithoutOperationsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUpdateManyWithoutUserNestedInput
@@ -1268,6 +1475,10 @@ export type UserUncheckedUpdateWithoutOperationsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUncheckedUpdateManyWithoutUserNestedInput
@@ -1288,6 +1499,10 @@ export type UserCreateWithoutNotificationsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteCreateNestedManyWithoutUserInput
@@ -1308,6 +1523,10 @@ export type UserUncheckedCreateWithoutNotificationsInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteUncheckedCreateNestedManyWithoutUserInput
@@ -1344,6 +1563,10 @@ export type UserUpdateWithoutNotificationsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUpdateManyWithoutUserNestedInput
@@ -1364,6 +1587,10 @@ export type UserUncheckedUpdateWithoutNotificationsInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUncheckedUpdateManyWithoutUserNestedInput
@@ -1384,6 +1611,10 @@ export type UserCreateWithoutSuppliersInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteCreateNestedManyWithoutUserInput
@@ -1404,6 +1635,10 @@ export type UserUncheckedCreateWithoutSuppliersInput = {
   name?: string | null
   company?: string | null
   importInterest?: string | null
+  importerProfile?: string | null
+  taxId?: string | null
+  iibbProvince?: string | null
+  fiscalBenefits?: Prisma.UserCreatefiscalBenefitsInput | string[]
   role?: $Enums.UserRole
   onboardingSeenAt?: Date | string | null
   quotes?: Prisma.QuoteUncheckedCreateNestedManyWithoutUserInput
@@ -1440,6 +1675,10 @@ export type UserUpdateWithoutSuppliersInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUpdateManyWithoutUserNestedInput
@@ -1460,6 +1699,10 @@ export type UserUncheckedUpdateWithoutSuppliersInput = {
   name?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   company?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   importInterest?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  importerProfile?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  taxId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  iibbProvince?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fiscalBenefits?: Prisma.UserUpdatefiscalBenefitsInput | string[]
   role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
   onboardingSeenAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   quotes?: Prisma.QuoteUncheckedUpdateManyWithoutUserNestedInput
@@ -1583,6 +1826,10 @@ export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
   name?: boolean
   company?: boolean
   importInterest?: boolean
+  importerProfile?: boolean
+  taxId?: boolean
+  iibbProvince?: boolean
+  fiscalBenefits?: boolean
   role?: boolean
   onboardingSeenAt?: boolean
   quotes?: boolean | Prisma.User$quotesArgs<ExtArgs>
@@ -1605,6 +1852,10 @@ export type UserSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   name?: boolean
   company?: boolean
   importInterest?: boolean
+  importerProfile?: boolean
+  taxId?: boolean
+  iibbProvince?: boolean
+  fiscalBenefits?: boolean
   role?: boolean
   onboardingSeenAt?: boolean
 }, ExtArgs["result"]["user"]>
@@ -1617,6 +1868,10 @@ export type UserSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   name?: boolean
   company?: boolean
   importInterest?: boolean
+  importerProfile?: boolean
+  taxId?: boolean
+  iibbProvince?: boolean
+  fiscalBenefits?: boolean
   role?: boolean
   onboardingSeenAt?: boolean
 }, ExtArgs["result"]["user"]>
@@ -1629,11 +1884,15 @@ export type UserSelectScalar = {
   name?: boolean
   company?: boolean
   importInterest?: boolean
+  importerProfile?: boolean
+  taxId?: boolean
+  iibbProvince?: boolean
+  fiscalBenefits?: boolean
   role?: boolean
   onboardingSeenAt?: boolean
 }
 
-export type UserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "createdAt" | "email" | "passwordHash" | "name" | "company" | "importInterest" | "role" | "onboardingSeenAt", ExtArgs["result"]["user"]>
+export type UserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "createdAt" | "email" | "passwordHash" | "name" | "company" | "importInterest" | "importerProfile" | "taxId" | "iibbProvince" | "fiscalBenefits" | "role" | "onboardingSeenAt", ExtArgs["result"]["user"]>
 export type UserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   quotes?: boolean | Prisma.User$quotesArgs<ExtArgs>
   leads?: boolean | Prisma.User$leadsArgs<ExtArgs>
@@ -1676,6 +1935,23 @@ export type $UserPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs =
     name: string | null
     company: string | null
     importInterest: string | null
+    /**
+     * Perfil de importador persistente (Fase 0.b). Se inyecta al contexto del chatbot.
+     * PERSONA_FISICA | MONOTRIBUTO | RESPONSABLE_INSCRIPTO | SOCIEDAD | ORGANISMO_PUBLICO
+     */
+    importerProfile: string | null
+    /**
+     * CUIT/CUIL del importador.
+     */
+    taxId: string | null
+    /**
+     * Provincia de inscripción en Ingresos Brutos (IIBB).
+     */
+    iibbProvince: string | null
+    /**
+     * Beneficios fiscales habituales: TDF | BIEN_DE_CAPITAL | RIGI | MINERIA | ENERGIA | OTROS
+     */
+    fiscalBenefits: string[]
     role: $Enums.UserRole
     onboardingSeenAt: Date | null
   }, ExtArgs["result"]["user"]>
@@ -2117,6 +2393,10 @@ export interface UserFieldRefs {
   readonly name: Prisma.FieldRef<"User", 'String'>
   readonly company: Prisma.FieldRef<"User", 'String'>
   readonly importInterest: Prisma.FieldRef<"User", 'String'>
+  readonly importerProfile: Prisma.FieldRef<"User", 'String'>
+  readonly taxId: Prisma.FieldRef<"User", 'String'>
+  readonly iibbProvince: Prisma.FieldRef<"User", 'String'>
+  readonly fiscalBenefits: Prisma.FieldRef<"User", 'String[]'>
   readonly role: Prisma.FieldRef<"User", 'UserRole'>
   readonly onboardingSeenAt: Prisma.FieldRef<"User", 'DateTime'>
 }

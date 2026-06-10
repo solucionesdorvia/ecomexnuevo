@@ -1,6 +1,7 @@
 import { getSessionUser } from "@/lib/auth/session";
 import { prisma } from "@/lib/db";
 import { DocumentUploader } from "./DocumentUploader";
+import { ImporterProfileForm } from "./ImporterProfileForm";
 
 export const runtime = "nodejs";
 export const metadata = { title: "Configuración — E-COMEX" };
@@ -49,6 +50,17 @@ export default async function ConfiguracionPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Perfil de importador */}
+        <section className="mb-5 overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0B1622]">
+          <div className="border-b border-white/[0.04] px-5 py-3.5">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#3d4a5a]">Perfil de importador</p>
+            <p className="mt-1 text-[12px] text-[#555c6b]">
+              Tu situación fiscal. El asistente la usa para cotizar sin volver a preguntártela.
+            </p>
+          </div>
+          <ImporterProfileForm />
         </section>
 
         {/* Documents */}

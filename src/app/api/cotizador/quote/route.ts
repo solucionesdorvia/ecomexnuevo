@@ -4,6 +4,7 @@ import type { InputJsonValue } from "@prisma/client/runtime/client";
 import { prisma } from "@/lib/db";
 import { calcImportQuote } from "@/lib/quote/calcImportQuote";
 import { ensurePcram } from "@/lib/chat/chatProductBuilder";
+import { ensureProductSpecs } from "@/lib/quote/ensureProductSpecs";
 import { rateLimitByIp, RATE_LIMIT_MESSAGE } from "@/lib/rateLimit";
 import {
   buildProductJsonFromClassifierSnapshot,
@@ -69,6 +70,11 @@ export async function POST(req: Request) {
   const enrichedProduct = await ensurePcram(productJson as Record<string, unknown>).catch(
     () => productJson as Record<string, unknown>
   );
+
+  // Fase 0.c: el snapshot del clasificador no trae peso. Si falta, buscamos la
+  // ficha técnica en la web (marca/modelo) → estimación por IA → y si nada da,
+  // el motor cae al estimado por NCM. El spinner del front cubre esta latencia.
+  await ensureProductSpecs(enrichedProduct, { useWebSearch: true }).catch(() => null);
 
   type QuoteProductInput = Extract<Parameters<typeof calcImportQuote>[0], { mode: "quote" }>["product"];
   let quote: Awaited<ReturnType<typeof calcImportQuote>>;

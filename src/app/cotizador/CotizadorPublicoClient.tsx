@@ -452,7 +452,7 @@ export default function CotizadorPublicoClient() {
                       onClick={() => void createQuote()}
                       className="min-h-[48px] rounded-xl bg-[#18C3D6] px-4 py-3 text-[13px] font-medium text-[#030d18] shadow-lg shadow-[#18C3D6]/20 transition hover:bg-[#0ea5b9] disabled:cursor-not-allowed disabled:opacity-40 sm:min-h-0"
                     >
-                      {pendingQuote ? "Calculando presupuesto…" : "Ver presupuesto"}
+                      {pendingQuote ? "Generando presupuesto…" : "Ver presupuesto"}
                     </button>
                     <button
                       type="button"
@@ -462,6 +462,17 @@ export default function CotizadorPublicoClient() {
                       Consultar otro producto
                     </button>
                   </div>
+                  {pendingQuote ? (
+                    <div className="flex items-center gap-2.5 rounded-xl border border-[#18C3D6]/15 bg-[#18C3D6]/[0.05] px-3.5 py-2.5" aria-live="polite">
+                      <svg className="h-3.5 w-3.5 shrink-0 animate-spin text-[#18C3D6]" fill="none" viewBox="0 0 24 24" aria-hidden>
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                      </svg>
+                      <p className="text-[12px] leading-relaxed text-slate-300">
+                        Buscando la ficha técnica del producto y calculando impuestos y flete…
+                      </p>
+                    </div>
+                  ) : null}
                   {quoteError ? (
                     <div className="rounded-xl border border-red-500/20 bg-red-500/[0.07] px-3.5 py-3">
                       <p className="text-[12px] leading-relaxed text-red-300">{quoteError}</p>

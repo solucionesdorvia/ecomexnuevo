@@ -34,17 +34,25 @@ Brechas vs el documento de 12 pasos:
 - [ ] Campo **Beneficio fiscal** (Ninguno · TdF · Bien de Capital · RIGI · Minería · Energía · Otros)
 - [ ] **Dimensiones reales** (largo · ancho · alto · bultos · peso) en el flujo del chat/cotizador
 
-## FASE 0.b — Perfil persistente en la cuenta (req. nuevo #1)
-- [ ] Agregar campos al modelo `User` (Prisma): `importerProfile`, `taxId`, `iibbProvince`, `fiscalBenefits`
-- [ ] UI en `/account` o configuración para que el usuario complete su perfil de importador
-- [ ] Inyectar el perfil al contexto del chatbot (system/analyst prompt) en cada conversación
-      → el bot ya conoce perfil/destino habitual sin re-preguntar
+## FASE 0.b — Perfil persistente en la cuenta (req. nuevo #1) ✅ (código listo)
+- [x] Agregar campos al modelo `User` (Prisma): `importerProfile`, `taxId`, `iibbProvince`, `fiscalBenefits` (`String[]`).
+      Migración `prisma/migrations/20260610120000_add_importer_profile` aplicada en Neon (vía SQL editor + registro en `_prisma_migrations`); cliente regenerado.
+- [x] UI en `/app/configuracion`: `ImporterProfileForm` (condición fiscal, CUIT, provincia IIBB, beneficios multi-select).
+      API `GET`/`PUT /api/user/profile` extendida con validación (`src/lib/importer/importerProfile.ts`).
+- [x] Inyectar el perfil al contexto del chatbot: `processClasificarTurn` antepone un bloque de contexto al `ANALYST_SYSTEM`;
+      `/api/clasificar-ncm/chat` carga el perfil del usuario logueado (best-effort) y lo pasa. Anónimos = sin perfil (igual que antes).
+      → el bot ya conoce el perfil sin re-preguntar. (No habilita recuperabilidad: eso es Fase 1.)
 
-## FASE 0.c — Ficha técnica automática (req. nuevo #2)
-- [ ] Cuando falte peso/dimensiones: búsqueda web de ficha técnica del producto (modelo/marca)
-- [ ] Extraer peso/dimensiones del resultado (parser con IA)
-- [ ] Spinner/indicador "Generando presupuesto…" en el frontend durante búsqueda + cálculo
-- [ ] Fallback: estimación por NCM (actual) si la búsqueda no encuentra datos
+## FASE 0.c — Ficha técnica automática (req. nuevo #2) ✅ (código listo)
+- [x] Búsqueda web de ficha técnica cuando falta el peso: `src/lib/ai/productSpecsFinder.ts`
+      (`fetchProductSpecsFromWeb`, tool `web_search` de la Responses API). Gated por `PRODUCT_SPECS_WEBSEARCH`.
+- [x] Extracción de peso/dimensiones con IA (mismo call) + orquestador `src/lib/quote/ensureProductSpecs.ts`
+      con cadena **web → estimación IA → estimación NCM**. Integrado en `/api/cotizador/quote` (`useWebSearch:true`).
+- [x] Spinner "Generando presupuesto…" + hint ("Buscando la ficha técnica…") en `CotizadorPublicoClient` durante `pendingQuote`.
+- [x] Fallback por NCM (actual) si la búsqueda/IA no dan dato confiable (lo hace el motor con `estimateUnitDimensions`).
+- Notas: las dimensiones halladas se guardan en `product.raw.dimensionsCm` para Fase 3 (el motor aún no las usa para precio).
+  La búsqueda corre solo en el cotizador (no en el chat clasificador, para no agregar latencia ahí). Apagable con `PRODUCT_SPECS_WEBSEARCH=0`.
+  ⚠️ El tool `web_search` depende del soporte del modelo/cuenta OpenAI — verificar en logs tras deploy (`[productSpecsFinder] web_search no disponible`).
 
 ## FASE 1 — Motor impositivo con recuperabilidad ⭐ (el fix de precios)
 - [x] **Bug seguro**: el total ahora incluye el seguro (`cifMin2`/`cifMax2`). [HECHO]

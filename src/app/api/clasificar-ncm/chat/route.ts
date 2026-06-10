@@ -1,7 +1,33 @@
 import { NextResponse } from "next/server";
 import { processClasificarTurn } from "@/lib/clasificar-ncm/chatEngine";
 import { rateLimitByIp } from "@/lib/rateLimit";
+import { getSessionUser } from "@/lib/auth/session";
+import { prisma } from "@/lib/db";
+import type { ImporterProfile } from "@/lib/importer/importerProfile";
 import type { CaseSnapshot, ChatMessage } from "@/lib/clasificar-ncm/types";
+
+/**
+ * Carga el perfil de importador del usuario logueado (Fase 0.b) para inyectarlo
+ * al contexto del analista. Best-effort: si no hay sesión o falla, devuelve null
+ * (los usuarios anónimos cotizan sin perfil, como hasta ahora).
+ */
+async function loadImporterProfile(): Promise<ImporterProfile | null> {
+  const session = await getSessionUser().catch(() => null);
+  if (!session) return null;
+  const u = await prisma.user
+    .findUnique({
+      where: { id: session.id },
+      select: { importerProfile: true, taxId: true, iibbProvince: true, fiscalBenefits: true },
+    })
+    .catch(() => null);
+  if (!u) return null;
+  return {
+    importerProfile: (u.importerProfile as ImporterProfile["importerProfile"]) ?? null,
+    taxId: u.taxId ?? null,
+    iibbProvince: u.iibbProvince ?? null,
+    fiscalBenefits: (u.fiscalBenefits as ImporterProfile["fiscalBenefits"]) ?? [],
+  };
+}
 
 export const runtime = "nodejs";
 
@@ -95,9 +121,12 @@ export async function POST(req: Request) {
     const typedMessages = messages as ChatMessage[];
     const snap = (snapshot ?? { status: "idle" }) as CaseSnapshot;
 
+    const importerProfile = await loadImporterProfile();
+
     const { assistantMessage, snapshot: outSnap } = await processClasificarTurn({
       messages: typedMessages,
       snapshot: snap,
+      importerProfile,
     });
 
     return NextResponse.json({ assistantMessage, snapshot: outSnap });

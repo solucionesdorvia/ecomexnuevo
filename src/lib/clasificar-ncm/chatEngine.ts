@@ -2,6 +2,10 @@ import { openaiJson } from "@/lib/ai/openaiClient";
 import { buildAmbiguityAssistantParagraph, type NormalizedAmbiguity } from "@/lib/clasificar-ncm/ncmAmbiguity";
 import { runNcmMotor } from "@/lib/clasificar-ncm/runNcmMotor";
 import { ncmDigitsOnly, formatMercosurNcm8 } from "@/lib/ncm/knowledge/normalize";
+import {
+  formatImporterProfileForPrompt,
+  type ImporterProfile,
+} from "@/lib/importer/importerProfile";
 import type { CaseSnapshot, ChatMessage, ProductType } from "./types";
 
 /**
@@ -416,8 +420,14 @@ function mergeSnapshot(prev: CaseSnapshot, a: AnalystJson): CaseSnapshot {
 export async function processClasificarTurn(opts: {
   messages: ChatMessage[];
   snapshot: CaseSnapshot;
+  /** Perfil del importador logueado, inyectado al contexto del analista (Fase 0.b). */
+  importerProfile?: ImporterProfile | null;
 }): Promise<{ assistantMessage: string; snapshot: CaseSnapshot }> {
-  const { messages, snapshot: prev } = opts;
+  const { messages, snapshot: prev, importerProfile } = opts;
+
+  // Bloque de contexto del importador para que el bot no re-pregunte su perfil.
+  const profileBlock = formatImporterProfileForPrompt(importerProfile);
+  const analystSystem = profileBlock ? `${ANALYST_SYSTEM}\n\n${profileBlock}` : ANALYST_SYSTEM;
 
   /**
    * Short-circuit: si el usuario explicita un NCM en el último mensaje
@@ -508,7 +518,7 @@ export async function processClasificarTurn(opts: {
   let analyst: AnalystJson;
   try {
     analyst = await openaiJson<AnalystJson>({
-      system: ANALYST_SYSTEM,
+      system: analystSystem,
       user: userPayload,
       model: process.env.NCM_CHAT_ANALYST_MODEL ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
       timeoutMs: CLASIFICAR_ANALYST_TIMEOUT_MS,

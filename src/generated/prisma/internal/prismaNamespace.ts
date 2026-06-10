@@ -1382,6 +1382,10 @@ export const UserScalarFieldEnum = {
   name: 'name',
   company: 'company',
   importInterest: 'importInterest',
+  importerProfile: 'importerProfile',
+  taxId: 'taxId',
+  iibbProvince: 'iibbProvince',
+  fiscalBenefits: 'fiscalBenefits',
   role: 'role',
   onboardingSeenAt: 'onboardingSeenAt'
 } as const
