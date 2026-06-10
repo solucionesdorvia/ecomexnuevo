@@ -29,29 +29,30 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "E-COMEX — Agente IA cotizador de importación a Argentina",
+  title: "E-COMEX — Consultoría en Comercio Exterior",
   description:
-    "Cotizá gratis cuánto cuesta importar a Argentina. Clasificación NCM, aranceles, flete e impuestos en minutos. El mejor agente IA de importaciones del país.",
+    "Consultoría en comercio exterior e importaciones. Clasificación NCM, aranceles, flete e impuestos, financiamiento y gestión integral. Importá sin ser importador.",
   metadataBase: new URL("https://e-comex.com.ar"),
   icons: {
     icon: [
-      { url: "/favicon-ecomex.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-ecomex-48.png", sizes: "48x48", type: "image/png" },
       { url: "/favicon-ecomex-192.png", sizes: "192x192", type: "image/png" },
     ],
     apple: "/favicon-ecomex-192.png",
   },
   keywords: [
-    "cuánto cuesta importar a argentina",
-    "calculadora costos importación argentina",
-    "calculadora importaciones",
-    "costos importación argentina",
+    "consultoría comercio exterior argentina",
+    "importaciones argentina",
+    "asesoría importaciones",
     "clasificación NCM argentina",
     "aranceles importación argentina",
-    "cotizar importación",
+    "costos importación argentina",
+    "importar sin ser importador",
   ],
   openGraph: {
-    title: "E-COMEX — Agente IA cotizador de importaciones",
-    description: "Cotizá gratis cuánto cuesta importar a Argentina. NCM, aranceles y landed cost en minutos.",
+    title: "E-COMEX — Consultoría en Comercio Exterior",
+    description: "Consultoría en comercio exterior e importaciones. NCM, aranceles, financiamiento y gestión integral.",
     type: "website",
   },
 };
