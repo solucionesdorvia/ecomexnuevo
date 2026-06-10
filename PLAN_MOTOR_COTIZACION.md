@@ -77,10 +77,12 @@ Brechas vs el documento de 12 pasos:
 - [ ] ⏸️ **Ajuste del tratamiento impositivo Courier**: pendiente validación del contador (ver `CONSULTAS_FISCALES.md`). Hoy los números siguen como General.
 - [ ] (opcional) Regímenes Temporal / Especiales.
 
-## FASE 3 — Motor de transporte por dimensiones reales (Paso 10)
-- [ ] Usar L×A×H×bultos reales (de Fase 0.c) en vez de estimar por NCM
-- [ ] Peso volumétrico + peso facturable (el mayor)
-- [ ] Reglas del documento: ≤30kg aéreo · 30-300kg comparar · >1m³ LCL · >15m³ FCL · vehículos RORO/FlatRack/OpenTop
+## FASE 3 — Motor de transporte por dimensiones reales (Paso 10) ✅
+- [x] Usa L×A×H reales (de Fase 0.c, `raw.dimensionsCm`) para el volumen en vez de estimar por NCM; fallback a estimación por NCM si no hay dims.
+- [x] Peso volumétrico (IATA 167 kg/m³) + peso facturable (el mayor) — `chargeableAirKg` en `freightRates.ts`.
+- [x] Reglas del documento en `selectShippingMode`: >15m³ FCL · >1m³ LCL · ≤30kg aéreo · 30-300kg comparar aéreo vs LCL (más barato) · >300kg LCL.
+- [x] Vehículos: nota "puede requerir RORO/Flat Rack (cotización específica)" en supuestos. (Sin tarifas RORO propias todavía.)
+- ⚠️ Tarifa aérea actual = USD 250/kg (la cargó el encargado para envíos chicos). Con ≤30kg→aéreo, envíos de ~9-30 kg cotizan aéreo más caro que LCL. Es tema de **tarifa**, no de lógica — ajustable en `AIR_RATES` o bajando `AIR_MAX_KG`.
 
 ## FASE 4 — Beneficios fiscales (Paso 6)
 - [ ] Modificadores de alícuota por beneficio (TdF exime tributos, Bien de Capital reduce DI, RIGI, etc.)

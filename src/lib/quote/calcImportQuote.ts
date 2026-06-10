@@ -314,9 +314,24 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     ? inputs.product.weightKgPerUnit
     : null;
   const totalKg = userWeightKg != null ? userWeightKg * qty : unitDim.kg * qty;
-  // Escala m3 proporcionalmente al peso real si el usuario lo proveyó
-  const m3Scale = userWeightKg != null && unitDim.kg > 0 ? userWeightKg / unitDim.kg : 1;
-  const totalM3 = unitDim.m3 * qty * m3Scale;
+
+  // Fase 3: dimensiones reales (L×A×H de la ficha técnica, Fase 0.c) si están disponibles.
+  // Si no, se estima el volumen por NCM escalado por el peso real (comportamiento previo).
+  const dimsCm = (inputs.product.raw as any)?.dimensionsCm as
+    | { length?: number; width?: number; height?: number }
+    | undefined;
+  const hasRealDims =
+    !!dimsCm &&
+    [dimsCm.length, dimsCm.width, dimsCm.height].every((v) => typeof v === "number" && (v as number) > 0);
+  let totalM3: number;
+  if (hasRealDims) {
+    const unitM3Real = (dimsCm!.length! * dimsCm!.width! * dimsCm!.height!) / 1_000_000; // cm³ → m³
+    totalM3 = unitM3Real * qty;
+  } else {
+    const m3Scale = userWeightKg != null && unitDim.kg > 0 ? userWeightKg / unitDim.kg : 1;
+    totalM3 = unitDim.m3 * qty * m3Scale;
+  }
+
   const userMode = detectUserShippingMode(inputs.rawUserText ?? "", zone);
   const freight = calcFreightCost(zone, totalKg, totalM3, userMode);
   const fleteMin = freight.totalUsd;
@@ -521,6 +536,19 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     (typeof hsNum === "number" && hsNum >= 8400 && hsNum <= 8999) ||
     /\b(maquin|machine|industrial|cnc|cortad|cortadora|sierra|stone|piedra)\b/i.test(titleNorm);
 
+  // Fase 3: vehículos suelen requerir transporte especial (RORO / Flat Rack / Open Top).
+  const ncmHeadVeh = ncm ? parseInt(ncm.replace(/\D/g, "").slice(0, 4), 10) : NaN;
+  const isVehicle =
+    (Number.isFinite(ncmHeadVeh) && ncmHeadVeh >= 8701 && ncmHeadVeh <= 8716) ||
+    /\b(auto|automovil|vehiculo|camion|camioneta|autoelevador|tractor|motocicleta|chasis)\b/i.test(titleNorm);
+
+  // Etiqueta amigable del modo de transporte seleccionado.
+  const freightModeLabel = freight.mode.startsWith("air")
+    ? "Aéreo"
+    : freight.mode.startsWith("fcl")
+      ? "Marítimo FCL"
+      : "Marítimo LCL";
+
   // Tasas reales de gestión/despacho (provistas por el encargado de CE).
   // Honorarios: 1% del valor FOB total, mínimo USD 300. Gastos operativos: USD 200 fijo. Arancel SIM: USD 10 fijo.
   const GASTOS_OPERATIVOS = 200;
@@ -598,12 +626,30 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       tone: "muted",
     },
     {
+      id: "dims",
+      label: "Dimensiones",
+      value: hasRealDims ? "Ficha técnica (L×A×H reales)" : "Estimadas por categoría",
+      source: hasRealDims ? "scraper" : "estimate",
+      tone: hasRealDims ? "success" : "muted",
+    },
+    {
       id: "freight",
       label: "Flete",
-      value: freight.label,
+      value: `${freightModeLabel} · ${Math.round(freight.estimatedKg)} kg facturable`,
       source: "estimate",
       tone: "primary",
     },
+    ...(isVehicle
+      ? [
+          {
+            id: "vehiculo",
+            label: "Transporte especial",
+            value: "Vehículo: puede requerir RORO / Flat Rack (cotización de flete específica).",
+            source: "estimate" as const,
+            tone: "muted" as const,
+          },
+        ]
+      : []),
     {
       id: "ops",
       label: "Gestión",

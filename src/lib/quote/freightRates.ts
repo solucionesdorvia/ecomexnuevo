@@ -151,26 +151,53 @@ export const AIR_VOL_FACTOR = 167;
 // Factor marítimo: 1 CBM = 1.000 kg (revenue ton estándar)
 export const SEA_VOL_FACTOR = 1000;
 
+// ── Umbrales de selección de modo (documento funcional E-COMEX, Paso 10) ─────
+// ≤30 kg → aéreo · 30-300 kg → comparar aéreo vs marítimo (el más barato)
+// >1 m³ → LCL · >15 m³ → FCL.
+export const AIR_MAX_KG = 30;
+export const COMPARE_MAX_KG = 300;
+export const LCL_MIN_M3 = 1;
+export const FCL_MIN_M3 = 15;
+
+function airModeFor(zone: OriginZone): ShippingMode {
+  // Solo hay tablas aéreas USA_FCA y CHINA_FOB; el resto usa la de USA como proxy.
+  return zone === "CHINA" ? "air_china" : "air_usa";
+}
+function lclModeFor(zone: OriginZone): ShippingMode {
+  if (zone === "EUROPE") return "lcl_europe";
+  if (zone === "USA") return "lcl_usa";
+  return "lcl_china";
+}
+function fclModeFor(zone: OriginZone): ShippingMode {
+  return zone === "EUROPE" ? "fcl20_europe" : "fcl20_china";
+}
+
+/** Peso facturable aéreo = max(peso real, peso volumétrico IATA). */
+export function chargeableAirKg(totalKg: number, totalM3 = 0): number {
+  return Math.max(totalKg, totalM3 * AIR_VOL_FACTOR);
+}
+
 export function selectShippingMode(zone: OriginZone, totalKg: number, totalM3 = 0): ShippingMode {
-  // La gran mayoría de importaciones comerciales van por vía marítima.
-  // Aéreo se selecciona automáticamente SOLO para envíos muy pequeños
-  // que típicamente son muestras o repuestos urgentes.
-  // Se usa el "peso cobrable" = max(peso real, peso volumétrico IATA).
-  const AIR_AUTO_MAX_KG = 5;
+  // 1) El volumen manda para cargas grandes.
+  if (totalM3 > FCL_MIN_M3) return fclModeFor(zone);
+  if (totalM3 > LCL_MIN_M3) return lclModeFor(zone);
 
-  // Peso cobrable: el mayor entre peso real y peso volumétrico (criterio IATA)
-  const volKgAir = totalM3 * AIR_VOL_FACTOR;
-  const chargeableKg = Math.max(totalKg, volKgAir);
+  // 2) Por peso facturable (el mayor entre real y volumétrico aéreo).
+  const chargeable = chargeableAirKg(totalKg, totalM3);
 
-  if (zone === "USA") {
-    return chargeableKg <= AIR_AUTO_MAX_KG ? "air_usa" : "lcl_usa";
+  if (chargeable <= AIR_MAX_KG) return airModeFor(zone);
+
+  if (chargeable <= COMPARE_MAX_KG) {
+    // 30-300 kg: comparar aéreo vs marítimo LCL y elegir el más barato.
+    const air = airModeFor(zone);
+    const lcl = lclModeFor(zone);
+    const airCost = calcFreightCost(zone, totalKg, totalM3, air).totalUsd;
+    const lclCost = calcFreightCost(zone, totalKg, totalM3, lcl).totalUsd;
+    return airCost <= lclCost ? air : lcl;
   }
-  if (zone === "EUROPE") return "lcl_europe"; // Europa siempre marítimo
-  if (zone === "CHINA") {
-    return chargeableKg <= AIR_AUTO_MAX_KG ? "air_china" : "lcl_china";
-  }
-  // Otros orígenes: marítimo como proxy de China
-  return chargeableKg <= AIR_AUTO_MAX_KG ? "air_china" : "lcl_china";
+
+  // 3) >300 kg → marítimo LCL (FCL ya quedó cubierto por volumen).
+  return lclModeFor(zone);
 }
 
 // ── Cálculo de flete real ────────────────────────────────────────────────────
