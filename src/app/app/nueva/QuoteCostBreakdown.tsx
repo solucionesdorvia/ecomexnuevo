@@ -52,6 +52,14 @@ export type QuoteCostPayload = {
   quality?: number;
   quantity?: number;
   breakdown?: QuoteBreakdown;
+  regime?: {
+    code: "courier" | "general";
+    label: string;
+    courierEligible: boolean;
+    reasons: string[];
+    blockers: string[];
+    weightEstimated?: boolean;
+  } | null;
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -362,6 +370,45 @@ function CardsBreakdown({ quote }: { quote: QuoteCostPayload }) {
   );
 }
 
+// ─── Banner de régimen recomendado (Fase 2) ──────────────────────────────────
+
+function RegimeBanner({ regime }: { regime: NonNullable<QuoteCostPayload["regime"]> }) {
+  const isCourier = regime.code === "courier";
+  const items = isCourier ? regime.reasons : regime.blockers;
+  const cls = isCourier
+    ? "border-emerald-500/25 bg-emerald-500/[0.06]"
+    : "border-blue-500/25 bg-blue-500/[0.06]";
+  const badgeCls = isCourier
+    ? "border-emerald-500/30 bg-emerald-500/[0.12] text-emerald-300"
+    : "border-blue-500/30 bg-blue-500/[0.12] text-blue-300";
+
+  return (
+    <div className={`mb-3 rounded-2xl border px-4 py-3.5 ${cls}`}>
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-400">
+          Régimen recomendado
+        </span>
+        <span className={`rounded-md border px-2 py-0.5 text-[11px] font-semibold ${badgeCls}`}>
+          {regime.label}
+        </span>
+      </div>
+      {items.length > 0 && (
+        <ul className="mt-2 space-y-1">
+          {items.map((it, i) => (
+            <li key={i} className="flex gap-1.5 text-[11px] leading-snug text-slate-400">
+              <span className="text-slate-600">·</span>
+              <span>{it}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      <p className="mt-2 text-[10px] leading-relaxed text-slate-600">
+        Sugerencia de régimen. El tratamiento impositivo definitivo se confirma con la situación fiscal.
+      </p>
+    </div>
+  );
+}
+
 // ─── Componente principal ─────────────────────────────────────────────────────
 
 export function QuoteCostBreakdown({
@@ -383,6 +430,8 @@ export function QuoteCostBreakdown({
 
   return (
     <div ref={rootRef}>
+      {quote.regime && <RegimeBanner regime={quote.regime} />}
+
       {hasBreakdown ? (
         <TemplateBreakdown quote={quote} b={b!} />
       ) : (

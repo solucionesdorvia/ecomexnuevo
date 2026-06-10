@@ -138,6 +138,7 @@ export async function POST(req: Request) {
     assumptions: quote.assumptions ?? [],
     quality: quote.quality,
     breakdown: quote.breakdown ?? null,
+    regime: quote.regime ?? null,
   });
 
   res.cookies.set("ecomex_anon", anonId, {

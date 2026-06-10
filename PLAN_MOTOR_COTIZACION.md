@@ -55,6 +55,7 @@ Brechas vs el documento de 12 pasos:
   ⚠️ El tool `web_search` depende del soporte del modelo/cuenta OpenAI — verificar en logs tras deploy (`[productSpecsFinder] web_search no disponible`).
 
 ## FASE 1 — Motor impositivo con recuperabilidad ⭐ (el fix de precios)
+> Preguntas para el contador que destraban esta fase (y el tratamiento Courier de Fase 2): ver `CONSULTAS_FISCALES.md`.
 - [x] **Bug seguro**: el total ahora incluye el seguro (`cifMin2`/`cifMax2`). [HECHO]
 - [ ] Tabla de recuperabilidad por (impuesto × perfil). ⏸️ pendiente validación fiscal:
       | Impuesto | Resp. Inscripto | Persona Física / Monotributo |
@@ -69,10 +70,12 @@ Brechas vs el documento de 12 pasos:
 - [ ] Output con 3 totales: **Costo real de nacionalización** / **Impuestos recuperables** / **Desembolso total en aduana**
 - [ ] UI: mostrar los 3 con nota "el IVA/percepciones se recuperan según tu situación fiscal"
 
-## FASE 2 — Motor de régimen (Paso 9)
-- [ ] Courier si FOB ≤ USD 3.000 **y** peso ≤ 50 kg **y** sin restricción **y** NCM permitida
-- [ ] General en el resto; (opcional) Temporal / Especiales
-- [ ] El régimen ajusta tratamiento impositivo y se muestra recomendado
+## FASE 2 — Motor de régimen (Paso 9) ✅ (detección/recomendación; números a validar)
+- [x] `src/lib/quote/regime.ts` (`assessImportRegime`): Courier si FOB total ≤ USD 3.000 **y** peso ≤ 50 kg **y** sin intervención PCRAM; General en el resto. Cualquier `intervention` de PCRAM fuerza General.
+- [x] Integrado en `calcImportQuote` (top-level `regime` + assumption + nota en explanation) y expuesto en `/api/cotizador/quote`.
+- [x] Mostrado al cliente + interno: banner "Régimen recomendado" en `QuoteCostBreakdown` con motivos/bloqueos.
+- [ ] ⏸️ **Ajuste del tratamiento impositivo Courier**: pendiente validación del contador (ver `CONSULTAS_FISCALES.md`). Hoy los números siguen como General.
+- [ ] (opcional) Regímenes Temporal / Especiales.
 
 ## FASE 3 — Motor de transporte por dimensiones reales (Paso 10)
 - [ ] Usar L×A×H×bultos reales (de Fase 0.c) en vez de estimar por NCM

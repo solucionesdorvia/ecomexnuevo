@@ -2,6 +2,7 @@
 // Import quote calculator — dynamic product JSON shapes require any casts.
 import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
 import { detectOriginZone, estimateUnitDimensions, calcFreightCost, ShippingMode, OriginZone } from "./freightRates";
+import { assessImportRegime, formatRegimeForExplanation, type RegimeAssessment } from "./regime";
 
 /** Detecta si el usuario mencionó explícitamente un modo de transporte. */
 function detectUserShippingMode(userText: string, zone: OriginZone): ShippingMode | undefined {
@@ -169,6 +170,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     tone?: "muted" | "primary" | "gold" | "success";
   }>;
   quality?: number; // 0..100
+  /** Régimen recomendado (Courier vs General) — Fase 2. */
+  regime?: RegimeAssessment;
 }> {
   if (inputs.mode === "budget") {
     const budget = parseBudgetUsd(inputs.budgetText);
@@ -539,6 +542,17 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   const totalMin = cifMin2 + impuestosMin + gestionMin;
   const totalMax = cifMax2 + impuestosMax + gestionMax;
 
+  // Fase 2: régimen recomendado (Courier vs General). Usa el FOB máximo del rango
+  // (conservador) y las intervenciones de PCRAM. Solo recomienda; NO cambia el
+  // cálculo impositivo (sigue tratamiento general hasta validar Courier con el contador).
+  const interventions = (inputs.product.raw as any)?.pcram?.interventions as string[] | undefined;
+  const regime = assessImportRegime({
+    fobTotalUsd: fobTotalMax,
+    totalWeightKg: totalKg,
+    interventions,
+    weightEstimated: userWeightKg == null,
+  });
+
   const assumptions: Array<{
     id: string;
     label: string;
@@ -561,6 +575,13 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
         : "Estimación (sin tasas oficiales aplicadas)",
       source: pcramTaxes ? "pcram" : "estimate",
       tone: pcramTaxes ? "success" : "muted",
+    },
+    {
+      id: "regime",
+      label: "Régimen recomendado",
+      value: regime.code === "courier" ? "Courier (envíos de entrega rápida)" : "Importación general",
+      source: "estimate",
+      tone: regime.code === "courier" ? "success" : "primary",
     },
     {
       id: "origin",
@@ -619,6 +640,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     `- **Origen**: ${origin}`,
     "",
     "**Claves**:",
+    formatRegimeForExplanation(regime),
     `- **Impuestos**: ${pcramTaxes ? "calculados con tasas de PCRAM cuando están disponibles" : "estimados (sin tasas oficiales para este caso aún)"}; se ajustan con datos técnicos + origen.`,
     "- **Variables**: flete marítimo (CBM/peso), operativos locales (puerto/transporte/transferencia) y tu situación fiscal.",
     "- **Para afinar**: ficha técnica del producto + país de origen + peso/volumen real.",
@@ -736,6 +758,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     },
     assumptions,
     quality,
+    regime,
   };
 }
 
