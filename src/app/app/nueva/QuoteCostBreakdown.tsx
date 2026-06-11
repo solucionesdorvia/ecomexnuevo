@@ -60,6 +60,11 @@ export type QuoteCostPayload = {
     blockers: string[];
     weightEstimated?: boolean;
   } | null;
+  presetCosteo?: {
+    rubro?: string;
+    totalUsd: number;
+    lines: Array<{ label: string; value: string; cls: string }>;
+  } | null;
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -409,6 +414,44 @@ function RegimeBanner({ regime }: { regime: NonNullable<QuoteCostPayload["regime
   );
 }
 
+// ─── Desglose preset (costeo detallado, ej. Forward) — mismo dato que el PDF ──
+
+function PresetBreakdown({ preset }: { preset: NonNullable<QuoteCostPayload["presetCosteo"]> }) {
+  return (
+    <div className="rounded-2xl border border-white/[0.09] bg-gradient-to-b from-[#0a1422]/95 to-[#060d18] shadow-xl shadow-black/40">
+      <div className="border-b border-white/[0.07] px-5 py-4">
+        <h3 className="text-[14px] font-semibold tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
+          Cotización de importación
+        </h3>
+        <p className="mt-1 text-[11px] text-slate-500">Desglose detallado en USD</p>
+      </div>
+      <div className="px-5 py-4">
+        {preset.lines.map((l, i) => {
+          const isGrand = l.cls.includes("grand-total");
+          const isSub = l.cls.includes("sub");
+          const isIva = l.cls.includes("iva-highlight");
+          if (isGrand) {
+            return (
+              <div key={i} className="mt-2 flex items-center justify-between border-t border-[#18C3D6]/30 pt-3">
+                <span className="text-[13px] font-bold text-white">{l.label}</span>
+                <span className="text-[15px] font-bold tabular-nums text-[#18C3D6]">{l.value}</span>
+              </div>
+            );
+          }
+          return (
+            <div key={i} className={`flex items-baseline justify-between gap-3 py-[3px] ${isSub ? "pl-4" : ""}`}>
+              <span className={`text-[12px] ${isIva ? "text-red-400" : isSub ? "text-slate-500" : "text-slate-300"}`}>
+                {isSub ? "· " : ""}{l.label}
+              </span>
+              <span className={`shrink-0 text-[12px] tabular-nums ${isIva ? "text-red-400" : "text-slate-200"}`}>{l.value}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 // ─── Componente principal ─────────────────────────────────────────────────────
 
 export function QuoteCostBreakdown({
@@ -432,7 +475,9 @@ export function QuoteCostBreakdown({
     <div ref={rootRef}>
       {quote.regime && <RegimeBanner regime={quote.regime} />}
 
-      {hasBreakdown ? (
+      {quote.presetCosteo?.lines?.length ? (
+        <PresetBreakdown preset={quote.presetCosteo} />
+      ) : hasBreakdown ? (
         <TemplateBreakdown quote={quote} b={b!} />
       ) : (
         <CardsBreakdown quote={quote} />

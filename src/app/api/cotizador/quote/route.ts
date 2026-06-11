@@ -111,6 +111,16 @@ export async function POST(req: Request) {
     String((enrichedProduct as Record<string, unknown>)?.title ?? ""),
     userText
   );
+  // Si hay preset, el total del presupuesto se toma del preset (datos de Forward),
+  // tanto en pantalla como en el PDF, para que coincidan (evita el desfasaje).
+  if (presetCosteo) {
+    quote.totalMinUsd = presetCosteo.totalUsd;
+    quote.totalMaxUsd = presetCosteo.totalUsd;
+    if (quote.breakdown) {
+      quote.breakdown.totalMinUsd = presetCosteo.totalUsd;
+      quote.breakdown.totalMaxUsd = presetCosteo.totalUsd;
+    }
+  }
   const quoteJsonToSave = presetCosteo
     ? { ...(quote as unknown as Record<string, unknown>), presetCosteo }
     : (quote as unknown as Record<string, unknown>);
@@ -156,6 +166,7 @@ export async function POST(req: Request) {
     quality: quote.quality,
     breakdown: quote.breakdown ?? null,
     regime: quote.regime ?? null,
+    presetCosteo: presetCosteo ?? null,
   });
 
   res.cookies.set("ecomex_anon", anonId, {
