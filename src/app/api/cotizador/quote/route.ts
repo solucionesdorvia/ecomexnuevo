@@ -5,6 +5,7 @@ import { prisma } from "@/lib/db";
 import { calcImportQuote } from "@/lib/quote/calcImportQuote";
 import { ensurePcram } from "@/lib/chat/chatProductBuilder";
 import { ensureProductSpecs } from "@/lib/quote/ensureProductSpecs";
+import { getPresetCosteo } from "@/lib/quote/presetCosteos";
 import { rateLimitByIp, RATE_LIMIT_MESSAGE } from "@/lib/rateLimit";
 import {
   buildProductJsonFromClassifierSnapshot,
@@ -98,6 +99,17 @@ export async function POST(req: Request) {
   const existing = cookieStore.get("ecomex_anon")?.value;
   const anonId = existing && existing.length >= 8 ? existing : crypto.randomUUID();
 
+  // Costeo preset para productos de ejemplo (ej. Alfa Romeo Giulia): se adjunta al
+  // quoteJson para que el PDF descargable muestre ese desglose detallado. No cambia
+  // el cálculo del motor ni afecta a otros productos.
+  const presetCosteo = getPresetCosteo(
+    String((enrichedProduct as Record<string, unknown>)?.title ?? ""),
+    userText
+  );
+  const quoteJsonToSave = presetCosteo
+    ? { ...(quote as unknown as Record<string, unknown>), presetCosteo }
+    : (quote as unknown as Record<string, unknown>);
+
   let row: Awaited<ReturnType<typeof prisma.quote.create>>;
   try {
     row = await prisma.quote.create({
@@ -106,7 +118,7 @@ export async function POST(req: Request) {
         mode: "quote",
         userText,
         productJson: enrichedProduct as unknown as InputJsonValue,
-        quoteJson: quote as unknown as InputJsonValue,
+        quoteJson: quoteJsonToSave as unknown as InputJsonValue,
         totalMinUsd: quote.totalMinUsd ?? undefined,
         totalMaxUsd: quote.totalMaxUsd ?? undefined,
         stage: "quoted",

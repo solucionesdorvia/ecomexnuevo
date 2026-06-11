@@ -345,17 +345,22 @@ function deriveProductoAndRubro(quote: QuoteLike) {
 export function renderQuotePdfHtml(quote: QuoteLike) {
   const product = quote.productJson ?? {};
   const derived = deriveProductoAndRubro(quote);
+  // Costeo preset (ej. Alfa Romeo Giulia): si está presente, el desglose y el
+  // total se renderizan desde acá (datos de Forward), no desde el motor.
+  const preset = ((quote.quoteJson as any)?.presetCosteo ?? null) as
+    | { rubro?: string; totalUsd?: number; lines?: Array<{ label: string; value: string; cls: string }> }
+    | null;
   const title = derived.producto;
-  const rubro = derived.rubro;
+  const rubro = (preset?.rubro && String(preset.rubro)) || derived.rubro;
   const productos = title;
 
   const costs = deriveCostsFromQuote(quote);
 
   const date = fmtMonthYear(quote.createdAt);
 
-  const totalToShow = costs.total ?? quote.totalMinUsd ?? null;
-  const totalToPay = (costs as any).totalToPay ?? totalToShow;
-  const ivaToShow = (costs as any).iva ?? null;
+  const totalToShow = preset?.totalUsd ?? costs.total ?? quote.totalMinUsd ?? null;
+  const totalToPay = preset?.totalUsd ?? ((costs as any).totalToPay ?? totalToShow);
+  const ivaToShow = preset ? null : ((costs as any).iva ?? null);
   const fobLabel = quote.mode === "budget" ? "EXW" : "FOB";
 
   // Código NCM real (se muestra en la plantilla como "9506.91.00.139W").
@@ -649,7 +654,7 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
         <div class="ncm-description">${htmlEscape(classificationDesc)}</div>
         <div class="ncm-code">${htmlEscape(classificationCode)}</div>
 
-        <div class="cost-breakdown">
+        <div class="cost-breakdown">${preset?.lines ? preset.lines.map((l) => `<div class="cost-item ${l.cls}"><span class="label">${htmlEscape(l.label)}</span><span class="value">${htmlEscape(l.value)}</span></div>`).join("") : `
           <div class="cost-item main"><span class="label">${htmlEscape(fobLabel)}<span class="blue-mark">*</span>:</span><span class="value">${costs.fobTotal != null ? fmtUsdEs(costs.fobTotal) : "—"}</span></div>
           <div class="cost-item main"><span class="label">${htmlEscape(fleteLabel)}:</span><span class="value">${costs.flete != null ? fmtUsdEs(costs.flete) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Seguro internacional:</span><span class="value">${costs.seguro != null ? fmtUsdEs(costs.seguro) : "—"}</span></div>
@@ -673,7 +678,7 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
           <div class="cost-item main"><span class="label">Gastos transferencia intl<span class="blue-mark">*</span>:</span><span class="value">${costs.transferencia != null && costs.transferencia > 0 ? fmtUsdEs(costs.transferencia) : "—"}</span></div>
           <div class="cost-item total"><span class="label">TOTAL:</span><span class="value">${totalToShow != null ? fmtUsdEs(totalToShow) : "—"}</span></div>
           <div class="cost-item iva-total"><span class="label">IVA:</span><span class="value">${ivaToShow != null ? fmtUsdEs(ivaToShow) : "—"}</span></div>
-          <div class="cost-item grand-total"><span class="label">TOTAL A PAGAR:</span><span class="value">${totalToPay != null ? fmtUsdEs(totalToPay) : "—"}</span></div>
+          <div class="cost-item grand-total"><span class="label">TOTAL A PAGAR:</span><span class="value">${totalToPay != null ? fmtUsdEs(totalToPay) : "—"}</span></div>`}
         </div>
         <p class="blue-footnote"><span class="blue-mark">*</span> Ítems a tipo de cambio informal (blue).</p>
       </div>

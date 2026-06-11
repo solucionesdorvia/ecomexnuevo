@@ -41,6 +41,12 @@ const HERO_SUGGESTIONS = [
     message:
       "Quiero importar un ómnibus EQ68206X6 para transporte de pasajeros (vehículo automóvil para 10 o más personas, incluido el conductor), con motor diésel. 1 unidad desde China, precio FOB USD 93.500.",
   },
+  {
+    title: "Alfa Romeo Giulia",
+    hint: "1 unidad · Italia · USD 31.000",
+    message:
+      "Quiero importar un automóvil Alfa Romeo Giulia, vehículo sedán de pasajeros con motor naftero. 1 unidad desde Italia, precio FOB USD 31.000.",
+  },
 ];
 
 function stripMessages(s: CaseState): CaseSnapshot {
