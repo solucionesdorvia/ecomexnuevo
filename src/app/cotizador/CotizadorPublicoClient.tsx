@@ -24,28 +24,22 @@ const QUALIFICATIONS = [
 
 const HERO_SUGGESTIONS = [
   {
-    title: "iPhone 16 Pro",
-    hint: "1 unidad · EE.UU. · USD 1.200",
+    title: "Torno paralelo CS6266C",
+    hint: "1 unidad · China · USD 12.750",
     message:
-      "Quiero importar un iPhone 16 Pro, smartphone Apple con pantalla Super Retina XDR OLED 6.3\", chip A18 Pro, cámara triple 48MP con zoom óptico 5×, 5G. 1 unidad desde EE.UU., precio FOB USD 1.200.",
+      "Quiero importar un torno paralelo CS6266C x 2000, máquina herramienta industrial que trabaja metal por arranque de viruta (torno horizontal de bancada). 1 unidad desde China, precio FOB USD 12.750.",
   },
   {
-    title: "Proyector Full HD para PC",
-    hint: "1 unidad · China · USD 175",
+    title: "Cosechadora John Deere S680",
+    hint: "1 unidad · EE.UU. · USD 124.900",
     message:
-      "Quiero importar un proyector de video Full HD 1080p para conectar a PC o laptop, 3800 lúmenes, entrada HDMI y USB, sin sintonizador de TV incorporado. 1 unidad desde China, precio FOB USD 175.",
+      "Quiero importar una cosechadora-trilladora autopropulsada John Deere S680 (usada, año 2016), máquina agrícola para la cosecha de granos. 1 unidad desde EE.UU., precio FOB USD 124.900.",
   },
   {
-    title: "Notebook Intel Core i5",
-    hint: "1 unidad · China · USD 440",
+    title: "Ómnibus EQ68206X6",
+    hint: "1 unidad · China · USD 93.500",
     message:
-      "Quiero importar una notebook computadora portátil con procesador Intel Core i5 de 12ª generación, 16 GB RAM DDR4, SSD 512 GB, pantalla 15.6\", teclado retroiluminado, sin sistema operativo. 1 unidad desde China, precio FOB USD 440.",
-  },
-  {
-    title: "Smart TV 55\" 4K",
-    hint: "1 unidad · China · USD 310",
-    message:
-      "Quiero importar un televisor Smart TV LED 55 pulgadas 4K UHD con sistema Android TV, Wi-Fi, Bluetooth, acceso a Netflix y YouTube, sintonizador TDT integrado. 1 unidad desde China, precio FOB USD 310.",
+      "Quiero importar un ómnibus EQ68206X6 para transporte de pasajeros (vehículo automóvil para 10 o más personas, incluido el conductor), con motor diésel. 1 unidad desde China, precio FOB USD 93.500.",
   },
 ];
 
