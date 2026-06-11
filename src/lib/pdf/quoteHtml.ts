@@ -537,6 +537,11 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
     .cost-item.iva-total { color: var(--ecomex-red); font-weight: 700; font-size: 14px; }
     .cost-item.grand-total { font-weight: 700; font-size: 15px; color: var(--ecomex-blue); }
     .cost-item .blue-mark { color: var(--ecomex-red); font-weight: 700; margin-left: 2px; }
+    /* Modo compacto para costeos detallados (muchas líneas, ej. preset Forward) */
+    .cost-breakdown--compact { font-size: 12px; }
+    .cost-breakdown--compact .cost-item { padding: 1.4px 0; }
+    .cost-breakdown--compact .cost-item.sub { font-size: 10.5px; }
+    .cost-breakdown--compact .cost-item.grand-total { margin-top: 7px; padding-top: 7px; border-top: 2px solid var(--ecomex-blue); font-size: 14px; }
     .blue-footnote { font-size: 10px; color: var(--text-light); margin-top: 10px; font-style: italic; }
 
     .page-items { display:flex; flex-direction:column; }
@@ -654,7 +659,7 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
         <div class="ncm-description">${htmlEscape(classificationDesc)}</div>
         <div class="ncm-code">${htmlEscape(classificationCode)}</div>
 
-        <div class="cost-breakdown">${preset?.lines ? preset.lines.map((l) => `<div class="cost-item ${l.cls}"><span class="label">${htmlEscape(l.label)}</span><span class="value">${htmlEscape(l.value)}</span></div>`).join("") : `
+        <div class="cost-breakdown${preset?.lines ? " cost-breakdown--compact" : ""}">${preset?.lines ? preset.lines.map((l) => `<div class="cost-item ${l.cls}"><span class="label">${htmlEscape(l.label)}</span><span class="value">${htmlEscape(l.value)}</span></div>`).join("") : `
           <div class="cost-item main"><span class="label">${htmlEscape(fobLabel)}<span class="blue-mark">*</span>:</span><span class="value">${costs.fobTotal != null ? fmtUsdEs(costs.fobTotal) : "—"}</span></div>
           <div class="cost-item main"><span class="label">${htmlEscape(fleteLabel)}:</span><span class="value">${costs.flete != null ? fmtUsdEs(costs.flete) : "—"}</span></div>
           <div class="cost-item main"><span class="label">Seguro internacional:</span><span class="value">${costs.seguro != null ? fmtUsdEs(costs.seguro) : "—"}</span></div>
