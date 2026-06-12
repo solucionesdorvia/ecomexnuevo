@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { sendEmail } from "@/lib/email/sendEmail";
+import { writeAuditLog } from "@/lib/audit/log";
 import { cookies } from "next/headers";
 import { rateLimitByIp } from "@/lib/rateLimit";
 
@@ -51,6 +52,23 @@ export async function POST(req: Request) {
   } catch {
     // Silent — don't block response if lead save fails
   }
+
+  // Guardar la consulta completa (nombre, mensaje, etc.) para verla en el panel
+  // y no perder ningún contacto aunque el email falle. Best-effort.
+  await writeAuditLog({
+    entityType: "contact",
+    entityId: body.email.trim().toLowerCase(),
+    action: "contact_submitted",
+    payload: {
+      nombre: body.nombre?.trim() ?? "",
+      empresa: body.empresa?.trim() ?? "",
+      email: body.email.trim(),
+      telefono: body.telefono?.trim() ?? "",
+      web: body.web?.trim() ?? "",
+      mensaje: body.mensaje?.trim() ?? "",
+      anonId,
+    },
+  });
 
   const operatorEmail = process.env.OPERATOR_EMAIL ?? "info@e-comex.com.ar";
   const nombre = esc(body.nombre?.trim() ?? "");

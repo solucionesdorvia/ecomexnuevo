@@ -39,6 +39,13 @@ export const APP_NAV_ITEMS: AppNavItem[] = [
     description: "Pipeline completo de importaciones.",
   },
   {
+    href: "/app/consultas",
+    label: "Consultas",
+    icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+    group: "operations",
+    description: "Mensajes del formulario de contacto del sitio.",
+  },
+  {
     href: "/app/documentos",
     label: "Documentos",
     icon: "M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z",
