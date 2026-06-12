@@ -18,7 +18,6 @@ const ANON_QUOTE_KEY = "ecomex_pq";
 const QUALIFICATIONS = [
   "Ya definí el producto que quiero importar",
   "Sé cuántas unidades (o cuánto peso) necesito",
-  "Tengo identificado el proveedor o el país de origen",
   "Estoy evaluando esta operación concretamente, no solo explorando",
 ] as const;
 
