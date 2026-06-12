@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { requireRole } from "@/lib/auth/session";
 import { prisma } from "@/lib/db";
 import { SystemPage } from "@/components/app/SystemPage";
+import { DeleteConsultaButton } from "./DeleteConsultaButton";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -87,7 +88,10 @@ export default async function ConsultasPage() {
                     </p>
                     {empresa && <p className="mt-0.5 text-[12px] text-[#5a6577]">{empresa}</p>}
                   </div>
-                  <span className="shrink-0 text-[11px] text-[#4a5568]">{fmtFecha(r.createdAt)}</span>
+                  <div className="flex shrink-0 items-center gap-3">
+                    <span className="text-[11px] text-[#4a5568]">{fmtFecha(r.createdAt)}</span>
+                    <DeleteConsultaButton id={r.id} />
+                  </div>
                 </div>
 
                 <div className="grid gap-px bg-white/[0.03] sm:grid-cols-3">
