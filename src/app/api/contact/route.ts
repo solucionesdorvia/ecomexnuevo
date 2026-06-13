@@ -85,37 +85,60 @@ export async function POST(req: Request) {
   const mensaje = esc(body.mensaje?.trim() ?? "");
   const emailDisplay = esc(body.email.trim());
 
+  const fila = (label: string, value: string) =>
+    `<tr>
+      <td style="padding:11px 0;font-size:13px;color:#7a8699;width:110px;vertical-align:top;border-bottom:1px solid #eef1f5;">${label}</td>
+      <td style="padding:11px 0;font-size:14px;color:#1f2733;border-bottom:1px solid #eef1f5;">${value}</td>
+    </tr>`;
+
   const html = `<!DOCTYPE html>
 <html lang="es">
-<head><meta charset="UTF-8" /></head>
-<body style="margin:0;padding:0;background:#0a0f1a;font-family:'Segoe UI',Arial,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#0a0f1a;padding:32px 16px;">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body style="margin:0;padding:0;background:#eef1f6;font-family:Arial,Helvetica,sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef1f6;padding:32px 16px;">
     <tr><td align="center">
-      <table width="600" cellpadding="0" cellspacing="0" style="background:#0d1525;border-radius:16px;border:1px solid rgba(24,195,214,0.15);overflow:hidden;max-width:600px;">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:14px;overflow:hidden;border:1px solid #e3e7ee;">
         <tr>
-          <td style="background:linear-gradient(135deg,#18C3D6,#0ea5b9);padding:28px 32px;">
-            <p style="margin:0;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#030d18;opacity:0.7;">E-COMEX · Landing</p>
-            <h1 style="margin:8px 0 0;font-size:22px;font-weight:800;color:#030d18;">Nuevo contacto desde la web</h1>
+          <td style="background:#142a5c;padding:20px 30px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+              <td style="font-size:19px;font-weight:bold;color:#ffffff;letter-spacing:0.5px;">E-COMEX</td>
+              <td align="right" style="font-size:10px;font-weight:bold;color:#9fb2d6;text-transform:uppercase;letter-spacing:0.14em;">Nuevo contacto</td>
+            </tr></table>
           </td>
         </tr>
         <tr>
-          <td style="padding:28px 32px;">
-            <table width="100%" cellpadding="0" cellspacing="0" style="border:1px solid rgba(255,255,255,0.06);border-radius:10px;overflow:hidden;margin-bottom:20px;">
-              ${nombre ? `<tr style="background:rgba(255,255,255,0.03);"><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;" width="30%">Nombre</td><td style="padding:10px 16px;font-size:13px;color:#e2e8f0;">${nombre}</td></tr>` : ""}
-              ${empresa ? `<tr><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;border-top:1px solid rgba(255,255,255,0.04);">Empresa</td><td style="padding:10px 16px;font-size:13px;color:#e2e8f0;border-top:1px solid rgba(255,255,255,0.04);">${empresa}</td></tr>` : ""}
-              <tr><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;border-top:1px solid rgba(255,255,255,0.04);">Email</td><td style="padding:10px 16px;font-size:13px;color:#18C3D6;border-top:1px solid rgba(255,255,255,0.04);"><a href="mailto:${emailDisplay}" style="color:#18C3D6;">${emailDisplay}</a></td></tr>
-              ${telefono ? `<tr><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;border-top:1px solid rgba(255,255,255,0.04);">Teléfono</td><td style="padding:10px 16px;font-size:13px;color:#e2e8f0;border-top:1px solid rgba(255,255,255,0.04);"><a href="tel:${telefono}" style="color:#e2e8f0;">${telefono}</a></td></tr>` : ""}
-              ${web ? `<tr><td style="padding:10px 16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;border-top:1px solid rgba(255,255,255,0.04);">Web</td><td style="padding:10px 16px;font-size:13px;color:#18C3D6;border-top:1px solid rgba(255,255,255,0.04);"><a href="${web}" target="_blank" style="color:#18C3D6;">${web}</a></td></tr>` : ""}
+          <td style="padding:28px 30px 6px;">
+            <p style="margin:0;font-size:13px;color:#7a8699;">Llegó una nueva consulta desde el formulario del sitio:</p>
+            <h1 style="margin:8px 0 0;font-size:21px;font-weight:bold;color:#142a5c;">${nombre || emailDisplay}</h1>
+            ${empresa ? `<p style="margin:5px 0 0;font-size:14px;color:#7a8699;">${empresa}</p>` : ""}
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:16px 30px 4px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+              ${fila("Email", `<a href="mailto:${emailDisplay}" style="color:#1565c0;text-decoration:none;">${emailDisplay}</a>`)}
+              ${telefono ? fila("Teléfono", `<a href="tel:${telefono}" style="color:#1f2733;text-decoration:none;">${telefono}</a>`) : ""}
+              ${empresa ? fila("Empresa", empresa) : ""}
+              ${web ? fila("Web", `<a href="${web}" target="_blank" style="color:#1565c0;text-decoration:none;">${web}</a>`) : ""}
             </table>
-            ${mensaje ? `<p style="margin:0 0 8px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#64748b;">Mensaje</p><p style="margin:0;font-size:13px;color:#94a3b8;line-height:1.6;background:rgba(255,255,255,0.03);border-radius:8px;padding:12px 16px;border-left:3px solid #18C3D6;">${mensaje.replace(/&#x27;/g, "'").replace(/\n/g, "<br>")}</p>` : ""}
+          </td>
+        </tr>
+        ${mensaje ? `<tr><td style="padding:18px 30px 4px;">
+            <p style="margin:0 0 7px;font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:0.08em;color:#9aa3b2;">Mensaje</p>
+            <div style="background:#f4f6f9;border-left:3px solid #18C3D6;border-radius:6px;padding:14px 16px;font-size:14px;color:#3a4250;line-height:1.65;">${mensaje.replace(/&#x27;/g, "'").replace(/\n/g, "<br>")}</div>
+          </td></tr>` : ""}
+        <tr>
+          <td style="padding:24px 30px 28px;">
+            <a href="mailto:${emailDisplay}" style="display:inline-block;background:#18C3D6;color:#06222a;font-size:14px;font-weight:bold;text-decoration:none;padding:12px 24px;border-radius:8px;">Responder a ${nombre || "la consulta"}</a>
           </td>
         </tr>
         <tr>
-          <td style="padding:16px 32px;border-top:1px solid rgba(255,255,255,0.05);">
-            <p style="margin:0;font-size:11px;color:#475569;text-align:center;">E-COMEX · info@e-comex.com.ar · (+54) 11 2626-8316</p>
+          <td style="background:#f7f9fc;padding:16px 30px;border-top:1px solid #eef1f5;">
+            <p style="margin:0;font-size:11px;color:#9aa3b2;">E-COMEX · info@e-comex.com.ar · (+54) 11 2626-8316 · www.e-comex.com.ar</p>
           </td>
         </tr>
       </table>
+      <p style="margin:14px 0 0;font-size:11px;color:#aab1bd;">Aviso automático del formulario de e-comex.com.ar</p>
     </td></tr>
   </table>
 </body>
