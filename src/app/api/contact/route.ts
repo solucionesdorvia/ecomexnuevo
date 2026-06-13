@@ -70,7 +70,14 @@ export async function POST(req: Request) {
     },
   });
 
-  const operatorEmail = process.env.OPERATOR_EMAIL ?? "info@e-comex.com.ar";
+  // Destinatario(s) del aviso. OPERATOR_EMAIL puede tener varios separados por coma
+  // (ej. "info@e-comex.com.ar,andres@e-comex.com.ar") y se notifica a todos.
+  const operatorRaw = process.env.OPERATOR_EMAIL ?? "info@e-comex.com.ar";
+  const recipients = operatorRaw
+    .split(",")
+    .map((s) => s.trim())
+    .filter((s) => s.includes("@"));
+  const operatorTo: string | string[] = recipients.length ? recipients : "info@e-comex.com.ar";
   const nombre = esc(body.nombre?.trim() ?? "");
   const empresa = esc(body.empresa?.trim() ?? "");
   const telefono = esc(body.telefono?.trim() ?? "");
@@ -115,7 +122,7 @@ export async function POST(req: Request) {
 </html>`;
 
   const emailResult = await sendEmail({
-    to: operatorEmail,
+    to: operatorTo,
     subject: `Nuevo contacto desde la web — ${nombre || emailDisplay}`,
     html,
   });
