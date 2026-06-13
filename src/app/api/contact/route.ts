@@ -72,12 +72,15 @@ export async function POST(req: Request) {
 
   // Destinatario(s) del aviso. OPERATOR_EMAIL puede tener varios separados por coma
   // (ej. "info@e-comex.com.ar,andres@e-comex.com.ar") y se notifica a todos.
-  const operatorRaw = process.env.OPERATOR_EMAIL ?? "info@e-comex.com.ar";
+  const DEFAULT_RECIPIENTS = "hernan@e-comex.com.ar,info@e-comex.com.ar,andres@e-comex.com.ar";
+  const operatorRaw = process.env.OPERATOR_EMAIL ?? DEFAULT_RECIPIENTS;
   const recipients = operatorRaw
     .split(",")
     .map((s) => s.trim())
     .filter((s) => s.includes("@"));
-  const operatorTo: string | string[] = recipients.length ? recipients : "info@e-comex.com.ar";
+  const operatorTo: string | string[] = recipients.length
+    ? recipients
+    : DEFAULT_RECIPIENTS.split(",");
   const nombre = esc(body.nombre?.trim() ?? "");
   const empresa = esc(body.empresa?.trim() ?? "");
   const telefono = esc(body.telefono?.trim() ?? "");
