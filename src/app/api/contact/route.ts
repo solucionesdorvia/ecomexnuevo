@@ -125,7 +125,7 @@ export async function POST(req: Request) {
         </tr>
         ${mensaje ? `<tr><td style="padding:18px 30px 4px;">
             <p style="margin:0 0 7px;font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:0.08em;color:#9aa3b2;">Mensaje</p>
-            <div style="background:#f4f6f9;border-left:3px solid #18C3D6;border-radius:6px;padding:14px 16px;font-size:14px;color:#3a4250;line-height:1.65;">${mensaje.replace(/&#x27;/g, "'").replace(/\n/g, "<br>")}</div>
+            <div style="background:#f4f6f9;border-left:3px solid #18C3D6;border-radius:6px;padding:14px 16px;font-size:14px;color:#3a4250;line-height:1.65;word-break:break-word;overflow-wrap:break-word;white-space:pre-wrap;">${mensaje.replace(/&#x27;/g, "'")}</div>
           </td></tr>` : ""}
         <tr>
           <td style="padding:24px 30px 28px;">
