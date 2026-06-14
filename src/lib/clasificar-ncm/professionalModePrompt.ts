@@ -70,6 +70,29 @@ export const NCM_AMBIGUITY_CLASSIFIER_BLOCK = `
 5. Si no hay dos posiciones reales pero la confianza es baja, usá reason **generic_low_confidence** y explicá en decisive_field qué falta para encuadrar.
 `;
 
+/**
+ * Rigor de despachante — reglas DURAS de confianza, adaptadas de la metodología
+ * del clasificador experto (RGI + exclusiones documentadas + corte de confianza).
+ * Se suma a los prompts de classifyWithAI (libre y evidencia).
+ */
+export const NCM_EXPERT_RIGOR_BLOCK = `
+=== RIGOR DE DESPACHANTE (REGLAS DURAS DE CONFIANZA) ===
+
+Estas reglas son OBLIGATORIAS y prevalecen al fijar "confidence":
+
+1. **EXCLUSIONES DOCUMENTADAS (obligatorio):** antes de cerrar, descartá explícitamente al menos **2 posiciones** que podrían competir, con motivo concreto (nota legal, RGI 3a/3b, función principal, estado físico). Cargalas en "discarded" (modo evidencia) o nombralas en "rationale" (modo libre).
+   → Si **NO** documentás al menos una exclusión real, la confianza **MÁXIMA es 0.69**.
+
+2. **NADA DE RESIDUALES A LA LIGERA:** no elijas posiciones residuales ("los demás", "NES", "no expresados ni comprendidos") mientras exista una posición **específica** plausible que no hayas descartado con texto/nota. Si igual usás una residual sin descartar la específica → confianza **MÁXIMA 0.69**.
+
+3. **CORTE DE CONFIANZA < 0.70:** si tu confianza final es menor a 0.70, **NO** la presentes como definitiva → needs_clarification = true (o ambiguous = true en modo evidencia) y formulá **1–3 preguntas técnicas específicas** (composición % en peso, función principal, estado terminado/desmontado, potencia/dimensiones), explicando por qué cada una desempata.
+
+4. **RÚBRICA DE CONFIANZA** (sumá, tope 1.0): coincidencia literal con la descripción legal **+0.40** · confirmada por nota legal/RGI sin contradicción **+0.20** · RGI aplicada sin ambigüedad **+0.20** · datos técnicos completos **+0.10** · exclusiones claras descartadas **+0.10**. Sé honesto: si falta evidencia, la confianza baja.
+
+5. **DEFENDIBLE:** la clasificación tiene que poder defenderse ante un colega despachante citando función principal + RGI + exclusiones. Si no lo es, rehacé el razonamiento.
+
+`;
+
 /** Bloque para classifyWithAI (libre y evidencia): validación de candidatos y confianza. */
 export const NCM_CLASSIFIER_PROFESSIONAL_BLOCK = `
 === MODO PROFESIONAL (ECOMEX) ===
