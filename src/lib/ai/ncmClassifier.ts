@@ -205,6 +205,19 @@ function uniqueTerms(arr: string[]) {
 /** Con ambigüedad abierta no se debe mostrar confianza “alta” artificial. */
 const AMBIGUITY_OPEN_CONF_CAP = 0.68;
 
+/**
+ * Rigor de despachante reforzado en código (no solo en el prompt).
+ * - EXPERT_CONF_GATE: por debajo de esto no se presenta una clasificación como
+ *   definitiva → se pide aclaración (regla "confianza < 70% → preguntar").
+ * - NO_EXCLUSIONS_CONF_CAP: sin exclusiones documentadas, la confianza no puede
+ *   superar este valor (regla "si no descartás, máx 69%"). Activable por env
+ *   NCM_REQUIRE_EXCLUSIONS=1 (off por defecto para no penalizar productos simples
+ *   y claros donde el modelo no lista descartes).
+ */
+const EXPERT_CONF_GATE = 0.7;
+const NO_EXCLUSIONS_CONF_CAP = 0.69;
+const REQUIRE_DOCUMENTED_EXCLUSIONS = process.env.NCM_REQUIRE_EXCLUSIONS === "1";
+
 function collectCompetingCodesFree(ncm_code: string, candidates: NcmCandidate[]): string[] {
   const seen = new Set<string>();
   const out: string[] = [];
@@ -585,6 +598,25 @@ export async function classifyWithAI(
         confOut = Math.min(confOut, AMBIGUITY_OPEN_CONF_CAP);
       }
 
+      // Refuerzo en código del rigor de despachante (no confiar solo en el prompt).
+      // Eximimos los casos con piso legal de wearable (8517.62), que se fijan a propósito.
+      const wearableFloorEv =
+        wearable8527Fix ||
+        (isWearableConnectedDevice(text) && /^8517\.62/.test(ncm_code) && ncm_code !== "9999.99.99");
+      if (
+        REQUIRE_DOCUMENTED_EXCLUSIONS &&
+        ncm_code !== "9999.99.99" &&
+        discarded.length === 0 &&
+        !wearableFloorEv
+      ) {
+        confOut = Math.min(confOut, NO_EXCLUSIONS_CONF_CAP);
+      }
+      let needsClarEv = followUp.length > 0 || ambiguous;
+      if (ncm_code !== "9999.99.99" && !wearableFloorEv && confOut < EXPERT_CONF_GATE) {
+        needsClarEv = true;
+        if (!followUp.length) followUp = [NCM_AMBIGUITY_GENERIC_FALLBACK_QUESTION];
+      }
+
       return {
         ncm_code,
         confidence: confOut,
@@ -596,7 +628,7 @@ export async function classifyWithAI(
           ? discarded.map((d) => ({ code: d.ncm, reason: d.reason }))
           : undefined,
         missing_info_questions: followUp.length ? followUp : undefined,
-        needs_clarification: followUp.length > 0 || ambiguous,
+        needs_clarification: needsClarEv,
         ambiguity: ambEv,
       };
     }
@@ -751,6 +783,25 @@ export async function classifyWithAI(
         reason: String(d?.reason ?? "").trim() || "—",
       }))
       .filter((d) => ncmDigits(d.ncm).length >= 6 && d.ncm !== "9999.99.99");
+
+    // Refuerzo en código del rigor de despachante (igual que en modo evidencia).
+    const wearableFloorFree =
+      isWearableConnectedDevice(text) && /^8517\.62/.test(ncm_code) && ncm_code !== "9999.99.99";
+    if (
+      REQUIRE_DOCUMENTED_EXCLUSIONS &&
+      ncm_code !== "9999.99.99" &&
+      discardedModel.length === 0 &&
+      !wearableFloorFree
+    ) {
+      confidence = Math.min(confidence, NO_EXCLUSIONS_CONF_CAP);
+    }
+    if (ncm_code !== "9999.99.99" && !wearableFloorFree && confidence < EXPERT_CONF_GATE) {
+      needs_clarification = true;
+      ambiguous = true;
+      if (!missing_info_questions || missing_info_questions.length === 0) {
+        missing_info_questions = [NCM_AMBIGUITY_GENERIC_FALLBACK_QUESTION];
+      }
+    }
 
     return {
       ncm_code,
