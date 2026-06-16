@@ -1,5 +1,6 @@
 import { buildNcmKnowledgeEvidence } from "@/lib/ncm/knowledge/ncmKnowledgeEvidence";
 import { openaiJson } from "@/lib/ai/openaiClient";
+import { lookupProductNcm } from "@/lib/ncm/productCatalog";
 import {
   ambiguityQuestionsList,
   buildFallbackAmbiguityFromCodes,
@@ -417,6 +418,29 @@ export async function classifyWithAI(
     skipNcmKnowledge?: boolean;
   }
 ): Promise<NcmClassification> {
+  // Reuso del catálogo curado: si ya hay una NCM VERIFICADA para este producto,
+  // la usamos directamente (más rápido y consistente, sin llamar a la IA).
+  if (process.env.NCM_CATALOG_REUSE !== "0") {
+    try {
+      const hit = await lookupProductNcm(text);
+      if (hit?.verified && hit.ncm && hit.ncm !== "9999.99.99") {
+        const code = formatNcm(hit.ncm);
+        const heading = code.replace(/\D/g, "").slice(0, 4);
+        return {
+          ncm_code: code,
+          confidence: Math.max(hit.confidence ?? 0.9, 0.9),
+          rationale: "Reutilizado del catálogo verificado de E-COMEX.",
+          candidates: [],
+          ambiguous: false,
+          needs_clarification: false,
+          hs_heading: heading.length === 4 ? heading : undefined,
+        };
+      }
+    } catch {
+      // catálogo no disponible: seguir con la clasificación normal
+    }
+  }
+
   let evidence = Array.isArray(opts?.candidates) ? opts!.candidates.slice(0, 12) : [];
   let evidenceNoteExtra = opts?.evidenceNote ?? "";
 
