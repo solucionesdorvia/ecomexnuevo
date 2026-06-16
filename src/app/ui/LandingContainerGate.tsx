@@ -58,6 +58,10 @@ function Navbar() {
             <a href="#contacto" className="rounded-lg px-5 py-2 text-[13px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
               Hablar con especialista
             </a>
+            <a href="/app" className="ml-1 inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-[13px] font-semibold text-white transition-colors hover:opacity-90" style={{ border: `1px solid ${P.cyan}` }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3" /></svg>
+              Ingresar
+            </a>
           </div>
         </div>
 
@@ -77,6 +81,10 @@ function Navbar() {
             </a>
             <a href="#contacto" onClick={() => setMenuOpen(false)} className="rounded-lg py-3 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
               Hablar con un especialista
+            </a>
+            <a href="/app" onClick={() => setMenuOpen(false)} className="inline-flex items-center justify-center gap-1.5 rounded-lg py-3 text-center text-[14px] font-semibold text-white" style={{ border: `1px solid ${P.cyan}` }}>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3" /></svg>
+              Ingresar a la plataforma
             </a>
           </div>
         </div>
