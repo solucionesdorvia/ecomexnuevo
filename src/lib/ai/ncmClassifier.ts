@@ -1,6 +1,35 @@
 import { buildNcmKnowledgeEvidence } from "@/lib/ncm/knowledge/ncmKnowledgeEvidence";
 import { openaiJson } from "@/lib/ai/openaiClient";
+import { anthropicJson, anthropicAvailable } from "@/lib/ai/anthropicClient";
 import { lookupProductNcm } from "@/lib/ncm/productCatalog";
+
+/**
+ * Elige proveedor para clasificar: Anthropic (Opus) si hay ANTHROPIC_API_KEY,
+ * salvo que NCM_CLASSIFIER_PROVIDER fuerce "openai". Si Claude falla, cae a OpenAI.
+ */
+async function classifierJson<T>(opts: {
+  system: string;
+  user: string;
+  openaiModel: string;
+  timeoutMs: number;
+}): Promise<T> {
+  const provider = process.env.NCM_CLASSIFIER_PROVIDER;
+  const useAnthropic = provider === "anthropic" || (provider !== "openai" && anthropicAvailable());
+  if (useAnthropic) {
+    try {
+      return (await anthropicJson<any>({ system: opts.system, user: opts.user, timeoutMs: opts.timeoutMs })) as T;
+    } catch (e) {
+      if (process.env.NCM_DEBUG === "1") console.warn("[ncmClassifier] Anthropic falló, uso OpenAI:", e);
+      // fallback a OpenAI
+    }
+  }
+  return (await openaiJson<any>({
+    system: opts.system,
+    user: opts.user,
+    model: opts.openaiModel,
+    timeoutMs: opts.timeoutMs,
+  })) as T;
+}
 import {
   ambiguityQuestionsList,
   buildFallbackAmbiguityFromCodes,
@@ -497,7 +526,7 @@ export async function classifyWithAI(
       console.log("[ncmClassifier] calling OpenAI for:", text.slice(0, 80), evidence.length ? "(evidence)" : "");
     }
 
-    const r = await openaiJson<{
+    const r = await classifierJson<{
       ncm_code?: string;
       confidence?: number;
       ambiguous?: boolean;
@@ -520,7 +549,7 @@ export async function classifyWithAI(
     }>({
       system,
       user,
-      model: opts?.model ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
+      openaiModel: opts?.model ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
       timeoutMs: opts?.timeoutMs ?? 45_000,
     });
 
