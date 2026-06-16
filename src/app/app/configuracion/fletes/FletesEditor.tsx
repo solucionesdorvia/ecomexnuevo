@@ -1,17 +1,19 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { FreightFieldMeta, FreightRatesConfig } from "@/lib/quote/freightRatesConfig";
+
+type FieldMeta = { key: string; label: string; group: string; unit: string };
+type NumConfig = Record<string, number>;
 
 type Props = {
-  initialConfig: FreightRatesConfig;
-  defaults: FreightRatesConfig;
-  fields: FreightFieldMeta[];
+  initialConfig: NumConfig;
+  defaults: NumConfig;
+  fields: FieldMeta[];
+  groupOrder: string[];
+  endpoint: string;
 };
 
-const GROUP_ORDER = ["Aéreo", "Marítimo FCL", "Marítimo LCL", "Almacenaje"] as const;
-
-export function FletesEditor({ initialConfig, defaults, fields }: Props) {
+export function FletesEditor({ initialConfig, defaults, fields, groupOrder, endpoint }: Props) {
   const [values, setValues] = useState<Record<string, string>>(() =>
     Object.fromEntries(fields.map((f) => [f.key, String(initialConfig[f.key] ?? defaults[f.key])]))
   );
@@ -19,11 +21,11 @@ export function FletesEditor({ initialConfig, defaults, fields }: Props) {
   const [msg, setMsg] = useState<{ kind: "ok" | "err"; text: string } | null>(null);
 
   const grouped = useMemo(() => {
-    const map = new Map<string, FreightFieldMeta[]>();
-    for (const g of GROUP_ORDER) map.set(g, []);
+    const map = new Map<string, FieldMeta[]>();
+    for (const g of groupOrder) map.set(g, []);
     for (const f of fields) (map.get(f.group) ?? map.set(f.group, []).get(f.group)!).push(f);
     return map;
-  }, [fields]);
+  }, [fields, groupOrder]);
 
   function setField(key: string, raw: string) {
     setValues((v) => ({ ...v, [key]: raw }));
@@ -49,7 +51,7 @@ export function FletesEditor({ initialConfig, defaults, fields }: Props) {
     setSaving(true);
     setMsg(null);
     try {
-      const res = await fetch("/api/admin/fletes", {
+      const res = await fetch(endpoint, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

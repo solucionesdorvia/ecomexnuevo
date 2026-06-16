@@ -74,9 +74,9 @@ export default async function ConfiguracionPage() {
               className="flex items-center justify-between gap-3 px-5 py-4 transition hover:bg-white/[0.02]"
             >
               <div className="min-w-0">
-                <p className="text-[14px] font-semibold text-white">Tarifas de flete</p>
+                <p className="text-[14px] font-semibold text-white">Tarifas y gastos</p>
                 <p className="mt-0.5 text-[12px] text-[#5a6577]">
-                  Editá los valores de flete (aéreo, FCL, LCL, almacenaje) que usa el cotizador.
+                  Editá el flete (aéreo, FCL, LCL) y los gastos de importación (agencia, terminal, fiscal…) que usa el cotizador.
                 </p>
               </div>
               <span className="shrink-0 text-[#18C3D6]" aria-hidden>
