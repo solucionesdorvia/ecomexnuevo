@@ -12,8 +12,8 @@ export function BrandLogo({
     <Image
       src="/brand/ecomex-logo.png"
       alt="E-COMEX"
-      width={576}
-      height={139}
+      width={577}
+      height={77}
       priority={priority}
       className={cn("h-8 w-auto", className)}
     />
