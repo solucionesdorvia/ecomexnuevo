@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/Sheet";
 import { cn } from "@/components/ui/cn";
 import { Icon } from "@/components/ui/Icon";
-import { BrandLogo } from "@/components/BrandLogo";
+import Image from "next/image";
 
 type NavKey =
   | "cotizar"
@@ -67,10 +67,15 @@ export function AppShell({
             >
               <Icon name="menu" size={18} />
             </button>
-            <Link href="/" className="flex items-center gap-3">
-              <span className="rounded-lg bg-white px-2 py-1 shadow-sm">
-                <BrandLogo className="h-6" priority />
-              </span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/brand/ecomex-logo.png"
+                alt="E-COMEX"
+                width={577}
+                height={77}
+                priority
+                className="h-6 w-auto brightness-0 invert opacity-90"
+              />
             </Link>
 
             <label className="hidden min-w-40 max-w-72 flex-1 md:flex">
