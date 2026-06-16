@@ -1,7 +1,5 @@
 import { redirect } from "next/navigation";
 import { getSessionUser } from "@/lib/auth/session";
-import { prisma } from "@/lib/db";
-import { SuppliersCrudClient, type SupplierRow } from "./SuppliersCrudClient";
 
 export const runtime = "nodejs";
 export const metadata = { title: "Proveedores — E-COMEX" };
@@ -9,28 +7,6 @@ export const metadata = { title: "Proveedores — E-COMEX" };
 export default async function ProveedoresPage() {
   const user = await getSessionUser();
   if (!user) redirect("/login");
-
-  const rows = await prisma.supplier.findMany({
-    where: { userId: user.id },
-    orderBy: { name: "asc" },
-    select: {
-      id: true,
-      name: true,
-      country: true,
-      contact: true,
-      createdAt: true,
-      _count: { select: { operations: true } },
-    },
-  }).catch(() => []);
-
-  const initialSuppliers: SupplierRow[] = rows.map((s) => ({
-    id: s.id,
-    name: s.name,
-    country: s.country,
-    contact: s.contact,
-    createdAt: s.createdAt.toISOString(),
-    operationsCount: s._count.operations,
-  }));
 
   return (
     <div className="relative px-safe pb-10 pt-4 sm:p-6 lg:p-8">
@@ -44,10 +20,21 @@ export default async function ProveedoresPage() {
             Proveedores
           </h1>
           <p className="mt-1 text-[13px] text-[#5a6577]">
-            Tus proveedores internacionales. Asocialos a tus operaciones de importación.
+            Proveedores internacionales verificados para tus importaciones.
           </p>
         </div>
-        <SuppliersCrudClient initialSuppliers={initialSuppliers} />
+
+        <div className="flex flex-col items-center justify-center rounded-2xl border border-white/[0.06] bg-[#0B1622] px-6 py-16 text-center">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#18C3D6]/10 text-[#18C3D6]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <p className="mt-4 text-[15px] font-semibold text-white">Próximamente</p>
+          <p className="mt-1.5 max-w-[440px] text-[13px] leading-relaxed text-[#5a6577]">
+            Próximamente vas a ver acá los <span className="text-[#94a3b8]">proveedores destacados de E-COMEX</span>.
+          </p>
+        </div>
       </div>
     </div>
   );
