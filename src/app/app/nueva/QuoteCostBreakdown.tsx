@@ -23,6 +23,8 @@ export type QuoteBreakdown = {
   impuestosTotalMinUsd: number;
   honorariosMinUsd: number;
   arancelSimUsd?: number;
+  gastosImportacionUsd?: number;
+  gastosImportacionLines?: Array<{ label: string; amountUsd: number }>;
   depositoPortuarioMinUsd: number;
   transporteNacionalMinUsd: number;
   transferenciaIntlMinUsd: number;
@@ -263,20 +265,24 @@ function TemplateBreakdown({
           )}
         </div>
 
-        {/* Gestión */}
+        {/* Gestión + gastos de importación */}
         <div className="mt-2">
+          <CostRow label="Honorarios E-COMEX (1% FOB, mín. USD 300)" value={fmtUsd(b.honorariosMinUsd)} />
           <CostRow label="Arancel SIM" value={fmtUsd(b.arancelSimUsd ?? 10)} />
-          <CostRow label="Honorarios (1% FOB, mín. USD 300)" value={fmtUsd(b.honorariosMinUsd)} />
-          <CostRow label="Gastos operativos" value={fmtUsd(b.depositoPortuarioMinUsd)} />
-          <CostRow
-            label="Gastos transporte nacional"
-            value={b.transporteNacionalMinUsd > 0 ? fmtUsd(b.transporteNacionalMinUsd) : "—"}
-          />
-          <CostRow
-            isBlue
-            label="Gastos transferencia intl *"
-            value={b.transferenciaIntlMinUsd > 0 ? fmtUsd(b.transferenciaIntlMinUsd) : "—"}
-          />
+          {typeof b.gastosImportacionUsd === "number" && b.gastosImportacionUsd > 0 && (
+            <>
+              <CostRow label="Gastos de importación" value={fmtUsd(b.gastosImportacionUsd)} />
+              {(b.gastosImportacionLines ?? []).map((g) => (
+                <CostRow key={g.label} isSub label={g.label} value={fmtUsd(g.amountUsd)} />
+              ))}
+            </>
+          )}
+          {b.transporteNacionalMinUsd > 0 && (
+            <CostRow label="Gastos transporte nacional" value={fmtUsd(b.transporteNacionalMinUsd)} />
+          )}
+          {b.transferenciaIntlMinUsd > 0 && (
+            <CostRow isBlue label="Gastos transferencia intl *" value={fmtUsd(b.transferenciaIntlMinUsd)} />
+          )}
         </div>
 
         {/* Totals */}

@@ -3,6 +3,7 @@
 import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
 import { detectOriginZone, estimateUnitDimensions, calcFreightCost, ShippingMode, OriginZone } from "./freightRates";
 import { hydrateFreightConfig } from "./freightRatesConfig";
+import { hydrateImportExpenses, computeImportExpenses } from "./importExpensesConfig";
 
 /**
  * Derecho de importación por defecto cuando no hay dato real de PCRAM.
@@ -158,6 +159,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     honorariosMinUsd: number;
     honorariosMaxUsd: number;
     arancelSimUsd: number;
+    gastosImportacionUsd: number;
+    gastosImportacionLines: Array<{ label: string; amountUsd: number }>;
     depositoPortuarioMinUsd: number;
     depositoPortuarioMaxUsd: number;
     transporteNacionalMinUsd: number;
@@ -185,8 +188,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   /** Régimen recomendado (Courier vs General) — Fase 2. */
   regime?: RegimeAssessment;
 }> {
-  // Carga las tarifas de flete vigentes (defaults ⊕ overrides editados por admin).
-  await hydrateFreightConfig();
+  // Carga tarifas de flete y gastos de importación vigentes (defaults ⊕ overrides admin).
+  await Promise.all([hydrateFreightConfig(), hydrateImportExpenses()]);
 
   if (inputs.mode === "budget") {
     const budget = parseBudgetUsd(inputs.budgetText);
@@ -569,19 +572,28 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
 
   // Tasas reales de gestión/despacho (provistas por el encargado de CE).
   // Honorarios: 1% del valor FOB total, mínimo USD 300. Gastos operativos: USD 200 fijo. Arancel SIM: USD 10 fijo.
-  const GASTOS_OPERATIVOS = 200;
   const ARANCEL_SIM = 10;
   const honorariosMin = Math.max(300, round2(fobTotalMin * 0.01));
   const honorariosMax = Math.max(300, round2(fobTotalMax * 0.01));
-  const depositoMin = GASTOS_OPERATIVOS;
-  const depositoMax = GASTOS_OPERATIVOS;
+
+  // Bloque de gastos de importación (agencia, terminal, fiscal, etc. + IVA servicios).
+  // Para vehículos (cap. 87) suma AVAC/CIVAC y DNRPA.
+  const isVehicleNcm = (() => {
+    const h = ncm ? parseInt(ncm.replace(/\D/g, "").slice(0, 4), 10) : NaN;
+    return h >= 8701 && h <= 8716;
+  })();
+  const importExpenses = computeImportExpenses(isVehicleNcm);
+  const gastosImportacionUsd = importExpenses.totalUsd;
+
+  const depositoMin = 0;
+  const depositoMax = 0;
   const transporteNacMin = 0;
   const transporteNacMax = 0;
   const transferenciaMin = 0;
   const transferenciaMax = 0;
 
-  const gestionMin = honorariosMin + GASTOS_OPERATIVOS + ARANCEL_SIM;
-  const gestionMax = honorariosMax + GASTOS_OPERATIVOS + ARANCEL_SIM;
+  const gestionMin = honorariosMin + ARANCEL_SIM + gastosImportacionUsd;
+  const gestionMax = honorariosMax + ARANCEL_SIM + gastosImportacionUsd;
 
   // CIF + seguro (cifMin2/cifMax2) ya incluye el seguro que también es base imponible.
   // Antes el total usaba cifMin (sin seguro), subestimando el costo. Corregido.
@@ -745,7 +757,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     {
       label: "Gestión / despacho",
       value: moneyRange(round2(gestionMin), round2(gestionMax)),
-      detail: `Honorarios (1% FOB = ${money(round2((honorariosMin + honorariosMax) / 2))}) + Gastos operativos (USD ${GASTOS_OPERATIVOS} fijo).`,
+      detail: `Honorarios E-COMEX (1% FOB = ${money(round2((honorariosMin + honorariosMax) / 2))}) + arancel SIM + gastos de importación (${money(gastosImportacionUsd)}: agencia, terminal, fiscal, etc.).`,
     },
     {
       label: "Total puesto en Argentina",
@@ -806,6 +818,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       honorariosMinUsd: round2(honorariosMin),
       honorariosMaxUsd: round2(honorariosMax),
       arancelSimUsd: ARANCEL_SIM,
+      gastosImportacionUsd: round2(gastosImportacionUsd),
+      gastosImportacionLines: importExpenses.lines,
       depositoPortuarioMinUsd: round2(depositoMin),
       depositoPortuarioMaxUsd: round2(depositoMax),
       transporteNacionalMinUsd: round2(transporteNacMin),
