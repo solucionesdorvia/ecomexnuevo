@@ -3,6 +3,17 @@
 import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
 import { detectOriginZone, estimateUnitDimensions, calcFreightCost, ShippingMode, OriginZone } from "./freightRates";
 import { hydrateFreightConfig } from "./freightRatesConfig";
+
+/**
+ * Derecho de importación por defecto cuando no hay dato real de PCRAM.
+ * Autos de pasajeros (8703) y ómnibus (8702) pagan 35% (excepción nacional de
+ * vehículos, dato público verificable). El resto mantiene el 14% genérico.
+ */
+function defaultDieRate(ncm?: string): number {
+  const head = ncm ? parseInt(ncm.replace(/\D/g, "").slice(0, 4), 10) : NaN;
+  if (head === 8702 || head === 8703) return 0.35;
+  return 0.14;
+}
 import { assessImportRegime, formatRegimeForExplanation, type RegimeAssessment } from "./regime";
 
 /** Detecta si el usuario mencionó explícitamente un modo de transporte. */
@@ -396,7 +407,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
 
   if (pcramTaxes) {
     const teRate = pct("TE") ?? 0.03;
-    const dieRate = pct("DIE") ?? pct("AEC") ?? 0.14;
+    const dieRate = pct("DIE") ?? pct("AEC") ?? defaultDieRate(ncm);
     const ivaRate = pct("IVA") ?? 0.21;
     const ivaAdicRate = pct("IVA ADIC") ?? 0.2;
     const gananciasRate = pct("GANANCIAS") ?? 0;
@@ -494,7 +505,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   } else {
     // Sin tasas PCRAM: usar estructura real de impuestos argentina con tasas promedio.
     // Esto evita mostrar un monto único sin desglose y da una estimación más realista.
-    const dieRateEst   = 0.14;   // Derechos de importación — promedio general
+    const dieRateEst   = defaultDieRate(ncm);   // Derechos: 35% autos/ómnibus, 14% genérico
     const teRateEst    = 0.03;   // Tasa estadística — fija
     const ivaRateEst   = 0.21;   // IVA — estándar
     const ivaAdicRateEst = 0.20; // Percepción IVA adicional — promedio
