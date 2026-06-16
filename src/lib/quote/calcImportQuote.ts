@@ -2,6 +2,7 @@
 // Import quote calculator — dynamic product JSON shapes require any casts.
 import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
 import { detectOriginZone, estimateUnitDimensions, calcFreightCost, ShippingMode, OriginZone } from "./freightRates";
+import { hydrateFreightConfig } from "./freightRatesConfig";
 import { assessImportRegime, formatRegimeForExplanation, type RegimeAssessment } from "./regime";
 
 /** Detecta si el usuario mencionó explícitamente un modo de transporte. */
@@ -173,6 +174,9 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   /** Régimen recomendado (Courier vs General) — Fase 2. */
   regime?: RegimeAssessment;
 }> {
+  // Carga las tarifas de flete vigentes (defaults ⊕ overrides editados por admin).
+  await hydrateFreightConfig();
+
   if (inputs.mode === "budget") {
     const budget = parseBudgetUsd(inputs.budgetText);
     const b = budget ?? 5000;

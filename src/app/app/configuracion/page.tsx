@@ -63,6 +63,29 @@ export default async function ConfiguracionPage() {
           <ImporterProfileForm />
         </section>
 
+        {/* Admin: tarifas de flete */}
+        {u?.role === "admin" && (
+          <section className="mb-5 overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0B1622]">
+            <div className="border-b border-white/[0.04] px-5 py-3.5">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#3d4a5a]">Administración</p>
+            </div>
+            <a
+              href="/app/configuracion/fletes"
+              className="flex items-center justify-between gap-3 px-5 py-4 transition hover:bg-white/[0.02]"
+            >
+              <div className="min-w-0">
+                <p className="text-[14px] font-semibold text-white">Tarifas de flete</p>
+                <p className="mt-0.5 text-[12px] text-[#5a6577]">
+                  Editá los valores de flete (aéreo, FCL, LCL, almacenaje) que usa el cotizador.
+                </p>
+              </div>
+              <span className="shrink-0 text-[#18C3D6]" aria-hidden>
+                →
+              </span>
+            </a>
+          </section>
+        )}
+
         {/* Documents */}
         <section>
           <div className="mb-4 flex items-end justify-between gap-2">

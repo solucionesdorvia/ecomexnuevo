@@ -1,69 +1,51 @@
-/** Tasas de flete reales provistas por el encargado de comercio exterior. */
+/**
+ * Tarifas de flete. Los valores por defecto fueron provistos por el encargado de
+ * comercio exterior; un admin puede editarlos desde /app/configuracion/fletes.
+ * Las tablas se construyen a partir de la config vigente (defaults ⊕ overrides).
+ */
+import { getFreightConfig, FREIGHT_IVA } from "@/lib/quote/freightRatesConfig";
 
-const IVA = 0.21;
-
-// ── Aéreo ────────────────────────────────────────────────────────────────────
-
-export const AIR_RATES = {
-  USA_FCA: {
-    awbFlat: 40,
-    airTransferPerKg: 0.15,
-    airTransferMinUsd: 50,
-    freightPerKg: 250,
-    destination: {
-      corteGuia: 220 * (1 + IVA), // 266.20
-      handling: 50 * (1 + IVA),   //  60.50
+/** Arma las tablas de tarifas leyendo la config editable vigente. */
+function buildRates() {
+  const c = getFreightConfig();
+  const IVA = FREIGHT_IVA;
+  return {
+    AIR_RATES: {
+      USA_FCA: {
+        awbFlat: c.airUsaAwbFlat,
+        airTransferPerKg: c.airUsaTransferPerKg,
+        airTransferMinUsd: c.airUsaTransferMin,
+        freightPerKg: c.airUsaPerKg,
+        destination: {
+          corteGuia: c.airDestCorteGuiaNet * (1 + IVA),
+          handling: c.airDestHandlingNet * (1 + IVA),
+        },
+      },
+      CHINA_FOB: {
+        freightPerKg: c.airChinaPerKg,
+        destination: {
+          corteGuia: c.airDestCorteGuiaNet * (1 + IVA),
+          handling: c.airDestHandlingNet * (1 + IVA),
+        },
+      },
     },
-  },
-  CHINA_FOB: {
-    freightPerKg: 250,
-    destination: {
-      corteGuia: 220 * (1 + IVA),
-      handling: 50 * (1 + IVA),
+    ALMACENAJE_RATES: {
+      airFlat: c.almAir,
+      fcl20: c.almFcl20,
+      fcl40: c.almFcl40,
+      lclFlat: c.almLcl,
     },
-  },
-} as const;
-
-// ── Almacenaje (fiscal / depósito destino) ───────────────────────────────────
-
-export const ALMACENAJE_RATES = {
-  airFlat: 250,           // USD fijo por envío aéreo (promedio)
-  fcl20: 1500,            // USD fijo por contenedor 20'
-  fcl40: 1800,            // USD fijo por contenedor 40'
-  lclFlat: 1500,          // USD fijo por embarque LCL
-} as const;
-
-// ── Marítimo FCL ─────────────────────────────────────────────────────────────
-
-export const FCL_RATES = {
-  CHINA: {
-    flete20: 4000,
-    flete40: 6000,
-    destination: 890 * (1 + IVA), // 1076.90
-  },
-  EUROPE: {
-    flete20: 2500,
-    flete40: 3800,
-    destination: 890 * (1 + IVA),
-  },
-} as const;
-
-// ── Marítimo LCL (tarifa plana por embarque) ─────────────────────────────────
-
-export const LCL_RATES = {
-  CHINA: {
-    fleteFlat: 1500,
-    destination: { handling: 50 },
-  },
-  EUROPE: {
-    fleteFlat: 1500,
-    destination: { handling: 50 },
-  },
-  USA: {
-    fleteFlat: 1500,
-    destination: { handling: 50 },
-  },
-} as const;
+    FCL_RATES: {
+      CHINA: { flete20: c.fclChina20, flete40: c.fclChina40, destination: c.fclDestNet * (1 + IVA) },
+      EUROPE: { flete20: c.fclEurope20, flete40: c.fclEurope40, destination: c.fclDestNet * (1 + IVA) },
+    },
+    LCL_RATES: {
+      CHINA: { fleteFlat: c.lclChinaFlat, destination: { handling: c.lclHandling } },
+      EUROPE: { fleteFlat: c.lclEuropeFlat, destination: { handling: c.lclHandling } },
+      USA: { fleteFlat: c.lclUsaFlat, destination: { handling: c.lclHandling } },
+    },
+  };
+}
 
 export const EUR_USD_APPROX = 1.1;
 
@@ -219,6 +201,7 @@ export function calcFreightCost(
 ): FreightResult {
   const m = mode ?? selectShippingMode(zone, totalKg, totalM3);
 
+  const { AIR_RATES, ALMACENAJE_RATES, FCL_RATES, LCL_RATES } = buildRates();
   const alm = ALMACENAJE_RATES;
 
   // Peso cobrable según modalidad
