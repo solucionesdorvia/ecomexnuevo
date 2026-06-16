@@ -62,7 +62,8 @@ export const ModelName = {
   Notification: 'Notification',
   Supplier: 'Supplier',
   OperationDocument: 'OperationDocument',
-  OperationEvent: 'OperationEvent'
+  OperationEvent: 'OperationEvent',
+  ProductNcm: 'ProductNcm'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -249,6 +250,27 @@ export const OperationEventScalarFieldEnum = {
 } as const
 
 export type OperationEventScalarFieldEnum = (typeof OperationEventScalarFieldEnum)[keyof typeof OperationEventScalarFieldEnum]
+
+
+export const ProductNcmScalarFieldEnum = {
+  id: 'id',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  key: 'key',
+  name: 'name',
+  keywords: 'keywords',
+  ncm: 'ncm',
+  ncmDescription: 'ncmDescription',
+  confidence: 'confidence',
+  source: 'source',
+  defaultUse: 'defaultUse',
+  notes: 'notes',
+  timesUsed: 'timesUsed',
+  verified: 'verified',
+  createdByUserId: 'createdByUserId'
+} as const
+
+export type ProductNcmScalarFieldEnum = (typeof ProductNcmScalarFieldEnum)[keyof typeof ProductNcmScalarFieldEnum]
 
 
 export const SortOrder = {

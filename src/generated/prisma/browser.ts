@@ -78,3 +78,9 @@ export type OperationDocument = Prisma.OperationDocumentModel
  * 
  */
 export type OperationEvent = Prisma.OperationEventModel
+/**
+ * Model ProductNcm
+ * Catálogo curado de NCM por producto. Se autollena al cotizar y se cura desde el panel.
+ * Permite reusar clasificaciones y, a futuro, cotizar según el uso/destino.
+ */
+export type ProductNcm = Prisma.ProductNcmModel

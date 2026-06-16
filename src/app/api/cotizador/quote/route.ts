@@ -7,6 +7,7 @@ import { ensurePcram } from "@/lib/chat/chatProductBuilder";
 import { ensureProductSpecs } from "@/lib/quote/ensureProductSpecs";
 import { ensureProductImage } from "@/lib/quote/ensureProductImage";
 import { getPresetCosteo } from "@/lib/quote/presetCosteos";
+import { recordProductNcm } from "@/lib/ncm/productCatalog";
 import { rateLimitByIp, RATE_LIMIT_MESSAGE } from "@/lib/rateLimit";
 import {
   buildProductJsonFromClassifierSnapshot,
@@ -153,6 +154,23 @@ export async function POST(req: Request) {
     if (fromRaw && fromRaw !== "9999.99.99") return fromRaw;
     return undefined;
   })();
+
+  // Autollenado del catálogo de NCM (best-effort, no bloquea la respuesta).
+  if (finalNcm) {
+    const catName = String((enrichedProduct as Record<string, unknown>)?.title ?? "").trim();
+    if (catName) {
+      const desc =
+        ((enrichedProduct as Record<string, unknown>)?.raw as Record<string, unknown> | undefined)?.pcram as
+          | Record<string, unknown>
+          | undefined;
+      void recordProductNcm({
+        name: catName,
+        ncm: finalNcm,
+        ncmDescription: typeof desc?.title === "string" ? (desc.title as string) : null,
+        source: "quote",
+      });
+    }
+  }
 
   const res = NextResponse.json({
     ok: true as const,

@@ -284,3 +284,32 @@ model OperationEvent {
 
   @@index([operationId, createdAt])
 }
+
+/// Catálogo curado de NCM por producto. Se autollena al cotizar y se cura desde el panel.
+/// Permite reusar clasificaciones y, a futuro, cotizar según el uso/destino.
+model ProductNcm {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  /// Clave normalizada (minúsculas, sin tildes) para búsqueda y dedupe.
+  key            String  @unique
+  name           String
+  keywords       String?
+  ncm            String
+  ncmDescription String?
+  confidence     Float?
+  /// ai | manual | quote
+  source         String  @default("ai")
+  /// uso_propio | reventa | comercializacion | proyecto | muestra
+  defaultUse     String?
+  notes          String?
+  timesUsed      Int     @default(1)
+  /// Confirmado por un humano (clasificación "de oro").
+  verified       Boolean @default(false)
+
+  createdByUserId String?
+
+  @@index([ncm])
+  @@index([updatedAt])
+}

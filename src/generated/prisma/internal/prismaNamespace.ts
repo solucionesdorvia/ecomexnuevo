@@ -395,7 +395,8 @@ export const ModelName = {
   Notification: 'Notification',
   Supplier: 'Supplier',
   OperationDocument: 'OperationDocument',
-  OperationEvent: 'OperationEvent'
+  OperationEvent: 'OperationEvent',
+  ProductNcm: 'ProductNcm'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -411,7 +412,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "quote" | "lead" | "user" | "userDocument" | "operatorBudget" | "quoteComment" | "auditLog" | "operation" | "notification" | "supplier" | "operationDocument" | "operationEvent"
+    modelProps: "quote" | "lead" | "user" | "userDocument" | "operatorBudget" | "quoteComment" | "auditLog" | "operation" | "notification" | "supplier" | "operationDocument" | "operationEvent" | "productNcm"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -1303,6 +1304,80 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    ProductNcm: {
+      payload: Prisma.$ProductNcmPayload<ExtArgs>
+      fields: Prisma.ProductNcmFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.ProductNcmFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductNcmPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.ProductNcmFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductNcmPayload>
+        }
+        findFirst: {
+          args: Prisma.ProductNcmFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductNcmPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.ProductNcmFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductNcmPayload>
+        }
+        findMany: {
+          args: Prisma.ProductNcmFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductNcmPayload>[]
+        }
+        create: {
+          args: Prisma.ProductNcmCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductNcmPayload>
+        }
+        createMany: {
+          args: Prisma.ProductNcmCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.ProductNcmCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductNcmPayload>[]
+        }
+        delete: {
+          args: Prisma.ProductNcmDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductNcmPayload>
+        }
+        update: {
+          args: Prisma.ProductNcmUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductNcmPayload>
+        }
+        deleteMany: {
+          args: Prisma.ProductNcmDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.ProductNcmUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.ProductNcmUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductNcmPayload>[]
+        }
+        upsert: {
+          args: Prisma.ProductNcmUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductNcmPayload>
+        }
+        aggregate: {
+          args: Prisma.ProductNcmAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateProductNcm>
+        }
+        groupBy: {
+          args: Prisma.ProductNcmGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ProductNcmGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.ProductNcmCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ProductNcmCountAggregateOutputType> | number
+        }
+      }
+    }
   }
 } & {
   other: {
@@ -1512,6 +1587,27 @@ export const OperationEventScalarFieldEnum = {
 export type OperationEventScalarFieldEnum = (typeof OperationEventScalarFieldEnum)[keyof typeof OperationEventScalarFieldEnum]
 
 
+export const ProductNcmScalarFieldEnum = {
+  id: 'id',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  key: 'key',
+  name: 'name',
+  keywords: 'keywords',
+  ncm: 'ncm',
+  ncmDescription: 'ncmDescription',
+  confidence: 'confidence',
+  source: 'source',
+  defaultUse: 'defaultUse',
+  notes: 'notes',
+  timesUsed: 'timesUsed',
+  verified: 'verified',
+  createdByUserId: 'createdByUserId'
+} as const
+
+export type ProductNcmScalarFieldEnum = (typeof ProductNcmScalarFieldEnum)[keyof typeof ProductNcmScalarFieldEnum]
+
+
 export const SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -1691,6 +1787,13 @@ export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'In
 export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
     
 
+
+/**
+ * Reference to a field of type 'Boolean'
+ */
+export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
+    
+
 /**
  * Batch Payload for updateMany & deleteMany & createMany
  */
@@ -1798,6 +1901,7 @@ export type GlobalOmitConfig = {
   supplier?: Prisma.SupplierOmit
   operationDocument?: Prisma.OperationDocumentOmit
   operationEvent?: Prisma.OperationEventOmit
+  productNcm?: Prisma.ProductNcmOmit
 }
 
 /* Types for Logging */
