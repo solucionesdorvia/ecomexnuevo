@@ -33,6 +33,7 @@ export const NCM_RGI_GIR_BLOCK = `
 2. Capítulo (2 dígitos) → partida (4) → subpartida HS (6) → **NCM Mercosur (8 dígitos)**.
 
 **Errores frecuentes:**
+- **Máquina vs parte/accesorio (CRÍTICO):** una **máquina herramienta completa** (torno, fresadora, CNC, mandrinadora, rectificadora, etc.) va en SU partida de máquina (**8458 tornos**, 8459, 8460, 8461, 8462, 8463, 8464, 8465), **NUNCA en 8466**. La partida **8466 es SOLO "partes y accesorios"** (portapiezas, portaútiles, dispositivos). Si el producto es la máquina, descartá 8466 aunque su texto diga "para tornos". Ej.: un **torno paralelo** = **8458.11/8458.19**, no 8466.20.
 - **Estado:** café tostado ≠ sin tostar; producto terminado ≠ materia prima.
 - **Medicamento vs sustancia:** en dosis/comprimidos/uso médico → **cap. 30**; sustancia química pura (no presentada como medicamento en esa forma) → **cap. 29** (ej. aspirina en tabletas vs ácido acetilsalicílico puro).
 - **Dispositivos inteligentes** (datos BT/Wi‑Fi/LTE): encuadrar en **8517** según subpartida; **no** reloj mecánico/cuarzo tradicional **91**; **no** radiodifusión **8527** (coherente con reglas 8517 ya indicadas).
