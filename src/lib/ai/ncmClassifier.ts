@@ -237,14 +237,11 @@ const AMBIGUITY_OPEN_CONF_CAP = 0.68;
 
 /**
  * Rigor de despachante reforzado en código (no solo en el prompt).
- * - EXPERT_CONF_GATE: por debajo de esto no se presenta una clasificación como
- *   definitiva → se pide aclaración (regla "confianza < 70% → preguntar").
  * - NO_EXCLUSIONS_CONF_CAP: sin exclusiones documentadas, la confianza no puede
  *   superar este valor (regla "si no descartás, máx 69%"). Activable por env
- *   NCM_REQUIRE_EXCLUSIONS=1 (off por defecto para no penalizar productos simples
- *   y claros donde el modelo no lista descartes).
+ *   NCM_REQUIRE_EXCLUSIONS=1 (off por defecto). Baja confianza NO bloquea el
+ *   presupuesto: se devuelve la mejor NCM como tentativa.
  */
-const EXPERT_CONF_GATE = 0.7;
 const NO_EXCLUSIONS_CONF_CAP = 0.69;
 const REQUIRE_DOCUMENTED_EXCLUSIONS = process.env.NCM_REQUIRE_EXCLUSIONS === "1";
 
@@ -664,11 +661,9 @@ export async function classifyWithAI(
       ) {
         confOut = Math.min(confOut, NO_EXCLUSIONS_CONF_CAP);
       }
-      let needsClarEv = followUp.length > 0 || ambiguous;
-      if (ncm_code !== "9999.99.99" && !wearableFloorEv && confOut < EXPERT_CONF_GATE) {
-        needsClarEv = true;
-        if (!followUp.length) followUp = [NCM_AMBIGUITY_GENERIC_FALLBACK_QUESTION];
-      }
+      // Baja confianza NO bloquea: devolvemos la mejor NCM (tentativa). Solo se pide
+      // aclaración si hay ambigüedad real (ambEv) o el modelo lo pidió (followUp).
+      const needsClarEv = followUp.length > 0 || ambiguous;
 
       return {
         ncm_code,
@@ -848,13 +843,8 @@ export async function classifyWithAI(
     ) {
       confidence = Math.min(confidence, NO_EXCLUSIONS_CONF_CAP);
     }
-    if (ncm_code !== "9999.99.99" && !wearableFloorFree && confidence < EXPERT_CONF_GATE) {
-      needs_clarification = true;
-      ambiguous = true;
-      if (!missing_info_questions || missing_info_questions.length === 0) {
-        missing_info_questions = [NCM_AMBIGUITY_GENERIC_FALLBACK_QUESTION];
-      }
-    }
+    // Baja confianza NO bloquea el presupuesto: devolvemos la mejor NCM (tentativa).
+    // Solo se pide aclaración ante ambigüedad real (ya resuelta arriba).
 
     return {
       ncm_code,

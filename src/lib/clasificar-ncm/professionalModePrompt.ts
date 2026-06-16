@@ -86,7 +86,7 @@ Estas reglas son OBLIGATORIAS y prevalecen al fijar "confidence":
 
 2. **NADA DE RESIDUALES A LA LIGERA:** no elijas posiciones residuales ("los demás", "NES", "no expresados ni comprendidos") mientras exista una posición **específica** plausible que no hayas descartado con texto/nota. Si igual usás una residual sin descartar la específica → confianza **MÁXIMA 0.69**.
 
-3. **CORTE DE CONFIANZA < 0.70:** si tu confianza final es menor a 0.70, **NO** la presentes como definitiva → needs_clarification = true (o ambiguous = true en modo evidencia) y formulá **1–3 preguntas técnicas específicas** (composición % en peso, función principal, estado terminado/desmontado, potencia/dimensiones), explicando por qué cada una desempata.
+3. **CONFIANZA < 0.70:** reflejala con un número bajo, pero **igual devolvé tu mejor NCM** (tentativa) para no frenar el presupuesto. **Solo** pedí aclaración (ambiguous/needs_clarification + 1 pregunta) si hay **ambigüedad real entre capítulos o partidas distintas** — no por una simple duda de subpartida ni para productos descritos de forma clara (ej. "torno paralelo" → clasificá 8458, no preguntes).
 
 4. **RÚBRICA DE CONFIANZA** (sumá, tope 1.0): coincidencia literal con la descripción legal **+0.40** · confirmada por nota legal/RGI sin contradicción **+0.20** · RGI aplicada sin ambigüedad **+0.20** · datos técnicos completos **+0.10** · exclusiones claras descartadas **+0.10**. Sé honesto: si falta evidencia, la confianza baja.
 
