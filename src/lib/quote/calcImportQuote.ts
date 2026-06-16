@@ -81,6 +81,8 @@ type Inputs =
       mode: "quote";
       product: ScrapedProduct;
       rawUserText: string;
+      /** Bien de capital: aplica IVA 10,5% / IVA adic 10% / Tasa estadística 0%. */
+      bienDeCapital?: boolean;
     }
   | {
       mode: "budget";
@@ -408,11 +410,14 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   let ivaAdicRatePct = 20;
   let taxLines: Array<{ label: string; ratePct: number | null; amountUsd: number }> = [];
 
+  // Bien de capital: IVA 10,5% / IVA adicional 10% / Tasa estadística 0%.
+  const bienDeCapital = inputs.mode === "quote" && Boolean(inputs.bienDeCapital);
+
   if (pcramTaxes) {
-    const teRate = pct("TE") ?? 0.03;
+    const teRate = bienDeCapital ? 0 : (pct("TE") ?? 0.03);
     const dieRate = pct("DIE") ?? pct("AEC") ?? defaultDieRate(ncm);
-    const ivaRate = pct("IVA") ?? 0.21;
-    const ivaAdicRate = pct("IVA ADIC") ?? 0.2;
+    const ivaRate = bienDeCapital ? 0.105 : (pct("IVA") ?? 0.21);
+    const ivaAdicRate = bienDeCapital ? 0.10 : (pct("IVA ADIC") ?? 0.2);
     const gananciasRate = pct("GANANCIAS") ?? 0;
     const iibbRate = pct("IIBB") ?? 0;
 
@@ -509,14 +514,14 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     // Sin tasas PCRAM: usar estructura real de impuestos argentina con tasas promedio.
     // Esto evita mostrar un monto único sin desglose y da una estimación más realista.
     const dieRateEst   = defaultDieRate(ncm);   // Derechos: 35% autos/ómnibus, 14% genérico
-    const teRateEst    = 0.03;   // Tasa estadística — fija
-    const ivaRateEst   = 0.21;   // IVA — estándar
-    const ivaAdicRateEst = 0.20; // Percepción IVA adicional — promedio
+    const teRateEst    = bienDeCapital ? 0 : 0.03;       // Tasa estadística (0% bien de capital)
+    const ivaRateEst   = bienDeCapital ? 0.105 : 0.21;   // IVA (10,5% bien de capital)
+    const ivaAdicRateEst = bienDeCapital ? 0.10 : 0.20;  // IVA adicional (10% bien de capital)
 
-    derechosRatePct = 14;
-    teRatePct       = 3;
-    ivaRatePct      = 21;
-    ivaAdicRatePct  = 20;
+    derechosRatePct = Math.round(dieRateEst * 100);
+    teRatePct       = Math.round(teRateEst * 100);
+    ivaRatePct      = Math.round(ivaRateEst * 100);
+    ivaAdicRatePct  = Math.round(ivaAdicRateEst * 100);
 
     teMin      = cifMin2 * teRateEst;
     teMax      = cifMax2 * teRateEst;

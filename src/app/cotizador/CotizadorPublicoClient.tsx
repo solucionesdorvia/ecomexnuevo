@@ -163,6 +163,7 @@ function EmailModal({
 export default function CotizadorPublicoClient() {
   const { caseState, sendMessage, pending, reset } = useClasificarChat();
   const [pendingQuote, setPendingQuote] = useState(false);
+  const [bienDeCapital, setBienDeCapital] = useState(false);
   const [quoteResult, setQuoteResult] = useState<QuoteCostPayload | null>(null);
   const [emailModal, setEmailModal] = useState<null | "second_quote" | "pdf">(null);
   const [pendingAction, setPendingAction] = useState<null | "new_quote" | "pdf">(null);
@@ -227,6 +228,7 @@ export default function CotizadorPublicoClient() {
         body: JSON.stringify({
           snapshot: stripMessages(caseState),
           messages: caseState.messages,
+          bienDeCapital,
         }),
       });
       const json = (await res.json()) as QuoteCostPayload & { ok?: boolean; error?: string };
@@ -444,6 +446,18 @@ export default function CotizadorPublicoClient() {
                       </p>
                     </div>
                   )}
+                  <label className="mb-3 flex cursor-pointer items-start gap-2.5 rounded-xl border border-white/[0.07] bg-white/[0.02] px-3.5 py-2.5">
+                    <input
+                      type="checkbox"
+                      checked={bienDeCapital}
+                      onChange={(e) => setBienDeCapital(e.target.checked)}
+                      className="mt-0.5 h-4 w-4 shrink-0 accent-[#18C3D6]"
+                    />
+                    <span className="text-[12px] leading-snug text-slate-300">
+                      <span className="font-semibold text-white">¿Es un bien de capital?</span> (maquinaria, equipos industriales).
+                      Si lo es, aplica <span className="text-[#18C3D6]">IVA 10,5% · IVA adic. 10% · Tasa estadística 0%</span>.
+                    </span>
+                  </label>
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <button
                       type="button"

@@ -22,6 +22,7 @@ const HOUR_MS = 60 * 60 * 1000;
 type Body = {
   snapshot?: CaseSnapshot;
   messages?: ChatMessage[];
+  bienDeCapital?: boolean;
 };
 
 export async function POST(req: Request) {
@@ -90,6 +91,7 @@ export async function POST(req: Request) {
       mode: "quote",
       product: enrichedProduct as unknown as QuoteProductInput,
       rawUserText: userText,
+      bienDeCapital: Boolean(body?.bienDeCapital),
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "";
