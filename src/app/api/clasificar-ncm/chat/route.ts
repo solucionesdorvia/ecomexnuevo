@@ -118,6 +118,38 @@ export async function POST(req: Request) {
       }
     }
 
+    // ── Link de publicación: si el último mensaje trae una URL, scrapeamos el
+    // producto y lo agregamos al texto (igual que con las facturas). Si no se
+    // puede leer, marcamos para que el analista pida una captura + nombre.
+    try {
+      const lastIdx = messages.length - 1;
+      const last = messages[lastIdx] as ChatMessage | undefined;
+      if (last?.role === "user" && typeof last.content === "string") {
+        const { extractUrl } = await import("@/lib/chat/chatParsers");
+        const url = extractUrl(last.content);
+        const already = /\[PRODUCTO DEL LINK\]|\[LINK NO LEÍDO\]/.test(last.content);
+        if (url && !already) {
+          const { scrapeProductFromUrl } = await import("@/lib/scraper/scrapeProductFromUrl");
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const p = (await scrapeProductFromUrl(url, { hintText: last.content, timeoutMs: 20_000 }).catch(() => null)) as any;
+          const title = String(p?.displayTitle || p?.title || "").trim();
+          const failed =
+            !p || p?.raw?.scrapeFailed || !title || /^producto desde /i.test(title) || /^https?:/i.test(title);
+          if (!failed) {
+            const parts = [`[PRODUCTO DEL LINK]`, `Título: ${title}`];
+            const amount = p?.price?.amount;
+            if (amount) parts.push(`Precio publicado: ${amount} ${p?.price?.currency ?? ""}`.trim());
+            (messages[lastIdx] as ChatMessage).content = `${last.content}\n\n${parts.join("\n")}`;
+          } else {
+            (messages[lastIdx] as ChatMessage).content =
+              `${last.content}\n\n[LINK NO LEÍDO: no se pudo leer el producto desde ese link. Pedile al usuario una foto/captura del producto y su nombre. No inventes ni clasifiques el producto hasta tenerlo.]`;
+          }
+        }
+      }
+    } catch {
+      // best-effort: el scraping nunca bloquea el chat
+    }
+
     const typedMessages = messages as ChatMessage[];
     const snap = (snapshot ?? { status: "idle" }) as CaseSnapshot;
 
