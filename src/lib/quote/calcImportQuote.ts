@@ -127,9 +127,9 @@ function round2(n: number) {
   return Math.round(n * 100) / 100;
 }
 
-/** Tasa a % con 1 decimal (10,5% no se redondea a 11%). */
+/** Tasa a % exacta (sin redondear a entero): 10,5% / 12,6%. Solo limpia ruido flotante. */
 function ratePct(rate: number) {
-  return Math.round(rate * 1000) / 10;
+  return Math.round(rate * 1_000_000) / 10_000;
 }
 
 export async function calcImportQuote(inputs: Inputs): Promise<{
@@ -529,8 +529,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       ...(derechosMin > 0 ? [{ label: "Derechos", ratePct: derechosRatePct, amountUsd: round2(derechosMin) }] : []),
       ...(ivaMin > 0 ? [{ label: "IVA", ratePct: ivaRatePct, amountUsd: round2(ivaMin) }] : []),
       ...(ivaAdicMin > 0 ? [{ label: "IVA Adicional", ratePct: ivaAdicRatePct, amountUsd: round2(ivaAdicMin) }] : []),
-      ...(gananciasMin > 0 ? [{ label: "Impuesto a las Ganancias", ratePct: Math.round(gananciasRate * 100), amountUsd: round2(gananciasMin) }] : []),
-      ...(iibbMin > 0 ? [{ label: "IIBB", ratePct: Math.round(iibbRate * 100), amountUsd: round2(iibbMin) }] : []),
+      ...(gananciasMin > 0 ? [{ label: "Impuesto a las Ganancias", ratePct: ratePct(gananciasRate), amountUsd: round2(gananciasMin) }] : []),
+      ...(iibbMin > 0 ? [{ label: "IIBB", ratePct: ratePct(iibbRate), amountUsd: round2(iibbMin) }] : []),
       ...(internosMin > 0 ? [{ label: "Impuestos Internos", ratePct: null, amountUsd: round2(internosMin) }] : []),
     ];
 
@@ -590,8 +590,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       { label: "Derechos (estimado)",      ratePct: derechosRatePct, amountUsd: round2(derechosMin) },
       { label: "IVA",                      ratePct: ivaRatePct,      amountUsd: round2(ivaMin) },
       ...(ivaAdicMin > 0 ? [{ label: "IVA Adicional", ratePct: ivaAdicRatePct, amountUsd: round2(ivaAdicMin) }] : []),
-      ...(gananciasMin > 0 ? [{ label: "Impuesto a las Ganancias", ratePct: Math.round(gananciasResolved * 100), amountUsd: round2(gananciasMin) }] : []),
-      ...(iibbMin > 0 ? [{ label: "II.BB.", ratePct: Math.round(iibbResolved * 100), amountUsd: round2(iibbMin) }] : []),
+      ...(gananciasMin > 0 ? [{ label: "Impuesto a las Ganancias", ratePct: ratePct(gananciasResolved), amountUsd: round2(gananciasMin) }] : []),
+      ...(iibbMin > 0 ? [{ label: "II.BB.", ratePct: ratePct(iibbResolved), amountUsd: round2(iibbMin) }] : []),
     ];
   }
 
