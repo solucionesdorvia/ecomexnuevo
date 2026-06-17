@@ -441,10 +441,13 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   const ivaResolved = bienDeCapital ? 0.105 : 0.21;
 
   if (pcramTaxes) {
+    // Si PCRAM trae el dato real de la posición, MANDA (la plataforma "sabe" sola
+    // el IVA 10,5% de bienes de capital, la TE exenta, etc.). El toggle es respaldo.
     const teRate = exentoTE ? 0 : (pct("TE") ?? 0.03);
     const dieRate = pct("DIE") ?? pct("AEC") ?? defaultDieRate(ncm);
-    const ivaRate = ivaResolved;
-    const ivaAdicRate = ivaAdicResolved;
+    const ivaRate = pct("IVA") ?? ivaResolved;
+    // IVA adicional acompaña al IVA: 10% si IVA reducido, 20% si general (solo reventa).
+    const ivaAdicRate = esReventa ? (ivaRate <= 0.11 ? 0.1 : 0.2) : 0;
     const gananciasRate = gananciasResolved;
     const iibbRate = iibbResolved;
 
