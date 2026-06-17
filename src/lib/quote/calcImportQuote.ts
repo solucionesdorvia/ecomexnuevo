@@ -127,6 +127,11 @@ function round2(n: number) {
   return Math.round(n * 100) / 100;
 }
 
+/** Tasa a % con 1 decimal (10,5% no se redondea a 11%). */
+function ratePct(rate: number) {
+  return Math.round(rate * 1000) / 10;
+}
+
 export async function calcImportQuote(inputs: Inputs): Promise<{
   cards: QuoteCard[];
   explanation: string;
@@ -452,10 +457,10 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     const iibbRate = iibbResolved;
 
     // Guardar tasas reales para el PDF y la vista web
-    derechosRatePct = Math.round(dieRate * 100);
-    teRatePct = Math.round(teRate * 100);
-    ivaRatePct = Math.round(ivaRate * 100);
-    ivaAdicRatePct = Math.round(ivaAdicRate * 100);
+    derechosRatePct = ratePct(dieRate);
+    teRatePct = ratePct(teRate);
+    ivaRatePct = ratePct(ivaRate);
+    ivaAdicRatePct = ratePct(ivaAdicRate);
 
     teMin = cifMin2 * teRate;
     teMax = cifMax2 * teRate;
@@ -548,10 +553,10 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     const ivaRateEst   = ivaResolved;
     const ivaAdicRateEst = ivaAdicResolved;
 
-    derechosRatePct = Math.round(dieRateEst * 100);
-    teRatePct       = Math.round(teRateEst * 100);
-    ivaRatePct      = Math.round(ivaRateEst * 100);
-    ivaAdicRatePct  = Math.round(ivaAdicRateEst * 100);
+    derechosRatePct = ratePct(dieRateEst);
+    teRatePct       = ratePct(teRateEst);
+    ivaRatePct      = ratePct(ivaRateEst);
+    ivaAdicRatePct  = ratePct(ivaAdicRateEst);
 
     teMin      = cifMin2 * teRateEst;
     teMax      = cifMax2 * teRateEst;
