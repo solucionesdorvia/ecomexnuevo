@@ -189,13 +189,43 @@ export async function ensurePcram(product: ProductLike): Promise<ProductLike> {
     return product;
   }
 
-  const pcram = await withTimeout(
-    client.getDetail(ncmToUse),
-    pcramTimeoutMs
-  ).catch(() => undefined);
+  const { readPcramDb, writePcramDb } = await import("@/lib/pcram/pcramDbCache");
+  const ttlDays = Number(process.env.PCRAM_DB_TTL_DAYS ?? "30");
+  const freshMs = ttlDays * 24 * 60 * 60 * 1000;
+
+  // 1) Caché persistente en base (sobrevive deploys). Si está fresco, lo usamos.
+  const dbHit = await readPcramDb(ncmToUse);
+  let pcram: ProductLike | undefined;
+  let pcramAsOf: string | undefined;
+  let pcramStale = false;
+
+  if (dbHit && Date.now() - dbHit.fetchedAt.getTime() < freshMs) {
+    pcram = dbHit.detail as ProductLike;
+    pcramAsOf = dbHit.fetchedAt.toISOString();
+  } else {
+    // 2) PCRAM en vivo con un reintento.
+    for (let attempt = 0; attempt < 2 && !pcram; attempt++) {
+      const live = await withTimeout(client.getDetail(ncmToUse), pcramTimeoutMs).catch(() => undefined);
+      if (live) pcram = live as ProductLike;
+    }
+    if (pcram) {
+      pcramAsOf = new Date().toISOString();
+      void writePcramDb(ncmToUse, pcram); // best-effort, no bloquea
+    } else if (dbHit) {
+      // 3) Último valor conocido (vencido) en vez de inventar.
+      pcram = dbHit.detail as ProductLike;
+      pcramAsOf = dbHit.fetchedAt.toISOString();
+      pcramStale = true;
+    }
+  }
 
   if (pcram) {
-    product.raw = { ...((product.raw as ProductLike) ?? {}), pcram };
+    product.raw = {
+      ...((product.raw as ProductLike) ?? {}),
+      pcram,
+      pcramAsOf,
+      pcramStale,
+    };
     if (typeof (pcram as ProductLike)?.ncmCode === "string" && String((pcram as ProductLike).ncmCode).trim()) {
       product.ncm = String((pcram as ProductLike).ncmCode).trim();
     }
