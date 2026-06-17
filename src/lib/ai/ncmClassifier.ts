@@ -173,6 +173,25 @@ function is8527MisclassifiedForWearable(ncmFormatted: string): boolean {
 }
 
 /**
+ * Guarda de ómnibus/colectivo: la partida 8702 ("transporte de 10+ personas")
+ * no contiene la palabra "ómnibus", así que el buscador no la encuentra y la IA
+ * no resuelve. Si el texto es claramente un bus de pasajeros, fijamos 8702.
+ */
+function isPassengerBus(text: string): boolean {
+  const t = (text || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  if (/\b(camion|camioneta|pickup|acoplado|remolque|chasis)\b/.test(t)) return false;
+  return /\b(omnibus|colectivo|microomnibus|micro de pasajeros|autobus|\bbus\b|minibus)\b/.test(t) ||
+    /transporte de (10|diez|mas de)/.test(t);
+}
+/** NCM de bus según combustible (8702.10 diésel, 8702.40 eléctrico, 8702.90 otros). */
+function busNcmFor(text: string): string {
+  const t = (text || "").toLowerCase();
+  if (/\bel[eé]ctric/.test(t)) return "8702.40.00";
+  if (/\bdi[eé]sel|gas[\s-]?oil|gasoil/.test(t)) return "8702.10.00";
+  return "8702.90.00";
+}
+
+/**
  * Smartwatch/wearable: función principal = conectividad y datos, no radiodifusión (8527).
  * Corrige a 8517.62.72 cuando la IA eligió 8527 por error de razonamiento.
  */
@@ -465,6 +484,20 @@ export async function classifyWithAI(
     } catch {
       // catálogo no disponible: seguir con la clasificación normal
     }
+  }
+
+  // Guarda de ómnibus/colectivo → 8702 (el índice no encuentra "ómnibus" en esa partida).
+  if (isPassengerBus(text)) {
+    const code = busNcmFor(text);
+    return {
+      ncm_code: code,
+      confidence: 0.82,
+      rationale: "Ómnibus / colectivo para transporte de 10 o más personas (partida 8702).",
+      candidates: [],
+      ambiguous: false,
+      needs_clarification: false,
+      hs_heading: "8702",
+    };
   }
 
   let evidence = Array.isArray(opts?.candidates) ? opts!.candidates.slice(0, 12) : [];
