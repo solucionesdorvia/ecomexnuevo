@@ -82,7 +82,10 @@ const CLASIFICAR_CLASSIFY_TIMEOUT_MS =
 const CLASIFICAR_ANALYST_TIMEOUT_MS =
   Number(process.env.NCM_CLASIFICAR_ANALYST_TIMEOUT_MS) ||
   Number(process.env.NCM_CHAT_ANALYST_TIMEOUT_MS) ||
-  12_000;
+  // 25s: el analista suele responder en 2-5s, pero con links (scrape previo) o
+  // payloads grandes a veces se acerca al límite. 12s abortaba de más; este techo
+  // casi nunca se toca, solo evita el error transitorio.
+  25_000;
 
 /** Respuesta más rápida: últimos turnos y tope de caractereres para el analista. */
 function truncateTranscript(messages: ChatMessage[], maxMessages = 24, maxChars = 12_000): string {
@@ -531,11 +534,16 @@ export async function processClasificarTurn(opts: {
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Error al analizar.";
+    // Distinguir un timeout/abort (transitorio) de un error de configuración.
+    // Un abort NO significa que falte la API key: pedir reintento, no asustar.
+    const isTimeout = /abort|timed?\s*out|timeout|ETIMEDOUT/i.test(msg);
     return {
-      assistantMessage: `No pude completar el análisis técnico (${msg}). Verificá que OPENAI_API_KEY esté configurada.`,
+      assistantMessage: isTimeout
+        ? "Tardé demasiado en analizar el producto y corté la consulta. Probá de nuevo en unos segundos; si seguís con un link, también podés mandarme una foto o captura del producto con su nombre."
+        : `No pude completar el análisis técnico (${msg}). Verificá que OPENAI_API_KEY esté configurada.`,
       snapshot: {
         ...prev,
-        status: "error",
+        status: isTimeout ? "needs_info" : "error",
         errorMessage: msg,
       },
     };
