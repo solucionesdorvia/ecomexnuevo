@@ -8,6 +8,7 @@ import { ensureProductSpecs } from "@/lib/quote/ensureProductSpecs";
 import { ensureProductImage } from "@/lib/quote/ensureProductImage";
 import { getPresetCosteo } from "@/lib/quote/presetCosteos";
 import { recordProductNcm } from "@/lib/ncm/productCatalog";
+import { iibbPctForProvince } from "@/lib/quote/iibbProvinces";
 import { rateLimitByIp, RATE_LIMIT_MESSAGE } from "@/lib/rateLimit";
 import {
   buildProductJsonFromClassifierSnapshot,
@@ -23,6 +24,10 @@ type Body = {
   snapshot?: CaseSnapshot;
   messages?: ChatMessage[];
   bienDeCapital?: boolean;
+  exentoTasaEstadistica?: boolean;
+  destino?: "uso_propio" | "reventa";
+  perfilImportador?: "responsable_inscripto" | "monotributo" | "persona_fisica" | "sociedad";
+  iibbProvincia?: string;
 };
 
 export async function POST(req: Request) {
@@ -92,6 +97,10 @@ export async function POST(req: Request) {
       product: enrichedProduct as unknown as QuoteProductInput,
       rawUserText: userText,
       bienDeCapital: Boolean(body?.bienDeCapital),
+      exentoTasaEstadistica: Boolean(body?.exentoTasaEstadistica),
+      destino: body?.destino === "uso_propio" ? "uso_propio" : "reventa",
+      perfilImportador: body?.perfilImportador,
+      iibbPct: iibbPctForProvince(body?.iibbProvincia),
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "";

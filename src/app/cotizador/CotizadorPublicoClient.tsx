@@ -12,6 +12,7 @@ import type { CaseSnapshot, CaseState } from "@/lib/clasificar-ncm/types";
 import { QuoteCostBreakdown, type QuoteCostPayload } from "@/app/app/nueva/QuoteCostBreakdown";
 import { QuickReplies } from "@/app/app/nueva/QuickReplies";
 import { ncmToPartida } from "@/lib/ncmDisplay";
+import { IIBB_PROVINCES } from "@/lib/quote/iibbProvinces";
 
 const ANON_QUOTE_KEY = "ecomex_pq";
 
@@ -164,6 +165,12 @@ export default function CotizadorPublicoClient() {
   const { caseState, sendMessage, pending, reset } = useClasificarChat();
   const [pendingQuote, setPendingQuote] = useState(false);
   const [bienDeCapital, setBienDeCapital] = useState(false);
+  const [exentoTasaEstadistica, setExentoTasaEstadistica] = useState(false);
+  const [destino, setDestino] = useState<"reventa" | "uso_propio">("reventa");
+  const [perfilImportador, setPerfilImportador] = useState<
+    "responsable_inscripto" | "monotributo" | "persona_fisica" | "sociedad"
+  >("responsable_inscripto");
+  const [iibbProvincia, setIibbProvincia] = useState("CABA");
   const [quoteResult, setQuoteResult] = useState<QuoteCostPayload | null>(null);
   const [emailModal, setEmailModal] = useState<null | "second_quote" | "pdf">(null);
   const [pendingAction, setPendingAction] = useState<null | "new_quote" | "pdf">(null);
@@ -229,6 +236,10 @@ export default function CotizadorPublicoClient() {
           snapshot: stripMessages(caseState),
           messages: caseState.messages,
           bienDeCapital,
+          exentoTasaEstadistica,
+          destino,
+          perfilImportador,
+          iibbProvincia,
         }),
       });
       const json = (await res.json()) as QuoteCostPayload & { ok?: boolean; error?: string };
@@ -446,18 +457,100 @@ export default function CotizadorPublicoClient() {
                       </p>
                     </div>
                   )}
-                  <label className="mb-3 flex cursor-pointer items-start gap-2.5 rounded-xl border border-white/[0.07] bg-white/[0.02] px-3.5 py-2.5">
-                    <input
-                      type="checkbox"
-                      checked={bienDeCapital}
-                      onChange={(e) => setBienDeCapital(e.target.checked)}
-                      className="mt-0.5 h-4 w-4 shrink-0 accent-[#18C3D6]"
-                    />
-                    <span className="text-[12px] leading-snug text-slate-300">
-                      <span className="font-semibold text-white">¿Es un bien de capital?</span> (maquinaria, equipos industriales).
-                      Si lo es, aplica <span className="text-[#18C3D6]">IVA 10,5% · IVA adic. 10% · Tasa estadística 0%</span>.
-                    </span>
-                  </label>
+                  <div className="mb-3 space-y-2.5 rounded-xl border border-white/[0.07] bg-white/[0.02] px-3.5 py-3">
+                    <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-400">
+                      Datos para afinar el presupuesto
+                    </p>
+
+                    {/* Perfil del importador → recuperabilidad */}
+                    <label className="block text-[12px] text-slate-300">
+                      Perfil del importador
+                      <select
+                        value={perfilImportador}
+                        onChange={(e) => setPerfilImportador(e.target.value as typeof perfilImportador)}
+                        className="mt-1 w-full rounded-lg border border-white/[0.1] bg-[#0a1118] px-2.5 py-2 text-[13px] text-white outline-none focus:border-[#18C3D6]/50"
+                      >
+                        <option value="responsable_inscripto">Responsable Inscripto</option>
+                        <option value="monotributo">Monotributista</option>
+                        <option value="persona_fisica">Persona física</option>
+                        <option value="sociedad">Sociedad</option>
+                      </select>
+                    </label>
+
+                    {/* Destino → percepciones */}
+                    <div className="text-[12px] text-slate-300">
+                      Destino de la mercadería
+                      <div className="mt-1 flex gap-2">
+                        {([
+                          ["reventa", "Reventa / comercialización"],
+                          ["uso_propio", "Uso propio (bien de uso)"],
+                        ] as const).map(([val, lbl]) => (
+                          <button
+                            key={val}
+                            type="button"
+                            onClick={() => setDestino(val)}
+                            className={`flex-1 rounded-lg border px-2.5 py-2 text-[12px] transition ${
+                              destino === val
+                                ? "border-[#18C3D6]/60 bg-[#18C3D6]/10 text-white"
+                                : "border-white/[0.1] text-slate-400 hover:text-slate-200"
+                            }`}
+                          >
+                            {lbl}
+                          </button>
+                        ))}
+                      </div>
+                      {destino === "uso_propio" && (
+                        <p className="mt-1 text-[10px] text-slate-500">
+                          Uso propio: no se cobran percepciones (IVA adic., Ganancias, IIBB).
+                        </p>
+                      )}
+                    </div>
+
+                    {/* Provincia (IIBB) — solo relevante en reventa */}
+                    {destino === "reventa" && (
+                      <label className="block text-[12px] text-slate-300">
+                        Provincia (para IIBB)
+                        <select
+                          value={iibbProvincia}
+                          onChange={(e) => setIibbProvincia(e.target.value)}
+                          className="mt-1 w-full rounded-lg border border-white/[0.1] bg-[#0a1118] px-2.5 py-2 text-[13px] text-white outline-none focus:border-[#18C3D6]/50"
+                        >
+                          {IIBB_PROVINCES.map((p) => (
+                            <option key={p.code} value={p.code}>
+                              {p.label} ({p.pct}%)
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                    )}
+
+                    {/* Bien de capital → IVA 10,5% */}
+                    <label className="flex cursor-pointer items-start gap-2.5">
+                      <input
+                        type="checkbox"
+                        checked={bienDeCapital}
+                        onChange={(e) => setBienDeCapital(e.target.checked)}
+                        className="mt-0.5 h-4 w-4 shrink-0 accent-[#18C3D6]"
+                      />
+                      <span className="text-[12px] leading-snug text-slate-300">
+                        <span className="font-semibold text-white">¿Es un bien de capital?</span> (maquinaria, equipos industriales) →{" "}
+                        <span className="text-[#18C3D6]">IVA 10,5%</span> (y percepciones reducidas en reventa).
+                      </span>
+                    </label>
+
+                    {/* Exención tasa estadística */}
+                    <label className="flex cursor-pointer items-start gap-2.5">
+                      <input
+                        type="checkbox"
+                        checked={exentoTasaEstadistica}
+                        onChange={(e) => setExentoTasaEstadistica(e.target.checked)}
+                        className="mt-0.5 h-4 w-4 shrink-0 accent-[#18C3D6]"
+                      />
+                      <span className="text-[12px] leading-snug text-slate-300">
+                        <span className="font-semibold text-white">Exento de Tasa Estadística</span> (bien de capital sin producción nacional, Mercosur, RIGI) → TE 0%.
+                      </span>
+                    </label>
+                  </div>
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <button
                       type="button"

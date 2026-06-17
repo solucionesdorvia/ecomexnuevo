@@ -25,6 +25,12 @@ export type QuoteBreakdown = {
   arancelSimUsd?: number;
   gastosImportacionUsd?: number;
   gastosImportacionLines?: Array<{ label: string; amountUsd: number }>;
+  recuperableMinUsd?: number;
+  recuperableMaxUsd?: number;
+  costoRealMinUsd?: number;
+  costoRealMaxUsd?: number;
+  esResponsableInscripto?: boolean;
+  esReventa?: boolean;
   depositoPortuarioMinUsd: number;
   transporteNacionalMinUsd: number;
   transferenciaIntlMinUsd: number;
@@ -290,7 +296,34 @@ function TemplateBreakdown({
         {ivaTotal > 0 && (
           <CostRow isIva label="IVA (incluido en total)" value={fmtUsd(ivaTotal)} />
         )}
-        <CostRow isGrandTotal label="TOTAL A PAGAR" value={hasRange ? fmtRange(b.totalMinUsd, b.totalMaxUsd) : fmtUsd(b.totalMinUsd)} />
+        <CostRow isGrandTotal label="TOTAL A PAGAR (desembolso)" value={hasRange ? fmtRange(b.totalMinUsd, b.totalMaxUsd) : fmtUsd(b.totalMinUsd)} />
+
+        {/* Costo real (recuperabilidad) — solo Responsable Inscripto */}
+        {b.esResponsableInscripto && typeof b.recuperableMinUsd === "number" && b.recuperableMinUsd > 0 && (
+          <div className="mt-3 rounded-xl border border-emerald-500/20 bg-emerald-500/[0.06] px-3.5 py-3">
+            <div className="flex items-center justify-between text-[12px]">
+              <span className="text-emerald-300">Recuperás (crédito IVA + percepciones)</span>
+              <span className="font-semibold text-emerald-300">
+                − {typeof b.recuperableMaxUsd === "number" && b.recuperableMaxUsd !== b.recuperableMinUsd
+                  ? fmtRange(b.recuperableMinUsd, b.recuperableMaxUsd)
+                  : fmtUsd(b.recuperableMinUsd)}
+              </span>
+            </div>
+            <div className="mt-1.5 flex items-center justify-between border-t border-emerald-500/15 pt-1.5 text-[13px]">
+              <span className="font-bold text-white">COSTO REAL (Resp. Inscripto)</span>
+              <span className="font-bold text-emerald-300">
+                {typeof b.costoRealMinUsd === "number"
+                  ? (typeof b.costoRealMaxUsd === "number" && b.costoRealMaxUsd !== b.costoRealMinUsd
+                      ? fmtRange(b.costoRealMinUsd, b.costoRealMaxUsd)
+                      : fmtUsd(b.costoRealMinUsd))
+                  : "—"}
+              </span>
+            </div>
+            <p className="mt-1.5 text-[10px] text-emerald-200/60">
+              El IVA es crédito fiscal y las percepciones son pago a cuenta: se descuentan de tus impuestos. A confirmar con tu contador.
+            </p>
+          </div>
+        )}
 
         {/* Per-unit if qty > 1 */}
         {b.qty > 1 && typeof b.totalMinUsd === "number" && (

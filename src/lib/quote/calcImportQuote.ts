@@ -81,8 +81,16 @@ type Inputs =
       mode: "quote";
       product: ScrapedProduct;
       rawUserText: string;
-      /** Bien de capital: aplica IVA 10,5% / IVA adic 10% / Tasa estadística 0%. */
+      /** Bien de capital → IVA 10,5% (y IVA adic 10% en reventa). */
       bienDeCapital?: boolean;
+      /** Exención explícita de Tasa Estadística (bien de capital sin producción nacional, Mercosur, etc.). */
+      exentoTasaEstadistica?: boolean;
+      /** Destino: uso propio (bien de uso → exime percepciones) o reventa (las aplica). */
+      destino?: "uso_propio" | "reventa";
+      /** Perfil fiscal → recuperabilidad (RI recupera IVA + percepciones). */
+      perfilImportador?: "responsable_inscripto" | "monotributo" | "persona_fisica" | "sociedad";
+      /** Alícuota IIBB ya resuelta por provincia (%). */
+      iibbPct?: number;
     }
   | {
       mode: "budget";
@@ -163,6 +171,12 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     arancelSimUsd: number;
     gastosImportacionUsd: number;
     gastosImportacionLines: Array<{ label: string; amountUsd: number }>;
+    recuperableMinUsd: number;
+    recuperableMaxUsd: number;
+    costoRealMinUsd: number;
+    costoRealMaxUsd: number;
+    esResponsableInscripto: boolean;
+    esReventa: boolean;
     depositoPortuarioMinUsd: number;
     depositoPortuarioMaxUsd: number;
     transporteNacionalMinUsd: number;
@@ -410,16 +424,29 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   let ivaAdicRatePct = 20;
   let taxLines: Array<{ label: string; ratePct: number | null; amountUsd: number }> = [];
 
-  // Bien de capital: IVA 10,5% / IVA adicional 10% / Tasa estadística 0%.
+  // ── Régimen fiscal (investigado en ARCA/CDA) ────────────────────────────────
+  // Bien de capital → IVA 10,5%. Tasa estadística 0% solo si está exenta.
+  // Percepciones (IVA adic, Ganancias, IIBB): se EXIMEN si es uso propio (bien de
+  // uso); en reventa se aplican. Recuperabilidad: solo Responsable Inscripto.
   const bienDeCapital = inputs.mode === "quote" && Boolean(inputs.bienDeCapital);
+  const exentoTE = inputs.mode === "quote" && Boolean(inputs.exentoTasaEstadistica);
+  const esReventa = inputs.mode === "quote" ? inputs.destino !== "uso_propio" : true;
+  const perfilImportador = inputs.mode === "quote" ? inputs.perfilImportador : undefined;
+  const esRI = perfilImportador === "responsable_inscripto";
+  const iibbPctInput = inputs.mode === "quote" && typeof inputs.iibbPct === "number" ? inputs.iibbPct : 0;
+  // Tasas de percepción resueltas por destino:
+  const ivaAdicResolved = esReventa ? (bienDeCapital ? 0.1 : 0.2) : 0;
+  const gananciasResolved = esReventa ? 0.06 : 0;
+  const iibbResolved = esReventa ? Math.max(0, iibbPctInput) / 100 : 0;
+  const ivaResolved = bienDeCapital ? 0.105 : 0.21;
 
   if (pcramTaxes) {
-    const teRate = bienDeCapital ? 0 : (pct("TE") ?? 0.03);
+    const teRate = exentoTE ? 0 : (pct("TE") ?? 0.03);
     const dieRate = pct("DIE") ?? pct("AEC") ?? defaultDieRate(ncm);
-    const ivaRate = bienDeCapital ? 0.105 : (pct("IVA") ?? 0.21);
-    const ivaAdicRate = bienDeCapital ? 0.10 : (pct("IVA ADIC") ?? 0.2);
-    const gananciasRate = pct("GANANCIAS") ?? 0;
-    const iibbRate = pct("IIBB") ?? 0;
+    const ivaRate = ivaResolved;
+    const ivaAdicRate = ivaAdicResolved;
+    const gananciasRate = gananciasResolved;
+    const iibbRate = iibbResolved;
 
     // Guardar tasas reales para el PDF y la vista web
     derechosRatePct = Math.round(dieRate * 100);
@@ -514,9 +541,9 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     // Sin tasas PCRAM: usar estructura real de impuestos argentina con tasas promedio.
     // Esto evita mostrar un monto único sin desglose y da una estimación más realista.
     const dieRateEst   = defaultDieRate(ncm);   // Derechos: 35% autos/ómnibus, 14% genérico
-    const teRateEst    = bienDeCapital ? 0 : 0.03;       // Tasa estadística (0% bien de capital)
-    const ivaRateEst   = bienDeCapital ? 0.105 : 0.21;   // IVA (10,5% bien de capital)
-    const ivaAdicRateEst = bienDeCapital ? 0.10 : 0.20;  // IVA adicional (10% bien de capital)
+    const teRateEst    = exentoTE ? 0 : 0.03;
+    const ivaRateEst   = ivaResolved;
+    const ivaAdicRateEst = ivaAdicResolved;
 
     derechosRatePct = Math.round(dieRateEst * 100);
     teRatePct       = Math.round(teRateEst * 100);
@@ -535,18 +562,28 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     ivaMax     = baseIvaMax * ivaRateEst;
     ivaAdicMin = baseIvaMin * ivaAdicRateEst;
     ivaAdicMax = baseIvaMax * ivaAdicRateEst;
+    if (gananciasResolved > 0) {
+      gananciasMin = baseIvaMin * gananciasResolved;
+      gananciasMax = baseIvaMax * gananciasResolved;
+    }
+    if (iibbResolved > 0) {
+      iibbMin = baseIvaMin * iibbResolved;
+      iibbMax = baseIvaMax * iibbResolved;
+    }
 
-    impuestosMin = teMin + derechosMin + ivaMin + ivaAdicMin;
-    impuestosMax = teMax + derechosMax + ivaMax + ivaAdicMax;
-    impuestosDetail =
-      "Estimación con tasas promedio (TE 3% + DI 14% + IVA 21% + IVA Adic. 20%). " +
-      "Se ajusta con la clasificación arancelaria definitiva.";
+    impuestosMin = teMin + derechosMin + ivaMin + ivaAdicMin + gananciasMin + iibbMin;
+    impuestosMax = teMax + derechosMax + ivaMax + ivaAdicMax + gananciasMax + iibbMax;
+    impuestosDetail = esReventa
+      ? "Estimación con tasas generales (incluye percepciones de IVA adic., Ganancias e IIBB por reventa). Se ajusta con la clasificación definitiva."
+      : "Estimación para uso propio (bien de uso): sin percepciones de IVA adic., Ganancias ni IIBB. Se ajusta con la clasificación definitiva.";
 
     taxLines = [
       { label: "Tasa de Estadística",     ratePct: teRatePct,       amountUsd: round2(teMin) },
       { label: "Derechos (estimado)",      ratePct: derechosRatePct, amountUsd: round2(derechosMin) },
       { label: "IVA",                      ratePct: ivaRatePct,      amountUsd: round2(ivaMin) },
-      { label: "IVA Adicional",            ratePct: ivaAdicRatePct,  amountUsd: round2(ivaAdicMin) },
+      ...(ivaAdicMin > 0 ? [{ label: "IVA Adicional", ratePct: ivaAdicRatePct, amountUsd: round2(ivaAdicMin) }] : []),
+      ...(gananciasMin > 0 ? [{ label: "Impuesto a las Ganancias", ratePct: Math.round(gananciasResolved * 100), amountUsd: round2(gananciasMin) }] : []),
+      ...(iibbMin > 0 ? [{ label: "II.BB.", ratePct: Math.round(iibbResolved * 100), amountUsd: round2(iibbMin) }] : []),
     ];
   }
 
@@ -604,6 +641,21 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   // Antes el total usaba cifMin (sin seguro), subestimando el costo. Corregido.
   const totalMin = cifMin2 + impuestosMin + gestionMin;
   const totalMax = cifMax2 + impuestosMax + gestionMax;
+
+  // Recuperabilidad: para Responsable Inscripto, el IVA es crédito fiscal y las
+  // percepciones (IVA adic, Ganancias, IIBB) son pago a cuenta → recuperables.
+  // También el IVA de los servicios del despacho. "Costo real" = total − recuperable.
+  const ivaServiciosUsd = importExpenses.lines
+    .filter((l) => /IVA sobre servicios/i.test(l.label))
+    .reduce((a, l) => a + l.amountUsd, 0);
+  const recuperableMin = esRI
+    ? ivaMin + ivaAdicMin + gananciasMin + iibbMin + ivaServiciosUsd
+    : 0;
+  const recuperableMax = esRI
+    ? ivaMax + ivaAdicMax + gananciasMax + iibbMax + ivaServiciosUsd
+    : 0;
+  const costoRealMin = totalMin - recuperableMin;
+  const costoRealMax = totalMax - recuperableMax;
 
   // Fase 2: régimen recomendado (Courier vs General). Usa el FOB máximo del rango
   // (conservador) y las intervenciones de PCRAM. Solo recomienda; NO cambia el
@@ -825,6 +877,12 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       arancelSimUsd: ARANCEL_SIM,
       gastosImportacionUsd: round2(gastosImportacionUsd),
       gastosImportacionLines: importExpenses.lines,
+      recuperableMinUsd: round2(recuperableMin),
+      recuperableMaxUsd: round2(recuperableMax),
+      costoRealMinUsd: round2(costoRealMin),
+      costoRealMaxUsd: round2(costoRealMax),
+      esResponsableInscripto: esRI,
+      esReventa,
       depositoPortuarioMinUsd: round2(depositoMin),
       depositoPortuarioMaxUsd: round2(depositoMax),
       transporteNacionalMinUsd: round2(transporteNacMin),
