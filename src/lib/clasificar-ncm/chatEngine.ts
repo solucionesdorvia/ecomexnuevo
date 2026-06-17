@@ -18,7 +18,13 @@ import type { CaseSnapshot, ChatMessage, ProductType } from "./types";
  * dígitos sueltos (teléfonos, cantidades) como si fueran NCM.
  */
 function extractExplicitNcmFromMessage(text: string): string | null {
-  const raw = text.trim();
+  // Sacar URLs ANTES de buscar dígitos: el ID de un aviso dentro de una URL
+  // (p. ej. agroads .../detalle.asp?clasi=973242) NO es un NCM que el usuario
+  // haya indicado. Sin esto, 973242 se devolvía formateado como "9732.42.00".
+  const raw = text
+    .replace(/https?:\/\/\S+/gi, " ")
+    .replace(/www\.\S+/gi, " ")
+    .trim();
   if (!raw) return null;
 
   const match = raw.match(/\b(\d{4}[.\s]?\d{2}[.\s]?\d{2}|\d{6,10})\b/);
@@ -28,10 +34,16 @@ function extractExplicitNcmFromMessage(text: string): string | null {
   if (digits.length < 6 || digits.length > 10) return null;
 
   const lower = raw.toLowerCase();
-  const hasIntent =
-    /\b(es|ser[íi]a|usar|usa|usemos|poner|pone|pond[eé]|cotiz[áa]|cotizar|con|bajo|c[óo]digo|ncm|la|el)\b/.test(
-      lower
-    ) || raw === match[1] || raw.replace(/\s+/g, "") === match[1].replace(/\s+/g, "");
+  const isWholeMessage =
+    raw === match[1] || raw.replace(/\s+/g, "") === match[1].replace(/\s+/g, "");
+  // Un código con separadores tipo NCM (8703.10 / 8703.10.00) ya es señal fuerte;
+  // dígitos "pelados" (973242, teléfonos, IDs, cantidades) son ambiguos y exigen
+  // una palabra explícita (ncm/código/partida/posición) o que sean TODO el mensaje.
+  const hasNcmSeparators = /\d{4}[.\s]\d{2}/.test(match[1]);
+  const strongIntent = /\b(ncm|c[óo]digo|partida|posici[óo]n)\b/.test(lower);
+  const softIntent =
+    /\b(es|ser[íi]a|usar|usa|usemos|poner|pone|pond[eé]|cotiz[áa]|cotizar|con|bajo)\b/.test(lower);
+  const hasIntent = isWholeMessage || strongIntent || (hasNcmSeparators && softIntent);
   if (!hasIntent) return null;
 
   return formatMercosurNcm8(digits.slice(0, 8));
