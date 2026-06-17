@@ -37,6 +37,11 @@ export type FreightRatesConfig = {
   almFcl20: number;
   almFcl40: number;
   almLcl: number;
+  // Vehículos / sobredimensionado (RORO se cobra por volumen; Flat Rack / Open Top por unidad)
+  roroPorM3: number;
+  roroMinimo: number;
+  flatRackPorUnidad: number;
+  openTopPorUnidad: number;
 };
 
 export const DEFAULT_FREIGHT_RATES: FreightRatesConfig = {
@@ -60,14 +65,19 @@ export const DEFAULT_FREIGHT_RATES: FreightRatesConfig = {
   almFcl20: 1500,
   almFcl40: 1800,
   almLcl: 1500,
+  // ⚠️ Valores de referencia — reemplazar con las tarifas reales del despachante.
+  roroPorM3: 120,
+  roroMinimo: 1500,
+  flatRackPorUnidad: 3500,
+  openTopPorUnidad: 3000,
 };
 
 /** Metadata para construir el formulario del admin (label, grupo, unidad). */
 export type FreightFieldMeta = {
   key: keyof FreightRatesConfig;
   label: string;
-  group: "Aéreo" | "Marítimo FCL" | "Marítimo LCL" | "Almacenaje";
-  unit: "USD" | "USD/kg";
+  group: "Aéreo" | "Marítimo FCL" | "Marítimo LCL" | "Almacenaje" | "Vehículos / sobredimensionado";
+  unit: "USD" | "USD/kg" | "USD/m³";
   help?: string;
 };
 
@@ -92,6 +102,10 @@ export const FREIGHT_FIELDS: FreightFieldMeta[] = [
   { key: "almFcl20", label: "Almacenaje FCL 20'", group: "Almacenaje", unit: "USD" },
   { key: "almFcl40", label: "Almacenaje FCL 40'", group: "Almacenaje", unit: "USD" },
   { key: "almLcl", label: "Almacenaje LCL", group: "Almacenaje", unit: "USD" },
+  { key: "roroPorM3", label: "RORO (autos/buses) por m³", group: "Vehículos / sobredimensionado", unit: "USD/m³" },
+  { key: "roroMinimo", label: "RORO: mínimo por operación", group: "Vehículos / sobredimensionado", unit: "USD" },
+  { key: "flatRackPorUnidad", label: "Flat Rack (por unidad)", group: "Vehículos / sobredimensionado", unit: "USD" },
+  { key: "openTopPorUnidad", label: "Open Top (por unidad)", group: "Vehículos / sobredimensionado", unit: "USD" },
 ];
 
 const CONFIG_ENTITY = "config";

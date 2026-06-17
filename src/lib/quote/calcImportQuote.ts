@@ -2,7 +2,7 @@
 // Import quote calculator — dynamic product JSON shapes require any casts.
 import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
 import { detectOriginZone, estimateUnitDimensions, calcFreightCost, ShippingMode, OriginZone } from "./freightRates";
-import { hydrateFreightConfig } from "./freightRatesConfig";
+import { hydrateFreightConfig, getFreightConfig } from "./freightRatesConfig";
 import { hydrateImportExpenses, computeImportExpenses } from "./importExpensesConfig";
 
 /**
@@ -373,8 +373,27 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
 
   const userMode = detectUserShippingMode(inputs.rawUserText ?? "", zone);
   const freight = calcFreightCost(zone, totalKg, totalM3, userMode);
-  const fleteMin = freight.totalUsd;
-  const fleteMax = freight.totalUsd;
+
+  // Vehículos (autos/buses/camiones, cap. 8701-8705) → RORO (por volumen, con mínimo)
+  // en lugar del flete contenedor. Tarifas editables en /app/configuracion/fletes.
+  const headForVeh = ncm ? parseInt(ncm.replace(/\D/g, "").slice(0, 4), 10) : NaN;
+  const isVehicleForFreight =
+    (Number.isFinite(headForVeh) && headForVeh >= 8701 && headForVeh <= 8705) ||
+    /\b(omnibus|ómnibus|colectivo|micro|autob[uú]s|automovil|autom[oó]vil|camion|cami[oó]n|camioneta|pickup)\b/i.test(
+      title.toLowerCase()
+    );
+  let fleteMin = freight.totalUsd;
+  let fleteMax = freight.totalUsd;
+  let fleteModeLabelOverride: string | undefined;
+  if (isVehicleForFreight) {
+    const fc = getFreightConfig();
+    const roro = Math.max(fc.roroMinimo, fc.roroPorM3 * (totalM3 > 0 ? totalM3 : 0));
+    if (roro > 0) {
+      fleteMin = round2(roro);
+      fleteMax = round2(roro);
+      fleteModeLabelOverride = "RORO (vehículo)";
+    }
+  }
 
   const cifMin = fobTotalMin + fleteMin;
   const cifMax = fobTotalMax + fleteMax;
@@ -611,11 +630,13 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     /\b(auto|automovil|vehiculo|camion|camioneta|autoelevador|tractor|motocicleta|chasis)\b/i.test(titleNorm);
 
   // Etiqueta amigable del modo de transporte seleccionado.
-  const freightModeLabel = freight.mode.startsWith("air")
-    ? "Aéreo"
-    : freight.mode.startsWith("fcl")
-      ? "Marítimo FCL"
-      : "Marítimo LCL";
+  const freightModeLabel =
+    fleteModeLabelOverride ??
+    (freight.mode.startsWith("air")
+      ? "Aéreo"
+      : freight.mode.startsWith("fcl")
+        ? "Marítimo FCL"
+        : "Marítimo LCL");
   // Peso facturable legible: 1 decimal para cargas chicas (evita mostrar "0 kg").
   const fmtChargeableKg =
     freight.estimatedKg < 10 ? freight.estimatedKg.toFixed(1) : String(Math.round(freight.estimatedKg));

@@ -4,6 +4,7 @@ import "dotenv/config";
 
 import type { QuoteCard } from "@/lib/quote/calcImportQuote";
 import { openaiJson } from "@/lib/ai/openaiClient";
+import { renderPremiumAutoPdfHtml } from "@/lib/pdf/premiumAutoPdf";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -348,8 +349,18 @@ export function renderQuotePdfHtml(quote: QuoteLike) {
   // Costeo preset (ej. Alfa Romeo Giulia): si está presente, el desglose y el
   // total se renderizan desde acá (datos de Forward), no desde el motor.
   const preset = ((quote.quoteJson as any)?.presetCosteo ?? null) as
-    | { rubro?: string; totalUsd?: number; lines?: Array<{ label: string; value: string; cls: string }> }
+    | {
+        rubro?: string;
+        totalUsd?: number;
+        premium?: string;
+        lines?: Array<{ label: string; value: string; cls: string }>;
+      }
     | null;
+
+  // Plantilla premium "Autos de tus sueños" para vehículos con preset.
+  if (preset?.premium === "auto") {
+    return renderPremiumAutoPdfHtml(quote as any, (quote.quoteJson as any).presetCosteo);
+  }
   const title = derived.producto;
   const rubro = (preset?.rubro && String(preset.rubro)) || derived.rubro;
   const productos = title;

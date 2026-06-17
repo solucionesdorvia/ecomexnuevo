@@ -19,15 +19,74 @@ export type CosteoLineClass =
 
 export type CosteoLine = { label: string; value: string; cls: CosteoLineClass };
 
+export type CosteoSection = {
+  title: string;
+  lines: Array<{ label: string; value: string }>;
+  subtotal?: { label: string; value: string };
+};
+
 export type PresetCosteo = {
   rubro: string;
   totalUsd: number;
   lines: CosteoLine[];
+  /** Layout premium del PDF ("auto" = plantilla Autos de tus sueños). */
+  premium?: "auto";
+  /** Tagline para la portada premium. */
+  tagline?: string;
+  /** Texto del total para mostrar tal cual. */
+  totalText?: string;
+  /** Costeo agrupado en secciones (para el layout premium). */
+  sections?: CosteoSection[];
 };
 
 const ALFA_ROMEO_GIULIA: PresetCosteo = {
   rubro: "Automotriz",
   totalUsd: 74401.83,
+  premium: "auto",
+  tagline: "El auto de tus sueños, puesto en Argentina.",
+  totalText: "USD 74.401,83",
+  sections: [
+    {
+      title: "Valores de la operación",
+      lines: [
+        { label: "FOB (valor de compra)", value: "USD 31.000,00" },
+        { label: "Flete marítimo internacional", value: "USD 2.500,00" },
+        { label: "Seguro internacional", value: "USD 380,00" },
+      ],
+      subtotal: { label: "Valor en aduana (base derechos)", value: "USD 33.880,00" },
+    },
+    {
+      title: "Tributos aduaneros (VEP Aduana)",
+      lines: [
+        { label: "Derechos de importación (35%)", value: "USD 11.858,00" },
+        { label: "Tasa de Estadística (3%)", value: "USD 1.016,40" },
+        { label: "I.V.A. (21%)", value: "USD 9.960,72" },
+        { label: "Comprobación de destino (2%)", value: "USD 677,60" },
+        { label: "Guarda digital", value: "USD 10,00" },
+      ],
+      subtotal: { label: "Total derechos y gravámenes", value: "USD 23.522,72" },
+    },
+    {
+      title: "Gastos de importación",
+      lines: [
+        { label: "Flete internacional (destino)", value: "USD 3.500,00" },
+        { label: "Gastos de exportación en origen", value: "USD 850,00" },
+        { label: "Gastos de agencia", value: "USD 790,00" },
+        { label: "Seguro puerta a puerta", value: "USD 189,73" },
+        { label: "Honorarios asesoría y gestión aduanera", value: "USD 1.500,00" },
+        { label: "Honorarios AVAC y CIVAC", value: "USD 1.500,00" },
+        { label: "Terminal portuaria", value: "USD 1.100,00" },
+        { label: "Gastos operativos", value: "USD 500,00" },
+        { label: "Fletes internos", value: "USD 250,00" },
+        { label: "Traslado y depósito fiscal", value: "USD 1.100,00" },
+        { label: "Almacenamiento y descarga", value: "USD 550,00" },
+        { label: "DNRPA", value: "USD 350,00" },
+        { label: "Gastos administrativos", value: "USD 146,16" },
+        { label: "IVA sobre gastos", value: "USD 7.553,23" },
+      ],
+      subtotal: { label: "Total gastos", value: "USD 19.879,11" },
+    },
+  ],
   lines: [
     { label: "FOB*:", value: "USD 31.000,00", cls: "main" },
     { label: "Flete marítimo internacional:", value: "USD 2.500,00", cls: "main" },
