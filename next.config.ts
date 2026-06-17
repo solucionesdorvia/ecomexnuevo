@@ -16,7 +16,10 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  serverExternalPackages: ["playwright", "playwright-core"],
+  // pdf-parse/pdfjs cargan su worker (pdf.worker.mjs) en runtime; si Next los
+  // bundlea, el worker no se resuelve ("Cannot find module .../pdf.worker.mjs")
+  // y falla la lectura de facturas/fichas en PDF. Externalizarlos lo arregla.
+  serverExternalPackages: ["playwright", "playwright-core", "pdf-parse", "pdfjs-dist"],
 
   async headers() {
     return [
