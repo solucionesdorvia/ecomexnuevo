@@ -58,39 +58,54 @@ export function renderBrandedEmail(o: BrandedEmailOptions): string {
     : "";
 
   return `<!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="color-scheme" content="light only">
   <title>E-COMEX</title>
+  <style>
+    body{margin:0;padding:0;width:100%!important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+    img{border:0;line-height:100%;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;}
+    table{border-collapse:collapse;}
+    /* Mobile: el contenedor ya es fluido; acá solo achicamos paddings para que respire. */
+    @media only screen and (max-width:480px){
+      .ec-container{width:100%!important;}
+      .ec-body{padding:24px 22px!important;}
+      .ec-header{padding:18px 22px!important;}
+      .ec-footer{padding:16px 22px!important;}
+      .ec-h1{font-size:19px!important;}
+    }
+  </style>
 </head>
 <body style="margin:0;padding:0;background:${BRAND.bg};">
   <div style="display:none;max-height:0;overflow:hidden;opacity:0;font-size:1px;line-height:1px;color:${BRAND.bg}">${o.preheader}</div>
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:${BRAND.bg};">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:${BRAND.bg};width:100%;">
     <tr>
-      <td align="center" style="padding:32px 16px;">
-        <table role="presentation" width="480" cellpadding="0" cellspacing="0" border="0" style="width:480px;max-width:100%;">
+      <td align="center" style="padding:28px 14px;">
+        <!--[if mso]><table role="presentation" align="center" width="480" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+        <table role="presentation" class="ec-container" align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:480px;margin:0 auto;">
 
           <!-- Header de marca -->
           <tr>
-            <td style="background:${BRAND.navy};border-radius:16px 16px 0 0;padding:22px 32px;border-bottom:3px solid ${BRAND.cyan};">
-              <img src="${BRAND.site}/brand/ecomex-logo-white.png" alt="E-COMEX" width="170" height="23"
-                   style="display:block;border:0;outline:none;text-decoration:none;width:170px;height:23px;" />
+            <td class="ec-header" style="background:${BRAND.navy};border-radius:16px 16px 0 0;padding:22px 32px;border-bottom:3px solid ${BRAND.cyan};">
+              <img src="${BRAND.site}/brand/ecomex-logo-white.png" alt="E-COMEX" width="160" height="21"
+                   style="display:block;border:0;outline:none;text-decoration:none;width:160px;max-width:60%;height:auto;color:#ffffff;font-family:${FONT};font-size:18px;font-weight:800;letter-spacing:1px;" />
             </td>
           </tr>
 
           <!-- Cuerpo -->
           <tr>
-            <td style="background:${BRAND.card};border-radius:0 0 16px 16px;padding:32px;box-shadow:0 24px 60px -32px rgba(11,22,34,0.35);">
+            <td class="ec-body" style="background:${BRAND.card};border-radius:0 0 16px 16px;padding:32px;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td style="padding:0 0 8px;font-family:${FONT};font-size:21px;font-weight:800;color:${BRAND.navy};line-height:1.3;">
+                  <td class="ec-h1" style="padding:0 0 8px;font-family:${FONT};font-size:21px;font-weight:800;color:${BRAND.navy};line-height:1.3;">
                     ${o.heading}
                   </td>
                 </tr>
                 <tr>
-                  <td style="padding:0 0 22px;font-family:${FONT};font-size:14px;line-height:1.65;color:${BRAND.ink};">
+                  <td style="padding:0 0 22px;font-family:${FONT};font-size:15px;line-height:1.65;color:${BRAND.ink};">
                     ${o.bodyHtml}
                   </td>
                 </tr>
@@ -102,13 +117,14 @@ export function renderBrandedEmail(o: BrandedEmailOptions): string {
 
           <!-- Footer -->
           <tr>
-            <td style="padding:20px 32px;font-family:${FONT};font-size:11px;line-height:1.6;color:${BRAND.faint};text-align:center;">
+            <td class="ec-footer" style="padding:20px 32px;font-family:${FONT};font-size:12px;line-height:1.6;color:${BRAND.faint};text-align:center;">
               © 2026 E-COMEX<br>
               <a href="${BRAND.site}" target="_blank" style="color:${BRAND.muted};text-decoration:none;">e-comex.com.ar</a>
             </td>
           </tr>
 
         </table>
+        <!--[if mso]></td></tr></table><![endif]-->
       </td>
     </tr>
   </table>
