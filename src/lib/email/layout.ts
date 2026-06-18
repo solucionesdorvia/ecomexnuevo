@@ -76,7 +76,6 @@ export function renderBrandedEmail(o: BrandedEmailOptions): string {
           <tr>
             <td style="background:${BRAND.navy};border-radius:16px 16px 0 0;padding:22px 32px;border-bottom:3px solid ${BRAND.cyan};">
               <span style="font-family:${FONT};font-size:20px;font-weight:800;letter-spacing:1.5px;color:#ffffff;">E&#8209;COMEX</span>
-              <span style="font-family:${FONT};font-size:11px;font-weight:600;letter-spacing:1px;color:${BRAND.cyan};margin-left:8px;text-transform:uppercase;">Comercio Exterior</span>
             </td>
           </tr>
 
@@ -103,7 +102,7 @@ export function renderBrandedEmail(o: BrandedEmailOptions): string {
           <!-- Footer -->
           <tr>
             <td style="padding:20px 32px;font-family:${FONT};font-size:11px;line-height:1.6;color:${BRAND.faint};text-align:center;">
-              © 2026 E-COMEX · Consultoría en Comercio Exterior<br>
+              © 2026 E-COMEX<br>
               <a href="${BRAND.site}" target="_blank" style="color:${BRAND.muted};text-decoration:none;">e-comex.com.ar</a>
             </td>
           </tr>
