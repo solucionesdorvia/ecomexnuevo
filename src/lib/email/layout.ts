@@ -75,7 +75,8 @@ export function renderBrandedEmail(o: BrandedEmailOptions): string {
           <!-- Header de marca -->
           <tr>
             <td style="background:${BRAND.navy};border-radius:16px 16px 0 0;padding:22px 32px;border-bottom:3px solid ${BRAND.cyan};">
-              <span style="font-family:${FONT};font-size:20px;font-weight:800;letter-spacing:1.5px;color:#ffffff;">E&#8209;COMEX</span>
+              <img src="${BRAND.site}/brand/ecomex-logo-white.png" alt="E-COMEX" width="170" height="23"
+                   style="display:block;border:0;outline:none;text-decoration:none;width:170px;height:23px;" />
             </td>
           </tr>
 
