@@ -29,7 +29,7 @@ export function getClientIp(req: Request): string {
   return "unknown";
 }
 
-export type AuthRouteKey = "login" | "register";
+export type AuthRouteKey = "login" | "register" | "forgot-password" | "reset-password";
 
 export function rateLimitAuth(
   req: Request,

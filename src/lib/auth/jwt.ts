@@ -7,7 +7,11 @@ type AuthPayload = {
 
 const WEAK_SECRETS = new Set(["dev-change-me", "secret", "change-me", "changeme", "development"]);
 
-function secretKey() {
+/**
+ * Clave secreta compartida por todos los tokens firmados de la app (sesión y
+ * reset de contraseña). Valida fortaleza en producción.
+ */
+export function getAuthSecretKey() {
   const secret = process.env.AUTH_JWT_SECRET;
   if (!secret) throw new Error("Falta AUTH_JWT_SECRET");
   if (process.env.NODE_ENV === "production") {
@@ -15,6 +19,10 @@ function secretKey() {
     if (WEAK_SECRETS.has(secret)) throw new Error("AUTH_JWT_SECRET inseguro: usá un valor aleatorio en producción");
   }
   return new TextEncoder().encode(secret);
+}
+
+function secretKey() {
+  return getAuthSecretKey();
 }
 
 export async function signAuthToken(payload: AuthPayload) {

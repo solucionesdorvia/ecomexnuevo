@@ -131,6 +131,14 @@ export default function AuthForm({
           </div>
         </form>
 
+        {!isRegister && (
+          <p className="mt-4 text-[12px] text-[#5a6577]">
+            <Link href="/account/forgot" className="text-[#6b7a8d] hover:text-[#18C3D6] hover:underline">
+              ¿Olvidaste tu contraseña?
+            </Link>
+          </p>
+        )}
+
         <p className="mt-5 text-[12px] text-[#3d4a5a]">
           ¿Sin cuenta todavía?{" "}
           <Link href="/cotizador" className="text-[#18C3D6] hover:underline">
