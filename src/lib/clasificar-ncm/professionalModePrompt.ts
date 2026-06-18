@@ -34,6 +34,7 @@ export const NCM_RGI_GIR_BLOCK = `
 
 **Errores frecuentes:**
 - **Máquina vs parte/accesorio (CRÍTICO):** una **máquina herramienta completa** (torno, fresadora, CNC, mandrinadora, rectificadora, etc.) va en SU partida de máquina (**8458 tornos**, 8459, 8460, 8461, 8462, 8463, 8464, 8465), **NUNCA en 8466**. La partida **8466 es SOLO "partes y accesorios"** (portapiezas, portaútiles, dispositivos). Si el producto es la máquina, descartá 8466 aunque su texto diga "para tornos". Ej.: un **torno paralelo** = **8458.11/8458.19**, no 8466.20.
+- **Secado/deshidratado de alimentos (CRÍTICO):** un **deshidratador o secador de alimentos** (frutas, verduras, carnes, granos) clasifica por su FUNCIÓN (secado) en la partida **8419** (típicamente **8419.31** "para productos agrícolas"), **NO en 8514**. La partida **8514 es para hornos eléctricos industriales/de laboratorio de metalurgia, cerámica o tratamiento térmico de MATERIALES**, no de alimentos. No te ancles en la palabra "horno": un "horno deshidratador" de frutas = **8419**, no 8514.
 - **Estado:** café tostado ≠ sin tostar; producto terminado ≠ materia prima.
 - **Medicamento vs sustancia:** en dosis/comprimidos/uso médico → **cap. 30**; sustancia química pura (no presentada como medicamento en esa forma) → **cap. 29** (ej. aspirina en tabletas vs ácido acetilsalicílico puro).
 - **Dispositivos inteligentes** (datos BT/Wi‑Fi/LTE): encuadrar en **8517** según subpartida; **no** reloj mecánico/cuarzo tradicional **91**; **no** radiodifusión **8527** (coherente con reglas 8517 ya indicadas).
