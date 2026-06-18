@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { signResetToken } from "@/lib/auth/passwordReset";
 import { sendEmail } from "@/lib/email/sendEmail";
+import { renderBrandedEmail } from "@/lib/email/layout";
 import { rateLimitAuth } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
@@ -22,16 +23,18 @@ function resetBaseUrl(req: Request): string {
 }
 
 function resetEmailHtml(link: string): string {
-  return `
-  <div style="font-family:Arial,Helvetica,sans-serif;max-width:480px;margin:0 auto;color:#1f2a37">
-    <h2 style="color:#0B1622;font-size:20px;margin:0 0 12px">Restablecer tu contraseña</h2>
-    <p style="font-size:14px;line-height:1.6">Recibimos un pedido para restablecer la contraseña de tu cuenta en <strong>E-COMEX</strong>. Hacé clic en el botón para elegir una nueva. El enlace vence en 45 minutos.</p>
-    <p style="margin:24px 0">
-      <a href="${link}" style="background:#18C3D6;color:#030d18;text-decoration:none;font-weight:bold;font-size:14px;padding:12px 22px;border-radius:10px;display:inline-block">Restablecer contraseña</a>
-    </p>
-    <p style="font-size:12px;color:#6b7a8d;line-height:1.6">Si no pediste esto, ignorá este correo: tu contraseña no cambia hasta que uses el enlace.</p>
-    <p style="font-size:12px;color:#9aa7b4;word-break:break-all">O copiá este enlace:<br>${link}</p>
-  </div>`;
+  return renderBrandedEmail({
+    preheader: "Restablecé tu contraseña de E-COMEX. El enlace vence en 45 minutos.",
+    heading: "Restablecé tu contraseña",
+    bodyHtml:
+      "Recibimos un pedido para restablecer la contraseña de tu cuenta en <strong>E-COMEX</strong>. " +
+      "Hacé clic en el botón para elegir una nueva. El enlace vence en <strong>45 minutos</strong>.",
+    cta: { label: "Restablecer contraseña", url: link },
+    footnoteHtml:
+      "Si no pediste esto, ignorá este correo: tu contraseña no cambia hasta que uses el enlace." +
+      `<br><br><span style="color:#9aa7b4;">¿El botón no funciona? Copiá y pegá este enlace:</span><br>` +
+      `<a href="${link}" target="_blank" style="color:#18C3D6;word-break:break-all;">${link}</a>`,
+  });
 }
 
 export async function POST(req: Request) {
