@@ -249,6 +249,9 @@ function stripNcmCodes(input: string): string {
   let out = input;
   // Patrones típicos: 8471.30.00, 9506.91.00.139W, 84.71.30, 85287200.
   out = out.replace(/\b\d{2,4}[.\s]\d{2}[.\s]\d{2}(?:[.\s]?\d{0,3}[A-Za-z]?)?\b/g, "—");
+  // Código de 6 dígitos (partida.subpartida, ej. 8429.51) — NO precedido por
+  // $/decimales para no romper montos.
+  out = out.replace(/(?<![\$\d.,])\b\d{4}[.\s]\d{2}\b(?![.\s]?\d)/g, "—");
   // 8 dígitos corridos, pero NO montos (no preceded by $ or decimales).
   out = out.replace(/(?<![\$\d.,])\b\d{8}\b(?!\s*[\.,]?\d)/g, "—");
   // Menciones textuales de jerga.
@@ -259,6 +262,27 @@ function stripNcmCodes(input: string): string {
   // Limpia dobles espacios y líneas vacías sobrantes.
   out = out.replace(/ {2,}/g, " ").replace(/\n{3,}/g, "\n\n").trim();
   return out;
+}
+
+/**
+ * Preguntas "meta" que el modelo dirige al SISTEMA, no al importador (fuga de
+ * la mecánica interna: pedir habilitar candidatos, jerga del nomenclador, etc.).
+ * Nunca deben mostrarse en la UI. Ej. real: "¿Pueden habilitar candidatos del
+ * (8429.51/8429.52) para clasificar la retroexcavadora?".
+ */
+const META_QUESTION_RE =
+  /\b(habilit\w+|candidat\w+|nomenclador|subpartida|posici[oó]n\s+arancelaria|para\s+clasificar)\b/i;
+
+/**
+ * Limpia preguntas antes de mostrarlas al usuario: saca códigos NCM/jerga,
+ * descarta vacías, las que quedan con "—" (tenían un código) y las meta.
+ */
+function cleanUserFacingQuestions(qs: unknown): string[] {
+  if (!Array.isArray(qs)) return [];
+  return qs
+    .map((q) => stripNcmCodes(String(q ?? "")).trim())
+    .filter((q) => q.length > 0 && !q.includes("—") && !META_QUESTION_RE.test(q))
+    .slice(0, 3);
 }
 
 export function buildTechnicalDescription(messages: ChatMessage[], snap: CaseSnapshot): string {
@@ -582,9 +606,7 @@ export async function processClasificarTurn(opts: {
       origin: p.origin ?? heur.origin,
     };
   }
-  const questions = Array.isArray(analyst.questions_next)
-    ? analyst.questions_next.map((q) => String(q).trim()).filter(Boolean).slice(0, 3)
-    : [];
+  const questions = cleanUserFacingQuestions(analyst.questions_next);
   snap.pendingQuestions = questions.length ? questions : undefined;
 
   const ready = Boolean(analyst.ready_to_run_classifier);
@@ -707,13 +729,10 @@ export async function processClasificarTurn(opts: {
     // Sin esto, un turno donde el motor devuelve null borra el NCM ya clasificado.
     snap.recommendedNcm = ncm ?? snap.recommendedNcm;
     snap.confidence = ncm ? conf : (snap.confidence ?? conf);
-    // Sanitizamos las questions del motor: pueden traer códigos y jerga.
-    // Después del stripping, cualquier "—" indica que había un NCM en la
-    // pregunta (ej. "decidir entre **8471.30.00** y **…**" → "decidir entre **—** y **—**").
-    // Esas preguntas no tienen sentido para el usuario → se descartan.
-    const motorQuestionsClean = motor.questions
-      .map((q) => stripNcmCodes(q).trim())
-      .filter((q) => q.length > 0 && !q.includes("—"));
+    // Sanitizamos las questions del motor: pueden traer códigos, jerga o pedidos
+    // meta al sistema (ej. "habilitar candidatos del 8429.51/8429.52"). El helper
+    // saca códigos, descarta las que quedan con "—" y las meta.
+    const motorQuestionsClean = cleanUserFacingQuestions(motor.questions);
     snap.pendingQuestions = motorQuestionsClean.length ? motorQuestionsClean : undefined;
     snap.ambiguity = motor.ambiguity;
     snap.classificationRationale =

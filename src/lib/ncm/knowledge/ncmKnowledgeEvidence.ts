@@ -53,6 +53,22 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
     );
   }
 
+  // Excavadora / retroexcavadora / pala cargadora / topadora → partida 8429
+  // (palas mecánicas, excavadoras, cargadoras, topadoras autopropulsadas). En el
+  // índice 8429.5x tiene texto técnico ("superestructura que gira 360°") que no
+  // coincide con el nombre comercial → la búsqueda léxica no las trae.
+  if (
+    /\b(excavador\w*|retroexcavador\w*|retropala\w*|pala\s+cargador\w*|cargador\w*\s+frontal|minicargador\w*|topador\w*|motonivelador\w*|bulldozer|buld[oó]cer)\b/.test(
+      text
+    )
+  ) {
+    seeds.push(
+      { ncm_code: "8429.52.00", title: "[Cap. 84] Excavadora cuya superestructura gira 360° (giratoria)" },
+      { ncm_code: "8429.51.00", title: "[Cap. 84] Cargadoras y palas cargadoras de carga frontal" },
+      { ncm_code: "8429.59.00", title: "[Cap. 84] Las demás palas mecánicas / excavadoras" }
+    );
+  }
+
   return seeds;
 }
 
