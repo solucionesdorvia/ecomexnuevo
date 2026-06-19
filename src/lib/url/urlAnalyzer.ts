@@ -218,7 +218,11 @@ async function fetchHtml(url: string) {
 async function fetchHtmlWithPlaywright(url: string) {
   // Ensure Playwright can find installed browsers in local dev/runtime.
   process.env.PLAYWRIGHT_BROWSERS_PATH = process.env.PLAYWRIGHT_BROWSERS_PATH ?? "0";
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: true,
+    // Necesario en contenedores como root (Railway). Ver pcramClient.ts.
+    args: ["--no-sandbox", "--disable-dev-shm-usage"],
+  });
   try {
     const context = await browser.newContext({
       userAgent: chromeLikeHeaders(url)["User-Agent"],

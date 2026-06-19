@@ -791,6 +791,8 @@ export async function generateQuotePdfViaHtml(quote: QuoteLike) {
 
   const browser = await chromium.launch({
     headless: true,
+    // Necesario en contenedores como root (Railway). Ver pcramClient.ts.
+    args: ["--no-sandbox", "--disable-dev-shm-usage"],
   });
   try {
     const page = await browser.newPage({

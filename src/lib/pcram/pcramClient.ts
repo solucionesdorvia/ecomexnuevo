@@ -589,7 +589,15 @@ export class PcramClient {
 
   private async fetchWithPlaywright(url: string) {
     const { chromium } = await import("playwright");
-    const browser = await chromium.launch({ headless: true });
+    // --no-sandbox: en el contenedor de Railway el proceso corre como root y
+    //   Chromium se niega a arrancar sin esto ("Running as root without
+    //   --no-sandbox is not supported") → el scrape fallaba y caía a estimado.
+    // --disable-dev-shm-usage: /dev/shm en contenedores suele ser chico y
+    //   provoca crashes de Chromium; lo manda a /tmp.
+    const browser = await chromium.launch({
+      headless: true,
+      args: ["--no-sandbox", "--disable-dev-shm-usage"],
+    });
     try {
       const context = await browser.newContext({
         storageState: (await readStorageState(this.storageStatePath)) ?? undefined,

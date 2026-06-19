@@ -41,7 +41,11 @@ function looksBlocked(html: string) {
 
 export async function fetchPageWithPlaywright(url: string, opts?: { timeoutMs?: number }) {
   const timeoutMs = opts?.timeoutMs ?? 35_000;
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: true,
+    // Necesario en contenedores como root (Railway). Ver pcramClient.ts.
+    args: ["--no-sandbox", "--disable-dev-shm-usage"],
+  });
   try {
     const context = await browser.newContext({
       userAgent: chromeUa(),

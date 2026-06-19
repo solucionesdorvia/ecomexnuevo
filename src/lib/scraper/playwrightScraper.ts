@@ -65,6 +65,8 @@ function getScraperEnv(): ScraperEnv {
 async function withBrowser<T>(fn: (b: Browser) => Promise<T>) {
   const browser = await chromium.launch({
     headless: true,
+    // Necesario en contenedores como root (Railway). Ver pcramClient.ts.
+    args: ["--no-sandbox", "--disable-dev-shm-usage"],
   });
   try {
     return await fn(browser);
