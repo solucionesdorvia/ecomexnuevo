@@ -187,7 +187,33 @@ export default function CotizadorPublicoClient() {
   useEffect(() => {
     fetch("/api/auth/session", { credentials: "include" })
       .then((r) => r.json())
-      .then((json: { ok?: boolean }) => setIsLoggedIn(Boolean(json?.ok)))
+      .then((json: { ok?: boolean }) => {
+        const logged = Boolean(json?.ok);
+        setIsLoggedIn(logged);
+        // Si está logueado y tiene perfil cargado, pre-llenamos el panel de
+        // régimen con SUS datos (condición fiscal + provincia IIBB) para que la
+        // cotización use su perfil real y no los defaults.
+        if (!logged) return;
+        fetch("/api/user/profile", { credentials: "include" })
+          .then((r) => r.json())
+          .then((p: { user?: { importerProfile?: string | null; iibbProvince?: string | null } }) => {
+            const u = p?.user;
+            if (!u) return;
+            const map: Record<string, typeof perfilImportador> = {
+              RESPONSABLE_INSCRIPTO: "responsable_inscripto",
+              MONOTRIBUTO: "monotributo",
+              PERSONA_FISICA: "persona_fisica",
+              SOCIEDAD: "sociedad",
+              ORGANISMO_PUBLICO: "responsable_inscripto",
+            };
+            const mapped = u.importerProfile ? map[u.importerProfile] : undefined;
+            if (mapped) setPerfilImportador(mapped);
+            if (u.iibbProvince && IIBB_PROVINCES.some((pr) => pr.code === u.iibbProvince)) {
+              setIibbProvincia(u.iibbProvince);
+            }
+          })
+          .catch(() => {});
+      })
       .catch(() => setIsLoggedIn(false));
   }, []);
 
