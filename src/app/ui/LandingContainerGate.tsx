@@ -557,8 +557,11 @@ export default function LandingContainerGate() {
       {/* ══════════ FOOTER ══════════ */}
       <footer className="px-5 py-8 lg:px-8" style={{ borderTop: `1px solid ${P.border}` }}>
         <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-4 text-[12px] sm:flex-row" style={{ color: P.t3 }}>
-          <span>© 2026 E-COMEX</span>
-          <span>Buenos Aires, Argentina</span>
+          <span>© 2026 E-COMEX · Buenos Aires, Argentina</span>
+          <div className="flex items-center gap-4">
+            <a href="/privacidad" className="transition-colors hover:text-white" style={{ color: P.t3 }}>Privacidad</a>
+            <a href="/terminos" className="transition-colors hover:text-white" style={{ color: P.t3 }}>Términos</a>
+          </div>
         </div>
       </footer>
     </div>

@@ -556,6 +556,14 @@ export function QuoteCostBreakdown({
           </div>
         </details>
       )}
+
+      {/* Disclaimer legal: la cotización es orientativa (ver /terminos) */}
+      <p className="mt-4 rounded-xl border border-amber-400/20 bg-amber-400/[0.06] px-3 py-2.5 text-[10.5px] leading-relaxed text-amber-200/90">
+        Presupuesto <strong>estimado y orientativo</strong>. La posición arancelaria (NCM), las alícuotas y los impuestos
+        pueden variar según la clasificación definitiva, el régimen, intervenciones, el tipo de cambio y la normativa
+        vigente al momento del despacho. Confirmá la clasificación y los tributos finales con tu despachante de aduana y
+        tu contador.
+      </p>
     </div>
   );
 }
