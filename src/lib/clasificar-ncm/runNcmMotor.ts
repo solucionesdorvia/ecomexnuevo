@@ -348,13 +348,24 @@ export async function runNcmMotor(input: RunNcmMotorInput): Promise<NcmMotorResu
     };
   }
 
-  const cls = await classifyWithAI(techText, {
+  const classifyArgs = {
     timeoutMs: classifyOpts.timeoutMs ?? DEFAULT_CLASSIFY_TIMEOUT_MS,
     model: classifyOpts.model ?? (process.env.NCM_CHAT_CLASSIFY_MODEL ?? (process.env.OPENAI_MODEL || "gpt-4o-mini")),
     skipNcmKnowledge:
       classifyOpts.skipNcmKnowledge ??
       (process.env.NCM_CHAT_SKIP_KNOWLEDGE === "1" || process.env.NCM_CHAT_SKIP_KNOWLEDGE === "true"),
-  });
+  };
+  // Reintento por confiabilidad: el LLM a veces devuelve sin código (o 9999.99.99)
+  // para productos claros (variabilidad / timeout transitorio). Si NO es una
+  // ambigüedad real, reintentamos hasta 2 veces más antes de caer a "sin NCM".
+  let cls = await classifyWithAI(techText, classifyArgs);
+  const hasUsableCode = (c: NcmClassification | null | undefined) => {
+    const d = String(c?.ncm_code ?? "").replace(/\D/g, "");
+    return d.length >= 6 && d.slice(0, 8) !== "99999999";
+  };
+  for (let attempt = 0; attempt < 2 && !hasUsableCode(cls) && !cls?.ambiguous; attempt++) {
+    cls = await classifyWithAI(techText, classifyArgs);
+  }
 
   const rawConf = clamp01(Number(cls.confidence ?? 0));
   const ambiguous = Boolean(cls.ambiguous);

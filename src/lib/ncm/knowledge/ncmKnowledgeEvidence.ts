@@ -69,6 +69,23 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
     );
   }
 
+  // Automóvil de pasajeros → 8703 (DIE 35%). El Cap. 87 está casi vacío en el
+  // índice local (solo 8703.10 nieve/golf), así que la búsqueda léxica NUNCA
+  // encuentra el código y el auto no clasificaba. Excluye camión (8704) y
+  // ómnibus/colectivo (8702), que tienen su propia partida.
+  if (
+    /\b(autom[oó]vil\w*|auto\b|sed[aá]n|coup[eé]|hatchback|station\s*wagon|suv\b|todoterreno|veh[ií]culo\w*\s+de\s+pasajeros)\b/.test(
+      text
+    ) &&
+    !/\b(cami[oó]n\w*|[oó]mnibus|colectivo|micro\b|autob[uú]s|tractor\w*|moto\b|motocicleta\w*)\b/.test(text)
+  ) {
+    seeds.push(
+      { ncm_code: "8703.23.10", title: "[Cap. 87] Automóvil de pasajeros, nafta, cilindrada 1500–3000 cc" },
+      { ncm_code: "8703.22.10", title: "[Cap. 87] Automóvil de pasajeros, nafta, cilindrada 1000–1500 cc" },
+      { ncm_code: "8703.32.10", title: "[Cap. 87] Automóvil de pasajeros, diésel, 1500–2500 cc" }
+    );
+  }
+
   return seeds;
 }
 
