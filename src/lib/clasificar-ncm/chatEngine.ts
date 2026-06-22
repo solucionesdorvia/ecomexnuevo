@@ -1,4 +1,5 @@
 import { openaiJson } from "@/lib/ai/openaiClient";
+import { anthropicJson, anthropicAvailable } from "@/lib/ai/anthropicClient";
 import { buildAmbiguityAssistantParagraph, type NormalizedAmbiguity } from "@/lib/clasificar-ncm/ncmAmbiguity";
 import { runNcmMotor } from "@/lib/clasificar-ncm/runNcmMotor";
 import { ncmDigitsOnly, formatMercosurNcm8 } from "@/lib/ncm/knowledge/normalize";
@@ -560,6 +561,30 @@ export async function processClasificarTurn(opts: {
       }).catch(() => null)
     : Promise.resolve(null);
 
+  // Mensaje de error honesto del analista: distingue timeout (transitorio),
+  // quota/saldo (recargar API) y otros. No culpa a la API key de entrada.
+  const analystError = (e: unknown) => {
+    const msg = e instanceof Error ? e.message : "Error al analizar.";
+    const isTimeout = /abort|timed?\s*out|timeout|ETIMEDOUT/i.test(msg);
+    const isQuota = /quota|billing|insufficient|exceeded|rate.?limit|\b429\b/i.test(msg);
+    return {
+      assistantMessage: isTimeout
+        ? "Tardé demasiado en analizar el producto y corté la consulta. Probá de nuevo en unos segundos; si seguís con un link, mandame una foto o captura del producto con su nombre."
+        : isQuota
+          ? "El servicio de IA se quedó sin crédito por el momento. Reintentá en unos minutos; si persiste, hay que recargar el saldo de la API."
+          : "No pude completar el análisis técnico. Reintentá en unos segundos.",
+      snapshot: { ...prev, status: (isTimeout || isQuota ? "needs_info" : "error") as CaseSnapshot["status"], errorMessage: msg },
+    };
+  };
+
+  // Analista: OpenAI primario; si falla (quota/caída/timeout) cae a Anthropic
+  // para no tumbar todo el chat (el clasificador ya usa Anthropic por separado).
+  const callAnthropicAnalyst = anthropicJson as unknown as (o: {
+    system: string;
+    user: string;
+    timeoutMs?: number;
+  }) => Promise<AnalystJson>;
+
   let analyst: AnalystJson;
   try {
     analyst = await openaiJson<AnalystJson>({
@@ -568,21 +593,17 @@ export async function processClasificarTurn(opts: {
       model: process.env.NCM_CHAT_ANALYST_MODEL ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
       timeoutMs: CLASIFICAR_ANALYST_TIMEOUT_MS,
     });
-  } catch (e) {
-    const msg = e instanceof Error ? e.message : "Error al analizar.";
-    // Distinguir un timeout/abort (transitorio) de un error de configuración.
-    // Un abort NO significa que falte la API key: pedir reintento, no asustar.
-    const isTimeout = /abort|timed?\s*out|timeout|ETIMEDOUT/i.test(msg);
-    return {
-      assistantMessage: isTimeout
-        ? "Tardé demasiado en analizar el producto y corté la consulta. Probá de nuevo en unos segundos; si seguís con un link, también podés mandarme una foto o captura del producto con su nombre."
-        : `No pude completar el análisis técnico (${msg}). Verificá que OPENAI_API_KEY esté configurada.`,
-      snapshot: {
-        ...prev,
-        status: isTimeout ? "needs_info" : "error",
-        errorMessage: msg,
-      },
-    };
+  } catch (eOpenAi) {
+    if (!anthropicAvailable()) return analystError(eOpenAi);
+    try {
+      analyst = await callAnthropicAnalyst({
+        system: analystSystem,
+        user: userPayload,
+        timeoutMs: CLASIFICAR_ANALYST_TIMEOUT_MS,
+      });
+    } catch (eAnthropic) {
+      return analystError(eAnthropic);
+    }
   }
 
   const snap = mergeSnapshot(prev, analyst);
