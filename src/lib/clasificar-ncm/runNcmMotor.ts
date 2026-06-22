@@ -6,6 +6,7 @@
 import { classifyWithAI, type NcmClassification } from "@/lib/ai/ncmClassifier";
 import { mapClassifierAmbiguityToSnapshot } from "@/lib/clasificar-ncm/classifierAmbiguityMapper";
 import { formatMercosurNcm8, ncmDigitsOnly } from "@/lib/ncm/knowledge/normalize";
+import { searchNcm } from "@/lib/ncm/knowledge/searchNcm";
 import { productFromTextPipeline, type TextPipelineResult } from "@/lib/scraper/productFromTextPipeline";
 import {
   deriveProductSignals,
@@ -376,6 +377,24 @@ export async function runNcmMotor(input: RunNcmMotorInput): Promise<NcmMotorResu
   let candidates = mapped.candidates.length ? mapped.candidates : [];
   let discardedNotes = [...mapped.discardedNotes];
   let discardedCandidates = mapped.discardedCandidates;
+
+  // Fallback léxico: si la IA no resolvió un código (se rindió con 9999/None) pero
+  // NO marcó ambigüedad real, usamos el mejor match del nomenclador oficial como
+  // NCM TENTATIVO. Evita que productos claros pero "moderadamente seguros" (ej.
+  // zapatillas conf 0.55) caigan a "sin NCM" → arancel genérico. Si hay ambigüedad
+  // real entre partidas, NO forzamos: ahí sí corresponde pedir aclaración.
+  if (!candidates.length && !ambiguous && techText.trim().length >= 6) {
+    const hits = searchNcm(techText, { limit: 3, productContext: techText });
+    if (hits.length) {
+      candidates = hits.map((h) => ({
+        code: normalizeNcmCode(h.code) || h.code,
+        description: h.description,
+        confidence: clamp01(Math.min(0.6, 0.5 + (h.score ?? 0) * 0.1)),
+        rationale: "Mejor coincidencia del nomenclador oficial (la IA no devolvió un código).",
+      }));
+      conf = Math.max(conf, candidates[0]!.confidence);
+    }
+  }
 
   let decisiveEmptiedAll = false;
   if (candidates.length) {
