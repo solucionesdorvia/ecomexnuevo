@@ -46,11 +46,27 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
         text
       ));
   if (isFoodDryer) {
-    seeds.push(
-      { ncm_code: "8419.31.00", title: "[Cap. 84] Secadores para productos agrícolas (frutas, alimentos)" },
-      { ncm_code: "8419.39.00", title: "[Cap. 84] Los demás secadores (incl. liofilización/criodesecación)" },
-      { ncm_code: "8419.81.90", title: "[Cap. 84] Para cocción o calentamiento de alimentos" }
-    );
+    // Subpartida CRÍTICA (cambia el arancel): 8419.31 "productos agrícolas" tiene
+    // DIE 14%, pero 8419.39 "los demás" tiene DIE 35%. La convención reserva 8419.31
+    // para secadores INDUSTRIALES de campo (granos, tabaco, etc.); un deshidratador
+    // DOMÉSTICO / de mesada va a 8419.39. Para el doméstico priorizamos 8419.39
+    // (alineado con el despachante y conservador: no subcotiza).
+    const isHousehold =
+      /\b(dom[eé]stic\w*|hogar|casero\w*|de\s+mesada|encimera|personal|port[aá]til\w*|compact\w*|peque[ñn]\w*)\b/.test(
+        text
+      );
+    if (isHousehold) {
+      seeds.push(
+        { ncm_code: "8419.39.00", title: "[Cap. 84] Los demás secadores — deshidratador doméstico/de mesada (DIE 35%)" },
+        { ncm_code: "8419.31.00", title: "[Cap. 84] Secadores para productos agrícolas — uso industrial/campo (DIE 14%)" }
+      );
+    } else {
+      seeds.push(
+        { ncm_code: "8419.31.00", title: "[Cap. 84] Secadores para productos agrícolas (industrial/campo, DIE 14%)" },
+        { ncm_code: "8419.39.00", title: "[Cap. 84] Los demás secadores (DIE 35%)" }
+      );
+    }
+    seeds.push({ ncm_code: "8419.81.90", title: "[Cap. 84] Para cocción o calentamiento de alimentos" });
   }
 
   // Excavadora / retroexcavadora / pala cargadora / topadora → partida 8429
