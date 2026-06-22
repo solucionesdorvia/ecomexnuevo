@@ -86,6 +86,64 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
     );
   }
 
+  // ── Categorías de consumo frecuentes ──────────────────────────────────────
+  // El índice usa lenguaje formal ("calzado", "bombas para líquidos") y la
+  // búsqueda léxica no matchea los términos comunes del usuario. Sembramos las
+  // partidas oficiales por categoría para que SIEMPRE haya candidato correcto.
+
+  // Calzado deportivo / zapatillas → 64
+  if (/\b(zapatilla\w*|zapato\w*|calzado\w*|sneaker\w*|champion(es)?|botin\w*|bota\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6404.11.00", title: "[Cap. 64] Calzado deportivo, suela caucho/plástico, parte superior textil" },
+      { ncm_code: "6403.99.90", title: "[Cap. 64] Calzado con parte superior de cuero" },
+      { ncm_code: "6402.99.90", title: "[Cap. 64] Calzado de caucho o plástico" }
+    );
+  }
+  // Heladera / refrigerador / freezer → 8418
+  if (/\b(heladera\w*|refrigerador\w*|nevera\w*|freezer\w*|congelador\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "8418.21.00", title: "[Cap. 84] Refrigeradores domésticos de compresión" },
+      { ncm_code: "8418.10.00", title: "[Cap. 84] Combinados refrigerador-congelador" }
+    );
+  }
+  // Bomba para líquidos (con contexto de agua/líquido/riego) → 8413
+  if (/\bbomba\w*\b/.test(text) && /\b(agua|l[ií]quid\w*|centr[ií]fug\w*|sumergible\w*|riego|pozo|presuriz\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "8413.70.90", title: "[Cap. 84] Bombas centrífugas para líquidos" },
+      { ncm_code: "8413.81.00", title: "[Cap. 84] Las demás bombas para líquidos" }
+    );
+  }
+  // Perfumería → 3303
+  if (/\b(perfume\w*|fragancia\w*|eau\s+de\s+(parfum|toilette)|colonia\w*|after\s*shave)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "3303.00.20", title: "[Cap. 33] Perfumes" },
+      { ncm_code: "3303.00.10", title: "[Cap. 33] Aguas de tocador" }
+    );
+  }
+  // Bicicleta sin motor → 8712 (las eléctricas/con motor van a 8711/8711.60)
+  if (/\b(bicicleta\w*|bici\b|mountain\s*bike|\bmtb\b|rodado\s*\d+)\b/.test(text) && !/\b(electric\w*|e-?bike|con\s+motor|motorizad\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "8712.00.10", title: "[Cap. 87] Bicicletas sin motor" });
+  }
+  // Herramienta eléctrica de uso manual → 8467
+  if (/\b(taladro\w*|amoladora\w*|atornillador\w*|esmeril\w*|lijadora\w*|sierra\s+circular|caladora\w*|rotomartillo\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "8467.21.00", title: "[Cap. 84] Taladros electromecánicos de uso manual" },
+      { ncm_code: "8467.29.00", title: "[Cap. 84] Las demás herramientas electromecánicas de uso manual" }
+    );
+  }
+  // Horno microondas → 8516.50
+  if (/\bmicroondas\b/.test(text)) {
+    seeds.push({ ncm_code: "8516.50.00", title: "[Cap. 85] Hornos de microondas" });
+  }
+  // Campera / anorak / abrigo (prenda exterior) → 62 (plano) / 61 (punto)
+  if (/\b(campera\w*|anorak\w*|abrigo\w*|chaqueta\w*|chamarra\w*|rompeviento\w*|piloto\b)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6201.40.00", title: "[Cap. 62] Anoraks/camperas de hombre, fibras sintéticas (no de punto)" },
+      { ncm_code: "6202.40.00", title: "[Cap. 62] Anoraks/camperas de mujer, fibras sintéticas (no de punto)" },
+      { ncm_code: "6101.30.00", title: "[Cap. 61] Anoraks/camperas de hombre, de punto" }
+    );
+  }
+
   return seeds;
 }
 
