@@ -309,10 +309,11 @@ const EVIDENCE_SYSTEM_PROMPT =
   NCM_AMBIGUITY_CLASSIFIER_BLOCK +
   `
 
-IMPORTANTE:
-- NO debes inventar códigos NCM
-- SOLO podés elegir entre los candidatos proporcionados
-- Si ninguno aplica correctamente → marcar como "ambiguous": true y devolver ncm_code "9999.99.99"
+IMPORTANTE — los candidatos son una AYUDA, no una jaula:
+- Si ALGÚN candidato corresponde a la función principal del producto → elegí ese (es lo preferible: viene del nomenclador oficial).
+- Si NINGÚN candidato corresponde a la función real del producto → **NO devuelvas 9999.99.99 ni te rindas**: clasificá vos con el NCM correcto (8 dígitos, formato Mercosur, que exista en el nomenclador) según tu criterio profesional de despachante, y dejá una nota en "reason" aclarando que no estaba entre los candidatos. Es MUCHO mejor un NCM bien fundado fuera de la lista que ningún código (sin código, el sistema cae a un arancel genérico equivocado). Ej.: un automóvil → 8703.xx, calzado deportivo → 6404.xx, bomba de agua → 8413.xx, aunque no figuren entre los candidatos.
+- Solo devolvé "9999.99.99" + "ambiguous": true cuando haya **ambigüedad real entre dos partidas** y necesites un dato para decidir — NUNCA por simple falta de candidatos.
+- Nunca inventes códigos que no existan en el nomenclador Mercosur.
 
 PROCESO OBLIGATORIO:
 

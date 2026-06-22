@@ -707,7 +707,9 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     {
       id: "ncm",
       label: "Clasificación",
-      value: ncm ? `Pos. ${ncm.replace(/\D/g, "").slice(0, 4)}` : "Estimación general",
+      value: ncm
+        ? `Pos. ${ncm.replace(/\D/g, "").slice(0, 4)}`
+        : "Sin clasificar — arancel a confirmar (puede ser mayor)",
       source: ncm ? "scraper" : "estimate",
       tone: ncm ? "gold" : "muted",
     },
