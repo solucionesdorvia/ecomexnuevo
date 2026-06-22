@@ -4,6 +4,7 @@ import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
 import { detectOriginZone, estimateUnitDimensions, calcFreightCost, ShippingMode, OriginZone } from "./freightRates";
 import { hydrateFreightConfig, getFreightConfig } from "./freightRatesConfig";
 import { hydrateImportExpenses, computeImportExpenses } from "./importExpensesConfig";
+import { getOfficialTariff } from "@/lib/ncm/tariffRates";
 
 /**
  * Derecho de importación por defecto cuando no hay dato real de PCRAM.
@@ -14,6 +15,19 @@ function defaultDieRate(ncm?: string): number {
   const head = ncm ? parseInt(ncm.replace(/\D/g, "").slice(0, 4), 10) : NaN;
   if (head === 8702 || head === 8703) return 0.35;
   return 0.14;
+}
+
+/**
+ * DIE OFICIAL del nomenclador offline (data/ncm/index.json) para un NCM.
+ * Es la fuente de respaldo cuando PCRAM no responde: NO es un valor inventado,
+ * es la alícuota oficial de la posición. Devuelve fracción (0.14) o null si el
+ * índice no tiene esa posición. Evita caer al genérico / "a confirmar".
+ */
+function officialDieRate(ncm?: string): number | null {
+  if (!ncm) return null;
+  const die = getOfficialTariff(ncm)?.diePct;
+  if (typeof die !== "number" || !Number.isFinite(die)) return null;
+  return die / 100;
 }
 import { assessImportRegime, formatRegimeForExplanation, type RegimeAssessment } from "./regime";
 
@@ -464,11 +478,14 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   const iibbResolved = esReventa ? Math.max(0, iibbPctInput) / 100 : 0;
   const ivaResolved = bienDeCapital ? 0.105 : 0.21;
 
+  // True cuando el DIE salió del nomenclador oficial offline (no de PCRAM ni del genérico).
+  let usedOfficialOfflineDie = false;
+
   if (pcramTaxes) {
     // Si PCRAM trae el dato real de la posición, MANDA (la plataforma "sabe" sola
     // el IVA 10,5% de bienes de capital, la TE exenta, etc.). El toggle es respaldo.
     const teRate = exentoTE ? 0 : (pct("TE") ?? 0.03);
-    const dieRate = pct("DIE") ?? pct("AEC") ?? defaultDieRate(ncm);
+    const dieRate = pct("DIE") ?? pct("AEC") ?? officialDieRate(ncm) ?? defaultDieRate(ncm);
     const ivaRate = pct("IVA") ?? ivaResolved;
     // IVA adicional acompaña al IVA: 10% si IVA reducido, 20% si general (solo reventa).
     const ivaAdicRate = esReventa ? (ivaRate <= 0.11 ? 0.1 : 0.2) : 0;
@@ -565,9 +582,11 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       .filter(Boolean)
       .join(" ");
   } else {
-    // Sin tasas PCRAM: usar estructura real de impuestos argentina con tasas promedio.
-    // Esto evita mostrar un monto único sin desglose y da una estimación más realista.
-    const dieRateEst   = defaultDieRate(ncm);   // Derechos: 35% autos/ómnibus, 14% genérico
+    // Sin PCRAM en vivo: usar el DIE OFICIAL del nomenclador offline (real, no
+    // inventado). Solo si el índice no tiene la posición caemos al genérico.
+    const officialDie = officialDieRate(ncm);
+    usedOfficialOfflineDie = officialDie != null;
+    const dieRateEst   = officialDie ?? defaultDieRate(ncm);   // oficial offline → genérico
     const teRateEst    = exentoTE ? 0 : 0.03;
     const ivaRateEst   = ivaResolved;
     const ivaAdicRateEst = ivaAdicResolved;
@@ -717,10 +736,12 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       id: "taxMode",
       label: "Impuestos",
       value: pcramTaxes
-        ? "Tasas de PCRAM cuando disponibles"
-        : "Estimación (sin tasas oficiales aplicadas)",
-      source: pcramTaxes ? "pcram" : "estimate",
-      tone: pcramTaxes ? "success" : "muted",
+        ? "Tasas oficiales de PCRAM (en vivo)"
+        : usedOfficialOfflineDie
+          ? "Arancel oficial del nomenclador (offline)"
+          : "Estimación general (arancel a confirmar)",
+      source: pcramTaxes || usedOfficialOfflineDie ? "pcram" : "estimate",
+      tone: pcramTaxes || usedOfficialOfflineDie ? "success" : "muted",
     },
     {
       id: "regime",
