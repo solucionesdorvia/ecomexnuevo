@@ -35,22 +35,41 @@ export function ChatInput({
   const [fileError, setFileError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const selected = Array.from(e.target.files ?? []);
+  function addFiles(selected: File[]) {
     if (!selected.length) return;
-
     const tooBig = selected.find((f) => f.size > MAX_MB * 1024 * 1024);
     if (tooBig) {
-      setFileError(`"${tooBig.name}" supera el límite de ${MAX_MB} MB.`);
+      setFileError(`"${tooBig.name || "imagen"}" supera el límite de ${MAX_MB} MB.`);
       return;
     }
     setFileError(null);
-    setFiles((prev) => {
-      const combined = [...prev, ...selected];
-      return combined.slice(0, MAX_FILES);
-    });
+    setFiles((prev) => [...prev, ...selected].slice(0, MAX_FILES));
+  }
+
+  function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    addFiles(Array.from(e.target.files ?? []));
     // reset so same file can be re-added if removed
     e.target.value = "";
+  }
+
+  // Pegar imágenes (Ctrl/Cmd+V) directo en el chat — ej. una captura del producto.
+  function handlePaste(e: React.ClipboardEvent<HTMLTextAreaElement>) {
+    const items = Array.from(e.clipboardData?.items ?? []);
+    const imgItems = items.filter((it) => it.kind === "file" && it.type.startsWith("image/"));
+    if (!imgItems.length) return; // sin imagen → dejar pegar texto normal
+    e.preventDefault();
+    const pasted: File[] = [];
+    imgItems.forEach((it, idx) => {
+      const f = it.getAsFile();
+      if (!f) return;
+      // El portapapeles suele dar "image.png" sin nombre útil → renombrar.
+      const ext = (f.type.split("/")[1] || "png").replace("jpeg", "jpg");
+      const needsName = !f.name || /^image\.\w+$/i.test(f.name);
+      pasted.push(
+        needsName ? new File([f], `captura-${idx + 1}.${ext}`, { type: f.type }) : f
+      );
+    });
+    if (pasted.length) addFiles(pasted);
   }
 
   function removeFile(idx: number) {
@@ -116,6 +135,7 @@ export function ChatInput({
                 void submit();
               }
             }}
+            onPaste={handlePaste}
             rows={1}
             disabled={disabled}
             placeholder={files.length > 0 ? "Agregá un comentario (opcional)…" : placeholder}
