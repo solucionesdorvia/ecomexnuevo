@@ -80,3 +80,78 @@ export async function anthropicJson<T extends JsonValue>(opts: {
     clearTimeout(t);
   }
 }
+
+/** Tipos de imagen que acepta la API de Anthropic. */
+function normalizeImageMediaType(mime: string): string {
+  const m = (mime || "").toLowerCase();
+  if (m.includes("png")) return "image/png";
+  if (m.includes("webp")) return "image/webp";
+  if (m.includes("gif")) return "image/gif";
+  return "image/jpeg";
+}
+
+/**
+ * Visión con Claude (Opus): transcribe una imagen a texto plano. Se usa para
+ * leer facturas/fichas/screenshots de producto. Devuelve el texto transcripto.
+ */
+export async function anthropicVisionText(opts: {
+  imageBase64: string;
+  mime: string;
+  prompt: string;
+  system?: string;
+  model?: string;
+  timeoutMs?: number;
+  maxTokens?: number;
+}): Promise<string> {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) throw new Error("Missing env var: ANTHROPIC_API_KEY");
+
+  const model = opts.model ?? (process.env.ANTHROPIC_MODEL || "claude-opus-4-8");
+  const timeoutMs = Math.max(opts.timeoutMs ?? 45_000, 40_000);
+
+  const controller = new AbortController();
+  const t = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      signal: controller.signal,
+      headers: {
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        model,
+        max_tokens: opts.maxTokens ?? 4096,
+        ...(opts.system ? { system: opts.system } : {}),
+        messages: [
+          {
+            role: "user",
+            content: [
+              {
+                type: "image",
+                source: { type: "base64", media_type: normalizeImageMediaType(opts.mime), data: opts.imageBase64 },
+              },
+              { type: "text", text: opts.prompt },
+            ],
+          },
+        ],
+      }),
+    });
+
+    const json = await res.json();
+    if (!res.ok) {
+      const msg = (json?.error?.message as string | undefined) ?? `Anthropic error: ${res.status}`;
+      throw new Error(msg);
+    }
+    const text: string = Array.isArray(json?.content)
+      ? json.content
+          .filter((c: any) => c?.type === "text" && typeof c?.text === "string")
+          .map((c: any) => c.text)
+          .join("")
+      : "";
+    return text.trim();
+  } finally {
+    clearTimeout(t);
+  }
+}

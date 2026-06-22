@@ -1,7 +1,13 @@
 import { PDFParse } from "pdf-parse";
 import * as XLSX from "xlsx";
+import { anthropicAvailable, anthropicVisionText } from "@/lib/ai/anthropicClient";
 
 const MAX_TEXT_PER_FILE = 120_000;
+
+const VISION_PROMPT =
+  "Transcribí el contenido de esta factura, proforma o ficha de producto: ítems, " +
+  "cantidades, precios, moneda, descripciones de producto y datos del proveedor. " +
+  "Respondé solo con texto plano en español, sin markdown.";
 
 async function extractPdfText(buf: Buffer): Promise<string> {
   const parser = new PDFParse({ data: buf });
@@ -26,14 +32,26 @@ function extractXlsxText(buf: Buffer): string {
 }
 
 async function extractImageInvoiceText(buf: Buffer, mime: string): Promise<string> {
+  const b64 = buf.toString("base64");
+
+  // Primario: visión con Claude (Opus) — mismo motor que analista y clasificador.
+  if (anthropicAvailable()) {
+    try {
+      const text = await anthropicVisionText({ imageBase64: b64, mime, prompt: VISION_PROMPT });
+      if (text) return text.slice(0, MAX_TEXT_PER_FILE);
+    } catch (e) {
+      console.warn("[invoice] visión Anthropic falló, intento OpenAI:", e instanceof Error ? e.message : e);
+    }
+  }
+
+  // Respaldo: visión con OpenAI.
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey?.trim()) {
     throw new Error(
-      "OPENAI_API_KEY es necesario para leer facturas en imagen (PNG/JPG/WebP)."
+      "Para leer imágenes / PDF escaneado falta ANTHROPIC_API_KEY (visión) o OPENAI_API_KEY."
     );
   }
   const model = process.env.OPENAI_MODEL || "gpt-4o-mini";
-  const b64 = buf.toString("base64");
   const dataUrl = `data:${mime || "image/jpeg"};base64,${b64}`;
 
   const res = await fetch("https://api.openai.com/v1/chat/completions", {
