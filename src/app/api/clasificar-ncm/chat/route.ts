@@ -36,9 +36,12 @@ const MAX_MSG_LEN = 12_000;
 const HOUR_MS = 60 * 60 * 1000;
 const MAX_FILES = 4;
 const MAX_FILE_BYTES = 12 * 1024 * 1024; // 12 MB
+// 30/h era muy bajo para un importador que clasifica varios productos seguidos
+// (peor aún detrás de una IP de oficina/NAT). Configurable por env.
+const CHAT_RATE_MAX = Number(process.env.RATE_LIMIT_CHAT_MAX) || 120;
 
 export async function POST(req: Request) {
-  const rl = rateLimitByIp(req, "clasificar-chat", 30, HOUR_MS);
+  const rl = rateLimitByIp(req, "clasificar-chat", CHAT_RATE_MAX, HOUR_MS);
   if (!rl.ok) {
     return NextResponse.json({ error: "Demasiadas solicitudes. Intentá en unos minutos." }, { status: 429 });
   }

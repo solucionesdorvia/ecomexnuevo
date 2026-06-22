@@ -19,6 +19,8 @@ import type { CaseSnapshot, ChatMessage } from "@/lib/clasificar-ncm/types";
 export const runtime = "nodejs";
 
 const HOUR_MS = 60 * 60 * 1000;
+// 15/h era muy bajo para un importador que cotiza varios productos. Configurable por env.
+const QUOTE_RATE_MAX = Number(process.env.RATE_LIMIT_QUOTE_MAX) || 60;
 
 type Body = {
   snapshot?: CaseSnapshot;
@@ -31,7 +33,7 @@ type Body = {
 };
 
 export async function POST(req: Request) {
-  const rl = rateLimitByIp(req, "cotizador-quote", 15, HOUR_MS);
+  const rl = rateLimitByIp(req, "cotizador-quote", QUOTE_RATE_MAX, HOUR_MS);
   if (!rl.ok) {
     return NextResponse.json({ error: RATE_LIMIT_MESSAGE }, { status: 429 });
   }
