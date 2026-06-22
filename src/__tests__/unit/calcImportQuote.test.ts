@@ -63,6 +63,44 @@ describe("calcImportQuote - mode: quote", () => {
     expect(typeof result.breakdown!.fleteMaxUsd).toBe("number");
   });
 
+  it("cotización a prueba de balas: completa, finita, no negativa y coherente", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Taladro percutor industrial", fobUsd: 55, quantity: 10, origin: "China", ncm: "8467.21.00" },
+      rawUserText: "10 taladros USD 55 origen China",
+    });
+    const b = result.breakdown!;
+    const nums = [
+      b.fobTotalUsd,
+      b.fleteMinUsd,
+      b.seguroMinUsd,
+      b.cifPlusInsuranceMinUsd,
+      b.impuestosTotalMinUsd,
+      b.gestionMinUsd,
+      b.totalMinUsd,
+      b.totalMaxUsd,
+    ];
+    for (const n of nums) {
+      expect(Number.isFinite(n)).toBe(true);
+      expect(n as number).toBeGreaterThanOrEqual(0);
+    }
+    // Coherencia contable: total = CIF(+seguro) + impuestos + gestión (tolerancia de redondeo).
+    const sum = b.cifPlusInsuranceMinUsd! + b.impuestosTotalMinUsd! + b.gestionMinUsd!;
+    expect(Math.abs(sum - b.totalMinUsd!)).toBeLessThanOrEqual(1.5);
+    // El total nunca puede ser más barato que la mercadería sola.
+    expect(b.totalMinUsd!).toBeGreaterThan(b.fobTotalUsd!);
+  });
+
+  it("rechaza cotizar sin precio (no inventa un número)", async () => {
+    await expect(
+      calcImportQuote({
+        mode: "quote",
+        product: { title: "Producto sin precio", quantity: 5, origin: "China" },
+        rawUserText: "5 unidades de China",
+      })
+    ).rejects.toThrow(/NO_PRICE/);
+  });
+
   it("includes assumptions array", async () => {
     const result = await calcImportQuote({
       mode: "quote",

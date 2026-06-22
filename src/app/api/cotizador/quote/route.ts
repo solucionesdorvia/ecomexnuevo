@@ -109,6 +109,14 @@ export async function POST(req: Request) {
     if (msg.startsWith("NO_PRICE")) {
       return NextResponse.json({ error: "Falta el precio unitario. Ingresalo antes de cotizar." }, { status: 400 });
     }
+    if (msg.startsWith("QUOTE_INVALID")) {
+      // El blindaje detectó un número roto/incoherente → NO devolvemos cotización.
+      console.error("[cotizador/quote] cotización inválida bloqueada:", msg);
+      return NextResponse.json(
+        { error: "No pudimos calcular un presupuesto confiable con estos datos. Revisá el precio y la cantidad, o probá de nuevo." },
+        { status: 422 }
+      );
+    }
     console.error("[cotizador/quote] calcImportQuote error", e);
     return NextResponse.json({ error: "No se pudo calcular la cotización. Intentá de nuevo." }, { status: 500 });
   }

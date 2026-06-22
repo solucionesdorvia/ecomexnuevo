@@ -881,6 +881,37 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     },
   ];
 
+  // ── Blindaje final de la cotización ──────────────────────────────────────
+  // Una cotización SIEMPRE sale completa y con números reales, o no sale: mejor
+  // un error claro (que el front muestra como "no se pudo cotizar") que un número
+  // roto (NaN/Infinity), negativo o incoherente. Cubre fallas de config/FX/tasas.
+  {
+    const components: Array<[string, number]> = [
+      ["FOB", fobTotalMin],
+      ["flete", fleteMin],
+      ["seguro", seguroMin],
+      ["CIF", cifMin2],
+      ["impuestos", impuestosMin],
+      ["gestión/despacho", gestionMin],
+      ["total", totalMin],
+      ["total máx", totalMax],
+    ];
+    for (const [name, v] of components) {
+      if (typeof v !== "number" || !Number.isFinite(v) || v < 0) {
+        throw new Error(`QUOTE_INVALID: componente "${name}" inválido (${v}).`);
+      }
+    }
+    // El total no puede ser menor que la mercadería + el flete (jamás más barato).
+    if (totalMin + 0.01 < fobTotalMin + fleteMin) {
+      throw new Error(`QUOTE_INVALID: total (${round2(totalMin)}) menor que FOB+flete (${round2(fobTotalMin + fleteMin)}).`);
+    }
+    // Coherencia contable: el total = CIF(+seguro) + impuestos + gestión (tolerancia de redondeo).
+    const recomputed = cifMin2 + impuestosMin + gestionMin;
+    if (Math.abs(recomputed - totalMin) > 1) {
+      throw new Error(`QUOTE_INVALID: total incoherente (${round2(totalMin)} ≠ suma ${round2(recomputed)}).`);
+    }
+  }
+
   return {
     cards,
     explanation,
