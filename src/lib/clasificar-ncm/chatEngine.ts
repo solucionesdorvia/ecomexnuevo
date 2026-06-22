@@ -585,24 +585,26 @@ export async function processClasificarTurn(opts: {
     timeoutMs?: number;
   }) => Promise<AnalystJson>;
 
+  // Analista y clasificador usan el MISMO motor: Anthropic (Opus) primario.
+  // OpenAI queda solo como respaldo si Anthropic no está disponible o falla.
   let analyst: AnalystJson;
   try {
-    analyst = await openaiJson<AnalystJson>({
+    if (!anthropicAvailable()) throw new Error("ANTHROPIC_API_KEY no disponible");
+    analyst = await callAnthropicAnalyst({
       system: analystSystem,
       user: userPayload,
-      model: process.env.NCM_CHAT_ANALYST_MODEL ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
       timeoutMs: CLASIFICAR_ANALYST_TIMEOUT_MS,
     });
-  } catch (eOpenAi) {
-    if (!anthropicAvailable()) return analystError(eOpenAi);
+  } catch (ePrimary) {
     try {
-      analyst = await callAnthropicAnalyst({
+      analyst = await openaiJson<AnalystJson>({
         system: analystSystem,
         user: userPayload,
+        model: process.env.NCM_CHAT_ANALYST_MODEL ?? (process.env.OPENAI_MODEL || "gpt-4o-mini"),
         timeoutMs: CLASIFICAR_ANALYST_TIMEOUT_MS,
       });
-    } catch (eAnthropic) {
-      return analystError(eAnthropic);
+    } catch {
+      return analystError(ePrimary);
     }
   }
 
