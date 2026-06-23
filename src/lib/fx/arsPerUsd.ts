@@ -1,3 +1,5 @@
+import { alert } from "@/lib/observability/alert";
+
 type DolarApiBlue = {
   compra?: number | string;
   venta?: number | string;
@@ -108,6 +110,9 @@ export async function getArsPerUsd(opts?: { ttlMs?: number }): Promise<number> {
   cache.expiresAt = now + ttlMs;
   cache.lastUpdatedAt = now;
   cache.source = "fallback";
+  alert("fx_fallback", "Sin cotización en vivo ni FX_ARS_PER_USD: se usó 1000 ARS/USD de respaldo.", {
+    tipo: fxTipo(),
+  });
   return 1000;
 }
 

@@ -9,6 +9,7 @@ import { ensureProductImage } from "@/lib/quote/ensureProductImage";
 import { getPresetCosteo } from "@/lib/quote/presetCosteos";
 import { recordProductNcm } from "@/lib/ncm/productCatalog";
 import { getOfficialTariff } from "@/lib/ncm/tariffRates";
+import { alert } from "@/lib/observability/alert";
 import { iibbPctForProvince } from "@/lib/quote/iibbProvinces";
 import { rateLimitByIp, RATE_LIMIT_MESSAGE } from "@/lib/rateLimit";
 import {
@@ -112,7 +113,7 @@ export async function POST(req: Request) {
     }
     if (msg.startsWith("QUOTE_INVALID")) {
       // El blindaje detectó un número roto/incoherente → NO devolvemos cotización.
-      console.error("[cotizador/quote] cotización inválida bloqueada:", msg);
+      alert("quote_invalid", "El blindaje bloqueó una cotización incoherente.", { detail: msg.slice(0, 200) });
       return NextResponse.json(
         { error: "No pudimos calcular un presupuesto confiable con estos datos. Revisá el precio y la cantidad, o probá de nuevo." },
         { status: 422 }
@@ -216,6 +217,34 @@ export async function POST(req: Request) {
       alternatives,
     };
   })();
+
+  // Fase 4.2: alertas de caminos degradados (medibles en logs). No bloquean.
+  try {
+    const bk = quote.breakdown;
+    const label = productTitle || finalNcm || "(sin nombre)";
+    if (bk?.dieSource === "generic_default") {
+      alert("tariff_generic", `Arancel genérico en cotización de ${label}.`, { ncm: finalNcm });
+    } else if (bk?.dieSource === "official_offline") {
+      alert("tariff_offline", `Arancel del nomenclador offline (PCRAM no disponible) en ${label}.`, { ncm: finalNcm });
+    }
+    if (bk?.siblingTariffDivergence) {
+      alert("sibling_divergence", `Divergencia de subpartida en ${label}.`, {
+        ncm: finalNcm,
+        ...bk.siblingTariffDivergence,
+      });
+    }
+    if ((enrichedProduct as Record<string, unknown>)?.raw && ((enrichedProduct as Record<string, unknown>).raw as Record<string, unknown>).pcramStale) {
+      alert("pcram_stale", `Tasas PCRAM viejas en ${label}.`, { ncm: finalNcm });
+    }
+    if (classification.status === "tentative") {
+      alert("classification_tentative", `Clasificación tentativa para ${label}.`, {
+        ncm: finalNcm,
+        confidence: classification.confidence,
+      });
+    }
+  } catch {
+    /* las alertas nunca rompen la cotización */
+  }
 
   const res = NextResponse.json({
     ok: true as const,
