@@ -66,7 +66,7 @@ type NuevaOperacionClientProps = {
 export default function NuevaOperacionClient({
   initialNcm,
   initialProducto,
-  isOperator: _isOperator = false, // eslint-disable-line @typescript-eslint/no-unused-vars
+  isOperator = false,
 }: NuevaOperacionClientProps = {}) {
   const router = useRouter();
   const { caseState, sendMessage, pending, reset } = useClasificarChat({ credentials: "include" });
@@ -432,7 +432,7 @@ export default function NuevaOperacionClient({
                 aria-live="polite"
               >
                 <div className="mx-auto flex max-w-[720px] flex-col gap-4">
-                  <QuoteCostBreakdown quote={quoteResult} scrollIntoViewOnMount />
+                  <QuoteCostBreakdown quote={quoteResult} scrollIntoViewOnMount canCorrectNcm={isOperator} />
                   <div className="card-in rounded-2xl border border-white/[0.09] bg-[#0a1422] p-5 sm:p-6">
                     <div className="flex flex-wrap items-center gap-2 border-b border-white/[0.06] pb-4">
                       <p className="text-[13px] font-semibold text-white">

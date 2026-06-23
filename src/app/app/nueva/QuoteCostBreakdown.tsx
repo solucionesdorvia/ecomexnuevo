@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { ChevronRight, Info } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ChevronRight, Info, Check, Pencil, X, Loader2 } from "lucide-react";
 import { ncmToPartida } from "@/lib/ncmDisplay";
 
 // ─── Tipos ──────────────────────────────────────────────────────────────────
@@ -46,6 +46,8 @@ export type QuoteBreakdown = {
 export type QuoteCostPayload = {
   quoteId: string;
   ncm?: string;
+  /** Título del producto (clave del catálogo NCM) — necesario para confirmar/corregir. */
+  productTitle?: string;
   cards: Array<{ label: string; value: string; detail?: string; highlight?: boolean }>;
   totalMinUsd?: number;
   totalMaxUsd?: number;
@@ -129,6 +131,105 @@ function ExplanationLines({ text }: { text: string }) {
   );
 }
 
+// ─── Confirmar / corregir NCM (solo operadores) — alimenta el catálogo "de oro" ─
+
+/** Normaliza lo tipeado a formato NCM con puntos (8419.39.00) si son 8 dígitos. */
+function formatNcmInput(raw: string): string {
+  const d = raw.replace(/[^0-9]/g, "").slice(0, 8);
+  if (d.length <= 4) return d;
+  if (d.length <= 6) return `${d.slice(0, 4)}.${d.slice(4)}`;
+  return `${d.slice(0, 4)}.${d.slice(4, 6)}.${d.slice(6)}`;
+}
+
+function NcmConfirmControl({ productTitle, ncm }: { productTitle: string; ncm: string }) {
+  const [state, setState] = useState<"idle" | "editing" | "saving" | "done" | "error">("idle");
+  const [value, setValue] = useState(ncm);
+  const [savedNcm, setSavedNcm] = useState<string | null>(null);
+
+  async function save(targetNcm: string) {
+    const clean = targetNcm.trim();
+    if (clean.replace(/[^0-9]/g, "").length < 4) {
+      setState("error");
+      return;
+    }
+    setState("saving");
+    try {
+      const res = await fetch("/api/admin/ncm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: productTitle, ncm: clean }),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      setSavedNcm(clean);
+      setState("done");
+    } catch {
+      setState("error");
+    }
+  }
+
+  if (state === "done") {
+    return (
+      <span className="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-400">
+        <Check className="h-3 w-3" /> Aprendido: {ncmToPartida(savedNcm || "") || savedNcm}
+      </span>
+    );
+  }
+
+  if (state === "editing") {
+    return (
+      <div className="flex items-center gap-1.5">
+        <input
+          value={value}
+          onChange={(e) => setValue(formatNcmInput(e.target.value))}
+          placeholder="8419.39.00"
+          inputMode="numeric"
+          className="w-[92px] rounded-md border border-white/15 bg-white/[0.04] px-1.5 py-0.5 font-mono text-[10px] text-slate-100 outline-none focus:border-amber-500/50"
+          autoFocus
+        />
+        <button
+          type="button"
+          onClick={() => save(value)}
+          className="inline-flex items-center gap-1 rounded-md border border-emerald-500/30 bg-emerald-500/10 px-1.5 py-0.5 text-[10px] font-medium text-emerald-300 hover:bg-emerald-500/20"
+        >
+          <Check className="h-3 w-3" /> Guardar
+        </button>
+        <button
+          type="button"
+          onClick={() => { setState("idle"); setValue(ncm); }}
+          className="inline-flex items-center rounded-md border border-white/10 px-1 py-0.5 text-slate-400 hover:text-slate-200"
+          aria-label="Cancelar"
+        >
+          <X className="h-3 w-3" />
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex items-center gap-1.5">
+      <button
+        type="button"
+        disabled={state === "saving"}
+        onClick={() => save(ncm)}
+        className="inline-flex items-center gap-1 rounded-md border border-emerald-500/25 bg-emerald-500/[0.08] px-1.5 py-0.5 text-[10px] font-medium text-emerald-300 hover:bg-emerald-500/20 disabled:opacity-50"
+        title="Confirmar que esta clasificación es correcta (la guarda como verificada)"
+      >
+        {state === "saving" ? <Loader2 className="h-3 w-3 animate-spin" /> : <Check className="h-3 w-3" />} Confirmar
+      </button>
+      <button
+        type="button"
+        disabled={state === "saving"}
+        onClick={() => setState("editing")}
+        className="inline-flex items-center gap-1 rounded-md border border-white/10 bg-white/[0.04] px-1.5 py-0.5 text-[10px] font-medium text-slate-300 hover:bg-white/[0.08] disabled:opacity-50"
+        title="Corregir la posición arancelaria"
+      >
+        <Pencil className="h-3 w-3" /> Corregir
+      </button>
+      {state === "error" && <span className="text-[10px] text-rose-400">No se pudo guardar</span>}
+    </div>
+  );
+}
+
 // ─── Vista principal estilo plantilla E-COMEX ────────────────────────────────
 
 function CostRow({
@@ -186,11 +287,12 @@ function CostRow({
 function TemplateBreakdown({
   quote,
   b,
+  canCorrectNcm = false,
 }: {
   quote: QuoteCostPayload;
   b: QuoteBreakdown;
+  canCorrectNcm?: boolean;
 }) {
-  const isAir = (b.fleteMode ?? "").startsWith("air");
   const fleteLabel = "Flete internacional";
   const taxLines = b.taxLines ?? [];
 
@@ -238,6 +340,9 @@ function TemplateBreakdown({
             <div className="rounded-md border border-amber-500/25 bg-amber-500/[0.08] px-2 py-1 font-mono text-[10px] font-semibold text-amber-300">
               Pos. {ncmToPartida(quote.ncm) || quote.ncm}
             </div>
+          )}
+          {canCorrectNcm && quote.ncm && quote.productTitle && (
+            <NcmConfirmControl productTitle={quote.productTitle} ncm={quote.ncm} />
           )}
         </div>
       </div>
@@ -343,7 +448,7 @@ function TemplateBreakdown({
 
 // ─── Vista fallback (cards genéricas) ────────────────────────────────────────
 
-function CardsBreakdown({ quote }: { quote: QuoteCostPayload }) {
+function CardsBreakdown({ quote, canCorrectNcm = false }: { quote: QuoteCostPayload; canCorrectNcm?: boolean }) {
   const q = typeof quote.quality === "number" ? Math.round(quote.quality) : null;
   const qualityLabel =
     q == null
@@ -374,11 +479,16 @@ function CardsBreakdown({ quote }: { quote: QuoteCostPayload }) {
             Rangos en USD. Se afinan con peso, volumen, origen y tu situación fiscal.
           </p>
         </div>
-        {qualityLabel && (
-          <div className={`flex shrink-0 items-center rounded-lg border px-2.5 py-1.5 text-[11px] font-semibold ${qualityLabel.cls}`}>
-            {qualityLabel.text}
-          </div>
-        )}
+        <div className="flex shrink-0 flex-col items-end gap-1.5">
+          {qualityLabel && (
+            <div className={`flex items-center rounded-lg border px-2.5 py-1.5 text-[11px] font-semibold ${qualityLabel.cls}`}>
+              {qualityLabel.text}
+            </div>
+          )}
+          {canCorrectNcm && quote.ncm && quote.productTitle && (
+            <NcmConfirmControl productTitle={quote.productTitle} ncm={quote.ncm} />
+          )}
+        </div>
       </div>
 
       <div className="mt-4 space-y-0">
@@ -496,9 +606,12 @@ function PresetBreakdown({ preset }: { preset: NonNullable<QuoteCostPayload["pre
 export function QuoteCostBreakdown({
   quote,
   scrollIntoViewOnMount,
+  canCorrectNcm = false,
 }: {
   quote: QuoteCostPayload;
   scrollIntoViewOnMount?: boolean;
+  /** Operadores/admins: muestra los botones para confirmar/corregir el NCM. */
+  canCorrectNcm?: boolean;
 }) {
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -517,9 +630,9 @@ export function QuoteCostBreakdown({
       {quote.presetCosteo?.lines?.length ? (
         <PresetBreakdown preset={quote.presetCosteo} />
       ) : hasBreakdown ? (
-        <TemplateBreakdown quote={quote} b={b!} />
+        <TemplateBreakdown quote={quote} b={b!} canCorrectNcm={canCorrectNcm} />
       ) : (
-        <CardsBreakdown quote={quote} />
+        <CardsBreakdown quote={quote} canCorrectNcm={canCorrectNcm} />
       )}
 
       {/* Supuestos */}

@@ -129,10 +129,8 @@ export async function POST(req: Request) {
   // Costeo preset para productos de ejemplo (ej. Alfa Romeo Giulia): se adjunta al
   // quoteJson para que el PDF descargable muestre ese desglose detallado. No cambia
   // el cálculo del motor ni afecta a otros productos.
-  const presetCosteo = getPresetCosteo(
-    String((enrichedProduct as Record<string, unknown>)?.title ?? ""),
-    userText
-  );
+  const productTitle = String((enrichedProduct as Record<string, unknown>)?.title ?? "").trim();
+  const presetCosteo = getPresetCosteo(productTitle, userText);
   // Si hay preset, el total del presupuesto se toma del preset (datos de Forward),
   // tanto en pantalla como en el PDF, para que coincidan (evita el desfasaje).
   if (presetCosteo) {
@@ -197,6 +195,7 @@ export async function POST(req: Request) {
     ok: true as const,
     quoteId: row.id,
     ncm: finalNcm,
+    productTitle: productTitle || undefined,
     cards: quote.cards,
     totalMinUsd: quote.totalMinUsd,
     totalMaxUsd: quote.totalMaxUsd,
