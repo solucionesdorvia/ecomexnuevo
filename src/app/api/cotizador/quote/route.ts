@@ -199,24 +199,29 @@ export async function POST(req: Request) {
   // número puede variar según la subpartida exacta (nunca presentar un tentativo
   // como si fuera definitivo).
   const classification = (() => {
-    const status = snapshot.status === "resolved" ? "resolved" : "tentative";
-    const chosenKey = (finalNcm ?? "").replace(/\D/g, "").slice(0, 8);
-    const alternatives = (snapshot.candidates ?? [])
-      .map((c) => {
-        const code = (c.code ?? "").trim();
-        if (!code) return null;
-        const diePct = getOfficialTariff(code)?.diePct ?? null;
-        return { code, label: c.description ?? "", diePct };
-      })
-      .filter((x): x is { code: string; label: string; diePct: number | null } => x != null)
-      // No repetir la posición ya elegida.
-      .filter((a) => a.code.replace(/\D/g, "").slice(0, 8) !== chosenKey)
-      .slice(0, 3);
-    return {
-      status,
-      confidence: typeof snapshot.confidence === "number" ? snapshot.confidence : undefined,
-      alternatives,
-    };
+    try {
+      const status = snapshot.status === "resolved" ? "resolved" : "tentative";
+      const chosenKey = (finalNcm ?? "").replace(/\D/g, "").slice(0, 8);
+      const alternatives = (snapshot.candidates ?? [])
+        .map((c) => {
+          const code = (c?.code ?? "").trim();
+          if (!code) return null;
+          const diePct = getOfficialTariff(code)?.diePct ?? null;
+          return { code, label: c?.description ?? "", diePct };
+        })
+        .filter((x): x is { code: string; label: string; diePct: number | null } => x != null)
+        // No repetir la posición ya elegida.
+        .filter((a) => a.code.replace(/\D/g, "").slice(0, 8) !== chosenKey)
+        .slice(0, 3);
+      return {
+        status,
+        confidence: typeof snapshot.confidence === "number" ? snapshot.confidence : undefined,
+        alternatives,
+      };
+    } catch {
+      // Nunca dejar que la metadata de clasificación rompa la cotización.
+      return { status: "tentative" as const, confidence: undefined, alternatives: [] };
+    }
   })();
 
   // Fase 4.2: alertas de caminos degradados (medibles en logs). No bloquean.
