@@ -10,6 +10,7 @@
  *   data/ncm/index.json  (índice plano para searchNcm)
  */
 import fs from "fs";
+import crypto from "crypto";
 import path from "path";
 import { flattenAllChapters } from "../../src/lib/ncm/knowledge/flattenChapter";
 import { parseNcmSourceBuffer } from "../../src/lib/ncm/knowledge/parseSourceBuffer";
@@ -58,9 +59,22 @@ async function main() {
 
   const flat = flattenAllChapters(chapters);
   const indexPath = path.join(process.cwd(), "data", "ncm", "index.json");
-  fs.writeFileSync(indexPath, JSON.stringify(flat, null, 2), "utf8");
+  const indexJson = JSON.stringify(flat, null, 2);
+  fs.writeFileSync(indexPath, indexJson, "utf8");
   // eslint-disable-next-line no-console
   console.log("index.json →", indexPath, "registros:", flat.length);
+
+  // version.json: trazabilidad de freshness. sourceDate = fecha del dump oficial
+  // AFIP/ARCA (pasala con NCM_SOURCE_DATE=YYYY-MM-DD al correr la ingesta).
+  const version = {
+    generatedAt: new Date().toISOString(),
+    sourceDate: process.env.NCM_SOURCE_DATE || null,
+    checksum: crypto.createHash("sha256").update(indexJson).digest("hex").slice(0, 16),
+    records: flat.length,
+  };
+  const versionPath = path.join(process.cwd(), "data", "ncm", "version.json");
+  fs.writeFileSync(versionPath, JSON.stringify(version, null, 2), "utf8");
+  console.log("version.json →", versionPath, version);
 }
 
 main().catch((e) => {

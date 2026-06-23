@@ -9,6 +9,7 @@ import { ensureProductImage } from "@/lib/quote/ensureProductImage";
 import { getPresetCosteo } from "@/lib/quote/presetCosteos";
 import { recordProductNcm } from "@/lib/ncm/productCatalog";
 import { getOfficialTariff } from "@/lib/ncm/tariffRates";
+import { getNcmIndexVersion, isNcmIndexStale } from "@/lib/ncm/indexVersion";
 import { alert } from "@/lib/observability/alert";
 import { iibbPctForProvince } from "@/lib/quote/iibbProvinces";
 import { rateLimitByIp, RATE_LIMIT_MESSAGE } from "@/lib/rateLimit";
@@ -225,7 +226,12 @@ export async function POST(req: Request) {
     if (bk?.dieSource === "generic_default") {
       alert("tariff_generic", `Arancel genérico en cotización de ${label}.`, { ncm: finalNcm });
     } else if (bk?.dieSource === "official_offline") {
-      alert("tariff_offline", `Arancel del nomenclador offline (PCRAM no disponible) en ${label}.`, { ncm: finalNcm });
+      const v = getNcmIndexVersion();
+      alert("tariff_offline", `Arancel del nomenclador offline (PCRAM no disponible) en ${label}.`, {
+        ncm: finalNcm,
+        indexSourceDate: v?.sourceDate ?? null,
+        indexStale: isNcmIndexStale(),
+      });
     }
     if (bk?.siblingTariffDivergence) {
       alert("sibling_divergence", `Divergencia de subpartida en ${label}.`, {

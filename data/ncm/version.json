@@ -1,0 +1,7 @@
+{
+  "generatedAt": "2026-04-08T09:28:27-03:00",
+  "sourceDate": null,
+  "checksum": "d2d07860dbf81712",
+  "records": 44444,
+  "note": "Generado retroactivamente para el índice existente. sourceDate desconocida (dump AFIP previo). Re-ingestar con NCM_SOURCE_DATE para fijar la fecha fiscal."
+}

@@ -10,5 +10,11 @@ export async function register() {
     } catch {
       /* nunca rompe el boot */
     }
+    try {
+      const { ncmIndexVersionSummary } = await import("./lib/ncm/indexVersion");
+      console.log("[ncm]", ncmIndexVersionSummary());
+    } catch {
+      /* nunca rompe el boot */
+    }
   }
 }
