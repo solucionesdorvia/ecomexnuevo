@@ -6,6 +6,7 @@ import { RATE_LIMIT_MESSAGE, rateLimitByUser } from "@/lib/rateLimit";
 import { operationWhereForUser } from "@/lib/operations/operationAccess";
 import { operationProductLine } from "@/lib/notifications/operationProductLine";
 import { OPERATION_STAGE_LABEL_ES } from "@/lib/operations/stageLabels";
+import { catalogEntryFromProductJson, recordProductNcm } from "@/lib/ncm/productCatalog";
 
 export const runtime = "nodejs";
 
@@ -143,6 +144,20 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
 
       return op;
     });
+
+    // Auto-feed del catálogo NCM (Fase 2.4): una operación CERRADA es un import
+    // efectivamente concretado → la clasificación usada es "de oro" (verified).
+    // El catálogo aprende solo, sin que nadie tenga que revisar/confirmar nada.
+    if (newStage === "COMPLETADA") {
+      try {
+        const entry = catalogEntryFromProductJson(existing.quote.productJson);
+        if (entry) {
+          await recordProductNcm({ ...entry, source: "manual", verified: true, createdByUserId: user.id });
+        }
+      } catch (e) {
+        console.error("[op-stage/PATCH] auto-feed catálogo NCM falló (no bloquea)", e);
+      }
+    }
 
     return NextResponse.json({
       ok: true as const,

@@ -58,11 +58,14 @@ export async function recordProductNcm(input: {
   confidence?: number | null;
   source?: "ai" | "manual" | "quote";
   createdByUserId?: string | null;
+  /** true = confirmación humana o cierre real de operación: manda y marca la entrada como "de oro". */
+  verified?: boolean;
 }): Promise<void> {
   const key = normalizeProductKey(input.name);
   const ncm = (input.ncm || "").trim();
   // No guardamos clasificaciones vacías o sin resolver.
   if (key.length < 3 || !ncm || ncm === "9999.99.99") return;
+  const verified = input.verified === true;
   try {
     const existing = await prisma.productNcm.findUnique({ where: { key } });
     if (existing) {
@@ -70,14 +73,23 @@ export async function recordProductNcm(input: {
         where: { key },
         data: {
           timesUsed: { increment: 1 },
-          // No pisamos una entrada verificada por humano con una de IA.
-          ...(existing.verified
-            ? {}
-            : {
+          ...(verified
+            ? {
+                // Confirmación humana / cierre real: SIEMPRE manda (incluso sobre otra verificada,
+                // porque es una decisión más reciente sobre un import efectivamente concretado).
                 ncm,
                 ncmDescription: input.ncmDescription ?? existing.ncmDescription,
-                confidence: input.confidence ?? existing.confidence,
-              }),
+                confidence: input.confidence ?? 1,
+                verified: true,
+                source: input.source ?? "manual",
+              }
+            : existing.verified
+              ? {} // no pisamos una entrada verificada con una clasificación de IA
+              : {
+                  ncm,
+                  ncmDescription: input.ncmDescription ?? existing.ncmDescription,
+                  confidence: input.confidence ?? existing.confidence,
+                }),
         },
       });
     } else {
@@ -87,13 +99,41 @@ export async function recordProductNcm(input: {
           name: input.name.trim().slice(0, 200),
           ncm,
           ncmDescription: input.ncmDescription ?? null,
-          confidence: input.confidence ?? null,
-          source: input.source ?? "quote",
+          confidence: verified ? (input.confidence ?? 1) : (input.confidence ?? null),
+          source: input.source ?? (verified ? "manual" : "quote"),
           createdByUserId: input.createdByUserId ?? null,
+          verified,
         },
       });
     }
   } catch {
     // tabla ausente / DB caída: ignorar, no bloquear la cotización.
   }
+}
+
+/**
+ * Extrae {name, ncm, ncmDescription} del productJson guardado en una cotización.
+ * Misma derivación que usa el quote route para autollenar el catálogo.
+ * Devuelve null si no hay un NCM resuelto (≠ 9999.99.99) o falta el título.
+ */
+export function catalogEntryFromProductJson(
+  productJson: unknown
+): { name: string; ncm: string; ncmDescription: string | null } | null {
+  const p = (productJson ?? null) as Record<string, unknown> | null;
+  if (!p) return null;
+  const name = String(p.title ?? "").trim();
+  if (!name) return null;
+  const raw = (p.raw as Record<string, unknown> | undefined) ?? undefined;
+  const fromTop = typeof p.ncm === "string" ? p.ncm.trim() : "";
+  const fromRaw = typeof raw?.ncm === "string" ? raw.ncm.trim() : "";
+  const ncm =
+    fromTop && fromTop !== "9999.99.99"
+      ? fromTop
+      : fromRaw && fromRaw !== "9999.99.99"
+        ? fromRaw
+        : "";
+  if (!ncm) return null;
+  const pcram = (raw?.pcram as Record<string, unknown> | undefined) ?? undefined;
+  const ncmDescription = typeof pcram?.title === "string" ? pcram.title : null;
+  return { name, ncm, ncmDescription };
 }
