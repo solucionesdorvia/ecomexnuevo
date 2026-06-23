@@ -153,9 +153,18 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
         const entry = catalogEntryFromProductJson(existing.quote.productJson);
         if (entry) {
           await recordProductNcm({ ...entry, source: "manual", verified: true, createdByUserId: user.id });
+          // Fase 4.3: auditoría post-cierre — deja rastro del NCM que quedó "de oro".
+          await prisma.operationEvent.create({
+            data: {
+              operationId: existing.id,
+              stage: newStage,
+              description: `Auditoría: NCM ${entry.ncm} confirmado al catálogo (clasificación de oro tras cierre)`,
+              actor: user.email,
+            },
+          });
         }
       } catch (e) {
-        console.error("[op-stage/PATCH] auto-feed catálogo NCM falló (no bloquea)", e);
+        console.error("[op-stage/PATCH] auto-feed/auditoría NCM falló (no bloquea)", e);
       }
     }
 

@@ -160,6 +160,28 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
     );
   }
 
+  // Teléfono celular / smartphone → 8517.12 (en esta nomenclatura los smartphones
+  // van a 8517.12.00 "teléfonos celulares (móviles)"). El léxico manda "celular" al
+  // cap. 21 (levadura "celular"), por eso sembramos la partida correcta.
+  if (
+    /\b(celular\w*|smartphone\w*|m[oó]vil\b|tel[eé]fono\w*\s+(movil|m[oó]vil|intelig\w*|celular\w*))\b/.test(text)
+  ) {
+    seeds.push({ ncm_code: "8517.12.00", title: "[Cap. 85] Teléfonos celulares (móviles) / smartphones" });
+  }
+  // Notebook / laptop → 8471.30 (máquinas automáticas de procesamiento de datos,
+  // portátiles). El léxico la manda a 8415 (aire acondicionado "portátil").
+  if (/\b(notebook\w*|laptop\w*|ultrabook\w*|netbook\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "8471.30.12", title: "[Cap. 84] Notebook/laptop portátil, peso < 3,5 kg (procesamiento de datos)" },
+      { ncm_code: "8471.30.90", title: "[Cap. 84] Las demás máquinas de procesamiento de datos portátiles" }
+    );
+  }
+  // Televisor / smart TV → 8528.72 (receptores de televisión en color). El léxico
+  // daba 8521 (vídeo). Excluye el monitor de PC (8528.5x).
+  if (/\b(televisor\w*|smart\s*tv|televisi[oó]n\w*)\b/.test(text) && !/\bmonitor\w*\b/.test(text)) {
+    seeds.push({ ncm_code: "8528.72.00", title: "[Cap. 85] Televisores en color (receptores de TV)" });
+  }
+
   return seeds;
 }
 
@@ -192,7 +214,10 @@ export function buildNcmKnowledgeEvidence(productText: string): {
   if (ELECTRONICS_RE.test(q)) {
     const hasElectronicsChapter = hits.some((h) => ELECTRONICS_CHAPTERS.has(h.chapter));
     if (!hasElectronicsChapter) {
-      return null;
+      // Si tenemos semillas de dominio (la partida correcta es conocida, p. ej.
+      // celular→8517, notebook→8471), las usamos en vez de descartar todo. Solo
+      // sin semillas caemos a modo libre (sin restricción de candidatos).
+      return seeds.length ? { candidates: seeds, note: SEED_NOTE } : null;
     }
   }
 

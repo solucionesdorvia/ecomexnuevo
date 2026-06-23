@@ -39,6 +39,11 @@ describe("buildNcmKnowledgeEvidence — regresión de clasificación", () => {
     { name: "taladro → 8467", text: "taladro percutor eléctrico de mano", includes: "8467.21.00" },
     { name: "microondas → 8516.50", text: "horno de microondas digital 20 litros", includes: "8516.50.00" },
     { name: "campera → 62", text: "campera rompeviento de hombre de fibra sintética", includes: "6201.40.00" },
+    // Electrónica: el léxico los manda a capítulos errados (celular→cap.21 levadura,
+    // notebook→8415 aire). Los seeds + la guarda corregida los rescatan.
+    { name: "celular → 8517.12", text: "celular smartphone android 128gb", includes: "8517.12.00" },
+    { name: "notebook → 8471.30", text: "notebook laptop gamer 16gb ram", includes: "8471.30.12" },
+    { name: "televisor → 8528.72", text: "televisor smart tv led 50 pulgadas", includes: "8528.72.00" },
   ];
 
   for (const c of CASES) {
