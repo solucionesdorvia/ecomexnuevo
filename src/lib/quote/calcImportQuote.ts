@@ -454,6 +454,14 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     | undefined;
 
   const pcramTaxes = pcram?.taxes ?? undefined;
+  // Antigüedad de las tasas PCRAM (Fase 1.3): si el dato es de hace mucho o quedó
+  // "stale" (PCRAM caído y se usó el último conocido), lo avisamos y bajamos quality.
+  const pcramStale = Boolean((inputs.product.raw as any)?.pcramStale);
+  const pcramAsOf = (inputs.product.raw as any)?.pcramAsOf as string | undefined;
+  const pcramDaysAgo =
+    pcramAsOf && !Number.isNaN(new Date(pcramAsOf).getTime())
+      ? Math.max(0, Math.floor((Date.now() - new Date(pcramAsOf).getTime()) / 86_400_000))
+      : null;
   const ncmMeta = (inputs.product.raw as any)?.ncmMeta as { hsHeading?: string } | undefined;
 
   const pct = (key: string) => {
@@ -795,12 +803,14 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       label: "Impuestos",
       value:
         dieSource === "pcram_live"
-          ? "Arancel oficial de PCRAM (en vivo)"
+          ? pcramStale
+            ? `Arancel de PCRAM (dato de hace ${pcramDaysAgo ?? "varios"} días — reintentá para refrescar)`
+            : "Arancel oficial de PCRAM (en vivo)"
           : dieSource === "official_offline"
             ? "Arancel oficial del nomenclador"
             : "Estimación general (arancel a confirmar)",
       source: dieSource === "generic_default" ? "estimate" : "pcram",
-      tone: dieSource === "generic_default" ? "muted" : "success",
+      tone: dieSource === "generic_default" || pcramStale ? "muted" : "success",
     },
     ...(siblingDivergence
       ? [
@@ -877,6 +887,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     if (origin !== "Origen a confirmar") q += 8;
     if (zone !== "OTHER") q += 6;
     if (isIndustrialMachinery) q += 6;
+    if (pcramStale) q -= 12;            // tasas PCRAM viejas → menos confianza
+    if (siblingDivergence) q -= 8;      // subpartida sensible al arancel
     return Math.max(0, Math.min(100, q));
   })();
 
