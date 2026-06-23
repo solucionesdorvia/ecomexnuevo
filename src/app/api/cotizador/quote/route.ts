@@ -8,6 +8,7 @@ import { ensureProductSpecs } from "@/lib/quote/ensureProductSpecs";
 import { ensureProductImage } from "@/lib/quote/ensureProductImage";
 import { getPresetCosteo } from "@/lib/quote/presetCosteos";
 import { recordProductNcm } from "@/lib/ncm/productCatalog";
+import { getOfficialTariff } from "@/lib/ncm/tariffRates";
 import { iibbPctForProvince } from "@/lib/quote/iibbProvinces";
 import { rateLimitByIp, RATE_LIMIT_MESSAGE } from "@/lib/rateLimit";
 import {
@@ -191,11 +192,37 @@ export async function POST(req: Request) {
     }
   }
 
+  // Fase 3.3: honestidad de confianza. Si la clasificación quedó "tentativa",
+  // exponemos el estado + las alternativas con su DIE para que la UI avise que el
+  // número puede variar según la subpartida exacta (nunca presentar un tentativo
+  // como si fuera definitivo).
+  const classification = (() => {
+    const status = snapshot.status === "resolved" ? "resolved" : "tentative";
+    const chosenKey = (finalNcm ?? "").replace(/\D/g, "").slice(0, 8);
+    const alternatives = (snapshot.candidates ?? [])
+      .map((c) => {
+        const code = (c.code ?? "").trim();
+        if (!code) return null;
+        const diePct = getOfficialTariff(code)?.diePct ?? null;
+        return { code, label: c.description ?? "", diePct };
+      })
+      .filter((x): x is { code: string; label: string; diePct: number | null } => x != null)
+      // No repetir la posición ya elegida.
+      .filter((a) => a.code.replace(/\D/g, "").slice(0, 8) !== chosenKey)
+      .slice(0, 3);
+    return {
+      status,
+      confidence: typeof snapshot.confidence === "number" ? snapshot.confidence : undefined,
+      alternatives,
+    };
+  })();
+
   const res = NextResponse.json({
     ok: true as const,
     quoteId: row.id,
     ncm: finalNcm,
     productTitle: productTitle || undefined,
+    classification,
     cards: quote.cards,
     totalMinUsd: quote.totalMinUsd,
     totalMaxUsd: quote.totalMaxUsd,

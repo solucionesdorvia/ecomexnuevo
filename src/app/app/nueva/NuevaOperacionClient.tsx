@@ -214,6 +214,8 @@ export default function NuevaOperacionClient({
         setQuoteResult({
           quoteId: json.quoteId,
           ncm: (json as QuoteCostPayload).ncm,
+          productTitle: (json as QuoteCostPayload).productTitle,
+          classification: (json as QuoteCostPayload).classification,
           cards: json.cards,
           totalMinUsd: json.totalMinUsd,
           totalMaxUsd: json.totalMaxUsd,

@@ -48,6 +48,12 @@ export type QuoteCostPayload = {
   ncm?: string;
   /** Título del producto (clave del catálogo NCM) — necesario para confirmar/corregir. */
   productTitle?: string;
+  /** Estado de la clasificación NCM + alternativas (Fase 3.3: honestidad de confianza). */
+  classification?: {
+    status: "resolved" | "tentative";
+    confidence?: number;
+    alternatives?: Array<{ code: string; label: string; diePct: number | null }>;
+  };
   cards: Array<{ label: string; value: string; detail?: string; highlight?: boolean }>;
   totalMinUsd?: number;
   totalMaxUsd?: number;
@@ -603,6 +609,49 @@ function PresetBreakdown({ preset }: { preset: NonNullable<QuoteCostPayload["pre
 
 // ─── Componente principal ─────────────────────────────────────────────────────
 
+/** Aviso honesto cuando la clasificación NCM quedó tentativa: el número puede variar. */
+function ClassificationNotice({
+  classification,
+  ncm,
+}: {
+  classification: NonNullable<QuoteCostPayload["classification"]>;
+  ncm?: string;
+}) {
+  if (classification.status !== "tentative") return null;
+  const alts = (classification.alternatives ?? []).filter((a) => a.code);
+  return (
+    <div className="mb-3 rounded-xl border border-amber-500/25 bg-amber-500/[0.06] px-4 py-3">
+      <div className="flex items-start gap-2">
+        <Info className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" aria-hidden />
+        <div className="min-w-0 text-[12px] leading-relaxed">
+          <p className="font-semibold text-amber-300">Clasificación a confirmar</p>
+          <p className="mt-0.5 text-amber-100/80">
+            La posición{" "}
+            {ncm ? <span className="font-mono text-amber-200">{ncmToPartida(ncm) || ncm}</span> : "sugerida"}{" "}
+            es la más probable, pero el producto admite más de una. El costo final puede variar según
+            la subpartida exacta — confirmala con tu despachante.
+          </p>
+          {alts.length > 0 && (
+            <ul className="mt-2 space-y-1">
+              {alts.map((a) => (
+                <li key={a.code} className="flex items-center gap-2 text-[11px] text-amber-100/70">
+                  <span className="shrink-0 font-mono text-amber-200">{ncmToPartida(a.code) || a.code}</span>
+                  {typeof a.diePct === "number" && (
+                    <span className="shrink-0 rounded bg-amber-500/15 px-1 font-medium text-amber-300">
+                      DIE {a.diePct}%
+                    </span>
+                  )}
+                  <span className="truncate text-amber-100/60">{a.label}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function QuoteCostBreakdown({
   quote,
   scrollIntoViewOnMount,
@@ -626,6 +675,7 @@ export function QuoteCostBreakdown({
   return (
     <div ref={rootRef}>
       {quote.regime && <RegimeBanner regime={quote.regime} />}
+      {quote.classification && <ClassificationNotice classification={quote.classification} ncm={quote.ncm} />}
 
       {quote.presetCosteo?.lines?.length ? (
         <PresetBreakdown preset={quote.presetCosteo} />

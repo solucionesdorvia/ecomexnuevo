@@ -274,6 +274,7 @@ export default function CotizadorPublicoClient() {
         setQuoteResult({
           quoteId: json.quoteId,
           ncm: json.ncm,
+          classification: json.classification,
           cards: json.cards,
           totalMinUsd: json.totalMinUsd,
           totalMaxUsd: json.totalMaxUsd,
