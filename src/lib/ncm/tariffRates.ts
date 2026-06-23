@@ -125,6 +125,38 @@ function fmtNcm(digits8: string): string {
   return `${digits8.slice(0, 4)}.${digits8.slice(4, 6)}.${digits8.slice(6, 8)}`;
 }
 
+/**
+ * Devuelve el DIE oficial de TODAS las subpartidas hermanas dentro del mismo
+ * heading (4 dígitos) del NCM dado. Sirve para detectar cuándo la elección de
+ * subpartida cambia mucho el arancel (ej. 8419.31=14% vs 8419.39=35%) y costear
+ * de forma conservadora. Todas las tasas salen de la MISMA fuente (índice
+ * offline) para que el rango sea comparable.
+ */
+export function getSiblingTariffs(ncm: string): Array<{ ncm: string; diePct: number }> {
+  const digits8 = toDigits8(ncm);
+  if (!digits8) return [];
+  const heading4 = digits8.slice(0, 4);
+  const ch = loadChapter(digits8.slice(0, 2)) as ChapterShape | null;
+  if (!ch?.headings) return [];
+  const byCode = new Map<string, number[]>();
+  for (const h of ch.headings) {
+    for (const sub of h.subheadings ?? []) {
+      const d = (sub.code ?? "").replace(/\D/g, "").slice(0, 8).padEnd(8, "0");
+      if (d.slice(0, 4) !== heading4) continue;
+      const parsed = parseRateRow(sub.description ?? "");
+      if (!parsed) continue;
+      if (!byCode.has(d)) byCode.set(d, []);
+      byCode.get(d)!.push(parsed.die);
+    }
+  }
+  const out: Array<{ ncm: string; diePct: number }> = [];
+  for (const [d, dies] of byCode) {
+    const m = mode(dies);
+    if (typeof m === "number" && Number.isFinite(m)) out.push({ ncm: fmtNcm(d), diePct: m });
+  }
+  return out;
+}
+
 /** Moda (valor más frecuente) de una lista numérica. */
 function mode(nums: number[]): number | null {
   if (!nums.length) return null;

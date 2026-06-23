@@ -4,7 +4,13 @@ import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
 import { detectOriginZone, estimateUnitDimensions, calcFreightCost, ShippingMode, OriginZone } from "./freightRates";
 import { hydrateFreightConfig, getFreightConfig } from "./freightRatesConfig";
 import { hydrateImportExpenses, computeImportExpenses } from "./importExpensesConfig";
-import { getOfficialTariff } from "@/lib/ncm/tariffRates";
+import { getOfficialTariff, getSiblingTariffs } from "@/lib/ncm/tariffRates";
+
+/** De dónde salió el derecho de importación (DIE) aplicado. */
+type DieSource = "pcram_live" | "official_offline" | "generic_default";
+
+/** Umbral (en puntos %) para considerar que la subpartida hermana cambia "mucho" el arancel. */
+const SIBLING_DIVERGENCE_PP = 10;
 
 /**
  * Derecho de importación por defecto cuando no hay dato real de PCRAM.
@@ -28,6 +34,33 @@ function officialDieRate(ncm?: string): number | null {
   const die = getOfficialTariff(ncm)?.diePct;
   if (typeof die !== "number" || !Number.isFinite(die)) return null;
   return die / 100;
+}
+
+/**
+ * Resuelve el DIE final teniendo en cuenta las subpartidas HERMANAS del heading.
+ * Si dentro de la misma partida (4 díg.) el arancel varía mucho (ej. 8419.31=14%
+ * vs 8419.39=35%), lo marca como "divergencia" para avisar al usuario. Además, si
+ * el dato NO vino de PCRAM en vivo (es decir, la subpartida exacta es menos segura)
+ * y hay una hermana más cara, costea con la más alta — CONSERVADOR: nunca subcotiza.
+ * Si vino de PCRAM (código exacto + tasa vigente), respeta esa tasa pero igual avisa.
+ */
+function resolveDieWithSiblings(
+  ncm: string | undefined,
+  baseRate: number,
+  source: DieSource
+): { rate: number; source: DieSource; divergence: { minPct: number; maxPct: number } | null } {
+  if (!ncm) return { rate: baseRate, source, divergence: null };
+  const sibs = getSiblingTariffs(ncm);
+  if (sibs.length < 2) return { rate: baseRate, source, divergence: null };
+  const dies = sibs.map((s) => s.diePct);
+  const minPct = Math.min(...dies);
+  const maxPct = Math.max(...dies);
+  const divergence = maxPct - minPct >= SIBLING_DIVERGENCE_PP ? { minPct, maxPct } : null;
+  let rate = baseRate;
+  if (divergence && source !== "pcram_live" && maxPct / 100 > baseRate) {
+    rate = maxPct / 100; // conservador: la subpartida más cara del heading
+  }
+  return { rate, source, divergence };
 }
 import { assessImportRegime, formatRegimeForExplanation, type RegimeAssessment } from "./regime";
 
@@ -211,6 +244,10 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     ivaAdicRatePct: number;
     /** Líneas de impuestos individuales con monto y tasa */
     taxLines: Array<{ label: string; ratePct: number | null; amountUsd: number }>;
+    /** Fuente real del DIE aplicado: PCRAM en vivo, nomenclador offline, o genérico. */
+    dieSource?: "pcram_live" | "official_offline" | "generic_default";
+    /** Si la subpartida del heading tiene aranceles dispares (min/max % del DIE). */
+    siblingTariffDivergence?: { minPct: number; maxPct: number } | null;
   };
   assumptions?: Array<{
     id: string;
@@ -480,12 +517,26 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
 
   // True cuando el DIE salió del nomenclador oficial offline (no de PCRAM ni del genérico).
   let usedOfficialOfflineDie = false;
+  // Traza de la fuente real del arancel + divergencia de subpartida hermana.
+  let dieSource: DieSource = "generic_default";
+  let siblingDivergence: { minPct: number; maxPct: number } | null = null;
 
   if (pcramTaxes) {
     // Si PCRAM trae el dato real de la posición, MANDA (la plataforma "sabe" sola
     // el IVA 10,5% de bienes de capital, la TE exenta, etc.). El toggle es respaldo.
     const teRate = exentoTE ? 0 : (pct("TE") ?? 0.03);
-    const dieRate = pct("DIE") ?? pct("AEC") ?? officialDieRate(ncm) ?? defaultDieRate(ncm);
+    const pcramDie = pct("DIE") ?? pct("AEC");
+    const offDie = pcramDie == null ? officialDieRate(ncm) : null;
+    const baseDie = pcramDie ?? offDie ?? defaultDieRate(ncm);
+    const die0 = resolveDieWithSiblings(
+      ncm,
+      baseDie,
+      pcramDie != null ? "pcram_live" : offDie != null ? "official_offline" : "generic_default"
+    );
+    const dieRate = die0.rate;
+    dieSource = die0.source;
+    siblingDivergence = die0.divergence;
+    usedOfficialOfflineDie = dieSource === "official_offline";
     const ivaRate = pct("IVA") ?? ivaResolved;
     // IVA adicional acompaña al IVA: 10% si IVA reducido, 20% si general (solo reventa).
     const ivaAdicRate = esReventa ? (ivaRate <= 0.11 ? 0.1 : 0.2) : 0;
@@ -585,8 +636,15 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     // Sin PCRAM en vivo: usar el DIE OFICIAL del nomenclador offline (real, no
     // inventado). Solo si el índice no tiene la posición caemos al genérico.
     const officialDie = officialDieRate(ncm);
-    usedOfficialOfflineDie = officialDie != null;
-    const dieRateEst   = officialDie ?? defaultDieRate(ncm);   // oficial offline → genérico
+    const die0 = resolveDieWithSiblings(
+      ncm,
+      officialDie ?? defaultDieRate(ncm),
+      officialDie != null ? "official_offline" : "generic_default"
+    );
+    const dieRateEst   = die0.rate;   // oficial offline → genérico (conservador si hay divergencia)
+    dieSource = die0.source;
+    siblingDivergence = die0.divergence;
+    usedOfficialOfflineDie = dieSource === "official_offline";
     const teRateEst    = exentoTE ? 0 : 0.03;
     const ivaRateEst   = ivaResolved;
     const ivaAdicRateEst = ivaAdicResolved;
@@ -735,14 +793,26 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     {
       id: "taxMode",
       label: "Impuestos",
-      value: pcramTaxes
-        ? "Tasas oficiales de PCRAM (en vivo)"
-        : usedOfficialOfflineDie
-          ? "Arancel oficial del nomenclador (offline)"
-          : "Estimación general (arancel a confirmar)",
-      source: pcramTaxes || usedOfficialOfflineDie ? "pcram" : "estimate",
-      tone: pcramTaxes || usedOfficialOfflineDie ? "success" : "muted",
+      value:
+        dieSource === "pcram_live"
+          ? "Arancel oficial de PCRAM (en vivo)"
+          : dieSource === "official_offline"
+            ? "Arancel oficial del nomenclador"
+            : "Estimación general (arancel a confirmar)",
+      source: dieSource === "generic_default" ? "estimate" : "pcram",
+      tone: dieSource === "generic_default" ? "muted" : "success",
     },
+    ...(siblingDivergence
+      ? [
+          {
+            id: "subpartida",
+            label: "Subpartida",
+            value: `Dentro de esta partida el arancel varía entre ${siblingDivergence.minPct}% y ${siblingDivergence.maxPct}% según la subpartida exacta${dieSource !== "pcram_live" ? " — usamos la más alta por prudencia" : ""}. Confirmá la subpartida con tu despachante.`,
+            source: "estimate" as const,
+            tone: "muted" as const,
+          },
+        ]
+      : []),
     {
       id: "regime",
       label: "Régimen recomendado",
@@ -979,6 +1049,8 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       ivaRatePct,
       ivaAdicRatePct,
       taxLines,
+      dieSource,
+      siblingTariffDivergence: siblingDivergence,
     },
     assumptions,
     quality,

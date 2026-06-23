@@ -101,6 +101,37 @@ describe("calcImportQuote - mode: quote", () => {
     ).rejects.toThrow(/NO_PRICE/);
   });
 
+  it("divergencia de subpartida: deshidratador costea conservador (no subcotiza)", async () => {
+    // 8419.31 (DIE 14%) vs hermana 8419.39 (DIE 35%) en el mismo heading.
+    // Sin PCRAM (offline), debe detectar la divergencia y costear con el DIE más alto.
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Deshidratador de alimentos", fobUsd: 450, quantity: 3, origin: "China", ncm: "8419.31.00" },
+      rawUserText: "3 deshidratadores USD 450 China",
+    });
+    const b = result.breakdown!;
+    expect(b.dieSource).toBe("official_offline");
+    expect(b.siblingTariffDivergence).toBeTruthy();
+    expect(b.siblingTariffDivergence!.maxPct).toBeGreaterThanOrEqual(35);
+    // Costeo conservador: usa la subpartida más cara del heading (≥35%), nunca el 14%.
+    expect(b.derechosRatePct).toBeGreaterThanOrEqual(35);
+  });
+
+  it("dieSource refleja PCRAM cuando hay tasas en vivo", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: {
+        title: "Auriculares",
+        fobUsd: 10,
+        quantity: 100,
+        ncm: "8518.30.00",
+        raw: { pcram: { ncmCode: "8518.30.00", taxes: { DIE: 16, IVA: 21 } } },
+      },
+      rawUserText: "100 auriculares USD 10",
+    });
+    expect(result.breakdown!.dieSource).toBe("pcram_live");
+  });
+
   it("includes assumptions array", async () => {
     const result = await calcImportQuote({
       mode: "quote",
