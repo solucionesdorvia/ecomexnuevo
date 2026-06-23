@@ -3,6 +3,7 @@ import path from "path";
 import type { NcmKnowledgeRecord, NcmSearchHit } from "./types";
 import { filterIncoherentForProductText } from "./coherence";
 import { ncmDigitsOnly } from "./normalize";
+import { expandQueryWithSynonyms } from "./synonyms";
 
 let cachedRecords: NcmKnowledgeRecord[] | null = null;
 
@@ -121,13 +122,16 @@ export function searchNcm(query: string, opts?: SearchNcmOptions): NcmSearchHit[
 
   const pool = searchPool(records);
   const q = query.trim().slice(0, 800);
+  // Query expandida con sinónimos formales del nomenclador (aditivo) — solo para
+  // puntuar. La original (`q`) se conserva para matchedTerms y la coherencia.
+  const qScore = expandQueryWithSynonyms(q);
   const limit = Math.min(Math.max(opts?.limit ?? 10, 1), 30);
   const scanLimit = Math.min(pool.length, Number(process.env.NCM_SEARCH_MAX_SCAN) || 60_000);
 
   const scored: { item: NcmKnowledgeRecord; raw: number }[] = [];
   for (let i = 0; i < scanLimit; i++) {
     const item = pool[i]!;
-    const raw = scoreRecord(q, item);
+    const raw = scoreRecord(qScore, item);
     if (raw > 0) scored.push({ item, raw });
   }
 
