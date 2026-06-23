@@ -28,8 +28,8 @@ function toNumber(v: unknown) {
   return null;
 }
 
-async function fetchBlueVentaArsPerUsd(): Promise<number | null> {
-  const res = await fetch("https://dolarapi.com/v1/dolares/blue", {
+async function fetchDolarVenta(casa: "blue" | "oficial"): Promise<number | null> {
+  const res = await fetch(`https://dolarapi.com/v1/dolares/${casa}`, {
     headers: { accept: "application/json" },
     // Avoid any cached intermediaries; we handle caching ourselves.
     cache: "no-store",
@@ -39,6 +39,11 @@ async function fetchBlueVentaArsPerUsd(): Promise<number | null> {
   const venta = toNumber(json?.venta);
   if (!venta || venta <= 0) return null;
   return venta;
+}
+
+/** Tipo de cambio a usar: blue (default) u oficial. Decisión de negocio (aduana). */
+function fxTipo(): "blue" | "oficial" {
+  return (process.env.FX_ADUANA_TIPO || "blue").toLowerCase() === "oficial" ? "oficial" : "blue";
 }
 
 /**
@@ -70,8 +75,12 @@ export async function getArsPerUsd(opts?: { ttlMs?: number }): Promise<number> {
   }
 
   cache.inFlight ??= (async () => {
-    const live = await fetchBlueVentaArsPerUsd().catch(() => null);
-    return live;
+    const tipo = fxTipo();
+    const otra = tipo === "blue" ? "oficial" : "blue";
+    const primary = await fetchDolarVenta(tipo).catch(() => null);
+    if (typeof primary === "number" && Number.isFinite(primary) && primary > 0) return primary;
+    // Respaldo: la OTRA cotización real (mejor un dólar real que el fallback fijo).
+    return await fetchDolarVenta(otra).catch(() => null);
   })();
 
   const live = await cache.inFlight.catch(() => null);

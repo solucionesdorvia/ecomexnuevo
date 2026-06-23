@@ -164,7 +164,12 @@ function mode(nums: number[]): number | null {
   for (const n of nums) count.set(n, (count.get(n) ?? 0) + 1);
   let best = nums[0];
   let bestC = 0;
-  for (const [v, c] of count) if (c > bestC) (best = v), (bestC = c);
+  for (const [v, c] of count) {
+    if (c > bestC) {
+      best = v;
+      bestC = c;
+    }
+  }
   return best;
 }
 

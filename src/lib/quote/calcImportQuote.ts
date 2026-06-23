@@ -523,8 +523,6 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   const iibbResolved = esReventa ? Math.max(0, iibbPctInput) / 100 : 0;
   const ivaResolved = bienDeCapital ? 0.105 : 0.21;
 
-  // True cuando el DIE salió del nomenclador oficial offline (no de PCRAM ni del genérico).
-  let usedOfficialOfflineDie = false;
   // Traza de la fuente real del arancel + divergencia de subpartida hermana.
   let dieSource: DieSource = "generic_default";
   let siblingDivergence: { minPct: number; maxPct: number } | null = null;
@@ -544,7 +542,16 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     const dieRate = die0.rate;
     dieSource = die0.source;
     siblingDivergence = die0.divergence;
-    usedOfficialOfflineDie = dieSource === "official_offline";
+    // 1.4: si hay PCRAM live y el índice offline difiere ≥5pp, el offline está
+    // posiblemente desactualizado. PCRAM manda; solo dejamos rastro para alertar.
+    if (pcramDie != null && ncm) {
+      const off = officialDieRate(ncm);
+      if (off != null && Math.abs(off - pcramDie) >= 0.05) {
+        console.warn(
+          `[quote] arancel divergente ${ncm}: PCRAM ${(pcramDie * 100).toFixed(1)}% vs offline ${(off * 100).toFixed(1)}% — índice offline posiblemente desactualizado`
+        );
+      }
+    }
     const ivaRate = pct("IVA") ?? ivaResolved;
     // IVA adicional acompaña al IVA: 10% si IVA reducido, 20% si general (solo reventa).
     const ivaAdicRate = esReventa ? (ivaRate <= 0.11 ? 0.1 : 0.2) : 0;
@@ -652,7 +659,6 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     const dieRateEst   = die0.rate;   // oficial offline → genérico (conservador si hay divergencia)
     dieSource = die0.source;
     siblingDivergence = die0.divergence;
-    usedOfficialOfflineDie = dieSource === "official_offline";
     const teRateEst    = exentoTE ? 0 : 0.03;
     const ivaRateEst   = ivaResolved;
     const ivaAdicRateEst = ivaAdicResolved;
