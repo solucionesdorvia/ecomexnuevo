@@ -73,7 +73,7 @@ function deriveNcm(product: any): { code: string; description: string } {
   const description =
     safeStr(product?.raw?.pcram?.title) ||
     safeStr(product?.raw?.ncmMeta?.description) ||
-    "Clasificación aduanera estimada por IA. Debe ser validada por un despachante de aduana matriculado.";
+    "Clasificación aduanera estimada por IA. La valida un despachante de aduana matriculado del equipo de E-COMEX.";
   return { code, description };
 }
 

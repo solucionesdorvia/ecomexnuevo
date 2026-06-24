@@ -384,8 +384,8 @@ export function ReporteAnalisisClient({ data }: { data: ReporteAnalisisData }) {
               <Icon name="info" size={16} className="mt-0.5 shrink-0 text-muted" />
               <p className="text-[12px] leading-relaxed text-muted">
                 Este análisis ha sido generado por el motor de IA de E-COMEX.
-                La clasificación NCM es sugerida y debe ser validada por un
-                despachante de aduana matriculado antes de realizar la operación.
+                La clasificación NCM es sugerida y la valida un despachante de
+                aduana matriculado del equipo de E-COMEX antes de operar.
               </p>
             </div>
           </Card>
