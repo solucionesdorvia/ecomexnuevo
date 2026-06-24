@@ -499,6 +499,11 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   let iibbMax = 0;
   let internosMin = 0;
   let internosMax = 0;
+  let antidumpingMin = 0;
+  let antidumpingMax = 0;
+  let antidumpingRatePct: number | null = null;
+  // Hay antidumping vigente pero sin % cuantificable (valor específico / FOB mínimo).
+  let antidumpingUnquantified = false;
 
   // Tasas reales — se populan desde PCRAM; defaults orientativos si no hay datos
   let derechosRatePct = 14;
@@ -570,8 +575,33 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     derechosMin = cifMin2 * dieRate;
     derechosMax = cifMax2 * dieRate;
 
-    const baseIvaMin = cifMin2 + teMin + derechosMin;
-    const baseIvaMax = cifMax2 + teMax + derechosMax;
+    // Derechos antidumping / compensatorios / salvaguardia. Riesgo #1 de sub-costeo
+    // (productos chinos: calzado, neumáticos, bicis, herramientas…). PCRAM los trae
+    // en taxesExtra como % ad valorem; si vienen como valor específico o "FOB mínimo"
+    // no hay % → se avisa sin número en vez de esconderlo. Base = valor en aduana (CIF).
+    {
+      const extra = (pcram as unknown as { taxesExtra?: Record<string, number> })?.taxesExtra;
+      const interventionsList =
+        (pcram as unknown as { interventions?: string[] })?.interventions ?? [];
+      const adRe = /antidump|compensator|salvaguard/i;
+      let adRate = 0;
+      if (extra) {
+        for (const [label, v] of Object.entries(extra)) {
+          if (adRe.test(label) && Number.isFinite(v) && v > 0) adRate += v / 100;
+        }
+      }
+      if (adRate > 0) {
+        antidumpingRatePct = ratePct(adRate);
+        antidumpingMin = cifMin2 * adRate;
+        antidumpingMax = cifMax2 * adRate;
+      } else if (interventionsList.some((i) => adRe.test(i))) {
+        antidumpingUnquantified = true;
+      }
+    }
+
+    // El antidumping integra la base imponible del IVA (es un tributo a la importación).
+    const baseIvaMin = cifMin2 + teMin + derechosMin + antidumpingMin;
+    const baseIvaMax = cifMax2 + teMax + derechosMax + antidumpingMax;
 
     ivaMin = baseIvaMin * ivaRate;
     ivaMax = baseIvaMax * ivaRate;
@@ -622,13 +652,14 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       }
     }
 
-    impuestosMin = teMin + derechosMin + ivaMin + ivaAdicMin + gananciasMin + iibbMin + internosMin;
-    impuestosMax = teMax + derechosMax + ivaMax + ivaAdicMax + gananciasMax + iibbMax + internosMax;
+    impuestosMin = teMin + derechosMin + antidumpingMin + ivaMin + ivaAdicMin + gananciasMin + iibbMin + internosMin;
+    impuestosMax = teMax + derechosMax + antidumpingMax + ivaMax + ivaAdicMax + gananciasMax + iibbMax + internosMax;
 
     // Líneas individuales de impuestos (para PDF y web)
     taxLines = [
       ...(teMin > 0 ? [{ label: "Tasa de Estadistica", ratePct: teRatePct, amountUsd: round2(teMin) }] : []),
       ...(derechosMin > 0 ? [{ label: "Derechos", ratePct: derechosRatePct, amountUsd: round2(derechosMin) }] : []),
+      ...(antidumpingMin > 0 ? [{ label: "Derechos antidumping", ratePct: antidumpingRatePct, amountUsd: round2(antidumpingMin) }] : []),
       ...(ivaMin > 0 ? [{ label: "IVA", ratePct: ivaRatePct, amountUsd: round2(ivaMin) }] : []),
       ...(ivaAdicMin > 0 ? [{ label: "IVA Adicional", ratePct: ivaAdicRatePct, amountUsd: round2(ivaAdicMin) }] : []),
       ...(gananciasMin > 0 ? [{ label: "Impuesto a las Ganancias", ratePct: ratePct(gananciasRate), amountUsd: round2(gananciasMin) }] : []),
@@ -829,6 +860,28 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
           },
         ]
       : []),
+    ...(antidumpingRatePct != null && antidumpingRatePct > 0
+      ? [
+          {
+            id: "antidumping",
+            label: "Antidumping",
+            value: `Esta posición tiene derechos antidumping del ${antidumpingRatePct}% (incluidos en el total). Confirmá el alcance con un despachante del equipo de E-COMEX.`,
+            source: "pcram" as const,
+            tone: "gold" as const,
+          },
+        ]
+      : antidumpingUnquantified
+        ? [
+            {
+              id: "antidumping",
+              label: "Antidumping",
+              value:
+                "Esta posición tiene una medida antidumping vigente que puede aplicarse como valor específico o FOB mínimo: el costo real puede ser bastante mayor al estimado. Confirmalo con un despachante del equipo de E-COMEX antes de operar.",
+              source: "estimate" as const,
+              tone: "gold" as const,
+            },
+          ]
+        : []),
     {
       id: "regime",
       label: "Régimen recomendado",
@@ -895,6 +948,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     if (isIndustrialMachinery) q += 6;
     if (pcramStale) q -= 12;            // tasas PCRAM viejas → menos confianza
     if (siblingDivergence) q -= 8;      // subpartida sensible al arancel
+    if (antidumpingUnquantified) q -= 15; // antidumping sin % → el costo real puede ser mucho mayor
     return Math.max(0, Math.min(100, q));
   })();
 

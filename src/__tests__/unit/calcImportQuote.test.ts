@@ -142,6 +142,51 @@ describe("calcImportQuote - mode: quote", () => {
     expect(Array.isArray(result.assumptions)).toBe(true);
   });
 
+  it("suma derechos antidumping cuando PCRAM los trae como % ad valorem", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: {
+        title: "Calzado deportivo",
+        fobUsd: 20,
+        quantity: 100,
+        ncm: "6404.11.00",
+        raw: {
+          pcram: {
+            ncmCode: "6404.11.00",
+            taxes: { DIE: 35, IVA: 21 },
+            taxesExtra: { "Derechos Antidumping": 50 },
+          },
+        },
+      },
+      rawUserText: "100 zapatillas USD 20 origen China",
+      destino: "reventa",
+    });
+    const adLine = result.breakdown!.taxLines?.find((l) => /antidumping/i.test(l.label));
+    expect(adLine).toBeTruthy();
+    expect(adLine!.amountUsd).toBeGreaterThan(0);
+    expect(adLine!.ratePct).toBe(50);
+    expect(result.assumptions?.some((a) => a.id === "antidumping")).toBe(true);
+  });
+
+  it("avisa antidumping NO cuantificable (intervención sin %) sin esconderlo", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: {
+        title: "Neumáticos de auto",
+        fobUsd: 80,
+        quantity: 50,
+        ncm: "4011.10.00",
+        raw: {
+          pcram: { ncmCode: "4011.10.00", taxes: { DIE: 16, IVA: 21 }, interventions: ["Antidumping"] },
+        },
+      },
+      rawUserText: "50 neumáticos USD 80",
+    });
+    const ad = result.assumptions?.find((a) => a.id === "antidumping");
+    expect(ad).toBeTruthy();
+    expect(ad!.value).toMatch(/espec[ií]fico o FOB m[ií]nimo|mayor/i);
+  });
+
   it("quality score is between 0 and 100", async () => {
     const result = await calcImportQuote({
       mode: "quote",
