@@ -44,6 +44,20 @@ describe("buildNcmKnowledgeEvidence — regresión de clasificación", () => {
     { name: "celular → 8517.12", text: "celular smartphone android 128gb", includes: "8517.12.00" },
     { name: "notebook → 8471.30", text: "notebook laptop gamer 16gb ram", includes: "8471.30.12" },
     { name: "televisor → 8528.72", text: "televisor smart tv led 50 pulgadas", includes: "8528.72.00" },
+    // Electrodomésticos y maquinaria de consumo frecuente (el léxico los manda a
+    // capítulos absurdos: aire→caucho, lavarropas→ortopedia, motocicleta→cámaras).
+    { name: "aire acondicionado → 8415", text: "aire acondicionado split 3000 frigorías", first: "8415.10.11", includes: "8415.10.11" },
+    { name: "lavarropas → 8450", text: "lavarropas automático 8kg", first: "8450.11.00", includes: "8450.11.00" },
+    { name: "secarropas → 8421", text: "secarropas centrífugo de ropa", first: "8421.12.00", includes: "8421.12.00" },
+    { name: "licuadora → 8509", text: "licuadora de vaso 600w", first: "8509.40.10", includes: "8509.40.10" },
+    { name: "cafetera → 8516.71", text: "cafetera eléctrica express", first: "8516.71.00", includes: "8516.71.00" },
+    { name: "plancha de ropa → 8516.40", text: "plancha de ropa a vapor", first: "8516.40.00", includes: "8516.40.00" },
+    { name: "soldadora → 8515", text: "soldadora inverter", first: "8515.31.00", includes: "8515.31.00" },
+    { name: "autoelevador → 8427", text: "autoelevador hidráulico 2500kg", first: "8427.20.00", includes: "8427.20.00" },
+    { name: "motocicleta → 8711", text: "motocicleta 150cc", first: "8711.20.00", includes: "8711.20.00" },
+    { name: "neumático de auto → 4011 (no 8703)", text: "neumático nuevo para automóvil de turismo", first: "4011.10.00", includes: "4011.10.00" },
+    { name: "panel solar → 8541", text: "panel solar fotovoltaico 450w", first: "8541.40.00", includes: "8541.40.00" },
+    { name: "luminaria LED → 9405", text: "luminaria LED de techo", first: "9405.40.00", includes: "9405.40.00" },
   ];
 
   for (const c of CASES) {

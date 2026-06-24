@@ -93,7 +93,9 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
     /\b(autom[oó]vil\w*|auto\b|sed[aá]n|coup[eé]|hatchback|station\s*wagon|suv\b|todoterreno|veh[ií]culo\w*\s+de\s+pasajeros)\b/.test(
       text
     ) &&
-    !/\b(cami[oó]n\w*|[oó]mnibus|colectivo|micro\b|autob[uú]s|tractor\w*|moto\b|motocicleta\w*)\b/.test(text)
+    !/\b(cami[oó]n\w*|[oó]mnibus|colectivo|micro\b|autob[uú]s|tractor\w*|moto\b|motocicleta\w*)\b/.test(text) &&
+    // No clasificar un REPUESTO/parte de auto como el auto entero.
+    !/\b(neum[aá]tico\w*|cubierta\w*|llanta\w*|repuesto\w*|filtro\w*|bater[ií]a\w*|paragolpe\w*|parabrisas\w*|amortiguador\w*|paragolpes\w*)\b/.test(text)
   ) {
     seeds.push(
       { ncm_code: "8703.23.10", title: "[Cap. 87] Automóvil de pasajeros, nafta, cilindrada 1500–3000 cc" },
@@ -180,6 +182,83 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
   // daba 8521 (vídeo). Excluye el monitor de PC (8528.5x).
   if (/\b(televisor\w*|smart\s*tv|televisi[oó]n\w*)\b/.test(text) && !/\bmonitor\w*\b/.test(text)) {
     seeds.push({ ncm_code: "8528.72.00", title: "[Cap. 85] Televisores en color (receptores de TV)" });
+  }
+
+  // ── Electrodomésticos y maquinaria de consumo frecuente ────────────────────
+  // El léxico manda estos términos a capítulos absurdos (aire→caucho, lavarropas→
+  // ortopedia, motocicleta→cámaras de aire, panel solar→grasa animal). Sembramos
+  // la partida correcta — códigos verificados contra el índice oficial.
+
+  // Aire acondicionado → 8415
+  if (/\b(aire\s+acondicionado|acondicionador\w*\s+de\s+aire|climatizador\w*|split\b)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "8415.10.11", title: "[Cap. 84] Aire acondicionado split (sistema de elementos separados)" },
+      { ncm_code: "8415.82.10", title: "[Cap. 84] Aire acondicionado con equipo de enfriamiento" }
+    );
+  }
+  // Lavarropas → 8450 (excluye lavavajillas, que es 8422)
+  if (/\b(lavarropas\w*|lava\s*ropas|lavadora\w*\s+de\s+ropa)\b/.test(text) && !/\blavavajilla\w*/.test(text)) {
+    seeds.push({ ncm_code: "8450.11.00", title: "[Cap. 84] Lavarropas automático (máquina de lavar ropa)" });
+  }
+  // Secarropas → 8421.12 (centrífugo) / 8451.21 (con calor). Exige contexto de ROPA
+  // (distinto del deshidratador/secador de ALIMENTOS, que va a 8419).
+  if (/\b(secarropas\w*|seca\s*ropas|secadora\w*\s+de\s+ropa)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "8421.12.00", title: "[Cap. 84] Secadora de ropa centrífuga" },
+      { ncm_code: "8451.21.00", title: "[Cap. 84] Secadora de ropa con calentamiento" }
+    );
+  }
+  // Licuadora / batidora / procesadora de alimentos → 8509.40
+  if (/\b(licuadora\w*|batidora\w*|juguera\w*|minipimer\w*|procesadora\w*\s+de\s+aliment\w*|mixer\b)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "8509.40.10", title: "[Cap. 85] Licuadoras (aparato electromecánico doméstico)" },
+      { ncm_code: "8509.40.00", title: "[Cap. 85] Trituradoras y mezcladoras de alimentos" }
+    );
+  }
+  // Cafetera eléctrica → 8516.71
+  if (/\b(cafetera\w*|m[aá]quina\w*\s+de\s+caf[eé]|express\w*\s+de\s+caf[eé])\b/.test(text)) {
+    seeds.push({ ncm_code: "8516.71.00", title: "[Cap. 85] Cafetera / aparato para preparar café o té" });
+  }
+  // Plancha de ropa → 8516.40 (exige contexto ropa/vapor; NO la plancha de acero)
+  if (/\b(plancha\w*\s+(de\s+ropa|a\s+vapor|de\s+vapor|el[eé]ctric\w*)|plancha\w*\s+de\s+(pelo|cabello)|planchita\w*\s+de\s+(pelo|cabello))\b/.test(text)) {
+    seeds.push({ ncm_code: "8516.40.00", title: "[Cap. 85] Plancha eléctrica" });
+  }
+  // Soldadora eléctrica → 8515
+  if (/\b(soldadora\w*|m[aá]quina\w*\s+de\s+soldar|soldador\w*\s+(inverter|el[eé]ctric\w*|mig|tig|de\s+arco))\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "8515.31.00", title: "[Cap. 85] Máquina de soldar de arco, automática" },
+      { ncm_code: "8515.39.00", title: "[Cap. 85] Las demás máquinas de soldar de arco" }
+    );
+  }
+  // Autoelevador / montacargas → 8427
+  if (/\b(autoelevador\w*|montacarga\w*|carretilla\w*\s+elevador\w*|apilador\w*|forklift\w*|clark\b)\b/.test(text)) {
+    seeds.push({ ncm_code: "8427.20.00", title: "[Cap. 84] Autoelevador / carretilla autopropulsada con motor" });
+  }
+  // Motocicleta → 8711 (excluye motosierra/motobomba/motoguadaña y "motor" suelto)
+  if (
+    /\b(motocicleta\w*|ciclomotor\w*|scooter\w*|\bmoto\b)\b/.test(text) &&
+    !/\b(motosierra\w*|motobomba\w*|motoguada\w*|motocultiv\w*|motoniv\w*|motor\b)\b/.test(text)
+  ) {
+    seeds.push(
+      { ncm_code: "8711.20.00", title: "[Cap. 87] Motocicleta, motor de pistón 50–250 cm³" },
+      { ncm_code: "8711.30.00", title: "[Cap. 87] Motocicleta, motor de pistón 250–500 cm³" }
+    );
+  }
+  // Neumático / cubierta de auto → 4011.10 (exige contexto vehículo; bici va a 4011.50)
+  if (
+    /\b(neum[aá]tico\w*|cubierta\w*)\b/.test(text) &&
+    /\b(auto\w*|veh[ií]cul\w*|camioneta\w*|turismo|rodado)\b/.test(text) &&
+    !/\bbicicl\w*/.test(text)
+  ) {
+    seeds.push({ ncm_code: "4011.10.00", title: "[Cap. 40] Neumático nuevo para automóvil de turismo" });
+  }
+  // Panel solar fotovoltaico → 8541.40
+  if (/\b(panel\w*\s+solar\w*|placa\w*\s+solar\w*|m[oó]dulo\w*\s+fotovolt\w*|celda\w*\s+solar\w*|fotovolta\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "8541.40.00", title: "[Cap. 85] Panel solar fotovoltaico (células fotovoltaicas)" });
+  }
+  // Luminaria LED (artefacto, no el foco/bulbo suelto) → 9405.40
+  if (/\b(luminaria\w*|reflector\w*\s+led|panel\w*\s+led|plaf[oó]n\w*|aplique\w*\s+led|tubo\w*\s+led)\b/.test(text)) {
+    seeds.push({ ncm_code: "9405.40.00", title: "[Cap. 94] Aparato eléctrico de alumbrado (luminaria LED)" });
   }
 
   return seeds;
