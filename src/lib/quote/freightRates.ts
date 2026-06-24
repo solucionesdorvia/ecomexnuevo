@@ -141,6 +141,15 @@ export function estimateUnitDimensions(ncm?: string, title?: string): UnitDimens
   if (/mesa|table/.test(t))    return { kg: 20, m3: 0.4 };
   if (/bicicleta|bicycle/.test(t)) return { kg: 12, m3: 0.25 };
 
+  // Fallback por capítulo: no asumir 1 kg en cosas densas/voluminosas (sub-costearía
+  // el flete). Conservador — siempre estima hacia arriba para no quedar corto.
+  const chapter = Number.isFinite(heading) ? Math.floor(heading / 100) : NaN;
+  if (chapter >= 72 && chapter <= 83) return { kg: 8, m3: 0.008 };   // metales y sus manufacturas
+  if (chapter >= 68 && chapter <= 70) return { kg: 15, m3: 0.012 };  // piedra, cerámica, vidrio
+  if (chapter === 40) return { kg: 8, m3: 0.03 };                    // caucho (neumáticos, etc.)
+  if (chapter >= 44 && chapter <= 49) return { kg: 4, m3: 0.012 };   // madera, papel
+  if (chapter === 84 || chapter === 85) return { kg: 5, m3: 0.02 };  // maquinaria/aparatos no específicos
+
   return { kg: 1.0, m3: 0.003 };
 }
 

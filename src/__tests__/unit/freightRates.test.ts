@@ -1,5 +1,26 @@
 import { describe, it, expect } from "vitest";
-import { planContainers, calcFreightCost, USABLE_M3_20, USABLE_M3_40 } from "@/lib/quote/freightRates";
+import {
+  planContainers,
+  calcFreightCost,
+  estimateUnitDimensions,
+  USABLE_M3_20,
+  USABLE_M3_40,
+} from "@/lib/quote/freightRates";
+
+describe("estimateUnitDimensions — fallback por capítulo (no asumir 1 kg en cosas densas)", () => {
+  it("metales (cap. 72-83) pesan más que el genérico de 1 kg", () => {
+    expect(estimateUnitDimensions("7308.90.00").kg).toBeGreaterThan(1);
+  });
+  it("piedra/cerámica/vidrio (cap. 68-70) son densos", () => {
+    expect(estimateUnitDimensions("6907.21.00").kg).toBeGreaterThanOrEqual(10);
+  });
+  it("caucho/neumáticos (cap. 40) no caen a 1 kg", () => {
+    expect(estimateUnitDimensions("4011.10.00").kg).toBeGreaterThan(1);
+  });
+  it("un producto realmente desconocido mantiene el genérico", () => {
+    expect(estimateUnitDimensions(undefined, "cosa rara sin pista").kg).toBe(1);
+  });
+});
 
 describe("planContainers (FCL 20'/40'/múltiple)", () => {
   it("hasta 28 m³ → un 20'", () => {

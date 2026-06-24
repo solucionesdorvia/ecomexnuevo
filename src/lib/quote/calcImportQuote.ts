@@ -64,6 +64,21 @@ function resolveDieWithSiblings(
 }
 import { assessImportRegime, formatRegimeForExplanation, type RegimeAssessment } from "./regime";
 
+/**
+ * Detecta si el precio podría NO estar en USD (el motor asume USD/unidad). Solo
+ * dispara con monedas inequívocamente extranjeras o pesos — NO con "$" suelto
+ * (ambiguo en AR) ni cuando ya se menciona USD/dólares. Devuelve la moneda detectada.
+ */
+function detectNonUsdPrice(userText: string): string | null {
+  const t = (userText || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  if (/\b(usd|u\$s|us\$|dolar|dolares|d[oó]lar)\b/.test(t)) return null; // precio ya en USD
+  if (/\b(yuan|yuanes|cny|rmb|renminbi)\b/.test(t)) return "yuanes (CNY)";
+  if (/(€|\beur\b|\beuros?\b)/.test(t)) return "euros (EUR)";
+  if (/\b(reales?|brl)\b/.test(t)) return "reales (BRL)";
+  if (/\b(pesos?\s*(argentinos?)?|ars)\b/.test(t)) return "pesos (ARS)";
+  return null;
+}
+
 /** Detecta si el usuario mencionó explícitamente un modo de transporte. */
 function detectUserShippingMode(userText: string, zone: OriginZone): ShippingMode | undefined {
   const t = userText.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
@@ -528,6 +543,10 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   const iibbResolved = esReventa ? Math.max(0, iibbPctInput) / 100 : 0;
   const ivaResolved = bienDeCapital ? 0.105 : 0.21;
 
+  // Red de seguridad de moneda: el motor asume FOB en USD; si el texto sugiere otra
+  // moneda, avisamos (no auto-convertimos para no inventar un tipo de cambio).
+  const nonUsdCurrencyHint = inputs.mode === "quote" ? detectNonUsdPrice(inputs.rawUserText ?? "") : null;
+
   // Traza de la fuente real del arancel + divergencia de subpartida hermana.
   let dieSource: DieSource = "generic_default";
   let siblingDivergence: { minPct: number; maxPct: number } | null = null;
@@ -882,6 +901,17 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
             },
           ]
         : []),
+    ...(nonUsdCurrencyHint
+      ? [
+          {
+            id: "moneda",
+            label: "Moneda del precio",
+            value: `Mencionaste ${nonUsdCurrencyHint} pero el cálculo asume el FOB en USD. Si el precio está en otra moneda, convertilo a dólares antes de cotizar — el total cambiaría bastante.`,
+            source: "estimate" as const,
+            tone: "gold" as const,
+          },
+        ]
+      : []),
     {
       id: "regime",
       label: "Régimen recomendado",
@@ -949,6 +979,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     if (pcramStale) q -= 12;            // tasas PCRAM viejas → menos confianza
     if (siblingDivergence) q -= 8;      // subpartida sensible al arancel
     if (antidumpingUnquantified) q -= 15; // antidumping sin % → el costo real puede ser mucho mayor
+    if (nonUsdCurrencyHint) q -= 10;     // precio quizá en otra moneda → total sospechoso
     return Math.max(0, Math.min(100, q));
   })();
 

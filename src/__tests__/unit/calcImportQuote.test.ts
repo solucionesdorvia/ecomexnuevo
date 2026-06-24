@@ -132,6 +132,24 @@ describe("calcImportQuote - mode: quote", () => {
     expect(result.breakdown!.dieSource).toBe("pcram_live");
   });
 
+  it("avisa si el precio podría no estar en USD (yuanes) y no lo asume callado", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Producto", fobUsd: 50, quantity: 100, origin: "China" },
+      rawUserText: "100 unidades a 50 yuanes cada una desde China",
+    });
+    expect(result.assumptions?.some((a) => a.id === "moneda")).toBe(true);
+  });
+
+  it("NO avisa de moneda cuando el precio está en USD", async () => {
+    const result = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Producto", fobUsd: 50, quantity: 100, origin: "China" },
+      rawUserText: "100 unidades a USD 50 cada una",
+    });
+    expect(result.assumptions?.some((a) => a.id === "moneda")).toBe(false);
+  });
+
   it("includes assumptions array", async () => {
     const result = await calcImportQuote({
       mode: "quote",
