@@ -40,11 +40,31 @@ function buildRates() {
       EUROPE: { flete20: c.fclEurope20, flete40: c.fclEurope40, destination: c.fclDestNet * (1 + IVA) },
     },
     LCL_RATES: {
-      CHINA: { fleteFlat: c.lclChinaFlat, destination: { handling: c.lclHandling } },
-      EUROPE: { fleteFlat: c.lclEuropeFlat, destination: { handling: c.lclHandling } },
-      USA: { fleteFlat: c.lclUsaFlat, destination: { handling: c.lclHandling } },
+      CHINA: { fleteMin: c.lclChinaFlat, perM3: c.lclPerM3, destination: { handling: c.lclHandling } },
+      EUROPE: { fleteMin: c.lclEuropeFlat, perM3: c.lclPerM3, destination: { handling: c.lclHandling } },
+      USA: { fleteMin: c.lclUsaFlat, perM3: c.lclPerM3, destination: { handling: c.lclHandling } },
     },
   };
+}
+
+// Volumen de carga aprovechable por contenedor (m³). Un 20' interno ~33 m³, usable
+// ~28; un 40' interno ~67, usable ~56. Se usa para elegir 20' vs 40' vs múltiples.
+export const USABLE_M3_20 = 28;
+export const USABLE_M3_40 = 56;
+
+/**
+ * Plan de contenedores FCL según volumen: 20', 40' o varios 40' (+ un 20' para el
+ * resto). Antes el motor cobraba SIEMPRE un 20', subcosteando cargas grandes (un
+ * envío de 70 m³ se cotizaba como un único 20').
+ */
+export function planContainers(m3: number): { c20: number; c40: number; label: string } {
+  if (m3 <= USABLE_M3_20) return { c20: 1, c40: 0, label: "1×20'" };
+  if (m3 <= USABLE_M3_40) return { c20: 0, c40: 1, label: "1×40'" };
+  const c40 = Math.floor(m3 / USABLE_M3_40);
+  const rem = m3 - c40 * USABLE_M3_40;
+  if (rem <= 0) return { c20: 0, c40, label: `${c40}×40'` };
+  if (rem <= USABLE_M3_20) return { c20: 1, c40, label: `${c40}×40' + 1×20'` };
+  return { c20: 0, c40: c40 + 1, label: `${c40 + 1}×40'` };
 }
 
 export const EUR_USD_APPROX = 1.1;
@@ -204,9 +224,9 @@ export function calcFreightCost(
   const { AIR_RATES, ALMACENAJE_RATES, FCL_RATES, LCL_RATES } = buildRates();
   const alm = ALMACENAJE_RATES;
 
-  // Peso cobrable según modalidad
-  const volKgAir = totalM3 * AIR_VOL_FACTOR;   // IATA: 1 m³ = 167 kg
-  const volKgSea = totalM3 * SEA_VOL_FACTOR;   // Marítimo: 1 CBM = 1.000 kg
+  // Peso volumétrico aéreo (IATA: 1 m³ = 167 kg). El marítimo usa revenue ton
+  // (m³ vs tonelada) dentro de cada rama LCL.
+  const volKgAir = totalM3 * AIR_VOL_FACTOR;
 
   switch (m) {
     case "air_usa": {
@@ -239,66 +259,41 @@ export function calcFreightCost(
         estimatedKg: chargeableKg,
       };
     }
-    case "lcl_china": {
-      const r = LCL_RATES.CHINA;
-      const chargeableSea = Math.max(totalKg, volKgSea);
-      const subtotal = r.fleteFlat + r.destination.handling;
-      return {
-        mode: m,
-        totalUsd: subtotal + alm.lclFlat,
-        almacenajeUsd: alm.lclFlat,
-        label: "Flete internacional",
-        detail: `Flete USD ${r.fleteFlat} (tarifa plana, carga cobrable ${Math.round(chargeableSea)} kg) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
-        estimatedKg: chargeableSea,
-      };
-    }
-    case "lcl_europe": {
-      const r = LCL_RATES.EUROPE;
-      const chargeableSea = Math.max(totalKg, volKgSea);
-      const subtotal = r.fleteFlat + r.destination.handling;
-      return {
-        mode: m,
-        totalUsd: subtotal + alm.lclFlat,
-        almacenajeUsd: alm.lclFlat,
-        label: "Flete internacional",
-        detail: `Flete USD ${r.fleteFlat} (tarifa plana, carga cobrable ${Math.round(chargeableSea)} kg) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
-        estimatedKg: chargeableSea,
-      };
-    }
+    case "lcl_china":
+    case "lcl_europe":
     case "lcl_usa": {
-      const r = LCL_RATES.USA;
-      const chargeableSea = Math.max(totalKg, volKgSea);
-      const subtotal = r.fleteFlat + r.destination.handling;
+      const r = m === "lcl_europe" ? LCL_RATES.EUROPE : m === "lcl_usa" ? LCL_RATES.USA : LCL_RATES.CHINA;
+      // LCL se cobra por revenue ton = el mayor entre volumen (m³) y peso (ton),
+      // con un mínimo por embarque. Antes era una tarifa plana que no escalaba.
+      const revenueTon = Math.max(totalM3, totalKg / SEA_VOL_FACTOR);
+      const fleteVar = r.perM3 * revenueTon;
+      const flete = Math.max(r.fleteMin, fleteVar);
+      const subtotal = flete + r.destination.handling;
+      const minNote = flete <= r.fleteMin ? ` (mínimo $${r.fleteMin})` : ` (${revenueTon.toFixed(1)} ton × $${r.perM3})`;
       return {
         mode: m,
-        totalUsd: subtotal + alm.lclFlat,
+        totalUsd: Math.round(subtotal) + alm.lclFlat,
         almacenajeUsd: alm.lclFlat,
         label: "Flete internacional",
-        detail: `Flete USD ${r.fleteFlat} (tarifa plana, carga cobrable ${Math.round(chargeableSea)} kg) + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
-        estimatedKg: chargeableSea,
+        detail: `Flete LCL $${Math.round(flete)}${minNote} + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
+        estimatedKg: Math.round(revenueTon * 1000),
       };
     }
-    case "fcl20_china": {
-      const r = FCL_RATES.CHINA;
-      const subtotal = r.flete20 + r.destination;
-      return {
-        mode: m,
-        totalUsd: Math.round(subtotal) + alm.fcl20,
-        almacenajeUsd: alm.fcl20,
-        label: "Flete internacional",
-        detail: `Flete $${r.flete20} + gastos destino $${Math.round(r.destination)} + almacenaje $${alm.fcl20}`,
-        estimatedKg: totalKg,
-      };
-    }
+    case "fcl20_china":
     case "fcl20_europe": {
-      const r = FCL_RATES.EUROPE;
-      const subtotal = r.flete20 + r.destination;
+      const r = m === "fcl20_europe" ? FCL_RATES.EUROPE : FCL_RATES.CHINA;
+      // Elegir 20' / 40' / varios según el volumen (antes cobraba siempre un 20').
+      const plan = planContainers(totalM3);
+      const containers = plan.c20 + plan.c40;
+      const flete = plan.c20 * r.flete20 + plan.c40 * r.flete40;
+      const dest = r.destination * containers; // gastos destino por contenedor
+      const almTotal = plan.c20 * alm.fcl20 + plan.c40 * alm.fcl40;
       return {
         mode: m,
-        totalUsd: Math.round(subtotal) + alm.fcl20,
-        almacenajeUsd: alm.fcl20,
+        totalUsd: Math.round(flete + dest) + almTotal,
+        almacenajeUsd: almTotal,
         label: "Flete internacional",
-        detail: `Flete $${r.flete20} + gastos destino $${Math.round(r.destination)} + almacenaje $${alm.fcl20}`,
+        detail: `${plan.label}: flete $${Math.round(flete)} + gastos destino $${Math.round(dest)} + almacenaje $${almTotal}`,
         estimatedKg: totalKg,
       };
     }

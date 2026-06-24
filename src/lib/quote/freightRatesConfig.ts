@@ -27,10 +27,11 @@ export type FreightRatesConfig = {
   fclEurope20: number;
   fclEurope40: number;
   fclDestNet: number; // sin IVA
-  // Marítimo LCL (tarifa plana por embarque)
+  // Marítimo LCL (mínimo por embarque + tarifa por tonelada de revenue = max(m³, ton))
   lclChinaFlat: number;
   lclEuropeFlat: number;
   lclUsaFlat: number;
+  lclPerM3: number; // USD por revenue ton (m³ o tonelada, el mayor). Sobre el mínimo manda este.
   lclHandling: number;
   // Almacenaje / depósito destino
   almAir: number;
@@ -60,6 +61,7 @@ export const DEFAULT_FREIGHT_RATES: FreightRatesConfig = {
   lclChinaFlat: 1500,
   lclEuropeFlat: 1500,
   lclUsaFlat: 1500,
+  lclPerM3: 120,
   lclHandling: 50,
   almAir: 250,
   almFcl20: 1500,
@@ -94,9 +96,10 @@ export const FREIGHT_FIELDS: FreightFieldMeta[] = [
   { key: "fclEurope20", label: "FCL Europa 20'", group: "Marítimo FCL", unit: "USD" },
   { key: "fclEurope40", label: "FCL Europa 40'", group: "Marítimo FCL", unit: "USD" },
   { key: "fclDestNet", label: "FCL: gastos destino (sin IVA)", group: "Marítimo FCL", unit: "USD" },
-  { key: "lclChinaFlat", label: "LCL China (tarifa plana)", group: "Marítimo LCL", unit: "USD" },
-  { key: "lclEuropeFlat", label: "LCL Europa (tarifa plana)", group: "Marítimo LCL", unit: "USD" },
-  { key: "lclUsaFlat", label: "LCL USA (tarifa plana)", group: "Marítimo LCL", unit: "USD" },
+  { key: "lclChinaFlat", label: "LCL China (mínimo por embarque)", group: "Marítimo LCL", unit: "USD" },
+  { key: "lclEuropeFlat", label: "LCL Europa (mínimo por embarque)", group: "Marítimo LCL", unit: "USD" },
+  { key: "lclUsaFlat", label: "LCL USA (mínimo por embarque)", group: "Marítimo LCL", unit: "USD" },
+  { key: "lclPerM3", label: "LCL: tarifa por m³ / revenue ton", group: "Marítimo LCL", unit: "USD/m³", help: "Se cobra el mayor entre m³ y toneladas; sobre el mínimo manda esta tarifa." },
   { key: "lclHandling", label: "LCL: handling destino", group: "Marítimo LCL", unit: "USD" },
   { key: "almAir", label: "Almacenaje aéreo", group: "Almacenaje", unit: "USD" },
   { key: "almFcl20", label: "Almacenaje FCL 20'", group: "Almacenaje", unit: "USD" },
