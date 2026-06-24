@@ -75,6 +75,47 @@ describe("buildNcmKnowledgeEvidence — regresión de clasificación", () => {
     { name: "cortadora de césped → 8433.11", text: "cortadora de césped eléctrica", first: "8433.11.00", includes: "8433.11.00" },
     // Guard: la pala CARGADORA frontal sigue siendo 8429 (el cargador eléctrico no la secuestra).
     { name: "pala cargadora frontal → 8429", text: "pala cargadora frontal", includes: "8429.51.00" },
+    // ── Benchmark Arancely: indumentaria (cap 61/62) ──
+    { name: "remera → 6109", text: "remera de algodon", first: "6109.10.00", includes: "6109.10.00" },
+    { name: "buzo → 6110", text: "buzo hoodie", first: "6110.20.00", includes: "6110.20.00" },
+    { name: "jean → 6203", text: "pantalon jean de hombre", first: "6203.42.00", includes: "6203.42.00" },
+    { name: "vestido → 6204", text: "vestido de mujer", first: "6204.42.00", includes: "6204.43.00" },
+    { name: "camisa → 6205", text: "camisa de hombre", first: "6205.20.00", includes: "6205.20.00" },
+    { name: "ropa interior → 6107", text: "ropa interior boxer", first: "6107.11.00", includes: "6107.11.00" },
+    { name: "corpiño → 6212", text: "corpino sosten", first: "6212.10.00", includes: "6212.10.00" },
+    { name: "traje de baño → 6211", text: "traje de baño de hombre", first: "6211.11.00", includes: "6211.11.00" },
+    { name: "medias → 6115", text: "medias de algodon", first: "6115.95.00", includes: "6115.95.00" },
+    { name: "zapatos de cuero → 6403", text: "zapatos de cuero", first: "6403.99.90", includes: "6403.99.90" },
+    // ── Juguetes (cap 95) ──
+    { name: "lego → 9503.00.97", text: "lego bloques para armar", first: "9503.00.97", includes: "9503.00.97" },
+    { name: "muñeca → 9503.00.21", text: "muñeca barbie", first: "9503.00.21", includes: "9503.00.21" },
+    { name: "peluche → 9503.00.40", text: "oso de peluche", first: "9503.00.40", includes: "9503.00.40" },
+    { name: "pelota fútbol → 9506.62", text: "pelota de futbol", first: "9506.62.00", includes: "9506.62.00" },
+    { name: "consola → 9504.50", text: "consola de videojuegos playstation", first: "9504.50.00", includes: "9504.50.00" },
+    { name: "rompecabezas → 9503.00.70", text: "rompecabezas puzzle", first: "9503.00.70", includes: "9503.00.70" },
+    // ── Electrónica HS-2022 ──
+    { name: "tablet → 8471.30", text: "tablet ipad 10 pulgadas", first: "8471.30.12", includes: "8471.30.12" },
+    { name: "mouse → 8471.60.53", text: "mouse inalambrico", first: "8471.60.53", includes: "8471.60.53" },
+    { name: "teclado → 8471.60.52", text: "teclado mecanico usb", first: "8471.60.52", includes: "8471.60.52" },
+    { name: "ssd → 8471.70", text: "disco ssd externo", first: "8471.70.40", includes: "8471.70.40" },
+    { name: "drone → 8806", text: "drone con camara profesional", first: "8806.10.00", includes: "8806.10.00" },
+    { name: "router → 8517.62", text: "router wifi", first: "8517.62.55", includes: "8517.62.55" },
+    { name: "monitor → 8528.52", text: "monitor para pc 24", first: "8528.52.00", includes: "8528.52.00" },
+    { name: "cámara fotos → 8525", text: "camara de fotos digital", first: "8525.89.00", includes: "8525.89.00" },
+    // ── Cosmética (cap 33) ──
+    { name: "maquillaje → 3304.91", text: "maquillaje facial base", first: "3304.91.00", includes: "3304.91.00" },
+    { name: "crema facial → 3304.99", text: "crema facial hidratante", first: "3304.99.10", includes: "3304.99.10" },
+    { name: "shampoo → 3305.10", text: "shampoo para el cabello", first: "3305.10.00", includes: "3305.10.00" },
+    { name: "dentífrico → 3306.10", text: "pasta dental dentifrico", first: "3306.10.00", includes: "3306.10.00" },
+    // ── Hogar / bebidas / industria ──
+    { name: "silla oficina → 9401", text: "silla de oficina ergonomica", first: "9401.30.00", includes: "9401.30.00" },
+    { name: "vajilla cerámica → 6911", text: "vajilla de ceramica porcelana", first: "6911.10.00", includes: "6911.10.00" },
+    { name: "olla acero → 7323", text: "olla de acero inoxidable", first: "7323.93.00", includes: "7323.93.00" },
+    { name: "vino → 2204", text: "vino tinto", first: "2204.21.00", includes: "2204.21.00" },
+    { name: "motor eléctrico → 8501", text: "motor electrico trifasico", first: "8501.52.00", includes: "8501.52.00" },
+    { name: "casco moto → 6506 (no 8711)", text: "casco para moto", first: "6506.10.00", includes: "6506.10.00" },
+    { name: "batería de auto → 8507", text: "bateria de auto 12v plomo", first: "8507.10.00", includes: "8507.10.00" },
+    { name: "cerámico piso → 6907", text: "ceramico para piso porcelanato", first: "6907.21.00", includes: "6907.21.00" },
   ];
 
   for (const c of CASES) {

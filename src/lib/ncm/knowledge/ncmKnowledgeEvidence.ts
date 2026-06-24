@@ -109,12 +109,27 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
   // búsqueda léxica no matchea los términos comunes del usuario. Sembramos las
   // partidas oficiales por categoría para que SIEMPRE haya candidato correcto.
 
-  // Calzado deportivo / zapatillas → 64
+  // Calzado deportivo / zapatillas → 64. Si hay "cuero", priorizar 6403 (capellada de cuero).
   if (/\b(zapatilla\w*|zapato\w*|calzado\w*|sneaker\w*|champion(es)?|botin\w*|bota\w*)\b/.test(text)) {
+    if (/\b(cuero\w*|piel\w*)\b/.test(text)) {
+      seeds.push(
+        { ncm_code: "6403.99.90", title: "[Cap. 64] Calzado con parte superior de cuero" },
+        { ncm_code: "6403.51.90", title: "[Cap. 64] Calzado de cuero con suela de cuero" },
+        { ncm_code: "6404.11.00", title: "[Cap. 64] Calzado deportivo, parte superior textil" }
+      );
+    } else {
+      seeds.push(
+        { ncm_code: "6404.11.00", title: "[Cap. 64] Calzado deportivo, suela caucho/plástico, parte superior textil" },
+        { ncm_code: "6403.99.90", title: "[Cap. 64] Calzado con parte superior de cuero" },
+        { ncm_code: "6402.99.90", title: "[Cap. 64] Calzado de caucho o plástico" }
+      );
+    }
+  }
+  // Grupo electrógeno / generador eléctrico → 8502 (≠ motor solo, 8501)
+  if (/\b(grupo\w*\s+electr[oó]gen\w*|generador\w*\s+(el[eé]ctric\w*|de\s+energ|a\s+(nafta|diesel|gasoil))|electr[oó]gen\w*)\b/.test(text)) {
     seeds.push(
-      { ncm_code: "6404.11.00", title: "[Cap. 64] Calzado deportivo, suela caucho/plástico, parte superior textil" },
-      { ncm_code: "6403.99.90", title: "[Cap. 64] Calzado con parte superior de cuero" },
-      { ncm_code: "6402.99.90", title: "[Cap. 64] Calzado de caucho o plástico" }
+      { ncm_code: "8502.11.00", title: "[Cap. 85] Grupo electrógeno con motor diésel ≤ 75 kVA" },
+      { ncm_code: "8502.20.00", title: "[Cap. 85] Grupo electrógeno con motor de explosión (nafta)" }
     );
   }
   // Heladera / refrigerador / freezer → 8418
@@ -236,10 +251,11 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
   if (/\b(autoelevador\w*|montacarga\w*|carretilla\w*\s+elevador\w*|apilador\w*|forklift\w*|clark\b)\b/.test(text)) {
     seeds.push({ ncm_code: "8427.20.00", title: "[Cap. 84] Autoelevador / carretilla autopropulsada con motor" });
   }
-  // Motocicleta → 8711 (excluye motosierra/motobomba/motoguadaña y "motor" suelto)
+  // Motocicleta → 8711 (excluye motosierra/motobomba, "motor" suelto, y accesorios
+  // como casco/guantes/cubierta que tienen su propia posición).
   if (
     /\b(motocicleta\w*|ciclomotor\w*|scooter\w*|\bmoto\b)\b/.test(text) &&
-    !/\b(motosierra\w*|motobomba\w*|motoguada\w*|motocultiv\w*|motoniv\w*|motor\b)\b/.test(text)
+    !/\b(motosierra\w*|motobomba\w*|motoguada\w*|motocultiv\w*|motoniv\w*|motor\b|casco\w*|guante\w*|cubierta\w*|neum[aá]tic\w*|repuesto\w*|funda\w*)\b/.test(text)
   ) {
     seeds.push(
       { ncm_code: "8711.20.00", title: "[Cap. 87] Motocicleta, motor de pistón 50–250 cm³" },
@@ -323,6 +339,264 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
     seeds.push({ ncm_code: "8433.11.00", title: "[Cap. 84] Cortadora de césped con motor (corte horizontal)" });
   }
 
+  // ── Indumentaria (cap. 61 punto / 62 plano) ───────────────────────────────
+  // El léxico no resuelve prendas comunes (remera, jean, buzo) → caían vacías.
+  if (/\b(remera\w*|camiseta\w*|playera\w*|t-?shirt\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6109.10.00", title: "[Cap. 61] Remera/camiseta de algodón, de punto" },
+      { ncm_code: "6109.90.00", title: "[Cap. 61] Remera/camiseta de otras materias, de punto" }
+    );
+  }
+  if (/\b(buzo\w*|hoodie\w*|sudadera\w*|su[eé]ter\w*|sweater\w*|pulover\w*|canguro\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6110.20.00", title: "[Cap. 61] Buzo/suéter de algodón, de punto" },
+      { ncm_code: "6110.30.00", title: "[Cap. 61] Buzo/suéter de fibras sintéticas, de punto" }
+    );
+  }
+  if (/\b(jean\w*|pantal[oó]n\w*|vaquero\w*)\b/.test(text) && !/\b(corto\w*|short\w*|ba[ñn]o)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6203.42.00", title: "[Cap. 62] Pantalón/jean de hombre, algodón (tejido plano)" },
+      { ncm_code: "6204.62.00", title: "[Cap. 62] Pantalón/jean de mujer, algodón (tejido plano)" }
+    );
+  }
+  if (/\b(vestido\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6204.42.00", title: "[Cap. 62] Vestido de algodón (tejido plano)" },
+      { ncm_code: "6204.43.00", title: "[Cap. 62] Vestido de fibras sintéticas (tejido plano)" },
+      { ncm_code: "6104.43.00", title: "[Cap. 61] Vestido de fibras sintéticas, de punto" }
+    );
+  }
+  if (/\b(camisa\w*|blusa\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6205.20.00", title: "[Cap. 62] Camisa de hombre, algodón (tejido plano)" },
+      { ncm_code: "6206.30.00", title: "[Cap. 62] Camisa/blusa de mujer, algodón (tejido plano)" }
+    );
+  }
+  if (/\b(ropa\s+interior|boxer\w*|calzoncillo\w*|bombacha\w*|cal[zs][oó]n\w*|lencer[ií]a)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6107.11.00", title: "[Cap. 61] Ropa interior de hombre, algodón, de punto" },
+      { ncm_code: "6108.21.00", title: "[Cap. 61] Ropa interior de mujer, algodón, de punto" }
+    );
+  }
+  if (/\b(corpi[ñn]o\w*|sost[eé]n\w*|brassiere\w*|\bbra\b|corpi[ñn]os)\b/.test(text)) {
+    seeds.push({ ncm_code: "6212.10.00", title: "[Cap. 62] Corpiño/sostén" });
+  }
+  if (/\b(medias\w*|pantimedias\w*|calcetines\w*|soquetes\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6115.95.00", title: "[Cap. 61] Medias/calcetines de algodón, de punto" },
+      { ncm_code: "6115.96.00", title: "[Cap. 61] Medias/calcetines de fibras sintéticas, de punto" }
+    );
+  }
+  if (/\b(pollera\w*|falda\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6204.52.00", title: "[Cap. 62] Pollera/falda de algodón (tejido plano)" },
+      { ncm_code: "6104.52.00", title: "[Cap. 61] Pollera/falda de algodón, de punto" }
+    );
+  }
+  if (/\b(traje\w*\s+de\s+ba[ñn]o|mall[ao]\w*\s+de\s+ba[ñn]o|ba[ñn]ador\w*|bikini\w*|short\w*\s+de\s+ba[ñn]o)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6211.11.00", title: "[Cap. 62] Traje/malla de baño de hombre" },
+      { ncm_code: "6211.12.00", title: "[Cap. 62] Traje/malla de baño de mujer" }
+    );
+  } else if (/\b(traje\w*|ambo\w*|terno\w*|saco\w*\s+de\s+vestir|smoking\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6203.11.00", title: "[Cap. 62] Traje de hombre, lana (tejido plano)" },
+      { ncm_code: "6203.12.00", title: "[Cap. 62] Traje de hombre, fibras sintéticas (tejido plano)" }
+    );
+  }
+  if (/\b(gorra\w*|gorro\w*|sombrero\w*|cachucha\w*|vincha\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6505.00.90", title: "[Cap. 65] Gorra/gorro/sombrero de tejido" },
+      { ncm_code: "6506.99.00", title: "[Cap. 65] Los demás tocados" }
+    );
+  }
+
+  // ── Juguetes y juegos (cap. 95) — DI ~20% (el offline lo tiene 35%, viejo) ──
+  if (/\b(juguete\w*|jugueter[ií]a|juego\w*\s+infantil\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "9503.00.99", title: "[Cap. 95] Juguetes, los demás" },
+      { ncm_code: "9503.00.21", title: "[Cap. 95] Muñecas/muñecos" },
+      { ncm_code: "9503.00.97", title: "[Cap. 95] Bloques para armar / construcción" }
+    );
+  }
+  if (/\b(lego\w*|bloques?\s+(para\s+)?armar|bloques?\s+de\s+construcci[oó]n|rasti\w*|mega\s*bloks?)\b/.test(text)) {
+    seeds.push({ ncm_code: "9503.00.97", title: "[Cap. 95] Bloques para armar (tipo Lego)" });
+  }
+  if (/\b(mu[ñn]eca\w*|mu[ñn]eco\w*|barbie\w*|figura\w*\s+de\s+acci[oó]n|action\s*figure\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "9503.00.21", title: "[Cap. 95] Muñeca/muñeco" });
+  }
+  if (/\b(peluche\w*|mu[ñn]eco\w*\s+de\s+peluche|oso\s+de\s+peluche)\b/.test(text)) {
+    seeds.push({ ncm_code: "9503.00.40", title: "[Cap. 95] Juguete de peluche (animales rellenos)" });
+  }
+  if (/\b(pelota\w*|bal[oó]n\w*)\b/.test(text) && /\b(f[uú]tbol|basket|b[aá]squet|v[oó]ley|handball|deporte\w*|rugby)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "9506.62.00", title: "[Cap. 95] Pelota inflable (fútbol, básquet, vóley)" },
+      { ncm_code: "9506.69.00", title: "[Cap. 95] Las demás pelotas" }
+    );
+  }
+  if (/\b(rompecabezas\w*|puzzle\w*|quebra\s*cabezas?)\b/.test(text)) {
+    seeds.push({ ncm_code: "9503.00.70", title: "[Cap. 95] Rompecabezas (puzzles)" });
+  }
+  if (/\b(consola\w*\s+(de\s+)?(videojuego\w*|juego\w*|gaming)|playstation\w*|\bps[45]\b|xbox\w*|nintendo\w*|\bswitch\b|gameboy\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "9504.50.00", title: "[Cap. 95] Consola de videojuegos" });
+  }
+
+  // ── Electrónica que el índice viejo no tiene (HS-2022) ─────────────────────
+  if (/\b(tablet\w*|ipad\w*|tableta\w*)\b/.test(text) && !/\b(chocolate\w*|comprimid\w*|pastilla\w*|gr[aá]fica)\b/.test(text)) {
+    seeds.push({ ncm_code: "8471.30.12", title: "[Cap. 84] Tablet / iPad (máquina portátil de datos)" });
+  }
+  if (/\b(mouse\w*|rat[oó]n\s+(inal[aá]mbric|[oó]ptic|de\s+computad|usb))\b/.test(text)) {
+    seeds.push({ ncm_code: "8471.60.53", title: "[Cap. 84] Mouse (unidad de entrada)" });
+  }
+  if (/\b(teclado\w*)\b/.test(text) && /\b(usb|inal[aá]mbric\w*|mec[aá]nic\w*|\bpc\b|computad\w*|gamer)\b/.test(text)) {
+    seeds.push({ ncm_code: "8471.60.52", title: "[Cap. 84] Teclado de computadora (unidad de entrada)" });
+  }
+  if (/\b(disco\s+(ssd|s[oó]lido|r[ií]gido|duro|externo)|\bssd\b|\bhdd\b|memoria\s+de\s+estado\s+s[oó]lido)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "8471.70.40", title: "[Cap. 84] Disco SSD / unidad de almacenamiento" },
+      { ncm_code: "8471.70.90", title: "[Cap. 84] Las demás unidades de memoria" }
+    );
+  }
+  if (/\b(drone\w*|dron\b|drones\w*|cuadric[oó]ptero\w*|cuadricoptero\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "8806.10.00", title: "[Cap. 88] Drone (aeronave no tripulada)" },
+      { ncm_code: "9503.00.99", title: "[Cap. 95] Drone de juguete (si es de juguete)" }
+    );
+  }
+
+  // ── Cosmética y cuidado personal (cap. 33) — DI ~18% ───────────────────────
+  if (/\b(maquillaje\w*|m[aá]scara\w*\s+de\s+pesta[ñn]as|rimmel\w*|sombra\w*\s+de\s+ojos|labial\w*|rubor\w*|base\w*\s+de\s+maquillaje|corrector\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "3304.91.00", title: "[Cap. 33] Maquillaje facial (polvos, base, rubor)" },
+      { ncm_code: "3304.20.90", title: "[Cap. 33] Maquillaje de ojos" },
+      { ncm_code: "3304.10.00", title: "[Cap. 33] Maquillaje de labios" }
+    );
+  }
+  if (/\b(crema\w*\s+(facial|corporal|de\s+manos|hidratante|antiarrugas|para\s+la\s+piel)|skincare|s[eé]rum\w*|loci[oó]n\w*\s+corporal)\b/.test(text)) {
+    seeds.push({ ncm_code: "3304.99.10", title: "[Cap. 33] Crema facial / cuidado de la piel" });
+  }
+  if (/\b(shampoo\w*|champ[uú]\w*|acondicionador\w*\s+(de\s+)?(pelo|cabello))\b/.test(text)) {
+    seeds.push({ ncm_code: "3305.10.00", title: "[Cap. 33] Shampoo / preparación para el cabello" });
+  }
+  if (/\b(protector\w*\s+solar|bloqueador\w*\s+solar|pantalla\w*\s+solar|bronceador\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "3304.99.90", title: "[Cap. 33] Protector solar / bronceador" });
+  }
+
+  // ── Hogar / accesorios frecuentes ──────────────────────────────────────────
+  if (/\b(colch[oó]n\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "9404.21.00", title: "[Cap. 94] Colchón de caucho/plástico celular" },
+      { ncm_code: "9404.29.00", title: "[Cap. 94] Colchón de otras materias" }
+    );
+  }
+  if (/\b(s[aá]bana\w*|ropa\s+de\s+cama|juego\s+de\s+cama|acolchad\w*|cubrecama\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "6302.31.00", title: "[Cap. 63] Ropa de cama (sábanas) de algodón" });
+  }
+  if (/\b(toalla\w*|toall[oó]n\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "6302.60.00", title: "[Cap. 63] Toallas de algodón (felpa)" });
+  }
+  if (/\b(anteojos?\s+de\s+sol|gafas?\s+de\s+sol|lentes?\s+de\s+sol)\b/.test(text)) {
+    seeds.push({ ncm_code: "9004.10.00", title: "[Cap. 90] Anteojos de sol" });
+  }
+  if (/\b(reloj\w*\s+(pulsera|de\s+pulsera|inteligente|smartwatch)|smartwatch\w*|smart\s*watch\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "9102.12.00", title: "[Cap. 91] Reloj de pulsera con indicador optoelectrónico (smartwatch)" },
+      { ncm_code: "9102.19.00", title: "[Cap. 91] Los demás relojes de pulsera, eléctricos" }
+    );
+  }
+
+  // ── Más bienes de consumo / industria (códigos HS estándar) ────────────────
+  // Monitor de PC → 8528.52 (apto para conectarse a una máquina de datos)
+  if (/\bmonitor\w*\b/.test(text) && !/\b(card[ií]aco|presi[oó]n|beb[eé]|fetal)\b/.test(text)) {
+    seeds.push({ ncm_code: "8528.52.00", title: "[Cap. 85] Monitor para computadora (apto para conectar a ADP)" });
+  }
+  // Cámara fotográfica / de seguridad → 8525.8x (HS-2022)
+  if (/\b(c[aá]mara\w*\s+(de\s+)?(foto\w*|fotogr[aá]f\w*|digital|de\s+seguridad|ip\b|web|vigilancia)|webcam\w*|c[aá]mara\s+r[eé]flex|\bdslr\b|cctv)\b/.test(text)) {
+    seeds.push({ ncm_code: "8525.89.00", title: "[Cap. 85] Cámara fotográfica / de televisión (digital)" });
+  }
+  // Router / módem / access point → 8517.62
+  if (/\b(router\w*|enrutador\w*|m[oó]dem\w*|access\s*point|repetidor\w*\s+wifi)\b/.test(text)) {
+    seeds.push({ ncm_code: "8517.62.55", title: "[Cap. 85] Router / módem (aparato de telecomunicación)" });
+  }
+  // Casco (moto / seguridad) → 6506.10
+  if (/\bcasco\w*\b/.test(text) && !/\b(buque|barco|naval|botella)\b/.test(text)) {
+    seeds.push({ ncm_code: "6506.10.00", title: "[Cap. 65] Casco de seguridad (moto, industrial)" });
+  }
+  // Batería / acumulador de auto → 8507
+  if (/\b(bater[ií]a\w*|acumulador\w*)\b/.test(text) && /\b(auto\w*|veh[ií]cul\w*|plomo|[aá]cido|arranque|12\s*v|gel\b)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "8507.10.00", title: "[Cap. 85] Acumulador de plomo para arranque (batería de auto)" },
+      { ncm_code: "8507.20.00", title: "[Cap. 85] Los demás acumuladores de plomo" }
+    );
+  } else if (/\b(power\s*bank\w*|powerbank\w*|bater[ií]a\w*\s+(de\s+litio|port[aá]til|externa))\b/.test(text)) {
+    seeds.push({ ncm_code: "8507.60.00", title: "[Cap. 85] Batería de litio / power bank" });
+  }
+  // Olla / sartén / cacerola / batería de cocina → 7323 (acero) / 7615 (aluminio)
+  if (/\b(olla\w*|sart[eé]n\w*|cacerola\w*|cacerol\w*|bater[ií]a\w*\s+de\s+cocina|pava\b(?!\s+el)|wok\b)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "7323.93.00", title: "[Cap. 73] Olla/sartén de acero inoxidable" },
+      { ncm_code: "7615.10.00", title: "[Cap. 76] Olla/sartén de aluminio" }
+    );
+  }
+  // Vajilla / platos / tazas de cerámica o porcelana → 6911 / 6912
+  if (/\b(vajilla\w*|plato\w*|taza\w*|pocillo\w*|fuente\w*\s+de\s+(loza|cer[aá]mic|porcelan))\b/.test(text) && /\b(cer[aá]mic\w*|porcelan\w*|loza\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6911.10.00", title: "[Cap. 69] Vajilla de porcelana" },
+      { ncm_code: "6912.00.00", title: "[Cap. 69] Vajilla de otra cerámica" }
+    );
+  }
+  // Cerámico / porcelanato / azulejo para piso o pared → 6907
+  if (/\b(cer[aá]mic\w*\s+(para\s+)?(piso|pared|revestim)|porcelanato\w*|azulejo\w*|baldosa\w*\s+cer[aá]mic\w*|piso\w*\s+cer[aá]mic\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6907.21.00", title: "[Cap. 69] Baldosa/porcelanato cerámico para piso o pared" },
+      { ncm_code: "6907.22.00", title: "[Cap. 69] Las demás placas cerámicas (absorción media)" }
+    );
+  }
+  // Motor eléctrico → 8501
+  if (/\bmotor\w*\s+(el[eé]ctric\w*|trif[aá]sic\w*|monof[aá]sic\w*|de\s+inducci[oó]n|asincr[oó]nic\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "8501.52.00", title: "[Cap. 85] Motor eléctrico de CA, 750 W–75 kW" },
+      { ncm_code: "8501.51.00", title: "[Cap. 85] Motor eléctrico de CA, hasta 750 W" }
+    );
+  }
+  // Muebles (cap. 94): silla / mesa / placard / escritorio / mueble
+  if (/\b(silla\w*|sill[oó]n\w*|butaca\w*|banqueta\w*)\b/.test(text) && !/\b(rueda\w*|ni[ñn]o\w*\s+para\s+auto|de\s+auto)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "9401.30.00", title: "[Cap. 94] Silla giratoria de altura ajustable" },
+      { ncm_code: "9401.61.00", title: "[Cap. 94] Asiento con armazón de madera, tapizado" }
+    );
+  }
+  if (/\b(mesa\w*|escritorio\w*|placard\w*|ropero\w*|c[oó]moda\w*|estanter[ií]a\w*|biblioteca\w*\s+mueble|mueble\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "9403.30.00", title: "[Cap. 94] Mueble de madera para oficina" },
+      { ncm_code: "9403.60.00", title: "[Cap. 94] Los demás muebles de madera" }
+    );
+  }
+  // Bebidas alcohólicas (cap. 22)
+  if (/\b(vino\w*)\b/.test(text) && !/\b(vinagre\w*|vinil\w*)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "2204.21.00", title: "[Cap. 22] Vino de uva en recipientes ≤ 2 L" },
+      { ncm_code: "2204.10.10", title: "[Cap. 22] Vino espumoso (tipo champagne)" }
+    );
+  }
+  if (/\b(cerveza\w*|birra\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "2203.00.00", title: "[Cap. 22] Cerveza de malta" });
+  }
+  if (/\b(whisky\w*|whiskey\w*|vodka\w*|\bgin\b|ginebra\w*|\bron\b|tequila\w*|licor\w*|aperitivo\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "2208.30.00", title: "[Cap. 22] Bebida espirituosa (whisky/gin/vodka/ron/licor)" });
+  }
+  // Dentífrico / pasta dental → 3306.10
+  if (/\b(dent[ií]fric\w*|pasta\w*\s+dental|crema\w*\s+dental)\b/.test(text)) {
+    seeds.push({ ncm_code: "3306.10.00", title: "[Cap. 33] Dentífrico / pasta dental" });
+  }
+  // Guantes textiles → 6116 (punto) / 6216 (plano)
+  if (/\bguante\w*\b/.test(text) && !/\b(l[aá]tex|nitrilo|quir[uú]rgic\w*|descartabl\w*|seguridad\s+industrial|cuero\b)\b/.test(text)) {
+    seeds.push(
+      { ncm_code: "6116.93.00", title: "[Cap. 61] Guantes de fibras sintéticas, de punto" },
+      { ncm_code: "6216.00.00", title: "[Cap. 62] Guantes textiles (tejido plano)" }
+    );
+  }
+
   return seeds;
 }
 
@@ -334,7 +608,8 @@ export function buildNcmKnowledgeEvidence(productText: string): {
   note: string;
 } | null {
   const q = productText.trim().slice(0, 2000);
-  if (q.length < 8) return null;
+  // Mínimo bajo: "jean", "lego", "mouse", "tablet" deben disparar su semilla.
+  if (q.length < 4) return null;
 
   const seeds = domainSeedCandidates(q);
 
