@@ -166,7 +166,9 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
   // van a 8517.12.00 "teléfonos celulares (móviles)"). El léxico manda "celular" al
   // cap. 21 (levadura "celular"), por eso sembramos la partida correcta.
   if (
-    /\b(celular\w*|smartphone\w*|m[oó]vil\b|tel[eé]fono\w*\s+(movil|m[oó]vil|intelig\w*|celular\w*))\b/.test(text)
+    /\b(celular\w*|smartphone\w*|m[oó]vil\b|tel[eé]fono\w*\s+(movil|m[oó]vil|intelig\w*|celular\w*))\b/.test(text) &&
+    // Un ACCESORIO de celular (cargador, funda, cable, vidrio) no es el teléfono.
+    !/\b(cargador\w*|funda\w*|cable\w*|vidrio\w*|templado\w*|protector\w*|carcasa\w*|soporte\w*|accesorio\w*|repuesto\w*|pantalla\w*|bater[ií]a\w*|auricular\w*)\b/.test(text)
   ) {
     seeds.push({ ncm_code: "8517.12.00", title: "[Cap. 85] Teléfonos celulares (móviles) / smartphones" });
   }
@@ -259,6 +261,66 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
   // Luminaria LED (artefacto, no el foco/bulbo suelto) → 9405.40
   if (/\b(luminaria\w*|reflector\w*\s+led|panel\w*\s+led|plaf[oó]n\w*|aplique\w*\s+led|tubo\w*\s+led)\b/.test(text)) {
     seeds.push({ ncm_code: "9405.40.00", title: "[Cap. 94] Aparato eléctrico de alumbrado (luminaria LED)" });
+  }
+
+  // ── Pequeños electrodomésticos térmicos (8516) y cuidado personal (8510) ───
+  // El léxico los manda a tabaco, energía eléctrica, cerdas de cerdo, etc.
+
+  // Tostadora de pan → 8516.72
+  if (/\b(tostadora\w*|tostador\w*\s+de\s+pan)\b/.test(text)) {
+    seeds.push({ ncm_code: "8516.72.00", title: "[Cap. 85] Tostadora de pan eléctrica" });
+  }
+  // Freidora de aire / sandwichera / horno / anafe eléctrico → 8516.60
+  if (/\b(freidora\w*|air\s*fryer|sandwichera\w*|sanguchera\w*|horno\w*\s+el[eé]ctric\w*|anafe\w*\s+el[eé]ctric\w*|grill\w*\s+el[eé]ctric\w*|parrilla\w*\s+el[eé]ctric\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "8516.60.00", title: "[Cap. 85] Horno/freidora/parrilla eléctrica de cocción" });
+  }
+  // Pava eléctrica / hervidor / jarra eléctrica → 8516.79
+  if (/\b(pava\w*\s+el[eé]ctric\w*|hervidor\w*|jarra\w*\s+el[eé]ctric\w*|calentador\w*\s+de\s+agua\s+port[aá]til)\b/.test(text)) {
+    seeds.push({ ncm_code: "8516.79.00", title: "[Cap. 85] Pava/hervidor eléctrico (aparato electrotérmico)" });
+  }
+  // Calefactor / estufa eléctrica / caloventor → 8516.29
+  if (/\b(calefactor\w*|estufa\w*\s+el[eé]ctric\w*|caloventor\w*|caloventilador\w*|panel\w*\s+calefactor\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "8516.29.00", title: "[Cap. 85] Aparato eléctrico para calefacción de espacios" });
+  }
+  // Termotanque / calefón / calentador de agua eléctrico → 8516.10
+  if (/\b(termotanque\w*|calef[oó]n\w*|calentador\w*\s+de\s+agua)\b/.test(text)) {
+    seeds.push({ ncm_code: "8516.10.00", title: "[Cap. 85] Calentador eléctrico de agua (termotanque/calefón)" });
+  }
+  // Secador de pelo → 8516.31 (distinto del deshidratador de alimentos, 8419)
+  if (/\b(secador\w*\s+de\s+(pelo|cabello)|secarropas\w*\s+de\s+pelo)\b/.test(text)) {
+    seeds.push({ ncm_code: "8516.31.00", title: "[Cap. 85] Secador para el cabello" });
+  }
+  // Afeitadora eléctrica → 8510.10
+  if (/\b(afeitadora\w*|m[aá]quina\w*\s+de\s+afeitar)\b/.test(text)) {
+    seeds.push({ ncm_code: "8510.10.00", title: "[Cap. 85] Afeitadora eléctrica" });
+  }
+  // Máquina de cortar el pelo → 8510.20
+  if (/\b(cortapelo\w*|cortadora\w*\s+de\s+(pelo|cabello)|m[aá]quina\w*\s+de\s+cortar\s+(el\s+)?(pelo|cabello)|esquiladora\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "8510.20.00", title: "[Cap. 85] Máquina de cortar el pelo o esquilar" });
+  }
+  // Cepillo de dientes eléctrico → 8509.80
+  if (/\bcepillo\w*\s+de\s+dientes\b/.test(text) && /\b(el[eé]ctric\w*|recargable\w*|s[oó]nic\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "8509.80.00", title: "[Cap. 85] Cepillo de dientes eléctrico (aparato electromecánico)" });
+  }
+  // Cargador eléctrico / fuente → 8504.40 (excluye la pala CARGADORA frontal, 8429)
+  if (
+    /\bcargador\w*\b/.test(text) &&
+    /\b(celular\w*|tel[eé]fono\w*|bater[ií]a\w*|usb\b|notebook\w*|pila\w*|dispositiv\w*|red\b|220|inal[aá]mbric\w*)\b/.test(text) &&
+    !/\b(frontal|pala\s+cargador|minicargador|retro\w*)\b/.test(text)
+  ) {
+    seeds.push({ ncm_code: "8504.40.10", title: "[Cap. 85] Cargador de batería / convertidor estático" });
+  }
+  // Pendrive / memoria USB → 8523.51
+  if (/\b(pendrive\w*|pen\s*drive\w*|memoria\w*\s+usb|memoria\w*\s+flash|flash\s*drive\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "8523.51.00", title: "[Cap. 85] Pendrive / memoria flash (almacenamiento no volátil)" });
+  }
+  // Motosierra → 8467.81 (sierra de cadena, herramienta con motor)
+  if (/\b(motosierra\w*|sierra\w*\s+de\s+cadena|electrosierra\w*)\b/.test(text)) {
+    seeds.push({ ncm_code: "8467.81.00", title: "[Cap. 84] Motosierra (sierra de cadena con motor)" });
+  }
+  // Cortadora / cortadora de césped → 8433.11
+  if (/\b(cortadora\w*\s+de\s+c[eé]sped|cortac[eé]sped\w*|corta\s*c[eé]sped\w*|m[aá]quina\w*\s+de\s+cortar\s+c[eé]sped)\b/.test(text)) {
+    seeds.push({ ncm_code: "8433.11.00", title: "[Cap. 84] Cortadora de césped con motor (corte horizontal)" });
   }
 
   return seeds;

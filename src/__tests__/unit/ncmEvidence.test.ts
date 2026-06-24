@@ -58,6 +58,23 @@ describe("buildNcmKnowledgeEvidence — regresión de clasificación", () => {
     { name: "neumático de auto → 4011 (no 8703)", text: "neumático nuevo para automóvil de turismo", first: "4011.10.00", includes: "4011.10.00" },
     { name: "panel solar → 8541", text: "panel solar fotovoltaico 450w", first: "8541.40.00", includes: "8541.40.00" },
     { name: "luminaria LED → 9405", text: "luminaria LED de techo", first: "9405.40.00", includes: "9405.40.00" },
+    // Pequeños electrodomésticos térmicos + cuidado personal (léxico → tabaco,
+    // energía, cerdas de cerdo, petróleo, etc.).
+    { name: "tostadora → 8516.72", text: "tostadora de pan eléctrica", first: "8516.72.00", includes: "8516.72.00" },
+    { name: "freidora de aire → 8516.60", text: "freidora de aire 5 litros", first: "8516.60.00", includes: "8516.60.00" },
+    { name: "pava eléctrica → 8516.79", text: "pava eléctrica hervidor", first: "8516.79.00", includes: "8516.79.00" },
+    { name: "calefactor → 8516.29", text: "calefactor eléctrico de cuarzo", first: "8516.29.00", includes: "8516.29.00" },
+    { name: "termotanque → 8516.10", text: "termotanque eléctrico 50 litros", first: "8516.10.00", includes: "8516.10.00" },
+    { name: "secador de pelo → 8516.31 (no 8419)", text: "secador de pelo 2000w", first: "8516.31.00", includes: "8516.31.00" },
+    { name: "afeitadora → 8510.10", text: "afeitadora eléctrica", first: "8510.10.00", includes: "8510.10.00" },
+    { name: "cortapelo → 8510.20", text: "máquina de cortar el pelo", first: "8510.20.00", includes: "8510.20.00" },
+    { name: "cepillo dientes eléctrico → 8509.80", text: "cepillo de dientes eléctrico recargable", first: "8509.80.00", includes: "8509.80.00" },
+    { name: "cargador de celular → 8504 (no 8517)", text: "cargador de celular usb", first: "8504.40.10", includes: "8504.40.10" },
+    { name: "pendrive → 8523.51", text: "pendrive 64gb usb", first: "8523.51.00", includes: "8523.51.00" },
+    { name: "motosierra → 8467.81", text: "motosierra a explosión", first: "8467.81.00", includes: "8467.81.00" },
+    { name: "cortadora de césped → 8433.11", text: "cortadora de césped eléctrica", first: "8433.11.00", includes: "8433.11.00" },
+    // Guard: la pala CARGADORA frontal sigue siendo 8429 (el cargador eléctrico no la secuestra).
+    { name: "pala cargadora frontal → 8429", text: "pala cargadora frontal", includes: "8429.51.00" },
   ];
 
   for (const c of CASES) {
