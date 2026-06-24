@@ -153,7 +153,7 @@ export default function ClasificarNcmClient() {
                   confidence={caseState.confidence}
                   rationale={
                     caseState.status === "tentative"
-                      ? "Confianza por debajo del 70% o posición ambigua: validá con documentación y despachante."
+                      ? "Confianza por debajo del 70% o posición ambigua: la validamos con documentación y un despachante del equipo de E-COMEX."
                       : undefined
                   }
                   variant={caseState.status === "resolved" && !caseState.ambiguity ? "resolved" : "tentative"}

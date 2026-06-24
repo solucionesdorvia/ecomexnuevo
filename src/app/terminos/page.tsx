@@ -49,9 +49,9 @@ export default function TerminosPage() {
               <strong>Importante:</strong> las cotizaciones, posiciones arancelarias (NCM), alícuotas e impuestos que
               muestra la plataforma son <strong>estimaciones orientativas</strong>. Pueden variar según la clasificación
               definitiva, el régimen aplicable, intervenciones, el tipo de cambio y la normativa vigente al momento del
-              despacho. La clasificación y los tributos finales deben confirmarse con tu despachante de aduana y tu
-              contador. E-COMEX no garantiza exactitud y no es responsable por decisiones tomadas en base a estas
-              estimaciones.
+              despacho. La clasificación y los tributos finales se confirman con un despachante de aduana del equipo de
+              E-COMEX, junto con tu contador. E-COMEX no garantiza exactitud y no es responsable por decisiones tomadas en
+              base a estas estimaciones.
             </p>
           </section>
 

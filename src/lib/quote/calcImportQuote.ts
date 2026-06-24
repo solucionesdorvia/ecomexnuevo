@@ -823,7 +823,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
           {
             id: "subpartida",
             label: "Subpartida",
-            value: `Dentro de esta partida el arancel varía entre ${siblingDivergence.minPct}% y ${siblingDivergence.maxPct}% según la subpartida exacta${dieSource !== "pcram_live" ? " — usamos la más alta por prudencia" : ""}. Confirmá la subpartida con tu despachante.`,
+            value: `Dentro de esta partida el arancel varía entre ${siblingDivergence.minPct}% y ${siblingDivergence.maxPct}% según la subpartida exacta${dieSource !== "pcram_live" ? " — usamos la más alta por prudencia" : ""}. La subpartida la confirmamos con un despachante del equipo de E-COMEX.`,
             source: "estimate" as const,
             tone: "muted" as const,
           },

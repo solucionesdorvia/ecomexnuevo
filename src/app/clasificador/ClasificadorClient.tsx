@@ -183,7 +183,7 @@ export default function ClasificadorClient() {
               </div>
               <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <p className="text-[11px] leading-relaxed text-[#5A6577]">
-                  Clasificación orientativa. Validar con despachante antes de operar.
+                  Clasificación orientativa. La validamos con un despachante del equipo de E-COMEX antes de operar.
                 </p>
                 <button
                   type="button"

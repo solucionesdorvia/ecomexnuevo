@@ -629,7 +629,7 @@ function ClassificationNotice({
             La posición{" "}
             {ncm ? <span className="font-mono text-amber-200">{ncmToPartida(ncm) || ncm}</span> : "sugerida"}{" "}
             es la más probable, pero el producto admite más de una. El costo final puede variar según
-            la subpartida exacta — confirmala con tu despachante.
+            la subpartida exacta — la confirmamos con un despachante del equipo de E-COMEX.
           </p>
           {alts.length > 0 && (
             <ul className="mt-2 space-y-1">
@@ -724,8 +724,8 @@ export function QuoteCostBreakdown({
       <p className="mt-4 rounded-xl border border-amber-400/20 bg-amber-400/[0.06] px-3 py-2.5 text-[10.5px] leading-relaxed text-amber-200/90">
         Presupuesto <strong>estimado y orientativo</strong>. La posición arancelaria (NCM), las alícuotas y los impuestos
         pueden variar según la clasificación definitiva, el régimen, intervenciones, el tipo de cambio y la normativa
-        vigente al momento del despacho. Confirmá la clasificación y los tributos finales con tu despachante de aduana y
-        tu contador.
+        vigente al momento del despacho. La clasificación y los tributos finales los confirmamos con un despachante del
+        equipo de E-COMEX, junto con tu contador.
       </p>
     </div>
   );
