@@ -296,6 +296,14 @@ export function ReporteAnalisisClient({ data }: { data: ReporteAnalisisData }) {
                 <p className="mt-2 max-w-[460px] text-sm leading-relaxed text-muted">
                   {data.ncm.description}
                 </p>
+                {data.ncm.code && data.ncm.code !== "—" && (
+                  <a
+                    href={`/cotizaciones/${data.id}/justificacion`}
+                    className="mt-3 inline-flex items-center gap-1.5 rounded-lg border border-[color:color-mix(in_oklab,var(--blue)_40%,transparent)] bg-[color:color-mix(in_oklab,var(--blue)_10%,transparent)] px-3 py-1.5 text-[12px] font-semibold text-[color:color-mix(in_oklab,var(--blue)_82%,white_10%)] hover:bg-[color:color-mix(in_oklab,var(--blue)_18%,transparent)]"
+                  >
+                    📄 Ver justificación arancelaria (defendible ante ARCA)
+                  </a>
+                )}
               </div>
 
               {data.agencyTags.length > 0 ? (
