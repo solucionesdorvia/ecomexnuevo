@@ -37,4 +37,13 @@ describe("buildArancelaryJustification (defendible ante ARCA)", () => {
     expect(buildArancelaryJustification({ title: "X", ncm: "9999.99.99" })).toBeNull();
     expect(buildArancelaryJustification({ title: "X" })).toBeNull();
   });
+
+  it("puebla descripción oficial y capítulo desde el índice real (NCM existente)", () => {
+    const j = buildArancelaryJustification({ title: "Remera", ncm: "6109.10.00" });
+    expect(j).toBeTruthy();
+    // El nomenclador tiene 6109 → debe traer descripción y capítulo 61.
+    expect(j!.chapter).toBe("61");
+    expect(j!.ncmDescription.length).toBeGreaterThan(0);
+    expect(j!.tariff?.diePct).not.toBeNull();
+  });
 });
