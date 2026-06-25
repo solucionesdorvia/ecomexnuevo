@@ -48,6 +48,41 @@ describe("calcImportQuote — costeo Courier (puerta a puerta)", () => {
     expect(b.gastosImportacionLines.length).toBeGreaterThan(0);
   });
 
+  it("courier: impuesto único = 50% del FOB, seguro 0 y NADA recuperable (ni siendo RI)", async () => {
+    const r = await calcImportQuote({
+      mode: "quote", product: small() as any, rawUserText: "1 auricular USD 100",
+      destino: "reventa", perfilImportador: "responsable_inscripto",
+    } as Opts);
+    const b = r.breakdown!;
+    expect(r.regime!.code).toBe("courier");
+    // Tarifa real de Andy: 50% sobre el FOB (FOB 100 → impuesto 50).
+    expect(b.impuestosTotalMinUsd).toBeCloseTo(b.fobTotalUsd * 0.5, 1);
+    // El seguro va incluido en la tarifa puerta a puerta del courier.
+    expect(b.seguroMinUsd).toBe(0);
+    // El régimen courier no genera crédito fiscal recuperable, ni para Responsable Inscripto.
+    expect(b.recuperableMinUsd).toBe(0);
+    expect(b.recuperableMaxUsd).toBe(0);
+    // El impuesto courier reemplaza derechos/IVA/percepciones (una sola línea).
+    const tax = b.taxLines ?? [];
+    expect(tax.some((t: any) => /courier/i.test(t.label))).toBe(true);
+    expect(tax.some((t: any) => /derechos|IVA/i.test(t.label))).toBe(false);
+  });
+
+  it("courier: el flete depende del origen (China 95 > USA 55 por kg)", async () => {
+    const fromChina = await calcImportQuote({
+      mode: "quote", product: { ...small(), origin: "China", weightKgPerUnit: 2 } as any,
+      rawUserText: "1 auricular", destino: "uso_propio",
+    } as Opts);
+    const fromUsa = await calcImportQuote({
+      mode: "quote", product: { ...small(), origin: "Estados Unidos", weightKgPerUnit: 2 } as any,
+      rawUserText: "1 auricular", destino: "uso_propio",
+    } as Opts);
+    expect(fromChina.regime!.code).toBe("courier");
+    expect(fromUsa.regime!.code).toBe("courier");
+    // Misma carga, distinto origen → la tarifa USD/kg manda (China 95 vs USA 55).
+    expect(fromChina.breakdown!.fleteMinUsd).toBeGreaterThan(fromUsa.breakdown!.fleteMinUsd);
+  });
+
   it("el MISMO producto cuesta MENOS por courier que si fuera general (intervención lo fuerza)", async () => {
     const courier = await calcImportQuote({
       mode: "quote", product: small() as any, rawUserText: "1 auricular USD 100", destino: "uso_propio",

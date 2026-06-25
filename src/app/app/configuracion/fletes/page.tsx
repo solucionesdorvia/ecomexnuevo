@@ -13,7 +13,7 @@ import {
 } from "@/lib/quote/importExpensesConfig";
 import { FletesEditor } from "./FletesEditor";
 
-const FREIGHT_GROUPS = ["Aéreo", "Marítimo FCL", "Marítimo LCL", "Almacenaje", "Vehículos / sobredimensionado"];
+const FREIGHT_GROUPS = ["Aéreo", "Marítimo FCL", "Marítimo LCL", "Almacenaje", "Vehículos / sobredimensionado", "Courier"];
 const EXPENSE_GROUPS = ["Gastos de despacho", "Vehículos (cap. 87)", "Impuestos sobre servicios"];
 
 export const runtime = "nodejs";

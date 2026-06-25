@@ -43,7 +43,9 @@ describe("calcImportQuote — DIE desde AEC cuando PCRAM no trae DIE", () => {
   it("usa AEC como derecho si falta DIE", async () => {
     const r = await calcImportQuote({
       mode: "quote",
-      product: { title: "Producto", fobUsd: 100, quantity: 10, origin: "China", ncm: "8538.90.90", raw: { pcram: { ncmCode: "8538.90.90", taxes: { AEC: 18, IVA: 21 } } } } as any,
+      // 100 kg (10 × 10 kg) > tope courier (50 kg) → despacho general, que es donde
+      // aplica el fallback AEC→DIE que verifica este test.
+      product: { title: "Producto", fobUsd: 100, quantity: 10, weightKgPerUnit: 10, origin: "China", ncm: "8538.90.90", raw: { pcram: { ncmCode: "8538.90.90", taxes: { AEC: 18, IVA: 21 } } } } as any,
       rawUserText: "10 unidades", destino: "uso_propio",
     } as Opts);
     expect(r.breakdown!.derechosRatePct).toBe(18);

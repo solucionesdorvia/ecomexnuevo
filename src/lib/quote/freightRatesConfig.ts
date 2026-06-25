@@ -43,6 +43,12 @@ export type FreightRatesConfig = {
   roroMinimo: number;
   flatRackPorUnidad: number;
   openTopPorUnidad: number;
+  // Courier (envíos puerta a puerta, régimen simplificado): flete por kg según origen
+  // + impuesto único (% sobre el FOB) que reemplaza derechos/IVA/percepciones.
+  courierChinaPerKg: number;
+  courierUsaPerKg: number;
+  courierEuropePerKg: number;
+  courierTaxPct: number;
 };
 
 export const DEFAULT_FREIGHT_RATES: FreightRatesConfig = {
@@ -72,14 +78,19 @@ export const DEFAULT_FREIGHT_RATES: FreightRatesConfig = {
   roroMinimo: 1500,
   flatRackPorUnidad: 3500,
   openTopPorUnidad: 3000,
+  // Courier (tarifas reales del operador): USD/kg puerta a puerta + impuesto único.
+  courierChinaPerKg: 95,
+  courierUsaPerKg: 55,
+  courierEuropePerKg: 65,
+  courierTaxPct: 50,
 };
 
 /** Metadata para construir el formulario del admin (label, grupo, unidad). */
 export type FreightFieldMeta = {
   key: keyof FreightRatesConfig;
   label: string;
-  group: "Aéreo" | "Marítimo FCL" | "Marítimo LCL" | "Almacenaje" | "Vehículos / sobredimensionado";
-  unit: "USD" | "USD/kg" | "USD/m³";
+  group: "Aéreo" | "Marítimo FCL" | "Marítimo LCL" | "Almacenaje" | "Vehículos / sobredimensionado" | "Courier";
+  unit: "USD" | "USD/kg" | "USD/m³" | "%";
   help?: string;
 };
 
@@ -109,6 +120,10 @@ export const FREIGHT_FIELDS: FreightFieldMeta[] = [
   { key: "roroMinimo", label: "RORO: mínimo por operación", group: "Vehículos / sobredimensionado", unit: "USD" },
   { key: "flatRackPorUnidad", label: "Flat Rack (por unidad)", group: "Vehículos / sobredimensionado", unit: "USD" },
   { key: "openTopPorUnidad", label: "Open Top (por unidad)", group: "Vehículos / sobredimensionado", unit: "USD" },
+  { key: "courierChinaPerKg", label: "Courier China", group: "Courier", unit: "USD/kg" },
+  { key: "courierUsaPerKg", label: "Courier USA", group: "Courier", unit: "USD/kg" },
+  { key: "courierEuropePerKg", label: "Courier Europa", group: "Courier", unit: "USD/kg" },
+  { key: "courierTaxPct", label: "Courier: impuesto sobre FOB", group: "Courier", unit: "%", help: "Régimen simplificado: % único sobre el FOB que reemplaza derechos/IVA/percepciones." },
 ];
 
 const CONFIG_ENTITY = "config";

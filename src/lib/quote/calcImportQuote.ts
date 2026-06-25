@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // Import quote calculator — dynamic product JSON shapes require any casts.
 import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
-import { detectOriginZone, estimateUnitDimensions, calcFreightCost, ShippingMode, OriginZone } from "./freightRates";
+import { detectOriginZone, estimateUnitDimensions, calcFreightCost, chargeableAirKg, ShippingMode, OriginZone } from "./freightRates";
 import { hydrateFreightConfig, getFreightConfig } from "./freightRatesConfig";
 import { hydrateImportExpenses, computeImportExpenses } from "./importExpensesConfig";
 import { getOfficialTariff, getSiblingTariffs } from "@/lib/ncm/tariffRates";
@@ -437,6 +437,20 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     totalM3 = unitDim.m3 * qty * m3Scale;
   }
 
+  // ── Régimen recomendado (Courier vs General) ────────────────────────────────
+  // Se evalúa ANTES del costeo porque el régimen CAMBIA la estructura de costo:
+  // el courier es puerta a puerta y NO paga despachante / terminal portuaria /
+  // depósito fiscal / SIM (eso es del despacho general), reemplaza derechos/IVA/
+  // percepciones por un ÚNICO impuesto sobre el FOB, y su flete es por kg todo-incluido.
+  const interventions = (inputs.product.raw as any)?.pcram?.interventions as string[] | undefined;
+  const regime = assessImportRegime({
+    fobTotalUsd: fobTotalMax,
+    totalWeightKg: totalKg,
+    interventions,
+    weightEstimated: userWeightKg == null,
+  });
+  const isCourier = regime.code === "courier";
+
   const userMode = detectUserShippingMode(inputs.rawUserText ?? "", zone);
   const freight = calcFreightCost(zone, totalKg, totalM3, userMode);
 
@@ -459,6 +473,27 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       fleteMax = round2(roro);
       fleteModeLabelOverride = "RORO (vehículo)";
     }
+  }
+
+  // Courier: el flete es puerta a puerta por kg FACTURABLE (mayor entre real y
+  // volumétrico) a la tarifa real del operador, editable en /app/configuracion/fletes.
+  // Es todo-incluido → reemplaza el flete contenedor/aéreo común y deja sin efecto
+  // los gastos de despacho. El % de impuesto único se aplica más abajo sobre el FOB.
+  let courierTaxRatePct: number | null = null;
+  if (isCourier) {
+    const fc = getFreightConfig();
+    const perKg =
+      zone === "USA"
+        ? fc.courierUsaPerKg
+        : zone === "EUROPE"
+          ? fc.courierEuropePerKg
+          : fc.courierChinaPerKg; // China y resto del mundo a tarifa China
+    const cKg = chargeableAirKg(totalKg, totalM3);
+    const courierFreight = round2(perKg * cKg);
+    fleteMin = courierFreight;
+    fleteMax = courierFreight;
+    fleteModeLabelOverride = "Courier (puerta a puerta)";
+    courierTaxRatePct = fc.courierTaxPct;
   }
 
   const cifMin = fobTotalMin + fleteMin;
@@ -495,8 +530,9 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     if (!Number.isFinite(n) || n <= 0 || n >= 0.2) return 0.01;
     return n;
   })();
-  const seguroMin = fobTotalMin * insuranceRate;
-  const seguroMax = fobTotalMax * insuranceRate;
+  // Courier puerta a puerta: el seguro va incluido en la tarifa todo-incluido del operador.
+  const seguroMin = isCourier ? 0 : fobTotalMin * insuranceRate;
+  const seguroMax = isCourier ? 0 : fobTotalMax * insuranceRate;
 
   const cifMin2 = cifMin + seguroMin;
   const cifMax2 = cifMax + seguroMax;
@@ -762,6 +798,30 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     ];
   }
 
+  // ── Courier: impuesto ÚNICO sobre el FOB (régimen simplificado) ──────────────
+  // Reemplaza derechos / TE / IVA / IVA adic. / Ganancias / IIBB / internos por un
+  // único % sobre el FOB (tarifa real del operador courier). Cero todas las
+  // componentes del despacho general para que la recuperabilidad y los desgloses
+  // queden coherentes: el courier NO genera crédito fiscal recuperable.
+  if (isCourier) {
+    const cRate = (courierTaxRatePct ?? 50) / 100;
+    teMin = 0; teMax = 0;
+    derechosMin = 0; derechosMax = 0;
+    antidumpingMin = 0; antidumpingMax = 0; antidumpingRatePct = null; antidumpingUnquantified = false;
+    ivaMin = 0; ivaMax = 0;
+    ivaAdicMin = 0; ivaAdicMax = 0;
+    gananciasMin = 0; gananciasMax = 0;
+    iibbMin = 0; iibbMax = 0;
+    internosMin = 0; internosMax = 0;
+    impuestosMin = round2(fobTotalMin * cRate);
+    impuestosMax = round2(fobTotalMax * cRate);
+    impuestosDetail =
+      `Régimen Courier (puerta a puerta): impuesto único de ${ratePct(cRate)}% sobre el valor FOB que reemplaza derechos, IVA y percepciones del despacho general. No paga despachante, terminal portuaria, depósito fiscal ni SIM.`;
+    taxLines = [
+      { label: `Impuesto Courier (${ratePct(cRate)}% FOB)`, ratePct: ratePct(cRate), amountUsd: round2(fobTotalMin * cRate) },
+    ];
+  }
+
   // Local/operational costs in destination (USD). Your PDFs include these explicitly.
   // We estimate them conservatively when we don't have real CBM/peso.
   const hsDigits = String(ncmMeta?.hsHeading ?? "").replace(/\D/g, "");
@@ -801,19 +861,9 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     const h = ncm ? parseInt(ncm.replace(/\D/g, "").slice(0, 4), 10) : NaN;
     return h >= 8701 && h <= 8716;
   })();
-  // Régimen recomendado (Courier vs General). Se evalúa ANTES del costeo porque el
-  // régimen CAMBIA la estructura de costo: el courier es puerta a puerta y NO paga
-  // despachante / terminal portuaria / depósito fiscal / SIM (eso es del despacho general).
-  // El flete aéreo del courier ya es todo-incluido. Sí paga impuestos + honorarios E-COMEX.
-  const interventions = (inputs.product.raw as any)?.pcram?.interventions as string[] | undefined;
-  const regime = assessImportRegime({
-    fobTotalUsd: fobTotalMax,
-    totalWeightKg: totalKg,
-    interventions,
-    weightEstimated: userWeightKg == null,
-  });
-  const isCourier = regime.code === "courier";
-
+  // El régimen (Courier vs General) ya se evaluó arriba (antes del costeo) porque
+  // cambia la estructura: el courier es puerta a puerta y NO paga despachante /
+  // terminal portuaria / depósito fiscal / SIM (eso es del despacho general).
   const importExpensesAll = computeImportExpenses(isVehicleNcm);
   const gastosImportacionLines = isCourier ? [] : importExpensesAll.lines;
   const gastosImportacionUsd = isCourier ? 0 : importExpensesAll.totalUsd;
