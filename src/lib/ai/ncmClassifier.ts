@@ -17,12 +17,14 @@ async function classifierJson<T>(opts: {
   const useAnthropic = provider === "anthropic" || (provider !== "openai" && anthropicAvailable());
   if (useAnthropic) {
     try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return (await anthropicJson<any>({ system: opts.system, user: opts.user, timeoutMs: opts.timeoutMs })) as T;
     } catch (e) {
       if (process.env.NCM_DEBUG === "1") console.warn("[ncmClassifier] Anthropic falló, uso OpenAI:", e);
       // fallback a OpenAI
     }
   }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return (await openaiJson<any>({
     system: opts.system,
     user: opts.user,

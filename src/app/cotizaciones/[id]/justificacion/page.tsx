@@ -15,6 +15,15 @@ function reportCode(id: string): string {
   return `#COMEX-${c.slice(0, 4) || "0000"}-${c.slice(-2) || "CN"}`;
 }
 
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <section className="mt-6">
+      <h2 className="border-b border-slate-200 pb-1 text-[13px] font-bold uppercase tracking-wide text-[#0e7c8c]">{title}</h2>
+      <div className="mt-2 text-[13px] leading-relaxed text-slate-800">{children}</div>
+    </section>
+  );
+}
+
 export default async function JustificacionPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const cookieStore = await cookies();
@@ -42,12 +51,6 @@ export default async function JustificacionPage({ params }: { params: Promise<{ 
 
   const fecha = new Date(quote.createdAt).toLocaleDateString("es-AR", { year: "numeric", month: "long", day: "numeric" });
   const pos = ncmToPartida(j.ncm) || j.ncm;
-  const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-    <section className="mt-6">
-      <h2 className="border-b border-slate-200 pb-1 text-[13px] font-bold uppercase tracking-wide text-[#0e7c8c]">{title}</h2>
-      <div className="mt-2 text-[13px] leading-relaxed text-slate-800">{children}</div>
-    </section>
-  );
 
   return (
     <div className="min-h-screen bg-slate-100 print:bg-white">

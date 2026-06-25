@@ -1,0 +1,173 @@
+/**
+ * Benchmark E-COMEX vs Arancely (referencia: base oficial vigente de arancely.com,
+ * 10.330 productos, actualizada 2026-03-13). Descargar antes:
+ *   curl -s "https://www.arancely.com/api/ncm?v=1" -o /tmp/bench/arancely.json
+ *
+ * Parte A — Impuestos: compara el DIE del índice offline de E-COMEX contra el DI de
+ *   Arancely para todas las posiciones presentes en ambos. Mide cuán desactualizado
+ *   está el índice offline.
+ * Parte B — Clasificación: corre ~110 productos por el motor de evidencia de E-COMEX
+ *   (buildNcmKnowledgeEvidence, determinístico) y compara el NCM elegido contra el de
+ *   Arancely (match exacto / partida / capítulo / miss).
+ */
+import fs from "fs";
+import { buildNcmKnowledgeEvidence } from "../../src/lib/ncm/knowledge/ncmKnowledgeEvidence";
+import { getOfficialTariff } from "../../src/lib/ncm/tariffRates";
+
+type AranProd = {
+  id: number; name: string; ncm: string; di: number; iva: number;
+  ivaAd: number; ganancias: number; iibb: number; te: number; category: string;
+  officialName?: string; interventions?: string[];
+};
+const aran = JSON.parse(fs.readFileSync("/tmp/bench/arancely.json", "utf8")) as {
+  products: AranProd[];
+};
+const dig8 = (s: string) => s.replace(/\D/g, "").slice(0, 8);
+const byNcm = new Map<string, AranProd>();
+for (const p of aran.products) if (!byNcm.has(dig8(p.ncm))) byNcm.set(dig8(p.ncm), p);
+
+// ── Parte A: impuestos offline vs arancely (DIE) ─────────────────────────────
+function partA() {
+  let both = 0, dieMatch = 0, dieOff = 0;
+  const ej: string[] = [];
+  for (const p of aran.products) {
+    const off = getOfficialTariff(p.ncm);
+    if (!off || off.diePct == null) continue;
+    both++;
+    if (Math.abs(off.diePct - p.di) < 0.6) dieMatch++;
+    else {
+      dieOff++;
+      if (ej.length < 14) ej.push(`  ${p.ncm} ${p.name.slice(0, 32).padEnd(32)} offline ${off.diePct}% vs arancely ${p.di}%`);
+    }
+  }
+  console.log(`\n=== PARTE A — Impuestos (DIE offline E-COMEX vs Arancely vigente) ===`);
+  console.log(`Posiciones en ambos: ${both} · DIE coincide: ${dieMatch} (${((dieMatch / both) * 100).toFixed(1)}%) · difiere: ${dieOff}`);
+  console.log(`Ejemplos de divergencia (índice offline pre-2022 vs arancely 2026):`);
+  console.log(ej.join("\n"));
+}
+
+// ── Parte B (v2): iterar productos de Arancely directo (expected sin ambigüedad) ──
+// Query = primer alias del nombre de Arancely; expected = su NCM. Cero matching difuso.
+function partB2() {
+  // Candidatos: featured + nombres "de consumo" (cortos, sin jerga SIM), spread por categoría.
+  const seen = new Set<string>();
+  const set: AranProd[] = [];
+  const clean = (p: AranProd) =>
+    p.name && p.name.length <= 34 && !/^-|art[ií]culo|los dem[aá]s|\bsim\b|^\(/i.test(p.name);
+  for (const p of aran.products) {
+    if (!(p._featured || clean(p))) continue;
+    const key = p.name.split("/")[0].trim().toLowerCase();
+    if (key.length < 3 || seen.has(key)) continue;
+    seen.add(key);
+    set.push(p);
+    if (set.length >= 130) break;
+  }
+  console.log(`\n=== PARTE B — Clasificación NCM (E-COMEX vs Arancely), ${set.length} productos ===`);
+  let exact = 0, heading = 0, chapter = 0, miss = 0;
+  const fails: string[] = [];
+  for (const p of set) {
+    const q = p.name.split("/")[0].trim();
+    const ec = buildNcmKnowledgeEvidence(q)?.candidates?.[0]?.ncm_code ?? "";
+    const ecd = dig8(ec), ad = dig8(p.ncm);
+    if (ecd === ad) exact++;
+    else if (ecd.slice(0, 4) === ad.slice(0, 4)) heading++;
+    else if (ecd.slice(0, 2) === ad.slice(0, 2)) chapter++;
+    else {
+      miss++;
+      fails.push(`  "${q}" → E-COMEX ${ec || "—"} vs Arancely ${p.ncm} (${p.name})`);
+    }
+  }
+  const tot = set.length;
+  console.log(`  Exacto: ${exact} (${((exact / tot) * 100).toFixed(0)}%) · misma partida: ${heading} · mismo cap: ${chapter} · MISS: ${miss}`);
+  console.log(`  Partida correcta o mejor: ${exact + heading} (${(((exact + heading) / tot) * 100).toFixed(0)}%)`);
+  console.log(`\nMISS (capítulo errado — gaps reales de E-COMEX):`);
+  console.log(fails.join("\n"));
+}
+
+const QUERIES: string[] = [
+  // Electrónica
+  "celular smartphone android", "notebook gamer 16gb", "tablet 10 pulgadas", "monitor led 24 para pc",
+  "televisor smart tv led 50", "auriculares inalambricos bluetooth", "parlante portatil bluetooth",
+  "smartwatch reloj inteligente", "cargador de celular usb", "cable hdmi", "pendrive 64gb", "disco ssd 1tb",
+  "mouse inalambrico", "teclado mecanico", "router wifi", "camara de seguridad ip", "drone con camara",
+  "consola de videojuegos", "impresora multifuncion", "proyector full hd",
+  // Electrodomésticos
+  "heladera con freezer", "lavarropas automatico", "secarropas centrifugo", "aire acondicionado split",
+  "microondas 20 litros", "tostadora de pan", "cafetera electrica", "licuadora de vaso", "batidora de mano",
+  "pava electrica", "freidora de aire", "plancha de ropa a vapor", "ventilador de pie", "aspiradora",
+  "secador de pelo", "afeitadora electrica", "cepillo de dientes electrico", "calefactor electrico",
+  "termotanque electrico", "campana extractora",
+  // Herramientas / maquinaria
+  "taladro percutor electrico", "amoladora angular", "soldadora inverter", "compresor de aire",
+  "motosierra", "hidrolavadora", "cortadora de cesped", "generador electrico", "autoelevador",
+  "excavadora hidraulica", "motobomba de agua", "balanza electronica",
+  // Vehículos / repuestos
+  "automovil sedan nafta", "motocicleta 150cc", "bicicleta rodado 29", "neumatico de auto",
+  "casco para moto", "filtro de aceite de auto", "bateria de auto",
+  // Indumentaria / calzado
+  "zapatillas deportivas", "zapatos de cuero", "remera de algodon", "campera rompeviento",
+  "pantalon jean", "buzo con capucha", "medias deportivas", "gorra", "traje de baño", "ropa interior",
+  // Marroquinería / accesorios
+  "mochila escolar", "cartera de cuero", "valija rigida", "billetera", "anteojos de sol", "reloj pulsera",
+  "paraguas",
+  // Belleza / salud
+  "perfume importado", "maquillaje base", "crema facial", "shampoo", "protector solar", "termometro digital",
+  "barbijo descartable", "suplemento vitaminico",
+  // Juguetes / deportes / música
+  "juguete didactico", "muñeca", "pelota de futbol", "bicicleta fija spinning", "mancuernas pesas",
+  "guitarra electrica", "drone de juguete", "rompecabezas",
+  // Hogar / muebles
+  "silla de oficina", "mesa de madera", "colchon", "almohada", "sabanas", "vajilla de ceramica",
+  "olla de acero", "cuchillo de cocina", "luminaria led de techo", "lampara led",
+  // Bebidas / alimentos
+  "vino tinto", "cerveza", "aceite de oliva", "cafe en grano", "chocolate", "suplemento proteina",
+  // Construcción / industria
+  "panel solar fotovoltaico", "motor electrico trifasico", "bomba centrifuga", "valvula de bronce",
+  "perfil de aluminio", "ceramico para piso", "pintura latex",
+];
+
+function bestArancely(q: string): AranProd | null {
+  const toks = q.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").split(/\s+/).filter((t) => t.length > 2);
+  let best: AranProd | null = null, bestScore = 0;
+  for (const p of aran.products) {
+    const hay = `${p.name} ${p.officialName ?? ""}`.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    let s = 0;
+    for (const t of toks) if (hay.includes(t)) s += t.length;
+    if (p._featured) s += 1;
+    if (s > bestScore) { bestScore = s; best = p; }
+  }
+  return bestScore >= 3 ? best : null;
+}
+
+function partB() {
+  console.log(`\n=== PARTE B — Clasificación NCM (E-COMEX vs Arancely), ${QUERIES.length} productos ===`);
+  let exact = 0, heading = 0, chapter = 0, miss = 0, noAran = 0;
+  const fails: string[] = [];
+  for (const q of QUERIES) {
+    const ev = buildNcmKnowledgeEvidence(q);
+    const ec = ev?.candidates?.[0]?.ncm_code ?? "";
+    const a = bestArancely(q);
+    if (!a) { noAran++; continue; }
+    const ecd = dig8(ec), ad = dig8(a.ncm);
+    let mark: string;
+    if (ecd === ad) { exact++; mark = "exacto"; }
+    else if (ecd.slice(0, 4) === ad.slice(0, 4)) { heading++; mark = "partida"; }
+    else if (ecd.slice(0, 2) === ad.slice(0, 2)) { chapter++; mark = "capítulo"; }
+    else { miss++; mark = "MISS"; }
+    if (mark === "MISS" || mark === "capítulo") {
+      fails.push(`  [${mark}] "${q}" → E-COMEX ${ec || "—"} vs Arancely ${a.ncm} (${a.name.slice(0, 30)})`);
+    }
+  }
+  const tot = QUERIES.length - noAran;
+  console.log(`Comparados: ${tot} (sin match en arancely: ${noAran})`);
+  console.log(`  Exacto (8 díg): ${exact} (${((exact / tot) * 100).toFixed(0)}%)`);
+  console.log(`  Misma partida (4 díg): ${heading} (${((heading / tot) * 100).toFixed(0)}%)`);
+  console.log(`  Mismo capítulo (2 díg): ${chapter}`);
+  console.log(`  MISS (capítulo errado): ${miss}`);
+  console.log(`  → Partida correcta o mejor: ${exact + heading} (${(((exact + heading) / tot) * 100).toFixed(0)}%)`);
+  console.log(`\nFallas (capítulo errado o distinto):`);
+  console.log(fails.join("\n"));
+}
+
+partA();
+partB();

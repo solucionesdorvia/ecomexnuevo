@@ -49,10 +49,8 @@ async function main() {
       chapters.push(ch);
       const out = path.join(outDir, `chapter_${ch.chapter}.json`);
       fs.writeFileSync(out, JSON.stringify(ch, null, 2), "utf8");
-      // eslint-disable-next-line no-console
       console.log("OK", f, "→", out, "partidas:", ch.headings.length, "filas:", ch._rowCount ?? "—");
     } catch (e) {
-      // eslint-disable-next-line no-console
       console.error("FAIL", f, e);
     }
   }
@@ -61,7 +59,6 @@ async function main() {
   const indexPath = path.join(process.cwd(), "data", "ncm", "index.json");
   const indexJson = JSON.stringify(flat, null, 2);
   fs.writeFileSync(indexPath, indexJson, "utf8");
-  // eslint-disable-next-line no-console
   console.log("index.json →", indexPath, "registros:", flat.length);
 
   // version.json: trazabilidad de freshness. sourceDate = fecha del dump oficial

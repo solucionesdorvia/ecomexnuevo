@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// productJson es JSON de Prisma con forma dinámica anidada — los casts a any son intencionales.
 /**
  * Justificación arancelaria "defendible ante ARCA".
  *

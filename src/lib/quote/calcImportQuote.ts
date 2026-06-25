@@ -686,7 +686,6 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       ...(internosMin > 0 ? [{ label: "Impuestos Internos", ratePct: null, amountUsd: round2(internosMin) }] : []),
     ];
 
-    const hasPerceptions = gananciasRate > 0 || iibbRate > 0;
     impuestosDetail = [
       internal?.tiers?.length
         ? "Estimación usando tasas oficiales (PCRAM) cuando disponibles, incluyendo Impuestos Internos cuando aplican por umbrales."
