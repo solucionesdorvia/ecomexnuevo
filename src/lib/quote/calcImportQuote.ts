@@ -801,8 +801,23 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     const h = ncm ? parseInt(ncm.replace(/\D/g, "").slice(0, 4), 10) : NaN;
     return h >= 8701 && h <= 8716;
   })();
-  const importExpenses = computeImportExpenses(isVehicleNcm);
-  const gastosImportacionUsd = importExpenses.totalUsd;
+  // Régimen recomendado (Courier vs General). Se evalúa ANTES del costeo porque el
+  // régimen CAMBIA la estructura de costo: el courier es puerta a puerta y NO paga
+  // despachante / terminal portuaria / depósito fiscal / SIM (eso es del despacho general).
+  // El flete aéreo del courier ya es todo-incluido. Sí paga impuestos + honorarios E-COMEX.
+  const interventions = (inputs.product.raw as any)?.pcram?.interventions as string[] | undefined;
+  const regime = assessImportRegime({
+    fobTotalUsd: fobTotalMax,
+    totalWeightKg: totalKg,
+    interventions,
+    weightEstimated: userWeightKg == null,
+  });
+  const isCourier = regime.code === "courier";
+
+  const importExpensesAll = computeImportExpenses(isVehicleNcm);
+  const gastosImportacionLines = isCourier ? [] : importExpensesAll.lines;
+  const gastosImportacionUsd = isCourier ? 0 : importExpensesAll.totalUsd;
+  const arancelSim = isCourier ? 0 : ARANCEL_SIM;
 
   const depositoMin = 0;
   const depositoMax = 0;
@@ -811,18 +826,17 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   const transferenciaMin = 0;
   const transferenciaMax = 0;
 
-  const gestionMin = honorariosMin + ARANCEL_SIM + gastosImportacionUsd;
-  const gestionMax = honorariosMax + ARANCEL_SIM + gastosImportacionUsd;
+  const gestionMin = honorariosMin + arancelSim + gastosImportacionUsd;
+  const gestionMax = honorariosMax + arancelSim + gastosImportacionUsd;
 
   // CIF + seguro (cifMin2/cifMax2) ya incluye el seguro que también es base imponible.
-  // Antes el total usaba cifMin (sin seguro), subestimando el costo. Corregido.
   const totalMin = cifMin2 + impuestosMin + gestionMin;
   const totalMax = cifMax2 + impuestosMax + gestionMax;
 
   // Recuperabilidad: para Responsable Inscripto, el IVA es crédito fiscal y las
   // percepciones (IVA adic, Ganancias, IIBB) son pago a cuenta → recuperables.
-  // También el IVA de los servicios del despacho. "Costo real" = total − recuperable.
-  const ivaServiciosUsd = importExpenses.lines
+  // También el IVA de los servicios del despacho (0 en courier). "Costo real" = total − recuperable.
+  const ivaServiciosUsd = gastosImportacionLines
     .filter((l) => /IVA sobre servicios/i.test(l.label))
     .reduce((a, l) => a + l.amountUsd, 0);
   const recuperableMin = esRI
@@ -833,17 +847,6 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     : 0;
   const costoRealMin = totalMin - recuperableMin;
   const costoRealMax = totalMax - recuperableMax;
-
-  // Fase 2: régimen recomendado (Courier vs General). Usa el FOB máximo del rango
-  // (conservador) y las intervenciones de PCRAM. Solo recomienda; NO cambia el
-  // cálculo impositivo (sigue tratamiento general hasta validar Courier con el contador).
-  const interventions = (inputs.product.raw as any)?.pcram?.interventions as string[] | undefined;
-  const regime = assessImportRegime({
-    fobTotalUsd: fobTotalMax,
-    totalWeightKg: totalKg,
-    interventions,
-    weightEstimated: userWeightKg == null,
-  });
 
   const assumptions: Array<{
     id: string;
@@ -1046,7 +1049,9 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     {
       label: "Gestión / despacho",
       value: moneyRange(round2(gestionMin), round2(gestionMax)),
-      detail: `Honorarios E-COMEX (1% FOB = ${money(round2((honorariosMin + honorariosMax) / 2))}) + arancel SIM + gastos de importación (${money(gastosImportacionUsd)}: agencia, terminal, fiscal, etc.).`,
+      detail: isCourier
+        ? `Honorarios E-COMEX (1% FOB = ${money(round2((honorariosMin + honorariosMax) / 2))}). Por régimen Courier (puerta a puerta) no se cobran despachante, terminal portuaria ni depósito fiscal.`
+        : `Honorarios E-COMEX (1% FOB = ${money(round2((honorariosMin + honorariosMax) / 2))}) + arancel SIM + gastos de importación (${money(gastosImportacionUsd)}: agencia, terminal, fiscal, etc.).`,
     },
     {
       label: "Total puesto en Argentina",
@@ -1137,9 +1142,9 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       gestionMaxUsd: round2(gestionMax),
       honorariosMinUsd: round2(honorariosMin),
       honorariosMaxUsd: round2(honorariosMax),
-      arancelSimUsd: ARANCEL_SIM,
+      arancelSimUsd: arancelSim,
       gastosImportacionUsd: round2(gastosImportacionUsd),
-      gastosImportacionLines: importExpenses.lines,
+      gastosImportacionLines,
       recuperableMinUsd: round2(recuperableMin),
       recuperableMaxUsd: round2(recuperableMax),
       costoRealMinUsd: round2(costoRealMin),
