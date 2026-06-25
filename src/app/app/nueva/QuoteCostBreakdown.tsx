@@ -412,6 +412,17 @@ function TemplateBreakdown({
         {/* Costo real (recuperabilidad) — solo Responsable Inscripto */}
         {b.esResponsableInscripto && typeof b.recuperableMinUsd === "number" && b.recuperableMinUsd > 0 && (
           <div className="mt-3 rounded-xl border border-emerald-500/20 bg-emerald-500/[0.06] px-3.5 py-3">
+            {typeof b.totalMinUsd === "number" && typeof b.costoRealMinUsd === "number" && b.totalMinUsd > 0 && (
+              <div className="mb-2.5 flex items-center justify-between rounded-lg bg-emerald-500/[0.08] px-2.5 py-1.5 text-[11px]">
+                <span className="text-slate-300">
+                  Tasa de lista <span className="text-slate-500">(otros cotizadores)</span>
+                </span>
+                <span className="text-slate-400 line-through">{fmtUsd(b.totalMinUsd)}</span>
+                <span className="font-semibold text-emerald-300">
+                  −{Math.round(((b.totalMinUsd - b.costoRealMinUsd) / b.totalMinUsd) * 100)}% para vos
+                </span>
+              </div>
+            )}
             <div className="flex items-center justify-between text-[12px]">
               <span className="text-emerald-300">Recuperás (crédito IVA + percepciones)</span>
               <span className="font-semibold text-emerald-300">
