@@ -691,9 +691,11 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       internal?.tiers?.length
         ? "Estimación usando tasas oficiales (PCRAM) cuando disponibles, incluyendo Impuestos Internos cuando aplican por umbrales."
         : "Estimación usando tasas oficiales (PCRAM) cuando disponibles.",
-      hasPerceptions
-        ? "Incluye percepciones (Ganancias / IIBB) como **impacto de caja**; su aplicabilidad exacta depende de tu situación fiscal."
-        : "",
+      esReventa
+        ? (esRI
+            ? "Incluye percepciones (IVA adic., Ganancias, IIBB) por reventa; como sos Responsable Inscripto se recuperan (IVA crédito + percepciones pago a cuenta) — mirá el costo real abajo."
+            : "Incluye percepciones (IVA adic., Ganancias, IIBB) por reventa; su aplicabilidad exacta depende de tu situación fiscal.")
+        : "Por ser uso propio (bien de uso) NO pagás las percepciones (IVA adic., Ganancias ni IIBB) que sí aplican en reventa — un ahorro importante frente a la tasa de lista.",
     ]
       .filter(Boolean)
       .join(" ");
@@ -742,8 +744,10 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     impuestosMin = teMin + derechosMin + ivaMin + ivaAdicMin + gananciasMin + iibbMin;
     impuestosMax = teMax + derechosMax + ivaMax + ivaAdicMax + gananciasMax + iibbMax;
     impuestosDetail = esReventa
-      ? "Estimación con tasas generales (incluye percepciones de IVA adic., Ganancias e IIBB por reventa). Se ajusta con la clasificación definitiva."
-      : "Estimación para uso propio (bien de uso): sin percepciones de IVA adic., Ganancias ni IIBB. Se ajusta con la clasificación definitiva.";
+      ? (esRI
+          ? "Incluye percepciones (IVA adic., Ganancias, IIBB) por reventa. Como sos Responsable Inscripto, el IVA es crédito fiscal y las percepciones son pago a cuenta: se recuperan — mirá el costo real abajo."
+          : "Incluye percepciones (IVA adic., Ganancias, IIBB) por reventa. Se ajusta con la clasificación definitiva.")
+      : "Por ser uso propio (bien de uso) NO pagás las percepciones (IVA adic., Ganancias ni IIBB) que sí aplican en reventa — un ahorro importante frente a la tasa de lista.";
 
     taxLines = [
       { label: "Tasa de Estadística",     ratePct: teRatePct,       amountUsd: round2(teMin) },

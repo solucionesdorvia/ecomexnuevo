@@ -69,6 +69,28 @@ Todo blindado con **36 casos de regresión nuevos** (184 tests unitarios en tota
 
 ---
 
+## Ventaja clave en IMPUESTOS: E-COMEX pregunta el uso, Arancely no
+
+Arancely muestra las tasas **de lista** (siempre reventa, sin recuperar). Pero el costo
+real depende del **uso, el perfil fiscal y si es bien de capital** — y eso cambia mucho los %:
+- **Uso propio (bien de uso):** NO se pagan las percepciones (IVA adic., Ganancias, IIBB).
+- **Responsable Inscripto:** el IVA es crédito fiscal y las percepciones son pago a cuenta → se recuperan.
+- **Bien de capital:** IVA 10,5% en vez de 21%.
+
+E-COMEX **sí pregunta esto** (perfil, destino, bien de capital) y calcula el **costo real**.
+Mismo notebook (10 × USD 800, NCM 8471.30.12, DIE 16%):
+
+| Escenario | Total | Costo real | vs lista |
+|-----------|-------|-----------|----------|
+| Reventa · Monotributo (= lo que mostraría Arancely) | 29.568 | **29.568** | — |
+| Reventa · Responsable Inscripto | 29.568 | **20.998** | **−29%** |
+| Uso propio · Responsable Inscripto | 25.342 | **20.998** | **−29%** |
+
+→ Para un RI, el número real es **USD 8.570 (29%) menor** que la tasa de lista. Esto lo
+hace E-COMEX y no Arancely. La comparación de la Parte A (DIE) es justa porque el DIE **no**
+cambia por uso; la diferencia está en el resto del stack impositivo, donde E-COMEX gana.
+Lógica auditada y correcta (`calcImportQuote.ts:815-828`, recuperabilidad solo RI).
+
 ## Lo que sigue (no bloqueante)
 - **Refrescar el índice offline** con el dump AFIP vigente (cierra el 7,4% de DIE stale +
   códigos faltantes). Es dep. de negocio.
