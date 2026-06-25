@@ -29,7 +29,8 @@ describe("calcImportQuote — costeo Courier (puerta a puerta)", () => {
     // pero sigue pagando lo que corresponde
     expect(b.fleteMinUsd).toBeGreaterThan(0);
     expect(b.impuestosTotalMinUsd).toBeGreaterThan(0);
-    expect(b.honorariosMinUsd).toBeGreaterThan(0);
+    // Honorarios courier: piso USD 50 (vs USD 300 del despacho general). FOB 100 → 1% = 1 < 50 → 50.
+    expect(b.honorariosMinUsd).toBe(50);
     // coherencia contable intacta
     const sum = b.cifPlusInsuranceMinUsd + b.impuestosTotalMinUsd + b.gestionMinUsd;
     expect(Math.abs(sum - b.totalMinUsd)).toBeLessThanOrEqual(2);

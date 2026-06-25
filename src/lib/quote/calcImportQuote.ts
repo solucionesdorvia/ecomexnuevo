@@ -850,10 +850,12 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     freight.estimatedKg < 10 ? freight.estimatedKg.toFixed(1) : String(Math.round(freight.estimatedKg));
 
   // Tasas reales de gestión/despacho (provistas por el encargado de CE).
-  // Honorarios: 1% del valor FOB total, mínimo USD 300. Gastos operativos: USD 200 fijo. Arancel SIM: USD 10 fijo.
+  // Honorarios: 1% del valor FOB total. Mínimo USD 300 en despacho general; en
+  // courier (operación más simple, puerta a puerta) el mínimo es USD 50.
   const ARANCEL_SIM = 10;
-  const honorariosMin = Math.max(300, round2(fobTotalMin * 0.01));
-  const honorariosMax = Math.max(300, round2(fobTotalMax * 0.01));
+  const honorariosFloor = isCourier ? 50 : 300;
+  const honorariosMin = Math.max(honorariosFloor, round2(fobTotalMin * 0.01));
+  const honorariosMax = Math.max(honorariosFloor, round2(fobTotalMax * 0.01));
 
   // Bloque de gastos de importación (agencia, terminal, fiscal, etc. + IVA servicios).
   // Para vehículos (cap. 87) suma AVAC/CIVAC y DNRPA.
