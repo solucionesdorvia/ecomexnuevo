@@ -224,6 +224,7 @@ export default function NuevaOperacionClient({
           quality: json.quality,
           quantity: caseState.purchase?.quantity,
           breakdown: json.breakdown ?? undefined,
+          regime: (json as QuoteCostPayload).regime ?? undefined,
         });
       }
     } catch (e) {

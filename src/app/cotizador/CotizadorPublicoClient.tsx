@@ -283,6 +283,7 @@ export default function CotizadorPublicoClient() {
           quality: json.quality,
           quantity: caseState.purchase?.quantity,
           breakdown: json.breakdown ?? undefined,
+          regime: json.regime ?? undefined,
         });
         incrementQuoteCount();
       }
