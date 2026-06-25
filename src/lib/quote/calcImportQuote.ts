@@ -576,7 +576,11 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
         );
       }
     }
-    const ivaRate = pct("IVA") ?? ivaResolved;
+    // Bien de capital → IVA 10,5% (lo declara el importador; PCRAM trae la tasa general
+    // de la posición). El toggle MANDA: aplica 10,5%, salvo que PCRAM traiga una aún menor
+    // (ej. exento). Sin toggle, usa la tasa de PCRAM o el default.
+    const pcramIva = pct("IVA");
+    const ivaRate = bienDeCapital ? Math.min(0.105, pcramIva ?? 0.21) : (pcramIva ?? ivaResolved);
     // IVA adicional acompaña al IVA: 10% si IVA reducido, 20% si general (solo reventa).
     const ivaAdicRate = esReventa ? (ivaRate <= 0.11 ? 0.1 : 0.2) : 0;
     const gananciasRate = gananciasResolved;
