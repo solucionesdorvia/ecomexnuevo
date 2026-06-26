@@ -877,16 +877,18 @@ export async function processClasificarTurn(opts: {
     let outMessage = assistantMessage;
     if (!snap.recommendedNcm && snap.status === "needs_info") {
       const q = (snap.pendingQuestions ?? []).join(" ").trim();
+      // Prioridad: pregunta pendiente → bloque de ambigüedad (ya es la pregunta) →
+      // pedido genérico de detalle. Nunca un cierre tipo "listo" sin NCM.
       outMessage = q
         ? q
         : ambiguityParagraph
-          ? "Para afinar la clasificación, una consulta:"
+          ? ""
           : "Necesito un detalle más para clasificar el producto: ¿qué es exactamente, de qué material principal está hecho y para qué se usa?";
     }
 
     // Sanitización final: cualquier código NCM que se haya colado en el mensaje
     // del analista se saca (defense-in-depth contra el prompt).
-    const cleaned = stripNcmCodes(outMessage + ambiguityParagraph);
+    const cleaned = stripNcmCodes((outMessage + ambiguityParagraph).trim());
 
     return {
       assistantMessage: cleaned,
