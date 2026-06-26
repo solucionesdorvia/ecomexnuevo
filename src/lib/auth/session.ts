@@ -70,6 +70,28 @@ export async function getSessionUser(): Promise<SessionUser | null> {
   };
 }
 
+/**
+ * Acceso "dueño": cerrado y SEPARADO del rol admin. Un admin (ej. un socio) NO
+ * entra salvo que su email esté en OWNER_EMAILS (lista separada por comas, en
+ * Railway). Sirve para vistas privadas del dueño que ni siquiera los admins ven.
+ */
+export function isOwnerEmail(email: string | null | undefined): boolean {
+  const list = String(process.env.OWNER_EMAILS ?? "")
+    .split(",")
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean);
+  if (!list.length || !email) return false;
+  return list.includes(email.trim().toLowerCase());
+}
+
+/** Gate de dueño. Devuelve 404 a los no-dueños para que la página "no exista". */
+export async function requireOwner() {
+  const u = await getSessionUser();
+  if (!u) return { ok: false as const, status: 401 as const, user: null };
+  if (!isOwnerEmail(u.email)) return { ok: false as const, status: 404 as const, user: u };
+  return { ok: true as const, status: 200 as const, user: u };
+}
+
 export async function requireRole(roles: Array<SessionUser["role"]>) {
   const u = await getSessionUser();
   if (!u) {

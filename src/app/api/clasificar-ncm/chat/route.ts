@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { processClasificarTurn } from "@/lib/clasificar-ncm/chatEngine";
 import { rateLimitByIp } from "@/lib/rateLimit";
 import { getSessionUser } from "@/lib/auth/session";
@@ -164,7 +165,39 @@ export async function POST(req: Request) {
       importerProfile,
     });
 
-    return NextResponse.json({ assistantMessage, snapshot: outSnap });
+    // ── Transcripción para el panel del DUEÑO (best-effort, no bloquea) ───────
+    // Guardamos la conversación en AuditLog (sin migración) vinculada por anonId
+    // —la misma clave con la que se guardan cotizaciones y leads— para poder
+    // cruzar "qué chateó" ↔ "qué cotizó" ↔ "dejó contacto".
+    const cookieStore = await cookies();
+    const existingAnon = cookieStore.get("ecomex_anon")?.value;
+    const anonId = existingAnon && existingAnon.length >= 8 ? existingAnon : crypto.randomUUID();
+    const fullMessages = [...typedMessages, { role: "assistant" as const, content: assistantMessage }];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const transcriptPayload: any = {
+      anonId,
+      messages: fullMessages.slice(-40),
+      status: outSnap.status ?? null,
+      ncm: outSnap.recommendedNcm ?? null,
+      productName: outSnap.productName ?? outSnap.technicalName ?? null,
+      purchase: outSnap.purchase ?? null,
+      turns: fullMessages.filter((m) => m.role === "user").length,
+    };
+    void prisma.auditLog
+      .create({
+        data: { entityType: "chat_transcript", entityId: anonId, action: "turn", payload: transcriptPayload },
+      })
+      .catch(() => {});
+
+    const res = NextResponse.json({ assistantMessage, snapshot: outSnap });
+    res.cookies.set("ecomex_anon", anonId, {
+      httpOnly: true,
+      sameSite: "lax",
+      secure: process.env.NODE_ENV === "production",
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365,
+    });
+    return res;
   } catch (e) {
     console.error("[clasificar-ncm/chat] error", e);
     return NextResponse.json(
