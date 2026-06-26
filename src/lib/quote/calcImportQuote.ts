@@ -1124,10 +1124,10 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     },
     {
       label: "Flete internacional",
-      value: money(round2(freight.totalUsd)),
-      detail: freight.mode.startsWith("air")
-        ? "Estimación aérea. Se confirma con peso y volumen real."
-        : "Estimación marítima. Se confirma con peso y volumen real.",
+      // El valor DEBE ser el flete final usado en el total (incluye override RORO de
+      // vehículos / courier puerta a puerta), no el cálculo marítimo/aéreo previo.
+      value: money(round2(fleteMin)),
+      detail: `${freightModeLabel}. Se confirma con peso/volumen real y la tarifa del operador.`,
     },
     {
       label: "Impuestos argentinos",
