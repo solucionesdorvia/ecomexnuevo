@@ -41,7 +41,7 @@ describe("buildNcmKnowledgeEvidence — regresión de clasificación", () => {
     { name: "campera → 62", text: "campera rompeviento de hombre de fibra sintética", includes: "6201.40.00" },
     // Electrónica: el léxico los manda a capítulos errados (celular→cap.21 levadura,
     // notebook→8415 aire). Los seeds + la guarda corregida los rescatan.
-    { name: "celular → 8517.12", text: "celular smartphone android 128gb", includes: "8517.12.00" },
+    { name: "celular → 8517.13 (HS-2022, smartphones)", text: "celular smartphone android 128gb", includes: "8517.13.00" },
     { name: "notebook → 8471.30", text: "notebook laptop gamer 16gb ram", includes: "8471.30.12" },
     { name: "televisor → 8528.72", text: "televisor smart tv led 50 pulgadas", includes: "8528.72.00" },
     // Electrodomésticos y maquinaria de consumo frecuente (el léxico los manda a

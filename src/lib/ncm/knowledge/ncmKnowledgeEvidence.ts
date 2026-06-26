@@ -177,15 +177,17 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
     );
   }
 
-  // Teléfono celular / smartphone → 8517.12 (en esta nomenclatura los smartphones
-  // van a 8517.12.00 "teléfonos celulares (móviles)"). El léxico manda "celular" al
-  // cap. 21 (levadura "celular"), por eso sembramos la partida correcta.
+  // Teléfono celular / smartphone → 8517.13.00 (HS-2022: los smartphones se separaron
+  // de 8517.12 a la subpartida nueva 8517.13 "teléfonos inteligentes"; es la que usa
+  // PCRAM). Sembramos la partida correcta porque el léxico manda "celular" al cap. 21
+  // (levadura "celular"). El seed viejo (8517.12) hacía que el LLM cayera a un código
+  // que el paso decisivo descartaba → NCM null intermitente.
   if (
     /\b(celular\w*|smartphone\w*|m[oó]vil\b|tel[eé]fono\w*\s+(movil|m[oó]vil|intelig\w*|celular\w*))\b/.test(text) &&
     // Un ACCESORIO de celular (cargador, funda, cable, vidrio) no es el teléfono.
     !/\b(cargador\w*|funda\w*|cable\w*|vidrio\w*|templado\w*|protector\w*|carcasa\w*|soporte\w*|accesorio\w*|repuesto\w*|pantalla\w*|bater[ií]a\w*|auricular\w*)\b/.test(text)
   ) {
-    seeds.push({ ncm_code: "8517.12.00", title: "[Cap. 85] Teléfonos celulares (móviles) / smartphones" });
+    seeds.push({ ncm_code: "8517.13.00", title: "[Cap. 85] Teléfonos inteligentes (smartphones)" });
   }
   // Notebook / laptop → 8471.30 (máquinas automáticas de procesamiento de datos,
   // portátiles). El léxico la manda a 8415 (aire acondicionado "portátil").

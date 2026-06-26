@@ -2,6 +2,7 @@ import { openaiJson } from "@/lib/ai/openaiClient";
 import { anthropicJson, anthropicAvailable } from "@/lib/ai/anthropicClient";
 import { buildAmbiguityAssistantParagraph, type NormalizedAmbiguity } from "@/lib/clasificar-ncm/ncmAmbiguity";
 import { runNcmMotor } from "@/lib/clasificar-ncm/runNcmMotor";
+import { matchProductAnchor } from "@/lib/clasificar-ncm/commonProductAnchors";
 import { ncmDigitsOnly, formatMercosurNcm8 } from "@/lib/ncm/knowledge/normalize";
 import {
   formatImporterProfileForPrompt,
@@ -783,7 +784,19 @@ export async function processClasificarTurn(opts: {
         snap.confidence = Math.min(snap.confidence ?? conf ?? 0.4, 0.45);
         snap.status = "tentative";
       } else {
-        snap.status = "needs_info";
+        // Red de seguridad: producto frecuente conocido → posición canónica
+        // verificada (smartphone, auriculares, heladera, etc.). Evita que un
+        // común quede sin clasificar por la varianza del LLM.
+        const anchor = matchProductAnchor(techText);
+        if (anchor) {
+          snap.recommendedNcm = anchor.ncm;
+          snap.confidence = Math.max(snap.confidence ?? 0, 0.55);
+          snap.status = "tentative";
+          snap.classificationRationale =
+            snap.classificationRationale || `Producto frecuente (${anchor.label}): posición canónica.`;
+        } else {
+          snap.status = "needs_info";
+        }
       }
     }
 
@@ -896,11 +909,21 @@ export async function processClasificarTurn(opts: {
     };
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
-    // Si ya tenemos NCM podemos marcar tentative; si no, quedamos en needs_info
+    // Si el motor falló (timeout/cuota), igual anclamos productos comunes a su
+    // posición canónica para no dejar al usuario sin salida.
+    if (!snap.recommendedNcm) {
+      const anchor = matchProductAnchor(techText);
+      if (anchor) {
+        snap.recommendedNcm = anchor.ncm;
+        snap.confidence = Math.max(snap.confidence ?? 0, 0.5);
+      }
+    }
     snap.status = snap.recommendedNcm ? "tentative" : "needs_info";
     return {
-      assistantMessage:
-        assistantMessage + "\n\nNo pude completar la consulta del motor. Probá dar más detalles del producto.",
+      assistantMessage: snap.recommendedNcm
+        ? assistantMessage
+        : assistantMessage +
+          "\n\nDecime un poco más del producto (qué es, de qué material y para qué se usa) para clasificarlo bien.",
       snapshot: { ...snap, errorMessage: msg },
     };
   }
