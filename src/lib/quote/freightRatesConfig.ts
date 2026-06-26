@@ -41,6 +41,9 @@ export type FreightRatesConfig = {
   // Vehículos / sobredimensionado (RORO se cobra por volumen; Flat Rack / Open Top por unidad)
   roroPorM3: number;
   roroMinimo: number;
+  // Piso del flete RORO por vehículo (autos). Es el valor que más manda en el flete
+  // de un auto: el m³ × tarifa casi siempre queda por debajo, así que define el número.
+  fleteVehiculoMinUsd: number;
   flatRackPorUnidad: number;
   openTopPorUnidad: number;
   // Courier (envíos puerta a puerta, régimen simplificado): flete por kg según origen
@@ -76,6 +79,8 @@ export const DEFAULT_FREIGHT_RATES: FreightRatesConfig = {
   // ⚠️ Valores de referencia — reemplazar con las tarifas reales del despachante.
   roroPorM3: 120,
   roroMinimo: 1500,
+  // Flete real de un auto por RORO (dato de Andy). Editable en el panel.
+  fleteVehiculoMinUsd: 4500,
   flatRackPorUnidad: 3500,
   openTopPorUnidad: 3000,
   // Courier (tarifas reales del operador): USD/kg puerta a puerta + impuesto único.
@@ -118,6 +123,7 @@ export const FREIGHT_FIELDS: FreightFieldMeta[] = [
   { key: "almLcl", label: "Almacenaje LCL", group: "Almacenaje", unit: "USD" },
   { key: "roroPorM3", label: "RORO (autos/buses) por m³", group: "Vehículos / sobredimensionado", unit: "USD/m³" },
   { key: "roroMinimo", label: "RORO: mínimo por operación", group: "Vehículos / sobredimensionado", unit: "USD" },
+  { key: "fleteVehiculoMinUsd", label: "Flete de auto (RORO): piso por vehículo", group: "Vehículos / sobredimensionado", unit: "USD", help: "Es el número que define el flete de un auto. Poné acá la tarifa real de RORO por unidad." },
   { key: "flatRackPorUnidad", label: "Flat Rack (por unidad)", group: "Vehículos / sobredimensionado", unit: "USD" },
   { key: "openTopPorUnidad", label: "Open Top (por unidad)", group: "Vehículos / sobredimensionado", unit: "USD" },
   { key: "courierChinaPerKg", label: "Courier China", group: "Courier", unit: "USD/kg" },

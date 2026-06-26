@@ -473,7 +473,9 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   let fleteModeLabelOverride: string | undefined;
   if (isVehicleForFreight) {
     const fc = getFreightConfig();
-    const roro = Math.max(fc.roroMinimo, fc.roroPorM3 * (totalM3 > 0 ? totalM3 : 0));
+    // El piso por vehículo (fleteVehiculoMinUsd, dato real de Andy) manda: el m³×tarifa
+    // de un auto casi siempre queda por debajo. roroMinimo se mantiene por compatibilidad.
+    const roro = Math.max(fc.fleteVehiculoMinUsd, fc.roroMinimo, fc.roroPorM3 * (totalM3 > 0 ? totalM3 : 0));
     if (roro > 0) {
       fleteMin = round2(roro);
       fleteMax = round2(roro);
