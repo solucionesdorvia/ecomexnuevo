@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronRight, Info, Check, Pencil, X, Loader2 } from "lucide-react";
+import { ChevronRight, Info, Check, Pencil, X, Loader2, AlertTriangle } from "lucide-react";
 import { ncmToPartida } from "@/lib/ncmDisplay";
 
 // ─── Tipos ──────────────────────────────────────────────────────────────────
@@ -66,6 +66,8 @@ export type QuoteCostPayload = {
     tone?: "muted" | "primary" | "gold" | "success";
   }>;
   quality?: number;
+  /** Avisos fuertes cuando el número NO es confiable (sin clasificar, arancel genérico, etc.). */
+  warnings?: string[];
   quantity?: number;
   breakdown?: QuoteBreakdown;
   regime?: {
@@ -541,6 +543,33 @@ function CardsBreakdown({ quote, canCorrectNcm = false }: { quote: QuoteCostPayl
   );
 }
 
+// ─── Banner de confiabilidad: el número NO debe engañar ──────────────────────
+// Si el motor devolvió avisos (sin clasificar, arancel genérico, antidumping sin
+// cuantificar, moneda dudosa), lo mostramos FUERTE arriba de todo: el usuario tiene
+// que saber que el costo no es firme antes de leer los números.
+
+function ReliabilityBanner({ warnings }: { warnings: string[] }) {
+  if (!warnings.length) return null;
+  return (
+    <div className="mb-3 rounded-2xl border border-amber-400/35 bg-amber-400/[0.09] px-4 py-3.5">
+      <div className="flex items-center gap-2">
+        <AlertTriangle className="h-4 w-4 shrink-0 text-amber-300" aria-hidden />
+        <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-amber-300">
+          Atención: este costo no es firme
+        </span>
+      </div>
+      <ul className="mt-2 space-y-1.5">
+        {warnings.map((w, i) => (
+          <li key={i} className="flex gap-1.5 text-[12px] leading-snug text-amber-100/90">
+            <span className="text-amber-400/70">·</span>
+            <span>{w}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 // ─── Banner de régimen recomendado (Fase 2) ──────────────────────────────────
 
 function RegimeBanner({ regime }: { regime: NonNullable<QuoteCostPayload["regime"]> }) {
@@ -685,6 +714,7 @@ export function QuoteCostBreakdown({
 
   return (
     <div ref={rootRef}>
+      {quote.warnings && quote.warnings.length > 0 && <ReliabilityBanner warnings={quote.warnings} />}
       {quote.regime && <RegimeBanner regime={quote.regime} />}
       {quote.classification && <ClassificationNotice classification={quote.classification} ncm={quote.ncm} />}
 

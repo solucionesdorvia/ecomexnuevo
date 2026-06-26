@@ -269,6 +269,7 @@ export async function POST(req: Request) {
     explanation: quote.explanation,
     assumptions: quote.assumptions ?? [],
     quality: quote.quality,
+    warnings: quote.warnings ?? [],
     breakdown: quote.breakdown ?? null,
     regime: quote.regime ?? null,
     presetCosteo: presetCosteo ?? null,

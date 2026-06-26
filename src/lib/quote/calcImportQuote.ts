@@ -263,6 +263,9 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     dieSource?: "pcram_live" | "official_offline" | "generic_default";
     /** Si la subpartida del heading tiene aranceles dispares (min/max % del DIE). */
     siblingTariffDivergence?: { minPct: number; maxPct: number } | null;
+    /** true solo si el arancel viene de una fuente real (PCRAM o nomenclador). Si es
+     *  false, el número es una estimación y NO hay que mostrarlo como firme. */
+    arancelConfiable?: boolean;
   };
   assumptions?: Array<{
     id: string;
@@ -272,6 +275,9 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     tone?: "muted" | "primary" | "gold" | "success";
   }>;
   quality?: number; // 0..100
+  /** Avisos fuertes para el usuario cuando el número NO es confiable (sin clasificar,
+   *  arancel genérico, antidumping sin cuantificar, moneda dudosa, etc.). */
+  warnings?: string[];
   /** Régimen recomendado (Courier vs General) — Fase 2. */
   regime?: RegimeAssessment;
 }> {
@@ -1029,6 +1035,32 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     },
   ];
 
+  // ── Confiabilidad del arancel: que el número NUNCA engañe ───────────────────
+  // El arancel es confiable SOLO si vino de una fuente real (PCRAM en vivo o el
+  // nomenclador oficial) y hay NCM. "generic_default" = lo estimamos → avisamos
+  // fuerte y bajamos la confianza, en vez de mostrar un número con cara de firme.
+  const arancelConfiable = dieSource !== "generic_default" && !!ncm;
+  const warnings: string[] = [];
+  if (!ncm) {
+    warnings.push(
+      "No pudimos identificar la posición arancelaria (NCM) del producto. El arancel y los impuestos de abajo son una ESTIMACIÓN general y el costo final puede variar mucho. Detallá más el producto (qué es, material, marca/modelo, uso) o reintentá en unos minutos."
+    );
+  } else if (dieSource === "generic_default") {
+    warnings.push(
+      "Todavía no tenemos el arancel oficial de esta posición. El derecho de importación es una estimación general; confirmá la clasificación con un despachante de E-COMEX antes de operar."
+    );
+  }
+  if (antidumpingUnquantified) {
+    warnings.push(
+      "Esta posición podría tener derechos antidumping con valor mínimo/específico que no pudimos cuantificar. El costo real puede ser bastante mayor al estimado."
+    );
+  }
+  if (nonUsdCurrencyHint) {
+    warnings.push(
+      "El precio podría estar en otra moneda (no USD). Verificá el FOB: si no es en dólares, el total no es correcto."
+    );
+  }
+
   const quality = (() => {
     let q = 28;
     if (typeof inputs.product.fobUsd === "number") q += 18;
@@ -1042,7 +1074,11 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
     if (siblingDivergence) q -= 8;      // subpartida sensible al arancel
     if (antidumpingUnquantified) q -= 15; // antidumping sin % → el costo real puede ser mucho mayor
     if (nonUsdCurrencyHint) q -= 10;     // precio quizá en otra moneda → total sospechoso
-    return Math.max(0, Math.min(100, q));
+    q = Math.max(0, Math.min(100, q));
+    // Tope duro si el arancel no es confiable: nunca proyectar alta confianza
+    // sobre una estimación (sin NCM ≤ 30, arancel genérico ≤ 40).
+    if (!arancelConfiable) q = Math.min(q, ncm ? 40 : 30);
+    return q;
   })();
 
   // Nota: NCM/clasificación aduanera se mantiene interna (se usa para impuestos),
@@ -1218,9 +1254,11 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
       taxLines,
       dieSource,
       siblingTariffDivergence: siblingDivergence,
+      arancelConfiable,
     },
     assumptions,
     quality,
+    warnings,
     regime,
   };
 }

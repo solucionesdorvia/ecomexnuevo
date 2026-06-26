@@ -284,6 +284,7 @@ export default function CotizadorPublicoClient() {
           quantity: caseState.purchase?.quantity,
           breakdown: json.breakdown ?? undefined,
           regime: json.regime ?? undefined,
+          warnings: json.warnings ?? undefined,
         });
         incrementQuoteCount();
       }
