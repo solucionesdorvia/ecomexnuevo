@@ -765,11 +765,26 @@ export async function processClasificarTurn(opts: {
       snap.status = "resolved";
       snap.pendingQuestions = undefined;
       snap.ambiguity = undefined;
-    } else if (motor.statusHint === "tentative" && snap.recommendedNcm) {
+    } else if (snap.recommendedNcm) {
+      // Tenemos NCM (del motor o del turno previo) aunque el hint no sea "resolved".
       snap.status = "tentative";
     } else {
-      // Sin NCM nunca podemos pasar de needs_info, sin importar lo que diga el motor
-      snap.status = "needs_info";
+      // El motor no fijó un código pero suele traer candidatos (el LLM es no
+      // determinista y a veces no "elige" aunque tenga opciones claras). Adoptamos
+      // el mejor candidato como TENTATIVO para que SIEMPRE haya una salida; la baja
+      // confianza la marca el blindaje del costo. Solo si no hay NINGÚN candidato
+      // quedamos en needs_info (y más abajo preguntamos).
+      const topCandidate = (motor.candidates ?? [])
+        .map((c) => (c?.code ?? "").trim())
+        .find((c) => ncmDigitsOnly(c).length >= 6);
+      if (topCandidate) {
+        const d = ncmDigitsOnly(topCandidate);
+        snap.recommendedNcm = d.length >= 8 ? formatMercosurNcm8(d) : topCandidate;
+        snap.confidence = Math.min(snap.confidence ?? conf ?? 0.4, 0.45);
+        snap.status = "tentative";
+      } else {
+        snap.status = "needs_info";
+      }
     }
 
     /**
@@ -814,19 +829,25 @@ export async function processClasificarTurn(opts: {
      * ("calculalo", "listo", "dale", etc.) — aunque haya questions_next
      * pendientes en el LLM analista (suelen ser confirmaciones).
      */
-    if (dataComplete) {
-      // Con todos los datos comerciales ya disponibles, descartamos preguntas
+    if (dataComplete && snap.recommendedNcm) {
+      // Con todos los datos comerciales + NCM ya disponibles, descartamos preguntas
       // secundarias del analista (uso personal, venta, confirmaciones) que no
       // afectan la clasificación NCM. El usuario ya aportó lo necesario.
       snap.pendingQuestions = undefined;
       snap.ambiguity = undefined;
-      // Avanzamos siempre a "tentative" cuando tenemos FOB + cantidad + origen,
-      // aunque el motor no haya podido clasificar el NCM. El presupuesto puede
-      // calcularse con tarifa por defecto. Esto evita que el usuario quede
-      // bloqueado en "needs_info" cuando el motor falla o devuelve null.
       const st = snap.status as string;
       if (st === "needs_info" || st === "analyzing") {
         snap.status = "tentative";
+      }
+    } else if (dataComplete && !snap.recommendedNcm) {
+      // Datos completos pero NINGÚN NCM ni candidato (caso raro): NUNCA cerramos
+      // como "listo" sin clasificación — eso genera un costo engañoso. Siempre hay
+      // salida = preguntar algo concreto para poder clasificar.
+      snap.status = "needs_info";
+      if ((snap.pendingQuestions?.length ?? 0) === 0 && !snap.ambiguity) {
+        snap.pendingQuestions = [
+          "Para clasificarlo con precisión me falta un detalle: ¿qué es exactamente, de qué material principal está hecho y para qué se usa?",
+        ];
       }
     }
 
@@ -850,9 +871,22 @@ export async function processClasificarTurn(opts: {
         ? `\n\n${buildAmbiguityAssistantParagraph(ambNorm)}`
         : "";
 
+    // Nunca devolver un "listo / tengo todo para cotizar" cuando NO hay NCM: si el
+    // flujo quedó en needs_info, el mensaje tiene que ser una pregunta (la pendiente
+    // o el bloque de ambigüedad), no un cierre que engañe al usuario.
+    let outMessage = assistantMessage;
+    if (!snap.recommendedNcm && snap.status === "needs_info") {
+      const q = (snap.pendingQuestions ?? []).join(" ").trim();
+      outMessage = q
+        ? q
+        : ambiguityParagraph
+          ? "Para afinar la clasificación, una consulta:"
+          : "Necesito un detalle más para clasificar el producto: ¿qué es exactamente, de qué material principal está hecho y para qué se usa?";
+    }
+
     // Sanitización final: cualquier código NCM que se haya colado en el mensaje
     // del analista se saca (defense-in-depth contra el prompt).
-    const cleaned = stripNcmCodes(assistantMessage + ambiguityParagraph);
+    const cleaned = stripNcmCodes(outMessage + ambiguityParagraph);
 
     return {
       assistantMessage: cleaned,
