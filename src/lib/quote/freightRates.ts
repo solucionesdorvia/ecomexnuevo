@@ -117,6 +117,10 @@ export function estimateUnitDimensions(ncm?: string, title?: string): UnitDimens
     return { kg: 80, m3: 0.3 };
 
   // Vehículos / autopartes
+  // Autos/camionetas: peso y volumen reales (un auto ~1,5 t y ~12 m³). No asumir 1 kg
+  // ni 0,8 m³ → el RORO se cobra por m³, así que el volumen tiene que ser realista.
+  if (heading === 8703 || heading === 8704 || /\b(auto|automovil|vehiculo|coche|camioneta|pickup|suv|furgon)\b/.test(t))
+    return { kg: 1500, m3: 12 };
   if (heading >= 8701 && heading <= 8716) return { kg: 150, m3: 0.8 };
   if (heading >= 8701 && heading <= 8799) return { kg: 5, m3: 0.02 };
 

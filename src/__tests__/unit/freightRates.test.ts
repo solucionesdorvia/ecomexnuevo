@@ -20,6 +20,13 @@ describe("estimateUnitDimensions — fallback por capítulo (no asumir 1 kg en c
   it("un producto realmente desconocido mantiene el genérico", () => {
     expect(estimateUnitDimensions(undefined, "cosa rara sin pista").kg).toBe(1);
   });
+  it("un auto (por título, sin NCM) pesa ~1,5 t y tiene volumen real, no 1 kg", () => {
+    // Bug reportado: "Auto 0km" caía a 1 kg → flete absurdo. Debe estimarse como vehículo.
+    const auto = estimateUnitDimensions(undefined, "Auto 0km");
+    expect(auto.kg).toBeGreaterThanOrEqual(1000);
+    expect(auto.m3).toBeGreaterThanOrEqual(8);
+    expect(estimateUnitDimensions("8703.23.90").kg).toBeGreaterThanOrEqual(1000);
+  });
 });
 
 describe("planContainers (FCL 20'/40'/múltiple)", () => {

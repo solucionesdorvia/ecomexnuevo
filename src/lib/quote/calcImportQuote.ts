@@ -459,7 +459,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   const headForVeh = ncm ? parseInt(ncm.replace(/\D/g, "").slice(0, 4), 10) : NaN;
   const isVehicleForFreight =
     (Number.isFinite(headForVeh) && headForVeh >= 8701 && headForVeh <= 8705) ||
-    /\b(omnibus|ómnibus|colectivo|micro|autob[uú]s|automovil|autom[oó]vil|camion|cami[oó]n|camioneta|pickup)\b/i.test(
+    /\b(auto|autos|automovil|autom[oó]vil|veh[ií]culo|coche|camioneta|pickup|pick.?up|suv|furg[oó]n|utilitario|omnibus|ómnibus|colectivo|micro|autob[uú]s|camion|cami[oó]n)\b/i.test(
       title.toLowerCase()
     );
   let fleteMin = freight.totalUsd;
