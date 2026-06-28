@@ -61,7 +61,7 @@ describe("calcImportQuote — flete marítimo por contenedor (carga voluminosa)"
       rawUserText: "200 sillas de oficina USD 50 China",
     } as Opts);
     const b = r.breakdown!;
-    expect(b.fleteMode?.startsWith("fcl")).toBe(true);
+    expect(b.fleteMode).toMatch(/FCL/i); // etiqueta amigable: "Marítimo FCL"
     expect(b.fleteMinUsd).toBeGreaterThan(0);
     expect(Number.isFinite(b.totalMinUsd)).toBe(true);
   });

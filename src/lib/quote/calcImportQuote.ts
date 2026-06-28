@@ -1209,7 +1209,7 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
         : {}),
       fleteMinUsd: round2(fleteMin),
       fleteMaxUsd: round2(fleteMax),
-      fleteMode: freight.mode,
+      fleteMode: freightModeLabel,
       seguroMinUsd: round2(seguroMin),
       seguroMaxUsd: round2(seguroMax),
       cifMinUsd: round2(cifMin),

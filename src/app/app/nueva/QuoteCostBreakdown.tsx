@@ -301,7 +301,7 @@ function TemplateBreakdown({
   b: QuoteBreakdown;
   canCorrectNcm?: boolean;
 }) {
-  const fleteLabel = "Flete internacional";
+  const fleteLabel = b.fleteMode ? `Flete internacional · ${b.fleteMode}` : "Flete internacional";
   const taxLines = b.taxLines ?? [];
 
   const ivaTotal = taxLines
