@@ -166,7 +166,9 @@ export default function CotizadorPublicoClient() {
   const [pendingQuote, setPendingQuote] = useState(false);
   const [bienDeCapital, setBienDeCapital] = useState(false);
   const [exentoTasaEstadistica, setExentoTasaEstadistica] = useState(false);
-  const [destino, setDestino] = useState<"reventa" | "uso_propio">("reventa");
+  // Sin default: obligamos a elegir el uso antes de cotizar — cambia mucho los
+  // impuestos (percepciones) y es el diferencial de E-COMEX (preguntar el uso).
+  const [destino, setDestino] = useState<"reventa" | "uso_propio" | null>(null);
   const [perfilImportador, setPerfilImportador] = useState<
     "responsable_inscripto" | "monotributo" | "persona_fisica" | "sociedad"
   >("responsable_inscripto");
@@ -488,7 +490,7 @@ export default function CotizadorPublicoClient() {
                   )}
                   <div className="mb-3 space-y-2.5 rounded-xl border border-white/[0.07] bg-white/[0.02] px-3.5 py-3">
                     <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-400">
-                      Datos para afinar el presupuesto
+                      Cómo vas a importar <span className="text-[#18C3D6]">— cambia los impuestos</span>
                     </p>
 
                     {/* Perfil del importador → recuperabilidad */}
@@ -506,10 +508,10 @@ export default function CotizadorPublicoClient() {
                       </select>
                     </label>
 
-                    {/* Destino → percepciones */}
+                    {/* Destino → percepciones (REQUERIDO antes de cotizar) */}
                     <div className="text-[12px] text-slate-300">
-                      Destino de la mercadería
-                      <div className="mt-1 flex gap-2">
+                      <span className="font-semibold text-white">¿Para qué vas a usar el producto?</span>
+                      <div className="mt-1.5 flex gap-2">
                         {([
                           ["reventa", "Reventa / comercialización"],
                           ["uso_propio", "Uso propio (bien de uso)"],
@@ -528,6 +530,11 @@ export default function CotizadorPublicoClient() {
                           </button>
                         ))}
                       </div>
+                      {!destino && (
+                        <p className="mt-1 text-[10px] font-medium text-[#18C3D6]">
+                          Elegí una opción — define qué impuestos pagás (percepciones).
+                        </p>
+                      )}
                       {destino === "uso_propio" && (
                         <p className="mt-1 text-[10px] text-slate-500">
                           Uso propio: no se cobran percepciones (IVA adic., Ganancias, IIBB).
@@ -583,11 +590,11 @@ export default function CotizadorPublicoClient() {
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <button
                       type="button"
-                      disabled={pendingQuote || !hasCommercialData}
+                      disabled={pendingQuote || !hasCommercialData || !destino}
                       onClick={() => void createQuote()}
                       className="min-h-[48px] rounded-xl bg-[#18C3D6] px-4 py-3 text-[13px] font-medium text-[#030d18] shadow-lg shadow-[#18C3D6]/20 transition hover:bg-[#0ea5b9] disabled:cursor-not-allowed disabled:opacity-40 sm:min-h-0"
                     >
-                      {pendingQuote ? "Generando presupuesto…" : "Ver presupuesto"}
+                      {pendingQuote ? "Generando presupuesto…" : !destino && hasCommercialData ? "Elegí el uso para cotizar" : "Ver presupuesto"}
                     </button>
                     <button
                       type="button"
