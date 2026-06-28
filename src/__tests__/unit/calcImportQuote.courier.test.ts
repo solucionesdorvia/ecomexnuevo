@@ -84,6 +84,17 @@ describe("calcImportQuote — costeo Courier (puerta a puerta)", () => {
     expect(fromChina.breakdown!.fleteMinUsd).toBeGreaterThan(fromUsa.breakdown!.fleteMinUsd);
   });
 
+  it("voluminoso pero liviano (aire acondicionado) NO va por courier — el peso facturable manda", async () => {
+    // Bug: un aire de ~45 kg reales pero 0,55 m³ (≈92 kg volumétricos) entraba al
+    // courier (≤50 kg real) y el courier lo cobraba carísimo por volumen. Debe ir general.
+    const r = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Aire acondicionado split 3000f", fobUsd: 600, quantity: 1, origin: "China", ncm: "8415.10.11", raw: { pcram: { ncmCode: "8415.10.11", taxes: { DIE: 16, IVA: 21 } } } } as any,
+      rawUserText: "1 aire split USD 600", destino: "reventa",
+    } as Opts);
+    expect(r.regime!.code).toBe("general");
+  });
+
   it("el MISMO producto cuesta MENOS por courier que si fuera general (intervención lo fuerza)", async () => {
     const courier = await calcImportQuote({
       mode: "quote", product: small() as any, rawUserText: "1 auricular USD 100", destino: "uso_propio",

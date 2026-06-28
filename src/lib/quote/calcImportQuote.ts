@@ -449,9 +449,13 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   // depósito fiscal / SIM (eso es del despacho general), reemplaza derechos/IVA/
   // percepciones por un ÚNICO impuesto sobre el FOB, y su flete es por kg todo-incluido.
   const interventions = (inputs.product.raw as any)?.pcram?.interventions as string[] | undefined;
+  // Para el courier usamos el peso FACTURABLE (mayor entre real y volumétrico): el
+  // courier cobra por volumen, así que una carga voluminosa (ej. un aire de 0,55 m³)
+  // NO es un paquete de courier aunque pese < 50 kg — debe ir por marítimo.
+  const chargeableWeightKg = chargeableAirKg(totalKg, totalM3);
   const regime = assessImportRegime({
     fobTotalUsd: fobTotalMax,
-    totalWeightKg: totalKg,
+    totalWeightKg: chargeableWeightKg,
     interventions,
     weightEstimated: userWeightKg == null,
   });
