@@ -79,8 +79,8 @@ export const DEFAULT_FREIGHT_RATES: FreightRatesConfig = {
   // ⚠️ Valores de referencia — reemplazar con las tarifas reales del despachante.
   roroPorM3: 120,
   roroMinimo: 1500,
-  // Flete real de un auto por RORO (dato de Andy). Editable en el panel.
-  fleteVehiculoMinUsd: 4500,
+  // Mínimo de flete RORO por vehículo (dato de Andy). Editable en el panel.
+  fleteVehiculoMinUsd: 12000,
   flatRackPorUnidad: 3500,
   openTopPorUnidad: 3000,
   // Courier (tarifas reales del operador): USD/kg puerta a puerta + impuesto único.
