@@ -117,10 +117,8 @@ export const FREIGHT_FIELDS: FreightFieldMeta[] = [
   { key: "lclUsaFlat", label: "LCL USA (mínimo por embarque)", group: "Marítimo LCL", unit: "USD" },
   { key: "lclPerM3", label: "LCL: tarifa por m³ / revenue ton", group: "Marítimo LCL", unit: "USD/m³", help: "Se cobra el mayor entre m³ y toneladas; sobre el mínimo manda esta tarifa." },
   { key: "lclHandling", label: "LCL: handling destino", group: "Marítimo LCL", unit: "USD" },
-  { key: "almAir", label: "Almacenaje aéreo", group: "Almacenaje", unit: "USD" },
-  { key: "almFcl20", label: "Almacenaje FCL 20'", group: "Almacenaje", unit: "USD" },
-  { key: "almFcl40", label: "Almacenaje FCL 40'", group: "Almacenaje", unit: "USD" },
-  { key: "almLcl", label: "Almacenaje LCL", group: "Almacenaje", unit: "USD" },
+  // El almacenaje ya NO se carga acá: vive en "Gastos de importación" (Almacenamiento
+  // y descarga) para no contarlo dos veces en el flete.
   { key: "roroPorM3", label: "RORO (autos/buses) por m³", group: "Vehículos / sobredimensionado", unit: "USD/m³" },
   { key: "roroMinimo", label: "RORO: mínimo por operación", group: "Vehículos / sobredimensionado", unit: "USD" },
   { key: "fleteVehiculoMinUsd", label: "Flete de auto (RORO): piso por vehículo", group: "Vehículos / sobredimensionado", unit: "USD", help: "Es el número que define el flete de un auto. Poné acá la tarifa real de RORO por unidad." },

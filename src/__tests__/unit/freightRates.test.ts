@@ -27,6 +27,25 @@ describe("estimateUnitDimensions — fallback por capítulo (no asumir 1 kg en c
     expect(auto.m3).toBeGreaterThanOrEqual(8);
     expect(estimateUnitDimensions("8703.23.90").kg).toBeGreaterThanOrEqual(1000);
   });
+
+  it("electrodomésticos grandes y máquinas dejan de caer al balde genérico (80kg/0,3m³)", () => {
+    // Antes una heladera y un torno de 1,2 t se estimaban igual → mismo flete.
+    const heladera = estimateUnitDimensions("8418.10.00");
+    expect(heladera.kg).toBeGreaterThanOrEqual(50);
+    expect(heladera.m3).toBeGreaterThan(0.3);
+    const lavarropas = estimateUnitDimensions(undefined, "lavarropas carga frontal");
+    expect(lavarropas.m3).toBeGreaterThan(0.3);
+    const torno = estimateUnitDimensions("8458.11.00");
+    expect(torno.kg).toBeGreaterThanOrEqual(500); // máquina pesada, no 80 kg
+  });
+});
+
+describe("calcFreightCost — el almacenaje ya no se cuenta dentro del flete (vive en gastos)", () => {
+  it("almacenajeUsd del flete es 0 (no se duplica con Gastos de importación)", () => {
+    expect(calcFreightCost("CHINA", 800, 4).almacenajeUsd).toBe(0); // LCL
+    expect(calcFreightCost("CHINA", 5, 0.01).almacenajeUsd).toBe(0); // aéreo
+    expect(calcFreightCost("CHINA", 8000, 40).almacenajeUsd).toBe(0); // FCL
+  });
 });
 
 describe("planContainers (FCL 20'/40'/múltiple)", () => {

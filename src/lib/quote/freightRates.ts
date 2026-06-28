@@ -102,6 +102,7 @@ export function estimateUnitDimensions(ncm?: string, title?: string): UnitDimens
   if (heading === 8518 || /auricular|headphone|earphone/.test(t))      return { kg: 0.3, m3: 0.002 };
   if (heading === 8528 || /televisor|monitor|tv\b/.test(t))            return { kg: 12.0, m3: 0.12 };
   if (heading === 8516 || /cargador|charger|usb/.test(t))              return { kg: 0.3, m3: 0.001 };
+  if (heading === 8502 || /\b(grupo\s*electr[oó]geno|generador\s*(?:diesel|di[eé]sel|nafta|el[eé]ctrico))\b/.test(t)) return { kg: 120, m3: 0.6 };
   if (heading >= 8501 && heading <= 8543)                              return { kg: 1.0, m3: 0.003 };
 
   // Textil / indumentaria
@@ -112,7 +113,21 @@ export function estimateUnitDimensions(ncm?: string, title?: string): UnitDimens
   // Calzado
   if (heading >= 6401 && heading <= 6405) return { kg: 0.6, m3: 0.003 };
 
-  // Maquinaria industrial
+  // Línea blanca / electrodomésticos grandes. El VOLUMEN real importa para el flete;
+  // antes caían al balde genérico de maquinaria (80 kg / 0,3 m³) y sub-estimaban el flete.
+  if (heading === 8418 || /\b(heladera|refrigerador|freezer|congelador|nevera)\b/.test(t)) return { kg: 60, m3: 0.85 };
+  if (heading === 8450 || /\b(lavarropas|lavadora)\b/.test(t))                              return { kg: 65, m3: 0.75 };
+  if (heading === 8451 || /\bsecarropas\b/.test(t))                                         return { kg: 45, m3: 0.6 };
+  if (heading === 8422 || /\b(lavavajillas|lavaplatos)\b/.test(t))                          return { kg: 50, m3: 0.6 };
+  if (heading === 8415 || /\baire\s*acondicionado\b/.test(t))                               return { kg: 45, m3: 0.55 };
+  if (heading === 7321)                                                                      return { kg: 55, m3: 0.5 };
+
+  // Máquinas-herramienta / maquinaria pesada (tornos, fresadoras, prensas, CNC):
+  // un torno pesa ~1 t y ocupa varios m³, no 80 kg / 0,3 m³.
+  if ((heading >= 8456 && heading <= 8466) || /\b(torno|fresadora|mandrinadora|rectificadora|inyectora|router\s*cnc)\b/.test(t))
+    return { kg: 800, m3: 4 };
+
+  // Maquinaria industrial (resto del cap. 84)
   if ((heading >= 8401 && heading <= 8479) || /maquin|machine|industrial|cnc|sierra|cortad|stone|piedra/.test(t))
     return { kg: 80, m3: 0.3 };
 
@@ -234,8 +249,9 @@ export function calcFreightCost(
 ): FreightResult {
   const m = mode ?? selectShippingMode(zone, totalKg, totalM3);
 
-  const { AIR_RATES, ALMACENAJE_RATES, FCL_RATES, LCL_RATES } = buildRates();
-  const alm = ALMACENAJE_RATES;
+  // Nota: el almacenaje NO se suma al flete internacional — vive en "Gastos de
+  // importación" (Almacenamiento y descarga) para no contarlo dos veces.
+  const { AIR_RATES, FCL_RATES, LCL_RATES } = buildRates();
 
   // Peso volumétrico aéreo (IATA: 1 m³ = 167 kg). El marítimo usa revenue ton
   // (m³ vs tonelada) dentro de cada rama LCL.
@@ -250,10 +266,10 @@ export function calcFreightCost(
       const flete = r.awbFlat + airTransfer + chargeableKg * r.freightPerKg + r.destination.corteGuia + r.destination.handling;
       return {
         mode: m,
-        totalUsd: Math.round(flete) + alm.airFlat,
-        almacenajeUsd: alm.airFlat,
+        totalUsd: Math.round(flete),
+        almacenajeUsd: 0,
         label: "Flete internacional",
-        detail: `AWB $${r.awbFlat} + Air Transfer $${Math.round(airTransfer)} + flete $${Math.round(chargeableKg * r.freightPerKg)} (${Math.round(chargeableKg)} kg${volNote} × USD ${r.freightPerKg}/kg) + destino $${Math.round(r.destination.corteGuia + r.destination.handling)} + almacenaje $${alm.airFlat}`,
+        detail: `AWB $${r.awbFlat} + Air Transfer $${Math.round(airTransfer)} + flete $${Math.round(chargeableKg * r.freightPerKg)} (${Math.round(chargeableKg)} kg${volNote} × USD ${r.freightPerKg}/kg) + destino $${Math.round(r.destination.corteGuia + r.destination.handling)}`,
         estimatedKg: chargeableKg,
       };
     }
@@ -265,10 +281,10 @@ export function calcFreightCost(
       const dest = r.destination.corteGuia + r.destination.handling;
       return {
         mode: m,
-        totalUsd: Math.round(flete + dest) + alm.airFlat,
-        almacenajeUsd: alm.airFlat,
+        totalUsd: Math.round(flete + dest),
+        almacenajeUsd: 0,
         label: "Flete internacional",
-        detail: `Flete $${Math.round(flete)} (${Math.round(chargeableKg)} kg${volNote} × USD ${r.freightPerKg}/kg) + destino $${Math.round(dest)} + almacenaje $${alm.airFlat}`,
+        detail: `Flete $${Math.round(flete)} (${Math.round(chargeableKg)} kg${volNote} × USD ${r.freightPerKg}/kg) + destino $${Math.round(dest)}`,
         estimatedKg: chargeableKg,
       };
     }
@@ -285,10 +301,10 @@ export function calcFreightCost(
       const minNote = flete <= r.fleteMin ? ` (mínimo $${r.fleteMin})` : ` (${revenueTon.toFixed(1)} ton × $${r.perM3})`;
       return {
         mode: m,
-        totalUsd: Math.round(subtotal) + alm.lclFlat,
-        almacenajeUsd: alm.lclFlat,
+        totalUsd: Math.round(subtotal),
+        almacenajeUsd: 0,
         label: "Flete internacional",
-        detail: `Flete LCL $${Math.round(flete)}${minNote} + handling $${r.destination.handling} + almacenaje $${alm.lclFlat}`,
+        detail: `Flete LCL $${Math.round(flete)}${minNote} + handling $${r.destination.handling}`,
         estimatedKg: Math.round(revenueTon * 1000),
       };
     }
@@ -300,13 +316,12 @@ export function calcFreightCost(
       const containers = plan.c20 + plan.c40;
       const flete = plan.c20 * r.flete20 + plan.c40 * r.flete40;
       const dest = r.destination * containers; // gastos destino por contenedor
-      const almTotal = plan.c20 * alm.fcl20 + plan.c40 * alm.fcl40;
       return {
         mode: m,
-        totalUsd: Math.round(flete + dest) + almTotal,
-        almacenajeUsd: almTotal,
+        totalUsd: Math.round(flete + dest),
+        almacenajeUsd: 0,
         label: "Flete internacional",
-        detail: `${plan.label}: flete $${Math.round(flete)} + gastos destino $${Math.round(dest)} + almacenaje $${almTotal}`,
+        detail: `${plan.label}: flete $${Math.round(flete)} + gastos destino $${Math.round(dest)}`,
         estimatedKg: totalKg,
       };
     }
