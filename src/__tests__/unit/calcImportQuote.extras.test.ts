@@ -8,6 +8,35 @@ import { calcImportQuote } from "@/lib/quote/calcImportQuote";
 type Opts = Parameters<typeof calcImportQuote>[0];
 const line = (b: any, re: RegExp) => (b.taxLines as any[]).find((l) => re.test(l.label));
 
+describe("calcImportQuote — flete de autos por contenedor 40' (hasta 2 por contenedor)", () => {
+  const car = (qty: number, origin: string) =>
+    ({ title: "Automóvil sedán", fobUsd: 20000, quantity: qty, origin, ncm: "8703.23.90", raw: { pcram: { ncmCode: "8703.23.90", taxes: { DIE: 35, IVA: 21 } } } });
+
+  it("1 auto va por contenedor de 40' (no RORO) y cuesta MENOS que el RORO mínimo", async () => {
+    const r = await calcImportQuote({ mode: "quote", product: car(1, "Alemania") as any, rawUserText: "1 auto", destino: "uso_propio" } as Opts);
+    const b = r.breakdown!;
+    expect(b.fleteMode).toMatch(/FCL 40/i);
+    expect(b.fleteMinUsd).toBeGreaterThan(0);
+    expect(b.fleteMinUsd).toBeLessThan(12000); // contenedor < RORO mínimo
+  });
+
+  it("2 autos = 1 contenedor; 3-4 autos = 2 contenedores (escala de a 2)", async () => {
+    const dos = await calcImportQuote({ mode: "quote", product: car(2, "China") as any, rawUserText: "2 autos", destino: "uso_propio" } as Opts);
+    const tres = await calcImportQuote({ mode: "quote", product: car(3, "China") as any, rawUserText: "3 autos", destino: "uso_propio" } as Opts);
+    // 3 autos (2 contenedores) cuesta ~el doble que 2 autos (1 contenedor).
+    expect(tres.breakdown!.fleteMinUsd).toBeGreaterThan(dos.breakdown!.fleteMinUsd * 1.8);
+  });
+
+  it("un colectivo/camión NO entra en contenedor → sigue por RORO", async () => {
+    const bus = await calcImportQuote({
+      mode: "quote",
+      product: { title: "Ómnibus / colectivo", fobUsd: 80000, quantity: 1, origin: "China", ncm: "8702.10.00", raw: { pcram: { ncmCode: "8702.10.00", taxes: { DIE: 35, IVA: 21 } } } } as any,
+      rawUserText: "1 colectivo", destino: "uso_propio",
+    } as Opts);
+    expect(bus.breakdown!.fleteMode).toMatch(/RORO/i);
+  });
+});
+
 describe("calcImportQuote — IVA adicional según uso/perfil", () => {
   it("reventa general → IVA adicional 20%", async () => {
     const r = await calcImportQuote({

@@ -2,7 +2,7 @@
 // Import quote calculator — dynamic product JSON shapes require any casts.
 import { getArsPerUsd } from "@/lib/fx/arsPerUsd";
 import { detectOriginZone, estimateUnitDimensions, calcFreightCost, chargeableAirKg, ShippingMode, OriginZone } from "./freightRates";
-import { hydrateFreightConfig, getFreightConfig } from "./freightRatesConfig";
+import { hydrateFreightConfig, getFreightConfig, FREIGHT_IVA } from "./freightRatesConfig";
 import { hydrateImportExpenses, computeImportExpenses } from "./importExpensesConfig";
 import { getOfficialTariff, getSiblingTariffs } from "@/lib/ncm/tariffRates";
 
@@ -477,13 +477,27 @@ export async function calcImportQuote(inputs: Inputs): Promise<{
   let fleteModeLabelOverride: string | undefined;
   if (isVehicleForFreight) {
     const fc = getFreightConfig();
-    // El piso por vehículo (fleteVehiculoMinUsd, dato real de Andy) manda: el m³×tarifa
-    // de un auto casi siempre queda por debajo. roroMinimo se mantiene por compatibilidad.
-    const roro = Math.max(fc.fleteVehiculoMinUsd, fc.roroMinimo, fc.roroPorM3 * (totalM3 > 0 ? totalM3 : 0));
-    if (roro > 0) {
-      fleteMin = round2(roro);
-      fleteMax = round2(roro);
-      fleteModeLabelOverride = "RORO (vehículo)";
+    // Autos de pasajeros (8703 / "auto","camioneta","pickup","suv"): hasta 2 entran
+    // en un contenedor de 40'. 3-4 autos → 2 contenedores, etc. (1 cada 2 autos).
+    const isCarType =
+      headForVeh === 8703 ||
+      /\b(auto|autos|automovil|autom[oó]vil|coche|camioneta|pickup|pick.?up|suv)\b/i.test(title.toLowerCase());
+    if (isCarType) {
+      const containers = Math.max(1, Math.ceil(qty / 2));
+      const fcl40 = zone === "EUROPE" ? fc.fclEurope40 : fc.fclChina40; // USA/otros → tarifa China
+      const destPerContainer = fc.fclDestNet * (1 + FREIGHT_IVA);
+      const carFreight = round2(containers * (fcl40 + destPerContainer));
+      fleteMin = carFreight;
+      fleteMax = carFreight;
+      fleteModeLabelOverride = `Marítimo FCL 40' (${containers} cont. · ${qty} ${qty === 1 ? "auto" : "autos"})`;
+    } else {
+      // Buses, camiones y sobredimensionado (no entran en contenedor) → RORO.
+      const roro = Math.max(fc.fleteVehiculoMinUsd, fc.roroMinimo, fc.roroPorM3 * (totalM3 > 0 ? totalM3 : 0));
+      if (roro > 0) {
+        fleteMin = round2(roro);
+        fleteMax = round2(roro);
+        fleteModeLabelOverride = "RORO (vehículo)";
+      }
     }
   }
 
