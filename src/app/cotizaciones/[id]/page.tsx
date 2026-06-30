@@ -4,6 +4,7 @@ import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/db";
 import { verifyAuthToken } from "@/lib/auth/jwt";
+import { getSessionUser, isOwnerEmail } from "@/lib/auth/session";
 import { AppShell } from "@/components/shell/AppShell";
 import {
   ReporteAnalisisClient,
@@ -252,7 +253,13 @@ export default async function QuoteDetailPage({
   // - quote sin userId pero con anonId que matchea la cookie
   const allowedByUser = Boolean(auth?.sub && quote.userId && quote.userId === auth.sub);
   const allowedByAnon = Boolean(!quote.userId && anonId && quote.anonId === anonId);
-  if (!allowedByUser && !allowedByAnon) return notFound();
+  // El equipo (admin/operador/dueño) puede abrir CUALQUIER cotización — es el link
+  // que reciben en el mail de "nueva solicitud de asesoría".
+  const sessionUser = await getSessionUser();
+  const isStaff = Boolean(
+    sessionUser && (sessionUser.role === "admin" || sessionUser.role === "operator" || isOwnerEmail(sessionUser.email))
+  );
+  if (!allowedByUser && !allowedByAnon && !isStaff) return notFound();
 
   const product = (quote.productJson ?? {}) as any;
   const quoteJson = (quote.quoteJson ?? {}) as any;

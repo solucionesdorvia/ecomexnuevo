@@ -103,7 +103,7 @@ export async function POST(
     const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://e-comex.com.ar";
     const operatorEmail = process.env.OPERATOR_EMAIL ?? "info@e-comex.com.ar";
     const quoteUrl = `${appUrl}/cotizador?id=${id}`;
-    const adminQuoteUrl = `${appUrl}/interno/cotizaciones/${id}`;
+    const adminQuoteUrl = `${appUrl}/cotizaciones/${id}`;
 
     const product = quote.productJson as { name?: string } | null;
     const productName = product?.name ?? undefined;
