@@ -19,15 +19,30 @@ export default async function CotizacionesPage() {
   );
 
   // El equipo (admin/operador/dueño) ve TODAS las cotizaciones; un usuario común, solo las suyas.
+  const includeContact = { user: { select: { email: true } }, lead: { select: { contact: true } } } as const;
   const quotes = isStaff
-    ? await prisma.quote.findMany({ orderBy: { createdAt: "desc" }, take: 100 })
+    ? await prisma.quote.findMany({ orderBy: { createdAt: "desc" }, take: 100, include: includeContact })
     : payload
       ? await prisma.quote.findMany({
           where: { userId: payload.sub },
           orderBy: { createdAt: "desc" },
           take: 50,
+          include: includeContact,
         })
       : [];
+
+  // Cruce por navegador (anonId): muchos leads no quedaron vinculados a la cotización
+  // pero comparten el anonId. Así recuperamos igual el contacto de quien cotizó.
+  const anonIds = Array.from(new Set(quotes.map((q) => q.anonId).filter((x): x is string => !!x)));
+  const leadByAnon = new Map<string, string>();
+  if (anonIds.length) {
+    const leads = await prisma.lead.findMany({
+      where: { anonId: { in: anonIds } },
+      select: { anonId: true, contact: true },
+      orderBy: { createdAt: "desc" },
+    });
+    for (const l of leads) if (l.anonId && !leadByAnon.has(l.anonId)) leadByAnon.set(l.anonId, l.contact);
+  }
 
   const rows: QuoteRow[] = quotes.map((q) => {
     const pj = (q.productJson ?? {}) as Record<string, unknown>;
@@ -67,6 +82,10 @@ export default async function CotizacionesPage() {
       origin,
       shippingProfile,
       quality,
+      contact:
+        q.user?.email ??
+        q.lead?.contact ??
+        (q.anonId ? leadByAnon.get(q.anonId) ?? null : null),
     };
   });
 

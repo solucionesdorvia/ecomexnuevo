@@ -21,6 +21,8 @@ export type QuoteRow = {
   origin: string | null;
   shippingProfile: string | null;
   quality: number | null;
+  /** Quién cotizó: email/WhatsApp si lo dejó; null = anónimo. */
+  contact: string | null;
 };
 
 function usd(n: number | null) {
@@ -230,6 +232,13 @@ export function CotizacionesClient({ quotes }: { quotes: QuoteRow[] }) {
                         {row.productTitle || "Cotización"}
                         <div className="mt-1 text-xs text-muted">
                           {row.rubro || "General"} · {row.ncm || "NCM pendiente"}
+                        </div>
+                        <div className="mt-0.5 text-xs">
+                          {row.contact ? (
+                            <span className="text-emerald-400">{row.contact}</span>
+                          ) : (
+                            <span className="text-[color:var(--muted)] opacity-60">anónimo (sin contacto)</span>
+                          )}
                         </div>
                       </td>
                       <td className="px-6 py-5 text-sm text-muted">
