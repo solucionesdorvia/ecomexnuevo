@@ -161,6 +161,95 @@ function EmailModal({
   );
 }
 
+// Modal de contacto antes de pedir asesoría: WhatsApp + email, ambos obligatorios,
+// para que la solicitud SIEMPRE le llegue al equipo con cómo contactar al cliente.
+function ExpertContactModal({
+  defaultEmail,
+  onSubmit,
+  onCancel,
+}: {
+  defaultEmail?: string;
+  onSubmit: (email: string, whatsapp: string) => void;
+  onCancel: () => void;
+}) {
+  const [email, setEmail] = useState(defaultEmail ?? "");
+  const [whatsapp, setWhatsapp] = useState("");
+  const [pending, setPending] = useState(false);
+  const valid = email.includes("@") && whatsapp.replace(/\D/g, "").length >= 8;
+
+  async function submit() {
+    if (!valid || pending) return;
+    setPending(true);
+    try {
+      await fetch("/api/cotizador/lead", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+    } catch {
+      /* best-effort */
+    }
+    onSubmit(email, whatsapp);
+    setPending(false);
+  }
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="expert-modal-title"
+    >
+      <div
+        className="w-full max-w-sm rounded-2xl border p-6 shadow-2xl"
+        style={{ background: "#0d1826", borderColor: "rgba(255,255,255,0.1)" }}
+      >
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <h3 id="expert-modal-title" className="text-[16px] font-bold text-white">¿Cómo te contactamos?</h3>
+            <p className="mt-1.5 text-[13px] leading-relaxed text-slate-400">
+              Un asesor de E-COMEX te escribe para avanzar con tu importación.
+            </p>
+          </div>
+          <button type="button" onClick={onCancel} aria-label="Cerrar" className="mt-0.5 text-slate-500 transition hover:text-slate-300">
+            <X className="h-5 w-5" aria-hidden />
+          </button>
+        </div>
+        <div className="mt-4 space-y-2.5">
+          <input
+            type="tel"
+            value={whatsapp}
+            onChange={(e) => setWhatsapp(e.target.value)}
+            placeholder="WhatsApp (ej. +54 9 11 2345-6789)"
+            autoComplete="tel"
+            className="min-h-[44px] w-full rounded-xl border border-white/[0.08] bg-[#07111A] px-3 text-[14px] text-white outline-none placeholder:text-slate-600 focus:border-[#18C3D6]/40"
+            autoFocus
+          />
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="tu@email.com"
+            autoComplete="email"
+            className="min-h-[44px] w-full rounded-xl border border-white/[0.08] bg-[#07111A] px-3 text-[14px] text-white outline-none placeholder:text-slate-600 focus:border-[#18C3D6]/40"
+          />
+        </div>
+        <button
+          type="button"
+          onClick={() => void submit()}
+          disabled={!valid || pending}
+          className="mt-4 min-h-[48px] w-full rounded-xl bg-[#18C3D6] px-4 text-[14px] font-semibold text-[#030d18] transition hover:bg-[#0ea5b9] disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          {pending ? "Enviando…" : "Enviar solicitud"}
+        </button>
+        <button type="button" onClick={onCancel} className="mt-2 w-full text-center text-[12px] text-slate-500 transition hover:text-slate-300">
+          Cancelar
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function CotizadorPublicoClient() {
   const { caseState, sendMessage, pending, reset } = useClasificarChat();
   const [pendingQuote, setPendingQuote] = useState(false);
@@ -177,6 +266,7 @@ export default function CotizadorPublicoClient() {
   const [emailModal, setEmailModal] = useState<null | "second_quote" | "pdf">(null);
   const [pendingAction, setPendingAction] = useState<null | "new_quote" | "pdf">(null);
   const [capturedEmail, setCapturedEmail] = useState<string | null>(null);
+  const [expertModal, setExpertModal] = useState(false);
   const [expertSending, setExpertSending] = useState(false);
   const [expertSent, setExpertSent] = useState(false);
   const [quoteError, setQuoteError] = useState<string | null>(null);
@@ -357,7 +447,7 @@ export default function CotizadorPublicoClient() {
     }
   }
 
-  async function handleSendExpert() {
+  async function handleSendExpert(email: string, whatsapp: string) {
     if (!quoteResult || expertSending || expertSent) return;
     setExpertSending(true);
     try {
@@ -365,7 +455,7 @@ export default function CotizadorPublicoClient() {
         method: "POST",
         credentials: "include",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ action: "send_expert" }),
+        body: JSON.stringify({ action: "send_expert", email, whatsapp }),
       });
       const json = (await res.json()) as { ok?: boolean; error?: string };
       if (!res.ok || !json.ok) throw new Error(json.error || "No se pudo enviar.");
@@ -384,6 +474,13 @@ export default function CotizadorPublicoClient() {
     >
       {emailModal && (
         <EmailModal reason={emailModal} onSubmit={onEmailSubmit} onSkip={onEmailSkip} />
+      )}
+      {expertModal && (
+        <ExpertContactModal
+          defaultEmail={capturedEmail ?? ""}
+          onSubmit={(em, wa) => { setExpertModal(false); void handleSendExpert(em, wa); }}
+          onCancel={() => setExpertModal(false)}
+        />
       )}
 
       <div className="relative z-10 flex min-h-0 flex-1 flex-col overflow-hidden">
@@ -742,7 +839,7 @@ export default function CotizadorPublicoClient() {
                             <>
                               <button
                                 type="button"
-                                onClick={() => { setExpertError(null); void handleSendExpert(); }}
+                                onClick={() => { setExpertError(null); setExpertModal(true); }}
                                 disabled={!allQualified || expertSending || isLoggedIn === null}
                                 className="group flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#18C3D6] px-5 py-3 text-center text-[14px] font-semibold text-[#030712] transition hover:bg-[#15afc1] disabled:cursor-not-allowed disabled:opacity-40 sm:min-h-[44px]"
                               >

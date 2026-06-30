@@ -20,8 +20,12 @@ export async function POST(
   }
 
   const { id } = await params;
-  const body = (await req.json().catch(() => null)) as { action?: "send_expert" | "save_draft" } | null;
+  const body = (await req.json().catch(() => null)) as
+    | { action?: "send_expert" | "save_draft"; email?: string; whatsapp?: string }
+    | null;
   const action = body?.action === "send_expert" ? "send_expert" : "save_draft";
+  const reqEmail = String(body?.email ?? "").trim().toLowerCase();
+  const reqWhatsapp = String(body?.whatsapp ?? "").trim();
 
   const cookieStore = await cookies();
   const anonId = cookieStore.get("ecomex_anon")?.value ?? null;
@@ -104,8 +108,35 @@ export async function POST(
     const product = quote.productJson as { name?: string } | null;
     const productName = product?.name ?? undefined;
 
-    const userEmail = quote.user?.email ?? (quote.lead?.channel === "email" ? quote.lead.contact : null);
-    const userContact = quote.user?.email ?? quote.lead?.contact ?? null;
+    // Contacto provisto en la solicitud (lo más confiable). Lo guardamos como lead
+    // vinculado a la cotización para no perderlo, y lo mandamos en el mail al equipo.
+    if (reqEmail || reqWhatsapp) {
+      const primary = reqEmail || reqWhatsapp;
+      try {
+        const lead = await prisma.lead.upsert({
+          where: { contact: primary },
+          create: {
+            anonId: quote.anonId ?? primary,
+            contact: primary,
+            channel: reqWhatsapp && reqEmail ? "asesoria_email_wa" : reqEmail ? "asesoria_email" : "asesoria_whatsapp",
+          },
+          update: {},
+        });
+        if (!quote.leadId) {
+          await prisma.quote.update({ where: { id }, data: { leadId: lead.id } }).catch(() => {});
+        }
+      } catch {
+        /* el lead es best-effort; no debe romper el envío */
+      }
+    }
+
+    const userEmail = reqEmail || quote.user?.email || (quote.lead?.channel === "email" ? quote.lead?.contact : null);
+    const userContact =
+      [reqEmail || quote.user?.email || null, reqWhatsapp ? `WhatsApp ${reqWhatsapp}` : null]
+        .filter(Boolean)
+        .join(" · ") ||
+      quote.lead?.contact ||
+      null;
 
     await Promise.allSettled([
       sendEmail({
