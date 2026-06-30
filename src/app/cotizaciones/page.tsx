@@ -1,5 +1,6 @@
 import { cookies } from "next/headers";
 import { verifyAuthToken } from "@/lib/auth/jwt";
+import { getSessionUser, isOwnerEmail } from "@/lib/auth/session";
 import { prisma } from "@/lib/db";
 import { AppShell } from "@/components/shell/AppShell";
 import { CotizacionesClient, type QuoteRow } from "@/app/cotizaciones/ui/CotizacionesClient";
@@ -12,13 +13,21 @@ export default async function CotizacionesPage() {
   const token = cookieStore.get("ecomex_auth")?.value;
   const payload = token ? await verifyAuthToken(token) : null;
 
-  const quotes = payload
-    ? await prisma.quote.findMany({
-        where: { userId: payload.sub },
-        orderBy: { createdAt: "desc" },
-        take: 50,
-      })
-    : [];
+  const sessionUser = await getSessionUser();
+  const isStaff = Boolean(
+    sessionUser && (sessionUser.role === "admin" || sessionUser.role === "operator" || isOwnerEmail(sessionUser.email))
+  );
+
+  // El equipo (admin/operador/dueño) ve TODAS las cotizaciones; un usuario común, solo las suyas.
+  const quotes = isStaff
+    ? await prisma.quote.findMany({ orderBy: { createdAt: "desc" }, take: 100 })
+    : payload
+      ? await prisma.quote.findMany({
+          where: { userId: payload.sub },
+          orderBy: { createdAt: "desc" },
+          take: 50,
+        })
+      : [];
 
   const rows: QuoteRow[] = quotes.map((q) => {
     const pj = (q.productJson ?? {}) as Record<string, unknown>;
