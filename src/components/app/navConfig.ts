@@ -39,6 +39,13 @@ export const APP_NAV_ITEMS: AppNavItem[] = [
     description: "Pipeline completo de importaciones.",
   },
   {
+    href: "/cotizaciones",
+    label: "Cotizaciones",
+    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+    group: "operations",
+    description: "Todas las cotizaciones generadas y quién las pidió.",
+  },
+  {
     href: "/app/consultas",
     label: "Consultas",
     icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
@@ -79,6 +86,13 @@ export const APP_NAV_ITEMS: AppNavItem[] = [
     icon: "M11 3l1.5 2.5L15 6l-2 1.9.5 2.6L11 9.2 8.5 10.5 9 7.9 7 6l2.5-.5L11 3zM4 12h16M7 16h10M9 20h6",
     group: "intelligence",
     description: "Historial exportable y evidencia.",
+  },
+  {
+    href: "/tendencias",
+    label: "Tendencias",
+    icon: "M3 17l6-6 4 4 8-8M21 7h-4m4 0v4",
+    group: "intelligence",
+    description: "Señales y oportunidades del mercado.",
   },
   {
     href: "/app/ncm",

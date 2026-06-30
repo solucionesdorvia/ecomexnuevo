@@ -5,13 +5,14 @@ type SystemPageProps = {
   description: string;
   action?: ReactNode;
   children: ReactNode;
-  maxWidth?: "normal" | "wide" | "narrow";
+  maxWidth?: "normal" | "wide" | "narrow" | "full";
 };
 
 const WIDTH_CLASS: Record<NonNullable<SystemPageProps["maxWidth"]>, string> = {
   narrow: "max-w-[700px]",
   normal: "max-w-[1000px]",
   wide: "max-w-[1100px]",
+  full: "max-w-[1320px]",
 };
 
 export function SystemPage({ title, description, action, children, maxWidth = "normal" }: SystemPageProps) {

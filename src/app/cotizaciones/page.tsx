@@ -2,7 +2,8 @@ import { cookies } from "next/headers";
 import { verifyAuthToken } from "@/lib/auth/jwt";
 import { getSessionUser, isOwnerEmail } from "@/lib/auth/session";
 import { prisma } from "@/lib/db";
-import { AppShell } from "@/components/shell/AppShell";
+import ConsoleShell from "@/components/app/ConsoleShell";
+import { SystemPage } from "@/components/app/SystemPage";
 import { CotizacionesClient, type QuoteRow } from "@/app/cotizaciones/ui/CotizacionesClient";
 import { Badge } from "@/components/ui/Badge";
 
@@ -90,15 +91,24 @@ export default async function CotizacionesPage() {
   });
 
   return (
-    <AppShell
-      active="cotizaciones"
-      title="Mis Cotizaciones"
-      subtitle="Gestiona, visualiza y compara tus operaciones de comercio exterior activas."
-      right={<Badge tone="success" icon="wifi">Sincronizado</Badge>}
-      maxWidth="1320px"
-    >
-      {payload ? <CotizacionesClient quotes={rows} /> : <CotizacionesClient quotes={[]} />}
-    </AppShell>
+    <ConsoleShell>
+      <SystemPage
+        title={isStaff ? "Cotizaciones" : "Mis cotizaciones"}
+        description={
+          isStaff
+            ? "Todas las cotizaciones generadas — quién cotizó, producto, NCM y montos."
+            : "Gestioná, visualizá y compará tus operaciones de comercio exterior."
+        }
+        action={
+          <Badge tone="success" icon="wifi">
+            Sincronizado
+          </Badge>
+        }
+        maxWidth="full"
+      >
+        {payload ? <CotizacionesClient quotes={rows} /> : <CotizacionesClient quotes={[]} />}
+      </SystemPage>
+    </ConsoleShell>
   );
 }
 

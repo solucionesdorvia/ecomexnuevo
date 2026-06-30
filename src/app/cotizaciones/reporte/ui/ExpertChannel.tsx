@@ -79,7 +79,7 @@ export function ExpertChannel({
       <div className="flex items-center justify-between border-b border-subtle bg-[var(--surface2)] px-5 py-4">
         <div className="flex items-center gap-3">
           <div className="flex size-10 items-center justify-center rounded-full border-2 border-primary bg-primary/10">
-            <span className="material-symbols-outlined text-primary">support_agent</span>
+            <Icon name="support_agent" size={20} className="text-primary" />
           </div>
           <div>
             <div className="text-sm font-bold text-strong">Consultor Experto</div>

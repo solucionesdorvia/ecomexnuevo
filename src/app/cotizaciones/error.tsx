@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { AppShell } from "@/components/shell/AppShell";
+import AppShellClient from "@/components/app/AppShellClient";
 
 export default function CotizacionesError({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
   useEffect(() => {
@@ -10,7 +10,7 @@ export default function CotizacionesError({ error, reset }: { error: Error & { d
   }, [error]);
 
   return (
-    <AppShell active="cotizaciones" title="Cotizaciones">
+    <AppShellClient>
       <div className="flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-rose-500/70">Error</p>
         <h2 className="mt-3 text-[22px] font-extrabold tracking-tight text-white">
@@ -38,6 +38,6 @@ export default function CotizacionesError({ error, reset }: { error: Error & { d
           </Link>
         </div>
       </div>
-    </AppShell>
+    </AppShellClient>
   );
 }

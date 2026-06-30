@@ -1,8 +1,8 @@
-import { AppShell } from "@/components/shell/AppShell";
+import AppShellClient from "@/components/app/AppShellClient";
 
 export default function CotizacionesLoading() {
   return (
-    <AppShell active="cotizaciones" title="Cotizaciones">
+    <AppShellClient>
       <div className="animate-pulse space-y-8 p-6 lg:p-8">
         {/* Page header skeleton */}
         <div className="flex items-end justify-between">
@@ -39,6 +39,6 @@ export default function CotizacionesLoading() {
           </div>
         </div>
       </div>
-    </AppShell>
+    </AppShellClient>
   );
 }

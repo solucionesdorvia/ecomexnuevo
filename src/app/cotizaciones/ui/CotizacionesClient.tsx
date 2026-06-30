@@ -113,18 +113,14 @@ export function CotizacionesClient({ quotes }: { quotes: QuoteRow[] }) {
 
   return (
     <div className="space-y-10">
-      <div className="flex flex-wrap items-end justify-between gap-4">
-        <div className="flex min-w-0 flex-col gap-1">
-          <h2 className="text-4xl font-extrabold tracking-tight text-strong">Mis Cotizaciones</h2>
-          <p className="text-base text-muted">
-            Gestiona, visualiza y compara tus operaciones de comercio exterior activas.
-          </p>
-        </div>
+      <div className="flex flex-wrap items-center justify-end gap-4">
         <Link
           href="/cotizar"
           className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-[color:color-mix(in_oklab,var(--primary)_58%,white_12%)] bg-[linear-gradient(180deg,color-mix(in_oklab,var(--primary)_84%,white_8%),var(--primary2))] px-6 text-sm font-bold text-strong shadow-[var(--shadowGlow)] transition-all hover:brightness-110 active:translate-y-[1px]"
         >
-          <span className="material-symbols-outlined text-lg">add</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+            <path d="M12 4v16m8-8H4" />
+          </svg>
           Nueva Cotización
         </Link>
       </div>

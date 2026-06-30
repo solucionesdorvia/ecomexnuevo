@@ -4,7 +4,8 @@ import Link from "next/link";
 import { cookies } from "next/headers";
 import { verifyAuthToken } from "@/lib/auth/jwt";
 import { prisma } from "@/lib/db";
-import { AppShell } from "@/components/shell/AppShell";
+import ConsoleShell from "@/components/app/ConsoleShell";
+import { SystemPage } from "@/components/app/SystemPage";
 import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader } from "@/components/ui/Card";
@@ -146,26 +147,26 @@ export default async function ReporteCotizacionPage({
   const canComment = can((sessionUser?.role as any) ?? "user", "comment:write");
 
   return (
-    <AppShell
-      active="cotizaciones"
-      title="Reporte"
-      subtitle="Informe orientativo, listo para validar"
-      right={
-        <div className="flex items-center gap-2">
-          <a
-            href={pdfHref}
-            className="inline-flex items-center gap-2 rounded-xl border border-subtle bg-[var(--surface)] px-4 py-2 text-xs font-bold text-strong transition-colors hover:bg-[var(--surface2)]"
-          >
-            <Icon name="download" size={18} className="text-white/85" />
-            PDF
-          </a>
-          <ButtonLink href="/chat" variant="secondary" className="px-4 py-2 text-xs font-bold">
-            Hablar con asesor
-          </ButtonLink>
-        </div>
-      }
-      maxWidth="1200px"
-    >
+    <ConsoleShell>
+      <SystemPage
+        title="Reporte"
+        description="Informe orientativo, listo para validar"
+        action={
+          <div className="flex items-center gap-2">
+            <a
+              href={pdfHref}
+              className="inline-flex items-center gap-2 rounded-xl border border-subtle bg-[var(--surface)] px-4 py-2 text-xs font-bold text-strong transition-colors hover:bg-[var(--surface2)]"
+            >
+              <Icon name="download" size={18} className="text-white/85" />
+              PDF
+            </a>
+            <ButtonLink href="/chat" variant="secondary" className="px-4 py-2 text-xs font-bold">
+              Hablar con asesor
+            </ButtonLink>
+          </div>
+        }
+        maxWidth="full"
+      >
       <nav className="flex items-center gap-2 text-xs text-muted">
         <Link className="hover:text-primary" href="/cotizaciones">
           Cotizaciones
@@ -586,7 +587,8 @@ export default async function ReporteCotizacionPage({
           </ButtonLink>
         </div>
       </div>
-    </AppShell>
+      </SystemPage>
+    </ConsoleShell>
   );
 }
 

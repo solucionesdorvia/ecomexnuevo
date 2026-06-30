@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Icon } from "@/components/ui/Icon";
 import { getSessionUser } from "@/lib/auth/session";
 import { roleLabel } from "@/lib/auth/permissions";
 import { prisma } from "@/lib/db";
@@ -24,7 +25,7 @@ export default async function AjustesPage() {
       <header className="glass-nav sticky top-0 z-50 border-b border-subtle backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3 text-primary">
-            <span className="material-symbols-outlined text-3xl">settings</span>
+            <Icon name="settings" size={28} />
             <h1 className="text-xl font-extrabold tracking-tight text-strong">Ajustes E-COMEX</h1>
           </div>
           <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">

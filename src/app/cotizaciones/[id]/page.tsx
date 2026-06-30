@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/db";
 import { verifyAuthToken } from "@/lib/auth/jwt";
 import { getSessionUser, isOwnerEmail } from "@/lib/auth/session";
-import { AppShell } from "@/components/shell/AppShell";
+import ConsoleShell from "@/components/app/ConsoleShell";
 import {
   ReporteAnalisisClient,
   type AgencyTone,
@@ -319,8 +319,12 @@ export default async function QuoteDetailPage({
   };
 
   return (
-    <AppShell active="cotizaciones" maxWidth="1280px">
-      <ReporteAnalisisClient data={data} />
-    </AppShell>
+    <ConsoleShell>
+      <div className="relative px-safe pb-6 pt-4 sm:p-6 sm:pb-8 lg:p-8">
+        <div className="mx-auto w-full max-w-[1280px]">
+          <ReporteAnalisisClient data={data} />
+        </div>
+      </div>
+    </ConsoleShell>
   );
 }

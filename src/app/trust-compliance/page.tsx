@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Card, CardContent, CardHeader } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
+import { Icon } from "@/components/ui/Icon";
 import { getSessionUser } from "@/lib/auth/session";
 import { prisma } from "@/lib/db";
 
@@ -32,7 +33,7 @@ export default async function TrustCompliancePage() {
       <header className="glass-nav sticky top-0 z-50 border-b border-subtle px-6 py-3">
         <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between">
           <div className="flex items-center gap-3 text-primary">
-            <span className="material-symbols-outlined text-3xl">verified_user</span>
+            <Icon name="verified_user" size={28} />
             <h1 className="text-xl font-extrabold tracking-tight text-strong">Trust & Compliance</h1>
           </div>
           <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
@@ -121,7 +122,7 @@ export default async function TrustCompliancePage() {
                         <td className="px-4 py-4 text-sm text-slate-300">{log.action}</td>
                         <td className="px-4 py-4">
                           <span className="inline-flex items-center gap-1 text-xs font-bold uppercase text-emerald-400">
-                            <span className="material-symbols-outlined text-sm">check_circle</span> Verified
+                            <Icon name="check_circle" size={14} /> Verified
                           </span>
                         </td>
                       </tr>
@@ -139,7 +140,7 @@ export default async function TrustCompliancePage() {
 
         <div className="mt-6 rounded-lg border border-dashed border-[rgba(140,177,236,0.2)] bg-[rgba(16,29,52,0.3)] p-4">
           <div className="flex items-start gap-3">
-            <span className="material-symbols-outlined text-primary">security</span>
+            <Icon name="security" size={20} className="text-primary" />
             <p className="text-xs italic leading-relaxed text-slate-400">
               This digital audit log is protected by encrypted persistence. Every manual adjustment is
               recorded with actor role and timestamp. Unauthorized modification of this log is a compliance violation.

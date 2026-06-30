@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Icon } from "@/components/ui/Icon";
 import { ROLE_ACCESS_DESCRIPTION, roleLabel } from "@/lib/auth/permissions";
 import { getSessionUser } from "@/lib/auth/session";
 
@@ -11,7 +12,7 @@ export default async function RolesAccessPage() {
       <header className="glass-nav sticky top-0 z-50 flex items-center justify-between border-b border-subtle px-10 py-3">
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-3 text-primary">
-            <span className="material-symbols-outlined text-3xl">shield_person</span>
+            <Icon name="shield_person" size={28} />
             <h2 className="text-lg font-bold tracking-tight text-strong">E-COMEX</h2>
           </div>
           <nav className="hidden items-center gap-6 lg:flex">
@@ -140,7 +141,7 @@ export default async function RolesAccessPage() {
                             ].join(" ")}
                           >
                             <span className="text-sm text-[#AFC0E0]">{permission}</span>
-                            <span className="material-symbols-outlined text-emerald-500">check_circle</span>
+                            <Icon name="check_circle" size={18} className="text-emerald-500" />
                           </div>
                         ))}
                       </div>

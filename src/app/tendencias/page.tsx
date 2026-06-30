@@ -2,7 +2,8 @@ import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SealVerified } from "@/components/ui/SealVerified";
-import { AppShell } from "@/components/shell/AppShell";
+import ConsoleShell from "@/components/app/ConsoleShell";
+import { SystemPage } from "@/components/app/SystemPage";
 import { TendenciasClient, type Signal } from "@/app/tendencias/ui/TendenciasClient";
 import { Icon } from "@/components/ui/Icon";
 
@@ -78,24 +79,24 @@ export default function TendenciasPage() {
   ];
 
   return (
-    <AppShell
-      active="tendencias"
-      title="Señales"
-      subtitle="Radar de oportunidades"
-      right={
-        <div className="flex items-center gap-2">
-          <Badge tone="primary" icon="auto_awesome">
-            Señales curadas
-          </Badge>
-          <SealVerified />
-          <ButtonLink href="/chat" variant="primary">
-            Cotizar
-            <Icon name="bolt" size={18} className="text-white/90" />
-          </ButtonLink>
-        </div>
-      }
-      maxWidth="1280px"
-    >
+    <ConsoleShell>
+      <SystemPage
+        title="Señales"
+        description="Radar de oportunidades"
+        action={
+          <div className="flex items-center gap-2">
+            <Badge tone="primary" icon="auto_awesome">
+              Señales curadas
+            </Badge>
+            <SealVerified />
+            <ButtonLink href="/chat" variant="primary">
+              Cotizar
+              <Icon name="bolt" size={18} className="text-white/90" />
+            </ButtonLink>
+          </div>
+        }
+        maxWidth="full"
+      >
       <SectionHeader
         eyebrow="SEÑALES"
         title="Señales del mercado"
@@ -110,7 +111,8 @@ export default function TendenciasPage() {
       </div>
 
       <TendenciasClient signals={signals} />
-    </AppShell>
+      </SystemPage>
+    </ConsoleShell>
   );
 }
 

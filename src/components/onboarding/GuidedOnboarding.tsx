@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Icon } from "@/components/ui/Icon";
 
 const FIRST_USE_KEY = "ecomex_guided_onboarding_seen_v1";
 
@@ -87,9 +88,7 @@ export function GuidedOnboarding() {
                 idx === 0 ? "bg-primary text-[#030d18] shadow-lg shadow-primary/30" : "bg-slate-800 text-slate-300",
               ].join(" ")}
             >
-              <span className="material-symbols-outlined text-3xl">
-                {idx === 0 ? "add_chart" : idx === 1 ? "list_alt" : "support_agent"}
-              </span>
+              <Icon name={idx === 0 ? "add_chart" : idx === 1 ? "list_alt" : "support_agent"} size={28} />
             </div>
             <div>
               <h3 className="mb-2 flex items-center gap-2 text-xl font-bold text-white">
@@ -104,9 +103,7 @@ export function GuidedOnboarding() {
             </div>
             <div className="mt-auto flex items-center border-t border-slate-700/50 pt-4 text-sm font-bold text-primary transition-all group-hover:gap-2">
               {idx === 0 ? "Comenzar ahora" : idx === 1 ? "Ver historial" : "Agendar consulta"}
-              <span className="material-symbols-outlined text-sm">
-                {idx === 1 ? "history" : idx === 2 ? "calendar_today" : "arrow_forward"}
-              </span>
+              <Icon name={idx === 1 ? "history" : idx === 2 ? "calendar_today" : "arrow_forward"} size={16} />
             </div>
           </Link>
         ))}
@@ -131,7 +128,7 @@ export function GuidedOnboarding() {
           </div>
           <div className="relative z-10 mx-auto flex max-w-lg flex-col items-center justify-center py-10 text-center">
             <div className="mb-6 flex size-20 items-center justify-center rounded-full bg-slate-800 ring-8 ring-[rgba(3,8,20,0.5)]">
-              <span className="material-symbols-outlined text-4xl text-slate-500">bar_chart_4_bars</span>
+              <Icon name="bar_chart_4_bars" size={34} className="text-slate-500" />
             </div>
             <h3 className="mb-3 text-xl font-bold text-white">Aún no tienes operaciones activas</h3>
             <p className="mb-8 text-base leading-relaxed text-slate-400">
@@ -142,7 +139,7 @@ export function GuidedOnboarding() {
               href="/cotizar"
               className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3 font-bold text-[#030d18] transition-all hover:bg-primary/90"
             >
-              <span className="material-symbols-outlined">add</span>
+              <Icon name="add" size={20} />
               Nueva Cotización
             </Link>
           </div>

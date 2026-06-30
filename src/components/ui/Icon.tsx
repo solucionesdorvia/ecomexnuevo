@@ -2,11 +2,13 @@ import {
   ArrowClockwise,
   ArrowRight,
   ArrowSquareOut,
+  Bell,
   Brain,
   Boat,
   Calculator,
   CalendarBlank,
   CaretDown,
+  CaretLeft,
   CaretRight,
   ChatCircleText,
   CheckCircle,
@@ -55,6 +57,7 @@ import {
   FilePdf,
   MagnifyingGlass,
   ArrowsLeftRight,
+  Plus,
   X,
 } from "@phosphor-icons/react/ssr";
 
@@ -141,6 +144,18 @@ const MAP: Record<string, React.ComponentType<{ size?: number; weight?: Phosphor
     search: MagnifyingGlass,
     compare_arrows: ArrowsLeftRight,
     filter_list: FunnelSimple,
+
+    // Aliases para reemplazar spans material-symbols (la fuente no estaba cargada
+    // y se veían como texto literal: "add", "settings"…). Mapeados a Phosphor.
+    add: Plus,
+    shield_person: ShieldCheck,
+    security: ShieldCheck,
+    bar_chart_4_bars: ChartLineUp,
+    add_chart: ChartLineUp,
+    list_alt: FileText,
+    history: ArrowClockwise,
+    chevron_left: CaretLeft,
+    notifications: Bell,
   };
 
 export function Icon({

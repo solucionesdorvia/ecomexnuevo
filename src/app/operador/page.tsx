@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { Icon } from "@/components/ui/Icon";
 import { requireRole } from "@/lib/auth/session";
 import { OperatorBudgetClient } from "@/app/interno/ui/OperatorBudgetClient";
 
@@ -13,7 +14,7 @@ export default async function OperadorPage() {
       <header className="sticky top-0 z-50 border-b border-[rgba(24,195,214,0.15)] bg-background-dark/95 backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-[1320px] items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3 text-primary">
-            <span className="material-symbols-outlined text-3xl">precision_manufacturing</span>
+            <Icon name="precision_manufacturing" size={28} />
             <h1 className="text-xl font-extrabold tracking-tight text-white">Operator Console</h1>
           </div>
           <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
