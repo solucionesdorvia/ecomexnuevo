@@ -53,7 +53,7 @@ export default async function TrustCompliancePage() {
 
         <div className="mb-6 flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-4xl font-black tracking-tight text-white">Trazabilidad de Decisiones</h2>
+            <h2 className="text-[26px] font-extrabold tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>Trazabilidad de Decisiones</h2>
             <p className="mt-2 max-w-2xl text-slate-400">
               Complete immutable audit log y trazabilidad de cambios para accountability operativo.
             </p>

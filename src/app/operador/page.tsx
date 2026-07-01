@@ -25,7 +25,7 @@ export default async function OperadorPage() {
 
       <main className="mx-auto w-full max-w-[1320px] px-6 py-8">
         <div className="mb-6">
-          <h2 className="text-3xl font-black tracking-tight text-white">
+          <h2 className="text-[26px] font-extrabold tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
             Excel + fotos → borrador automático → ajuste manual
           </h2>
           <p className="mt-2 text-sm text-slate-400">

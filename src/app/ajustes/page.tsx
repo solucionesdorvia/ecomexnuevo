@@ -36,7 +36,7 @@ export default async function AjustesPage() {
 
       <main className="mx-auto w-full max-w-[1200px] px-6 py-10">
         <div className="mb-8">
-          <h2 className="text-4xl font-black tracking-tight text-strong">Centro de Configuración</h2>
+          <h2 className="text-[26px] font-extrabold tracking-tight text-strong" style={{ fontFamily: "var(--font-display)" }}>Centro de Configuración</h2>
           <p className="mt-2 max-w-2xl text-muted">
             Ajusta perfil, datos de empresa y controles de seguridad.
           </p>

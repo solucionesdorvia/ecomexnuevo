@@ -95,7 +95,7 @@ export default async function InsightsPage() {
     <div className="mx-auto max-w-6xl px-4 py-8 text-slate-200">
       <header className="mb-6">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-cyan-400">Panel del dueño</p>
-        <h1 className="mt-1 text-2xl font-semibold tracking-tight text-white">Insights · cotizaciones y chats</h1>
+        <h1 className="mt-1 text-[26px] font-extrabold tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>Insights · cotizaciones y chats</h1>
         <p className="mt-1 text-[13px] text-slate-500">Vista privada (solo dueño). Cruza qué chatea la gente, qué cotiza y quién deja contacto.</p>
       </header>
 

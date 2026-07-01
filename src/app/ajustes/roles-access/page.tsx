@@ -52,7 +52,7 @@ export default async function RolesAccessPage() {
         <div className="w-full p-8">
           <div className="mx-auto w-full max-w-[1200px] space-y-6">
             <div className="space-y-1">
-              <h1 className="text-3xl font-black tracking-tight text-strong">Roles & Access</h1>
+              <h1 className="text-[26px] font-extrabold tracking-tight text-strong" style={{ fontFamily: "var(--font-display)" }}>Roles & Access</h1>
               <p className="text-muted">Control granular de permisos por rol dentro de E-COMEX.</p>
             </div>
 

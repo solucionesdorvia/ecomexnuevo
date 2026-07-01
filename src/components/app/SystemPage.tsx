@@ -20,22 +20,18 @@ export function SystemPage({ title, description, action, children, maxWidth = "n
     <div className="relative px-safe pb-6 pt-4 sm:p-6 sm:pb-8 lg:p-8">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 sm:h-48 bg-[radial-gradient(ellipse_at_top,rgba(24,195,214,0.10),transparent_65%)]" />
       <div className={`mx-auto w-full ${WIDTH_CLASS[maxWidth]}`}>
-        <div className="relative overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0B1622]/80 px-4 py-5 backdrop-blur sm:px-6 sm:py-6">
-          {/* Glow accents */}
-          <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#18C3D6]/[0.07] blur-3xl" />
-          <div className="pointer-events-none absolute -left-6 -bottom-6 h-20 w-20 rounded-full bg-[#d4a843]/[0.06] blur-2xl" />
-          {/* Subtle top line */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#18C3D6]/30 to-transparent" />
-          <div className="relative flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div className="relative overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0B1622]/80 px-4 py-4 backdrop-blur sm:px-6 sm:py-5">
+          {/* Línea de acento superior sutil */}
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#18C3D6]/25 to-transparent" />
+          <div className="relative flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#3d4a5a]">Sistema E-COMEX</p>
               <h1
-                className="mt-1 text-[clamp(1.25rem,4.5vw,1.5rem)] font-extrabold leading-tight tracking-tight text-white sm:text-[22px]"
+                className="text-[clamp(1.4rem,5vw,1.65rem)] font-extrabold leading-tight tracking-tight text-white sm:text-[26px]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {title}
               </h1>
-              <p className="mt-2 text-[13px] leading-relaxed text-[#5a6577] sm:mt-1 sm:text-[14px]">{description}</p>
+              <p className="mt-1.5 text-[13px] leading-relaxed text-[#5a6577] sm:text-[14px]">{description}</p>
             </div>
             {action ? <div className="shrink-0 sm:max-w-[min(100%,280px)] sm:text-right">{action}</div> : null}
           </div>
