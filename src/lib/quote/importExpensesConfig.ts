@@ -56,7 +56,7 @@ export const EXPENSE_FIELDS: ExpenseFieldMeta[] = [
   { key: "fletesInternos", label: "Fletes internos", group: "Gastos de despacho", unit: "USD" },
   { key: "gastosOperativos", label: "Gastos operativos", group: "Gastos de despacho", unit: "USD" },
   { key: "gastosAdministrativos", label: "Gastos administrativos", group: "Gastos de despacho", unit: "USD" },
-  { key: "avacCivac", label: "AVAC / CIVAC (homologación)", group: "Vehículos (cap. 87)", unit: "USD", autoOnly: true },
+  { key: "avacCivac", label: "AVAC / CIVAC / CSV", group: "Vehículos (cap. 87)", unit: "USD", autoOnly: true },
   { key: "dnrpa", label: "DNRPA (registro automotor)", group: "Vehículos (cap. 87)", unit: "USD", autoOnly: true },
   { key: "ivaServiciosPct", label: "IVA sobre servicios", group: "Impuestos sobre servicios", unit: "%" },
 ];
@@ -140,7 +140,7 @@ export function computeImportExpenses(isVehicle: boolean): {
     { label: "Gastos administrativos", amount: c.gastosAdministrativos },
   ];
   if (isVehicle) {
-    services.push({ label: "AVAC / CIVAC (homologación)", amount: c.avacCivac });
+    services.push({ label: "AVAC / CIVAC / CSV", amount: c.avacCivac });
     services.push({ label: "DNRPA (registro automotor)", amount: c.dnrpa });
   }
   const subtotal = services.reduce((a, s) => a + s.amount, 0);
