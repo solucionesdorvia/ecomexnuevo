@@ -862,23 +862,17 @@ export async function processClasificarTurn(opts: {
       //      correcto y se descartó sólo porque no se pudo verificar el arancel
       //      en PCRAM. Se adopta como TENTATIVO (baja confianza + a confirmar).
       //   3) sólo si no hay NADA, recién ahí preguntamos.
+      // Ancla de producto común por el TEXTO CRUDO del usuario. NO adoptamos
+      // candidatos "descartados" del motor: los descarta con razón (p.ej. para
+      // una camioneta devuelve chapa de acero 7210 y no aplica). Adoptar eso
+      // muestra una posición absurda. Preferimos ancla o, si no hay, preguntar.
       const anchor = matchProductAnchor(fullUserText) ?? matchProductAnchor(techText);
-      const discardedCode = (snap.discardedCandidates ?? [])
-        .map((c) => (c?.code ?? "").trim())
-        .find((c) => ncmDigitsOnly(c).length >= 6);
       if (anchor) {
         snap.recommendedNcm = anchor.ncm;
         snap.confidence = Math.max(snap.confidence ?? 0, 0.5);
         snap.status = "tentative";
         snap.classificationRationale =
           snap.classificationRationale || `Producto frecuente (${anchor.label}): posición canónica a confirmar.`;
-        snap.pendingQuestions = undefined;
-        snap.ambiguity = undefined;
-      } else if (discardedCode) {
-        const d = ncmDigitsOnly(discardedCode);
-        snap.recommendedNcm = d.length >= 8 ? formatMercosurNcm8(d) : discardedCode;
-        snap.confidence = Math.min(snap.confidence ?? 0.4, 0.4);
-        snap.status = "tentative";
         snap.pendingQuestions = undefined;
         snap.ambiguity = undefined;
       } else {

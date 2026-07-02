@@ -30,6 +30,14 @@ export const COMMON_PRODUCT_ANCHORS: ProductAnchor[] = [
   { test: /\b(neum[aá]tico|cubierta\s+de\s+(auto|veh))\w*/i, ncm: "4011.10.00", label: "Neumático" },
   { test: /\b(perfume|eau\s+de\s+(parfum|toilette)|fragancia)\w*/i, ncm: "3303.00.20", label: "Perfume" },
   { test: /\b(motocicleta|motoneta)\w*/i, not: ACCESSORY, ncm: "8711.20.20", label: "Motocicleta" },
+  // Vehículos terminados (cap. 87). El motor a veces devuelve candidatos
+  // siderúrgicos (chapa/acero, cap. 72) para un vehículo; anclamos las
+  // categorías comunes a su partida. La subpartida es orientativa (nafta/diésel,
+  // peso) — el despachante confirma el dígito fino. Excluimos autoelevador (8427).
+  { test: /\b(camioneta|pick[\s-]?up|pickup)\b/i, not: /\b(autoelevador|repuesto|accesorio|cubierta|parte)\w*/i, ncm: "8704.31.00", label: "Camioneta / pick-up" },
+  { test: /\bcami[oó]n(?:es)?\b/i, not: /\b(camioneta|autoelevador|repuesto|parte)\w*/i, ncm: "8704.22.00", label: "Camión" },
+  { test: /[oó]mnibus|\b(colectivo|autob[uú]s|micro(?:bús|bus)?|bus)\b/i, not: /\b(business|autoelevador)\w*/i, ncm: "8702.10.00", label: "Ómnibus / bus" },
+  { test: /\b(autom[oó]vil(?:es)?|coche|sed[aá]n|hatchback|suv)\b/i, not: /\b(autoelevador|autoparte|autoadhes)\w*/i, ncm: "8703.23.00", label: "Automóvil" },
 ];
 
 /** Devuelve el ancla cuyo patrón matchea el texto (y no es un accesorio), o null. */
