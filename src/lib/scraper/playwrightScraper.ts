@@ -126,7 +126,7 @@ async function ensureLoggedIn(ctx: BrowserContext, env: ScraperEnv) {
   // Default is "body" (always true) so users can tighten it with env.
   await page.locator(env.loggedInCheckSelector).first().waitFor({
     state: "attached",
-    timeout: 15_000,
+    timeout: 8_000,
   });
 
   await page.close();

@@ -159,7 +159,10 @@ export async function productFromTextPipeline(text: string): Promise<TextPipelin
 
   if (process.env.PCRAM_USER && process.env.PCRAM_PASS) {
     const client = new PcramClient();
-    const pcramTimeoutMs = Number(process.env.PCRAM_CALL_TIMEOUT_MS ?? "45000");
+    // Fail-fast: PCRAM (scraper AFIP en vivo) es la principal fuente de latencia.
+    // 45s colgaba el chat. 9s alcanza cuando responde; si está lento/caído, corta
+    // rápido y la clasificación sigue con el índice offline + anclas.
+    const pcramTimeoutMs = Number(process.env.PCRAM_CALL_TIMEOUT_MS ?? "9000");
     // Use PCRAM's own search as *evidence* to support the AI classification.
     if (!explicitNcm) {
       const aiTerms = ncmMeta?.source === "ai" ? ncmMeta.searchTerms : undefined;
