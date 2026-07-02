@@ -853,14 +853,41 @@ export async function processClasificarTurn(opts: {
         snap.status = "tentative";
       }
     } else if (dataComplete && !snap.recommendedNcm) {
-      // Datos completos pero NINGÚN NCM ni candidato (caso raro): NUNCA cerramos
-      // como "listo" sin clasificación — eso genera un costo engañoso. Siempre hay
-      // salida = preguntar algo concreto para poder clasificar.
-      snap.status = "needs_info";
-      if ((snap.pendingQuestions?.length ?? 0) === 0 && !snap.ambiguity) {
-        snap.pendingQuestions = [
-          "Para clasificarlo con precisión me falta un detalle: ¿qué es exactamente, de qué material principal está hecho y para qué se usa?",
-        ];
+      // Datos comerciales completos pero el motor no fijó un código. Antes de
+      // caer en la pregunta genérica (que LOOPEA: responderla no cambia nada),
+      // red de seguridad EN CASCADA para SIEMPRE dar una salida:
+      //   1) ancla de producto común, buscada por el TEXTO CRUDO del usuario
+      //      (no solo el techText reconstruido, que a veces no trae la palabra),
+      //   2) el mejor candidato que el motor DESCARTÓ — muchas veces es el
+      //      correcto y se descartó sólo porque no se pudo verificar el arancel
+      //      en PCRAM. Se adopta como TENTATIVO (baja confianza + a confirmar).
+      //   3) sólo si no hay NADA, recién ahí preguntamos.
+      const anchor = matchProductAnchor(fullUserText) ?? matchProductAnchor(techText);
+      const discardedCode = (snap.discardedCandidates ?? [])
+        .map((c) => (c?.code ?? "").trim())
+        .find((c) => ncmDigitsOnly(c).length >= 6);
+      if (anchor) {
+        snap.recommendedNcm = anchor.ncm;
+        snap.confidence = Math.max(snap.confidence ?? 0, 0.5);
+        snap.status = "tentative";
+        snap.classificationRationale =
+          snap.classificationRationale || `Producto frecuente (${anchor.label}): posición canónica a confirmar.`;
+        snap.pendingQuestions = undefined;
+        snap.ambiguity = undefined;
+      } else if (discardedCode) {
+        const d = ncmDigitsOnly(discardedCode);
+        snap.recommendedNcm = d.length >= 8 ? formatMercosurNcm8(d) : discardedCode;
+        snap.confidence = Math.min(snap.confidence ?? 0.4, 0.4);
+        snap.status = "tentative";
+        snap.pendingQuestions = undefined;
+        snap.ambiguity = undefined;
+      } else {
+        snap.status = "needs_info";
+        if ((snap.pendingQuestions?.length ?? 0) === 0 && !snap.ambiguity) {
+          snap.pendingQuestions = [
+            "Para clasificarlo con precisión me falta un detalle: ¿qué es exactamente, de qué material principal está hecho y para qué se usa?",
+          ];
+        }
       }
     }
 
