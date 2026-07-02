@@ -358,13 +358,18 @@ export async function runNcmMotor(input: RunNcmMotorInput): Promise<NcmMotorResu
   };
   // Reintento por confiabilidad: el LLM a veces devuelve sin código (o 9999.99.99)
   // para productos claros (variabilidad / timeout transitorio). Si NO es una
-  // ambigüedad real, reintentamos hasta 2 veces más antes de caer a "sin NCM".
+  // ambigüedad real, reintentamos antes de caer a "sin NCM".
+  // Ojo LATENCIA: cada reintento es una llamada LLM completa (~5-7s). Antes eran 2
+  // reintentos (3 llamadas ⇒ ~20s en el caso que falla). Bajado a 1: la red de
+  // anclas + fallback léxico ya cubren el caso sin código, así que reintentar de
+  // más solo sumaba espera. Tuneable por env sin deploy (NCM_CHAT_CLASSIFY_RETRIES).
+  const maxClassifyRetries = Math.max(0, Number(process.env.NCM_CHAT_CLASSIFY_RETRIES ?? "1"));
   let cls = await classifyWithAI(techText, classifyArgs);
   const hasUsableCode = (c: NcmClassification | null | undefined) => {
     const d = String(c?.ncm_code ?? "").replace(/\D/g, "");
     return d.length >= 6 && d.slice(0, 8) !== "99999999";
   };
-  for (let attempt = 0; attempt < 2 && !hasUsableCode(cls) && !cls?.ambiguous; attempt++) {
+  for (let attempt = 0; attempt < maxClassifyRetries && !hasUsableCode(cls) && !cls?.ambiguous; attempt++) {
     cls = await classifyWithAI(techText, classifyArgs);
   }
 
