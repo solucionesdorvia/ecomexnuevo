@@ -17,8 +17,13 @@ async function classifierJson<T>(opts: {
   const useAnthropic = provider === "anthropic" || (provider !== "openai" && anthropicAvailable());
   if (useAnthropic) {
     try {
+      // Clasificación NCM = tarea estructurada: Sonnet la resuelve bien en ~1/3 del
+      // tiempo de Opus, que era la principal fuente de latencia del cotizador. La red
+      // de anclas + fallback léxico respaldan si el modelo falla. Revertible por env
+      // (NCM_CLASSIFIER_ANTHROPIC_MODEL=claude-opus-4-8 para volver a Opus).
+      const classifierModel = process.env.NCM_CLASSIFIER_ANTHROPIC_MODEL || "claude-sonnet-5";
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      return (await anthropicJson<any>({ system: opts.system, user: opts.user, timeoutMs: opts.timeoutMs })) as T;
+      return (await anthropicJson<any>({ system: opts.system, user: opts.user, timeoutMs: opts.timeoutMs, model: classifierModel })) as T;
     } catch (e) {
       if (process.env.NCM_DEBUG === "1") console.warn("[ncmClassifier] Anthropic falló, uso OpenAI:", e);
       // fallback a OpenAI
