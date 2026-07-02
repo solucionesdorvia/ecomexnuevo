@@ -901,7 +901,19 @@ export async function processClasificarTurn(opts: {
 
     // Sanitización final: cualquier código NCM que se haya colado en el mensaje
     // del analista se saca (defense-in-depth contra el prompt).
-    const cleaned = stripNcmCodes((outMessage + ambiguityParagraph).trim());
+    let cleaned = stripNcmCodes((outMessage + ambiguityParagraph).trim());
+
+    // Blindaje anti-burbuja-vacía: si tras sanitizar el mensaje quedó vacío o sólo
+    // con guiones/puntos (p.ej. el analista respondió únicamente con un código NCM,
+    // que stripNcmCodes elimina), NUNCA devolver un mensaje vacío. Fallback según estado.
+    if (cleaned.replace(/[—\-.\s]/g, "").length === 0) {
+      const pending = (snap.pendingQuestions ?? []).join(" ").trim();
+      cleaned =
+        pending ||
+        (snap.recommendedNcm
+          ? "Tomé la clasificación. Para calcular el presupuesto, contame: producto, precio FOB en USD, cantidad y país de origen."
+          : "Para clasificarlo bien me falta un detalle: ¿qué es exactamente el producto, de qué material principal está hecho y para qué se usa?");
+    }
 
     return {
       assistantMessage: cleaned,

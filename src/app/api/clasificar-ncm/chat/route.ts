@@ -159,11 +159,19 @@ export async function POST(req: Request) {
 
     const importerProfile = await loadImporterProfile();
 
-    const { assistantMessage, snapshot: outSnap } = await processClasificarTurn({
+    const { assistantMessage: rawAssistantMessage, snapshot: outSnap } = await processClasificarTurn({
       messages: typedMessages,
       snapshot: snap,
       importerProfile,
     });
+
+    // Red de seguridad: bajo ninguna circunstancia el cliente debe recibir un
+    // mensaje vacío (renderiza una burbuja en blanco). Si algún camino lo dejó
+    // vacío, sustituimos por un pedido de detalle seguro.
+    const assistantMessage =
+      rawAssistantMessage && rawAssistantMessage.trim()
+        ? rawAssistantMessage
+        : "Para seguir necesito un detalle más del producto: ¿qué es exactamente, de qué material principal está hecho y para qué se usa?";
 
     // ── Transcripción para el panel del DUEÑO (best-effort, no bloquea) ───────
     // Guardamos la conversación en AuditLog (sin migración) vinculada por anonId
