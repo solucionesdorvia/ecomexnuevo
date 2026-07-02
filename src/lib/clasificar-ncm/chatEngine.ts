@@ -801,6 +801,31 @@ export async function processClasificarTurn(opts: {
     }
 
     /**
+     * Corrección de CAPÍTULO por ancla de alta precisión. El motor a veces
+     * devuelve (y adopta) candidatos de un capítulo equivocado: autopartes de
+     * caucho (cap. 40, ej. 4009), chapa de acero (cap. 72, ej. 7210), etc. para
+     * un producto claro —sobre todo VEHÍCULOS terminados— pese a que su propio
+     * razonamiento diga lo contrario. Si hay un ancla común y el código del motor
+     * cae en OTRO capítulo, gana el ancla. Solo corrige a nivel capítulo: dentro
+     * del mismo capítulo se respeta la subpartida del motor.
+     */
+    const chapterAnchor = matchProductAnchor(fullUserText) ?? matchProductAnchor(techText);
+    if (chapterAnchor && snap.recommendedNcm) {
+      const anchorCh = ncmDigitsOnly(chapterAnchor.ncm).slice(0, 2);
+      const motorCh = ncmDigitsOnly(snap.recommendedNcm).slice(0, 2);
+      if (anchorCh && motorCh && anchorCh !== motorCh) {
+        snap.recommendedNcm = chapterAnchor.ncm;
+        snap.confidence = Math.min(snap.confidence ?? 0.5, 0.5);
+        snap.status = "tentative";
+        snap.pendingQuestions = undefined;
+        snap.ambiguity = undefined;
+        snap.classificationRationale =
+          snap.classificationRationale ||
+          `Producto frecuente (${chapterAnchor.label}): posición canónica a confirmar.`;
+      }
+    }
+
+    /**
      * Si el usuario ya había respondido a una ambigüedad previa (hay mensaje
      * de usuario posterior al último assistant), la damos por respondida:
      * no volvemos a renderizar el mismo bloque con los mismos candidatos.
