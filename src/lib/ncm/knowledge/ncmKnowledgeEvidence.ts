@@ -104,6 +104,42 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
     );
   }
 
+  // Vehículos de CARGA / transporte de mercancías o pasajeros → Cap. 87 (también
+  // casi vacío en el índice local, igual que los autos). Sin estas semillas, una
+  // "camioneta acero aluminio" matchea chapa de acero (7210) en vez del vehículo.
+  // Excluye repuestos/partes, acoplados y semirremolques (que no son el vehículo).
+  if (
+    /\b(camioneta\w*|pick[\s-]?up|pickup|utilitario\w*|cami[oó]n\w*|[oó]mnibus\w*|colectivo\w*|micro\b|autob[uú]s\w*|tractor\w*)\b/.test(
+      text
+    ) &&
+    !/\b(neum[aá]tico\w*|cubierta\w*|llanta\w*|repuesto\w*|autoparte\w*|filtro\w*|acoplado\w*|semirremolque\w*|remolque\w*)\b/.test(text)
+  ) {
+    if (/\b(camioneta\w*|pick[\s-]?up|pickup|utilitario\w*)\b/.test(text)) {
+      seeds.push(
+        { ncm_code: "8704.31.00", title: "[Cap. 87] Camioneta / pick-up para transporte de carga, nafta, ≤5 t" },
+        { ncm_code: "8704.21.00", title: "[Cap. 87] Camioneta / pick-up para transporte de carga, diésel, ≤5 t" }
+      );
+    }
+    if (/\bcami[oó]n\w*\b/.test(text)) {
+      seeds.push(
+        { ncm_code: "8704.22.00", title: "[Cap. 87] Camión para transporte de mercancías, diésel, 5–20 t" },
+        { ncm_code: "8704.23.00", title: "[Cap. 87] Camión para transporte de mercancías, diésel, >20 t" }
+      );
+    }
+    if (/\b([oó]mnibus\w*|colectivo\w*|micro\b|autob[uú]s\w*)\b/.test(text)) {
+      seeds.push(
+        { ncm_code: "8702.10.00", title: "[Cap. 87] Ómnibus / colectivo (≥10 pasajeros), diésel" },
+        { ncm_code: "8702.90.90", title: "[Cap. 87] Ómnibus / colectivo (≥10 pasajeros), otro motor" }
+      );
+    }
+    if (/\btractor\w*\b/.test(text)) {
+      seeds.push(
+        { ncm_code: "8701.20.00", title: "[Cap. 87] Tractor de carretera para semirremolques" },
+        { ncm_code: "8701.90.90", title: "[Cap. 87] Tractor (agrícola / otros usos)" }
+      );
+    }
+  }
+
   // ── Categorías de consumo frecuentes ──────────────────────────────────────
   // El índice usa lenguaje formal ("calzado", "bombas para líquidos") y la
   // búsqueda léxica no matchea los términos comunes del usuario. Sembramos las
@@ -615,7 +651,16 @@ export function buildNcmKnowledgeEvidence(productText: string): {
 
   const seeds = domainSeedCandidates(q);
 
-  const hits = searchNcm(q, {
+  // La búsqueda léxica de candidatos NO debe puntuar sobre la lista de MATERIALES
+  // que extrae el analista. "acero, aluminio, caucho…" trae chapa de acero (7210),
+  // aluminio en bruto, caucho, plástico primario, etc., y esos códigos de materia
+  // prima TAPAN al producto terminado (una camioneta clasificaba como 7210). Sacamos
+  // esa línea SOLO para la búsqueda; el material se conserva en el texto que ve el
+  // clasificador (le sirve para razonar, no para traer candidatos).
+  const searchQuery =
+    q.replace(/^[^\n]*\bmateriales?\b[^\n]*$/gim, " ").replace(/[ \t]{2,}/g, " ").trim() || q;
+
+  const hits = searchNcm(searchQuery, {
     limit: 14,
     productContext: productText,
     applyCoherence: true,
