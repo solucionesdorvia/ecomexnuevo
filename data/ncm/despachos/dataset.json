@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "descripcion": "Catálogo verificado producto→NCM extraído de despachos de importación reales de E-COMEX (oficializados por AFIP). Fuente de verdad para poblar ProductNcm.",
+    "fuente": "Google Drive E-COMEX · carpeta madre de operaciones (fagerhernan@gmail.com)",
+    "generado": "2026-08-10",
+    "esquema": {
+      "op": "número de operación (nombre de carpeta)",
+      "producto": "denominación comercial del producto principal (título de carpeta)",
+      "keywords": "términos de búsqueda para el matcher del catálogo",
+      "ncm": "posición NCM principal validada en el despacho (8 dígitos)",
+      "ncmSim": "código SIM completo tal cual figura (11 dígitos + DV)",
+      "ncmDescripcion": "texto de la declaración de mercadería en el despacho",
+      "ncmSecundarios": "otras posiciones del despacho (accesorios / ítems adicionales)",
+      "origen": "país de origen",
+      "estado": "NUEVO | USADO",
+      "fobUsd": "FOB total en dólares",
+      "tasas": "alícuotas reales aplicadas (DIE, TE, IVA, IVA adic, Ganancias)",
+      "despachoId": "fileId del PDF en Drive (auditoría)",
+      "fecha": "fecha de oficialización"
+    }
+  },
+  "operaciones": [
+    {
+      "op": "104",
+      "producto": "Máquina de prensado (moldeo para fundición)",
+      "keywords": ["maquina de prensado", "prensa", "maquina de moldeo", "moldeo por arena", "fundicion", "prensa hidraulica industrial"],
+      "ncm": "8474.80.90",
+      "ncmSim": "8474.80.90.900P",
+      "ncmDescripcion": "Máquinas de aglomerar, formar o moldear... Las demás máquinas y aparatos (Cap. 84 — máquinas de clasificar/triturar/mezclar tierra, piedra o materias minerales)",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 1100,
+      "tasas": { "die": 14, "te": 3, "iva": 10.5, "ivaAdic": 10, "ganancias": 6, "iibb": 2.5 },
+      "despachoId": "1X2gCzjtXONE21btuODymtvhVm2O8BSjn",
+      "fecha": "2021-07-28"
+    },
+    {
+      "op": "401",
+      "producto": "Automóvil de colección (Alfa Romeo Giulia Sprint, clásico)",
+      "keywords": ["auto", "automovil", "vehiculo", "auto de coleccion", "auto clasico", "coche", "turismo"],
+      "ncm": "8703.23.10",
+      "ncmSim": "8703.23.10.990Y",
+      "ncmDescripcion": "Automóviles de turismo y demás vehículos para transporte de personas, motor de émbolo por chispa, cilindrada 1.500–3.000 cm³",
+      "ncmSecundarios": [],
+      "origen": "Italia",
+      "estado": "USADO",
+      "fobUsd": 34391,
+      "tasas": { "die": 35, "te": 3, "iva": 21, "ivaAdic": 0, "ganancias": 11, "iibb": 0 },
+      "despachoId": "1U5wRUw1CYHuzraeZE0C4bT7a87Rh6QqR",
+      "fecha": "2025-10-21"
+    },
+    {
+      "op": "411",
+      "producto": "Aire acondicionado (unidades split / condensadoras VRV)",
+      "keywords": ["aire acondicionado", "split", "unidad condensadora", "climatizacion", "aire acondicionado inverter", "vrv"],
+      "ncm": "8415.90.20",
+      "ncmSim": "8415.90.20.310A",
+      "ncmDescripcion": "Máquinas y aparatos para acondicionamiento de aire — unidades condensadoras (externas) de sistema split, capacidad ≤ 30.000 frigorías/h. Partes",
+      "ncmSecundarios": ["8415.90.20.519F", "8415.90.20.590M", "8415.90.90.900Y", "7411.10.10 (caños de cobre)", "7412.10.00 (accesorios de tubería de cobre)"],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 39664,
+      "tasas": { "die": 18, "te": 3, "iva": 21, "ivaAdic": 0, "ganancias": 0, "iibb": 0 },
+      "despachoId": "1k0g261oC8EkfQaN6kTUzSpm5HtE7IHA5",
+      "fecha": "2026-01-14"
+    }
+  ]
+}

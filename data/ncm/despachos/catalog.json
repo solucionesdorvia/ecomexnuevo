@@ -1,0 +1,3114 @@
+{
+  "generado": "2026-08-10",
+  "totalOps": 111,
+  "conNcm": 83,
+  "sinNcm": 28,
+  "concretados": [
+    {
+      "op": "02",
+      "producto": "Cortadora de plasma (máquina de corte por chorro de plasma)",
+      "keywords": [
+        "cortadora",
+        "plasma",
+        "corte",
+        "CNC",
+        "máquina herramienta"
+      ],
+      "ncm": "8456.40.00",
+      "ncmSim": "8456.40.00.000R",
+      "ncmDescripcion": "Máquinas herramienta que trabajen por arranque de materia mediante láser, ultrasonido, electroerosión, procesos electroquímicos o chorro de plasma; que operen mediante chorro de plasma",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 2745,
+      "tasas": {
+        "die": 14,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 0,
+        "ganancias": 6,
+        "iibb": 2.5
+      },
+      "despachoId": "17gi9G0I5O1qeLMWwBs6-j4lF1YSy5i2n",
+      "fecha": "2020-01-02"
+    },
+    {
+      "op": "04",
+      "producto": "Botellas/termos de acero inoxidable",
+      "keywords": [
+        "termo",
+        "botella",
+        "acero inoxidable",
+        "recipiente isotérmico",
+        "vacío"
+      ],
+      "ncm": "9617.00.10",
+      "ncmSim": "9617.00.10.121R",
+      "ncmDescripcion": "Termos y demás recipientes isotérmicos montados y aislados por vacío; de acero inoxidable, con ampolla de metal común, capacidad inferior o igual a 1 l",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 3450,
+      "tasas": {
+        "die": 18,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2.75
+      },
+      "despachoId": "1WO9FJkMchbFoO67p7OOpLjm64Eg3RZWr",
+      "fecha": "2020-01-15",
+      "nota": "Grava derecho antidumping (concepto 017)"
+    },
+    {
+      "op": "22",
+      "producto": "Botellas/termos de acero inoxidable",
+      "keywords": [
+        "termo",
+        "botella",
+        "acero inoxidable",
+        "recipiente isotérmico",
+        "vacío"
+      ],
+      "ncm": "9617.00.10",
+      "ncmSim": "9617.00.10.121R",
+      "ncmDescripcion": "Termos y demás recipientes isotérmicos montados y aislados por vacío; de acero inoxidable, capacidad inferior o igual a 1 l",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 3681,
+      "tasas": {
+        "die": 18,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1lyRxRElZZ7wyxSSpRb6rDYGm5M4J2IDB",
+      "fecha": "2020-08-31",
+      "nota": "Despacho con 3 ítems, todos misma posición SIM"
+    },
+    {
+      "op": "23",
+      "producto": "Perforadora/taladradora de rieles (KAYIMAN HDM 904)",
+      "keywords": [
+        "perforadora",
+        "taladro",
+        "rieles",
+        "exportación",
+        "máquina"
+      ],
+      "ncm": "8459.29.00",
+      "ncmSim": "8459.29.00.900A",
+      "ncmDescripcion": "Máquinas de taladrar metal por arranque de materia (las demás máquinas de taladrar)",
+      "ncmSecundarios": [],
+      "origen": "ESTADOS UNIDOS",
+      "estado": "NUEVO",
+      "fobUsd": 3098.7,
+      "tasas": {
+        "die": null,
+        "te": null,
+        "iva": null,
+        "ivaAdic": null,
+        "ganancias": null,
+        "iibb": null
+      },
+      "despachoId": "1l6I88GxBFa1bsjkRL1supoMrGxPZmHQK",
+      "fecha": "2020-02-14",
+      "nota": "Despacho de EXPORTACIÓN a consumo (EC01), destino PERÚ, origen mercadería EE.UU.; derecho de exportación adicional (039) USD 151,43"
+    },
+    {
+      "op": "24",
+      "producto": "Separadora de huevos (OVO-TECH RZ-1)",
+      "keywords": [
+        "separadora",
+        "huevos",
+        "ovoproductos",
+        "máquina alimentaria"
+      ],
+      "ncm": "8438.80.90",
+      "ncmSim": "8438.80.90.000G",
+      "ncmDescripcion": "Máquinas y aparatos para la preparación o fabricación industrial de alimentos o bebidas, no expresados en otra parte (las demás máquinas y aparatos)",
+      "ncmSecundarios": [],
+      "origen": "POLONIA",
+      "estado": "NUEVO",
+      "fobUsd": 12287.19,
+      "tasas": {
+        "die": 14,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2.5
+      },
+      "despachoId": "1lGzj1l0XfZ5_SI6ucB4elH5tkFrOOBc8",
+      "fecha": "2020-03-17",
+      "nota": "Factura en EUR (CFR 11.000 EUR); FOB en dólar 12.287,19"
+    },
+    {
+      "op": "30",
+      "producto": "Remaches / picos-engrasadora / bombas (operación combinada)",
+      "keywords": [
+        "remaches",
+        "aluminio",
+        "engrasadora",
+        "bomba",
+        "herramientas"
+      ],
+      "ncm": "7616.10.00",
+      "ncmSim": "7616.10.00.390R",
+      "ncmDescripcion": "Las demás manufacturas de aluminio: remaches, puntas, clavos, tornillos, pernos, tuercas y artículos similares",
+      "ncmSecundarios": [
+        "8205.59.00.900C",
+        "8413.70.80.190J",
+        "8413.91.90.900Y"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 8168,
+      "tasas": {
+        "die": 14,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1IGBPjHcJezh5Ft8kRNOYVQkkpW4aMJ1G",
+      "fecha": "2020-08-06",
+      "nota": "Despacho multi-ítem: 0001/0002 remaches (7616.10.00.390R, FOB 4068), 0003 acoplador engrase (8205.59.00.900C), 0004 bomba (8413.70.80.190J), 0005 partes de bomba/pistola (8413.91.90.900Y). Principal por valor = remaches"
+    },
+    {
+      "op": "33",
+      "producto": "Tractor de pie / motocultor (18 HP walking tractor)",
+      "keywords": [
+        "tractor",
+        "motocultor",
+        "walking tractor",
+        "agrícola",
+        "rotocultor"
+      ],
+      "ncm": "8432.29.00",
+      "ncmSim": "8432.29.00.900E",
+      "ncmDescripcion": "Máquinas y artefactos agrícolas para la preparación o trabajo del suelo: gradas, escarificadores, cultivadores, azadas rotativas (rotocultores) — los demás",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 2900,
+      "tasas": {
+        "die": 14,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1FB9qD5InwoM2OT-tb3vwr2OpcmaEPUZp",
+      "fecha": "2020-08-19"
+    },
+    {
+      "op": "36",
+      "producto": "Eslingas de fibra textil (webbing slings)",
+      "keywords": [
+        "eslinga",
+        "faja",
+        "izaje",
+        "textil",
+        "webbing sling"
+      ],
+      "ncm": "6307.90.90",
+      "ncmSim": "6307.90.90.900Q",
+      "ncmDescripcion": "Los demás artículos textiles confeccionados (los demás artículos confeccionados)",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 13888.2,
+      "tasas": {
+        "die": 35,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1wAaTvf7kMG6L9WhREsNHzlWtK_h1L-3e",
+      "fecha": "2020-11-26",
+      "nota": "Despacho con 9 ítems, todos misma posición SIM; hallado en subcarpeta 'La última 2'"
+    },
+    {
+      "op": "38",
+      "producto": "Ionizador solar para piscina (KLORASOL Solar Pool Ionizer) — cliente Faenca S.R.L.",
+      "keywords": [
+        "ionizador",
+        "piscina",
+        "solar",
+        "depurador de agua",
+        "filtro"
+      ],
+      "ncm": "8421.21.00",
+      "ncmSim": "8421.21.00.900V",
+      "ncmDescripcion": "Aparatos para filtrar o depurar agua (los demás); centrifugadoras y aparatos para filtrar o depurar líquidos o gases",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 26500,
+      "tasas": {
+        "die": 14,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2.5
+      },
+      "despachoId": "1ASwnyOb3lJvNKLCeK1TUWeNF6s2QrEzb",
+      "fecha": "2020-09-01"
+    },
+    {
+      "op": "43",
+      "producto": "Prensa/máquina de estampar cera (beeswax foundation machine, apicultura)",
+      "keywords": [
+        "prensa",
+        "cera",
+        "apicultura",
+        "estampadora",
+        "beeswax foundation"
+      ],
+      "ncm": "8436.80.00",
+      "ncmSim": "8436.80.00.300Y",
+      "ncmDescripcion": "Las demás máquinas y aparatos para la agricultura/apicultura; para la apicultura — las demás máquinas y aparatos",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 740,
+      "tasas": {
+        "die": 14,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1vCaflnVWG2MP45a1YZ7ur7mxSiYDEQLP",
+      "fecha": "2020-11-26",
+      "nota": "Operación recurrente: subcarpeta 43-1 (China 2020, 20001IC04199555A — reportada aquí); también 43-2 (Alemania 2022, 22001IC04057266R), 43-3 (China 2024, 24073IC04062763D), 43-4 (2025, sin despacho)"
+    },
+    {
+      "op": "45",
+      "producto": "Malla/tamiz para zaranda vibratoria (shale shaker screen)",
+      "keywords": [
+        "shale shaker",
+        "zaranda",
+        "tamiz",
+        "malla",
+        "perforación petrolera"
+      ],
+      "ncm": "8474.90.00",
+      "ncmSim": "8474.90.00.900Q",
+      "ncmDescripcion": "Partes de máquinas de clasificar, cribar, separar, lavar, quebrantar, triturar o pulverizar tierra, piedra u otra materia mineral sólida",
+      "ncmSecundarios": [],
+      "origen": "ESTADOS UNIDOS",
+      "estado": "NUEVO",
+      "fobUsd": 60,
+      "tasas": {
+        "die": 0,
+        "te": 0,
+        "iva": 0,
+        "ivaAdic": 0,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1fWx6ztW8lOvvW6kCCg9wcxPWuvsmFXOl",
+      "fecha": "2020-07-29",
+      "nota": "Importación de MUESTRA no onerosa (MUESTRA_100); solo se liquidan Ganancias, arancel SIM e IIBB; DIE/IVA no liquidados"
+    },
+    {
+      "op": "47",
+      "producto": "Bijouterie / joyería de fantasía (surtido chapado y bisutería) — despacho multi-ítem",
+      "keywords": [
+        "bijouterie",
+        "bisutería",
+        "joyería fantasía",
+        "chapado",
+        "plaqué"
+      ],
+      "ncm": "7113.20.00",
+      "ncmSim": "7113.20.00.210L",
+      "ncmDescripcion": "Artículos de joyería y sus partes, de chapado de metal precioso (plaqué): de chapado de oro sobre metal común, sin combinar con otras materias",
+      "ncmSecundarios": [
+        "7113.20.00.110F",
+        "7117.19.00.000P",
+        "7117.90.00.000V"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 6859.94,
+      "tasas": {
+        "die": 18,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 0,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1uvve6TR7F0BNlbbZH-rIBOPfQoq7yHYU",
+      "fecha": "2022-01-28",
+      "nota": "Despacho de 4 ítems (33 fojas): 0001 chapado plata (7113.20.00.110F), 0002 chapado oro (7113.20.00.210L, FOB 3509.68 = principal por valor), 0003 bisutería metal común (7117.19.00.000P, FOB 3092.30), 0004 bisutería (7117.90.00.000V). Aplica Impuesto Interno suntuario 20% (concepto 417)"
+    },
+    {
+      "op": "53",
+      "producto": "Valvulas y repuestos de griferia (reductoras de presion)",
+      "keywords": [
+        "valvulas",
+        "valvula",
+        "griferia",
+        "repuestos valvulas",
+        "reductoras de presion",
+        "termostaticas"
+      ],
+      "ncm": "8481.80.99",
+      "ncmSim": "8481.80.99.990C",
+      "ncmDescripcion": "Articulos de griferia y organos similares para tuberias, calderas, depositos, incluidas las valvulas reductoras de presion y termostaticas. Los demas.",
+      "ncmSecundarios": [
+        "7320.20.10.000K",
+        "8481.90.90.900U",
+        "8487.90.00.100Y"
+      ],
+      "origen": "Estados Unidos",
+      "estado": "NUEVO",
+      "fobUsd": 2729.7,
+      "tasas": {},
+      "despachoId": "1old8u3jDK3eCLqwPnrqlpJrXMqXDwIQw",
+      "fecha": "2020-08-18",
+      "nota": "Importacion courier FedEx bajo SIMI 20073SIMI113790Z (oficializada, aduana EZEIZA). No es despacho formal, las alicuotas no figuran. Envio multi-item repuestos DP: valvula (0002, principal, FOB 2729,70) + resortes 7320.20.10 + partes valvula 8481.90.90 + reten 8487.90.00. FOB total envio USD 4916,40."
+    },
+    {
+      "op": "57",
+      "producto": "Maquinas de cortar el pelo (cortadoras / afeitadoras)",
+      "keywords": [
+        "cortadora de pelo",
+        "maquina de cortar pelo",
+        "afeitadora",
+        "peluqueria",
+        "clipper"
+      ],
+      "ncm": "8510.20.00",
+      "ncmSim": null,
+      "ncmDescripcion": "MQ DE CORTAR PELO. Maquinas de cortar el pelo o esquilar, con motor electrico incorporado (posicion courier 8510.20.00).",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 875.8,
+      "tasas": {
+        "die": 0,
+        "te": 0,
+        "iva": 10.5
+      },
+      "despachoId": "1Uwer6TLMt8S3TeYlW-yMDoJqVZ5F6sTy",
+      "fecha": "2020-09-23",
+      "nota": "Importacion courier (Destinacion Simplificada 20073PART007525T, aduana EZEIZA, 23/09/2020, proveedor Yiwu Kemei). 100 unidades. Solo IVA 10,5% liquidado (derechos y estadistica 0 en regimen simplificado). NCM courier a 8 digitos, sin sufijo SIM completo."
+    },
+    {
+      "op": "60",
+      "producto": "Torno / maquina herramienta para trabajar madera (Harvey T-60S)",
+      "keywords": [
+        "torno",
+        "torno para madera",
+        "maquina herramienta",
+        "carpinteria",
+        "torno copiador madera"
+      ],
+      "ncm": "8465.99.00",
+      "ncmSim": "8465.99.00.190G",
+      "ncmDescripcion": "Maquinas herramienta para trabajar madera, corcho, hueso, caucho endurecido, plastico rigido o materias duras similares. Los demas. Para madera.",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 4045,
+      "tasas": {
+        "die": 14,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1k3u7lQ8di6-ObT6R8jyVqkNkzvNt2gJO",
+      "fecha": "2020-12-17",
+      "nota": "Despacho formal IC04 (20001IC04216411E, BS.AS. Capital, maritimo). Bien de capital: IVA reducido 10,5%, sin tasa estadistica. Marca HARVEY modelo T-60S. SIMI cancelada 20073SIMI128796F."
+    },
+    {
+      "op": "62",
+      "producto": "Auriculares inalambricos (tipo AirPods / earbuds)",
+      "keywords": [
+        "auriculares",
+        "auriculares inalambricos",
+        "airpods",
+        "earbuds",
+        "auriculares bluetooth"
+      ],
+      "ncm": "8518.30.00",
+      "ncmSim": "8518.30.00.000N",
+      "ncmDescripcion": "Auriculares, incluidos los de casco, esten o no combinados con microfono, y juegos constituidos por microfono y altavoces. Microfonos, altavoces, auriculares, amplificadores.",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 6240,
+      "tasas": {
+        "die": 20,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1nCjr16F35taML8noBhEHr206vNHqHTDv",
+      "fecha": "2020-12-15",
+      "nota": "Despacho formal IC04 (20001IC04213529L, BS.AS. Capital, maritimo). Modelos I12 / INPODS12 inalambricos, 3000 u. SIMI cancelada 20001SIMI303037C. Tasa estadistica concepto 061 (monto max, ~3%)."
+    },
+    {
+      "op": "71",
+      "producto": "Botellas termicas de acero inoxidable (termos)",
+      "keywords": [
+        "botella de acero",
+        "botella termica",
+        "termo",
+        "botella isotermica",
+        "acero inoxidable"
+      ],
+      "ncm": "9617.00.10",
+      "ncmSim": "9617.00.10.121R",
+      "ncmDescripcion": "Termos y demas recipientes isotermicos montados y aislados por vacio. De acero inoxidable, con ampolla de metal comun, capacidad inferior o igual a 1 L.",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 6461,
+      "tasas": {},
+      "despachoId": "1Z_1d53kOY9ofym6GzLuviK_Kg5AXYtWt",
+      "fecha": "2021-03-12",
+      "nota": "SIMI 21001SIMI109335X (oficializada 12/03/2021, importador SIMETRIA DESAROLLO INDUSTRIAL, proveedor Zhejiang Bangda Antai). No es despacho formal, alicuotas no figuran. No se ve despacho/pago posterior en la carpeta (posible no concretada)."
+    },
+    {
+      "op": "73",
+      "producto": "Videoconsolas / maquinas de videojuego (retro)",
+      "keywords": [
+        "consola de video",
+        "videoconsola",
+        "consola de juegos",
+        "retro",
+        "game console"
+      ],
+      "ncm": "9504.50.00",
+      "ncmSim": "9504.50.00.100L",
+      "ncmDescripcion": "Videoconsolas y maquinas de videojuego, excepto las de la subpartida 9504.30. Presentadas con joysticks, con circuitos impresos montados.",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 10700,
+      "tasas": {
+        "die": 20,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1uqcTdFkDxkdKZg13FqM9shQUVEeNj78w",
+      "fecha": "2020-12-11",
+      "nota": "Despacho formal IC04 (20073IC04127887X, aduana EZEIZA, aereo). Marca RETRO FC, 2000 u., proveedor Vision HK Electronics. SIMI cancelada 20001SIMI358072L. Requirio excepcion juguetes (JUGR163) y estampillado fiscal."
+    },
+    {
+      "op": "89",
+      "producto": "Auriculares inalambricos (earbuds)",
+      "keywords": [
+        "auriculares",
+        "auriculares inalambricos",
+        "earbuds",
+        "airpods",
+        "auriculares bluetooth"
+      ],
+      "ncm": "8518.30.00",
+      "ncmSim": "8518.30.00.000N",
+      "ncmDescripcion": "Auriculares, incluidos los de casco, esten o no combinados con microfono, y juegos constituidos por microfono y altavoces. Microfonos, altavoces, auriculares, amplificadores.",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 18145,
+      "tasas": {
+        "die": 20,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1zpdIzPGQ1HF3DoCx3gHUN9gyNV86a36J",
+      "fecha": "2021-03-25",
+      "nota": "Despacho formal IC04 (21001IC04058699E, BS.AS. Capital, maritimo desde Hong Kong). 9000 u. inalambricas sin marca, proveedor Chengdu Yumeng. SIMI cancelada 21001SIMI008292X."
+    },
+    {
+      "op": "90",
+      "producto": "Hilado de cáñamo (fibra textil vegetal)",
+      "keywords": [
+        "hilado de cáñamo",
+        "hilo de cáñamo",
+        "fibra de cáñamo",
+        "hemp yarn",
+        "fibra textil vegetal",
+        "cañamo"
+      ],
+      "ncm": "5308.20.00",
+      "ncmSim": "5308.20.00.900N",
+      "ncmDescripcion": "Los demás - Hilados de cáñamo. HILADOS DE LAS DEMÁS FIBRAS TEXTILES VEGETALES; HILADOS DE PAPEL.",
+      "ncmSecundarios": [],
+      "origen": "India",
+      "estado": "NUEVO",
+      "fobUsd": 9070,
+      "tasas": {
+        "die": 18,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 5
+      },
+      "despachoId": "1Ag4CxG8Q7rT8mzGD66bZ8dEr9Z9u_C50",
+      "fecha": "2021-10-06",
+      "nota": "Carpeta a nombre del cliente Alonso Martín Leopoldo (importador). Despacho 21001IC04196452R (rotulado OP 96). Canal ROJO. TE con monto máximo (concepto 061)."
+    },
+    {
+      "op": "98",
+      "producto": "Esterilizador de aire UVC / ionizador (purificador de aire)",
+      "keywords": [
+        "esterilizador de aire UVC",
+        "ionizador",
+        "purificador de aire",
+        "UVC",
+        "depurador de aire",
+        "filtro de aire"
+      ],
+      "ncm": "8421.39.90",
+      "ncmSim": "8421.39.90.900T",
+      "ncmDescripcion": "Los demás aparatos y dispositivos para filtrar o depurar gases (esterilizador/ionizador de aire UVC).",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 3400,
+      "tasas": {
+        "die": 25,
+        "te": 0,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 3
+      },
+      "despachoId": "1Gng2rN1QfvkAdRcjkGVl4v_Rdt53RZOt",
+      "fecha": "2021-04-26",
+      "nota": "NCM y alícuotas de DECLARACION DETALLADA SIMI 21001SIMI181614X (subcarpeta Marítimo) + planilla DERECHOS Y TASAS SIM. Producto declarado como filtros/esterilizador UVC (2 modelos, mismo NCM)."
+    },
+    {
+      "op": "102",
+      "producto": "Adorno de torta comestible (grageas / dragées)",
+      "keywords": [
+        "adorno de torta",
+        "grageas",
+        "dragées",
+        "decoración repostería",
+        "confites",
+        "peladillas"
+      ],
+      "ncm": "2106.90.90",
+      "ncmSim": "2106.90.90.900Z",
+      "ncmDescripcion": "Preparaciones alimenticias no expresadas ni comprendidas en otra parte (grageas / adorno de torta).",
+      "ncmSecundarios": [],
+      "origen": "Grecia",
+      "estado": "NUEVO",
+      "fobUsd": 3012.62,
+      "tasas": {
+        "die": 16,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 3
+      },
+      "despachoId": "1jgJ5w6HLwiNK0RKyx5i2OfuTWX7Ehebq",
+      "fecha": "2021-04-12",
+      "nota": "Sin despacho PDF; NCM y alícuotas de planilla DERECHOS Y TASAS SIM. Proveedor Hatziyiannakis Dragees (Grecia). ATENCION: las descripciones de ítems de la planilla parecían de otra operación (plantilla reutilizada); NCM 2106.90.90 a validar."
+    },
+    {
+      "op": "104",
+      "producto": "Máquina de prensado (moldeo para fundición)",
+      "keywords": [
+        "maquina de prensado",
+        "prensa",
+        "maquina de moldeo",
+        "moldeo por arena",
+        "fundicion",
+        "prensa hidraulica industrial"
+      ],
+      "ncm": "8474.80.90",
+      "ncmSim": "8474.80.90.900P",
+      "ncmDescripcion": "Máquinas de aglomerar, formar o moldear... Las demás máquinas y aparatos (Cap. 84 — máquinas de clasificar/triturar/mezclar tierra, piedra o materias minerales)",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 1100,
+      "tasas": {
+        "die": 14,
+        "te": 3,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2.5
+      },
+      "despachoId": "1X2gCzjtXONE21btuODymtvhVm2O8BSjn",
+      "fecha": "2021-07-28"
+    },
+    {
+      "op": "106",
+      "producto": "Auriculares Bluetooth TWS (inalámbricos)",
+      "keywords": [
+        "auriculares bluetooth",
+        "auriculares inalámbricos",
+        "TWS",
+        "earbuds",
+        "manos libres",
+        "auriculares"
+      ],
+      "ncm": "8517.62.72",
+      "ncmSim": "8517.62.72.900U",
+      "ncmDescripcion": "Los demás aparatos de emisión, transmisión o recepción de voz, imagen u otros datos (auriculares Bluetooth TWS).",
+      "ncmSecundarios": [
+        "8517.62.78.000Q"
+      ],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 56755,
+      "tasas": {
+        "die": 0,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 0,
+        "ganancias": 6,
+        "iibb": 3
+      },
+      "despachoId": "1EfERCGihivC2rJTDGklPTupeTb2IP4bt",
+      "fecha": "2022-04-08",
+      "nota": "Carpeta de cliente Tomás Abbiati (multi-envío: auriculares, smartwatch, power bank). Despacho representativo 22073IC04041815T (subcarpeta 106-17), EZEIZA aéreo, importador Abbiati Tomás. Ítem principal auriculares Bluetooth (modelos F95, INPODS12, I7MINI, A6S)."
+    },
+    {
+      "op": "117",
+      "producto": "Eslingas y aparejos de izaje (con remaches, cadenas y grilletes)",
+      "keywords": [
+        "eslingas",
+        "eslinga de izaje",
+        "remaches",
+        "grilletes",
+        "cadena grado 80",
+        "aparejos"
+      ],
+      "ncm": "6307.90.90",
+      "ncmSim": "6307.90.90.900Q",
+      "ncmDescripcion": "Los demás artículos textiles confeccionados (eslingas de material textil para izaje).",
+      "ncmSecundarios": [
+        "7315.82.00.910H",
+        "7326.90.90.900X",
+        "7616.10.00.390R"
+      ],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 19172,
+      "tasas": {
+        "die": 35,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 3
+      },
+      "despachoId": "1xWc-rUl71DPDVm5lHfHlP58J7rfp6sDB",
+      "fecha": "2021-12-13",
+      "nota": "Lote mixto. Despacho 21001IC04245179S / SIMI 21001SIMI351532G (subcarpeta 117-1). NCM y alícuotas de planilla DERECHOS Y TASAS SIM. Principal = eslingas 6307.90.90 (mayor FOB); secundarios: cadena grado 80 (7315.82), grillete G-209 (7326.90.90), remaches de aluminio (7616.10). fobUsd = total del despacho."
+    },
+    {
+      "op": "118",
+      "producto": "Caños / tubos flexibles de acero (conexiones flexibles)",
+      "keywords": [
+        "caños flexibles",
+        "tubo flexible metálico",
+        "conexión flexible acero",
+        "manguera metálica",
+        "flexible de acero",
+        "conector flexible"
+      ],
+      "ncm": "8307.10.90",
+      "ncmSim": "8307.10.90.900V",
+      "ncmDescripcion": "Tubos flexibles de metal común, de hierro o acero (con o sin sus accesorios).",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 8939.85,
+      "tasas": {
+        "die": 16,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 3
+      },
+      "despachoId": "1M0ygTl8lS813L6Gy4aztySRyAc-yZLeS",
+      "fecha": "2021-05-23",
+      "nota": "Sin despacho PDF; NCM y alícuotas de planilla DERECHOS Y TASAS SIM. Proveedor Mingchi Group. 7 medidas, todas mismo NCM 8307.10.90. fobUsd = total."
+    },
+    {
+      "op": "122",
+      "producto": "Repuestos de motor (juntas, válvulas, resortes, tapas)",
+      "keywords": [
+        "repuestos de motor",
+        "juntas de motor",
+        "válvulas admisión escape",
+        "empaquetaduras",
+        "resortes",
+        "tapones",
+        "autopartes"
+      ],
+      "ncm": "8409.91.90",
+      "ncmSim": "8409.91.90.900N",
+      "ncmDescripcion": "Partes identificables destinadas exclusiva o principalmente a los motores de émbolo (pistón) de encendido por chispa - Las demás.",
+      "ncmSecundarios": [
+        "4016.93.00.910G",
+        "7318.22.00.900A",
+        "7318.24.00.000A",
+        "7320.20.10.000K",
+        "8309.90.00.190T",
+        "8309.90.00.990L",
+        "8409.91.14.000R",
+        "8409.91.17.000P",
+        "8484.10.00.000Z",
+        "8484.20.00.000N"
+      ],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 5092.44,
+      "tasas": {
+        "die": 14,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 3
+      },
+      "despachoId": "16wnXm2XEhxPRaf1TEptkwEbvgt_PH6i_",
+      "fecha": "2021-07-29",
+      "nota": "Despacho 21001IC04146156N (proveedor Hanmi) con 21 ítems de repuestos de motor. Principal = partes de motor 8409.91 (7 ítems: válvulas admisión/escape, guías, otras partes); también juntas de caucho (4016.93), arandelas/pasadores (7318), resortes (7320.20), tapones/tapas (8309.90), juntas metaloplásticas y mecánicas (8484). DIE del ítem principal ~14% (aprox); fobUsd = total planilla/costeo."
+    },
+    {
+      "op": "123",
+      "producto": "Alineadora de ruedas 3D (equipo de alineación)",
+      "keywords": [
+        "alineadora",
+        "alineación de ruedas",
+        "alineadora 3D",
+        "equipo de alineación",
+        "wheel alignment",
+        "gomería"
+      ],
+      "ncm": "9031.10.00",
+      "ncmSim": "9031.10.00.900X",
+      "ncmDescripcion": "Las demás - Máquinas para equilibrar piezas mecánicas / instrumentos y aparatos de medida o control (alineadora 3D).",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 1746,
+      "tasas": {
+        "die": 14,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 0,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1894S5wIvd13yVJDOnIlubNfNpTIkeBwF",
+      "fecha": "2021-09-27",
+      "nota": "Despacho 21001IC04188410M (proveedor Yingkou Tongwang). Ítem único, 3D alignment machine. Canal VERDE. IVA reducido 10,5%."
+    },
+    {
+      "op": "124",
+      "producto": "Máquinas formadoras de conductos / plegadora de chapa (línea HVAC)",
+      "keywords": [
+        "plegadora de chapas",
+        "formadora de conductos",
+        "spiral tube former",
+        "dobladora de chapa",
+        "máquina HVAC",
+        "pittsburgh lock"
+      ],
+      "ncm": "8462.29.00",
+      "ncmSim": "8462.29.00.390N",
+      "ncmDescripcion": "Máquinas (incluidas las prensas) para enrollar, curvar, plegar, enderezar o aplanar metal - Los demás (formadora de conductos).",
+      "ncmSecundarios": [
+        "8462.49.00.900V"
+      ],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 13850,
+      "tasas": {
+        "die": 35,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 3
+      },
+      "despachoId": "15A9TBqA7Xh_FTXCe2nPX_MYaj2mw630r",
+      "fecha": "2021-06-29",
+      "nota": "Sin despacho PDF; NCM y alícuotas de planilla DERECHOS Y TASAS SIM. Proveedor Jiangsu Espe. 3 máquinas de conductos HVAC: spiral seam tube former (principal, 8462.29, FOB 13850), TDF flange forming (8462.29) y Pittsburgh lock (8462.49). fobUsd = FOB del ítem principal; total del envío USD 20450."
+    },
+    {
+      "op": "126",
+      "producto": "Máquinas de cortar el pelo (cortadoras / clippers)",
+      "keywords": [
+        "cortadora de pelo",
+        "máquina de cortar pelo",
+        "clipper",
+        "peluquería",
+        "barbería",
+        "afeitadora"
+      ],
+      "ncm": "8510.20.00",
+      "ncmSim": "8510.20.00.100G",
+      "ncmDescripcion": "Máquinas de cortar el pelo o de esquilar, con motor eléctrico incorporado.",
+      "ncmSecundarios": [
+        "8510.10.00.000M"
+      ],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 16640.73,
+      "tasas": {
+        "die": 20,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 3
+      },
+      "despachoId": "1JSyBfgpURkhDs--4YC2csRmUv9UoWe5l",
+      "fecha": "2021-08-24",
+      "nota": "Carpeta de cliente Rodrigo Ariel Ventrice (multi-envío de artículos de peluquería/barbería). Despacho representativo 21073IC04094974J (subcarpeta 126-1, 'máquina de cortar pelo varios', proveedor Yiwu Kemei). Principal = cortadoras de pelo 8510.20; secundario = afeitadoras 8510.10. NCM/alícuotas de planilla DERECHOS Y TASAS SIM (varios ítems figuran con DIE 0%; tasas reportadas del ítem gravado estándar). fobUsd = total."
+    },
+    {
+      "op": "132",
+      "producto": "Torno CNC horizontal (CNC lathe)",
+      "keywords": [
+        "torno CNC",
+        "CNC lathe",
+        "torno horizontal",
+        "torno de control numérico",
+        "máquina herramienta",
+        "torno metal"
+      ],
+      "ncm": "8458.11.99",
+      "ncmSim": "8458.11.99.000E",
+      "ncmDescripcion": "Tornos (incluidos los centros de torneado) que trabajen por arranque de metal - De control numérico, horizontales.",
+      "ncmSecundarios": [
+        "8466.20.10.000U",
+        "8466.93.30.900X"
+      ],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 16200,
+      "tasas": {
+        "die": 2,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 0,
+        "ganancias": 6,
+        "iibb": 2.5
+      },
+      "despachoId": "1YEm4WgEQ4a4QlvBNVFxz4TQU4SuQFDjy",
+      "fecha": "2022-02-04",
+      "nota": "Despacho 22001IC04030394K (proveedor WMT CNC, modelo CK6166X1500). Ítem principal = torno CNC (FOB 16200, DIE 2% bien de capital, IVA 10,5%). Secundarios: portapiezas (8466.20) y partes/accesorios (8466.93). Canal VERDE."
+    },
+    {
+      "op": "133",
+      "producto": "Placa de video / GPU (AMD Radeon RX 6800XT)",
+      "keywords": [
+        "placa de video",
+        "GPU",
+        "tarjeta gráfica",
+        "AMD Radeon",
+        "6800XT",
+        "minería"
+      ],
+      "ncm": "8471.80.00",
+      "ncmSim": "8471.80.00.000X",
+      "ncmDescripcion": "Las demás unidades de máquinas automáticas para tratamiento o procesamiento de datos (placa de video / GPU).",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 24300,
+      "tasas": {
+        "die": 0,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2.75
+      },
+      "despachoId": "1wlE8tXOW-TIRhQ1IR5pW05pw5RxyrJfi",
+      "fecha": "2021-10-23",
+      "nota": "Carpeta de cliente 'Nacho' (multi-envío: placas de video, minadoras, bombas, etc.). Despacho representativo 21073IC04122604Y (subcarpeta 133-1, proveedor E-Energy), EZEIZA aéreo. Ítem único: GPU AMD 6800XT (18 u.), DIE 0% (informática), IVA 10,5% + IVA adic 10%. Canal ROJO."
+    },
+    {
+      "op": "136",
+      "producto": "Torno para madera",
+      "keywords": [
+        "torno de madera",
+        "torno para madera",
+        "wood lathe",
+        "máquina para trabajar madera",
+        "carpintería"
+      ],
+      "ncm": "8465.99.00",
+      "ncmSim": "8465.99.00.190G",
+      "ncmDescripcion": "Máquinas herramienta para trabajar madera - Los demás (torno para madera).",
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 4140,
+      "tasas": null,
+      "despachoId": "1Xxf-m3L5QRh2_YY72KW5Laup_ZNzxNeL",
+      "fecha": "2021-09-10",
+      "nota": "NCM de SIMI 21001SIMI411860H (declarado 'TORNO DE MADERA', proveedor Harvey Industries). Despacho posterior 21001IC04258335Z presente solo como factura/NC del despachante y el PDF de DECLARACION DETALLADA es un escaneo sin texto: no se pudieron leer las alícuotas del despacho (tasas: null)."
+    },
+    {
+      "op": "137",
+      "producto": "Sensor de imágenes para equipos de rayos X (con kit de placas de fósforo)",
+      "keywords": [
+        "sensor rayos x",
+        "placa de fosforo",
+        "radiografia",
+        "imagen digital",
+        "odontologia",
+        "scanner rayos x"
+      ],
+      "ncm": "9022.90.90",
+      "ncmSim": "9022.90.90.900W",
+      "ncmDescripcion": "Los demás partes y accesorios de aparatos de rayos X (aparatos que utilicen radiaciones alfa/beta/gamma, incluso para uso médico, quirúrgico, odontológico o veterinario)",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 5885.08,
+      "tasas": {
+        "die": 14,
+        "te": 0,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1rRwO_wXnNOh8cMNHU0ynSxcE2BpSKBUf",
+      "fecha": "2022-07-29",
+      "nota": "2 ítems, ambos 9022.90.90 (item 0001 kit placas de fósforo; item 0002 sensor de imágenes, principal)."
+    },
+    {
+      "op": "143",
+      "producto": "Relojes de pulsera (caja y pulsera de metal común, indicador mecánico, a pila)",
+      "keywords": [
+        "reloj",
+        "reloj de pulsera",
+        "reloj a pila",
+        "reloj de metal",
+        "relojeria"
+      ],
+      "ncm": "9102.11.10",
+      "ncmSim": "9102.11.10.121X",
+      "ncmDescripcion": "Relojes de pulsera eléctricos con indicador mecánico solamente, de pila o acumulador, con caja de metal común y pulsera de metal común",
+      "ncmSecundarios": [
+        "9102.11.10.122Z",
+        "9102.11.10.123B",
+        "9102.11.10.129P"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 3543.07,
+      "tasas": {
+        "die": 20,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 0,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1VRJWv1uH8jrhh9OA-VZgS_IUqRDHcJLN",
+      "fecha": "2021-12-29",
+      "nota": "4 ítems, todos NCM 9102.11.10 (variantes de caja/malla). Despacho en subfolder 143-1. IVA adicional bonificado (IVAADREDUCCION)."
+    },
+    {
+      "op": "144",
+      "producto": "Baterías / acumuladores eléctricos de ión de litio",
+      "keywords": [
+        "bateria",
+        "acumulador",
+        "ion litio",
+        "bateria de litio",
+        "energia solar",
+        "panel solar"
+      ],
+      "ncm": "8507.60.00",
+      "ncmSim": "8507.60.00.990V",
+      "ncmDescripcion": "Acumuladores eléctricos, los demás, de ión de litio (incluidos sus separadores, aunque sean cuadrados o rectangulares)",
+      "ncmSecundarios": [
+        "8541.40.32.910G"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 2171.45,
+      "tasas": {
+        "die": 18,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1Uj1SOOICtS4N2Rvksv5LRQX7ONp4LGRl",
+      "fecha": "2022-04-29",
+      "nota": "Ítem principal batería (8507.60); ítem secundario paneles/células fotovoltaicas (8541.40.32)."
+    },
+    {
+      "op": "145",
+      "producto": "Máquinas de minería de criptomonedas (mineros ASIC Bitmain S19J Pro / Avalon 1246)",
+      "keywords": [
+        "minadora",
+        "mineria",
+        "criptomoneda",
+        "minero asic",
+        "bitmain",
+        "avalon",
+        "bitcoin"
+      ],
+      "ncm": "8543.70.99",
+      "ncmSim": "8543.70.99.990Z",
+      "ncmDescripcion": "Máquinas y aparatos eléctricos con función propia, no expresados ni comprendidos en otra parte del capítulo; las demás máquinas y aparatos",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 21136.1,
+      "tasas": {
+        "die": 12,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 0,
+        "ganancias": 11,
+        "iibb": 0
+      },
+      "despachoId": "1-rUUoOfktlqlOUtiSsJr1HCvu8LY9Hvn",
+      "fecha": "2021-12-30",
+      "nota": "Bien de uso (IVA 10,5). Despacho en subfolder 145-1. 1 ítem con 2 subítems (Bitmain S19J Pro y Avalon 1246)."
+    },
+    {
+      "op": "146",
+      "producto": "Placas de video / GPU (MSI Ventus RTX 3060Ti, Colorful GTX 1660 Super)",
+      "keywords": [
+        "placa de video",
+        "gpu",
+        "tarjeta grafica",
+        "rtx 3060",
+        "gtx 1660",
+        "nvidia",
+        "placa gigabyte"
+      ],
+      "ncm": "8471.80.00",
+      "ncmSim": "8471.80.00.000X",
+      "ncmDescripcion": "Las demás unidades de máquinas automáticas para tratamiento o procesamiento de datos",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 12060,
+      "tasas": {
+        "die": 0,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 0,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "19BnlEzKKTXpavyYepC0b36Mg1yzEA72F",
+      "fecha": "2022-01-28",
+      "nota": "Despacho representativo tomado del subfolder 146-2 (22001IC04024645M). El subfolder 146-1 sólo tiene la liquidación courier consolidada DHL (LMAN 90198N) sin NCM por ítem."
+    },
+    {
+      "op": "148",
+      "producto": "Elevador de vehículos para taller (2 y 4 columnas)",
+      "keywords": [
+        "elevador",
+        "elevador de autos",
+        "elevador de vehiculos",
+        "taller mecanico",
+        "2 columnas",
+        "gato"
+      ],
+      "ncm": "8425.41.00",
+      "ncmSim": "8425.41.00.200J",
+      "ncmDescripcion": "Elevadores fijos para vehículos automóviles, de los tipos utilizados en talleres, con capacidad superior a 2 t pero inferior o igual a 5 t",
+      "ncmSecundarios": [
+        "8479.89.99.900H"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 3063,
+      "tasas": {
+        "die": 14,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1AzeDiDlu14gWnbW2nLHS-IgqJmdXxHsr",
+      "fecha": "2022-06-16",
+      "nota": "Ítem principal elevador (8425.41); ítem secundario desmontadora de neumáticos / tyre changer (8479.89.99)."
+    },
+    {
+      "op": "149",
+      "producto": "Placas de video / GPU GALAX RTX 3090",
+      "keywords": [
+        "placa de video",
+        "gpu",
+        "rtx 3090",
+        "tarjeta grafica",
+        "galax",
+        "nvidia"
+      ],
+      "ncm": "8471.80.00",
+      "ncmSim": "8471.80.00.000X",
+      "ncmDescripcion": "Las demás unidades de máquinas automáticas para tratamiento o procesamiento de datos",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 45864,
+      "tasas": {
+        "die": 0,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1x0QCnBmTIDzAkZqXpJgB2OO2rHsd_PWV",
+      "fecha": "2022-03-29",
+      "nota": "18 unidades RTX3090. Despacho en subfolder '18 unidades'."
+    },
+    {
+      "op": "151",
+      "producto": "Máquina para elaboración de chocolate / confitería (Pomati OSD)",
+      "keywords": [
+        "maquina de chocolate",
+        "chocolate",
+        "confiteria",
+        "templadora de chocolate",
+        "pomati",
+        "fabricacion de chocolate"
+      ],
+      "ncm": "8438.20.19",
+      "ncmSim": "8438.20.19.900L",
+      "ncmDescripcion": "Máquinas y aparatos para confitería, elaboración de cacao o fabricación de chocolate (preparación o fabricación industrial de alimentos o bebidas)",
+      "ncmSecundarios": [
+        "8438.90.00.000H"
+      ],
+      "origen": "ITALIA",
+      "estado": "NUEVO",
+      "fobUsd": 23983.52,
+      "tasas": {
+        "die": 14,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 0.1
+      },
+      "despachoId": "12HTHQPDTElbFVASA3Zr4NFb9BefMMdhM",
+      "fecha": "2022-07-04",
+      "nota": "Importador Cosenza Gelatto. Ítems 0001/0002 máquina (8438.20.19) e ítem 0003 partes (8438.90.00). Despacho en subfolder 151-1."
+    },
+    {
+      "op": "158",
+      "producto": "Aceite de coco (de copra) en bruto (muestra)",
+      "keywords": [
+        "aceite de coco",
+        "coco",
+        "copra",
+        "aceite vegetal",
+        "grasa vegetal"
+      ],
+      "ncm": "1513.11.00",
+      "ncmSim": "1513.11.00.000U",
+      "ncmDescripcion": "Aceite de coco (de copra) en bruto y sus fracciones, incluso refinados pero sin modificar químicamente",
+      "ncmSecundarios": [],
+      "origen": "SUECIA",
+      "estado": "NUEVO",
+      "fobUsd": 88,
+      "tasas": {
+        "die": 0,
+        "te": 0,
+        "iva": 0,
+        "ivaAdic": 0,
+        "ganancias": 11,
+        "iibb": 2
+      },
+      "despachoId": "1mypgwEIkg1_0pK3w9Jc_MqHcqqdpB38A",
+      "fecha": "2022-04-05",
+      "nota": "Muestra por courier (UPS). Origen declarado Suecia, procedencia Brasil. Tributos casi nulos por régimen de muestra."
+    },
+    {
+      "op": "160",
+      "producto": "Torno / rectificadora de discos y tambores de freno (brake lathe C9335A)",
+      "keywords": [
+        "maquina de freno",
+        "torno de freno",
+        "brake lathe",
+        "rectificadora de discos",
+        "freno",
+        "torno"
+      ],
+      "ncm": "8458.99.00",
+      "ncmSim": "8458.99.00.000G",
+      "ncmDescripcion": "Tornos (incluidos los centros de torneado) que trabajen por arranque de metal; los demás tornos",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 1180,
+      "tasas": {
+        "die": 14,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1nrvSegEhVWj3QLzS2Yg_fNQVhJeEA2p3",
+      "fecha": "2022-09-06"
+    },
+    {
+      "op": "161",
+      "producto": "Unidades de procesamiento / servidores rackeables (equipos de minería, marca Lheadway)",
+      "keywords": [
+        "minadora",
+        "servidor",
+        "unidad de procesamiento",
+        "rackeable",
+        "mineria",
+        "criptomoneda"
+      ],
+      "ncm": "8471.50.10",
+      "ncmSim": "8471.50.10.200A",
+      "ncmDescripcion": "Unidades de proceso rackeables con fuente de alimentación redundante, de pequeña capacidad basadas en microprocesadores (máquinas automáticas para procesamiento de datos)",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 99400,
+      "tasas": {
+        "die": 0,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1gnzLOYROWnx4Y6IuoYvP-3Faru-DoZX9",
+      "fecha": "2022-06-14",
+      "nota": "Carpeta cliente 'PMC'. Despacho representativo del subfolder 161-2 (registro 22073IC04070543T). 14 unidades; documentación asociada a minadoras."
+    },
+    {
+      "op": "165",
+      "producto": "Transmisor digital de TV (Egatel TLWH7908E)",
+      "keywords": [
+        "transmisor tv",
+        "transmisor digital",
+        "television",
+        "broadcast",
+        "egatel",
+        "transmisor de television"
+      ],
+      "ncm": "9031.49.90",
+      "ncmSim": "9031.49.90.000L",
+      "ncmDescripcion": "Los demás instrumentos, aparatos y máquinas ópticos de medida o control, no expresados ni comprendidos en otra parte del capítulo; proyectores de perfiles",
+      "ncmSecundarios": [],
+      "origen": "ESPAÑA",
+      "estado": "NUEVO",
+      "fobUsd": 190964.61,
+      "tasas": {
+        "die": 2,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1tAaFJ7vvcLslpcExAkGCbr9uvIwGSI7T",
+      "fecha": "2022-10-20"
+    },
+    {
+      "op": "177",
+      "producto": "Film / lámina autoadhesiva de plástico para polarizado de vidrios (polietileno)",
+      "keywords": [
+        "polarizado",
+        "film para vidrios",
+        "lamina polarizada",
+        "autoadhesivo",
+        "polarizado de autos",
+        "laminado de ventanas"
+      ],
+      "ncm": "3919.90.90",
+      "ncmSim": "3919.90.90.119Q",
+      "ncmDescripcion": "Placas, láminas, hojas, cintas y demás formas planas autoadhesivas de plástico (de polietileno), en rollos, sin imprimir, autoadhesivo en una cara",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 8245,
+      "tasas": {
+        "die": 16,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "14hNn_rpvWhet6SwX_yRVWoGwqEVRp433",
+      "fecha": "2023-08-24",
+      "nota": "4 ítems, todos NCM 3919.90.90 (grados de tono BK05/BK15/BK35/BK50). FOB total del despacho. Despacho representativo del subfolder 177 (registro 23001IC04141741K)."
+    },
+    {
+      "op": "184",
+      "producto": "Moldes de plástico para repostería (molde Messi / Copa del Mundo)",
+      "keywords": [
+        "molde",
+        "molde de plastico",
+        "reposteria",
+        "molde de silicona",
+        "molde de torta",
+        "molde helado"
+      ],
+      "ncm": "3926.90.90",
+      "ncmSim": "3926.90.90.999A",
+      "ncmDescripcion": "Las demás manufacturas de plástico y manufacturas de las demás materias de las partidas 39.01 a 39.14",
+      "ncmSecundarios": [],
+      "origen": "FRANCIA",
+      "estado": "NUEVO",
+      "fobUsd": 1234.9,
+      "tasas": {
+        "die": 18,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 0.1
+      },
+      "despachoId": "1m9DSBmUsypK_m23LE9236Nl9AbwOtttl",
+      "fecha": "2023-02-24",
+      "nota": "Muestra (INUMUE) importada por courier FedEx. Importador Cosenza Gelatto."
+    },
+    {
+      "op": "194",
+      "producto": "Sierra de cinta sin fin para corte de metal (Chenlong CH 1000)",
+      "keywords": [
+        "sierra de cinta",
+        "corte de metal",
+        "maquina de corte",
+        "sierra sinfin",
+        "cortadora de metal",
+        "chenlong"
+      ],
+      "ncm": "8461.50.10",
+      "ncmSim": "8461.50.10.000U",
+      "ncmDescripcion": "Máquinas de aserrar o trocear de cinta sin fin, que trabajen por arranque de metal o cermet (máquinas herramienta)",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 15000,
+      "tasas": {
+        "die": 12.6,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1DzkgEHhrMPPh-Qjw97dUElamdyl_9Uia",
+      "fecha": "2024-01-05",
+      "nota": "Canal rojo; incluye multa (041) por destinación fuera de término, no computada como alícuota."
+    },
+    {
+      "op": "204",
+      "producto": "Rodillos (repuesto) para máquina de chocolate (Rodillo Cube, Packint)",
+      "keywords": [
+        "rodillo",
+        "repuesto",
+        "maquina de chocolate",
+        "packint",
+        "rodillo cube",
+        "parte de maquina"
+      ],
+      "ncm": "8438.90.00",
+      "ncmSim": "8438.90.00.000H",
+      "ncmDescripcion": "Partes de máquinas y aparatos para la preparación o fabricación industrial de alimentos o bebidas",
+      "ncmSecundarios": [],
+      "origen": "ITALIA",
+      "estado": "NUEVO",
+      "fobUsd": 2343.17,
+      "tasas": {
+        "die": 12.6,
+        "te": 0,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 0.1
+      },
+      "despachoId": "1F5kZpCrVAgUxcroNmQsE73sBo6EMGoKE",
+      "fecha": "2024-01-24",
+      "nota": "Importador Cosenza Gelatto, courier FedEx. Repuesto (rodillo) de máquina de chocolate Packint."
+    },
+    {
+      "op": "216",
+      "producto": "Inyectores y repuestos de motor diésel",
+      "keywords": [
+        "inyector",
+        "repuesto motor",
+        "diesel",
+        "porta inyectores",
+        "motor agricola",
+        "recambio motor"
+      ],
+      "ncm": "8409.99.69",
+      "ncmSim": "8409.99.69.000Z",
+      "ncmDescripcion": "Inyectores (incluidos los porta inyectores) - Partes identificables como destinadas exclusiva o principalmente a los motores de las partidas 84.07 u 84.08",
+      "ncmSecundarios": [
+        "7318.22.00.900A",
+        "8409.99.29.000K",
+        "8409.99.79.000J",
+        "8482.10.10.900W"
+      ],
+      "origen": "ESTADOS UNIDOS",
+      "estado": "NUEVO",
+      "fobUsd": 938.15,
+      "tasas": {
+        "die": 16,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1B-IB74HkIqfrflWJl8XU1g3tnS66m3bO",
+      "fecha": "2024-02-20",
+      "nota": "Carpeta de cliente (Agritach USA LLC), despacho multi-item de repuestos de motor. Principal por valor: inyectores 8409.99.69; secundarios: arandelas 7318.22, embolos/pistones 8409.99.29, aros de embolo 8409.99.79, rodamientos de bolas 8482.10.10."
+    },
+    {
+      "op": "217",
+      "producto": "Torno CNC horizontal (control numerico)",
+      "keywords": [
+        "torno cnc",
+        "torno horizontal",
+        "control numerico",
+        "torneado",
+        "maquina herramienta",
+        "torno metal"
+      ],
+      "ncm": "8458.11.99",
+      "ncmSim": "8458.11.99.000E",
+      "ncmDescripcion": "De control numerico - Tornos horizontales: tornos (incluidos los centros de torneado) que trabajen por arranque de metal",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 16860,
+      "tasas": {
+        "die": 2,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 3.75
+      },
+      "despachoId": "1WApbSOr_ol4vXbTi2NXh-qi5Ot1E-cac",
+      "fecha": "2024-09-13",
+      "nota": "Bien de capital (modelo CK6180X2000): IVA 10,5% e IVA adicional 10%, sin tasa estadistica."
+    },
+    {
+      "op": "218",
+      "producto": "Remaches de aluminio",
+      "keywords": [
+        "remaches",
+        "remache aluminio",
+        "remaches pop",
+        "fijaciones",
+        "sujetadores",
+        "roblones"
+      ],
+      "ncm": "7616.10.00",
+      "ncmSim": "7616.10.00.390R",
+      "ncmDescripcion": "Remaches - Puntas, clavos, grapas apuntadas, tornillos, pernos, tuercas, remaches, pasadores, arandelas y articulos similares. Las demas manufacturas de aluminio",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 7700,
+      "tasas": {
+        "die": 12.6,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1mo2CI8Iqz0S96tbRTNaQwD6SCOuv6zj5",
+      "fecha": "2024-07-08",
+      "nota": "Tasa estadistica con monto maximo (concepto 061)."
+    },
+    {
+      "op": "224",
+      "producto": "Espadas (barras guia) para motosierra",
+      "keywords": [
+        "espada motosierra",
+        "barra guia",
+        "motosierra",
+        "cadena de corte",
+        "repuesto motosierra",
+        "sierra de cadena"
+      ],
+      "ncm": "8467.91.00",
+      "ncmSim": "8467.91.00.190Y",
+      "ncmDescripcion": "Espadas o barras guias para cadenas de motosierras - De sierras o tronzadoras de cadena. Partes de herramientas con motor incorporado de uso manual",
+      "ncmSecundarios": [
+        "8202.40.00.000B"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 328.6,
+      "tasas": {
+        "die": 2,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "15bHGerRh1i2mOy8JDfqGeMyDvYqtXmek",
+      "fecha": "2024-04-17",
+      "nota": "'Espadas y serpientes' = barras guia (espadas, item principal 8467.91) + cadenas cortantes (serpientes, secundario 8202.40.00.000B, DIE 18%). Carpeta 'Muestra'."
+    },
+    {
+      "op": "235",
+      "producto": "Maquina para elaboracion de chocolate",
+      "keywords": [
+        "maquina chocolate",
+        "chocolate",
+        "confiteria",
+        "cacao",
+        "templadora chocolate",
+        "moldeadora"
+      ],
+      "ncm": "8438.20.90",
+      "ncmSim": "8438.20.90.190G",
+      "ncmDescripcion": "Maquinas y aparatos para confiteria, elaboracion de cacao o la fabricacion de chocolate. Para la preparacion o fabricacion industrial de alimentos o bebidas",
+      "ncmSecundarios": [],
+      "origen": "ITALIA",
+      "estado": "NUEVO",
+      "fobUsd": 34911.48,
+      "tasas": {
+        "die": 12.6,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 0.1
+      },
+      "despachoId": "1oT1yQ5ItJJSU5BrPzUWD2s8NUjnH07n7",
+      "fecha": "2024-08-19",
+      "nota": "Importador Cosenza Gelatto SA, vendedor Selmi SRL. FOB en EUR 31.660 (=USD 34.911,48). Bien de capital: IVA 10,5%, sin tasa estadistica."
+    },
+    {
+      "op": "240",
+      "producto": "Repuestos de motor Cummins (valvulas)",
+      "keywords": [
+        "repuestos cummins",
+        "valvulas motor",
+        "cummins",
+        "guia de valvula",
+        "insert",
+        "repuesto diesel"
+      ],
+      "ncm": "8409.91.14",
+      "ncmSim": "8409.91.14.000R",
+      "ncmDescripcion": "Valvulas de admision o de escape identificables como destinadas exclusiva o principalmente a los motores de embolo de encendido por chispa. Partes de motores 84.07 u 84.08",
+      "ncmSecundarios": [
+        "8409.91.17.000P"
+      ],
+      "origen": "ESTADOS UNIDOS",
+      "estado": "NUEVO",
+      "fobUsd": 917.28,
+      "tasas": {
+        "die": 16,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "17yP9W6C9gMTkZGWPhb8i1e4kooswVcVY",
+      "fecha": "2024-04-30",
+      "nota": "Vendedor Diessel Pro Power Inc. Items 0001-0004 misma posicion 8409.91.14 (valvulas/inserts/kit); secundario guias de valvula 8409.91.17. FOB principal = suma de la posicion 8409.91.14."
+    },
+    {
+      "op": "249",
+      "producto": "Discos de corte de diamante",
+      "keywords": [
+        "disco de corte",
+        "disco diamantado",
+        "muela",
+        "corte diamante",
+        "amoladora",
+        "disco corte piedra"
+      ],
+      "ncm": "6804.21.90",
+      "ncmSim": "6804.21.90.000G",
+      "ncmDescripcion": "De diamante natural o sintetico aglomerado - Las demas muelas y articulos similares sin bastidor para moler, afilar, cortar o trocear",
+      "ncmSecundarios": [],
+      "origen": "ITALIA",
+      "estado": "NUEVO",
+      "fobUsd": 1012.4,
+      "tasas": {
+        "die": 5.4,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 2
+      },
+      "despachoId": "1_LRLgAod8YmqLgW9GVkEBEnO_AVwcSEN",
+      "fecha": "2024-06-07",
+      "nota": "Vendedor Diatex S.p.A."
+    },
+    {
+      "op": "260",
+      "producto": "Griferia sanitaria monocomando",
+      "keywords": [
+        "griferia",
+        "canilla",
+        "grifo",
+        "monocomando",
+        "griferia cocina",
+        "griferia baño"
+      ],
+      "ncm": "8481.80.19",
+      "ncmSim": "8481.80.19.229H",
+      "ncmDescripcion": "Monocomando sin sistema de cierre ceramico. Juego de griferia sanitaria para cocina, de los tipos utilizados en baños o cocinas. Articulos de griferia y organos similares",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 6069.64,
+      "tasas": {
+        "die": 18,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 5
+      },
+      "despachoId": "1XQmPC3qoDKNHfrXGyh5vTCfwxyPX7KxS",
+      "fecha": "2025-01-02",
+      "nota": "Carpeta 'Nuevo'. Tasa estadistica con monto maximo (concepto 061). 16 subitems de distintos modelos, misma posicion."
+    },
+    {
+      "op": "274",
+      "producto": "Sierra/cortadora de marmol y piedra",
+      "keywords": [
+        "sierra marmol",
+        "cortadora piedra",
+        "corte marmol",
+        "maquina cortar piedra",
+        "granito",
+        "sierra piedra"
+      ],
+      "ncm": "8464.10.00",
+      "ncmSim": "8464.10.00.000H",
+      "ncmDescripcion": "Maquinas de aserrar - Maquinas herramienta para trabajar piedra, ceramica, hormigon, amianto cemento o materias minerales similares, o para trabajar el vidrio en frio",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 2960,
+      "tasas": {
+        "die": 12.6,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 11,
+        "iibb": 5.5
+      },
+      "despachoId": "1jn9lduHB99x7BBB9TvU_xgpYk99yGjbc",
+      "fecha": "2025-02-21",
+      "nota": "Carpeta 'Ultima'. Bien de capital (IVA 10,5%, sin tasa estadistica). 2 unidades modelo Stone Cutting Machine."
+    },
+    {
+      "op": "277",
+      "producto": "Cargadores para vehiculos electricos (EV charger portatil)",
+      "keywords": [
+        "cargador ev",
+        "cargador auto electrico",
+        "ev charger",
+        "cargador portatil",
+        "cargador bateria",
+        "wallbox"
+      ],
+      "ncm": "8504.40.10",
+      "ncmSim": "8504.40.10.000T",
+      "ncmDescripcion": "Cargadores de acumuladores - Convertidores estaticos. Transformadores electricos, convertidores electricos estaticos (rectificadores) y bobinas de reactancia",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 663.34,
+      "tasas": {
+        "die": 35,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 5
+      },
+      "despachoId": "1Ph-VTdeyYsT4Sb41aCmFi1tASEfSJCHj",
+      "fecha": "2024-11-15",
+      "nota": "Carpeta 'Mochilas cargadoras' = cargadores EV portatiles SCUTA. 6 subitems misma posicion 8504.40.10. DIE 35%."
+    },
+    {
+      "op": "278",
+      "producto": "Kimonos (prendas de vestir para mujer)",
+      "keywords": [
+        "kimono",
+        "ropa mujer",
+        "prenda de vestir",
+        "indumentaria",
+        "bata",
+        "kimono playa"
+      ],
+      "ncm": "6211.43.00",
+      "ncmSim": "6211.43.00.190G",
+      "ncmDescripcion": "Las demas prendas de vestir para mujeres o niñas, de fibras sinteticas o artificiales. Conjuntos de abrigo, monos y las demas prendas de vestir",
+      "ncmSecundarios": [
+        "6204.43.00.211Y",
+        "6204.43.00.291Z",
+        "6204.44.00.291L",
+        "7117.19.00.000P"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 1117.57,
+      "tasas": {
+        "die": 35,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 5
+      },
+      "despachoId": "1NhA1ZrQoaHl9ja2t929G4kl9dN4qcarO",
+      "fecha": "2024-12-06",
+      "nota": "Carpeta 'Nueva carpeta'. Despacho de ropa y accesorios (Nacapack). Principal por valor: prendas 6211.43; secundarios vestidos 6204.43/6204.44 y bisuteria 7117.19."
+    },
+    {
+      "op": "280",
+      "producto": "Notebook / laptop usada (MacBook Pro)",
+      "keywords": [
+        "notebook",
+        "laptop",
+        "macbook",
+        "computadora portatil",
+        "pc usada",
+        "notebook usada"
+      ],
+      "ncm": "8471.30.12",
+      "ncmSim": "8471.30.12.190L",
+      "ncmDescripcion": "Maquinas automaticas para tratamiento o procesamiento de datos, portatiles, de peso inferior o igual a 10 kg, con unidad central, teclado y visualizador",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "USADO",
+      "fobUsd": 500,
+      "tasas": {
+        "die": 32,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 3.75
+      },
+      "despachoId": "1iughNMJyTdK0_03txCTXKGeM_fcpB8_W",
+      "fecha": "2024-09-26",
+      "nota": "'PC retenida' = notebook USADA (MacBook Pro). Derecho de importacion de usados R.909/94 32% (concepto 056), sin tasa estadistica, con multa destino fuera de termino. Pais origen China, procedencia Reino Unido."
+    },
+    {
+      "op": "281",
+      "producto": "Repuestos de motor diesel (valvulas)",
+      "keywords": [
+        "repuestos motor",
+        "valvulas",
+        "diesel pro power",
+        "repuesto diesel",
+        "motor",
+        "valvula admision"
+      ],
+      "ncm": "8409.91.14",
+      "ncmSim": "8409.91.14.000R",
+      "ncmDescripcion": "Valvulas de admision o de escape identificables como destinadas exclusiva o principalmente a los motores de embolo de encendido por chispa. Partes de motores 84.07 u 84.08",
+      "ncmSecundarios": [],
+      "origen": "ESTADOS UNIDOS",
+      "estado": "NUEVO",
+      "fobUsd": 655.92,
+      "tasas": {
+        "die": 16,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 5
+      },
+      "despachoId": "1Dc5bW6ezV-ey5ktheO46aUTu0hhQeYNA",
+      "fecha": "2024-10-16",
+      "nota": "Vendedor Diesel Pro Power. Con multa destino fuera de termino (concepto 041)."
+    },
+    {
+      "op": "286",
+      "producto": "Prensa abrochadora/ponchadora de mangueras (DSG51)",
+      "keywords": [
+        "abrochadora mangueras",
+        "ponchadora",
+        "prensa mangueras",
+        "engarzadora",
+        "prensa hidraulica manguera",
+        "crimpadora"
+      ],
+      "ncm": "8462.90.00",
+      "ncmSim": "8462.90.00.000J",
+      "ncmDescripcion": "Las demas maquinas herramienta (incluidas las prensas) para trabajar metal: de enrollar, curvar, plegar, cizallar, punzonar; prensas para trabajar metal no expresadas",
+      "ncmSecundarios": [
+        "4009.21.10.190L",
+        "8458.19.90.000G"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 8550,
+      "tasas": {
+        "die": 12.6,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 4
+      },
+      "despachoId": "1Nfb29H6CJk6UtBqBYThA_05ZZ0wIxxUR",
+      "fecha": "2025-09-17",
+      "nota": "Carpeta de cliente (Valeria Domarco) con multiples operaciones. 286-001 (25001IC04118403L): torno 8458.19 + prensa 8462.90. 286-002 (25001IC04194228U, usado aqui): mangueras de caucho 4009.21.10 + prensas abrochadoras DSG51 8462.90. 286-003: sin despacho (solo cotizacion maquina de empanadas DM100). Principal: prensa DSG51 8462.90 (presente en ambos despachos)."
+    },
+    {
+      "op": "306",
+      "producto": "Torno horizontal (paralelo) CS6266C",
+      "keywords": [
+        "torno",
+        "torno paralelo",
+        "torno horizontal",
+        "maquina herramienta",
+        "torneado",
+        "torno metal"
+      ],
+      "ncm": "8458.19.90",
+      "ncmSim": "8458.19.90.000G",
+      "ncmDescripcion": "Los demas - Tornos horizontales: tornos (incluidos los centros de torneado) que trabajen por arranque de metal",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 8850,
+      "tasas": {
+        "die": 12.6,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 10,
+        "ganancias": 6,
+        "iibb": 5.5
+      },
+      "despachoId": "1ZMAz__tLIttEPSxYnLmPM5rbovYq1UK5",
+      "fecha": "2025-06-12",
+      "nota": "Carpeta 'Torno horizontal' (subcarpeta 'Centro de mecanizado NO VA' descartada). 3 items misma posicion 8458.19.90 (torno + accesorios DRO y quick change). Bien de capital."
+    },
+    {
+      "op": "307",
+      "producto": "Turbina / ventilador industrial (extractor)",
+      "keywords": [
+        "turbina",
+        "ventilador",
+        "extractor",
+        "ventilador industrial",
+        "soplador",
+        "ventilador centrifugo"
+      ],
+      "ncm": "8414.59.90",
+      "ncmSim": "8414.59.90.900F",
+      "ncmDescripcion": "Los demas ventiladores. Bombas de aire o de vacio, compresores de aire y ventiladores; campanas aspirantes con ventilador incorporado",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 848,
+      "tasas": {
+        "die": 12.6,
+        "te": 0,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6,
+        "iibb": 5.5
+      },
+      "despachoId": "11AU4UDyMrIbqRaGqpko0m4rDrWl83ppP",
+      "fecha": "2025-10-07",
+      "nota": "Vendedor Foshan Luomei, modelo 2LM910/H17."
+    },
+    {
+      "op": "329",
+      "producto": "Equipo para tendido electrico (maquina tiro-freno)",
+      "keywords": [
+        "tendido electrico",
+        "tiro freno",
+        "tensionadora",
+        "maquina tendido",
+        "linea electrica",
+        "pulling tensioner"
+      ],
+      "ncm": "8479.89.99",
+      "ncmSim": "8479.89.99.900H",
+      "ncmDescripcion": "Las demas maquinas y aparatos mecanicos con funcion propia, no expresados ni comprendidos en otra parte de este capitulo",
+      "ncmSecundarios": [
+        "7312.10.90.157C"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 38701.3,
+      "tasas": {
+        "die": 12.6,
+        "te": 0,
+        "iva": 10.5,
+        "ivaAdic": 0,
+        "ganancias": 0,
+        "iibb": 0
+      },
+      "despachoId": "1dny7u05gX38sbF0f7OAlyc9ora0AMTlK",
+      "fecha": "2025-09-17",
+      "nota": "Importador Energisur SRL (bien de uso, BDEUSO): percepciones IVA adicional, ganancias e IIBB exentas. Principal: maquinas tiro-freno Boyu TY40/TY1X30 (8479.89.99, FOB 38.701,30); secundario cable de acero 7312.10.90 (FOB 10.500). Se uso el despacho oficializado 25001IC04193611P; existe tambien 25001IC04219326 (impresion provisoria)."
+    },
+    {
+      "op": "342",
+      "producto": "Estuches / fundas para gafas (anteojos)",
+      "keywords": [
+        "estuche gafas",
+        "funda anteojos",
+        "estuche lentes",
+        "estuche textil",
+        "porta anteojos"
+      ],
+      "ncm": "4202.32.00",
+      "ncmSim": "4202.32.00.240A",
+      "ncmDescripcion": "Fundas y estuches para gafas (anteojos), con superficie exterior de hojas de plastico o materia textil",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 3226,
+      "tasas": {
+        "die": 20,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6
+      },
+      "despachoId": "1XVoXo_Xc9pLSAgbZZuy1lGFduqTFpBA6",
+      "fecha": "2025-08-26",
+      "nota": "Carpeta 'Lentes de sol y estuches'. Los lentes (subcarpeta Lentes) se enviaron por courier UPS sin despacho formal; el despacho corresponde a los estuches (subcarpeta Estuches, op 342E)."
+    },
+    {
+      "op": "356",
+      "producto": "Manteca de cacao (muestras)",
+      "keywords": [
+        "manteca de cacao",
+        "cacao",
+        "cocoa butter",
+        "insumo chocolateria",
+        "nibs de cacao",
+        "pasta de cacao"
+      ],
+      "ncm": "1804.00.00",
+      "ncmSim": "1804.00.00.100Q",
+      "ncmDescripcion": "Manteca, grasa y aceite de cacao",
+      "ncmSecundarios": [
+        "1801.00.00.120R",
+        "1803.10.00.000F"
+      ],
+      "origen": "ECUADOR",
+      "estado": "NUEVO",
+      "fobUsd": 61,
+      "tasas": {
+        "die": 10.8,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6
+      },
+      "despachoId": "1GD77O3uccVms5N-R3-BW8JAdR8P59k-I",
+      "fecha": "2025-07-02",
+      "nota": "Muestras de cacao para Cosenza Gelatto (courier FedEx). Items: cacao en grano/nibs (1801), pasta/masa de cacao (1803) y manteca de cacao (1804, principal por mayor FOB)."
+    },
+    {
+      "op": "367",
+      "producto": "Cortadora / rebanadora de tortas (Gold Machines Cutter 60x60)",
+      "keywords": [
+        "cortadora de torta",
+        "rebanadora de tortas",
+        "maquina pasteleria",
+        "cortadora bizcochuelo",
+        "rebanadora industrial"
+      ],
+      "ncm": "8438.10.00",
+      "ncmSim": "8438.10.00.149H",
+      "ncmDescripcion": "Las demas rebanadoras - maquinas y aparatos para panaderia, pasteleria o galleteria",
+      "ncmSecundarios": [],
+      "origen": "BRASIL",
+      "estado": "NUEVO",
+      "fobUsd": 3030,
+      "tasas": {
+        "die": 12.6,
+        "iva": 10.5
+      },
+      "despachoId": "1EWVzlXJFDqRyg2h8I-d0IrBU5Cup6r1K",
+      "fecha": "2025-08-12"
+    },
+    {
+      "op": "373",
+      "producto": "Grupo electrogeno diesel (generador) 75-375 kVA (Gensyn BC/100GF)",
+      "keywords": [
+        "generador",
+        "grupo electrogeno",
+        "generador diesel",
+        "grupo diesel",
+        "generador industrial"
+      ],
+      "ncm": "8502.12.10",
+      "ncmSim": "8502.12.10.000M",
+      "ncmDescripcion": "Grupos electrogenos con motor diesel, de corriente alterna, potencia superior a 75 kVA e inferior o igual a 375 kVA",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 4797.8,
+      "tasas": {
+        "die": 12.6,
+        "iva": 10.5
+      },
+      "despachoId": "1S_q9A9kB3sPLIpmUqZlb-ceYM6Exew6P",
+      "fecha": "2025-11-07"
+    },
+    {
+      "op": "389",
+      "producto": "Discos / muelas de corte de diamante (Diatex)",
+      "keywords": [
+        "disco de corte",
+        "muela diamantada",
+        "disco diamante",
+        "disco abrasivo",
+        "disco corte marmol",
+        "abrasivo"
+      ],
+      "ncm": "6804.21.11",
+      "ncmSim": "6804.21.11.000L",
+      "ncmDescripcion": "Muelas y articulos similares de diamante natural o sintetico aglomerado con resina, de diametro inferior a 53,34 cm",
+      "ncmSecundarios": [],
+      "origen": "ITALIA",
+      "estado": "NUEVO",
+      "fobUsd": 3668.02,
+      "tasas": {
+        "die": 5.4,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6
+      },
+      "despachoId": "1kKrTlYMweGMk4k7S8ZFgEUqdXW9NvDqz",
+      "fecha": "2025-09-15"
+    },
+    {
+      "op": "390",
+      "producto": "Cascos de seguridad para moto / automovilismo",
+      "keywords": [
+        "casco moto",
+        "casco",
+        "casco motociclismo",
+        "casco integral",
+        "casco seguridad",
+        "cascos"
+      ],
+      "ncm": "6506.10.00",
+      "ncmSim": "6506.10.00.319Z",
+      "ncmDescripcion": "Cascos de seguridad de plastico para automovilismo o motociclismo, cerrados (los demas)",
+      "ncmSecundarios": [
+        "6506.10.00.219U",
+        "6506.10.00.311G",
+        "6506.10.00.312J",
+        "6506.10.00.419E"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 1061.03,
+      "tasas": {
+        "die": 20,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6
+      },
+      "despachoId": "1depWpl4up_XJ1kELibNJ5thqB8WteKfk",
+      "fecha": "2025-10-06",
+      "nota": "Despacho de 5 items, todos cascos (6506.10.00 en distintos subitems). Principal = item de mayor FOB (319Z). Marcas: VGV, BYB, LVCOOL."
+    },
+    {
+      "op": "392",
+      "producto": "Moldes de plastico para helados / pasteleria (Martellato)",
+      "keywords": [
+        "molde helado",
+        "molde plastico",
+        "molde pasteleria",
+        "molde reposteria",
+        "moldes cocina"
+      ],
+      "ncm": "3924.10.00",
+      "ncmSim": "3924.10.00.920V",
+      "ncmDescripcion": "Vajilla y demas articulos de cocina de plastico, aptos para estar en contacto con alimentos (moldes)",
+      "ncmSecundarios": [
+        "7323.99.00.910P"
+      ],
+      "origen": "ITALIA",
+      "estado": "NUEVO",
+      "fobUsd": 20368.16,
+      "tasas": {
+        "die": 18,
+        "te": 3,
+        "iva": 21
+      },
+      "despachoId": "1QJeApNIApKYodyWXzImaDFnGNWV8R7XY",
+      "fecha": "2026-03-31",
+      "nota": "Multi-item: 3 items de moldes de plastico (3924.10.00.920V) + 1 item de utensilios de acero (7323.99). fobUsd = suma de los items 3924.10 en dolar."
+    },
+    {
+      "op": "401",
+      "producto": "Automóvil de colección (Alfa Romeo Giulia Sprint, clásico)",
+      "keywords": [
+        "auto",
+        "automovil",
+        "vehiculo",
+        "auto de coleccion",
+        "auto clasico",
+        "coche",
+        "turismo"
+      ],
+      "ncm": "8703.23.10",
+      "ncmSim": "8703.23.10.990Y",
+      "ncmDescripcion": "Automóviles de turismo y demás vehículos para transporte de personas, motor de émbolo por chispa, cilindrada 1.500–3.000 cm³",
+      "ncmSecundarios": [],
+      "origen": "Italia",
+      "estado": "USADO",
+      "fobUsd": 34391,
+      "tasas": {
+        "die": 35,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 0,
+        "ganancias": 11,
+        "iibb": 0
+      },
+      "despachoId": "1U5wRUw1CYHuzraeZE0C4bT7a87Rh6QqR",
+      "fecha": "2025-10-21"
+    },
+    {
+      "op": "402",
+      "producto": "Sticks / tizas-lapices para marcar (marking sticks)",
+      "keywords": [
+        "stick",
+        "tiza",
+        "lapiz marcador",
+        "marking stick",
+        "tiza de sastre",
+        "pastel para marcar"
+      ],
+      "ncm": "9609.90.00",
+      "ncmSim": "9609.90.00.000L",
+      "ncmDescripcion": "Lapices, minas, pasteles, carboncillos, tizas para escribir o dibujar y jaboncillos (tizas) de sastre - los demas",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 2536.58,
+      "tasas": {
+        "die": 18,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6
+      },
+      "despachoId": "1heKF5XUshfHMTsD6Vme1MmxiQWKvz9Lq",
+      "fecha": "2026-02-24"
+    },
+    {
+      "op": "403",
+      "producto": "Gafas / anteojos de sol",
+      "keywords": [
+        "gafas",
+        "anteojos de sol",
+        "lentes de sol",
+        "gafas de sol",
+        "anteojos"
+      ],
+      "ncm": "9004.90.90",
+      "ncmSim": "9004.90.90.900R",
+      "ncmDescripcion": "Gafas (anteojos) correctoras, protectoras u otras, y articulos similares - los demas",
+      "ncmSecundarios": [
+        "9003.90.90.000Z",
+        "3919.90.90.999K",
+        "4803.00.90.900E",
+        "5609.00.90.000M",
+        "6307.10.00.900P",
+        "7318.15.00.990B",
+        "7318.16.00.900J",
+        "7505.22.90.000B",
+        "8203.10.10.100T",
+        "8203.20.90.900D",
+        "8205.40.00.990K",
+        "8205.59.00.900C",
+        "8206.00.00.400Q",
+        "8479.89.99.900H",
+        "9031.49.90.000L",
+        "9031.80.99.990G",
+        "9032.89.82.000R"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 1336.34,
+      "tasas": {
+        "die": 18,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6
+      },
+      "despachoId": "1T6usAkpRjThnkCr2gUWyHAixYCZriF17",
+      "fecha": "2025-12-30",
+      "nota": "Despacho consolidado multi-producto (18 items). Item principal = gafas (9004.90.90.900R, 900 unidades). Tambien monturas de gafas (9003.90.90) y herramientas/insumos varios."
+    },
+    {
+      "op": "411",
+      "producto": "Aire acondicionado (unidades split / condensadoras VRV)",
+      "keywords": [
+        "aire acondicionado",
+        "split",
+        "unidad condensadora",
+        "climatizacion",
+        "aire acondicionado inverter",
+        "vrv"
+      ],
+      "ncm": "8415.90.20",
+      "ncmSim": "8415.90.20.310A",
+      "ncmDescripcion": "Máquinas y aparatos para acondicionamiento de aire — unidades condensadoras (externas) de sistema split, capacidad ≤ 30.000 frigorías/h. Partes",
+      "ncmSecundarios": [
+        "8415.90.20.519F",
+        "8415.90.20.590M",
+        "8415.90.90.900Y",
+        "7411.10.10 (caños de cobre)",
+        "7412.10.00 (accesorios de tubería de cobre)"
+      ],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": 39664,
+      "tasas": {
+        "die": 18,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 0,
+        "ganancias": 0,
+        "iibb": 0
+      },
+      "despachoId": "1k0g261oC8EkfQaN6kTUzSpm5HtE7IHA5",
+      "fecha": "2026-01-14"
+    },
+    {
+      "op": "416",
+      "producto": "Maquina dobladora / plegadora-curvadora de chapa (Aisen UFB/24/200)",
+      "keywords": [
+        "dobladora",
+        "plegadora de chapa",
+        "curvadora",
+        "dobladora de chapa",
+        "maquina plegadora",
+        "plegadora metal"
+      ],
+      "ncm": "8462.29.00",
+      "ncmSim": "8462.29.00.000T",
+      "ncmDescripcion": "Maquinas (incluidas las prensas) de enrollar, curvar, plegar, enderezar o aplanar, para productos planos (metal) - las demas",
+      "ncmSecundarios": [],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 14687.73,
+      "tasas": {
+        "die": 12.6,
+        "iva": 10.5
+      },
+      "despachoId": "1lcQbTW9yJ4ArQ1tIa8OqFmpNgAwPOiuQ",
+      "fecha": "2026-03-30"
+    },
+    {
+      "op": "424",
+      "producto": "Equipamiento de gimnasio (bancos de pesas, mancuernas, bici fija, piso de goma)",
+      "keywords": [
+        "gimnasio",
+        "banco de pesas",
+        "mancuernas",
+        "equipo fitness",
+        "musculacion",
+        "bicicleta fija"
+      ],
+      "ncm": "9506.91.00",
+      "ncmSim": "9506.91.00.131D",
+      "ncmDescripcion": "Articulos y material para cultura fisica, gimnasia o atletismo - bancos de pesas con dorsalera",
+      "ncmSecundarios": [
+        "4016.91.00.900E",
+        "9403.20.90.190L",
+        "9506.91.00.129T",
+        "9506.91.00.139W"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 3167.96,
+      "tasas": {
+        "die": 35,
+        "te": 3,
+        "iva": 21,
+        "ganancias": 6
+      },
+      "despachoId": "1bK-bR7w247oZe2dyZRL438AVs-GJJ3uP",
+      "fecha": "2026-07-02",
+      "nota": "Despacho de gimnasio multi-item (Udonex): pisos de goma (4016.91), estanterias metal (9403.20) y equipos de gimnasia 9506.91 (bicicleta fija, bancos de pesas, mancuernas). Principal = banco de pesas 9506.91.00.131D. Despacho estaba en subcarpeta 'Nueva carpeta'."
+    },
+    {
+      "op": "439",
+      "producto": "Pantalla LED (display de video)",
+      "keywords": [
+        "pantalla led",
+        "display led",
+        "pantalla de video",
+        "cartel led",
+        "tablero led",
+        "pantalla gigante"
+      ],
+      "ncm": "8528.59.00",
+      "ncmSim": "8528.59.00.390Q",
+      "ncmDescripcion": "Monitores policromaticos que no incorporan aparato receptor de television - los demas monitores (pantalla LED)",
+      "ncmSecundarios": [
+        "7326.90.90.500A",
+        "7907.00.90.000M",
+        "8479.89.99.900H",
+        "8517.62.99.900R",
+        "8536.10.00.190Z",
+        "8536.20.00.230Z",
+        "8536.20.00.810A",
+        "8541.43.00.291N"
+      ],
+      "origen": "CHINA",
+      "estado": "NUEVO",
+      "fobUsd": 17619.33,
+      "tasas": {
+        "die": 20,
+        "te": 3,
+        "iva": 21
+      },
+      "despachoId": "169nM6MLt7qKpgB7UsCljWVqGJN41ffRA",
+      "fecha": "2026-04-20",
+      "nota": "Despacho multi-item (9 posiciones): pantalla LED principal + procesador de video (8517.62), paneles solares (8541.43), estructuras/soportes (7907, 7326), disyuntores/fusibles (8536). El item principal tiene ademas concepto 417 al 9,5% no mapeado."
+    },
+    {
+      "op": "451",
+      "producto": "Repuestos Sennebogen: mangueras/tubos de caucho reforzado y juntas (Partes de Alemania)",
+      "keywords": [
+        "repuestos sennebogen",
+        "manguera hidraulica",
+        "tubo de caucho",
+        "junta",
+        "empaquetadura",
+        "repuestos grua"
+      ],
+      "ncm": "4009.21.90",
+      "ncmSim": "4009.21.90.900D",
+      "ncmDescripcion": "Tubos de caucho vulcanizado sin endurecer, reforzados o combinados solamente con metal, sin accesorios - los demas",
+      "ncmSecundarios": [
+        "4016.93.00.990H"
+      ],
+      "origen": "REP. FED DE ALEMANIA",
+      "estado": "NUEVO",
+      "fobUsd": 1698.3,
+      "tasas": {
+        "die": 12.6,
+        "te": 3,
+        "iva": 21,
+        "ivaAdic": 20,
+        "ganancias": 6
+      },
+      "despachoId": "162V9Wh6CdJPywwQrIhgrJ4rk486jDzJJ",
+      "fecha": "2026-03-18",
+      "nota": "Repuestos marca SENNEBOGEN (courier via Rohlig). 3 items: tubos de caucho reforzados con metal (4009.21, principal) y juntas/empaquetaduras (4016.93)."
+    },
+    {
+      "op": "487",
+      "producto": "Moldes de plastico para helados (MoldBrothers)",
+      "keywords": [
+        "molde helado",
+        "molde plastico",
+        "molde paleta",
+        "molde reposteria",
+        "molde helado palito"
+      ],
+      "ncm": "3923.90.90",
+      "ncmSim": "3923.90.90.990A",
+      "ncmDescripcion": "Articulos para el transporte o envasado, de plastico - los demas (moldes: cup trophy mold, player mold)",
+      "ncmSecundarios": [],
+      "origen": "PAISES BAJOS",
+      "estado": "NUEVO",
+      "fobUsd": 440.36,
+      "tasas": {
+        "die": 18,
+        "te": 3,
+        "iva": 21
+      },
+      "despachoId": "1qHZljvXpn8V-6rtCeeooysABiQxBDdP8",
+      "fecha": "2026-05-08",
+      "nota": "Courier FedEx (subcarpeta 1). La op tiene una 2da subcarpeta con otro despacho del mismo producto (26073IC04048... -> 26073IC04061019V, fileId 1VXgsp1nN_vEnMpfCh-QP5TgfhJw7bENJ) no procesado en detalle."
+    },
+    {
+      "op": "488",
+      "producto": "Liofilizador / freeze dryer (Harvest Right HRC100)",
+      "keywords": [
+        "liofilizador",
+        "freeze dryer",
+        "secador al vacio",
+        "deshidratador",
+        "liofilizado",
+        "secadora"
+      ],
+      "ncm": "8419.39.00",
+      "ncmSim": "8419.39.00.000H",
+      "ncmDescripcion": "Secadores - los demas; aparatos para tratamiento de materias mediante cambio de temperatura (secado)",
+      "ncmSecundarios": [],
+      "origen": "ESTADOS UNIDOS",
+      "estado": "NUEVO",
+      "fobUsd": 11097.36,
+      "tasas": {
+        "die": 12.6,
+        "iva": 10.5
+      },
+      "despachoId": "14evPbib-N72hfdXD-kuknYWW9aHbFLrm",
+      "fecha": "2026-07-06"
+    }
+  ],
+  "soloCotizacion": [
+    {
+      "op": "01",
+      "producto": "Prensa de cera (máquina de cera, apicultura)",
+      "keywords": [
+        "prensa",
+        "cera",
+        "apicultura",
+        "estampadora",
+        "máquina"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo facturas comerciales (CI 450/810 USD, PL, seguro) y costeo de apicultura; sin despacho de importación en la carpeta"
+    },
+    {
+      "op": "09",
+      "producto": "Ferva S.A. (carpeta cliente)",
+      "keywords": [
+        "ferva",
+        "factura",
+        "cliente"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Carpeta con facturas (FERVA S.A.) y CI; sin despacho de importación"
+    },
+    {
+      "op": "10",
+      "producto": "Tripa (muestra)",
+      "keywords": [
+        "tripa",
+        "muestra",
+        "costeo",
+        "prefactibilidad"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo presentaciones de costeo (muestra) e informe de prefactibilidad; importación no concretada"
+    },
+    {
+      "op": "13",
+      "producto": "Remaches",
+      "keywords": [
+        "remaches",
+        "rivet",
+        "aluminio"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Subcarpeta 'nuevo rivet' con SIMI (20073SIMI020853N), CI/PI y costeo; sin despacho de importación en la carpeta"
+    },
+    {
+      "op": "32",
+      "producto": "Barbijos",
+      "keywords": [
+        "barbijo",
+        "mascarilla",
+        "tapaboca",
+        "COVID"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo cotizaciones (Initial/Second Quotation), facturas de servicio E-COMEX y PL; sin despacho de importación"
+    },
+    {
+      "op": "37",
+      "producto": "La Roca Fuerte S.A. (instrumentos musicales, carpeta cliente)",
+      "keywords": [
+        "instrumentos musicales",
+        "auriculares",
+        "teclados",
+        "pedales",
+        "cliente"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Carpeta de cliente con 15+ subcarpetas por producto (auriculares, teclados, pedales, drivers, adaptadores, tijeras, accesorios), varias con SIMI aprobada; sin despacho único a nivel carpeta, requiere extracción por subcarpeta"
+    },
+    {
+      "op": "48",
+      "producto": "Pañales para bebé descartables",
+      "keywords": [
+        "pañales",
+        "pañales bebé",
+        "pañales descartables",
+        "baby diapers",
+        "higiene bebé"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo cotizacion aerea y maritima (proveedor Hebei Nangong Fuan Textile). No hay despacho ni SIMI en la carpeta; importacion no concretada."
+    },
+    {
+      "op": "52",
+      "producto": "Luces LED",
+      "keywords": [
+        "luces led",
+        "iluminacion led",
+        "lamparas led",
+        "led",
+        "tira led"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo cotizacion aerea (Shenzhen Yunxinou Technology). Sin despacho ni SIMI; importacion no concretada."
+    },
+    {
+      "op": "54",
+      "producto": "Repuestos de motos",
+      "keywords": [
+        "repuestos moto",
+        "repuestos motos",
+        "autopartes moto",
+        "accesorios moto"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo cotizacion maritima (Motwi HK Limited). Sin despacho ni SIMI; importacion no concretada."
+    },
+    {
+      "op": "56",
+      "producto": "Barras / hierros de acero (malla de alambre)",
+      "keywords": [
+        "barras de acero",
+        "hierros",
+        "malla de acero",
+        "alambre",
+        "wire mesh"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo cotizacion maritima (Puersen Hardware Wire Mesh Products). Sin despacho ni SIMI; importacion no concretada."
+    },
+    {
+      "op": "59",
+      "producto": "Hebillas metalicas (marroquineria)",
+      "keywords": [
+        "hebillas",
+        "hebilla",
+        "marroquineria",
+        "accesorios metalicos",
+        "cinturones"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo cotizacion maritima (KZ Fashions Ltd). Sin despacho ni SIMI; importacion no concretada."
+    },
+    {
+      "op": "61",
+      "producto": "Luces LED para celulares (aro de luz / selfie)",
+      "keywords": [
+        "luz led celular",
+        "aro de luz",
+        "luz selfie",
+        "ring light",
+        "led celular"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo cotizacion maritima (Somostel Technology). Sin despacho ni SIMI; importacion no concretada."
+    },
+    {
+      "op": "64",
+      "producto": "Hebillas metalicas (marroquineria)",
+      "keywords": [
+        "hebillas",
+        "hebilla",
+        "marroquineria",
+        "anillas",
+        "remaches"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": "NUEVO",
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Sin despacho (solo factura E-COMEX + nota NCM.txt de cotizacion/SIMI). NCM declarado en NCM.txt: hebillas 8308.90.10.000Z (der 16%, est 3%, IVA 21%, IVA adic 20%, gan 6%, IIBB 3%). Tambien lista anillas 8308.10.00.900A, correas 4201.00.90.000E, remaches 8308.20.00.790H. Valor criterio USD 6,25/kg."
+    },
+    {
+      "op": "66",
+      "producto": "Lavadora",
+      "keywords": [
+        "lavadora",
+        "maquina de lavar",
+        "lavarropas",
+        "electrodomestico"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": "NUEVO",
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo cotizacion maritima (Oxyhydrogen Technologies S.L.). Sin despacho ni SIMI; importacion no concretada."
+    },
+    {
+      "op": "69",
+      "producto": "Lavadora de botellas (maquina de envasado)",
+      "keywords": [
+        "lavadora de botellas",
+        "lavado de botellas",
+        "maquina lavabotellas",
+        "envasado",
+        "fill-pack"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo cotizacion maritima (ZhangJiaGang FILL-PACK Machinery). Sin despacho ni SIMI; importacion no concretada."
+    },
+    {
+      "op": "74",
+      "producto": "Termos de aluminio / acero (botellas isotermicas)",
+      "keywords": [
+        "termo",
+        "termo de aluminio",
+        "botella termica",
+        "termos",
+        "isotermico"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo cotizacion maritima (ECO Drinkware). Sin despacho ni SIMI. NCM de cotizacion en ncm.txt: 9617.00.10.121R (der 18%, est 3%, antidumping FOB minimo USD 15/kg, IVA 21%, IVA adic 20%, gan 6%, IIBB 2,5%; requiere SIMI+LNA, libre circulacion INAL, estampillado; valor criterio USD 10,10/kg)."
+    },
+    {
+      "op": "82",
+      "producto": "Bandas elasticas (fitness / resistencia)",
+      "keywords": [
+        "bandas elasticas",
+        "banda de resistencia",
+        "bandas fitness",
+        "elastico ejercicio",
+        "resistance band"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": "NUEVO",
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Solo cotizacion maritima (Taizhou Wolf Sports Goods). Sin despacho ni SIMI; importacion no concretada."
+    },
+    {
+      "op": "94",
+      "producto": "Envasadora / llenadora de pistón (línea de empaque)",
+      "keywords": [
+        "envasadora",
+        "llenadora de pistón",
+        "máquina de envasado",
+        "empacadora",
+        "envasadora líquidos"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Sin despacho. Solo proforma invoices, costeo marítimo y factura E-COMEX de asesoría (proveedor Wenzhou International). Operación en etapa de cotización, no concretada."
+    },
+    {
+      "op": "99",
+      "producto": "Placas de video",
+      "keywords": [
+        "placa de video",
+        "tarjeta gráfica",
+        "GPU",
+        "placa gráfica"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Sin despacho. Solo proforma, packing, costeo marítimo, fotos y factura E-COMEX de asesoría (cliente Montecchiari, proveedor Shenzhen Dovina). No concretada."
+    },
+    {
+      "op": "101",
+      "producto": "PC retenida en TCA Ezeiza",
+      "keywords": [
+        "PC",
+        "computadora",
+        "retiro courier",
+        "UPS",
+        "TCA Ezeiza"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Gestión de retiro de una PC vía UPS / TCA Ezeiza (courier). Solo comprobantes de pago UPS-TCA, factura y notificación. Sin despacho de importación formal con NCM."
+    },
+    {
+      "op": "120",
+      "producto": "Placas de video",
+      "keywords": [
+        "placa de video",
+        "tarjeta gráfica",
+        "GPU",
+        "placa gráfica"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Sin despacho. Solo proforma, costeo aéreo y factura E-COMEX de asesoría (proveedor Apexto Technology). No concretada."
+    },
+    {
+      "op": "125",
+      "producto": "Cubiertos",
+      "keywords": [
+        "cubiertos",
+        "cuchillos",
+        "tenedores",
+        "cucharas",
+        "vajilla"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": "China",
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Sin despacho/SIMI/planilla de aranceles con NCM. Solo proforma, costeo marítimo y facturas + nota de crédito E-COMEX (proveedor Shanghai Lingxu). No se pudo extraer NCM validado."
+    },
+    {
+      "op": "180",
+      "producto": "Molde (muestra)",
+      "keywords": [
+        "molde",
+        "muestra"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Sin despacho de importación en la carpeta (molde muestra; sólo factura E-Comex y comprobantes de pago VEP/payout)."
+    },
+    {
+      "op": "203",
+      "producto": "Repuesto de odontología",
+      "keywords": [
+        "repuesto odontologia",
+        "dental",
+        "repuesto dental",
+        "odontologia"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Sin despacho de importación en la carpeta (envío courier Andreani; sólo factura E-Comex, transferencia Fona SRL y comprobantes)."
+    },
+    {
+      "op": "301",
+      "producto": "Muestras de latas (samples)",
+      "keywords": [
+        "latas",
+        "envases metalicos",
+        "muestras",
+        "enlatados",
+        "cans"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": null,
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Sin despacho IC04 en la carpeta. Solo 'Sample proforma invoice Op. 301', factura E-COMEX, certificados INAL/ANMAT y cotizaciones (subcarpeta 'Latas' con quotations). Operacion de muestras sin importacion a consumo concretada en la carpeta."
+    },
+    {
+      "op": "366",
+      "producto": "Only Sport S.R.L (carpeta de cliente, muestras)",
+      "keywords": [
+        "only sport",
+        "muestras",
+        "cliente"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Carpeta de cliente con subcarpetas de muestras (SAF001-005) y proforma; no hay despacho de importacion. Importacion no concretada."
+    },
+    {
+      "op": "407",
+      "producto": "Repuestos Doosan (excavadora)",
+      "keywords": [
+        "repuestos doosan",
+        "repuestos excavadora",
+        "doosan"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Sin despacho de importacion en la carpeta; solo proforma, cotizacion/costeo maritimo y factura courier DHL. Importacion no concretada o despacho no archivado."
+    },
+    {
+      "op": "446",
+      "producto": "Sensores Aysa",
+      "keywords": [
+        "sensores",
+        "sensor",
+        "aysa"
+      ],
+      "ncm": null,
+      "ncmSim": null,
+      "ncmDescripcion": null,
+      "ncmSecundarios": [],
+      "origen": null,
+      "estado": null,
+      "fobUsd": null,
+      "tasas": {},
+      "despachoId": null,
+      "fecha": null,
+      "nota": "Sin despacho de importacion en la carpeta; solo proforma/PI, invoice y costeo aereo. Importacion no concretada."
+    }
+  ]
+}

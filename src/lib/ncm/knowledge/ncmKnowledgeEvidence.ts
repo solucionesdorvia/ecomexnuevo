@@ -1,5 +1,6 @@
 import type { NcmEvidenceCandidate } from "@/lib/ai/ncmClassifier";
 import { searchNcm } from "./searchNcm";
+import { despachoSeedCandidates } from "./despachoSeeds";
 
 /**
  * Capítulos NCM que corresponden a electrónica, maquinaria y equipo eléctrico.
@@ -649,16 +650,28 @@ export function buildNcmKnowledgeEvidence(productText: string): {
   // Mínimo bajo: "jean", "lego", "mouse", "tablet" deben disparar su semilla.
   if (q.length < 4) return null;
 
-  const seeds = domainSeedCandidates(q);
-
-  // La búsqueda léxica de candidatos NO debe puntuar sobre la lista de MATERIALES
-  // que extrae el analista. "acero, aluminio, caucho…" trae chapa de acero (7210),
-  // aluminio en bruto, caucho, plástico primario, etc., y esos códigos de materia
-  // prima TAPAN al producto terminado (una camioneta clasificaba como 7210). Sacamos
-  // esa línea SOLO para la búsqueda; el material se conserva en el texto que ve el
-  // clasificador (le sirve para razonar, no para traer candidatos).
+  // La búsqueda léxica y las semillas de despachos NO deben puntuar sobre la lista
+  // de MATERIALES que extrae el analista. "acero, aluminio, caucho…" trae chapa de
+  // acero (7210), aluminio en bruto, etc., y esos códigos de materia prima TAPAN al
+  // producto terminado (una camioneta clasificaba como 7210; un ómnibus como remaches
+  // de aluminio). Sacamos esa línea SOLO para buscar/sembrar; el material se conserva
+  // en el texto que ve el clasificador (le sirve para razonar, no para traer candidatos).
   const searchQuery =
     q.replace(/^[^\n]*\bmateriales?\b[^\n]*$/gim, " ").replace(/[ \t]{2,}/g, " ").trim() || q;
+
+  // Semillas curadas a mano (domainSeedCandidates, sobre el texto completo) +
+  // semillas del historial real de despachos (despachoSeedCandidates, sobre el texto
+  // sin materiales). Las curadas van primero (prioridad) y deduplicamos por 8 dígitos.
+  const seeds: NcmEvidenceCandidate[] = [];
+  {
+    const seedSeen = new Set<string>();
+    for (const c of [...domainSeedCandidates(q), ...despachoSeedCandidates(searchQuery)]) {
+      const k = c.ncm_code.replace(/\D/g, "").slice(0, 8);
+      if (k.length < 6 || seedSeen.has(k)) continue;
+      seedSeen.add(k);
+      seeds.push(c);
+    }
+  }
 
   const hits = searchNcm(searchQuery, {
     limit: 14,
