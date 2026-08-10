@@ -37,7 +37,9 @@ export const COMMON_PRODUCT_ANCHORS: ProductAnchor[] = [
   { test: /\b(camioneta|pick[\s-]?up|pickup)\b/i, not: /\b(autoelevador|repuesto|accesorio|cubierta|parte)\w*/i, ncm: "8704.31.00", label: "Camioneta / pick-up" },
   { test: /\bcami[oó]n(?:es)?\b/i, not: /\b(camioneta|autoelevador|repuesto|parte)\w*/i, ncm: "8704.22.00", label: "Camión" },
   { test: /[oó]mnibus|\b(colectivo|autob[uú]s|micro(?:bús|bus)?|bus)\b/i, not: /\b(business|autoelevador)\w*/i, ncm: "8702.10.00", label: "Ómnibus / bus" },
-  { test: /\b(autom[oó]vil(?:es)?|autos?|coche|sed[aá]n|hatchback|suv)\b/i, not: /\b(autoelevador|autoparte|autoadhes|autoservicio)\w*/i, ncm: "8703.23.00", label: "Automóvil" },
+  // Excluimos accesorios/repuestos DE auto (un "cargador para auto" es 8504, no el
+  // auto) y el guard "(para|de|del) auto" que capta cualquier accesorio no listado.
+  { test: /\b(autom[oó]vil(?:es)?|autos?|coche|sed[aá]n|hatchback|suv)\b/i, not: /\b(autoelevador|autoparte|autoadhes|autoservicio|cargador|funda|cable|repuesto|accesorio|soporte|protector|carcasa|filtro|alarma|sensor|c[aá]mara|parlante|est[eé]reo|alfombr|cubreasiento|matafuego|baliza|perfum)\w*|\b(para|de|del)\s+auto\w*/i, ncm: "8703.23.00", label: "Automóvil" },
 ];
 
 /** Devuelve el ancla cuyo patrón matchea el texto (y no es un accesorio), o null. */

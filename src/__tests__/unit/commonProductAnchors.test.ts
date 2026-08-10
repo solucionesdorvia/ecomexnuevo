@@ -66,4 +66,16 @@ describe("commonProductAnchors — vehículos y falsos positivos peligrosos", ()
     expect(matchProductAnchor("cubierta de camioneta")).toBeNull();
     expect(matchProductAnchor("repuesto de camión")).toBeNull();
   });
+
+  it("NO ancla un accesorio 'para/de auto' como el auto entero (bug real en prod)", () => {
+    // "cargador para auto eléctrico" mostraba 8703 (auto) en vez de 8504 (cargador):
+    // el anchor de auto forzaba el capítulo 87 aunque el motor razonara bien 8504.
+    expect(matchProductAnchor("cargador portátil para auto eléctrico")).toBeNull();
+    expect(matchProductAnchor("cargador de auto")).toBeNull();
+    expect(matchProductAnchor("funda para auto")).toBeNull();
+    expect(matchProductAnchor("alarma de auto")).toBeNull();
+    // pero el auto en sí sigue anclando en cap. 87:
+    expect(heading("auto eléctrico BYD nuevo")).toBe("8703");
+    expect(heading("un automóvil sedán nafta")).toBe("8703");
+  });
 });

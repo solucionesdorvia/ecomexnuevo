@@ -54,4 +54,13 @@ describe("integración: buildNcmKnowledgeEvidence usa las semillas de despachos"
   it("'kimono' aparece como candidato 6211 en la evidencia", () => {
     expect(evidenceHeadings("kimono de vestir para mujer")).toContain("6211");
   });
+  it("'cargador para auto eléctrico' prioriza 8504 sobre el ruido léxico del auto", () => {
+    // El dominio ya no siembra 8703 (accesorio 'para auto'); la semilla de despacho
+    // aporta 8504 y rankea por encima de cualquier 8703 léxico débil (8703.10 golf).
+    const h = evidenceHeadings("cargador portátil para auto eléctrico EV, origen China");
+    expect(h).toContain("8504");
+    const i8504 = h.indexOf("8504");
+    const i8703 = h.indexOf("8703");
+    if (i8703 >= 0) expect(i8504).toBeLessThan(i8703);
+  });
 });

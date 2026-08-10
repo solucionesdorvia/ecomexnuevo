@@ -95,8 +95,10 @@ function domainSeedCandidates(q: string): NcmEvidenceCandidate[] {
       text
     ) &&
     !/\b(cami[oó]n\w*|[oó]mnibus|colectivo|micro\b|autob[uú]s|tractor\w*|moto\b|motocicleta\w*)\b/.test(text) &&
-    // No clasificar un REPUESTO/parte de auto como el auto entero.
-    !/\b(neum[aá]tico\w*|cubierta\w*|llanta\w*|repuesto\w*|filtro\w*|bater[ií]a\w*|paragolpe\w*|parabrisas\w*|amortiguador\w*|paragolpes\w*)\b/.test(text)
+    // No clasificar un REPUESTO/ACCESORIO de auto como el auto entero. El guard
+    // "(para|de) auto" capta cualquier accesorio no listado ("cargador para auto").
+    !/\b(neum[aá]tico\w*|cubierta\w*|llanta\w*|repuesto\w*|filtro\w*|bater[ií]a\w*|cargador\w*|cable\w*|funda\w*|soporte\w*|alarma\w*|sensor\w*|c[aá]mara\w*|parlante\w*|est[eé]reo\w*|accesorio\w*|paragolpe\w*|parabrisas\w*|amortiguador\w*)\b/.test(text) &&
+    !/\b(para|de|del)\s+auto\w*/.test(text)
   ) {
     seeds.push(
       { ncm_code: "8703.23.10", title: "[Cap. 87] Automóvil de pasajeros, nafta, cilindrada 1500–3000 cc" },
