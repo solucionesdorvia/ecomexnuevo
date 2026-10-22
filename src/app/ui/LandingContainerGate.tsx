@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ContactForm } from "./ContactForm";
+import { QuickLeadForm } from "./QuickLeadForm";
+import { MobileContactBar } from "./MobileContactBar";
 
 /* ── Scroll reveal ── */
 function R({ children, cl = "", d = 0 }: { children: React.ReactNode; cl?: string; d?: number }) {
@@ -52,11 +54,11 @@ function Navbar() {
         <div className="hidden items-center gap-8 md:flex">
           {links.map(([h,l]) => <a key={l} href={h} className="text-[13px] text-[#A7B3C2] transition-colors hover:text-white">{l}</a>)}
           <div className="flex items-center gap-2">
-            <a href="/cotizador" className="rounded-lg px-5 py-2 text-[13px] font-semibold text-[#030d18] transition-all hover:opacity-90" style={{ background: P.cyan }}>
-              Cotizá gratis →
+            <a href="/cotizador" className="rounded-lg px-5 py-2 text-[13px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
+              Cotizador
             </a>
-            <a href="#contacto" className="rounded-lg px-5 py-2 text-[13px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
-              Hablar con especialista
+            <a href="#contacto" className="rounded-lg px-5 py-2 text-[13px] font-semibold text-[#030d18] transition-all hover:opacity-90" style={{ background: P.cyan }}>
+              Consultar con un especialista
             </a>
             <a href="/app" className="ml-1 inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-[13px] font-semibold text-white transition-colors hover:opacity-90" style={{ border: `1px solid ${P.cyan}` }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3" /></svg>
@@ -76,11 +78,11 @@ function Navbar() {
         <div className="border-t bg-[#07111A]/95 backdrop-blur-xl px-5 pb-6 pt-4 md:hidden" style={{ borderColor: P.border }}>
           <div className="flex flex-col gap-4">
             {links.map(([h,l]) => <a key={l} href={h} onClick={() => setMenuOpen(false)} className="text-[14px] text-[#A7B3C2]">{l}</a>)}
-            <a href="/cotizador" onClick={() => setMenuOpen(false)} className="mt-2 rounded-lg py-3 text-center text-[14px] font-semibold text-[#030d18]" style={{ background: P.cyan }}>
-              Cotizá gratis →
+            <a href="#contacto" onClick={() => setMenuOpen(false)} className="mt-2 rounded-lg py-3 text-center text-[14px] font-semibold text-[#030d18]" style={{ background: P.cyan }}>
+              Consultar con un especialista
             </a>
-            <a href="#contacto" onClick={() => setMenuOpen(false)} className="rounded-lg py-3 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
-              Hablar con un especialista
+            <a href="/cotizador" onClick={() => setMenuOpen(false)} className="rounded-lg py-3 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
+              Cotizador
             </a>
             <a href="/app" onClick={() => setMenuOpen(false)} className="inline-flex items-center justify-center gap-1.5 rounded-lg py-3 text-center text-[14px] font-semibold text-white" style={{ border: `1px solid ${P.cyan}` }}>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3" /></svg>
@@ -95,7 +97,7 @@ function Navbar() {
 
 export default function LandingContainerGate() {
   return (
-    <div style={{ background: P.bg, color: P.t2, fontFamily: "var(--font-body, 'Inter', sans-serif)" }} className="antialiased">
+    <div style={{ background: P.bg, color: P.t2, fontFamily: "var(--font-body, 'Inter', sans-serif)" }} className="antialiased pb-[84px] md:pb-0">
       <Navbar />
 
       {/* ══════════ HERO ══════════ */}
@@ -137,11 +139,11 @@ export default function LandingContainerGate() {
 
               <R d={180}>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <a href="/cotizador" className="rounded-lg px-6 py-3 text-center text-[14px] font-semibold text-[#030d18] transition-all hover:opacity-90" style={{ background: P.cyan }}>
-                    Cotizá gratis →
+                  <a href="#contacto" className="rounded-lg px-6 py-3 text-center text-[14px] font-semibold text-[#030d18] transition-all hover:opacity-90" style={{ background: P.cyan }}>
+                    Consultar con un especialista
                   </a>
-                  <a href="#contacto" className="rounded-lg px-6 py-3 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
-                    Hablar con un especialista
+                  <a href="/cotizador" className="rounded-lg px-6 py-3 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
+                    Cotizador
                   </a>
                 </div>
               </R>
@@ -158,22 +160,14 @@ export default function LandingContainerGate() {
               </R>
             </div>
 
-            {/* Captura real de la plataforma (asset en /public/landing) */}
-            <R d={300} cl="mt-12 lg:mt-0">
-              <div className="relative mx-auto max-w-[560px] lg:mx-0 lg:max-w-none">
+            {/* Formulario corto de la portada (Etapa 1): la consulta llega con la
+                operación planteada desde el primer contacto. */}
+            <R d={300} cl="mt-10 lg:mt-0">
+              <div className="relative mx-auto max-w-[460px] lg:mx-0 lg:max-w-none">
                 <div className="pointer-events-none absolute -inset-6 rounded-3xl opacity-50 hidden lg:block" style={{ background: `radial-gradient(circle at 50% 60%, ${P.blue}14, transparent 70%)` }} />
-                <figure className="relative overflow-hidden rounded-2xl shadow-[0_40px_100px_-30px_rgba(0,0,0,0.6)] ring-1 ring-white/[0.06]" style={{ background: P.bg2 }}>
-                  <Image
-                    src="/landing/ecomex-platform-hero.png"
-                    alt="Panel E-COMEX: análisis de producto, código NCM y desglose de costos de importación"
-                    width={1376}
-                    height={768}
-                    className="h-auto w-full object-contain object-top"
-                    sizes="(max-width: 1024px) min(100vw, 560px), 480px"
-                    priority
-                  />
-                  <figcaption className="sr-only">Vista del análisis en la aplicación web E-COMEX</figcaption>
-                </figure>
+                <div className="relative">
+                  <QuickLeadForm variant="hero" />
+                </div>
               </div>
             </R>
           </div>
@@ -505,12 +499,12 @@ export default function LandingContainerGate() {
               Unite a las empresas que ya transformaron sus operaciones con E-COMEX.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-              <Link href="/cotizador" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-semibold text-[#030d18] transition-all hover:opacity-90" style={{ background: P.cyan }}>
-                Cotizá gratis →
-              </Link>
-              <a href="#contacto" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
-                Hablar con un especialista
+              <a href="#contacto" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-semibold text-[#030d18] transition-all hover:opacity-90" style={{ background: P.cyan }}>
+                Consultar con un especialista
               </a>
+              <Link href="/cotizador" className="rounded-lg px-8 py-3.5 text-center text-[14px] font-medium transition-colors hover:text-white" style={{ border: `1px solid ${P.border}`, color: P.t2 }}>
+                Cotizador
+              </Link>
             </div>
           </R>
         </div>
@@ -540,13 +534,17 @@ export default function LandingContainerGate() {
         </div>
       </section>
 
+      {/* ══════════ BARRA DE CONTACTO MÓVIL (Etapa 1) ══════════ */}
+      <MobileContactBar />
+
       {/* ══════════ WHATSAPP FLOTANTE ══════════ */}
+      {/* En celular sube por encima de la barra de contacto para no superponerse. */}
       <a
         href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar por WhatsApp"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-[0_8px_30px_-6px_rgba(37,211,102,0.6)] transition-transform hover:scale-110"
+        className="fixed bottom-24 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-[0_8px_30px_-6px_rgba(37,211,102,0.6)] transition-transform hover:scale-110 md:bottom-6 md:right-6"
         style={{ background: "#25D366" }}
       >
         <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-white" aria-hidden>
